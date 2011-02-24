@@ -225,8 +225,11 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 			.ccSidebar ul li.faq a:hover {background-image:url('../images/btn_faqOver.gif');}
 			.ccSidebar ul li.mail a {background-image:url('../images/btn_mail.gif');}
 			.ccSidebar ul li.mail a:hover {background-image:url('../images/btn_mailOver.gif');}
+			.ccSidebar ul li.contact a {background-image:url('../images/btn_contact.gif');}
+			.ccSidebar ul li.contact a:hover {background-image:url('../images/btn_contactOver.gif');}
 			.ccSidebar ul.cFaq li.faq a {background-image:url('../images/btn_faqOver.gif');}
 			.ccSidebar ul.cMail li.mail a {background-image:url('../images/btn_mailOver.gif');}
+			.ccSidebar ul.cContact li.contact a {background-image:url('../images/btn_contactOver.gif');}
 		.ccSidebar dl.customer, .ccSidebar dl.b2b {position:relative; clear:both; float:left; width:115px;}
 			.ccSidebar dl.customer dt, .ccSidebar dl.b2b dt, .ccSidebar dl.customer dd, .ccSidebar dl.b2b dd {width:0; height:0; text-indent:9999em; font:0/0 arial; overflow:hidden;}
 				.ccSidebar dl.customer a, .ccSidebar dl.b2b a {position:absolute; top:0; left:0;}
@@ -259,19 +262,23 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 			.ccContent fieldset.qna dt.detail {background:url('../images/qnaSet.gif') left -50px no-repeat;}
 			.ccContent fieldset.qna dd.detail textarea {width:511px; height:248px; padding:2px 4px 0 4px; font:11px/18px dotum; color:#a6a6a6; border:1px solid #c3dade; overflow:auto;}
 			.ccContent fieldset.qna p {clear:both; float:left; margin-top:15px;}
+		.cc_contactus {clear:both; float:left; display:inline; width:335px; height:80px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/txt_contact.gif') left top no-repeat;}
+		.cc_contact_map {clear:both; float:left; display:inline; margin:20px 0 0 1px;}
 	#costomerCenter p.closeLayer {top:21px; right:27px;}
 		#costomerCenter p.closeLayer button {width:9px; height:9px; background:url('../images/btn_closeLayer.gif') left top no-repeat;}
 
 /* 앱정보 */
-#appInfo {top:50%; width:717px; height:458px; margin:-229px 0 0 -356px;}
-	#appInfo .inner {width:687px; height:428px; padding:30px 0 0 30px;}
-	#appInfo .background {width:717px; height:458px; background:url('../images/bg_appInfo.png') left top no-repeat;}
-		.appSummary {position:relative; float:left; width:172px; height:384px; border-right:1px solid #ede9e4;}
+#appInfo {top:50%; width:764px; height:498px; margin:-249px 0 0 -382px;}
+	#appInfo .inner {width:734px; height:468px; padding:30px 0 0 30px;}
+	#appInfo .background {width:764px; height:498px; background:url('../images/bg_appInfo.png') left top no-repeat;}
+		.appSummary {position:relative; float:left; width:172px; height:437px; border-right:1px solid #ede9e4;}
 			p.appImg {clear:both; float:left; width:141px; height:141px; font:0/0 arial;}
+			p.appGrade {position:absolute; top:0; left:0; clear:both; float:left; width:18px; height:18px; font:9px/18px verdana; letter-spacing:-1px; color:#69665b; text-align:center; border:1px solid #d2c5b2; cursor:default; background:#ffde00;}
 			ul.appSinfo {clear:both; float:left; width:141px; margin-top:10px; font:11px dotum; color:#8d8b84;}
 				ul.appSinfo li {clear:both; float:left; width:141px;}
 				ul.appSinfo dt {clear:both; float:left; margin-top:4px; font-weight:bold; white-space:nowrap;}
 				ul.appSinfo dd {float:left; margin-top:4px; white-space:nowrap;}
+			p.appDown {clear:both; float:left; display:inline; margin:8px 0 0 0;}
 			dl.userSet {position:absolute; bottom:0; left:0; clear:both; float:left; width:170px;}
 				dl.userSet dt {clear:both; float:left; font:bold 11px dotum; color:#8d8b84;}
 				dl.userSet dd {clear:both; float:left; margin:5px 0 0 0;}
@@ -283,35 +290,35 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 							dl.userSet dd.auth ul li.update a {background-position:left top;}
 							dl.userSet dd.auth ul li.appAdd a {background-position:-70px top;}
 							dl.userSet dd.auth ul li.stop a {background-position:-140px top;}
-		.appDetail {float:left; display:inline; width:455px; height:410px; margin:0 0 0 25px;}
-			.appDetail .adView {clear:both; float:left; width:451px; margin:0 0 14px 0; padding:0 0 10px 4px; border-bottom:1px solid #e5e1da;}
-				.adView h4 {clear:both; float:left; width:451px; padding:0 0 3px 0; text-indent:0; font:bold 12px dotum; color:#8d8b84; cursor:pointer; background:none;}
+		.appDetail {float:left; display:inline; width:504px; height:460px; margin:0 0 0 25px;}
+			.appDetail .adView {clear:both; float:left; width:500px; margin:0 0 14px 0; padding:0 0 10px 4px; border-bottom:1px solid #e5e1da;}
+				.adView h4 {clear:both; float:left; width:500px; padding:0 0 3px 0; text-indent:0; font:bold 12px dotum; color:#8d8b84; cursor:pointer; background:none;}
 					.adView h4 img {margin:-4px 0 0 3px; vertical-align:middle;}
-				.advInner {position:relative; clear:both; float:left; width:411px; padding:0 40px 0 0; font:12px/20px dotum; color:#8d8b84;}
-				.advScreen .advInner {width:451px; padding-right:0;}
-				.screenWrap {clear:both; float:left; display:inline; width:431px; height:139px; margin:5px 0 0 1px; padding:0 0 5px 0; overflow:hidden;}
+				.advInner {position:relative; clear:both; float:left; width:499px; padding:0 0 0 0; font:12px/20px dotum; color:#8d8b84;}
+				.advScreen .advInner {width:500px; padding-right:0;}
+				.screenWrap {clear:both; float:left; display:inline; width:499px; height:180px; margin:5px 0 0 1px; padding:0 0 5px 0; overflow:hidden;}
 					.screenWrap ul {clear:both; float:left;}
-						.screenWrap ul li {float:left; display:inline; margin:0 10px 0 0;}
+						.screenWrap ul li {float:left; display:inline; margin:0 5px 0 0;}
 							.screenWrap ul li a {float:left; border:1px solid #d3c8bb; font:0/0 arial;}
 					.advInner button.scsLeft, .advInner button.scsRight {position:absolute; top:68px; width:5px; height:9px;}
 					.advInner button.scsLeft  {left:-14px; background:url('../images/appInfoSet.gif') left -30px no-repeat;}
 					.advInner button.scsRight {right:4px; background:url('../images/appInfoSet.gif') -100px -30px no-repeat;}
 			.appDetail .advFan {padding-bottom:0; border-bottom:0;}
-				.fanComment {clear:both; float:left; display:inline; width:441px; margin:6px 0 0 1px;}
+				.fanComment {clear:both; float:left; display:inline; width:485px; margin:6px 0 0 1px;}
 					.fanComment input#fanCommentInput {float:left; width:247px; height:22px; margin:0 1px 0 0; font:12px dotum; color:#8d8b84; border:1px solid #cbc6ae; background:#fff;}
-				ul.fanCmtList, ul.authFanCmtList {clear:both; float:left; width:441px; margin:2px 0 0 0;}
-					ul.fanCmtList li {clear:both; float:left; width:441px; font:11px/18px dotum; color:#8d8b84;}
+				ul.fanCmtList, ul.authFanCmtList {clear:both; float:left; width:480px; margin:2px 0 0 0;}
+					ul.fanCmtList li {clear:both; float:left; width:480px; font:11px/18px dotum; color:#8d8b84;}
 					ul.authFanCmtList li {float:left; margin-right:2px; font:12px/20px dotum; color:#8d8b84;}
-			.adviCurrent {height:245px; overflow:auto; overflow-x:hidden;}
-			.advScreen .adviCurrent {overflow:visible;}
-				.adviCurrent .screenWrap {height:241px;}
+			.adviCurrent {height:286px; overflow:auto; overflow-x:hidden;}
+			.advScreen .adviCurrent {height:300px; overflow:visible;}
+				.adviCurrent .screenWrap {width:480px; height:300px;}
 					.adviCurrent  button.scsLeft, .adviCurrent button.scsRight {top:121px;}
 			.adAllClose .advFan {padding-bottom:10px; border-bottom:1px solid #e5e1da;}
 			/* 홍보메일 보내기 */
 			h3#appAdTit, h3#appStopTit, h3#recentAppTit, h3#fanCommentTit {clear:both; float:left; width:87px; height:16px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/appInfoSet.gif') left -50px no-repeat;}
 			p.appAdExplain {clear:both; float:left; margin:5px 0 0 0; font:11px dotum; color:#8d8b84; white-space:nowrap;}
-			fieldset.appAdSendMail {clear:both; float:left; width:450px; margin:13px 0 0 0; padding:10px 0 0 0;}
-				fieldset.appAdSendMail dl {clear:both; float:left; width:450px; padding:10px 0 15px 0; border-top:1px solid #e5e1da; border-bottom:1px solid #e5e1da;}
+			fieldset.appAdSendMail {clear:both; float:left; width:494px; margin:13px 0 0 0; padding:10px 0 0 0;}
+				fieldset.appAdSendMail dl {clear:both; float:left; width:494px; padding:10px 0 15px 0; border-top:1px solid #e5e1da; border-bottom:1px solid #e5e1da;}
 					fieldset.appAdSendMail dl dt {clear:both; float:left; width:57px; margin:11px 0 0 0;}
 						fieldset.appAdSendMail dl dt span {float:left; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/appInfoSet.gif'); background-repeat:no-repeat;}
 						fieldset.appAdSendMail dl dt.adSend span {width:47px; background-position:left -70px;}
@@ -320,19 +327,19 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 					fieldset.appAdSendMail dl dd.adTitle {padding-top:15px;}
 						fieldset.appAdSendMail dl dt.adTitle span {width:18px; background-position:-100px -70px;}
 						fieldset.appAdSendMail dl dt.adContent span {width:18px; background-position:-150px -70px;}
-					fieldset.appAdSendMail dl dd {float:left; width:393px; margin:5px 0 0 0;}
-						fieldset.appAdSendMail dl dd input {float:left; width:327px; height:22px; font:12px dotum; color:#8d8b84; border:1px solid #cbc6af; background:#fff;}
+					fieldset.appAdSendMail dl dd {float:left; width:437px; margin:5px 0 0 0;}
+						fieldset.appAdSendMail dl dd input {float:left; width:371px; height:22px; font:12px dotum; color:#8d8b84; border:1px solid #cbc6af; background:#fff;}
 						fieldset.appAdSendMail dl dd button.findEmail {float:left; display:inline; width:65px; height:22px; margin:0 0 0 1px; background:url('../images/appInfoSet.gif') -140px -90px no-repeat;}
 						fieldset.appAdSendMail dl dd p {clear:both; float:left; display:inline; margin:6px 0 0 4px; font:11px dotum; color:#8d8b84; white-space:nowrap;}
-						fieldset.appAdSendMail dl dd.adTitle input {width:393px;}
-						fieldset.appAdSendMail dl dd textarea {float:left; width:393px; height:146px; font:12px/18px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
-					fieldset.appAdSendMail .btnWrap {clear:both; float:left; width:400px; display:inline; margin:15px 0 0 57px;}
+						fieldset.appAdSendMail dl dd.adTitle input {width:437px;}
+						fieldset.appAdSendMail dl dd textarea {float:left; width:437px; height:187px; font:12px/18px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
+					fieldset.appAdSendMail .btnWrap {clear:both; float:left; width:444px; display:inline; margin:15px 0 0 57px;}
 						fieldset.appAdSendMail .btnWrap a.preview {float:left; width:65px; height:22px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/appInfoSet.gif') left -90px no-repeat;}
 						fieldset.appAdSendMail .btnWrap input {float:left;}
 						fieldset.appAdSendMail .btnWrap p.errorMessage {margin:5px 0 0 10px;}
 			/* 판매중지신청 */
 			h3#appStopTit {background-position:left -120px;}
-			fieldset.appStop {clear:both; float:left; width:450px; margin:13px 0 0 0; border-top:1px solid #e5e1da;}
+			fieldset.appStop {clear:both; float:left; width:500px; margin:13px 0 0 0; border-top:1px solid #e5e1da;}
 				fieldset.appStop dl {clear:both; float:left; width:450px; margin:12px 0 0 0;}
 					fieldset.appStop dl dt {clear:both; float:left; width:450px; font:bold 11px dotum; color:#8d8b84;}
 						fieldset.appStop dl dt em {margin-left:3px; font-weight:normal; color:#ff0000;}
@@ -342,7 +349,7 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 						fieldset.appStop dl dd ul li.etc {padding-top:5px;}
 							fieldset.appStop dl dd ul li.etc input.check {display:inline-block; margin-top:4px;}
 							fieldset.appStop dl dd ul li input#appStopEtc {width:274px; height:22px; margin:0 0 0 2px; font:12px dotum; color:#8d8b84; border:1px solid #cac5ad; background:#fff;}
-					fieldset.appStop dl dd textarea {float:left; width:450px; height:99px; margin:5px 0 0 0; font:11px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
+					fieldset.appStop dl dd textarea {float:left; width:500px; height:151px; margin:5px 0 0 0; font:11px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
 				fieldset.appStop dl.appStopReason {margin-top:14px;}
 				fieldset.appStop dl.toBindApp dd {margin-top:3px;}
 				fieldset.appStop .btnWrap {margin:15px 0 0 0;}
@@ -357,13 +364,13 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 				dl.appAuthInfo dd {clear:both; float:left; margin:3px 0 0 0; font:11px/18px dotum; color:#8d8b84;}
 			p.lastUpdate {position:absolute; bottom:0; left:0; clear:both; float:left; white-space:nowrap; font:9px verdana; color:#cecbc4;}
 			h3#recentAppTit {width:84px; height:14px; background-position:left -160px;}
-			p.authExp {width:437px; font-size:12px;}
+			p.authExp {width:500px; font-size:12px;}
 				p.authExp em {font-weight:bold;}
 				p.authExp a {float:right; font:bold 11px dotum; color:#837a76;}
-			.recentAppWrap {position:relative; clear:both; float:left; width:450px; margin:13px 0 0 0; border-bottom:1px solid #e6e2dc;}
-				.raWrap {position:relative; clear:both; float:left; width:435px; height:107px; overflow:hidden;}
+			.recentAppWrap {position:relative; clear:both; float:left; width:500px; margin:13px 0 0 0; border-bottom:1px solid #e6e2dc;}
+				.raWrap {position:relative; clear:both; float:left; width:485px; height:107px; overflow:hidden;}
 					.raWrap ul {float:left;}
-						.raWrap ul li {float:left; display:inline; margin-right:15px;}
+						.raWrap ul li {float:left; display:inline; margin-right:27px;}
 							.raWrap ul li dl {position:relative; clear:both; float:left; width:75px;}
 								.raWrap ul li dl dt {clear:both; float:left; width:75px; margin-top:81px; text-align:center;}
 									.raWrap ul li dl dt a {font:12px dotum; color:#8d8b84;}
@@ -372,13 +379,13 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 					.recentAppWrap button.scsLeft  {left:-15px; background:url('../images/appInfoSet.gif') left -30px no-repeat;}
 					.recentAppWrap button.scsRight {right:0; background:url('../images/appInfoSet.gif') -100px -30px no-repeat;}
 			h3#fanCommentTit {width:103px; height:12px; margin-top:15px; margin-bottom:4px; background-position:-90px -160px;}
-			.fanCommentWrap {clear:both; float:left; width:450px; margin-top:7px;}
+			.fanCommentWrap {clear:both; float:left; width:500px; margin-top:7px;}
 				.fanCommentWrap fieldset.fanComment {margin-top:2px; margin-bottom:3px;}
 				.fanCommentWrap ul.fanCmtList {margin-top:-1px;}
 					.fanCommentWrap ul.fanCmtList li {margin-top:7px; font-size:12px; color:#8d8b84;}
 						.fanCommentWrap ul.fanCmtList li span {font-weight:bold;}
 						.fanCommentWrap ul.fanCmtList li em {color:#bdbbb4;}
-				.fcPagenator {clear:both; float:left; width:400px; margin:12px 0 0 0; font:bold 11px verdana; color:#8d8b84; letter-spacing:-1px;}
+				.fcPagenator {clear:both; float:left; width:450px; margin:12px 0 0 0; font:bold 11px verdana; color:#8d8b84; letter-spacing:-1px;}
 					.fcPagenator strong {margin:0 8px 0 6px;}
 					.fcPagenator img {margin:-2px 0 0 0; vertical-align:middle;}
 	#appInfo p.closeLayer {top:21px; right:23px;}
@@ -435,7 +442,7 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 #appAdPreview {top:50%; width:717px; height:673px; margin:-336px 0 0 -356px;}
 	#appAdPreview .inner {width:687px; height:653px; padding:20px 0 0 30px;}
 	#appAdPreview .background {width:717px; height:673px; background:url('../images/bg_appAdPreview.png') left top no-repeat;}
-	.appAdMailPreview {clear:both; float:left; width:620px; height:535px; margin:20px 0 0 0; padding:14px 0 0 30px; overflow:auto; overflow-x:hidden; border:1px solid #a8a5a1;}
+	.appAdMailPreview {position:relative; clear:both; float:left; width:620px; height:535px; margin:20px 0 0 0; padding:14px 0 0 30px; overflow:auto; overflow-x:hidden; border:1px solid #a8a5a1;}
 		ul.mailInfo {clear:both; float:left; width:577px; font:11px dotum; color:#8d8b84;}
 			ul.mailInfo li {clear:both; float:left; width:577px;}
 			ul.mailInfo dt {clear:both; float:left; margin-top:5px; font-weight:bold; white-space:nowrap;}
@@ -450,7 +457,7 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 						.appDetailInfo .appSummary ul.appSinfo {width:129px; margin:10px 0 0 0;}
 							.appDetailInfo .appSummary ul.appSinfo li {line-height:13px;}
 				.appDetailInfo .appDetail {height:auto; margin-left:20px;}
-					.appDetailInfo .appDetail, .appDetailInfo .appDetail .adView, .appDetailInfo .appDetail .advScreen .advInner {width:440px;}
+					.appDetailInfo .appDetail, .appDetailInfo .appDetail .adView, .appDetailInfo .appDetail .advScreen .advInner, #appAdPreview .advInner {width:440px;}
 					.appDetailInfo .appDetail .adView h4 , .appDetailInfo .appDetail .adView .advInner {font-size:12px; line-height:20px; cursor:default; overflow:visible;}
 					.appDetailInfo .appDetail .adView {margin-bottom:11px; padding-bottom:0; border-bottom:0;}
 		.appAdFooter {clear:both; float:left; width:590px; height:27px; margin:4px 0 0 0; padding:26px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; border-top:1px solid #e6e2dc; background:url('../images/appAdFooter.gif') left 26px no-repeat;}
@@ -465,14 +472,15 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 	#myProfile .inner {width:551px; height:553px; padding:30px 0 0 30px;}
 	#myProfile .background {width:581px; height:583px; background:url('../images/bg_myProfile.png') left top no-repeat;}
 	ul.myProfileSnb {clear:both; float:left; width:518px; padding:0 0 13px 0; border-bottom:1px solid #7a756e;}
-		ul.myProfileSnb li {float:left; display:inline; border-right:1px solid #e0d8cb;}
-			ul.myProfileSnb li h3, ul.myProfileSnb li a {float:left; height:15px; margin:0 15px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/myprofileSet.gif'); background-repeat:no-repeat;}
+		ul.myProfileSnb li {float:left; display:inline;}
+			ul.myProfileSnb li h3, ul.myProfileSnb li a {float:left; height:15px; margin:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/myprofileSet.gif'); background-repeat:no-repeat;}
 				ul.myProfileSnb li.myProfile h3 {width:80px; margin-left:0; background-position:left top;}
 				ul.myProfileSnb li.myProfile a {width:79px; margin-left:0; background-position:-90px top;}
 				ul.myProfileSnb li.setPassword h3 {width:79px; background-position:left -20px;}
 				ul.myProfileSnb li.setPassword a {width:80px; background-position:-90px -20px;}
 			ul.myProfileSnb li.out {border-right:0;}
 				ul.myProfileSnb li.out h3 {width:79px; background-position:left -40px;}
+				ul.myProfileSnb li.out2 h3 {width:79px; background-position:-330px -40px;}
 				ul.myProfileSnb li.out a {width:54px; background-position:-90px -40px;}
 	fieldset.myProfile {clear:both; float:left; width:518px; margin-top:10px;}
 		fieldset.myProfile dl {clear:both; float:left; width:518px;}
@@ -520,6 +528,7 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 	#myProfileLogin .inner {width:552px; height:277px; padding:30px 0 0 30px;}
 	#myProfileLogin .background {width:582px; height:307px; background:url('../images/bg_myProfileLogin.png') left top no-repeat;}
 		p.omLogin {clear:both; float:left; width:397px; height:38px; margin:29px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/myprofileSet.gif') left -130px no-repeat;}
+		p.omEscLogin {width:218px; margin-bottom:10px; background:url('../images/omEscLogin.gif') left top no-repeat;}
 		#myProfileLogin fieldset.userLogin {width:519px; padding-top:5px; padding-bottom:13px; border-color:#e5e0d9;}
 			#myProfileLogin fieldset.userLogin dl dt span {float:left; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/myprofileSet.gif'); background-repeat:no-repeat;}
 			#myProfileLogin fieldset.userLogin dl dt.email span {width:47px; background-position:left -170px;}
@@ -527,6 +536,8 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 			#myProfileLogin fieldset.userLogin dl dd input {width:160px; background:#fff;}
 			#myProfileLogin fieldset.userLogin #userLogin {top:15px; left:239px;}
 		#myProfileLogin ul.registPwdFind {margin-top:10px; margin-left:77px; padding-top:0; border-top:0;}
+		#myProfileLogin fieldset.uslEsc {padding-top:15px; padding-bottom:25px;}
+			#myProfileLogin fieldset.uslEsc #userLogin {top:25px; left:239px;}
 	#myProfileLogin p.closeLayer {top:21px; right:23px;}
 		#myProfileLogin p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
 
