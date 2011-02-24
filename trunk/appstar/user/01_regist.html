@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AppSTAR : Make Self Application for Moblie!</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="../css/appstar.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/appstar_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../css/swfobject.js"></script>
+<!-- 플래시 삽입 -->
+<script type="text/javascript">
+//<![CDATA[
+	swfobject.registerObject("swfContent", "9.0.0");
+	swfobject.registerObject("swfFooter", "9.0.0");
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- content -->
+<div id="content">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="swfContent">
+		<param name="movie" value="../flash/bg.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/bg.swf" width="100%" height="100%">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="940" height="50" id="swfFooter">
+		<param name="movie" value="../flash/footer.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/footer.swf" width="940" height="50">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+<!-- 레이어 -->
+<div id="registMain" class="layerSet">
+	<div class="inner">
+		<div class="background"></div>
+		<div class="forRelative">
+			<h4><strong>환영합니다</strong> BindApp 무료회원가입을 위해 사용자 정보를 입력하세요</h4>
+			<fieldset class="registField">
+				<legend>회원가입</legend>
+				<ul>
+					<li class="email">
+						<dl>
+							<dt><span>이메일 주소</span></dt>
+							<dd>
+								<input type="text" size="20" id="inputEmail" title="이메일주소 입력" />
+								<p>등록한 이메일로 회원인증메일이 발송됩니다.<br />이메일로 인증이 완료된 후 무료회원가입이 완료됩니다.</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="nickname">
+						<dl>
+							<dt><span>닉네임</span></dt>
+							<dd>
+								<input type="text" size="20" id="inputNickname" title="닉네임 입력" />
+								<p>영문 소문자 혹은 숫자만 사용 가능하며, 최소 4글자 이상 입력합니다.</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="password">
+						<dl>
+							<dt><span>비밀번호</span></dt>
+							<dd>
+								<input type="password" id="inputPassword" title="비밀번호 입력" />
+								<p>영문 대/소문자, 숫자를 조합하여 6글자 이상 입력합니다.</p>
+							</dd>
+							<dt class="reInput"><span>비밀번호 확인</span></dt>
+							<dd>
+								<input type="password" id="reInputPassword" title="한번 더 비밀번호 입력" />
+								<p>비밀번호를 동일하게 한번 더 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="findPassword">
+						<dl>
+							<dt><span>비밀번호 찾기 질문</span></dt>
+							<dd>
+								<select title="질문선택">
+									<option>질문을 선택하세요.</option>
+									<option>질문1</option>
+									<option>질문2</option>
+									<option>질문3</option>
+								</select>
+							</dd>
+							<dt class="reInput"><span>비밀번호 찾기 답변</span></dt>
+							<dd>
+								<input type="text" id="inputAnswer" title="답변 입력" />
+								<p>기억하기 쉬운 단어나 문장을 추천합니다.</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="name">
+						<dl>
+							<dt><span>이름(한글)</span></dt>
+							<dd>
+								<input type="text" id="inputName" title="한글 이름 입력" />
+								<p>어플리케이션 제작자로 표시됩니다. 실제 이름을 입력하세요</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt class="english"><span>이름(영문)</span></dt>
+							<dd>
+								<input type="text" id="inputNameEng" title="영문 이름 입력" />
+							</dd>
+						</dl>
+					</li>
+					<li class="birth">
+						<dl>
+							<dt><span>생년월일</span></dt>
+							<dd>
+								<input type="text" id="inputYear" title="생년 입력" />년
+								<input type="text" id="inputMonth" title="생월 입력" />월
+								<input type="text" id="inputDay" title="생일 입력" />일
+							</dd>
+						</dl>
+					</li>
+					<li class="secret">
+						<dl>
+							<dt><span>보안문자 입력</span></dt>
+							<dd>
+								<div class="secretWord"><img src="../images/tempSecret.gif" width="143" height="45" alt="보안문자" /></div>
+								<div class="secretInput">
+									<input type="text" id="inputSecret" title="보안문자 입력" />
+									<p>왼쪽에 보이는 순서대로 숫자 및 문자를 모두 입력해 주세요.</p>
+									<button type="button" class="button reload" title="새로고침"><span>새로고침</span></button>
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</fieldset>
+			<div class="btnWrap">
+				<input type="submit" class="button Submit" title="가입하기" value="가입하기" />
+				<a href="#" class="policyBack" title="돌아가기">돌아가기</a>
+			</div>
+		</div>
+		<p class="closeLayer"><button type="button" title="레이어 닫기">닫기</button></p>
+	</div>
+</div>
+
+</body>
+</html>

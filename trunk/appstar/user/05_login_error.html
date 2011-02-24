@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AppSTAR : Make Self Application for Moblie!</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="../css/appstar.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/appstar_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../css/swfobject.js"></script>
+<!-- 플래시 삽입 -->
+<script type="text/javascript">
+//<![CDATA[
+	swfobject.registerObject("swfContent", "9.0.0");
+	swfobject.registerObject("swfFooter", "9.0.0");
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- content -->
+<div id="content">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="swfContent">
+		<param name="movie" value="../flash/bg.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/bg.swf" width="100%" height="100%">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="940" height="50" id="swfFooter">
+		<param name="movie" value="../flash/footer.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/footer.swf" width="940" height="50">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+<!-- 레이어 -->
+<div id="Login" class="layerSet">
+	<div class="inner">
+		<div class="background"></div>
+		<div class="forRelative">
+			<h4>로그인</h4>
+			<fieldset class="userLogin">
+				<legend>로그인</legend>
+				<dl>
+					<dt>이메일 주소</dt>
+					<dd><input type="text" id="userEmail" title="이메일주소 입력" tabindex="1" class="error" value="등록되지 않은 이메일입니다" /></dd>
+					<dt>비밀번호</dt>
+					<!-- 오류일 때 type="text" -->
+					<dd><input type="text" id="userPassword" title="비밀번호 입력" tabindex="2" class="error" value="비밀번호가 틀립니다" /></dd>
+				</dl>
+				<p><input type="checkbox" class="check" id="saveEmail" title="이메일 주소 기억하기" tabindex="4" /> <label for="saveEmail">이메일 주소 기억하기</label></p>
+				<input type="image" src="../images/btn_login.gif" id="userLogin" title="로그인" tabindex="3" />
+			</fieldset>
+			<ul class="registPwdFind">
+				<li class="regist"><a href="#" title="회원가입">회원가입</a></li>
+				<li><a href="#" title="비밀번호 찾기">비밀번호 찾기</a></li>
+			</ul>
+		</div>
+		<p class="closeLayer"><button type="button" title="레이어 닫기">닫기</button></p>
+	</div>
+</div>
+
+</body>
+</html>
