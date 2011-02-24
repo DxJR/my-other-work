@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AppSTAR : Make Self Application for Moblie!</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="../css/appstar.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/appstar_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../css/swfobject.js"></script>
+</head>
+
+<body>
+
+<!-- content -->
+<div id="content">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="swfContent">
+		<param name="movie" value="../flash/bg.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/bg.swf" width="100%" height="100%">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="940" height="50" id="swfFooter">
+		<param name="movie" value="../flash/footer.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/footer.swf" width="940" height="50">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+
+
+
+
+
+
+<!-- 레이어 -->
+<div id="appInfo" class="layerSet">
+	<div class="inner">
+		<div class="background"></div>
+		<div class="forRelative">
+			<!-- 좌측 -->
+			<div class="appSummary">
+				<p class="appImg"><img src="../images/imgApp.png" width="141" height="141" border="0" class="png24" alt="앱스제목" /></p>
+				<ul class="appSinfo">
+					<li>
+						<dl>
+							<dt>가격:</dt>
+							<dd>무료</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>업데이트:</dt>
+							<dd>2010.12.12</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>현재 버전:</dt>
+							<dd>1.0</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>크기:</dt>
+							<dd>1.3MB</dd>
+						</dl>
+					</li>
+				</ul>
+				<dl class="userSet">
+					<dt>App관리</dt>
+					<dd class="auth">
+						<ul>
+							<li class="update"><a href="#" title="업데이트">업데이트</a></li>
+							<li class="appAdd"><a href="#" title="앱 홍보">앱 홍보</a></li>
+							<li class="stop"><a href="#" title="판매 중지">판매 중지</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			<!-- 우측 -->
+			<div class="appDetail">
+				<h3 id="appStopTit">App 판매중지 신청</h3>
+				<p class="appAdExplain">#App 이름#에 대한 판매중지 신청을 합니다.</p>
+				<fieldset class="appStop">
+					<legend>판매중지 신청</legend>
+					<dl class="appStopReason">
+						<dt>판매중지 신청 이유 <em>탈퇴 이유를 한개 이상 선택하여 주세요.</em></dt>
+						<dd>
+							<ul>
+								<li><input type="checkbox" id="appStopR01" class="check" title="앱을 직접 판매할 계획입니다" /><label for="appStopR01">앱을 직접 판매할 계획입니다</label></li>
+								<li><input type="checkbox" id="appStopR02" class="check" title="앱의 수익이 기대 이하이므로 판매 중지합니다" /><label for="appStopR02">앱의 수익이 기대 이하이므로 판매 중지합니다</label></li>
+								<li><input type="checkbox" id="appStopR03" class="check" title="앱을 업그레이드 후 다시 판매 신청할 계획입니다" /><label for="appStopR03">앱을 업그레이드 후 다시 판매 신청할 계획입니다</label></li>
+								<li><input type="checkbox" id="appStopR04" class="check" title="저작권 등의 이슈로 인해 판매 중지합니다" /><label for="appStopR04">저작권 등의 이슈로 인해 판매 중지합니다</label></li>
+								<li class="etc"><input type="checkbox" id="appStopR05" class="check" title="기타" /><label for="appStopR05">기타</label> <input type="text" size="20" id="appStopEtc" title="기타 사유 입력" /></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="toBindApp">
+						<dt>BindApp에 바랍니다</dt>
+						<dd>회원님의 소중한 의견을 귀기울여 듣고 보다 나은 서비스로 다시 찾아뵙겠습니다</dd>
+						<dd><textarea id="toBindApp" rows="10" cols="60" title="BindApp에 바라는 점 입력"></textarea></dd>
+					</dl>
+					<div class="btnWrap">
+						<input type="image" src="../images/btn_stop.gif" value="중지신청" title="중지신청" />
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<p class="closeLayer"><button type="button" title="레이어 닫기">닫기</button></p>
+	</div>
+</div>
+
+</body>
+</html>

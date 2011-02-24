@@ -1,0 +1,90 @@
+@charset "utf-8";
+html {_overflow:auto; _overflow-x:hidden;}
+
+.png24 {tmp:expression(setPng24(this));}
+input.radio {margin:-3px -3px 0 -3px;.margin:-4px -3px 0 -4px;}
+input.check {margin:-4px -3px 0 -3px;.margin:-4px -3px 0 -1px;}
+/* 수직 가운데 정렬 */
+.vertical-align-middle {#position:relative;}
+.vam-lv2 {#position:absolute; _top:50%;} /* margin-top: vam height의 half */
+.vam-lv3 {#position:relative; #top:-50%}
+
+
+#registPolicy {_bottom:25px;}
+#registPolicy .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_regist.png', sizingMethod='crop');}
+#registMain {_bottom:29px;}
+#registMain .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_registMain.png', sizingMethod='crop');}
+#registOK .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_registOK.png', sizingMethod='crop');}
+#urlRegist .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_urlRegist.png', sizingMethod='crop');}
+#Login .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_login.png', sizingMethod='crop');}
+#findPassword .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_findPassword.png', sizingMethod='crop');}
+#tempLogin .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_tempLogin.png', sizingMethod='crop');}
+#costomerCenter	 .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_customerCenter.png', sizingMethod='crop');}
+#appInfo .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_appInfo.png', sizingMethod='crop');}
+#appAdPreview .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_appAdPreview.png', sizingMethod='crop');}
+#myProfile .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_myProfile.png', sizingMethod='crop');}
+#myProfileLogin .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_myProfileLogin.png', sizingMethod='crop');}
+#search .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_search.png', sizingMethod='crop');}
+#appInfoFindMail .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_appInfoFindMail.png', sizingMethod='crop');}
+#mpecMsg .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_mpecMsg.png', sizingMethod='crop');}
+#mpeComplete .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_mpeComplete.png', sizingMethod='crop');}
+#myProfileEscape .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_myProfileEscape.png', sizingMethod='crop');}
+#passwordChange .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_passwordChange.png', sizingMethod='crop');}
+#appInfoFindMailResult .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_appInfoFindMailResult.png', sizingMethod='crop');}
+#appmaker .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_appmake.png', sizingMethod='crop');}
+#creditInfo .background {_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost/appstar/images/bg_creditInfo.png', sizingMethod='crop');}
+
+fieldset.registField ul li dl dd input {height:18px; font:11px/20px 돋움;}
+fieldset.registField ul li.findPassword dd select {width:200px;}
+fieldset.registField ul li.birth dd input {width:19px;}
+fieldset.registField ul li.birth dd input#inputYear {width:31px;}
+fieldset.registField ul li.secret dd input {width:48px;}
+fieldset.userLogin dl dd input {width:196px;.width:192px; height:18px;.height:17px;}
+fieldset.userLogin input#userLogin {_top:11px;.top:11px;}
+fieldset.findPwd dl dd input {width:196px; height:18px;}
+#Login fieldset.userLogin dl dd input {.width:152px;}
+#Login fieldset.userLogin input#userLogin {.top:11px;}
+fieldset.findPwd dl dd input {.width:196px; .height:17px; .margin-left:-3px;}
+*fieldset.findPwd input#pwdFind {bottom:1px;_bottom:0;}
+#tempLogin fieldset.userLogin dl dd input {.margin-left:-3px;}
+#tempLogin fieldset.userLogin p {.margin:9px 0 0 70px;}
+#tempLogin fieldset.userLogin input#userLogin {.top:11px;}
+.ccContent fieldset.search input.searchInput {width:216px; height:18px;}
+.ccContent fieldset.qna dd.detail textarea {width:501px; height:248px;}
+.fanComment input#fanCommentInput {width:243px; height:18px;}
+fieldset.appAdSendMail dl dd input {width:323px; height:18px;}
+fieldset.appAdSendMail dl dd.adTitle input {width:389px;}
+fieldset.appAdSendMail dl dd textarea {width:389px; height:146px;}
+fieldset.appStop dl dd ul li input#appStopEtc {display:inline-block; width:274px; height:18px;}
+fieldset.appStop dl dd ul li.etc label {display:inline-block; margin-top:8px;}
+fieldset.appStop dl dd textarea {width:446px; height:99px;}
+fieldset.myProfile dl dd input {height:18px;}
+fieldset.myProfile dl dd.birth input {width:20px;}
+fieldset.myProfile dl dd.birth input#year {width:32px;}
+fieldset.myProfile dl dd.pwdA input {width:196px;}
+fieldset.myProfile dl dd.accountNum input {width:196px;}
+#myProfileLogin fieldset.userLogin dl dd input {width:156px;_width:153px;.width:153px;}
+#myProfileLogin fieldset.userLogin #userLogin {_top:16px;.top:16px;}
+p.authExp a {_margin-top:-13px;.margin-top:-13px;}
+fieldset.mainSearch input#mainSearchInput {width:292px; height:22px; line-height:23px;}
+dl.cpForm dd input {width:130px; height:18px;}
+.appDetailInfo .appDetail {_overflow:hidden;}
+.appDetailInfo .appDetail, .appDetailInfo .appDetail .adView, .appDetailInfo .appDetail .advScreen .advInner {_width:340px;}
+
+ul.albEditList li .vam-lv2 {margin-top:31px;_margin-top:0;}
+.ams3 dl dd .inpSt {height:16px;}
+.ams3 dl dd.amin02 label {margin:7px 14px 0 3px; vertical-align:top;}
+.ams3 dl dd.amin02 .inpSt {_width:447px;}
+.ams3 dl dd span.count {margin-top:3px; vertical-align:top;}
+.ams3 dl dd.amin04 span.count {top:30px;}
+.ams3 dl dd.amin05 span.count {top:20px;}
+dl.editLed dt.find {_margin-top:8px;}
+dl.editLed dd input {height:16px;}
+dl.editLed dd.find input {width:57px;}
+dl.editLed dd.page input {width:27px;}
+dl.albumNameipt dd input#albNameIpt {height:16px;}
+fieldset.aedpEdit dl dd select, fieldset.aedpEdit dl dd textarea {width:242px; height:18px;}
+fieldset.aedpEdit dl dd textarea {width:238px; height:162px;}
+dl.sbcEdit dd input#sbCaptionEdit {width:388px; height:16px;}
+fieldset.ciInput dd.ciIpt03 select {width:218px;}
+fieldset.ciInput dd.ciIpt02 input, fieldset.ciInput dd.ciIpt04 input {width:214px; height:16px;}

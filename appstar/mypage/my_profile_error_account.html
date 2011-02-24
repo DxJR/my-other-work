@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AppSTAR : Make Self Application for Moblie!</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="../css/appstar.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/appstar_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../css/swfobject.js"></script>
+</head>
+
+<body>
+
+<!-- content -->
+<div id="content">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="swfContent">
+		<param name="movie" value="../flash/bg.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/bg.swf" width="100%" height="100%">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+<!-- footer -->
+<div id="footer">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="940" height="50" id="swfFooter">
+		<param name="movie" value="../flash/footer.swf" />
+		<param name="wmode" value="transparent" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="../flash/footer.swf" width="940" height="50">
+			<param name="wmode" value="transparent" />
+			<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+			<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+
+
+
+
+
+
+
+<!-- 레이어 -->
+<div id="myProfile" class="layerSet">
+	<div class="inner">
+		<div class="background"></div>
+		<div class="forRelative">
+			<ul class="myProfileSnb">
+				<li class="myProfile"><h3>마이 프로파일</h3></li>
+				<li class="setPassword"><a href="#" title="비밀번호 변경">비밀번호 변경</a></li>
+				<li class="out"><a href="#" title="회원 탈퇴">회원 탈퇴</a></li>
+			</ul>
+			<fieldset class="myProfile">
+				<legend>마이 프로파일</legend>
+				<dl>
+					<dt class="email"><span>이메일주소</span></dt>
+					<dd class="email">asdasda@asdasd.com</dd>
+					<dt class="nickname"><span>닉네임</span></dt>
+					<dd class="nickname">
+						<input type="text" size="20" id="nickName" title="닉네임입력" /> <button type="button" class="button dupCheck" title="중복확인"><span>중복확인</span></button>
+						<p><em>닉네임은 가입 후 한번 만 변경 가능합니다</em></p>
+					</dd>
+					<dt class="nameKor"><span>이름(국문)</span></dt>
+					<dd class="nameKor"><input type="text" size="30" id="nameKorean" title="이름입력(국문)" /> <em>어플리케이션 제작자로 표시됩니다. 실제 이름을 입력하세요.</em></dd>
+					<dt class="nameEng"><span>이름(영문)</span></dt>
+					<dd class="nameEng"><input type="text" size="30" id="nameEnglish" title="이름입력(영문)" /></dd>
+					<dt class="birth"><span>생년월일</span></dt>
+					<dd class="birth">
+						<input type="text" size="5" id="year" title="생년입력" /><span>년</span>
+						<input type="text" size="3" id="month" title="생월입력" /><span>월</span>
+						<input type="text" size="3" id="day" title="생일입력" /><span>일</span>
+					</dd>
+					<dt class="pwdQ"><span>비밀번호 찾기 질문</span></dt>
+					<dd class="pwdQ">
+						<select title="비밀번호찾기 질문 선택">
+							<option>비밀번호찾기 질문 선택</option>
+							<option>비밀번호찾기 질문 선택</option>
+						</select>
+						<em>기억하기 쉬운 단어나 문장으로 답변 하는 것을 추천합니다</em>
+					</dd>
+					<dt class="pwdA"><span>비밀번호 찾기 답변</span></dt>
+					<dd class="pwdA"><input type="text" size="30" id="pwdAnswer" title="비밀번호 찾기 답변 입력" /></dd>
+					<dt class="bank"><span>은행명</span></dt>
+					<dd class="bank">
+						<select title="은행선택" class="error" >
+							<option>은행선택</option>
+							<option>은행선택</option>
+						</select>
+						<em>App 판매금을 위한 결제정보입니다.</em>
+					</dd>
+					<dt class="accountNum"><span>계좌번호</span></dt>
+					<dd class="accountNum">
+						<input type="text" size="30" id="accountNumber" class="error" title="계좌번호 입력" />
+						<p>유료어플 판매금 입금을 위한 계좌 정보를 입력해 주세요.<br />판매중인 유료어플이 있을 경우, 계좌변경은 가능하나 삭제는 불가능합니다</p>
+					</dd>
+				</dl>
+			</fieldset>
+			<div class="btnWrap">
+				<input type="submit" class="button update" title="업데이트" value="업데이트" />
+				<a href="#" class="policyBack" title="돌아가기">돌아가기</a>
+				<p class="errorMessage"><em>판매중인 유료어플이 있습니다.<br />계좌정보를 입력하지 않으면 판매금을 정산 받을 수 없습니다</em></p>
+			</div>
+		</div>
+		<p class="closeLayer"><button type="button" title="미리보기 닫기">미리보기 닫기</button></p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,901 @@
+@charset "utf-8";
+
+/* ============ Default ============ */
+html {height:100%;}
+body {width:100%; height:100%; margin:0; padding:0; font-size:12px; line-height:1.2em; font-family:'dotum','Dotum','AppleGothic','sans-serif'; background-color:#ffffff;}
+ol, ul, li, dl, dt, dd {list-style:none;}
+ul, ol, li, dl, dt, dd, form, p, h1, h2, h3, h4, h5, h6, blockquote, fieldset {margin:0; padding:0;}
+img, fieldset {border:0;}
+hr {clear:both;}
+em {font-style:normal;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+table caption {width:0; height:0; text-indent:-1000em; font:0/0 arial; overflow:hidden;}
+legend {position:absolute; top:0; left:0; width:0; height:0; padding:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 Arial;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+input:focus {outline:none;}
+input.radio {margin:1px -2px 0 0; vertical-align:top;}
+input.check {margin:-1px 0 0 0; vertical-align:top;}
+
+
+/* 수직 가운데 정렬 */
+.vertical-align-middle {display:table; overflow:hidden;} /* height */
+.vam-lv2 {display:table-cell; vertical-align:middle;} /* width, text-align // ie : .margin-top:half;_margin-top:0; */
+
+/* 버튼 */
+.button {float:left; display:inline-block; margin:0; padding:0; border:0; overflow:hidden; cursor:pointer; vertical-align:top; background-image:url('../images/btn_set.gif'); background-repeat:no-repeat; background-color:transparent;} /* float:none; text-indent:0; */
+	.button span {display:block; width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+	input.button {text-indent:-9999em;}
+	span.button {cursor:default;}
+
+/* 페이징 */
+.paging {clear:both; float:left; width:100%; margin:4px -10px 0 0; text-align:left;}
+	.paging a, .paging strong {float:left; display:inline; margin:0 4px 0 0; padding:2px 4px; font:9px verdana; color:#8c8c8c;}
+	.paging a:hover {text-decoration:none;}
+	.paging strong {font-weight:bold; text-decoration:underline;}
+
+/* content */
+#content {z-index:1; position:relative; clear:both; float:left; width:100%; height:100%; background:url('../images/bg_temp.gif') repeat;}
+
+
+/* footer */
+#footer {z-index:2; position:absolute; bottom:0; left:50%; clear:both; float:left; width:940px; height:50px; margin-left:-470px;}
+
+
+/* 레이어 */
+.layerSet {z-index:4; position:absolute; left:50%; clear:both; float:left; display:inline;}
+	.inner {position:relative; clear:both; float:left; display:inline;}
+		.background {z-index:1; position:absolute; top:0; left:0; clear:both; float:left;}
+		.forRelative {z-index:2; position:relative; clear:both; float:left;}
+			p.closeLayer {z-index:3; position:absolute; clear:both; float:left; display:inline;}
+				p.closeLayer button {position:relative; clear:both; float:left; width:10px; height:11px; margin:0; padding:0; text-indent:-9999em; font:0/0 arial; border:0; overflow:hidden; cursor:pointer; background:url('../images/btn_set.gif') left -60px no-repeat;}
+
+/* 타이틀 */
+.layerSet h4 {clear:both; float:left; display:inline; margin:0; padding:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/title_set.gif'); background-repeat:no-repeat; background-color:transparent;}
+
+/* 오류 */
+.error {color:#ff0000 !important; border-color:#ff0000 !important;}
+.errorMessage {float:left; display:inline; font:11px dotum; color:#ff0000; white-space:nowrap;}
+
+/* 하단버튼 */
+.btnWrap {clear:both; float:left; display:inline; white-space:nowrap;}
+	.btnWrap * {margin-right:1px;}
+	.policyNext, .policyBack {float:left; display:inline; width:88px; height:30px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/btn_set.gif'); background-repeat:no-repeat; background-color:transparent; background-position:left top;}
+	.policyBack {background-position:-90px top;}
+
+/* 회원가입 : 약관 */
+#registPolicy {bottom:50px; width:891px; height:664px; margin-left:-445px;}
+		#registPolicy .inner {width:739px; height:614px; padding:50px 0 0 152px;}
+		#registPolicy .background {width:891px; height:664px; background:url('../images/bg_regist.png') left top no-repeat;}
+	#registPolicy h4 {width:156px; height:14px; background-position:left top;}
+	.policyContent {clear:both; float:left; width:603px; height:452px; margin:38px 0 0 0;}
+	.policyAgree {clear:both; float:left; display:inline; margin:23px 0 0 20px; font:11px dotum; color:#8d8b84; white-space:nowrap;}
+	#registPolicy .btnWrap {margin:16px 0 0 21px;;}
+	#registPolicy p.closeLayer {top:29px; right:95px;}
+
+/* 회원가입 : 메인 */
+#registMain {bottom:50px; width:891px; height:647px; margin-left:-445px;}
+		#registMain .inner {width:777px; height:617px; padding:30px 0 0 114px;}
+		#registMain .background {width:891px; height:647px; background:url('../images/bg_registMain.png') left top no-repeat;}
+	#registMain h4 {width:322px; height:39px; background-position:left -20px;}
+	fieldset.registField {clear:both; float:left; display:inline; width:663px; margin:23px 0 0 0; padding:0 0 15px 0; border:2px solid #333; border-width:2px 0;}
+		fieldset.registField ul li {clear:both; float:left; width:663px; padding:10px 0 5px 0; border-bottom:1px solid #e1d8b6;}
+			fieldset.registField ul li dl dt {clear:both; float:left; width:95px; padding-top:7px;}
+				fieldset.registField ul li dl dt span {float:left; width:80px; height:11px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/registTitle.gif'); background-repeat:no-repeat; background-color:transparent;}
+			fieldset.registField ul li dl dd {float:left; width:568px; font:11px/17px dotum; color:#b0aea2;}
+				fieldset.registField ul li dl dd input {height:22px; text-indent:3px; font:11px/20px dotum; color:#b0aea2; border:1px solid #c9c3a6; background-color:transparent;}
+				fieldset.registField ul li dl dd p {padding:5px 0 0 3px;}
+				fieldset.registField .errorMessage {float:none; display:inline; margin:2px 0 0 0px; padding:0;}
+		/* 이메일 */
+		fieldset.registField ul li.email dt span {background-position:left top;}
+		fieldset.registField ul li.email dd input {width:196px;}
+		/* 닉네임 */
+		fieldset.registField ul li.nickname dt span {background-position:left -15px;}
+		fieldset.registField ul li.nickname dd input {width:122px;}
+		/* 비밀번호 */
+		fieldset.registField ul li.password dt span {background-position:left -30px;}
+		fieldset.registField ul li.password dt.reInput span {background-position:left -45px;}
+		fieldset.registField ul li.password dd input {width:122px;}
+		/* 비밀번호찾기 */
+		fieldset.registField ul li.findPassword dt span {background-position:left -60px;}
+		fieldset.registField ul li.findPassword dt.reInput span {background-position:left -75px;}
+		fieldset.registField ul li.findPassword dd select {float:left; width:196px; height:22px; font:11px dotum; color:#b0aea2; border:1px solid #c9c3a6; background:transparent;}
+		fieldset.registField ul li.findPassword dd input {width:196px;}
+		/* 이름 */
+		fieldset.registField ul li.name dt span {background-position:left -90px;}
+		fieldset.registField ul li.name dt.english span {background-position:left -105px;}
+		fieldset.registField ul li.name dd input {width:122px;}
+		/* 생년월일 */
+		fieldset.registField ul li.birth {padding-bottom:10px;}
+		fieldset.registField ul li.birth dt span {background-position:left -120px;}
+		fieldset.registField ul li.birth dd input {width:22px; margin:0 4px 0 7px;}
+		fieldset.registField ul li.birth dd input#inputYear {width:32px; margin:0 4px 0 0;}
+		fieldset.registField ul li.birth dd input#inputDay {margin:0 4px 0 0;}
+		/* 보안문자입력 */
+		fieldset.registField ul li.secret {border-bottom:0;}
+		fieldset.registField ul li.secret dt span {background-position:left -135px;}
+		fieldset.registField ul li.secret dd .secretWord {float:left; width:143px; height:45px; font:0/0 arial; border:1px solid #c2bda0;}
+		fieldset.registField ul li.secret dd .secretInput {float:left; display:inline; margin:0 0 0 3px;}
+		fieldset.registField ul li.secret dd input {float:left; width:52px;}
+		fieldset.registField ul li.secret dd p {float:left; padding:3px 0 0 8px;}
+		button.reload {clear:both; width:52px; height:22px; margin-top:3px; background-position:left -30px;}
+		fieldset.registField ul li.secret dd .errorMessage {margin:7px 0 0 0;}
+		/* 2개 입력 */
+		fieldset.registField ul li.password, fieldset.registField ul li.findPassword, fieldset.registField ul li.name {padding-bottom:7px;}
+		fieldset.registField ul li.password dt, fieldset.registField ul li.findPassword dt, fieldset.registField ul li.name dt {padding-top:3px;}
+		fieldset.registField ul li.password dd, fieldset.registField ul li.findPassword dd, fieldset.registField ul li.name dd {margin-bottom:3px;}
+		fieldset.registField ul li.password dd input, fieldset.registField ul li.findPassword dd input, fieldset.registField ul li.name dd input {float:left;}
+		fieldset.registField ul li.password dd p, fieldset.registField ul li.findPassword dd p, fieldset.registField ul li.name dd p {float:left; padding:4px 0 0 5px;}
+	#registMain .btnWrap {margin:30px 0 0 94px;;}
+	input.Submit {width:88px; height:30px; background-position:-180px top;}
+	input.update {width:88px; height:30px; background-position:0 -100px;}
+	#registMain p.closeLayer {top:20px; right:104px;}
+
+/* 회원가입 완료 */
+#registOK {top:50%; width:387px; height:241px; margin:-143px 0 0 -193px;}
+		#registOK .inner {width:351px; height:203px; padding:36px 0 0 38px;}
+		#registOK .background {width:387px; height:241px; background:url('../images/bg_registOK.png') left top no-repeat;}
+	#registOK h4 {width:242px; height:15px; background-position:left -60px;}
+	#registOK p {clear:both; float:left; display:inline; margin:17px 0 0 0; font:11px/18px dotum; color:#8d8b84; white-space:nowrap;}
+	#registOK p.mailRe {width:309px; margin:14px 0 0 0; padding:18px 0 0 0; border-top:1px solid #dfd5b5;}
+	#registOK .btnWrap {margin-top:4px;}
+	button.mailReSend {width:108px; height:22px; background-position:-60px -30px;}
+	#registOK p.closeLayer {top:5px; right:25px;}
+
+/* URL 통한 회원가입 완료 */
+#urlRegist {top:50%; width:435px; height:309px; margin:-177px 0 0 -216px;}
+		#urlRegist .inner {width:396px; height:273px; padding:36px 0 0 39px;}
+		#urlRegist .background {width:435px; height:309px; background:url('../images/bg_urlRegist.png') left top no-repeat;}
+	#urlRegist h4 {width:221px; height:15px; background-position:left -80px;}
+	p.nowLogin {clear:both; float:left; display:inline; width:290px; height:15px; margin:6px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/nowLogin.gif') left top no-repeat;;}
+	p.passwordExplain {clear:both; float:left; display:inline; width:355px; height:44px; margin:19px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/textUrlRegist.gif') left top no-repeat;}
+	fieldset.userLogin {position:relative; clear:both; float:left; display:block; width:355px; margin:20px 0 0 0; padding:0 0 6px 0; border:1px solid #e3dbbd; border-width:1px 0;}
+		fieldset.userLogin dl {float:left; width:277px; margin-top:7px;}
+		fieldset.userLogin dl dt {clear:both; float:left; width:77px; margin-top:3px; padding-top:5px; font:11px dotum; color:#8d8b84;}
+		fieldset.userLogin dl dd {float:left; width:200px; margin-top:3px;}
+			fieldset.userLogin dl dd input {width:200px; height:22px; text-indent:3px; font:11px/20px dotum; color:#b0aea2; border:1px solid #c9c3a6; background-color:transparent;}
+		fieldset.userLogin p {clear:both; float:left; display:inline; margin:9px 0 0 77px; font:11px dotum; color:#8d8b84; white-space:nowrap;}
+		fieldset.userLogin input#userLogin {position:absolute; top:10px; right:23px; clear:both; float:left;}
+	p.findPassword {clear:both; float:left; display:inline; margin:10px 0 0 0; white-space:nowrap;}
+		p.findPassword a {font:11px dotum; color:#8d8b84;}
+	#urlRegist p.closeLayer {top:22px; right:23px;}
+
+/* 이미가입인증 완료 */
+#urlRegist h4.lastestRegist {width:254px; background-position:left -100px;}
+
+/* 로그인 */
+#Login {top:50%; width:293px; height:220px; margin:-132px 0 0 -145px;}
+		#Login .inner {width:255px; height:183px; padding:37px 0 0 38px;}
+		#Login .background {width:293px; height:220px; background:url('../images/bg_login.png') left top no-repeat;}
+	#Login h4 {width:39px; height:14px; background-position:left -120px;}
+	#Login fieldset.userLogin {width:215px; margin:17px 0 0 0; padding:0; border:0;}
+		#Login fieldset.userLogin dl {width:158px;}
+		#Login fieldset.userLogin dl dt {width:0px; height:0; margin:0; padding:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+		#Login fieldset.userLogin dl dd {width:158px;}
+			#Login fieldset.userLogin dl dd input {width:156px;}
+		#Login fieldset.userLogin p {margin:9px 0 0 0;}
+		#Login fieldset.userLogin input#userLogin {top:10px; right:0px;}
+	ul.registPwdFind {clear:both; float:left; display:inline; width:215px; margin:16px 0 0 0; padding:10px 0 0 0; border-top:1px solid #e0dbbd;}
+		ul.registPwdFind li {float:left; display:inline; height:10px; margin-left:9px; white-space:nowrap;}
+		ul.registPwdFind li.regist {margin:0; padding-right:8px; border-right:1px solid #d9d4b9;}
+			ul.registPwdFind li a {font:11px dotum; color:#8d8b84;}
+	#Login p.closeLayer {top:22px; right:23px;}
+
+/* 비밀번호 찾기 */
+#findPassword {top:50%; width:438px; height:205px; margin:-125px 0 0 -218px;}
+		#findPassword .inner {width:400px; height:169px; padding:36px 0 0 38px;}
+		#findPassword .background {width:438px; height:205px; background:url('../images/bg_findPassword.png') left top no-repeat;}
+	#findPassword h4 {width:78px; height:15px; background-position:left -140px;}
+	#findPassword .errorMessage {margin:2px 0 0 25px;}
+	fieldset.findPwd {position:relative; clear:both; float:left; display:block; width:359px; margin:20px 0 0 0; padding:17px 0 0 0; border-top:1px solid #e3dbbd;}
+		fieldset.findPwd dl {float:left; width:303px;}
+		fieldset.findPwd dl dt {clear:both; float:left; width:103px; margin-top:3px; padding-top:6px; font:11px dotum; color:#8d8b84;}
+		fieldset.findPwd dl dd {float:left; width:200px; margin-top:3px;}
+			fieldset.findPwd dl dd input {width:200px; height:22px; text-indent:3px; font:11px/20px dotum; color:#b0aea2; border:1px solid #c9c3a6; background-color:transparent;}
+			fieldset.findPwd dl dd select {width:200px; height:22px; font:11px dotum; color:#b0aea2; border:1px solid #c9c3a6; background:transparent;}
+		fieldset.findPwd input#pwdFind {position:absolute; bottom:0; right:0;}
+	#findPassword p.closeLayer {top:22px; right:23px;}
+	#findPassword .error {border-color:#ff5104;}
+
+/* 임시 로그인 */
+#tempLogin {top:50%; width:405px; height:201px; margin:-123px 0 0 -201px;}
+		#tempLogin .inner {width:367px; height:165px; padding:36px 0 0 38px;}
+		#tempLogin .background {width:405px; height:201px; background:url('../images/bg_tempLogin.png') left top no-repeat;}
+	#tempLogin h4 {width:251px; height:35px; background-position:left -160px;}
+	#tempLogin fieldset.userLogin {width:328px; margin:17px 0 0 0; padding:0; border:0;}
+		#tempLogin fieldset.userLogin dl {width:273px;}
+		#tempLogin fieldset.userLogin dl dt {width:73px;}
+		#tempLogin fieldset.userLogin dl dd {width:200px;}
+			#tempLogin fieldset.userLogin dl dd input {width:196px;}
+		#tempLogin fieldset.userLogin p {margin:9px 0 0 73px;}
+		#tempLogin fieldset.userLogin input#userLogin {top:10px; right:0px;}
+	#tempLogin p.closeLayer {top:22px; right:23px;}
+
+/* 고객센터 */
+#costomerCenter {top:50%; width:739px; height:506px; margin:-250px 0 0 -365px;}
+	#costomerCenter	 .inner {width:703px; height:470px; padding:30px 0 0 30px;}
+	#costomerCenter	 .background {width:739px; height:506px; background:url('../images/bg_customerCenter.png') left top no-repeat;}
+	.ccSidebar {clear:both; float:left; width:162px;}
+		.ccSidebar h4 {float:left; width:82px; height:23px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/customerSet.gif') left top no-repeat;}
+		.ccSidebar ul {clear:both; float:left; width:132px; margin-top:20px; border-top:1px solid #019eb5;}
+			.ccSidebar ul li {clear:both; float:left; width:132px; border-bottom:1px solid #dedede;}
+				.ccSidebar ul li a {float:left; width:132px; height:32px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-repeat:no-repeat; background-position:1px 9px;}
+			.ccSidebar ul li.faq a {background-image:url('../images/btn_faq.gif');}
+			.ccSidebar ul li.faq a:hover {background-image:url('../images/btn_faqOver.gif');}
+			.ccSidebar ul li.mail a {background-image:url('../images/btn_mail.gif');}
+			.ccSidebar ul li.mail a:hover {background-image:url('../images/btn_mailOver.gif');}
+			.ccSidebar ul.cFaq li.faq a {background-image:url('../images/btn_faqOver.gif');}
+			.ccSidebar ul.cMail li.mail a {background-image:url('../images/btn_mailOver.gif');}
+		.ccSidebar dl.customer, .ccSidebar dl.b2b {position:relative; clear:both; float:left; width:115px;}
+			.ccSidebar dl.customer dt, .ccSidebar dl.b2b dt, .ccSidebar dl.customer dd, .ccSidebar dl.b2b dd {width:0; height:0; text-indent:9999em; font:0/0 arial; overflow:hidden;}
+				.ccSidebar dl.customer a, .ccSidebar dl.b2b a {position:absolute; top:0; left:0;}
+		.ccSidebar dl.customer {height:42px; margin-top:195px; background:url('../images/customerSet.gif') left -30px;}
+			.ccSidebar dl.customer a.tel {top:16px; width:60px; height:9px;}
+			.ccSidebar dl.customer a.mail {top:32px; width:115px; height:9px;}
+		.ccSidebar dl.b2b {height:58px; margin-top:19px; background:url('../images/customerSet.gif') left -90px;}
+			.ccSidebar dl.b2b a.tel {top:32px; width:60px; height:9px;}
+			.ccSidebar dl.b2b a.mail {top:48px; width:86px; height:9px;}
+	.ccContent {float:left; width:511px;}
+		.ccContent fieldset.search {clear:both; float:left; width:511px;}
+			.ccContent fieldset.search select {float:left; display:inline; width:120px; height:22px; font:11px dotum; color:#019eb5; border:1px solid #c3dade; background:#edf6f7;}
+			.ccContent fieldset.search input.searchInput {float:left; display:inline; width:220px; height:22px; margin-left:1px; font:11px dotum; color:#019eb5; border:1px solid #c3dade; background:#edf6f7;}
+			.ccContent fieldset.search input.searchGo {float:left; display:inline; margin-left:1px;}
+		p.sResult {clear:both; float:left; width:100%; padding:14px 0 13px 0; font:11px dotum; color:#a6a6a6;}
+			p.sResult strong {font-weight:normal; color:#019eb5;}
+		.faqScroll {clear:both; float:left; width:511px; height:357px; border:1px solid #019eb5; border-width:1px 0; overflow:scroll; overflow-x:hidden;}
+			.faqScroll ul {margin-top:10px;}
+			.faqScroll ul, .faqScroll ul li, .faqScroll ul li dl, .faqScroll ul li dl dt, .faqScroll ul li dl dd {clear:both; float:left; width:485px;}
+				.faqScroll ul li dl dt {width:450px; padding:7px 15px 5px 22px; font:11px dotum; color:#a6a6a6; cursor:pointer; background:url('../images/ico_faqQ.gif') 5px 11px no-repeat;}
+				.faqScroll ul li dl dd {display:none; width:450px; padding:6px 15px 6px 22px; font:11px/20px dotum; color:#aac8cc; border-bottom:1px solid #c3dade;}
+				.faqScroll ul li.current dt {color:#019eb5; border-top:1px solid #c3dade; background:#edf6f7 url('../images/ico_faqQC.gif') 5px 10px no-repeat;}
+				.faqScroll ul li.current dd {display:block;}
+		.ccContent p.qnaExplain {clear:both; float:left; width:272px; height:25px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/qnaSet.gif') left top no-repeat;}
+		.ccContent fieldset.qna {clear:both; float:left; width:511px; margin-top:18px; padding-top:5px; border-top:1px solid #019eb5;}
+			.ccContent fieldset.qna dt {clear:both; float:left; width:37px; height:10px; margin-top:15px; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+			.ccContent fieldset.qna dd {clear:both; float:left; width:511px; margin-top:8px;}
+			.ccContent fieldset.qna dt.question {background:url('../images/qnaSet.gif') left -30px no-repeat;}
+			.ccContent fieldset.qna dd.question select {width:220px; height:22px; font:11px dotum; color:#a6a6a6; border:1px solid #c3dade;}
+			.ccContent fieldset.qna dt.detail {background:url('../images/qnaSet.gif') left -50px no-repeat;}
+			.ccContent fieldset.qna dd.detail textarea {width:511px; height:248px; padding:2px 4px 0 4px; font:11px/18px dotum; color:#a6a6a6; border:1px solid #c3dade; overflow:auto;}
+			.ccContent fieldset.qna p {clear:both; float:left; margin-top:15px;}
+	#costomerCenter p.closeLayer {top:21px; right:27px;}
+		#costomerCenter p.closeLayer button {width:9px; height:9px; background:url('../images/btn_closeLayer.gif') left top no-repeat;}
+
+/* 앱정보 */
+#appInfo {top:50%; width:717px; height:458px; margin:-229px 0 0 -356px;}
+	#appInfo .inner {width:687px; height:428px; padding:30px 0 0 30px;}
+	#appInfo .background {width:717px; height:458px; background:url('../images/bg_appInfo.png') left top no-repeat;}
+		.appSummary {position:relative; float:left; width:172px; height:384px; border-right:1px solid #ede9e4;}
+			p.appImg {clear:both; float:left; width:141px; height:141px; font:0/0 arial;}
+			ul.appSinfo {clear:both; float:left; width:141px; margin-top:10px; font:11px dotum; color:#8d8b84;}
+				ul.appSinfo li {clear:both; float:left; width:141px;}
+				ul.appSinfo dt {clear:both; float:left; margin-top:4px; font-weight:bold; white-space:nowrap;}
+				ul.appSinfo dd {float:left; margin-top:4px; white-space:nowrap;}
+			dl.userSet {position:absolute; bottom:0; left:0; clear:both; float:left; width:170px;}
+				dl.userSet dt {clear:both; float:left; font:bold 11px dotum; color:#8d8b84;}
+				dl.userSet dd {clear:both; float:left; margin:5px 0 0 0;}
+					dl.userSet dd a {font:bold 11px dotum; color:#8d8b84;}
+					dl.userSet dd a:hover {text-decoration:none;}
+				dl.userSet dd.auth {clear:both; float:left; margin:7px 0 0 0;}
+					dl.userSet dd.auth a {float:left; width:65px; height:22px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/appInfoSet.gif'); background-repeat:no-repeat;}
+						dl.userSet dd.auth ul li {clear:both; float:left; margin:1px 0 0 0;}
+							dl.userSet dd.auth ul li.update a {background-position:left top;}
+							dl.userSet dd.auth ul li.appAdd a {background-position:-70px top;}
+							dl.userSet dd.auth ul li.stop a {background-position:-140px top;}
+		.appDetail {float:left; display:inline; width:455px; height:410px; margin:0 0 0 25px;}
+			.appDetail .adView {clear:both; float:left; width:451px; margin:0 0 14px 0; padding:0 0 10px 4px; border-bottom:1px solid #e5e1da;}
+				.adView h4 {clear:both; float:left; width:451px; padding:0 0 3px 0; text-indent:0; font:bold 12px dotum; color:#8d8b84; cursor:pointer; background:none;}
+					.adView h4 img {margin:-4px 0 0 3px; vertical-align:middle;}
+				.advInner {position:relative; clear:both; float:left; width:411px; padding:0 40px 0 0; font:12px/20px dotum; color:#8d8b84;}
+				.advScreen .advInner {width:451px; padding-right:0;}
+				.screenWrap {clear:both; float:left; display:inline; width:431px; height:139px; margin:5px 0 0 1px; padding:0 0 5px 0; overflow:hidden;}
+					.screenWrap ul {clear:both; float:left;}
+						.screenWrap ul li {float:left; display:inline; margin:0 10px 0 0;}
+							.screenWrap ul li a {float:left; border:1px solid #d3c8bb; font:0/0 arial;}
+					.advInner button.scsLeft, .advInner button.scsRight {position:absolute; top:68px; width:5px; height:9px;}
+					.advInner button.scsLeft  {left:-14px; background:url('../images/appInfoSet.gif') left -30px no-repeat;}
+					.advInner button.scsRight {right:4px; background:url('../images/appInfoSet.gif') -100px -30px no-repeat;}
+			.appDetail .advFan {padding-bottom:0; border-bottom:0;}
+				.fanComment {clear:both; float:left; display:inline; width:441px; margin:6px 0 0 1px;}
+					.fanComment input#fanCommentInput {float:left; width:247px; height:22px; margin:0 1px 0 0; font:12px dotum; color:#8d8b84; border:1px solid #cbc6ae; background:#fff;}
+				ul.fanCmtList, ul.authFanCmtList {clear:both; float:left; width:441px; margin:2px 0 0 0;}
+					ul.fanCmtList li {clear:both; float:left; width:441px; font:11px/18px dotum; color:#8d8b84;}
+					ul.authFanCmtList li {float:left; margin-right:2px; font:12px/20px dotum; color:#8d8b84;}
+			.adviCurrent {height:245px; overflow:auto; overflow-x:hidden;}
+			.advScreen .adviCurrent {overflow:visible;}
+				.adviCurrent .screenWrap {height:241px;}
+					.adviCurrent  button.scsLeft, .adviCurrent button.scsRight {top:121px;}
+			.adAllClose .advFan {padding-bottom:10px; border-bottom:1px solid #e5e1da;}
+			/* 홍보메일 보내기 */
+			h3#appAdTit, h3#appStopTit, h3#recentAppTit, h3#fanCommentTit {clear:both; float:left; width:87px; height:16px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/appInfoSet.gif') left -50px no-repeat;}
+			p.appAdExplain {clear:both; float:left; margin:5px 0 0 0; font:11px dotum; color:#8d8b84; white-space:nowrap;}
+			fieldset.appAdSendMail {clear:both; float:left; width:450px; margin:13px 0 0 0; padding:10px 0 0 0;}
+				fieldset.appAdSendMail dl {clear:both; float:left; width:450px; padding:10px 0 15px 0; border-top:1px solid #e5e1da; border-bottom:1px solid #e5e1da;}
+					fieldset.appAdSendMail dl dt {clear:both; float:left; width:57px; margin:11px 0 0 0;}
+						fieldset.appAdSendMail dl dt span {float:left; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/appInfoSet.gif'); background-repeat:no-repeat;}
+						fieldset.appAdSendMail dl dt.adSend span {width:47px; background-position:left -70px;}
+						fieldset.appAdSendMail dl dt.adRecive span {width:39px; background-position:-50px -70px;}
+					fieldset.appAdSendMail dl dt.adTitle, fieldset.appAdSendMail dl dd.adTitle {margin-top:13px; padding:21px 0 0 0; border-top:1px solid #e5e1da;}
+					fieldset.appAdSendMail dl dd.adTitle {padding-top:15px;}
+						fieldset.appAdSendMail dl dt.adTitle span {width:18px; background-position:-100px -70px;}
+						fieldset.appAdSendMail dl dt.adContent span {width:18px; background-position:-150px -70px;}
+					fieldset.appAdSendMail dl dd {float:left; width:393px; margin:5px 0 0 0;}
+						fieldset.appAdSendMail dl dd input {float:left; width:327px; height:22px; font:12px dotum; color:#8d8b84; border:1px solid #cbc6af; background:#fff;}
+						fieldset.appAdSendMail dl dd button.findEmail {float:left; display:inline; width:65px; height:22px; margin:0 0 0 1px; background:url('../images/appInfoSet.gif') -140px -90px no-repeat;}
+						fieldset.appAdSendMail dl dd p {clear:both; float:left; display:inline; margin:6px 0 0 4px; font:11px dotum; color:#8d8b84; white-space:nowrap;}
+						fieldset.appAdSendMail dl dd.adTitle input {width:393px;}
+						fieldset.appAdSendMail dl dd textarea {float:left; width:393px; height:146px; font:12px/18px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
+					fieldset.appAdSendMail .btnWrap {clear:both; float:left; width:400px; display:inline; margin:15px 0 0 57px;}
+						fieldset.appAdSendMail .btnWrap a.preview {float:left; width:65px; height:22px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/appInfoSet.gif') left -90px no-repeat;}
+						fieldset.appAdSendMail .btnWrap input {float:left;}
+						fieldset.appAdSendMail .btnWrap p.errorMessage {margin:5px 0 0 10px;}
+			/* 판매중지신청 */
+			h3#appStopTit {background-position:left -120px;}
+			fieldset.appStop {clear:both; float:left; width:450px; margin:13px 0 0 0; border-top:1px solid #e5e1da;}
+				fieldset.appStop dl {clear:both; float:left; width:450px; margin:12px 0 0 0;}
+					fieldset.appStop dl dt {clear:both; float:left; width:450px; font:bold 11px dotum; color:#8d8b84;}
+						fieldset.appStop dl dt em {margin-left:3px; font-weight:normal; color:#ff0000;}
+					fieldset.appStop dl dd {clear:both; float:left; width:450px; font:11px dotum; color:#8d8b84;}
+						fieldset.appStop dl dd ul li {clear:both; float:left; padding:9px 0 2px 0; white-space:nowrap;}
+							fieldset.appStop dl dd ul li label {margin-left:6px;}
+						fieldset.appStop dl dd ul li.etc {padding-top:5px;}
+							fieldset.appStop dl dd ul li.etc input.check {display:inline-block; margin-top:4px;}
+							fieldset.appStop dl dd ul li input#appStopEtc {width:274px; height:22px; margin:0 0 0 2px; font:12px dotum; color:#8d8b84; border:1px solid #cac5ad; background:#fff;}
+					fieldset.appStop dl dd textarea {float:left; width:450px; height:99px; margin:5px 0 0 0; font:11px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
+				fieldset.appStop dl.appStopReason {margin-top:14px;}
+				fieldset.appStop dl.toBindApp dd {margin-top:3px;}
+				fieldset.appStop .btnWrap {margin:15px 0 0 0;}
+			/* 앱 작성자 설명*/
+			p.authImg {clear:both; float:left; font:0/0 arial;}
+				p.authImg img {border:1px solid #d9cfc4;}
+			dl.appAuthInfo {clear:both; float:left; width:150px; margin:10px 0 0 0;}
+				dl.appAuthInfo dt {clear:both; float:left; margin:4px 0 0 0; white-space:nowrap;}
+					dl.appAuthInfo dt span {float:left; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+					dl.appAuthInfo dt.name span {width:26px; background:url('../images/appInfoSet.gif') left -140px no-repeat;}
+					dl.appAuthInfo dt.authExplain span {width:35px; background:url('../images/appInfoSet.gif') -30px -140px no-repeat;}
+				dl.appAuthInfo dd {clear:both; float:left; margin:3px 0 0 0; font:11px/18px dotum; color:#8d8b84;}
+			p.lastUpdate {position:absolute; bottom:0; left:0; clear:both; float:left; white-space:nowrap; font:9px verdana; color:#cecbc4;}
+			h3#recentAppTit {width:84px; height:14px; background-position:left -160px;}
+			p.authExp {width:437px; font-size:12px;}
+				p.authExp em {font-weight:bold;}
+				p.authExp a {float:right; font:bold 11px dotum; color:#837a76;}
+			.recentAppWrap {position:relative; clear:both; float:left; width:450px; margin:13px 0 0 0; border-bottom:1px solid #e6e2dc;}
+				.raWrap {position:relative; clear:both; float:left; width:435px; height:107px; overflow:hidden;}
+					.raWrap ul {float:left;}
+						.raWrap ul li {float:left; display:inline; margin-right:15px;}
+							.raWrap ul li dl {position:relative; clear:both; float:left; width:75px;}
+								.raWrap ul li dl dt {clear:both; float:left; width:75px; margin-top:81px; text-align:center;}
+									.raWrap ul li dl dt a {font:12px dotum; color:#8d8b84;}
+								.raWrap ul li dl dd {position:absolute; top:0; left:0; clear:both; float:left; width:75px; height:75px; font:0/0 arial; overflow:hidden;}
+					.recentAppWrap button.scsLeft, .recentAppWrap button.scsRight {position:absolute; top:32px; width:5px; height:9px;}
+					.recentAppWrap button.scsLeft  {left:-15px; background:url('../images/appInfoSet.gif') left -30px no-repeat;}
+					.recentAppWrap button.scsRight {right:0; background:url('../images/appInfoSet.gif') -100px -30px no-repeat;}
+			h3#fanCommentTit {width:103px; height:12px; margin-top:15px; margin-bottom:4px; background-position:-90px -160px;}
+			.fanCommentWrap {clear:both; float:left; width:450px; margin-top:7px;}
+				.fanCommentWrap fieldset.fanComment {margin-top:2px; margin-bottom:3px;}
+				.fanCommentWrap ul.fanCmtList {margin-top:-1px;}
+					.fanCommentWrap ul.fanCmtList li {margin-top:7px; font-size:12px; color:#8d8b84;}
+						.fanCommentWrap ul.fanCmtList li span {font-weight:bold;}
+						.fanCommentWrap ul.fanCmtList li em {color:#bdbbb4;}
+				.fcPagenator {clear:both; float:left; width:400px; margin:12px 0 0 0; font:bold 11px verdana; color:#8d8b84; letter-spacing:-1px;}
+					.fcPagenator strong {margin:0 8px 0 6px;}
+					.fcPagenator img {margin:-2px 0 0 0; vertical-align:middle;}
+	#appInfo p.closeLayer {top:21px; right:23px;}
+		#appInfo p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+
+/* 이메일찾기 */
+#appInfoFindMail {top:50%; width:516px; height:265px; margin:-133px 0 0 -258px;}
+	#appInfoFindMail .inner {width:485px; height:234px; padding:31px 0 0 31px;}
+	#appInfoFindMail .background {width:516px; height:265px; background:url('../images/bg_appInfoFindMail.png') left top no-repeat;}
+	h3#titFindMail {clear:both; float:left; width:102px; height:14px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/findEmailSet.gif') left top no-repeat;}
+	p.msgFindMail {clear:both; float:left; width:427px; height:27px; margin:9px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/findEmailSet.gif') left -20px no-repeat;}
+	fieldset.findEmail {clear:both; float:left; width:452px; margin:19px 0 0 0;}
+		fieldset.findEmail dl {clear:both; float:left; width:452px; padding:15px 0 20px 0; border:1px solid #e5dfd8; border-width:1px 0;}
+			fieldset.findEmail dl dt {clear:both; float:left; width:60px; margin-top:10px;}
+				fieldset.findEmail dl span {float:left; display:inline; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/findEmailSet.gif'); background-repeat:no-repeat;}
+				fieldset.findEmail dl dt.email span {width:35px; background-position:left -50px;}
+				fieldset.findEmail dl dt.pwd span {width:50px; background-position:-40px -50px;}
+			fieldset.findEmail dl dd {float:left; width:392px; margin-top:5px;}
+				fieldset.findEmail dl dd input {float:left; width:151px; height:22px; font:11px dotum; color:#3b3b3b; border:1px solid #cbc6ae; background:#fff;}
+				fieldset.findEmail dl dd span.at {width:8px; margin:6px 5px 0 4px; background-position:-100px -50px;}
+				fieldset.findEmail dl dd select {float:left; display:inline; width:149px; height:22px; font:11px dotum; color:#3b3b3b; border:1px solid #cbc6af;}
+				fieldset.findEmail dl dd.pwd input {width:317px;}
+		fieldset.findEmail button.findEmail {float:left; display:inline; width:65px; height:22px; margin:20px 0 0 1px; background:url('../images/appInfoSet.gif') -140px -90px no-repeat;}
+		fieldset.findEmail p.errorMessage {margin:25px 0 0 10px;}
+	#appInfoFindMail p.closeLayer {top:21px; right:23px;}
+		#appInfoFindMail p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 이메일찾기 결과 */
+#appInfoFindMailResult {top:50%; width:516px; height:424px; margin:-212px 0 0 -258px;}
+	#appInfoFindMailResult .inner {width:485px; height:393px; padding:31px 0 0 31px;}
+	#appInfoFindMailResult .background {width:516px; height:424px; background:url('../images/bg_appInfoFindMailResult.png') left top no-repeat;}
+	p.efrTemp {clear:both; float:left; width:443px; height:19px; margin:20px 0 0 0; padding:7px 0 0 10px; border:1px solid #c2beb6; border-width:1px 0; background:url('../images/efrTemp.gif') left top no-repeat;}
+	.efrWrap {clear:both; float:left; width:453px; height:169px; margin:10px 0 0 0; overflow:auto; overflow-x:hidden;}
+		.efrWrap table {width:453px;table-layout:fixed;}
+			.efrWrap table th {height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+			.efrWrap table th.checkbox {width:45px;}
+			.efrWrap table th.name {width:195px;}
+			.efrWrap table th.mail {width:213px;}
+			.efrWrap table td {padding:8px 0 6px 0; font:11px dotum; color:#3b3b3b; text-align:left; border-bottom:1px solid #e5ded6;}
+			.efrWrap table td.checkbox {text-indent:10px;}
+			.efrWrap table tr.last td {border-bottom:0;}
+	p.efrSummary {clear:both; float:left; width:453px; margin:10px 0 0 0; padding:9px 0 8px 0; font:11px dotum; color:#8d8b84; border:1px solid #979491; border-width:1px 0;}
+	#appInfoFindMailResult .btnWrap {clear:both; float:left; width:450px; margin:20px 0 0 0;}
+		#appInfoFindMailResult .btnWrap button {float:left; display:inline; width:65px; height:22px; }
+		#appInfoFindMailResult .btnWrap button.mailAdd {background:url('../images/btn_mailAdd.gif') left top no-repeat;}
+		#appInfoFindMailResult .btnWrap button.reFind {background:url('../images/btn_reFind.gif') left top no-repeat;}
+	#appInfoFindMailResult p.closeLayer {top:21px; right:23px;}
+		#appInfoFindMailResult p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+
+
+/* 앱 홍보 미리보기 */
+#appAdPreview {top:50%; width:717px; height:673px; margin:-336px 0 0 -356px;}
+	#appAdPreview .inner {width:687px; height:653px; padding:20px 0 0 30px;}
+	#appAdPreview .background {width:717px; height:673px; background:url('../images/bg_appAdPreview.png') left top no-repeat;}
+	.appAdMailPreview {clear:both; float:left; width:620px; height:535px; margin:20px 0 0 0; padding:14px 0 0 30px; overflow:auto; overflow-x:hidden; border:1px solid #a8a5a1;}
+		ul.mailInfo {clear:both; float:left; width:577px; font:11px dotum; color:#8d8b84;}
+			ul.mailInfo li {clear:both; float:left; width:577px;}
+			ul.mailInfo dt {clear:both; float:left; margin-top:5px; font-weight:bold; white-space:nowrap;}
+			ul.mailInfo dd {float:left; display:inline; margin:5px 0 0 3px;}
+		.appInfoWrap {clear:both; float:left; width:589px; margin:18px 0 0 0; padding:16px 0 0 0; font:12px/20px dotum; color:#8d8b84; border-top:1px solid #e7e4df;}
+			.appInfoWrap p.appExplain a {font-weight:bold; color:#8d8b84;}
+			.appDetailInfo {clear:both; float:left; width:589px; margin:15px 0 0 0; padding:16px 0 0 0; border-top:1px solid #e7e4df;}
+				.appDetailInfo .appSummary {width:129px; height:auto; border-right:0; margin-top:4px;}
+					.appDetailInfo p.appImg {width:129px;}
+					.appDetailInfo p.viewDetail {clear:both; float:left; width:129px; margin:4px 0 0 0;}
+						.appDetailInfo p.viewDetail a {font-weight:bold; font-size:11px; color:#8d8b84; text-decoration:underline;}
+						.appDetailInfo .appSummary ul.appSinfo {width:129px; margin:10px 0 0 0;}
+							.appDetailInfo .appSummary ul.appSinfo li {line-height:13px;}
+				.appDetailInfo .appDetail {height:auto; margin-left:20px;}
+					.appDetailInfo .appDetail, .appDetailInfo .appDetail .adView, .appDetailInfo .appDetail .advScreen .advInner {width:440px;}
+					.appDetailInfo .appDetail .adView h4 , .appDetailInfo .appDetail .adView .advInner {font-size:12px; line-height:20px; cursor:default; overflow:visible;}
+					.appDetailInfo .appDetail .adView {margin-bottom:11px; padding-bottom:0; border-bottom:0;}
+		.appAdFooter {clear:both; float:left; width:590px; height:27px; margin:4px 0 0 0; padding:26px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; border-top:1px solid #e6e2dc; background:url('../images/appAdFooter.gif') left 26px no-repeat;}
+		#appAdPreview .btnWrap {clear:both; float:left; width:590px; margin:20px 0 0 0;}
+			#appAdPreview .btnWrap .btnModify {float:left; width:65px; height:22px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/btn_modify.gif') left top no-repeat;}
+			#appAdPreview .btnWrap input {float:left; display:inline;}
+	#appAdPreview p.closeLayer {top:21px; right:23px;}
+		#appAdPreview p.closeLayer button {width:74px; height:11px; background:url('../images/btn_closeAppAd.gif') left top no-repeat;}
+
+/* 내정보 */
+#myProfile {top:50%; width:581px; height:583px; margin:-291px 0 0 -290px;}
+	#myProfile .inner {width:551px; height:553px; padding:30px 0 0 30px;}
+	#myProfile .background {width:581px; height:583px; background:url('../images/bg_myProfile.png') left top no-repeat;}
+	ul.myProfileSnb {clear:both; float:left; width:518px; padding:0 0 13px 0; border-bottom:1px solid #7a756e;}
+		ul.myProfileSnb li {float:left; display:inline; border-right:1px solid #e0d8cb;}
+			ul.myProfileSnb li h3, ul.myProfileSnb li a {float:left; height:15px; margin:0 15px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/myprofileSet.gif'); background-repeat:no-repeat;}
+				ul.myProfileSnb li.myProfile h3 {width:80px; margin-left:0; background-position:left top;}
+				ul.myProfileSnb li.myProfile a {width:79px; margin-left:0; background-position:-90px top;}
+				ul.myProfileSnb li.setPassword h3 {width:79px; background-position:left -20px;}
+				ul.myProfileSnb li.setPassword a {width:80px; background-position:-90px -20px;}
+			ul.myProfileSnb li.out {border-right:0;}
+				ul.myProfileSnb li.out h3 {width:79px; background-position:left -40px;}
+				ul.myProfileSnb li.out a {width:54px; background-position:-90px -40px;}
+	fieldset.myProfile {clear:both; float:left; width:518px; margin-top:10px;}
+		fieldset.myProfile dl {clear:both; float:left; width:518px;}
+			fieldset.myProfile dl dt {clear:both; float:left; width:85px; margin-top:10px;}
+				fieldset.myProfile dl dt span {float:left; height:11px; margin-top:7px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/myprofileSet.gif'); background-repeat:no-repeat;}
+			fieldset.myProfile dl dd {float:left; width:433px; margin-top:10px; font:11px dotum; color:#b8b5ad;}
+				fieldset.myProfile dl dd input {float:left; height:22px; font:11px dotum; color:#b8b5ad; border:1px solid #cbc6af; background:#fff;}
+				fieldset.myProfile dl dd select {float:left; width:200px; height:22px; font:11px dotum; color:#8d8b84; border:1px solid #cbc6af; background:#fff;}
+				fieldset.myProfile dl dt.email span {width:47px; margin-top:2px; background-position:left -60px;}
+				fieldset.myProfile dl dt.nickname span {width:26px; background-position:-50px -60px;}
+				fieldset.myProfile dl dd.nickname input {width:126px;}
+				fieldset.myProfile dl dd.nickname button.dupCheck {float:left; display:inline; width:65px; height:22px; margin-left:1px; background:url('../images//myprofileSet.gif') left -100px no-repeat;}
+				fieldset.myProfile dl dd.nickname p {clear:both; float:left; margin-top:8px; white-space:nowrap;}
+			fieldset.myProfile dl dt.nameKor {margin-top:18px; padding-top:20px;}
+				fieldset.myProfile dl dt.nameKor span {width:43px; background-position:-80px -60px;}
+			fieldset.myProfile dl dd.nameKor {margin-top:18px; padding-top:20px; border-top:1px solid #e5dfd7;}
+				fieldset.myProfile dl dd.nameKor input {width:126px;}
+				fieldset.myProfile dl dd.nameKor em {float:left; display:inline; margin:5px 0 0 9px; letter-spacing:-1px;}
+				fieldset.myProfile dl dt.nameEng span {width:43px; background-position:-130px -60px;}
+				fieldset.myProfile dl dd.nameEng input {width:126px;}
+				fieldset.myProfile dl dt.birth span {width:35px; background-position:-180px -60px;}
+				fieldset.myProfile dl dd.birth input {width:23px;}
+				fieldset.myProfile dl dd.birth input#year {width:35px;}
+				fieldset.myProfile dl dd.birth span {float:left; display:inline; margin:5px 10px 0 2px;}
+			fieldset.myProfile dl dt.pwdQ {margin-top:18px; padding-top:20px;}
+				fieldset.myProfile dl dt.pwdQ span {width:76px; background-position:left -80px;}
+			fieldset.myProfile dl dd.pwdQ {position:relative; margin-top:18px; padding-top:20px; border-top:1px solid #e5dfd7;}
+				fieldset.myProfile dl dd.pwdQ em {position:absolute; top:23; left:209px; clear:both; float:left; width:155px; line-height:18px;}
+				fieldset.myProfile dl dt.pwdA span {width:76px; background-position:-80px -80px;}
+				fieldset.myProfile dl dd.pwdA input {width:200px;}
+			fieldset.myProfile dl dt.bank {margin-top:18px; padding-top:20px;}
+				fieldset.myProfile dl dt.bank span {width:26px; background-position:-160px -80px;}
+			fieldset.myProfile dl dd.bank {margin-top:18px; padding-top:20px; border-top:1px solid #e5dfd7;}
+				fieldset.myProfile dl dd.bank em {float:left; display:inline; margin:5px 0 0 9px; letter-spacing:-1px;}
+				fieldset.myProfile dl dt.accountNum span {width:36px; background-position:-190px -80px;}
+				fieldset.myProfile dl dd.accountNum input {width:200px;}
+				fieldset.myProfile dl dd.accountNum p {clear:both; padding-top:7px; font:11px/18px dotum; color:#b8b7b5;}
+	#myProfile div.btnWrap {width:518px; margin-top:15px; padding-top:20px; border-top:1px solid #7d7b78;}
+		#myProfile div.btnWrap p.errorMessage {margin:2px 0 0 10px;}
+	#myProfile p.closeLayer {top:21px; right:23px;}
+		#myProfile p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 내정보 - 로그인 */
+#myProfileLogin {top:50%; width:582px; height:307px; margin:-153px 0 0 -278px;}
+	#myProfileLogin .inner {width:552px; height:277px; padding:30px 0 0 30px;}
+	#myProfileLogin .background {width:582px; height:307px; background:url('../images/bg_myProfileLogin.png') left top no-repeat;}
+		p.omLogin {clear:both; float:left; width:397px; height:38px; margin:29px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/myprofileSet.gif') left -130px no-repeat;}
+		#myProfileLogin fieldset.userLogin {width:519px; padding-top:5px; padding-bottom:13px; border-color:#e5e0d9;}
+			#myProfileLogin fieldset.userLogin dl dt span {float:left; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/myprofileSet.gif'); background-repeat:no-repeat;}
+			#myProfileLogin fieldset.userLogin dl dt.email span {width:47px; background-position:left -170px;}
+			#myProfileLogin fieldset.userLogin dl dt.pwd span {width:36px; background-position:-50px -170px;}
+			#myProfileLogin fieldset.userLogin dl dd input {width:160px; background:#fff;}
+			#myProfileLogin fieldset.userLogin #userLogin {top:15px; left:239px;}
+		#myProfileLogin ul.registPwdFind {margin-top:10px; margin-left:77px; padding-top:0; border-top:0;}
+	#myProfileLogin p.closeLayer {top:21px; right:23px;}
+		#myProfileLogin p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 내정보 : 비밀번호변경 */
+#passwordChange {top:50%; width:581px; height:345px; margin:-172px 0 0 -290px;}
+	#passwordChange .inner {width:551px; height:315px; padding:30px 0 0 30px;}
+	#passwordChange .background {width:581px; height:345px; background:url('../images/bg_passwordChange.png') left top no-repeat;}
+		#passwordChange ul.myProfileSnb li.myProfile a {background-position:-270px 0px;}
+		#passwordChange ul.myProfileSnb li.out a {background-position:-270px -40px;}
+		p.txtChangePwd {clear:both; float:left; width:406px; height:15px; margin:29px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/txtChangePwd.gif') left top no-repeat;}
+		fieldset.changePwd {clear:both; float:left; width:519px; margin:29px 0 0 0;}
+			dl.cpForm {clear:both; float:left; width:519px; padding:12px 0 15px 0; border:1px solid #e7e4df; border-width:1px 0;}
+				dl.cpForm dt {clear:both; float:left; width:94px; margin-top:9px;}
+					dl.cpForm dt span {float:left; height:10px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/changePwdSet.gif'); background-repeat:no-repeat;}
+					dl.cpForm dt.currentPwd span {width:56px; background-position:left top;}
+					dl.cpForm dt.newPwd span {width:65px; background-position:left -20px;}
+					dl.cpForm dt.newPwdRe span {width:85px; background-position:left -40px;}
+				dl.cpForm dd {float:left; width:425px; margin-top:3px;}
+					dl.cpForm dd input {float:left; width:135px; height:22px; font:11px dotum; color:#8d8b84; border:1px solid #cbc6ae; background:#fff;}
+					dl.cpForm dd em {float:left; display:inline; margin:5px 0 0 5px; white-space:nowrap; font:11px dotum; color:#8c8c8c;}
+				dl.cpForm dt.currentPwd, dl.cpForm dd.currentPwd {margin-bottom:12px; border-bottom:1px solid #e7e4df;}
+				dl.cpForm dt.currentPwd {height:31px;}
+				dl.cpForm dd.currentPwd {height:37px;}
+		fieldset.changePwd .btnWrap {clear:both; float:left; width:400px; margin:20px 0 0 0;}
+			fieldset.changePwd .btnWrap input {float:left;}
+			fieldset.changePwd p.errorMessage {margin:9px 0 0 10px;}
+	#passwordChange p.closeLayer {top:21px; right:23px;}
+		#passwordChange p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 내정보 : 회원탈퇴 */
+#myProfileEscape {top:50%; width:581px; height:538px; margin:-269px 0 0 -290px;}
+	#myProfileEscape .inner {width:551px; height:508px; padding:30px 0 0 30px;}
+	#myProfileEscape .background {width:581px; height:538px; background:url('../images/bg_myProfileEscape.png') left top no-repeat;}
+		#myProfileEscape ul.myProfileSnb li.setPassword a {background-position:-180px -20px;}
+		p.mpeAlert {clear:both; float:left; width:327px; height:38px; margin:29px 0 29px 0; text-indent:-9999em; font:0/0 arial;; overflow:hidden; background:url('../images/textMpe.gif') left top no-repeat;}
+		.mpeBy {clear:both; float:left; width:518px; padding:14px 0 0 0; border-top:1px solid #e7e4de;}
+			.mpeBy h4 {float:left; text-indent:0; font:bold 12px dotum; color:#8d8b84; background:none;}
+			.mpeBy p.va {float:right; white-space:nowrap;}
+				.mpeBy p.va a {font:bold 12px dotum; color:#8d8b84;}
+			.mpeBy .raWrap {width:518px; margin-top:13px;}
+				.mpeBy .raWrap ul li {margin-right:13px;}
+			.mpeBye {clear:both; float:left; width:518px; margin-top:3px; font:12px dotum; color:#8d8b84;}
+			.mpeBy textarea {clear:both; float:left; width:518px; height:108px; margin:8px 0 0 0; font:12px/17px dotum; color:#8d8b84; border:1px solid #cbc6af; overflow:auto; background:#fff;}
+		p.emptyApps {clear:both; float:left; width:518px; height:107px; margin-top:13px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/emptyApps.gif') left top no-repeat;}
+		#myProfileEscape div.btnWrap {width:518px; margin-top:15px;}
+			#myProfileEscape div.btnWrap input {float:left;}
+			#myProfileEscape div.btnWrap p.errorMessage {margin:5px 0 0 10px;}
+	#myProfileEscape p.closeLayer {top:21px; right:23px;}
+		#myProfileEscape p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 내정보 : 회원탈퇴완료 */
+#mpeComplete {top:50%; width:581px; height:233px; margin:-166px 0 0 -290px;}
+	#mpeComplete .inner {width:551px; height:203px; padding:30px 0 0 30px;}
+	#mpeComplete .background {width:581px; height:233px; background:url('../images/bg_mpeComplete.png') left top no-repeat;}
+		#mpeComplete ul.myProfileSnb li.setPassword a {background-position:-180px -20px;}
+		p.txtMpeComplete {clear:both; float:left; width:518px; height:84px; margin:29px 0 0 0; padding:0 0 29px 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; border-bottom:1px solid #e7e4de; background:url('../images/txtMpeComplete.gif') left top no-repeat;}
+	#mpeComplete p.closeLayer {top:21px; right:23px;}
+		#mpeComplete p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 회원탈퇴메세지 */
+#mpecMsg {top:50%; width:481px; height:257px; margin:-128px 0 0 -240px;}
+	#mpecMsg .inner {width:451px; height:227px; padding:30px 0 0 30px;}
+	#mpecMsg .background {width:481px; height:257px; background:url('../images/bg_mpecMsg.png') left top no-repeat;}
+		#mpecMsg h3 {clear:both; float:left; width:418px; height:15px; padding-bottom:13px; text-indent:-9999em; font:0/0 arial; overflow:hidden; border-bottom:1px solid #7d7b79; background:url('../images/tit_memberEscape.gif') left top no-repeat;}
+		p.txtmpecMsg {clear:both; float:left; width:418px; height:108px; margin:29px 0 0 0; padding:0 0 28px 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; border-bottom:1px solid #e7e4de; background:url('../images/txtmpecMsg.gif') left top no-repeat;}
+	#mpecMsg p.closeLayer {top:21px; right:23px;}
+		#mpecMsg p.closeLayer button {width:10px; height:11px; background-position:left -80px;}
+
+/* 검색 */
+#search {bottom:0; width:924px; height:675px; margin:0 0 0 -462px;}
+	#search .inner {width:827px; height:630px; padding:45px 0 0 97px;}
+	#search .background {width:924px; height:675px; background:url('../images/bg_search.png') left top no-repeat;}
+		fieldset.mainSearch {position:relative; clear:both; float:left; display:inline; width:551px; height:30px; margin:180px 0 0 94px; background:url('../images/tit_search.gif') left 3px no-repeat;}
+			fieldset.mainSearch select {float:left; width:139px; height:30px; margin:0 0 0 58px; font:14px dotum; color:#019eb5; border:3px solid #019eb5; background:#e5f5f7;}
+			fieldset.mainSearch input {float:left; display:inline;}
+			fieldset.mainSearch input#mainSearchInput {width:300px; height:30px; margin:0 1px; text-indent:5px; font:12px dotum; color:#ccc; border:3px solid #019eb5; background:#fff;}
+			fieldset.mainSearch button.suggestion {position:absolute; top:3px; left:480px; clear:both; float:left; width:15px; height:24px; background:#fff url('../images/btn_suggestion.gif') 4px 10px no-repeat;}
+		.searchResult fieldset.mainSearch {margin:0;}
+		p.searchResultSummary {clear:both; float:left; width:719px; margin:28px 0 0 0; padding:0 0 3px 0; font:11px dotum; color:#a6a6a6; border-bottom:1px solid #019eb5;}
+			p.searchResultSummary strong {font-weight:normal; color:#019eb5;}
+			p.searchResultSummary i {font-style:normal;}
+		.searchResultWrap {clear:both; float:left; width:719px; height:285px; overflow:hidden;}
+			.searchResultWrap ul {clear:both; float:left; display:inline; width:744px;}
+				.searchResultWrap ul li {float:left; width:160px; height:75px; margin:20px 26px 0 0; overflow:hidden;}
+					.searchResultWrap ul li a {float:left; width:160px; height:75px; color:#898989; letter-spacing:-1px; cursor:pointer; background:#fff;}
+					.searchResultWrap ul li a:hover {text-decoration:none;}
+						.searchResultWrap ul li a img {clear:both; float:left;}
+						.searchResultWrap ul li a dl {float:left; display:inline; width:77px; margin:0 0 0 8px; font:12px/14px dotum; color:#898989;}
+							.searchResultWrap ul li a dl dt {float:left; width:77px; font-weight:bold;}
+							.searchResultWrap ul li a dl dd {clear:both; float:left; width:77px;}
+		.searchPaging {clear:both; float:left; width:719px; height:21px; margin-top:20px; padding-top:3px; text-align:center; background:#e5f5f7;}
+			.searchPaging a, .searchPaging strong {padding:4px 3px; font:9px verdana; color:#707070;}
+			.searchPaging a:hover {text-decoration:none;}
+			.searchPaging strong {font-weight:bold; text-decoration:underline;}
+	#search p.closeLayer {top:36px; right:99px;}
+		#search p.closeLayer button {width:9px; height:9px; background:url('../images/btn_layerClose.gif') left top no-repeat;}
+
+/* 앱메이커 */
+#appmaker {top:50%; width:968px; height:643px; margin:-321px 0 0 -484px;}
+	#appmaker .inner {width:915px; height:592px; padding:51px 0 0 53px;}
+	#appmaker .background {width:968px; height:643px; background:url('../images/bg_appmake.png') left top no-repeat;}
+	/* 좌측 */
+	.amMc {float:left; display:inline; width:700px; height:527px;}
+		.h3swf {clear:both; float:left; width:700px; padding-bottom:15px; text-indent:-59px; border-bottom:1px solid #dedede;}
+		.amMainC {clear:both; float:left; width:700px;}
+		/* 템플릿선택 */
+		.ams1 {padding-top:90px;}
+		ul.tplSet {float:left; display:inline; width:700px;}
+			ul.tplSet li {float:left; width:140px; font:0/0 arial;}
+		/* 템플릿스타일 */
+		.ams2 {width:697px; height:493px; border:1px solid #ddebec; overflow:auto; overflow-x:hidden;}
+			.tsDef {clear:both; float:left; display:inline; width:643px; margin:20px 0 0 20px; padding-bottom:20px; border-bottom:1px solid #ddebec;}
+				.tsDef dl {float:left; width:89px; color:#019eb5;}
+					.tsDef dl dt {float:left; width:100%; font:bold 9px Verdana;}
+					.tsDef dl dd {clear:both; float:left; width:100%; margin-top:9px; padding-top:10px; font:bold 12px dotum; border-top:1px solid #ddebec;}
+				.tsDef ul {float:left; display:inline; width:540px; margin:0 0 0 14px;}
+					.tsDef ul li {float:left; display:inline; width:134px; height:206px; margin-left:1px;}
+						.tsDef ul li a {float:left; width:124px; height:116px; padding:90px 0 0 10px; font:bold 12px/18px dotum; color:#808080; background:url('../images/tsDefli.gif') left top repeat;}
+						.tsDef ul li a:hover {text-decoration:none;}
+						.tsDef ul li a.select {width:119px; height:111px; padding:85px 0 0 5px; border:5px solid #39b3c5;}
+			.tdD_last {border-bottom:0;}
+		/* 세부정보입력 */
+		.ams3 {}
+			.ams3 dl {clear:both; float:left; width:699px; margin-top:14px;}
+				.ams3 dl dt {clear:both; float:left; width:102px; margin-top:6px;}
+					.ams3 dl dt span {float:left; width:90px; height:12px; margin:4px 0 0 0; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/tit_ams3.gif'); background-repeat:no-repeat;}
+					.ams3 dl dt.amin01 span {background-position:0 0;}
+					.ams3 dl dt.amin02 span {background-position:0 -15px}
+				.ams3 dl dt.amin03, .ams3 dl dt.amin05 {margin-top:20px; padding-top:20px; border-top:1px solid #ededed;}
+					.ams3 dl dt.amin03 span {background-position:0 -30px;}
+					.ams3 dl dt.amin04 span {background-position:0 -45px;}
+					.ams3 dl dt.amin05 span {background-position:0 -60px;}
+					.ams3 dl dt.amin06 span {background-position:0 -75px;}
+				.ams3 dl dd {position:relative; float:left; width:597px; margin-top:6px; font:11px dotum; color:#97b1b1; }
+					.ams3 dl dd .inpSt {width:506px; height:20px; font:11px dotum; color:#97b1b1; border:1px solid #cfe2e4; background:#f2f9f9;}
+					.ams3 dl dd span.count {display:inline-block; margin-left:5px; font:9px verdana;}
+						.ams3 dl dd span.count i {font-style:normal;}
+					.ams3 dl dd.amin02 .inpSt {width:450px;}
+					.ams3 dl dd.amin02 #subAppName {margin-top:3px; vertical-align:top;}
+					.ams3 dl dd.amin02 label {display:inline-block; margin:0 14px 0 3px;}
+				.ams3 dl dd.amin03, .ams3 dl dd.amin05 {margin-top:20px; padding-top:20px; border-top:1px solid #ededed;}
+					.ams3 dl dd.amin04 span.count, .ams3 dl dd.amin05 span.count {position:absolute; right:25px;}
+					.ams3 dl dd.amin04 span.count {top:33px;}
+					.ams3 dl dd.amin05 span.count {top:23px;}
+					.ams3 dl dd.amin04 .inpSt {height:106px; margin-top:6px; overflow:auto;}
+					.ams3 dl dd.amin05 .inpSt {height:61px; overflow:auto;}
+				p.ams3Msg {clear:both; float:left; width:699px; height:51px; margin:25px 0 0 0; font:12px dotum; line-height:51px; color:#ccc; text-align:center; background:url('../images/bg_ams3Msg.gif') left top no-repeat;}
+					p.ams3Msg strong {color:#fff;}
+		/* 만들기 기본 */
+		.h3edit {clear:both; float:left; width:700px; margin:3px 0 0 0;}
+			.h3edit img {float:left;}
+			.h3edit span {float:right; margin:12px 0 0 0; font:9px verdana; color:#999;}
+				.h3edit span i {font-style:normal; color:#38aabb;}
+		.editW {position:relative; clear:both; float:left; width:368px; height:468px; margin-top:8px; border:14px solid #2a2a2a; background:#fff;}
+			/* 좌측메뉴들 */
+			.editLm {clear:both; float:left; width:71px; height:468px; border-right:1px solid #cfe2e4; background:#f2f9f9;}
+				ul.lDm {clear:both; float:left; width:71px;}
+					ul.lDm li {clear:both; float:left; width:71px; height:33px; font:0/0 arial; background:url('../images/bg_lDmli.gif') left bottom no-repeat;}
+			/* 하단에디트 */
+			dl.editLed {position:absolute; left:0; bottom:5px; clear:both; float:left; width:71px;}
+				dl.editLed dt {clear:both; float:left; width:66px; margin-top:5px; padding:5px 0 0 5px; border-top:1px solid #cfe2e4;}
+				dl.editLed dd {clear:both; float:left; width:66px; padding:6px 0 0 5px; color:#97b1b1;}
+					dl.editLed dd ul {clear:both; float:left; display:inline; margin:5px 0 0 1px;}
+						dl.editLed dd ul li {float:left; width:14px; margin-bottom:9px; margin-right:8px; font:0/0 arial;}
+						dl.editLed dd ul li.cr {clear:both;}
+						dl.editLed dd ul li.ll {margin-right:0;}
+						dl.editLed dd ul li.l1 {margin-bottom:5px;}
+						dl.editLed dd ul li.bold {width:10px; margin-left:6px; margin-right:0;}
+						dl.editLed dd ul li.color {width:21px; margin-left:15px;}
+					dl.editLed dd input {height:20px; color:#97b1b1; border:1px solid #cfe2e4; background:#fff;}
+				dl.editLed dt.find {margin-top:-2px;}
+				dl.editLed dd.find {}
+					dl.editLed dd.find input {width:61px; margin-bottom:3px; font:12px dotum;}
+					dl.editLed dd.find a {font:11px dotum; color:#97b1b1;}
+					dl.editLed dd.find a:hover {color:#2e444e;}
+					dl.editLed dd.find a.edLfL {padding-left:4px; background:url('../images/bg_ldL.gif') left 3px no-repeat;}
+					dl.editLed dd.find a.edLfL:hover {background:url('../images/bg_ldLOn.gif') left 3px no-repeat;}
+					dl.editLed dd.find a.edLfR {margin-left:5px; padding-right:4px; background:url('../images/bg_ldR.gif') right 3px no-repeat;}
+					dl.editLed dd.find a.edLfR:hover {background:url('../images/bg_ldROn.gif') right 3px no-repeat;}
+				dl.editLed dd.page {font:9px verdana; letter-spacing:-1px;}
+					dl.editLed dd.page input {width:31px; margin-right:2px; font:9px verdana;}
+			/* 에디터_메인 */
+			.editRc {position:relative; float:left; display:inline; width:296px; height:468px; overflow-y:scroll; overflow-x:hidden; background:#fff;}
+		span.bcn {position:absolute; clear:both; float:left; width:1px; height:1px; font/0/0 arial; overflow:hidden; background:#fff;}
+			span.bLT {top:-14px; left:-14px;}
+			span.bRT {top:-14px; right:-14px;}
+			span.bLB {bottom:-14px; left:-14px;}
+			span.bRB {bottom:-14px; right:-14px;}
+		.tplSelect {position:relative; float:left; display:inline; width:298px; height:497px; margin:8px 0 0 5px; background:#fff;}
+			.tplsDst {position:relative; border:1px solid #cddee0; background:#fff;}
+				.tplsDst .tplsdTit {height:17px; padding:6px 0 0 10px; border-bottom:1px solid #cddee0; background:#f2f9f9;}
+					.tplsDst .tplsdTit img.tit {float:left;}
+					.tplsDst .tplsdTit img.add {float:right; display:inline; margin:-2px 4px 0 0;}
+				.tplsDst .tplsContent {position:relative; clear:both; float:left; width:100%; overflow-y:scroll; overflow-x:hidden;}
+				.tplsDst .tplsBtn {clear:both; float:left; border-top:1px solid #cddee0;}
+			.tplsDst span.bLT {top:-1px; left:-1px;}
+			.tplsDst span.bRT {top:-1px; right:-1px;}
+			.tplsDst span.bLB {bottom:-1px; left:-1px;}
+			.tplsDst span.bRB {bottom:-1px; right:-1px;}
+		/* 딤드 */
+		.dimd {position:absolute; clear:both; float:left; opacity:0.7; filter:Alpha(opacity=70); background:#fff;}
+		/* 북메이커 */
+		.ams4 {}
+			/* 소스불러오기 */
+			dl.loadSur {width:168px; margin:144px auto 0 auto;}
+				dl.loadSur dt {text-align:center;}
+					dl.loadSur dt a img {margin-top:15px;}
+				dl.loadSur dd {margin-top:16px; padding-top:17px; border-top:1px solid #e3e3e3; font:11px/16px dotum; color:#a6a6a6; text-align:center;}
+			/* 목차 */
+			.tbl {clear:both; float:left; width:296px;}
+				.tbl .tplsContent {height:124px;}
+					ul.tbl_list {clear:both; float:left; width:282px;;}
+						ul.tbl_list li {position:relative; clear:both; float:left; font:12px/25px dotum; border-bottom:1px solid #e6e6e6;}
+							ul.tbl_list li a.clink {float:left; width:273px; height:25px; padding:0 0 0 9px; color:#999;}
+							ul.tbl_list li a.clink:hover {text-decoration:none;}
+							ul.tbl_list li a.cdelete {position:absolute; top:7px; right:8px; clear:both; float:left;}
+						ul.tbl_list li.select {background:#40b1c2;}
+							ul.tbl_list li.select a.clink {color:#fff; background:#41b3c4;}
+						ul.tbl_list li.last {border-bottom:0;}
+			/* 라이브러리 */
+			.lib {clear:both; float:left; width:184px; margin-top:5px;}
+				.lib .tplsContent {height:280px;}
+					ul.lib_list {clear:both; float:left; width:170px;}
+						ul.lib_list li {position:relative; clear:both; float:left; border-bottom:1px solid #e6e6e6; background:#fff;}
+							ul.lib_list li a.clink {float:left; width:160px; height:93px; padding:10px 0 0 10px; font:11px dotum; color:#b2b2b2;}
+								ul.lib_list li a.clink img {display:block; margin-bottom:2px;}
+								ul.lib_list li a.clink i {font-style:normal;}
+							ul.lib_list li a.clink:hover {text-decoration:none;}
+							ul.lib_list li a.cdelete {position:absolute; bottom:6px; right:10px; clear:both; float:left;}
+						ul.lib_list li.select {background:#44b5c7;}
+							ul.lib_list li.select a.clink {color:#fff;}
+						ul.lib_list li.last {border-bottom:0;}
+				.lib .tplsBtn {width:174px; height:26px; padding:9px 0 0 10px;}
+					.lib .tplsBtn a {float:left; display:inline; margin:0 1px 0 0;}
+					.lib .tplsBtn a.btnAdjs {float:right; margin-right:10px;}
+				/* 딤드 */
+				.lib .dimd {top:24px; left:0; width:184px; height:471px;}
+			/* stl */
+			.stl {float:left; display:inline; width:105px; margin-top:5px; margin-left:5px;}
+				.stl .tplsContent {height:316px;}
+					ul.stl_list {clear:both; float:left; width:91px;}
+						ul.stl_list li {position:relative; clear:both; float:left; border-bottom:1px solid #e6e6e6; background:#fff;}
+							ul.stl_list li a.clink {float:left; width:91px; height:103px; padding:10px 0 0 10px; font:11px dotum; color:#b2b2b2;}
+								ul.stl_list li a.clink img {display:block; margin-bottom:2px; border:5px solid #fff;}
+								ul.stl_list li a.clink i {font-style:normal;}
+							ul.stl_list li a.clink:hover {text-decoration:none;}
+						ul.stl_list li.nostyle a.clink img {border:0;}
+						ul.stl_list li.last {border-bottom:0;}
+					/* 아이콘일 때  */
+					ul.stl_icon li a.clink {height:93px;}
+						ul.stl_icon li a.clink img {border:0;}
+			/* 북커버 */
+			.cvr_tit {clear:both; float:left; width:100%; margin-top:93px; text-align:center; font:42px dotum; color:#252525;}
+			.cvr_subTit {clear:both; float:left; width:100%; margin-top:12px; text-align:center; font:12px dotum; color:#252525;}
+			.cvr_auth {clear:both; float:left; width:100%; margin-top:251px; text-align:center; font:bold 12px dotum; color:#252525;}
+			.bcv .lib, .bcv .stl {margin-top:0px;}
+				.bcv .lib .tplsContent {height:434px;}
+				.bcv .stl .tplsContent {height:471px;}
+			/* 앱소개 */
+			.intro_imgWrap {clear:both; float:left; display:inline; width:170px; height:180px; margin:74px 0 0 61px; background:#e0e0e0;}
+				.intro_imgWrap em {display:block; padding:64px 0 0 20px; font:12px/18px dotum; color:#898989;}
+			ul.intro_explain {clear:both; float:left; display:inline; width:210px; margin:15px 0 0 51px;}
+				ul.intro_explain li {clear:both; float:left; width:210px;}
+					ul.intro_explain li dl {clear:both; float:left; width:210px; font:12px/18px dotum; color:#898989;}
+						ul.intro_explain li dl dt {clear:both; float:left; font-weight:bold;}
+						ul.intro_explain li dl dd {float:left;}
+				ul.intro_explain li.appExpla {margin-top:6px;}
+					ul.intro_explain li.appExpla dd {float:none;}
+			/* 아이콘 */
+			ul.aIcon {clear:both; float:left; display:inline;}
+				ul.aIcon li {float:left; display:inline; width:80px; margin:20px 0 0 10px; text-align:center;}
+					ul.aIcon li strong {display:block; margin-top:9px; font:12px dotum; font-weight:bold; color:#252525;}
+		/* 앨범편집 */
+		.ams5 {}
+			.ams5 .editW {width:672px;}
+				.ams5 .editW .editRc {width:600px; overflow:visible;}
+			.albEdit {width:568px; height:110px; margin:15px 0 0 15px;}
+				.albEdit .tplsContent {height:86px; overflow:visible;}
+				.albEdit a.add_album {float:left; display:inline; margin:10px 0 0 10px;}
+				.albEdit p.albe_txt {float:left; display:inline; width:475px; padding:33px 0 0 0; text-align:center;}
+				p.iuProgress {clear:both; float:left; display:inline; width:541px; height:30px; margin:25px 0 0 15px; padding:1px; background:#ebf6f6;}
+					p.iuProgress span {float:left; height:30px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/bg_progress.gif') left top repeat-x;}
+				dl.albumNameipt {clear:both; float:left; display:inline; width:420px; margin:18px 0 0 15px;}
+					dl.albumNameipt dt {float:left; display:inline; margin:6px 0 0 0;}
+					dl.albumNameipt dd {float:left; display:inline; margin:0 0 0 10px;}
+						dl.albumNameipt dd input {float:left; display:inline;}
+						dl.albumNameipt dd input#albNameIpt {width:310px; height:20px; margin:2px 4px 0 0; font:12px dotum; color:#97b1b1; border:1px solid #cfe2e4; background:#f2f9f9;}
+				div.albBtnWrap {clear:both; float:left; display:inline; width:570px; margin:36px 0 0 15px; padding-top:19px; text-align:center; border-top:1px solid #e2e2e2;}
+				.add_album03 {float:left; width:79px; height:77px; padding:9px 0 0 9px; border-right:1px solid #cddee0;}
+				ul.albEditList {float:left; display:inline; margin:5px 0 0 10px;}
+					ul.albEditList li {float:left; display:inline; width:64px; height:64px; margin:0 0 0 1px; padding:6px 10px 5px 1px; font:12px/15px dotum; color:#808080; background:url('../images/bg_albEditList.gif') left top no-repeat;}
+						ul.albEditList li .vertical-align-middle {height:64px;}
+						ul.albEditList li .vam-lv2 {width:64px; text-align:center;}
+					ul.albEditList li.edit {position:relative; font-weight:bold; color:#019eb5; background:url('../images/bg_albEditList_on.gif') left top no-repeat;}
+						ul.albEditList li.edit a.del {position:absolute; top:0; right:0; clear:both; float:left; width:25px; height:25px; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+				/* 상세편집 */
+				.albEditDetail {clear:both; float:left; display:inline; width:568px; height:278px; margin:0 0 0 15px;}
+					.albEditDetail .tplsContent {height:278px; overflow:visible;}
+						/* 보기선택 / 사진추가 */
+						.viewAdd {clear:both; float:left; display:inline; width:530px; margin:10px 0 0 10px; padding-bottom:5px; border-bottom:1px solid #cddee0;}
+							.viewAdd ul.view {float:left; display:inline; margin:1px 0 0 0;}
+								.viewAdd ul.view li {float:left; display:inline; font:0/0 arial;}
+							.viewAdd p.photoAdd {float:right;}
+						/* overfloWrap */
+						.aedWrap {position:relative; clear:both; float:left; display:inline; width:558px; height:233px; margin:0 0 0 10px; overflow-y:scroll; overflow-x:hidden;}
+							.aedPhoto {float:left; display:inline; width:213px; height:213px; margin-top:10px;}
+							fieldset.aedpEdit {float:left; display:inline; width:311px; margin:6px 0 0 10px;}
+								fieldset.aedpEdit dl {clear:both; float:left; width:307px;}
+									fieldset.aedpEdit dl dt {clear:both; float:left; width:64px; margin-top:9px;}
+									fieldset.aedpEdit dl dt.titSet {margin-top:6px;}
+									fieldset.aedpEdit dl dd {float:left; width:243px; margin-top:6px;}
+										fieldset.aedpEdit dl dd select, fieldset.aedpEdit dl dd textarea {width:242px; height:20px; font:11px dotum; color:#97b1b1; border:1px solid #cfe2e4; background:#f2f9f9;}
+										fieldset.aedpEdit dl dd textarea {height:168px; overflow:auto;}
+							.aedWrap .btn {clear:both; float:left; width:100%; margin-top:9px; text-align:right;}
+							.aedvList {clear:both; float:left; width:540px;}
+								.aedvList li {position:relative; float:left; display:inline; margin:10px 10px 0 0; width:80px; height:80px;}
+									.aedvList li a.photo {clear:both; float:left;}
+									.aedvList li a.delete {z-index:2; position:absolute; top:1px; right:1px; clear:both; float:left;}
+									.aedvList li span.frame {z-index:1; position:absolute; top:-4px; left:-4px; clear:both; float:left; display:none; width:78px; height:78px; border:5px solid #00bfdc;}
+								.aedvList li.select {}
+									.aedvList li.select span.frame {display:block;}
+							/* 사진보기 레이어 */
+							.aedViewLayer {z-index:999; position:absolute; top:76px; left:33px; clear:both; float:left; display:inline; width:486px; height:322px; border:1px solid #39b3c5; background:#fff;}
+								.aedViewLayer .avlRela {position:relative; float:left; width:477px; height:313px; padding:9px 0 0 9px;}
+									.advlPhoto {clear:both; float:left; width:468px; height:262px;}
+									dl.sbcEdit {clear:both; float:left; width:473px; margin:13px 0 0 0;}
+										dl.sbcEdit dt {float:left; width:31px; margin-top:6px;}
+										dl.sbcEdit dd {float:left; width:442px;}
+											dl.sbcEdit dd input {float:left; display:inline;}
+											dl.sbcEdit dd input#sbCaptionEdit {width:392px; height:20px; margin:2px 4px 0 0; font:11px dotum; color:#97b1b1; border:1px solid #cfe2e4; background:#f2f9f9;}
+									a.aedpl_delete {position:absolute; top:1px; right:2px; clear:both; float:left;}
+			/* 미리보기 */
+			.amPreview {}
+				.amPreview .h3edit {display:inline; width:296px; margin-left:193px;}
+				.ams6 {display:inline; width:296px; margin-top:7px; margin-left:193px;}
+					.ams6 .editW {width:296px; height:468px;}
+					.amsAppPreview {clear:both; float:left; width:100%; height:468px;}
+	/* 우측 */
+	.amPr {float:left; display:inline; width:129px; height:527px; margin:0 0 0 30px; padding:0 0 0 31px; background:url('../images/bg_amPr.gif') left top repeat-y;}
+	/* 메세지 레이어 */
+	.msgLayerWrap {position:relative; clear:both; float:left; width:700px; height:1px; font:0/0 arial;}
+		.msgL {position:absolute; clear:both; float:left;}
+		/* 템플릿 선택 */
+		.tplSc {top:-54px; right:130px;}
+	/* 하단 네비게이션 */
+	.ambNav {clear:both; float:left; width:700px; margin-top:21px;}
+		.ambnPre {float:left;}
+		.ambnFor {float:right;}
+
+/* 판매정보입력 */
+#creditInfo {bottom:50px; width:1109px; height:712px; margin:0px 0 0 -500px;}
+	#creditInfo .inner {width:1049px; height:658px; padding:54px 0 0 60px;}
+	#creditInfo .background {width:1109px; height:712px; background:url('../images/bg_creditInfo.png') left top no-repeat;}
+	.ciContentWrap {clear:both; float:left; width:699px;}
+		.ciTit {clear:both; float:left; width:699px; padding-bottom:16px; border-bottom:1px solid #ededed;}
+		fieldset.ciInput {clear:both; float:left; width:699px; margin:15px 0 0 0;}
+			fieldset.ciInput dt {clear:both; float:left; width:102px; margin-top:5px; padding-top:4px;}
+			fieldset.ciInput dd {float:left; width:597px; margin-top:5px; font:11px dotum; color:#97b1b1;}
+			fieldset.ciInput dd.ciIpt01 {padding-top:4px;}
+				fieldset.ciInput dd.ciIpt01 label {margin:0 10px 0 5px;}
+				fieldset.ciInput dd.ciIpt01 select {margin-top:-4px; margin-left:-3px; vertical-align:top;}
+				fieldset.ciInput dd.ciIpt01 select, fieldset.ciInput dd.ciIpt03 select {width:113px; height:20px; font:11px dotum; color:#97b1b1; border:1px solid #cfe2e4; background:#f2f9f9;}
+				fieldset.ciInput dd.ciIpt03 select {width:214px;}
+				fieldset.ciInput dd.ciIpt02 input, fieldset.ciInput dd.ciIpt04 input {width:214px; height:20px; font:11px dotum; color:#97b1b1; border:1px solid #cfe2e4; background:#f2f9f9;}
+				fieldset.ciInput dd.ciIpt05 label {display:inline-block; width:405px; margin-top:-3px; line-height:18px;}
+			fieldset.ciInput dt.ciIpt03, fieldset.ciInput dd.ciIpt03, fieldset.ciInput dt.ciIpt05, fieldset.ciInput dd.ciIpt05 {margin-top:20px; border-top:1px solid #ededed;}
+			fieldset.ciInput dt.ciIpt03, fieldset.ciInput dt.ciIpt05 {padding-top:24px;}
+			fieldset.ciInput dd.ciIpt03, fieldset.ciInput dd.ciIpt05 {padding-top:20px;}
+			fieldset.ciInput dd.ciIpt05 {padding-top:24px;}
+	.amComplete {clear:both; float:left; width:699px; height:233px; margin:33px 0 0 0; background:url('../images/bg_amComplete.jpg') left top no-repeat;}
+		.amComplete p {clear:both; float:left; display:inline; width:264px; margin:25px 0 0 219px;}
+		.amComplete div {clear:both; float:left; display:inline; width:210px; margin:19px 0 0 251px;}
