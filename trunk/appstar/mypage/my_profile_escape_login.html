@@ -54,41 +54,28 @@
 
 
 <!-- 레이어 -->
-<div id="passwordChange" class="layerSet">
+<div id="myProfileLogin" class="layerSet">
 	<div class="inner">
 		<div class="background"></div>
 		<div class="forRelative">
 			<ul class="myProfileSnb">
-				<li class="setPassword"><h3>비밀번호 변경</h3></li>
+				<li class="out2"><h3>회원 탈퇴</h3></li>
 			</ul>
-			<p class="txtChangePwd">고객님의 안전한 사이트 이용을 위해 비밀번호를 정기적으로 변경하세요</p>
-			<fieldset class="changePwd">
-				<legend>비밀번호변경</legend>
-				<dl class="cpForm">
-					<dt class="currentPwd"><span>기존 비밀번호</span></dt>
-					<dd class="currentPwd"><input type="password" size="15" id="currentPassword" title="기존 비밀번호 입력" /></dd>
-					<dt class="newPwd"><span>새로운 비밀번호</span></dt>
-					<dd class="newPwd">
-						<input type="password" size="15" id="newPassword" title="새로운 비밀번호 입력" />
-						<em>영문 대/소문자, 숫자를 조합하여 6글자 이상 입력합니다</em>
-					</dd>
-					<dt class="newPwdRe"><span>새로운 비밀번호 확인</span></dt>
-					<dd class="newPwdRe">
-						<input type="password" size="15" id="newPasswordRe" title="새로운 비밀번호 재입력" />
-						<em>비밀번호를 동일하게 한번 더 입력합니다.</em>
-					</dd>
+			<p class="omLogin omEscLogin">본인 확인을 위해 로그인 정보를 한번 더 입력하셔야 상세 내용 확인 및 프로파일 업데이트가 가능합니다</p>
+			<fieldset class="userLogin uslEsc">
+				<legend>로그인</legend>
+				<dl>
+					<dt class="email"><span>이메일 주소</span></dt>
+					<dd><input type="text" id="userEmail" title="이메일주소 입력" tabindex="1" /></dd>
+					<dt class="pwd"><span>비밀번호</span></dt>
+					<dd><input type="password" id="userPassword" title="비밀번호 입력" tabindex="2" /></dd>
 				</dl>
-				<div class="btnWrap">
-					<input type="image" src="../images/btn_change.gif" title="변경하기" value="변경하기" />
-					<a href="#" class="policyBack" title="돌아가기">돌아가기</a>
-				</div>
+				<input type="image" src="../images/btn_login.gif" id="userLogin" title="로그인" tabindex="3" />
 			</fieldset>
 		</div>
 		<p class="closeLayer"><button type="button" title="미리보기 닫기">미리보기 닫기</button></p>
 	</div>
 </div>
-
-
 
 </body>
 </html>

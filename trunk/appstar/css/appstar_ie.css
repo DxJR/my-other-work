@@ -52,12 +52,12 @@ fieldset.findPwd dl dd input {.width:196px; .height:17px; .margin-left:-3px;}
 .ccContent fieldset.search input.searchInput {width:216px; height:18px;}
 .ccContent fieldset.qna dd.detail textarea {width:501px; height:248px;}
 .fanComment input#fanCommentInput {width:243px; height:18px;}
-fieldset.appAdSendMail dl dd input {width:323px; height:18px;}
-fieldset.appAdSendMail dl dd.adTitle input {width:389px;}
-fieldset.appAdSendMail dl dd textarea {width:389px; height:146px;}
+fieldset.appAdSendMail dl dd input {width:363px; height:18px;}
+fieldset.appAdSendMail dl dd.adTitle input {width:429px;}
+fieldset.appAdSendMail dl dd textarea {width:429px; height:186px;}
 fieldset.appStop dl dd ul li input#appStopEtc {display:inline-block; width:274px; height:18px;}
 fieldset.appStop dl dd ul li.etc label {display:inline-block; margin-top:8px;}
-fieldset.appStop dl dd textarea {width:446px; height:99px;}
+fieldset.appStop dl dd textarea {width:486px; height:139px;}
 fieldset.myProfile dl dd input {height:18px;}
 fieldset.myProfile dl dd.birth input {width:20px;}
 fieldset.myProfile dl dd.birth input#year {width:32px;}
@@ -65,6 +65,7 @@ fieldset.myProfile dl dd.pwdA input {width:196px;}
 fieldset.myProfile dl dd.accountNum input {width:196px;}
 #myProfileLogin fieldset.userLogin dl dd input {width:156px;_width:153px;.width:153px;}
 #myProfileLogin fieldset.userLogin #userLogin {_top:16px;.top:16px;}
+#myProfileLogin fieldset.uslEsc #userLogin {_top:25px;.top:25px;}
 p.authExp a {_margin-top:-13px;.margin-top:-13px;}
 fieldset.mainSearch input#mainSearchInput {width:292px; height:22px; line-height:23px;}
 dl.cpForm dd input {width:130px; height:18px;}
