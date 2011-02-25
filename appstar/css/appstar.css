@@ -233,7 +233,7 @@ input.check {margin:-1px 0 0 0; vertical-align:top;}
 		.ccSidebar dl.customer, .ccSidebar dl.b2b {position:relative; clear:both; float:left; width:115px;}
 			.ccSidebar dl.customer dt, .ccSidebar dl.b2b dt, .ccSidebar dl.customer dd, .ccSidebar dl.b2b dd {width:0; height:0; text-indent:9999em; font:0/0 arial; overflow:hidden;}
 				.ccSidebar dl.customer a, .ccSidebar dl.b2b a {position:absolute; top:0; left:0;}
-		.ccSidebar dl.customer {height:42px; margin-top:195px; background:url('../images/customerSet.gif') left -30px;}
+		.ccSidebar dl.customer {height:42px; margin-top:160px; background:url('../images/customerSet.gif') left -30px;}
 			.ccSidebar dl.customer a.tel {top:16px; width:60px; height:9px;}
 			.ccSidebar dl.customer a.mail {top:32px; width:115px; height:9px;}
 		.ccSidebar dl.b2b {height:58px; margin-top:19px; background:url('../images/customerSet.gif') left -90px;}
