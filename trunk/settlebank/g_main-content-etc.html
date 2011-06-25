@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>가상계좌 수납 관리 시스템</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="basic.css" type="text/css" />
+<link rel="stylesheet" href="global.css" type="text/css" />
+<link rel="stylesheet" href="c_green.css" type="text/css" />
+</head>
+
+<body>
+	<div id="mc-wrap">
+		<!-- SMS 일괄발송 -->
+		<div class="mc_sms">
+			<h1 class="rnnj"><i></i>SMS 일괄발송</h1>
+			<div class="mcs_tbl_wrap">
+				<table cellpadding="0" cellspacing="0" border="1" bordercolor="#d7d7d7" class="gjsTbl">
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" class="gjstbl_in">
+								<colgroup>
+									<col width="109px" />
+									<col width="*" />
+								</colgroup>
+								<tr>
+									<th>SMS서버</th>
+									<td>asasasda</td>
+								</tr>
+								<tr>
+									<th>고지구분</th>
+									<td>
+										<select>
+											<option>고지구분선택</option>
+											<option>고지구분선택</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>발송</th>
+									<td>
+										<input type="radio" name="sms_send" id="sms_sn" class="radio" /><label for="sms_sn">즉시발송</label>
+										<input type="radio" name="sms_send" id="sms_sr" class="radio rnjf2" /><label for="sms_sr">예약발송</label>
+									</td>
+								</tr>
+								<tr>
+									<th>비고</th>
+									<td class="last">
+										<textarea class="text_etc"></textarea>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" class="gjstbl_in">
+								<tr>
+									<th>보내는 사람</th>
+									<td><input type="text" size="20" class="gti_snd_n" /></td>
+								</tr>
+								<tr>
+									<th class="last">납세자목록</th>
+									<td class="last">
+										<input type="text" class="i_file" />
+										<button type="button" class="btn_ifls">파일선택</button>
+										<span class="nslis_wr">납세자목록 샘플파일</span>
+										<a href="#" class="button ns_sample"><span>열기</span></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" class="gjstbl_in">
+								<colgroup>
+									<col width="109px" />
+									<col width="*" />
+								</colgroup>
+								<tr>
+									<th valign="top" style="padding-top:10px;">문자구성<br /><span>0 / 80bytes</span></th>
+									<td class="into_last">
+										<table cellpadding="0" cellspacing="0" border="0" class="gjstbl_into">
+											<colgroup>
+												<col width="*" />
+												<col width="205px" />
+											</colgroup>
+											<tr>
+												<td>
+													<dl>
+														<dt class="gti_chk01"><input type="checkbox" id="gtic01" class="check" /><label for="gtic01">납세자명</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk02"><input type="checkbox" id="gtic02" class="check" /><label for="gtic02">고지구분명</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk01"><input type="checkbox" id="gtic03" class="check" /><label for="gtic03">과세건수</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk02"><input type="checkbox" id="gtic04" class="check" /><label for="gtic04">과세금액</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk01"><input type="checkbox" id="gtic05" class="check" /><label for="gtic05">계좌번호</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk02"><input type="checkbox" id="gtic06" class="check" /><label for="gtic06">기준일</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk01"><input type="checkbox" id="gtic07" class="check" /><label for="gtic07">지자체명</label></dt>
+														<dd><input type="text" size="15" /></dd>
+														<dt class="gti_chk02"><input type="checkbox" id="gtic08" class="check" /><label for="gtic08">기타</label></dt>
+														<dd><input type="text" size="15" /></dd>
+													</dl>
+												</td>
+												<td class="str">
+													<div class="sms_tar">
+														<textarea></textarea>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<p class="sms_explain">납세자 목록파일에 기재된 납세자에게만 SMS을 발송하며, 고지구분에 따라 메세지 구성이 다르게 됩니다.<br />등록시 필요한 파일은 지방세표준화시스템 7518화면에서 생성하시면 됩니다.</p>
+				<div class="smss_btn">
+					<a href="#" class="button b_smsend"><span>SMS 전송</span></a>
+					<a href="#" class="button b_smscncl"><span>취소</span></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 검색박스 -->
+		<div class="search_ty01">
+			<fieldset class="rnnj_search">
+				<legend>과세내역조회</legend>
+				<div class="rnnjs-wrap">
+					<dl>
+						<dt class="wt01">납세자명</dt>
+						<dd class="wd01 wdl1"><i class="txt_w"><input type="text" size="15" class="txt" title="납세자명 입력" /></i> <button type="button" class="button rn_src"><span>검색</span></button></dd>
+						<dt class="wt02">납세자번호</dt>
+						<dd class="wd02"><input type="text" size="20" class="txt" title="납세자번호 입력" /></dd>
+						<dt class="wt03">본세목코드</dt>
+						<dd class="wd03">
+							<select>
+								<option>전체</option>
+								<option>전체</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="wt01">수납기간</dt>
+						<dd class="wd01 wdl2">
+							<i class="txt_w"><input type="text" size="15" class="txt" title="과세년도 입력" /></i>
+							<button type="button" class="button rn_cld"><span>선택</span></button>
+							<span class="wdl2_is">~</span>
+							<i class="txt_w"><input type="text" size="15" class="txt" title="과세년도 입력" /></i>
+							<button type="button" class="button rn_cld"><span>선택</span></button>
+						</dd>
+						<dt class="wt02">고지구분</dt>
+						<dd class="wd02">
+							<select>
+								<option>전체</option>
+								<option>전체</option>
+							</select>
+						</dd>
+						<dt class="wt03">납기구분</dt>
+						<dd class="wd03">
+							<select>
+								<option>전체</option>
+								<option>전체</option>
+							</select>
+						</dd>
+					</dl>
+					<button type="submit" class="button rnf_src"><span>조회</span></button>
+					<div class="clear"></div>
+				</div>
+				<i class="rnds2 rlt"></i><i class="rnds2 rrt"></i><i class="rnds2 rlb"></i><i class="rnds2 rrb"></i>
+			</fieldset>
+		</div>
+
+
+		<!-- 진행상태, 페이징 -->
+		<div class="">
+			<!-- 진행상태 -->
+			<div class="gjs_progress">
+				<table cellpadding="0" cellspacing="0" border="1" bordercolor="#d7d7d7" class="gjsTbl">
+					<thead>
+						<tr>
+							<th>매핑 SEQ</th>
+							<th>대상지역</th>
+							<th>상태</th>
+							<th>매핑과세건수</th>
+							<th>시작일시</th>
+							<th>종료일시</th>
+							<th>진행상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2011060210492704</td>
+							<td>정읍시청(45180)</td>
+							<td>완료</td>
+							<td>27</td>
+							<td>20110602104930</td>
+							<td>20110602104943</td>
+							<td>
+								<div class="gjstbl_pros">
+									<!-- %를 span에 입력 -->
+									<i><span style="width:80%"></span></i>
+									<span class="now">80%</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2011060210492704</td>
+							<td>정읍시청(45180)</td>
+							<td>완료</td>
+							<td>27</td>
+							<td>20110602104930</td>
+							<td>20110602104943</td>
+							<td>
+								<div class="gjstbl_pros">
+									<!-- %를 span에 입력 -->
+									<i><span style="width:30%"></span></i>
+									<span class="now">30%</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2011060210492704</td>
+							<td>정읍시청(45180)</td>
+							<td>완료</td>
+							<td>27</td>
+							<td>20110602104930</td>
+							<td>20110602104943</td>
+							<td>
+								<div class="gjstbl_pros">
+									<!-- %를 span에 입력 -->
+									<i><span style="width:100%"></span></i>
+									<span class="now">100%</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 페이징 -->
+			<div class="paging">
+				<a href="#" class="pageFunc first"></a>
+				<a href="#" class="pageFunc prew"></a>
+				<a href="#"><strong>1</strong></a> <i class="bar">|</i>
+				<a href="#">2</a> <i class="bar">|</i>
+				<a href="#">3</a> <i class="bar">|</i>
+				<a href="#">4</a> <i class="bar">|</i>
+				<a href="#">5</a> <i class="bar">|</i>
+				<a href="#">6</a> <i class="bar">|</i>
+				<a href="#">7</a> <i class="bar">|</i>
+				<a href="#">8</a> <i class="bar">|</i>
+				<a href="#">9</a> <i class="bar">|</i>
+				<a href="#">10</a>
+				<a href="#" class="pageFunc next"></a>
+				<a href="#" class="pageFunc last"></a>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
