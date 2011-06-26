@@ -4,6 +4,9 @@
 .paging a:hover, .paging strong {color:#0e9f33;}
 .button {background-image:url('images/renew/stb_set_green.gif');}
 #idx h1 {background:url('images/renew/idx_g_head.jpg') left top no-repeat;}
+	#idx h1.idx_hs01 {background-image:url('images/renew/idx_hs01.jpg');}
+	#idx h1.idx_hs02 {background-image:url('images/renew/idx_hs02.jpg');}
+	#idx h1.idx_hs03 {background-image:url('images/renew/idx_hs03.jpg');}
 #g_nav h2 {background-image:url('images/renew/stb_set_green.gif');}
 .idx_wadm {background:url('images/renew/stb_set_green.gif') left -280px no-repeat;}
 #g_nav h1 {background:url('images/renew/stb_set_green.gif') left top no-repeat;}
