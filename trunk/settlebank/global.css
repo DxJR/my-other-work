@@ -93,8 +93,12 @@ input.check {margin:0px 5px 0 0;.margin:-4px 0px 0 -1px; vertical-align:top;}
 	/* ÁÂÃø¸Þ´º */
 	.rs_nav {margin-top:2px;}
 		.rs_nav ul {width:165px; margin:0 0 0 1px;}
+			.rs_nav ul li.open a {background-position:7px -706px;}
 			.rs_nav ul li a {display:block; height:17px; padding:5px 0 0 0; text-indent:23px; font:12px µ¸¿ò; color:#d5d4d4; background-image:url('images/renew/stb_set_blue.gif'); background-position:left -120px; background-repeat:no-repeat;}
 			.rs_nav ul li a:hover {text-decoration:none; background-color:#23292d;}
+		.rs_nav ul.rsnv_2d {width:121px; margin:-2px 0 0 24px;}
+			.rs_nav ul.rsnv_2d li {margin-top:1px;}
+			.rs_nav ul.rsnv_2d li a {height:14px; padding:6px 0 0 0; text-indent:14px; font:11px µ¸¿ò; color:#aeaeae; border:1px solid #444f5d; background-position:left -684px; background-color:#3c4755;}
 	/* ³³¼¼Á¶È¸ */
 	.rs_search {margin-top:2px;}
 		.rs_search dl {float:left; display:inline; width:145px; margin-left:11px; padding-bottom:6px; border-bottom:1px solid #484848;}
@@ -125,6 +129,8 @@ input.check {margin:0px 5px 0 0;.margin:-4px 0px 0 -1px; vertical-align:top;}
 		#rtNavi a.current span.in {display:block; height:20px; padding:10px 10px 0 12px; background:#fff;}
 		#rtNavi a.current .rtnv-close {top:0; right:1px; width:10px; height:10px; background-position:-200px -20px;}
 
+i.txt_w {float:left; display:inline; border:1px solid #999; border-width:1px 0 0 1px;}
+	i.txt_w select, i.txt_w textarea, i.txt_w input {border-top:1px solid #ededed; border-left:1px solid #ededed; border-right:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3;}
 /* ÄÁÅÙÃ÷ */
 #mc-wrap {padding:15px;}
 	/* °ú¼¼³»¿ªÁ¶È¸ */
@@ -208,13 +214,13 @@ input.check {margin:0px 5px 0 0;.margin:-4px 0px 0 -1px; vertical-align:top;}
 .mc_sms table.gjstbl_in td {padding-left:15px; padding-top:8px; text-align:left;}
 .mc_sms table.gjstbl_in th.last {padding-bottom:7px;}
 .mc_sms table.gjstbl_in td.last {padding-bottom:10px;}
-	.mc_sms table.gjstbl_in td select {width:187px;}
+	.mc_sms table.gjstbl_in td select {float:left; width:187px; margin-right:0;.margin-right:-1px; margin-bottom:0;.margin-bottom:-1px;}
 	.mc_sms table.gjstbl_in td input.check, .mc_sms table.gjstbl_in td input.radio {padding:0; border:0;}
 	.mc_sms table.gjstbl_in td input.radio {margin-right:7px;}
 	.mc_sms table.gjstbl_in td input.rnjf2 {margin-left:24px;}
-	.mc_sms table.gjstbl_in td textarea.text_etc {width:652px; height:54px; overflow:auto;}
-	.mc_sms table.gjstbl_in td input.gti_snd_n {width:119px; height:15px;}
-	.mc_sms table.gjstbl_in td input.i_file {float:left; width:421px; height:15px;}
+	.mc_sms table.gjstbl_in td textarea.text_etc {float:left; width:652px; height:54px; overflow:auto;}
+	.mc_sms table.gjstbl_in td input.gti_snd_n {float:left; width:119px; height:14px;}
+	.mc_sms table.gjstbl_in td input.i_file {float:left; width:421px; height:14px;}
 	.mc_sms table.gjstbl_in td .btn_ifls {float:left; display:inline; width:59px; height:19px; margin:0 0 0 2px; padding:4px 0 0 0; font:bold 11px µ¸¿ò; color:#159436; letter-spacing:-1px; text-align:center; border:0; cursor:pointer; background:url('images/renew/btn_ifls.gif') left top no-repeat;}
 	.mc_sms table.gjstbl_in td .nslis_wr {float:left; display:inline; margin:3px 3px 0 19px; font:12px µ¸¿ò; color:#555;}
 	.mc_sms table.gjstbl_in table.gjstbl_into tr td {padding-top:0; padding-left:0;}
@@ -225,7 +231,7 @@ input.check {margin:0px 5px 0 0;.margin:-4px 0px 0 -1px; vertical-align:top;}
 	.mc_sms table.gjstbl_in dl dt.gti_chk01 {clear:both; width:75px;}
 	.mc_sms table.gjstbl_in dl dt.gti_chk02 {width:87px; margin-left:40px;}
 	.mc_sms table.gjstbl_in dl dd {float:left; width:108px; margin-top:5px; border:1px solid #999; border-width:1px 0 0 1px;}
-		.mc_sms table.gjstbl_in dl dd input {width:104px; border-top:1px solid #ededed; border-left:1px solid #ededed; border-right:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3;}
+		.mc_sms table.gjstbl_in dl dd input {float:left; width:104px; border-top:1px solid #ededed; border-left:1px solid #ededed; border-right:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3;}
 		table.gjstbl_into {width:100%;}
 			table.gjstbl_into td.str {border-left:1px solid #d7d7d7;}
 		.sms_tar {width:195px; height:148px; margin:5px 0 5px 5px; background:url('images/renew/bg_sms_tar.gif') left top no-repeat;}
@@ -296,8 +302,9 @@ input.check {margin:0px 5px 0 0;.margin:-4px 0px 0 -1px; vertical-align:top;}
 			.p_gbaking table.pgbk_2dk td ul li {clear:both; padding:3px 0;}
 			.p_gbaking table.pgbk_2dk td input.radio {margin-right:4px; padding:0; border:0;}
 			.p_gbaking table.pgbk_2dk td span {float:right;.margin-top:-20px;}
-			.p_gbaking table.pgbk_2dk td textarea {width:100%; height:54px; overflow:auto;}
-			.p_gbaking table.pgbk_2dk td input.pgbk_int {width:100%;}
+			.p_gbaking table.pgbk_2dk td i.txt_w {width:100%; padding-right:4px;_padding-right:0;}
+			.p_gbaking table.pgbk_2dk td textarea {float:left; width:100%; height:54px; overflow:auto;}
+			.p_gbaking table.pgbk_2dk td input.pgbk_int {float:left; width:100%;}
 
 .p_acutif .tbl_wrap {min-width:370px;}
 	.p_acutif .tbl_wrap table.gjsTbl {width:100%;}

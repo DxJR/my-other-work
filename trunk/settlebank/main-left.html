@@ -24,7 +24,15 @@
 	<div class="rnd_set rs_nav">
 		<ul>
 			<li><a href="#">공지 사항</a></li>
-			<li><a href="#">과세내역조회</a></li>
+			<!-- 서브메뉴 열리면 li class="open" 추가 -->
+			<li class="open">
+				<a href="#">과세내역조회</a>
+				<!-- 서브메뉴 -->
+				<ul class="rsnv_2d">
+					<li><a href="#">수납내역조회</a></li>
+					<li><a href="#">선택납부조회관리</a></li>
+				</ul>
+			</li>
 			<li><a href="#">수납내역조회</a></li>
 			<li><a href="#">선택납부관리</a></li>
 			<li><a href="#">상담이력조회</a></li>
