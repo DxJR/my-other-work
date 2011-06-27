@@ -56,7 +56,7 @@ input.check {margin:0px 5px 0 0;.margin:-4px 0px 0 -1px; vertical-align:top;}
 
 /* index */
 #index {background-color:#606f7f;}
-#idx {position:relative; top:50%; height:600px; margin-top:-300px; background:url('images/renew/bg_idx.gif') left top repeat-x;}
+#idx {position:relative; top:50%; height:600px; margin-top:-300px; background:url('images/renew/bg_idx.jpg') left top repeat-x;}
 .idx_in {width:1012px; margin:0 auto;}
 #idx h1 {width:1012px; height:293px; background:url('images/renew/idx_head.jpg') left top no-repeat;}
 .idx_ir {float:left; display:inline; border-left:1px solid #687685;}
