@@ -31,6 +31,7 @@
 	<script type="text/javascript">DD_belatedPNG.fix('.png_bg, img');</script>
 	<![endif]-->
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/SNS.js"></script>
+<script type="text/javascript" src="resource/common/js/hpn_n1111.js"></script>
 </head>
 
 <body>
@@ -210,7 +211,7 @@
 		<!-- 외부서비스연동 추가 -->
 		<div class="other_relate">
 			<p class="or_explain"><em><i class="ir">hoppin의 다양한 컨텐츠와 정보를 언제든지 트위터, 페이스북, 싸이월드, 미투데이, 블로그 친구들과 공유할 수 있어요</i></em></p>
-			<ul class="or_list">
+			<ul id="orList" class="or_list">
 				<li>
 					<dl class="cyworld clfix">
 						<dt><span><i class="ir">cyworld</i></span></dt>
@@ -252,12 +253,12 @@
 						<dt><span><i class="ir">tistory</i></span></dt>
 						<dd class="exp"><em class="relative"><i>티스토리 블로그</i>와 <i>연동</i>되었습니다.</em></dd>
 						<dd class="btn">
-							<button type="button" class="gn_btn b_sns_dis" title="해제하기"><span class="ir">해제하기</span></button>
-							<button type="button" class="gn_btn b_sns_help" title="도움말"><span class="ir">도움말</span></button>
+							<button type="button" class="gn_btn b_sns_dis" onclick="toggleEle('ords_tistory');" title="해제하기"><span class="ir">해제하기</span></button>
+							<button type="button" class="gn_btn b_sns_help" onclick="toggleEle('ordsh_tistory');" title="도움말"><span class="ir">도움말</span></button>
 						</dd>
 					</dl>
 					<!-- 연동하기 -->
-					<div class="or_detail_set">
+					<div id="ords_tistory" class="or_detail_set">
 						<fieldset class="tistory">
 							<legend>티스토리 블로그와 연동하기</legend>
 							<dl class="or_service_set clfix">
@@ -276,18 +277,38 @@
 							</div>
 						</fieldset>
 					</div>
+					<!-- 설정 도움말 -->
+					<div id="ordsh_tistory" class="ordet_help">
+						<div class="ordet_help_in">
+							<h3>티스토리 연동 설정 도움말</h3>
+							<div class="hide ordh_ti_01">
+								<ol>
+									<li>내 블로그에 관한 정보를 입력하세요.</li>
+									<li>연동 버튼을 클릭하세요</li>
+								</ol>
+							</div>
+							<h4>내 티스토리 Blog API 확인 방법</h4>
+							<div class="hide ordh_ti_02">
+								<ol>
+									<li>내 티스토리 접속  &gt;  내 블로그  &gt;  관리  &gt;  글설정  &gt; Blog API</li>
+									<li>Blog API 사용설정에서 사용에 체크하시고 확인 버튼을 누르세요</li>
+								</ol>
+							</div>
+							<i class="ordet_cnr"></i>
+						</div>
+					</div>
 				</li>
 				<li>
 					<dl class="egloos clfix">
 						<dt><span><i class="ir">egloos</i></span></dt>
 						<dd class="exp">이글루스 서비스와 연동</dd>
 						<dd class="btn">
-							<button type="button" class="gn_btn b_sns_relate" title="연동하기"><span class="ir">연동하기</span></button>
-							<button type="button" class="gn_btn b_sns_help" title="도움말"><span class="ir">도움말</span></button>
+							<button type="button" class="gn_btn b_sns_relate" onclick="toggleEle('ords_egloos');" title="연동하기"><span class="ir">연동하기</span></button>
+							<button type="button" class="gn_btn b_sns_help" onclick="toggleEle('ordsh_egloos');" title="도움말"><span class="ir">도움말</span></button>
 						</dd>
 					</dl>
 					<!-- 연동하기 -->
-					<div class="or_detail_set">
+					<div id="ords_egloos" class="or_detail_set">
 						<fieldset class="egloos">
 							<legend>이글루스 블로그와 연동하기</legend>
 							<dl class="or_service_set clfix">
@@ -304,18 +325,38 @@
 							</div>
 						</fieldset>
 					</div>
+					<!-- 설정 도움말 -->
+					<div id="ordsh_egloos" class="ordet_help">
+						<div class="ordet_help_in">
+							<h3>이글루스 연동 설정 도움말</h3>
+							<div class="hide ordh_eg_01">
+								<ol>
+									<li>내 블로그에 관한 정보를 입력하세요.</li>
+									<li>연동 버튼을 클릭하세요</li>
+								</ol>
+							</div>
+							<h4>내 이글루스 Blog API 확인 방법</h4>
+							<div class="hide ordh_eg_02">
+								<ol>
+									<li>내 이글루스에 접속 &gt; 이글루스관리 &gt; 블로그 관리 &gt; 기본설정</li>
+									<li>블로그 관리 메뉴 하단에 API KEY 메뉴에 있는 문자와 숫자를 입력하면 됩니다.</li>
+								</ol>
+							</div>
+							<i class="ordet_cnr"></i>
+						</div>
+					</div>
 				</li>
 				<li>
 					<dl class="daum clfix">
 						<dt><span><i class="ir">daum blog</i></span></dt>
 						<dd class="exp">다음블로그 서비스와 연동</dd>
 						<dd class="btn">
-							<button type="button" class="gn_btn b_sns_relate" title="연동하기"><span class="ir">연동하기</span></button>
-							<button type="button" class="gn_btn b_sns_help" title="도움말"><span class="ir">도움말</span></button>
+							<button type="button" class="gn_btn b_sns_relate" onclick="toggleEle('ords_daumblog');" title="연동하기"><span class="ir">연동하기</span></button>
+							<button type="button" class="gn_btn b_sns_help" onclick="toggleEle('ordsh_daumblog');" title="도움말"><span class="ir">도움말</span></button>
 						</dd>
 					</dl>
 					<!-- 연동하기 -->
-					<div class="or_detail_set">
+					<div id="ords_daumblog" class="or_detail_set">
 						<fieldset class="daum">
 							<legend>다음 블로그와 연동하기</legend>
 							<dl class="or_service_set clfix">
@@ -330,6 +371,26 @@
 								<button type="button" class="gn_btn b_set_disc" title="해지"><span class="ir">해지</span></button>
 							</div>
 						</fieldset>
+					</div>
+					<!-- 설정 도움말 -->
+					<div id="ordsh_daumblog" class="ordet_help">
+						<div class="ordet_help_in">
+							<h3>다음 블로그 연동 설정 도움말</h3>
+							<div class="hide ordh_db_01">
+								<ol>
+									<li>내 블로그에 관한 정보를 입력하고 연동 버튼을 클릭하세요.</li>
+									<li>연동 버튼을 클릭하면 다음 블로그를 연동할 팝업이 뜹니다.</li>
+								</ol>
+							</div>
+							<h4>다음 블로그 연동을 위한 팝업 창</h4>
+							<div class="hide ordh_db_02">
+								<ol>
+									<li>로그인 버튼을 클릭하여 연동할 다음 아이디로 로그인해 주세요.</li>
+									<li>연동할 다음 아이디로 로그인 된 것을 확인 후 확인 버튼을 클릭하면 연동이 완료가 됩니다.</li>
+								</ol>
+							</div>
+							<i class="ordet_cnr"></i>
+						</div>
 					</div>
 				</li>
 			</ul>

@@ -207,7 +207,7 @@
 								<li><button type="button" class="gn_btn gs_me2day" title="미투데이"><span class="ir">미투데이</span></button></li>
 								<li><button type="button" class="gn_btn gs_twitter" title="트위터"><span class="ir">트위터</span></button></li>
 								<li><button type="button" class="gn_btn gs_facebook" title="페이스북"><span class="ir">페이스북</span></button></li>
-								<li class="this"><button type="button" class="gn_btn gs_scrap" title="퍼가기"><span class="ir">퍼가기</span></button></li>
+								<li class="this"><button type="button" class="gn_btn gs_scrap" onclick="snsSLtoggle();" title="퍼가기"><span class="ir">퍼가기</span></button></li>
 							</ul>
 							<!-- 구매정보 -->
 							<div class="pgm_pay_info">
@@ -224,7 +224,7 @@
 								</ul>
 							</div>
 							<!-- 퍼가기 레이어 -->
-							<div class="sns_share_layer">
+							<div id="snsShareLayer" class="sns_share_layer">
 								<div class="ssl_in">
 									<h3>영화정보 퍼가기</h3>
 									<p class="ssl_expn">영화정보를 복사하여 각종 블로그, 카페, 게시판 등에 사용할 수가 있습니다.</p>
@@ -266,7 +266,7 @@
 										<p class="ssl_from"><em>hoppin</em> 영화</p>
 									</div>
 									<!-- 레이어 닫기버튼 -->
-									<button type="button" class="gn_btn ssl_close" title="레이어닫기"><span class="ir">닫기</span></button>
+									<button type="button" class="gn_btn ssl_close" onclick="snsSLClose();" title="레이어닫기"><span class="ir">닫기</span></button>
 								</div>
 							</div>
 						</div>

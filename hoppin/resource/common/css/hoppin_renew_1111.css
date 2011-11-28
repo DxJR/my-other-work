@@ -157,6 +157,7 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 		.or_explain em {display:block; width:486px; height:11px; margin:0 auto; background:url('../../images/hpn_set_1111_n.gif') left -130px no-repeat;}
 	.or_list {clear:both; float:left; width:100%; margin-top:38px;}
 		.or_list li {clear:both; float:left; width:100%; padding:13px 0 12px 0; border-bottom:1px solid #e6e6e6;}
+		.or_list li.this {position:relative;}
 			.or_list li dl dt {float:left; display:inline; width:196px;}
 				.or_list li dl dt span {display:block; margin-top:7px; margin-left:47px; background-image:url('../../images/hpn_set_1111_n.gif'); background-repeat:no-repeat;}
 				.or_list li dl.cyworld dt span {width:73px; height:16px; background-position:left -145px;}
@@ -178,7 +179,7 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 	.or_noti {clear:both; position:relative; margin-top:60px; padding:9px 0 0 0;}
 		.or_noti dl {border:1px solid #e6e6e6; border-top:2px solid #999; border-bottom:2px solid #999;}
 		.or_noti dl dt {float:left; width:173px; height:68px; background:url('../../images/bg_or_noti_dt.gif') right 50% no-repeat;}
-			.or_noti dl dt span {display:block; width:63px; height:11px; margin:29px 0 0 55px; background:url('../../images/hpn_set_1111_n.gif') -340px 0px no-repeat;}
+			.or_noti dl dt span {display:block; width:63px; height:11px; margin:29px 0 0 55px; background:url('../../images/hpn_set_1111_n.gif') -340px -230px no-repeat;}
 		.or_noti dl dd.explin {float:left; width:564px; height:68px;}
 			.or_noti dl dd.explin span {display:block; width:470px; height:26px; margin:22px 0 0 36px; background:url('../../images/hpn_set_1111_n.gif') left -165px no-repeat;}
 		.or_noti dl dd.list {clear:both; padding:4px 0 22px 0; border-top:1px solid #ddd;}
@@ -188,15 +189,15 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 					.or_noti dl dd.list ul li a span {margin-left:4px; padding-left:4px; color:#9b84e1; background:url('../../images/ico_bar_gray.gif') left top no-repeat;}
 				.or_noti dl dd.list ul li a:hover {text-decoration:none;}
 			.or_noti dl dd.list ul li.lb {width:150px}
-		.or_noti i.ornt_cnr {position:absolute; top:0; left:56px; width:17px; height:11px; background-position:-340px -20px;}
+		.or_noti i.ornt_cnr {position:absolute; top:0; left:56px; width:17px; height:11px; background-position:-340px -250px;}
 
 /* 연동하기 자세히 */
-.or_detail_set {clear:both; margin-top:12px; padding:19px 0 27px 197px; background:url('../../images/bg_ods_dot.gif') left top repeat-x;}
+.or_detail_set {clear:both; display:none; margin-top:12px; padding:19px 0 27px 197px; background:url('../../images/bg_ods_dot.gif') left top repeat-x;}
 	.or_detail_set dl.or_service_set {width:381px;}
 		.or_detail_set dl.or_service_set dt {clear:both; float:left; width:87px; margin:16px 0 0 0; padding:0 0 0 13px; background:url('../../images/ico_rect_gray.gif') left 2px no-repeat;}
 			.or_detail_set dl.or_service_set dt span {display:block; height:9px; margin:0; padding:0; overflow:hidden; background-image:url('../../images/hpn_set_1111_n.gif'); background-repeat:no-repeat;}
-			.or_detail_set dl.or_service_set dt.blog_addr span {width:50px; background-position:-370px -20px;}
-			.or_detail_set dl.or_service_set dt.blog_id span {width:41px; background-position:-430px -20px;}
+			.or_detail_set dl.or_service_set dt.blog_addr span {width:50px; background-position:-370px -250px;}
+			.or_detail_set dl.or_service_set dt.blog_id span {width:41px; background-position:-430px -250px;}
 			.or_detail_set dl.or_service_set dt.blog_pwd span {width:47px; background-position:-370px -40px;}
 			.or_detail_set dl.or_service_set dt.api_key span {width:40px; height:8px; background-position:-330px -40px;}
 			.or_detail_set dl.or_service_set dt.blog_api span {width:40px; height:10px; background-position:-420px -40px;}
@@ -214,3 +215,51 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 	.or_detail_set .egloos .orss_exp {width:224px; background-position:left -195px;;}
 	/* 다음블로그 */
 	.or_detail_set .daum .orss_exp {width:236px; background-position:left -210px;;}
+
+/* 설정 도움말 */
+.ordet_help {z-index:5; position:absolute; clear:both; display:none; top:41px; right:1px;}
+	.ordet_help_in {position:relative; width:631px; padding:20px 25px 25px 25px; border:1px solid #b3b3b3; background:#fff url('../../images/bg_ordet_help.gif') left top no-repeat;}
+		.ordet_help_in h3 {margin-bottom:20px; padding-bottom:17px; font-size:14px; font-weight:bold; color:#333; letter-spacing:-1px; border-bottom:2px solid #4d4d4d;}
+	.ordet_help_in h4 {position:relative; clear:both; margin-top:25px; margin-bottom:18px; padding-top:20px; font-size:12px; font-weight:bold; color:#808080; letter-spacing:-1px; background:url('../../images/bg_ordet_h4.gif') left top repeat-x;}
+	.ordet_help_in .hide {width:628px;}
+		.ordet_help_in li {padding:0; border:0;}
+	.ordet_cnr {position:absolute; top:-8px; right:21px; width:13px; height:8px; font:0/0 arial; overflow:hidden; background:url('../../images/bg_ordet_cnr.gif') left top no-repeat;}
+	/* 티스토리 */
+	.ordh_ti_01 {height:231px; background:url('../../images/ordet_tistory.gif') left top no-repeat;}
+	.ordh_ti_02 {height:204px; background:url('../../images/ordet_tistory.gif') left -240px no-repeat;}
+	/* 이글루스 */
+	.ordh_eg_01 {height:209px; background:url('../../images/ordet_egloos.gif') left top no-repeat;}
+	.ordh_eg_02 {height:204px; background:url('../../images/ordet_egloos.gif') left -210px no-repeat;}
+	/* 다음블로그 */
+	.ordh_db_01 {height:186px; background:url('../../images/ordet_daum.gif') left top no-repeat;}
+	.ordh_db_02 {height:395px; background:url('../../images/ordet_daum.gif') left -190px no-repeat;}
+
+
+/* 19세 인증 */
+#idNoCheck {background:#fafafa;}
+	/* header */
+	#idNoCheck #header {width:760px; height:42px; border-bottom:1px solid #2800a4;}
+		#idNoCheck #header h1 {top:11px; left:1px; width:73px; height:25px; padding:0; background:url('../../images/hpn_age19.gif') left top no-repeat;}
+			#idNoCheck #header h1 a {width:73px; height:25px;}
+			#idNoCheck #header h2{top:17px; left:88px; width:auto; height:auto; padding-left:11px; text-indent:0; font-size:14px; font-weight:bold; color:#000; letter-spacing:-1px; border-left:1px solid #000; background:none;}
+	/* content */
+	#idNoCheck #wrap {width:668px; padding:0 46px; border-top:3px solid #7052cc; background:none;}
+	#idNoCheck #contentWrap {width:668px; background:none;}
+		/* 성인인증 */
+		.chk_id_no {margin-top:92px; padding:15px 0 0 152px; background:url('../../images/age_19.gif') left top no-repeat;}
+			.chk_id_no h3 {width:514px; height:28px; background:url('../../images/hpn_age19.gif') left -60px no-repeat;}
+			.chk_id_no p {margin:16px 0 23px 0; font-size:16px; color:#4c4c4c; font-weight:bold; letter-spacing:-1px; line-height:24px;}
+				.chk_id_no p em {font-style:normal; color:#7052cc;}
+			.chk_id_no a.out19age {width:120px; height:39px; margin-left:-1px; background:url('../../images/hpn_age19.gif') -80px 0 no-repeat;}
+		/* 추천 무료영화관 */
+		.rcmd_freemovie {width:631px; margin-top:93px; padding:27px 0 30px 35px; border:1px solid #efefef; border-top:2px solid #d9d9d9; background:#fdfdfd;}
+			.rf_left {float:left; display:inline; margin-top:1px;}
+				.rf_left h3 {width:135px; height:52px; background:url('../../images/hpn_age19.gif') -210px 0 no-repeat;}
+				.rf_left p {width:144px; height:24px; margin-top:11px; background:url('../../images/hpn_age19.gif') -350px 0 no-repeat;}
+			.rcmd_freemovie ul {float:left; display:inline; margin:0 0 0 23px;}
+				.rcmd_freemovie li {float:left; display:inline; width:92px; margin-left:12px; padding:0 0 0 1px; background:url('../../images/rcmd_freemovie.gif') left top no-repeat;}
+					.rcmd_freemovie li a, .rcmd_freemovie li img {display:block; color:#333;}
+					.rcmd_freemovie li img {margin-left:2px; margin-bottom:9px;}
+	/* footer */
+	#idNoCheck #footer {width:760px; border-top:0; background:none;}
+	#idNoCheck #footer .inbox {margin-left:0;}
