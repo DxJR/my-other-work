@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="resource/common/css/layout_n.css" type="text/css">
 <link rel="stylesheet" href="resource/common/css/class_n.css" type="text/css">
 <link rel="stylesheet" href="resource/common/css/contents_n.css" type="text/css">
+<link rel="stylesheet" href="resource/common/css/hoppin_renew_1111.css" type="text/css">
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/common.js?20110314"></script>
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-ui-1.7.2.custom.min.js"></script>
@@ -28,558 +29,15 @@
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/reviewComment.js"></script>
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/SNS.js"></script>
 <script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/wvp/swfobject.js"></script>
-<script language="javascript" type="text/javascript">
-	var userId = 'paolo2000@nate.com';
-	var conttabs;
-	var contents;
-	var moviecode;
-	var radio;
-	var radioimage;
-	var pageno;
-	var commsubpageno;
-	var ordertype;
-	var commentreplybutton;
-	var commentreply;
-	var commnetreplywithphoto;
-	var commentwithphoto;
-	var agree;
-	var agreetag;
-	var writerlist;
-	var writerpopup;
 
-	var count = 0;
-	var pcPrvdYnMsg = "모바일 전용 컨텐츠로 PC에서는 이용이 불가능합니다. hoppin 어플리케이션에서 이용해주세요.";
-
-	function delay(){
-		//alert("111");
-		if(isAvailableWVP()){
-			var isPlay = "";
-			if( isPlay == "1" && count < 10){
-				Common.goViewProductDetail($("#movieDetailForm > input[name='dpRepProdId']").val(), {isPlayerInit:false, isPip:false}, '100000000020');
-				count = 10;
-			}
-		}else{
-			if(count  > 10 ){
-			}else{
-				setTimeout("delay()", 2000);
-				count ++;
-			}
-		}
-	}
-
-	function isAvailableWVP() {
-	    return window.wvpRequestOpen instanceof Function
-	}
-
-	// 구매하기
-	function CmdBuyProductDetail() {
-		Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA174'});//트래픽 통계전달
-
-		if(userId == null || userId ==""){
-			alert('로그인이 필요한 서비스입니다. 로그인해 주세요.');
-			Common.goLogin();
-			return false;
-		}
-		Common.buyProductDetail($("#movieDetailForm > input[name='dpRepProdId']").val(), '', {'dpSpaceId':'100000000020','MOVIEPRODID':'PDRS00010645'});
-	}
-
-	// 바로보기
-	function CmdViewProductDetail() {
-		if(userId == null || userId ==""){
-			alert('로그인이 필요한 서비스입니다. 로그인해 주세요.');
-			Common.goLogin();
-			return false;
-		}
-		//checkProd( $("#movieDetailForm > input[name='dpRepProdId']").val(), 'ST', '02');
-		Common.goViewProductDetail($("#movieDetailForm > input[name='dpRepProdId']").val(), {isPlayerInit:false, isPip:false}, '100000000020');
-	}
-
-	// 다운로드
-	function CmdDownload() {
-		if(userId == null || userId ==""){
-			alert('로그인이 필요한 서비스입니다. 로그인해 주세요.');
-			Common.goLogin();
-			return false;
-		}
-		Common.goMrkDownload($("#movieDetailForm > input[name='dpRepProdId']").val(), '100000000020');
-	}
-
-	$(document).ready(function(){
-
-		getVideoList();
-		//예고편+본편 관련영상 조회
-
-		//별점 number?string("
-		//MovieRank.InitPerStarRank('9.2'); //평균 별점 부가
-		//MovieRank.InitMyStarRank('.0');  //나의 별점 부가
-
-		conttabs = $('div.tab_menu04.mb20>ul.clfix>li');
-		contents = $('div.detailWrap').children();
-
-
-		//영화상세 탭 클릭 이벤트 바인딩
-		$(conttabs).each(function(index, element) {
-			$(element).bind('click', function(){
-				UI2.SelectTab(conttabs, index);
-			});
-
-			if (count < 1){
-				delay();
-			}
-		});
-
-		// 탭 활성화 관련
-		var tab = Common.request("tab");
-		if(tab=="review"){ //리뷰탭 활성
-			var reviewNum = Common.request("reviewNum");
-			var userMngNum = '';
-			var mode = Common.request("mode");
-			if(reviewNum!=""){
-				highlightTab(3);
-				if(mode=="view"){ //상세보기
-					getReviewDetail(reviewNum, $('#userMngNum').val());
-				}else if(mode=="modify"){
-					goUpdateReviewPage({'reviewNum':reviewNum, 'userMngNum':userMngNum});
-				}
-			}else{
-				GetReviewList();
-			}
-		}else if(tab=="comment"){ //코멘트 탭 활성
-			goCommentTabPos();
-		}else{
-			//기본정보
-			GetBasicInfo();
-		}
-
-		$('#getActorList, #morePeopleInfo').live('click',GetActors);  // 영화탭 클릭시 정보 리스팅
-		$('#leftbutton, #rightbutton').live('click', moveRefContent); // 인물출연작 정보 이동버튼
-
-		obj = Common.selectStrBoxForList ( "P00000011136", "Y", "");
-
-	    if(obj != null && obj[0] != null &&obj[0].STRGBOXYN  != null && obj[0].STRGBOXYN == "Y"){
-	    	$("span.btn_wrap.btn_w_zzim").removeClass('btn_w_zzim').addClass('btn_w_zzim_m');
-	    }else{
-	    	$("span.btn_wrap.btn_w_zzim").removeClass('btn_w_zzim_m').addClass('btn_w_zzim');
-	    }
-
-	});
-
-	//코멘트 탭 활성화 및 해당 영역 포커스
-	function goCommentTabPos(){
-		getCommentListMarket('MV','P00000011136','');
-  	}
-
-	//인물 출연작 정보 이동
-	function moveRefContent(){
-		if( $('#refContList').position().left % 120 == 0 ){
-			if(this.id == 'leftbutton'){
-				if( $('#refContList').position().left < 0 ){
-					$('#refContList').animate({'left': '+=120px'},300);
-				}
-			}else if( ($('.list_other_mv').width() - $('#refContList').position().left ) < $('#refContList').width() ) {
-				$('#refContList').animate({'left': '-=120px'},300);
-			}
-		}
-		return false;
-	}
-
-	//정렬 순서 라디오 버튼 이벤트 바인딩
-	function SetRadioSelect()
-	{
-		radio = $('div.chk_condition>input');
-		radioimage = $('div.chk_condition>label>img');
-
-		$(radio).each(function(index, element){
-			$(element).bind('click', function(){
-				UI2.SwapOrderTypeImage(radioimage, index);
-				//SetCommentOrderType(index);
-			});
-		});
-	}
-
-
-	//기존 컨텐츠 지우기
-	function ClearContents()
-	{
-		for(i=($(contents).length-1);i>=1;i--)
-		{
-			$(contents[i]).remove();
-		}
-	}
-
-	function GetMovieCode()
-	{
-		moviecode = $('#hdnMovieCode').val();
-	}
-
-	//영화배우 정보 리스트 가져오기
-	function GetActors()
-	{
-		highlightTab(1);
-		getActorList();
-		return false;
-	}
-
-
-	//영화 기본정보 가져오기
-	function GetBasicInfo()
-	{
-		UI2.SelectTab(conttabs, 0);
-		GetMovieCode();
-		$('div.detailWrap').empty();
-		AJAX2.GetMovieInfo("N");
-	}
-
-	/** 플래시 그리기 **/
-	function make_flash(url, id, width, height, wmode, flashvars, allowfullscreen, divId){
-		var isIE  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
-		var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
-		var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
-		var isFF = (navigator.userAgent.indexOf("Firefox") != -1) ? true : false;
-		var str = "";
-
-		for(prop in flashvars){
-			var arg = flashvars[prop];
-			str = str + "&" + prop + "=" + arg;
-		}
-
-		if(isIE && isWin && !isOpera){
-			var obj = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="' + width +'" height="' + height +'" name="' + id +'" id="' + id +'" align="middle">';
-			obj += '<param name="allowScriptAccess" value="sameDomain">';
-			obj += '<param name="quality" value="high">';
-			obj += '<param name="src" value="' + url + '">';
-			obj += '<param name="wmode" value="' + wmode + '">';
-			obj += '<param name="flashvars" value="' + str + '">';
-			obj += '<param name="allowFullScreen" value="' + allowfullscreen + '">';
-			obj += '</object>';
-		}else{
-			obj = '<embed src="' + url + '" quality="high"  width="' + width +'" height="' + height +'" name="' + id +'" id="' + id +'" flashvars="'+str+'" align="middle" allowScriptAccess="sameDomain" allowFullScreen="' + allowfullscreen + '" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="' + wmode + '">';
-		}
-
-		if(divId){
-			document.getElementById(divId).innerHTML = obj;
-		}else{
-			document.write(obj);
-		}
-	}
-
-	function makeFlash_user (){
-
-		var flashvars = {};
-		flashvars.dataUrl = "/serviceportal/movie/movieDetail/userMovieUserDataJSON.do?repProdId=PDRS00010645",
-		//flashvars.dataUrl = "/resource/flash/data/data.asp"
-		flashvars.URLFont = "/resource/flash/YGO_340.swf"
-		var params = {};
-		var attributes = {};
-		make_flash("/resource/flash/User_Analysis.swf","User_Analysis","220", "117","transparent",flashvars,"false", "user_flash_div");
-
-	}
-
-	function makeFlash_newsTopic (dpRepProdId){
-		var flashvars = {};
-		flashvars.dataUrl = "/serviceportal/movie/movieDetail/rightTopicRelatedNews.do?dpRepProdId="+dpRepProdId,
-		flashvars.fontUrl = "/resource/flash/YGO_340.swf",
-		flashvars.detailJs = "detailJs",
-		flashvars.addJs = "addJs"
-
-		var params = {dpRepProdId : $("#dpRepProdId").val()};
-		var attributes = {};
-		make_flash("/resource/flash/News_Topic.swf","News_Topic","220", "185","transparent",flashvars,"false");
-
-	}
-
-   /** 관련 Topic 상세보기 **/
-   function detailJs(arg){
- 		var tpcId = arg.repProdId;
-	  	var url = '/serviceportal/topic/common/topicDetailHome/searchTopicDetailHome.do?tpcId='+tpcId+'&dpSpaceId=100000000026&MOVIEPRODID=PDRS00010645';
-		Common.winOpen(url, "topicdetail", 820, 900, 'yes', 'no');
-   }
-   /** 관련 Topic 담아두기 **/
-   function addJs(arg){
-		var tpcId = arg.repProdId;
-
-		if(tpcId !== null){
-			TOPIC.insertTopicMrk(tpcId, '100000000026', 'PDRS00010645');
-		}
-   }
-
-	function makeFlash_sense (){
-
-		var flashvars = {};
-		flashvars.URLJson = "/serviceportal/movie/movieDetail/userSenseDataJSON.do?glssId=GL0000180511",
-		flashvars.URLFont = "/resource/flash/YGO_340.swf"
-		var params = {};
-		var attributes = {};
-		make_flash("/resource/flash/SensibilityKeywords.swf","SensibilityKeywords","220", "135","transparent",flashvars,"false", "sense_flash_div");
-
-	}
-
-	function makeFlash_txtm (prodNm, lvlCd){
-		if( ( /^[a-zA-Z0-9ㄱ-ㅎ가-힣\\\/\(\)\.\-\s]*$/.test(prodNm) ) ){
-			var flashvars = {};
-			flashvars.labelName = encodeURIComponent(prodNm);
-			flashvars.flashWidth = 310;
-			if(lvlCd >= 18){
-				flashvars.useIcon = true;
-			} else{
-				flashvars.useIcon = false;
-			}
-			flashvars.useButton = false;
-			flashvars.URLPage = "Http://www.naver.com";
-			flashvars.URLTarget = "_blank";
-			flashvars.URLFont = "/resource/flash/YGO_340.swf";
-
-			var params = {};
-			var attributes = {};
-			make_flash("/resource/flash/FlashFront.swf","FlashFront","310", "40","transparent",flashvars,"false","prodNm_flash_div");
-		}else{
-			document.getElementById("prodNm_flash_div").innerHTML = prodNm;
-			if(lvlCd >= 18){
-				document.getElementById("prodNm_flash_div").innerHTML += '<img src="http://www.hoppin.nate.com/resource/images/contents/ico_19denied.gif" class="al_middle">';
-			}
-		}
-	}
-
-	function thisMovie(movieName)
-	{
-		if (navigator.appName.indexOf("Microsoft") != -1)
-		{
-			return window[movieName];
-		} else
-		{
-			return document[movieName];
-		}
-	}
-
-
-	/*var count = ;
-	var VideoList = {
-
-			prev : function(){
-				if(0 <  $("#startRow").val()){
-		            $("#startRow").val(parseInt($("#startRow").val())-parseInt(5));
-		            $("#endRow").val(parseInt($("#endRow").val())-parseInt(5));
-		            if($("#startRow").val() < 1){
-						$("#startRow").val("1");
-						$("#endRow").val("5");
-		            }
-		        }
-		        getVideoList();
-			},
-			next : function(){
-				if(count > $("#endRow").val()){
-		            $("#startRow").val(parseInt($("#startRow").val())+parseInt(5));
-		            $("#endRow").val(parseInt($("#endRow").val())+parseInt(5));
-		        }
-				getVideoList();
-			}
-	}*/
-
-	/*관련 비디오(예고편및 본편 모두 조회)*/
-	function getVideoList(){
-		  var startRow;
-		  var endRow;
-
-		  var params = {
-				 startRow : $("#startRow").val(),
-				 endRow : $("#endRow").val(),
-				 dpRepProdId : $("#dpRepProdId").val()
-		  }
-
-		  $.ajax({
-            type: "POST",
-            url: "/serviceportal/movie/movieDetail/getRelationVideoJSON.do",
-            data: params,
-            dataType : 'json',
-            cache : false,
-            success: function (json) {
-                  var header =$( "<div style='width:450px;'></div>");
-                  header.append("<a  class='prev'   style='position:relative;top:50px;left:0px' href='javascript:left();'><img src='/resource/images/contents/btn_prev13.gif'alt='prev' /></a>");
-                  var div = $("<div style='width :430px; height:95px;overflow:hidden; position:relative;left:30px;'></div>");
-                  var ul = $("<ul style='position:relative; ' class='list_preview' id='relationObjList'></ul>");
-                  var trafficCode = "";
-				  for(var i=0; i<json.length; i++){
-					  var isTrailer;
-					  var prodFreeYn;
-					  if(json[i].isTrailer =="Y"){
-						  if(json[i].prodNm ==""){
-							  isTrailerTxt = "제목없음";
-						  }else{
-							  isTrailerTxt = json[i].prodNm;
-						  }
-
-					  }else{
-						  isTrailerTxt = "본편";
-					  }
-					  if(json[i].prodFreeYn == "N"){
-						  prodFreeYn = "<p class='mt3'><img src='/resource/images/common/ico_pay.gif' alt='유료' /></p>";
-					  }else{
-						  prodFreeYn = "";
-					  }
-					  /*트래픽통계*/
-					  if(i == 0){
-						  trafficCode="RSA179"
-					  }else if(i==1){
-						  trafficCode="RSA180"
-					  }else if(i==2){
-						  trafficCode="RSA181"
-					  }else if(i==3){
-						  trafficCode="RSA182"
-					  }else if(i==4){
-						  trafficCode="RSA183"
-					  }
-					  var trafficLink = "Common.clickTfficStatAjax({pid:'nhp1',rid:trafficCode});";
-
-					 /*WVP를 위한 값 셋팅 본편과 예고편이 필요로 하는 값이 달라지므로 분기 처리함 */
-					 var play = "";
-					 if(json[i].isTrailer =="Y"){//예고편
-						 play = "<a href="+"\"javascript:Play.trailer( '"+json[i].glssId +"','"+json[i].subCtsId+"','"+json[i].dpRepProdId +"', '100000000020');Common.clickTfficStatAjax({pid:'nhp1',rid:'"+trafficCode+"'});\""+">";
-					 }else{//본편
-						 play = "<a href="+"\"javascript:Common.buyProductDetail ( '"+ json[i].dpRepProdId+"', null, '100000000020');Common.clickTfficStatAjax({pid:'nhp1',rid:'"+trafficCode+"'});\""+">";
-					 }
-					 var li = $("<li>"+play+"<img src='http://www.hoppin.nate.com/resource_share/img"
-						 						+json[i].imgFilePath+"' style='width:75px;height:60px;' onerror=\"this.src='/resource/images/contents/noimg_90x130.jpg'\"/></a><p style='font-size:11px;color:#808080;'>"
-					 							+ isTrailerTxt+ "</p>"+ prodFreeYn +
-					 							"<div class='btn_play'> <img src='/resource/images/common/btn_play_list.png' alt='play' class='png24' /></a></div></li> ");
-						ul.append(li);
-						//alert(ul.css("width"));
-                }
-					ul.css("width", (85 * ( json.length > 5 ? json.length : 5))  +'px');
-                  div.append(ul);
-                  header.append(div);
-                  header.append("<a class='next' style='position:relative;top:-60px;left:500px' href='javascript:right();'><img src='/resource/images/contents/btn_next13.gif' alt='next' /></a>");
-                  $("#relationListDiv").append(header);
-
-
-            },
-            error : function (a, b, c) {
-                //alert(a.responseText);
-            }
-        });
-	}
-	var sibalFlag = false;
-
-	function left(){
-		if($('#relationObjList').position().left < 0 ){
-			$('#relationObjList').filter(':not(:animated)').animate({'left': '+=90px'},300);
-		}
-		Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA177'});//트래픽 통계전달
-	}
-
-	function right(){
-		if($('#relationObjList').width() + 	$('#relationObjList').position().left   > 450 ){
-			$('#relationObjList').filter(':not(:animated)').animate({'left': '-=90px'},300);
-		}
-		Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA178'});//트래픽 통계전달
-	}
-
-
-	function  play(isTrailer, glssId, movieId, dpRepProdId){
-		/*예고편인경우 WVP에 encinfo pocinfo를 구성해서 넘김*/
-		if(isTrailer == "Y"){
-			  var params = {
-					  glssId : glssId,
-					  movieId :movieId,
-					  dpRepProdId:dpRepProdId
-			  }
-			  $.ajax({
-	              type: "POST",
-	              url: "/serviceportal/movie/movieDetail/wvpParamInitForTrailerAjax.do",
-	              data: params,
-	              dataType : 'json',
-	              cache : false,
-	              success: function (json) {
-
-					  alert(json.ENC_INFO + ": "+ json.POC_INFO);
-
-	              },
-	              error : function (a, b, c) {
-	                  //alert(a.responseText);
-	              }
-	          });
-		}else{//본편인 경우
-
-			 var params = {
-					 normProdId:	normProdId,
-					 mainCtsId: mainCtsId,
-					 subCtsId:	subCtsId,
-					 dpRepProdId:dpRepProdId
-			  }
-			  $.ajax({
-	              type: "POST",
-	              url: "/serviceportal/movie/movieDetail/wvpParamInitAjax.do",
-	              data: params,
-	              dataType : 'json',
-	              cache : false,
-	              success: function (json) {
-
-					  alert(json.ENC_INFO + ": "+ json.POC_INFO);
-
-	              },
-	              error : function (a, b, c) {
-	                  //alert(a.responseText);
-	              }
-	          });
-		}
-	}
-
-	var  allDeviceHelper ={
-		show : function(){
-			$("#deviceHelper").show();
-		},
-		hide : function(){
-			$("#deviceHelper").hide();
-		}
-	}
-
-</script>
 <style type="text/css">
 .review_list li.image .detail .link{background: url(http://www.hoppin.nate.com/resource/images/common/bg_bln_id.gif) left top no-repeat; width: 91px; height: 43px; padding: 22px 0 0 13px; position: absolute; top: 30px; left: 140px;}/* 임시 입력 */
 #div_content_tab ul li a{line-height:100%}
 </style>
+<script type="text/javascript" src="resource/common/js/hpn_n1111.js"></script>
 </head>
 
 <body>
-
-<!-- Top area -->
-<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/nateglobalsearch.js"></script>
-<script type="text/javaScript">
-	var hoppin_isLogin = true;
-
-		var nation_cd = 'KR';
-		var serviceAble_yjh = 'Y';
-
-
-	$(document).ready(function() {
-		//검색어 자동완성
-		//SetGlobalSearch_left();
-		//검색어 히스토리
-		//SetGlobalHistory_left();
-	});
-
-	$(document).ready(function(){
-
-		//네이트 통합 검색 관련 스크립트 추가 2010-11-30
-		SetGlobalSearch_nate();
-		SetGlobalHistory_nate();
-		//네이트 통합 검색 본문 클릭시 검색 결과 숨김
-		$('body').click(function(){
-			//$('#searchresultlist').parent('div.opt_list').hide();
-		});
-	});
-
-	// -----------------------------------------------------------------------------------------------------------------
-	// 검색창 광고 관련
-	// -----------------------------------------------------------------------------------------------------------------
-	function hideBg(){
-
-	}
-	function showBg(){
-		if($("#input_search_all").val() !="") return;
-		$(".t_search").css("background", "url('http://www.hoppin.nate.com/resource/images/common/txt_l_search01.gif') no-repeat");
-	}
-</script>
-
 
 
 <div id="header">
@@ -704,20 +162,18 @@
 								<script type="text/javascript">makeFlash_txtm('해리 포터와 죽음의 성물 2', '00');</script>
 							</div>
 						</dt>
-						<dd class="t_11b_33 mb20 ls0">Harry Potter and the Deathly Hallows: Part II, 2011<span class="btn_wrap btn_scrap ml10"><button type="button" class="btn" onclick="javascript:createSnsSendListDiv(this, 'P00000011136','MV','100000000020');">퍼가기</button></span></dd>
+						<dd class="t_11b_33 mb20 ls0">Harry Potter and the Deathly Hallows: Part II, 2011</dd>
 						<dd class="t_11_80">
 							<a href="#" onClick="javascript:Common.movieGenreList('203'); return false;" class="t_11_66_c">SF/판타지</a>,
 							<a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션/모험</a>
-							<img src="http://www.hoppin.nate.com/resource/images/common/bull_li_bar01.gif" style="margin: 0px 5px -1px 5px;">
-							131분
-							<img src="http://www.hoppin.nate.com/resource/images/common/bull_li_bar01.gif" style="margin: 0px 5px -1px 5px;">
-							개봉일 <span class="ls0"> 2011.07.13</span>
+							/ 131분 / 개봉일 <span class="ls0"> 2011.07.13</span>
 						</dd>
-						<dd class="t_11_80">
-							감독 :
+						<dd class="prgm_info">
+							<span class="tit">감독 :</span>
 							<a href="#" onClick="javascript:Common.openSearch('데이빗 예이츠', '100000000022', 'GL0000076681', 'P00000011136', ''); return false;" class="t_11_80">데이빗 예이츠</a>
-													</dd>
-													<dd class="t_11_80">배우 :
+						</dd>
+						<dd class="prgm_info">
+							<span class="tit">배우 :</span>
 							<a href="#" onClick="javascript:Common.openSearch('다니엘 래드클리프', '100000000022', 'GL0000011897', 'P00000011136', ''); return false;" class="t_11_80">다니엘 래드클리프</a>
 							,
 							<a href="#" onClick="javascript:Common.openSearch('루퍼트 그린트', '100000000022', 'GL0000012953', 'P00000011136', ''); return false;" class="t_11_80">루퍼트 그린트</a>
@@ -741,18 +197,30 @@
 				</div>
 				<div class="detail_opt">
 					<div class="use_section">
-						<div class="use_condition">
-							<div class="opt_set">
-								<!--img src="http://www.hoppin.nate.com/resource/images/contents/txt_vod_opt_buyok_no.gif" alt="구매완료" /-->
+						<!-- SNS 공유 -->
+						<div id="snsShare" class="share_sns">
+							<ul class="sns_list">
+								<li><button type="button" class="gn_btn gs_cyworld" title="싸이월드"><span class="ir">싸이월드</span></button></li>
+								<li><button type="button" class="gn_btn gs_me2day" title="미투데이"><span class="ir">미투데이</span></button></li>
+								<li><button type="button" class="gn_btn gs_twitter" title="트위터"><span class="ir">트위터</span></button></li>
+								<li><button type="button" class="gn_btn gs_facebook" title="페이스북"><span class="ir">페이스북</span></button></li>
+								<li class="this"><button type="button" class="gn_btn gs_scrap" title="퍼가기"><span class="ir">퍼가기</span></button></li>
+							</ul>
+							<!-- 구매정보 -->
+							<div class="pgm_pay_info">
+								<div class="pgm_pay">
+									<em class="free"><span class="ir">무료</span></em>
+									<em class="bought"><span class="ir">구매완료</span></em>
+								</div>
+								<a href="#" class="link ml10" onclick="Common.prodUseLmtHelpAjax(this, 'P00000011136', 'Y');return false;" >이용조건</a>
+								<ul class="pay_term">
+									<li><span class="t_12_33"><strong>가격:</strong> <span class="ls0">3,500원</span></span>
+									<span style="position:relative;">&nbsp;<a href="/serviceportal/common/salePass/searchSalePassList.do"><img src="http://www.hoppin.nate.com/resource/images/contents/btn001.gif" style="position:absolute;top:-3px;"></a></span>
+									</li>
+									<li><span class="t_12_33"><strong>이용기간:</strong> 2일 (일반화질)</span></li>
+								</ul>
 							</div>
-							<a href="#" class="link ml10" onclick="Common.prodUseLmtHelpAjax(this, 'P00000011136', 'Y');return false;" >이용조건</a>
 						</div>
-						<ul>
-							<li ><span class="t_12_33"><strong>가격:</strong> <span class="ls0">3,500원</span></span>
-							<span style="position:relative;">&nbsp;<a href="/serviceportal/common/salePass/searchSalePassList.do"><img src="http://www.hoppin.nate.com/resource/images/contents/btn001.gif" style="position:absolute;top:-3px;"></a></span>
-							</li>
-							<li ><span class="t_12_33"><strong>이용기간:</strong> 2일 (일반화질)</span></li>
-						</ul>
 						<div class="btns">
 							<span class="btn_wrap btn_v_buy"><button type="button" class="btn" onclick="CmdBuyProductDetail();">구매하기</button></span>
 							<span class="btn_wrap btn_w_zzim"><button type="submit" class="btn" onclick="Common.toggleStrgBoxAjax(this, 'P00000011136', 'Y', 'FL', '100000000020');  Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA175'});">관심+</button></span>
@@ -774,11 +242,11 @@
 						</div>
 						<div id="silverlightControlHost" style="position:relative;width: 100%; height:380px; ">
 							<div style="position:absolute;top:0;left:0;height:380px;">
-
 								<iframe id="_sl_historyFrame" style="visibility:hidden;height:0px;width:0px;border:0px"></iframe>
 							</div>
 						</div>
 						<div id="relationListDiv">
+							<div style="width:450px;" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown"><a class="prev" style="position:relative;top:50px;left:0px" href="javascript:left();"><img src="http://www.hoppin.nate.com/resource/images/contents/btn_prev13.gif" alt="prev"></a><div style="width :430px; height:95px;overflow:hidden; position:relative;left:30px;"><ul style="position: relative; width: 425px; " class="list_preview" id="relationObjList"><li><a href="javascript:Common.buyProductDetail ( 'P00000011150', null, '100000000020');Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA179'});"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/STC/STC_GL0000184941_1_8.jpg" style="width:75px;height:60px;" onerror="this.src='/resource/images/contents/noimg_90x130.jpg'"></a><p style="font-size:11px;color:#808080;">본편</p><p class="mt3"><img src="http://www.hoppin.nate.com/resource/images/common/ico_pay.gif" alt="유료"></p><div class="btn_play"> <img src="http://www.hoppin.nate.com/resource/images/common/btn_play_list.png" alt="play" class="png24"></div></li></ul></div><a class="next" style="position:relative;top:-60px;left:500px" href="javascript:right();"><img src="http://www.hoppin.nate.com/resource/images/contents/btn_next13.gif" alt="next"></a></div>
 						</div>
 					</div>
 					<div id="div_content_tab" class="tab_menu04 bdr99 mb20">
@@ -790,153 +258,143 @@
 						</ul>
 					</div>
 					<div class="detailWrap">
+					<div class="mvdetailed clfix mb40" id="SP_MovieBasicInfo">
+						<div class="poster">
+							<img width="90" height="130" src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/REP/REP_GL0000184941_1_1.jpg" onerror="this.src='/resource/images/contents/noimg_90x130.jpg'">
+						</div>
+						<div class="details">
+							<ul class="info clfix mb20">
+								<li>제목 : 쿵푸팬더 2</li>
+								<li>개봉일 : 2011.05.26</li>
+								<li>상영시간 : 95분</li>
+								<li>장르 : 애니메이션,액션/모험,코미디</li>
+								<li>제작년도 : 2011년</li>
+								<li>상세장르 :  코믹 애니메이션,코믹 액션,슬랩스틱</li>
+								<li>제작 국가 : 미국</li>
+								<li>관람등급 :
+
+									전체관람가
+
+								</li>
+								<li></li>
+
+							</ul>
+							<h5 class="mb10"><img src="http://www.hoppin.nate.com/resource/images/contents/txt_relatedphoto.gif" alt="관련포토" class="mr10">
+								<span class="btn_wrap btn_more">
+									<button type="button" class="btn"> </button>
+								</span>
+							</h5>
+							<ul class="photo">
+											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_1_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_1_1.jpg" width="72" height="68" alt="photo"></a></li>
+											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_2_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_2_1.jpg" width="72" height="68" alt="photo"></a></li>
+											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_3_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_3_1.jpg" width="72" height="68" alt="photo"></a></li>
+											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_4_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_4_1.jpg" width="72" height="68" alt="photo"></a></li>
+							</ul>
+						</div>
+					</div>
+					<h4 class="mvdetail_title"><img src="http://www.hoppin.nate.com/resource/images/contents/txt_01synop.gif" alt="01.시놉시스"></h4>
+					<p class="t_12_80 txt_synop mb40" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">용의 전사 포에게 내려진 두 번째 미션!
+					<br>쿵푸를 지켜라!
+					<br>
+					<br>그토록 원하던 용의 전사가 되어 무적의 5인방과 함께 평화의 계곡을 지키게 된 포. 진정한 용의 전사로 거듭나기 위해 시푸 사부와 쿵푸 수련에 매진하던 중, 셴 선생이 위대한 쿵푸 사부들을 하나 둘 씩 제거하고 있다는 소식을 듣게 된다.
+					<br>
+					<br>여전히 바람을 가르는 주먹의 소리보다 배에서울리는 꼬르륵 소리가 더 크고, 오랜 숙적인 계단 앞에서는 맥을 못 추는 천방지축 팬더 포. 이제 막 정식 수련을 시작하려는 포에게 쿵푸를 지켜야 한다는 막중한 미션이 주어지고, 포는 무적의 5인방과 함께 길을 떠난다.
+					<br>
+					<br>과연 포는 쿵푸의 대가들도 막지 못한 셴 선생의 비밀병기에 맞서 쿵푸를 지켜낼 수 있을까?
+					<br>
+					<br>[드디어 밝혀지는 출생의 비밀?!]
+					<br>1편에서 왜 팬더인 포의 아빠가 거위인지 궁금했다면 2편을 절대 놓치지 말기를.
+					<br>2편에서는 포의 출생에 대한 비밀과 함께 깜찍한 베이비 포의 모습이 공개된다.</p>
+					<style type="text/css">
+					a.btn {position:relative;z-index:-1}
+					</style>
+
+
+						<div class="m40"><div style="width: 500px;"></div><h4 class="mvdetail_title"><img alt="02.인물정보" src="http://www.hoppin.nate.com/resource/images/contents/txt_02characterinfo.gif"><span class="info" onclick="clickTrafic();"><a href="#getActorList" class="t_11_80" id="morePeopleInfo">더보기 [29]</a></span></h4><div class="info_person mb200 clfix"><ul class="list01 clfix"><li rolecd="001" data="GL0000139565"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80">감독</dt><dd class="t_11b_4c" title="여인영">여인영</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000005702"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="잭 블랙">잭 블랙</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000001829"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="안젤리나 졸리">안젤리나 졸리</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000000571"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="더스틴 호프만">더스틴 호프만</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000000628"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="성룡">성룡</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000023416"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="루시 리우">루시 리우</dd><dd class="t_11_80"></dd></dl></li></ul><div class="list_other_mv" style="z-index: 5; top: 135px; display: block; " data="GL0000139565" rolecd="001"><div style="left: 10px; " class="arrow_sel"><img class="png24" alt="" src="http://www.hoppin.nate.com/resource/images/contents/bg_pinfo_sel.png"></div><p class="txt t_11b_80"><img alt="이 인물의다른작품" class="png24" src="http://www.hoppin.nate.com/resource/images/contents/txt_directorothermv.png"> [1]  <a class="ml20" href="#" id="leftbutton"><img class="png24" alt="left" src="http://www.hoppin.nate.com/resource/images/contents/btn_trans_left.png"></a><a href="#" id="rightbutton"><img class="png24" alt="right" src="http://www.hoppin.nate.com/resource/images/contents/btn_trans_right.png"></a></p><div style="width:480px; overflow:hidden; position:relative"><ul class="list02 clfix" id="refContList" style="position: relative; width: 480px; "><li><div class="cell_movie_s" onclick="goDetail('/serviceportal/movie/movieDetail/searchDetailView.do?dpRepProdId=P00000004924&amp;dpSpaceId=100000000031');"><div class="pic"><a href="/serviceportal/movie/movieDetail/searchDetailView.do?dpRepProdId=P00000004924&amp;dpSpaceId=100000000031"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000176667/IMAGE/REP/REP_GL0000176667_1_1.jpg" alt="쿵푸 팬더" onerror="this.src='/resource/images/contents/nothumb_62x90.jpg'" width="68px" height="98px"></a></div><div class="info"><a href="/serviceportal/movie/movieDetail/searchDetailView.do?dpRepProdId=P00000004924&amp;dpSpaceId=100000000031" class=" t_11_66"><span class="t_11b_00">[영화]</span> 쿵푸 팬더</a></div><div class="shadow"></div></div></li></ul></div></div></div></div><h4 class="mvdetail_title"><img src="http://www.hoppin.nate.com/resource/images/contents/txt_03comment.gif" alt="03.코멘트"><span class="info"><a href="javascript:getCommentListMarket('MV','P00000011150','','CommentListBasic');" class="t_11_80">더보기 [<span class="fc_purple" id="TotalCommentNum">28</span>]</a></span></h4>
+					<!-- comment top -->
+					<div id="comment_top" class="comment_write clfix mb25">
+						<textarea class="t_11_a6" id="SP_CommentText" onfocus="javascript:SetFocus();" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">코멘트는 최대 200자까지 등록가능합니다.</textarea>
+						<span class="btn_wrap btn_b_reg2"><button type="submit" class="btn" onclick="javascript:CommentWrite('100000000024');">등록</button></span>
+						<p class="text_limit"><strong><span class="fc_999">0/200</span></strong></p>
+						<p class="mt10"></p>
+						<!-- SNS 댓글 -->
+						<div class="share_cmt_sns clfix">
+							<ul class="sns_s_share">
+								<li><button type="button" class="gn_btn sns_s_cyworld" title="싸이월드"><span class="ir">싸이월드</span></button></li>
+								<!-- 선택일 때 lli class="this" -->
+								<li class="this"><button type="button" class="gn_btn sns_s_me2day" title="미투데이"><span class="ir">미투데이</span></button></li>
+								<li><button type="button" class="gn_btn sns_s_twitter" title="트위터"><span class="ir">트위터</span></button></li>
+								<li><button type="button" class="gn_btn sns_s_facebook" title="페이스북"><span class="ir">페이스북</span></button></li>
+							</ul>
+							<p class="sns_s_explain">외부서비스를 선택하여 친구들과 공유해 보세요</p>
+						</div>
+					</div>
+					<!-- //comment top -->
+					<!--comment amount -->
+					<!-- //comment amount -->
+					<!-- comment list -->
+					<ul class="comment_list mb20" id="CommentLists"><li id="comment_28730"><div class="reply"><ul class="reply_info clfix"><li class="id"><a href="#" onclick="Common.goMyPageHome(1001366670);return false;">별떵땡</a></li><li class="date ls0">2011.11.23 18:40</li><li class="report"><a href="javascript:SendReport('MV','28730','CM');">신고</a></li></ul><div class="modify_com" style="display:none;"><textarea class="t_11_80" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">eoqkr
+					대박</textarea><span class="btn_wrap btn_comment_ok"><button onclick="ConfirmCommentEdit(28730, this);return false;" class="btn">확인</button></span></div><p class="t_12_4d text"><br>eoqkr<br>대박<span class="btn"></span></p><p class="sympathyb" onmouseover="MouseOverAgree(28730, this);" onmouseout="MouseOutAgree(28730, this);" onclick="MouseClickAgree(28730,'MV', this);">0</p><p class="m_over" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/common/img_bln_symp.png" alt="공감이되시면 눌러주세요" class="png24"></p><a href="#" class="re_close" onclick="ToggleCommentReply(this, 'MV');return false;">리플 [0]</a><p></p></div><div class="reply2" style=""><div class="write"><div class="write_wrap"><input type="text" class="t_11_66" maxlength="50" value="리플은 최대 50자까지 등록 가능합니다." onfocus="javascript:FocusCommentReply(this);" onkeyup="ReplyChangeContent(this);checkCommentSubmit(event, '28730', this);"><span class="btn_wrap btn_c_reg"><button class="btn" onclick="WriteCommentReply('28730', this);return false;">등록</button></span></div></div><ul></ul><div class="page"></div></div></li><li id="comment_28727"><div class="reply"><ul class="reply_info clfix"><li class="id"><a href="#" onclick="Common.goMyPageHome(1001144772);return false;">푸르닝</a></li><li class="date ls0">2011.11.23 17:42</li><li class="report"><a href="javascript:SendReport('MV','28727','CM');">신고</a></li></ul><div class="modify_com" style="display:none;"><textarea class="t_11_80" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">완전 재밌어요!! 대박임 완전 귀여워 대박대박!!! 워우....짱..</textarea><span class="btn_wrap btn_comment_ok"><button onclick="ConfirmCommentEdit(28727, this);return false;" class="btn">확인</button></span></div><p class="t_12_4d text"><br>완전 재밌어요!! 대박임 완전 귀여워 대박대박!!! 워우....짱..<span class="btn"></span></p><p class="sympathyb" onmouseover="MouseOverAgree(28727, this);" onmouseout="MouseOutAgree(28727, this);" onclick="MouseClickAgree(28727,'MV', this);">0</p><p class="m_over" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/common/img_bln_symp.png" alt="공감이되시면 눌러주세요" class="png24"></p><a href="#" class="re_open" onclick="ToggleCommentReply(this, 'MV');return false;">리플 [0]</a><p></p></div><div class="reply2" style="display:none;"><div class="write"><div class="write_wrap"><input type="text" class="t_11_66" maxlength="50" value="리플은 최대 50자까지 등록 가능합니다." onfocus="javascript:FocusCommentReply(this);" onkeyup="ReplyChangeContent(this);checkCommentSubmit(event, '28727', this);"><span class="btn_wrap btn_c_reg"><button class="btn" onclick="WriteCommentReply('28727', this);return false;">등록</button></span></div></div><ul></ul><div class="page"></div></div></li><li id="comment_28568"><div class="reply"><ul class="reply_info clfix"><li class="id"><a href="#" onclick="Common.goMyPageHome(1001104357);return false;">princessMJ</a></li><li class="date ls0">2011.11.23 01:15</li><li class="report"><a href="javascript:SendReport('MV','28568','CM');">신고</a></li></ul><div class="modify_com" style="display:none;"><textarea class="t_11_80" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">너무재밌어요^^</textarea><span class="btn_wrap btn_comment_ok"><button onclick="ConfirmCommentEdit(28568, this);return false;" class="btn">확인</button></span></div><p class="t_12_4d text"><br>너무재밌어요^^<span class="btn"></span></p><p class="sympathyb" onmouseover="MouseOverAgree(28568, this);" onmouseout="MouseOutAgree(28568, this);" onclick="MouseClickAgree(28568,'MV', this);">0</p><p class="m_over" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/common/img_bln_symp.png" alt="공감이되시면 눌러주세요" class="png24"></p><a href="#" class="re_open" onclick="ToggleCommentReply(this, 'MV');return false;">리플 [0]</a><p></p></div><div class="reply2" style="display:none;"><div class="write"><div class="write_wrap"><input type="text" class="t_11_66" maxlength="50" value="리플은 최대 50자까지 등록 가능합니다." onfocus="javascript:FocusCommentReply(this);" onkeyup="ReplyChangeContent(this);checkCommentSubmit(event, '28568', this);"><span class="btn_wrap btn_c_reg"><button class="btn" onclick="WriteCommentReply('28568', this);return false;">등록</button></span></div></div><ul></ul><div class="page"></div></div></li></ul>
+
+
+					<h4 class="mvdetail_title">
+					<img src="http://www.hoppin.nate.com/resource/images/contents/txt_04review.gif" alt="04.리뷰">
+					<span class="info">
+					<a href="javascript:GetReviewList(10);" class="t_11_80">더보기 [0]</a>
+					</span></h4>
+							<!-- review -->
+							<div class="review">
+								<p class="notice"><span class="id"></span>리뷰를 작성해 주세요.</p>
+							</div>
+							<div class="al_right">
+								<span class="btn_wrap btn_b_review_write"><button type="button" class="btn" onclick="GetReviewWrite('P00000011150', ''); Common.clickTfficStatAjax({pid:'nhp1',rid:clickId});">리뷰쓰기</button></span>
+							</div>
+							<!-- //review -->
 					</div>
 				</div>
 				<!-- left end -->
 				<div class="mvdetail_right">
-					<script language="javascript">
-						var userId = 'paolo2000@nate.com';
-						//닮은꼴 영화
-						function getSimilarMovie(){
-							  var params = {
-									 repProdId :$("#repProdId").val(),
-									 userMngNum : $("#userMngNum").val(),
-									 index : $("#similarMovieIndex").val()
-							  }
-							  $.ajax({
-								type: "POST",
-								url: "http://www.hoppin.nate.com/serviceportal/movie/movieDetail/getSimilarMovieAjax.do",
-								data: params,
-								success: function (data) {
-									$('#similarArea').html(data);
-								},
-								error : function (a, b, c) {
-									//alert(a.responseText);
-								}
-							});
-						}
-						//연관 컨텐츠
-						function getRelationContents(){
-							  var params = {
-									 repProdId :$("#repProdId").val(),
-									 userMngNum : $("#userMngNum").val(),
-									 index : $("#relationContentsPage").val(),
-									 ctsType : "M"
-							  }
-
-							  $.ajax({
-								type: "POST",
-								url: "http://www.hoppin.nate.com/serviceportal/movie/movieDetail/getRelationContentsAjax.do",
-								data: params,
-								success: function (data) {
-									$('#relationContentArea').html(data);
-								},
-								error : function (a, b, c) {
-									//alert(a.responseText);
-								}
-							});
-						}
-
-						var RelationContentsMove ={
-								left : function(){
-									Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA202'});
-									var index = $("#relationContentsPage").val();
-									if(index > 0 && index  <= $("#relationContentsPageSize").val()){
-										//alert(index +":"+$("#relationContentsPageSize").val());
-										$("#relationContentsPage").val(parseInt(index)-parseInt(1));
-										if($("#relationContentsPage").val() < 1){
-											$("#relationContentsPage").val(1);
-										}
-										getRelationContents();
-									}
-								},
-								right : function(){
-									Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA203'});
-									var index = $("#relationContentsPage").val();
-									if(index > 0 && index  < $("#relationContentsPageSize").val()){
-										//alert(index +":"+$("#relationContentsPageSize").val());
-										$("#relationContentsPage").val(parseInt(index)+parseInt(1));
-										if($("#relationContentsPage").val() < index){
-											index = $("#relationContentsPage").val();
-										}
-										getRelationContents();
-									}
-								}
-						}
-
-						var SimilarMovie = {
-								left : function(){
-									Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA197'});
-									var index = $("#similarMovieIndex").val();
-									var count = parseInt(8) - parseInt(1) ;
-									if(index > 0 && index  <= count){
-										$("#similarMovieIndex").val(parseInt($("#similarMovieIndex").val()) - parseInt(1));
-										getSimilarMovie();
-									}
-								},
-								right: function(){
-
-									Common.clickTfficStatAjax({pid:'nhp1',rid:'RSA198'});
-									var index = $("#similarMovieIndex").val();
-									var count = 8;
-									if(index >= 0 && index  < count-1){
-										$("#similarMovieIndex").val(parseInt($("#similarMovieIndex").val()) + parseInt(1));
-										getSimilarMovie();
-									}
-								}
-						}
-						var isTopic = function(dpRepProdId){
-							$.ajax({
-								url : "http://www.hoppin.nate.com/serviceportal/movie/movieDetail/rightTopicRelatedNews.do",
-								cache : false,
-								data : {
-									dpRepProdId:dpRepProdId
-									},
-								success : function (data) {
-										if(data.header.cnt == 0){
-											$("#topicArea").hide();
-										}
-								},
-								error : function (a, b, c) {
-									//alert(a.responseText);
-								}
-							});
-						};
-
-
-						$(document).ready(function(){
-							getSimilarMovie();
-							getRelationContents();
-							MovieRank.InitPerStarRank("9.2"); //평균 별점 부가
-							MovieRank.InitMyStarRank("0.0", userId);  //나의 별점 부가
-							MovieRank.SetMyStarRank();        //나의 별점 UI
-
-							/* 플래시 */
-							makeFlash_user();
-							makeFlash_sense();
-
-						})
-					</script>
 					<h5 class="mt30 mb15">
 					<img src="http://www.hoppin.nate.com/resource/images/contents/tit_vp_01rating.gif" alt="01.별점" /></h5>
 					<dl class="right_rate mb10 clfix">
 						<dt>
-							<img src="http://www.hoppin.nate.com/resource/images/contents/txt_vp_rating.gif" alt="평가수" />
+							<img src="resource/images/contents/txt_vp_n_rating.gif" alt="평가수" />
 							<strong>[<span id="starRate">44</span>]</strong>
 						</dt>
 						<dd>
 							<div class="rating_pb">
 								<div class="star_bg" style="padding-left:75px;"></div>
-								<div class="star_0"></div>
+								<div class="star_10"></div>
 							</div>
 						</dd>
 					</dl>
 					<dl class="right_rate clfix mb20">
-						<dt><img src="http://www.hoppin.nate.com/resource/images/contents/txt_vp_myrate.gif" alt="나의 별점" /></dt>
-						<dd>
-							<div class="rating_gb">
+						<dt><img src="resource/images/contents/txt_vp_n_myrate.gif" alt="내별점" /></dt>
+<dd>
+							<!-- 별점 입력하기 버튼 -->
+							<div class="rate_mystar">
+								<button type="button" class="gn_btn rt_mystar" title="별점 입력 하기" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown"><span class="ir">별점입력하기</span></button>
+							</div>
+							<div class="rating_gb" style="display:none;">
 								<div class="star_bg" style="padding-left:75px;"></div>
-								<div class="star_0">0.0</div>
+								<div class="star_7">0.0</div>
+							</div>
+							<!-- 친구들과 공유 -->
+							<div class="sns_share_star" style="display:none;">
+								<h6>친구들과 공유</h6>
+								<div class="sns_share_star_b">
+									<ul class="sns_s_share">
+										<li><button type="button" class="gn_btn sns_s_cyworld" title="싸이월드"><span class="ir">싸이월드</span></button></li>
+										<!-- 선택일 때 lli class="this" -->
+										<li class="this"><button type="button" class="gn_btn sns_s_me2day" title="미투데이"><span class="ir">미투데이</span></button></li>
+										<li><button type="button" class="gn_btn sns_s_twitter" title="트위터"><span class="ir">트위터</span></button></li>
+										<li><button type="button" class="gn_btn sns_s_facebook" title="페이스북"><span class="ir">페이스북</span></button></li>
+									</ul>
+									<div class="sns_share_star_btn">
+										<button type="button" class="gn_btn sns_s_send" title="평가하기"><span class="ir">평가하기</span></button>
+										<button type="button" class="gn_btn sns_s_cancel" title="취소"><span class="ir">취소</span></button>
+									</div>
+								</div>
 							</div>
 						</dd>
 						<dd><div class="pos_rel_h1"></div></dd>
@@ -944,12 +402,16 @@
 					<!-- <div class="mb15"><img src="http://www.hoppin.nate.com/resource/images/contents/sample_flash220x265.gif" alt="" /></div> -->
 					<!-- 02.user분석 -->
 					<div class="mb15">
-						<div id="user_flash_div"></div>
-						<div id="sense_flash_div"></div>
+						<div id="user_flash_div">
+							<embed src="http://www.hoppin.nate.com/resource/flash/User_Analysis.swf" quality="high" width="220" height="117" name="User_Analysis" id="User_Analysis" flashvars="&amp;dataUrl=http://www.hoppin.nate.com/serviceportal/movie/movieDetail/userMovieUserDataJSON.do?repProdId=PDRS00010643&amp;URLFont=http://www.hoppin.nate.com/resource/flash/YGO_340.swf" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent"></embed>
+						</div>
+						<div id="sense_flash_div">
+							<embed src="http://www.hoppin.nate.com/resource/flash/SensibilityKeywords.swf" quality="high" width="220" height="135" name="SensibilityKeywords" id="SensibilityKeywords" flashvars="&amp;URLJson=http://www.hoppin.nate.com/serviceportal/movie/movieDetail/userSenseDataJSON.do?glssId=GL0000184941&amp;URLFont=http://www.hoppin.nate.com/resource/flash/YGO_340.swf" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent"></embed>
+						</div>
 					</div>
 					<!--//02.user분석 -->
 					<div class="mb20">
-						<iframe src="http://www.hoppin.nate.com/serviceportal/common/banner/searchBanner.do?bnrAreaCd=FD" scrolling="no" frameborder="0" width="100%" height="0" onload="this.style.height=this.contentWindow.document.body.scrollHeight+'px';"></iframe>
+						<iframe src="http://www.hoppin.nate.com/serviceportal/common/banner/searchBanner.do?bnrAreaCd=FD" scrolling="no" frameborder="0" width="100%" height="0" onload="this.style.height=this.contentWindow.document.body.scrollHeight+'px';" style="height: 0px; "></iframe>
 					</div>
 					<div class="shadow">
 						<div id="similarArea">

@@ -1,0 +1,1481 @@
+@charset "utf-8";
+/************************************************************************
+ * filename :
+ * description  :
+ * date :
+************************************************************************/
+
+
+/*news main*/
+
+h4.news_tit		{position:relative; padding-bottom:10px; zoom:1; height:13px; _height:16px; z-index:100;} /* 100721 _height 추가, 101109 position:relative추가 */
+h4.news_tit img	{float:left;}
+h4.news_tit .btn_more	{float:right;margin:5px 10px 0 0;}
+h4.news_tit .help	{margin-left:4px;vertical-align:middle;}
+h4.news_tit .rtxt	{float:right;padding:5px 10px 0px 0;font-weight:bold;font-size:11px;color:#333333;}
+h4.botline{border-bottom:2px solid #999999;margin-bottom:10px;}
+span.source {background:url('http://www.hoppin.nate.com/resource/images/contents/bar_grayline01.gif') 100% 50% no-repeat;display:inline-block;padding-right:5px;font-size:11px;color:#737373;}
+span.source a{font-size:11px;color:#737373;}
+span.source a:hover{color:#7052cc;}
+span.time {font-size:11px;color:#737373;margin-right:5px;}
+span.time a{font-size:11px;color:#737373;}
+span.time a:hover{color:#7052cc;}
+
+.m_thumb_news		{width:150px; height:150px; padding:10px 0 0 10px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_thumb_news.gif') no-repeat;position:relative;color:#333333;font-weight:bold;letter-spacing:-1px;}
+.m_thumb_news img	{font-size:0; line-height:0;vertical-align:top;}
+.m_thumb_news .still_txt{padding-top:8px;font-size:12px;}
+.m_thumb_news .ranking{position:absolute;top:0px;left:0px;}
+
+.m_thumb_news_txt		{position:relative; width:127px; height:133px; padding:22px 15px 0 10px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_thumb_news2.gif') no-repeat; color:#4c4c4c; font-weight:bold; letter-spacing:-1px; cursor:pointer;} /* 101118 padding 수정, 110112 height 증가 */
+.m_thumb_news_txt .tit	{width:120px; font-size:17px; height:75px; line-height:20px; color:#333333;}
+.m_thumb_news_txt .still_txt	{padding-top:10px; font-size:12px;} /* 101118 padding 수정 */
+.m_thumb_news_txt .ranking		{position:absolute;top:0px;left:0px;}
+
+.m_thumb_news_txt_s		{width:82px; height:92px; padding:20px 15px 0 15px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_news_txt.gif') no-repeat;color:#4c4c4c;font-weight:bold;letter-spacing:-1px;font-size:14px;letter-spacing:-1px;color:#33333;line-height:16px;} /* 110112 hand 삭제 */
+
+
+
+.section_news{float:left;width:500px;}
+.section_news .conts{overflow:hidden; margin-top:20px;}
+.section_news .conts .list{float:right;overflow:hidden; width:330px;}
+.section_news .conts .list li{padding:4px 0 3px 0px;background:url('http://www.hoppin.nate.com/resource/images/contents/blt_dotgray01.gif') 0 50% no-repeat;}
+.section_news .conts .list a{padding-left:8px;font-size:12px; letter-spacing:-1px; line-height:16px;color:#4d4d4d;}
+.section_news .conts .list a:hover{color:#7052cc;}
+
+.photo_news{float:left;width:220px;margin-left:40px;}
+/* 100721 추가수정 */
+.photo_paging	{height:10px; border-top:2px solid #999999; border-bottom:1px solid #e6e6e6; text-align:center;padding:22px 0 17px 0; margin-bottom:20px;}
+.photo_paging .prev img{vertical-align:middle;margin-right:10px;}
+.photo_paging .next img{vertical-align:middle;margin-left:10px;}
+.photo_paging .num			{display:inline-block; _display:inline; margin:0 auto;}
+.photo_paging .num a		{display:block; float:left; width:12px; height:9px; margin:0 3px; font-size:0; line-height:0; text-indent:-1000px;}
+.photo_paging .num a.n01	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s01.gif') no-repeat;}
+.photo_paging .num a.n02	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s02.gif') no-repeat;}
+.photo_paging .num a.n03	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s03.gif') no-repeat;}
+.photo_paging .num a.n04	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s04.gif') no-repeat;}
+.photo_paging .num a.n05	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s05.gif') no-repeat;}
+.photo_paging .num a.n06	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s06.gif') no-repeat;}
+.photo_paging .num a.n07	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s07.gif') no-repeat;}
+.photo_paging .num a.n08	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s08.gif') no-repeat;}
+.photo_paging .num a.n09	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s09.gif') no-repeat;}
+.photo_paging .num a.n10	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s10.gif') no-repeat;}
+.photo_paging .num a:hover.n01	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s01_on.gif') no-repeat;}
+.photo_paging .num a:hover.n02	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s02_on.gif') no-repeat;}
+.photo_paging .num a:hover.n03	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s03_on.gif') no-repeat;}
+.photo_paging .num a:hover.n04	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s04_on.gif') no-repeat;}
+.photo_paging .num a:hover.n05	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s05_on.gif') no-repeat;}
+.photo_paging .num a:hover.n06	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s06_on.gif') no-repeat;}
+.photo_paging .num a:hover.n07	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s07_on.gif') no-repeat;}
+.photo_paging .num a:hover.n08	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s08_on.gif') no-repeat;}
+.photo_paging .num a:hover.n09	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s09_on.gif') no-repeat;}
+.photo_paging .num a:hover.n10	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s10_on.gif') no-repeat;}
+.photo_paging .num a.n01_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s01_on.gif') no-repeat;}
+.photo_paging .num a.n02_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s02_on.gif') no-repeat;}
+.photo_paging .num a.n03_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s03_on.gif') no-repeat;}
+.photo_paging .num a.n04_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s04_on.gif') no-repeat;}
+.photo_paging .num a.n05_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s05_on.gif') no-repeat;}
+.photo_paging .num a.n06_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s06_on.gif') no-repeat;}
+.photo_paging .num a.n07_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s07_on.gif') no-repeat;}
+.photo_paging .num a.n08_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s08_on.gif') no-repeat;}
+.photo_paging .num a.n09_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s09_on.gif') no-repeat;}
+.photo_paging .num a.n10_on	{background:url('http://www.hoppin.nate.com/resource/images/common/num_s10_on.gif') no-repeat;}
+/* //100721 추가수정 */
+
+.news_list		{float:left; width:220px; margin:25px 50px 0 0;}
+.list_dot		{margin-top:18px;}
+.list_dot li	{padding:0 0 12px 8px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_dot.gif') 0 7px no-repeat; font-size:12px;letter-spacing:-1px;}
+.list_dot li a		{color:#4c4c4c;}
+.list_dot li a:hover{color:#7052cc;}
+
+
+.list10 li			{padding:6px 5px 6px 0;overflow:hidden;font-size:11px;letter-spacing:-1px;}
+.list10 li a		{float:left; color:#4d4d4d; padding-left:10px; font-size:11px; background:url('http://www.hoppin.nate.com/resource/images/contents/blt_dotgray01.gif') 0 3px no-repeat;} /* 101116 background 추가/padding수정 */
+.list10 li a:hover	{color:#7052cc;}
+.list10 li span{display:inline-block;float:right;font-size:11px;color:#999999;padding-left:13px;width:22px;}
+.list10 li span.ico_up{background:url('http://www.hoppin.nate.com/resource/images/contents/ico_up.gif') 0 0 no-repeat;}
+.list10 li span.ico_down{background:url('http://www.hoppin.nate.com/resource/images/contents/ico_down.gif') 0 0 no-repeat;}
+.list10 li span.ico_none{background:url('http://www.hoppin.nate.com/resource/images/contents/ico_none.gif') 0 4px no-repeat;}
+.list10 li a.no01{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no01.gif') 0 50% no-repeat;}
+.list10 li a.no01:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no01on.gif');}
+.list10 li a.no02{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no02.gif') 0 50% no-repeat;}
+.list10 li a.no02:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no02on.gif');}
+.list10 li a.no03{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no03.gif') 0 50% no-repeat;}
+.list10 li a.no03:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no03on.gif');}
+.list10 li a.no04{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no04.gif') 0 50% no-repeat;}
+.list10 li a.no04:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no04on.gif');}
+.list10 li a.no05{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no05.gif') 0 50% no-repeat;}
+.list10 li a.no05:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no05on.gif');}
+.list10 li a.no06{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no06.gif') 0 50% no-repeat;}
+.list10 li a.no06:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no06on.gif');}
+.list10 li a.no07{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no07.gif') 0 50% no-repeat;}
+.list10 li a.no07:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no07on.gif');}
+.list10 li a.no08{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no08.gif') 0 50% no-repeat;}
+.list10 li a.no08:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no08on.gif');}
+.list10 li a.no09{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no09.gif') 0 50% no-repeat;}
+.list10 li a.no09:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no09on.gif');}
+.list10 li a.no10{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no10.gif') 0 50% no-repeat;}
+.list10 li a.no10:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no10on.gif');}
+
+
+.list10_m	{padding-top:2px;}
+.list10_m li{padding:6px 5px 6px 0; *padding:4px 5px 6px 0; overflow:hidden;font-size:12px;letter-spacing:-1px;}
+.list10_m li a		{float:left; color:#4d4d4d; padding-left:25px; font-size:12px;}
+.list10_m li a:hover	{color:#7052cc;}
+.list10_m li span{display:inline-block;float:right;font-size:11px;color:#999999;padding-left:13px;width:22px;}
+.list10_m li span.ico_up{background:url('http://www.hoppin.nate.com/resource/images/contents/ico_up.gif') 0 0 no-repeat;}
+.list10_m li span.ico_down{background:url('http://www.hoppin.nate.com/resource/images/contents/ico_down.gif') 0 0 no-repeat;}
+.list10_m li span.ico_none{background:url('http://www.hoppin.nate.com/resource/images/contents/ico_none.gif') 0 4px no-repeat;}
+.list10_m li a.no01{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no01.gif') 0 50% no-repeat;}
+.list10_m li a.no01:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no01on.gif');}
+.list10_m li a.no02{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no02.gif') 0 50% no-repeat;}
+.list10_m li a.no02:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no02on.gif');}
+.list10_m li a.no03{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no03.gif') 0 50% no-repeat;}
+.list10_m li a.no03:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no03on.gif');}
+.list10_m li a.no04{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no04.gif') 0 50% no-repeat;}
+.list10_m li a.no04:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no04on.gif');}
+.list10_m li a.no05{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no05.gif') 0 50% no-repeat;}
+.list10_m li a.no05:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no05on.gif');}
+.list10_m li a.no06{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no06.gif') 0 50% no-repeat;}
+.list10_m li a.no06:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no06on.gif');}
+.list10_m li a.no07{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no07.gif') 0 50% no-repeat;}
+.list10_m li a.no07:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no07on.gif');}
+.list10_m li a.no08{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no08.gif') 0 50% no-repeat;}
+.list10_m li a.no08:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no08on.gif');}
+.list10_m li a.no09{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no09.gif') 0 50% no-repeat;}
+.list10_m li a.no09:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no09on.gif');}
+.list10_m li a.no10{background:url('http://www.hoppin.nate.com/resource/images/contents/blt_no10.gif') 0 50% no-repeat;}
+.list10_m li a.no10:hover{background-image:url('http://www.hoppin.nate.com/resource/images/contents/blt_no10on.gif');}
+
+
+
+.tab_news		{position:relative; height:44px; border-top:2px solid #999999; border-bottom:1px solid #e6e6e6; z-index:5;}
+.tab_news ul	{position:absolute; top:18px; left:0;}
+.tab_news li	{float:left; padding:0 8px; background:url('http://www.hoppin.nate.com/resource/images/common/bull_li_bar01.gif') no-repeat right;}
+.tab_news li.last{background:none;}
+.tab_news li a:hover	{color:#7052cc !important;}
+.tab_news li.on a	{color:#333333 !important;}
+.tab_news span{display:inline-block;margin-top:18px;letter-spacing:0px;}
+.tab_news .next	{display:block; position:absolute; top:0; right:0; width:36px; height:48px;background:url('http://www.hoppin.nate.com/resource/images/contents/btn_tab_newsnext.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+.tab_news .btn_more	{float:right; margin:2px 20px 0 0;} /* 100728 추가 */
+
+
+
+
+
+/* 새탭 팝업 */
+.tab_name_tb	{padding:15px 0; margin-top:10px; border-top:1px solid #f3f3f3; border-bottom:1px solid #f3f3f3;}
+
+
+
+/* 임시결제비밀번호 팝업 */
+.upper_dot_tb	{border-top:1px dotted #f2f2f2; margin:12px 0 5px 0;}
+.upper_dot_tb th, .upper_dot_tb td	{height:30px;}
+
+
+
+
+/*news list*/
+.n_checkDate		{text-align:center; font-size:16px; color:#333333; margin:12px 0 28px 0;}
+.n_checkDate img	{vertical-align:basis; margin:0 10px; font-size:0; line-height:0;}
+.new_simple_list	{width:690px; overflow:hidden; margin-top:30px; padding-bottom:-10px;}
+.new_simple_list li	{float:left; margin:0 10px 15px 0px; width:160px;} /* 100811 좌우margin값 수정 */
+.new_simple_list li .thumb_layered_b,
+.new_detail_list li .thumb_layered_b			{position:relative;}
+.new_simple_list li .thumb_layered_b p.ranking,
+.new_detail_list li .thumb_layered_b p.ranking	{position:absolute; top:0px; left:0px;}
+.new_simple_list li .ranking_change				{width:160px; height:19px; text-align:center; margin:5px 0;} /* 110112 height 추가 */
+.new_simple_list li .ranking_change img			{vertical-align:middle; margin-right:1px;}
+.new_simple_list li .ranking_change span		{vertical-align:middle; font-size:11px; color:#999999;}
+.new_simple_list li .ranking_change span img	{position:relative; vertical-align:middle; margin:0 5px; top:-1px} /* 100811 position,top 추가 */
+
+.new_detail_list ul{width:760px;}
+.new_detail_list li{border-bottom:1px solid #e6e6e6;overflow:hidden;*float:left;}
+.new_detail_list li .ranking_change{float:left;width:60px;padding-top:90px;text-align:center;font-size:11px;color:#999999;}
+.new_detail_list li .ranking_change img{vertical-align:top;margin-right:1px;}
+.new_detail_list li .conts{float:left;padding:30px 0 18px 0;}
+.new_detail_list li .conts dl{width:365px;float:left;margin-left:15px;}
+.new_detail_list li .conts dt{margin-bottom:10px; font-size:15px; font-weight:bold;}
+.new_detail_list li .conts dd.info	{margin-bottom:15px;}
+.new_detail_list li .conts dd.info .source	{background:url('http://www.hoppin.nate.com/resource/images/contents/bar_grayline01.gif') 100% 50% no-repeat;display:inline-block;padding-right:5px;}
+.new_detail_list li .conts dd.info .source a	{font-size:11px;} /* 100809 추가 */
+.new_detail_list li .conts dd.info .time{font-size:11px;color:#737373; margin:0 5px 0 0;vertical-align:middle;} /* 100809 vertical-align 추가 */
+.new_detail_list li .conts dd.info a{color:#737373;}
+.new_detail_list li .conts dd.info a:hover{color:#7052cc;}
+.new_detail_list li .conts dd a{line-height:18px;font-size:12px;color:#808080;letter-spacing:-1px;line-height:18px;}
+.new_detail_list li .conts dd a:hover{color:#7052cc;}
+.new_detail_list li .conts dd p{font-size:14px;color:#4c4c4c;margin-bottom:8px;}
+.new_detail_list li .hit{float:right;width:100px;height:170px;background:#f5f5f5;padding:40px 0 0 20px;font-size:10px;font-weight:bold;font-size:10px;color:#808080;}
+.new_detail_list li .hit  p{margin-bottom:10px;}
+.new_detail_list li .hit img{vertical-align:middle;}
+
+
+
+
+
+/*news detail*/
+.news_detail_top		{width:760px;padding:25px 0 25px 0; border-bottom:2px solid #333333;} /* 101105 overflow:hidden; zoom:1 삭제 */
+.news_detail_top .left	{float:left;}
+/* 101019 추가 */
+.news_detail_top .left .fl_txt		{width:500px; margin-top:-5px;}
+.news_detail_top .left .fl_txt span	{ line-height:28px !important;}
+/* 101019 추가 end */
+.news_detail_top .right		{float:right; width:227px; border-left:1px solid #f3f3f3; padding:0 0 0 23px; font-size:11px; color:#808080;}
+.news_detail_top .right p	{margin-bottom:5px;}
+.news_detail_top .right img	{vertical-align:top;margin-right:6px;}
+
+.news_detail_conts			{width:760px;} /* 100730 overflow:hidden;zoom:1; 삭제 */
+.news_detail_conts .left	{float:left; width:520px;} /* 100917 relative,z-index 추가, 110126 relative,z-index 삭제 */
+.news_detail_conts .left .video_photo	{padding-bottom:25px;border-bottom:2px solid #333333;overflow:hidden;zoom:1;}
+.news_detail_conts .left .video_photo .list_preview	{overflow:hidden;zoom:1;}
+/*.news_detail_conts .left .cont	{width:500px;font-size:12px;color:#797878;line-height:22px;padding-top:25px;position:relative;}*/
+.news_detail_conts .left .cont		{position:relative; width:500px; font-size:13px; color:#4d4d4d; line-height:23px; padding-top:25px; letter-spacing:0; z-index:15;} /* 110126 z-index추가(좌측이 우측보다 올라오게) */
+.news_detail_conts .left .cont p,
+.news_detail_conts .left .cont span
+.news_detail_conts .left .cont div	{line-height:23px;} /* 101112 추가 */
+.news_detail_conts .left .cont_re	{position:relative; width:500px; font-size:13px; color:#4d4d4d; line-height:23px; padding-top:25px; letter-spacing:0;}
+.news_detail_conts .left .cont_re p,
+.news_detail_conts .left .cont_re span
+.news_detail_conts .left .cont_re div	{line-height:23px;} /* 101112 추가 */
+.news_detail_conts .left .news_search	{width:98px;height:40px; padding:22px 0 0 14px;background:url('http://www.hoppin.nate.com/resource/images/contents/bg_news_contmenu.gif') left top no-repeat;position:absolute;}
+.news_detail_conts .left .news_search_s	{width:89px;height:42px; padding:22px 0 0 14px;background:url('http://www.hoppin.nate.com/resource/images/contents/bg_news_contmenu_s.gif') left top no-repeat;position:absolute;} /* 110408 추가 */
+
+.news_detail_conts .right				{float:right; width:220px; padding-top:25px;}
+.news_detail_conts .right .top_conts	{position:relative; margin-bottom:20px; background:#fafafa; z-index:15;} /* 101209 뉴스동영상 때문에 z-index와 position 추가 */
+.news_detail_conts .right .right_conts	{position:relative; padding-left:18px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_detailnews_right.gif') left top repeat-y; z-index:14;} /* 101209 뉴스동영상 때문에 z-index와 position 추가 */
+.news_detail_conts .right .right_conts .tab_news	{border:none; height:27px;}
+.news_detail_conts .right .right_conts .tab_news ul	{top:0px;}
+.news_detail_conts .right .right_conts .list10_m	{margin-bottom:17px;font-size:11px;}
+.news_detail_conts .right .right_conts .list10_m li	{padding:5px 5px 5px 0;overflow:hidden;}
+.news_detail_conts .right .right_conts .topic_flash	{margin:0 0 0px -18px;} /* 100803 margin-bottom:10px 삭제 */
+
+h4.news_rtit{overflow:hidden; zoom:1; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; padding:14px 10px 10px 10px; margin:-1px 0 8px 0;}
+h4.news_rtit img{float:left;}
+h4.news_rtit .btn_more{float:right; margin:3px 10px 0 0;}
+h4.news_rtit .help{margin-left:4px;vertical-align:middle;}
+.btn_prevnext {color:#bfbfbf;font-size:10px;width:120px;text-align:center;margin-bottom:20px;}
+
+
+.news_dotList01 li		{padding:0px 0 3px 0px; background:url('http://www.hoppin.nate.com/resource/images/contents/blt_dotgray01.gif') 0 50% no-repeat;}
+.news_dotList01 a		{padding-left:8px; font-size:11px; line-height:18px; color:#4d4d4d;}
+.news_dotList01 a:hover	{color:#7052cc}
+
+.tab_newtab		{width:760px; height:35px; }
+.tab_newtab li	{float:left; }
+.new_tab {background:#f2f2f2;border-bottom:2px solid #999999;padding:15px 0 ;text-align:center;}
+.new_tab  input.txt{font-size:12px !important;}
+
+.interest_num{position:relative;zoom:1;height:70px;margin-bottom:15px;}
+.interest_num .cont{width:67px;height:31px;background:url('http://www.hoppin.nate.com/resource/images/contents/news_r_cont.gif') left top no-repeat;float:left;padding-top:35px;text-align:center;font-size:20px;font-weight:bold;color:#666666;}
+.interest_num .bar{vertical-align:top;padding:25px 0px 0 10px;float:left;}
+.interest_num .sympathyb	{top:0px; left:93px;}
+.interest_num .sympathyb_on	{top:0px; left:93px;}
+.interest_num .m_over {position: absolute; top: 0px; left: 0px; z-index: 99;}
+
+.tit_rbtn{position:relative;width:560px;}
+.tit_rbtn .btn_print{position:absolute;top:33px;right:5px;}
+.print_photo .photo_info{background:#fafafa;padding:18px 0 54px 0;}
+.print_photo .video_photo .img_b{padding:20px 0;margin-bottom:15px;text-align:center;}
+.print_photo .list_preview .prev{margin:0 13px 0 0;}
+.print_photo .list_preview .next{margin:0 0 0 3px;}
+
+.news_map		{position:relative; border:1px solid #e5e5e5; background:#f3f3f3; padding:10px; overflow:hidden; zoom:1;}
+.news_map .map	{position:relative; margin:8px 0;}
+.news_map .map a	{position:absolute; right:10px; top:86px;}
+.lay_global_map		{position:absolute; top:100px; left:230px;}
+.lay_global_map .bg	{position:absolute; top:0; left:0; z-index:90;}
+.lay_global_map .img	{position:absolute; top:1px; left:1px; z-index:100; font-size:0; line-height:0;}
+
+.news_top{width:658px;height:220px;background:url('http://www.hoppin.nate.com/resource/images/contents/bg_newstop.jpg') left top no-repeat;margin-bottom:20px;padding:0 62px 0 40px;}
+.news_top .txt_more{overflow:hidden;zoom:1;}
+.news_top .txt_more img{vertical-align:middle;}
+.news_top .tit{text-align:center;padding-top:59px;height:38px;}
+.news_top .tit .t_14b_70{text-decoration:none;} /* 101124 수정 */
+.news_top .notice_news			{overflow:hidden; zoom:1; padding:35px 0 0 5px; *padding:22px 0 0 5px;}
+.news_top .notice_news a		{color:#333333; letter-spacing:0px;}
+.news_top .notice_news a:hover	{color:#7052cc !important; text-decoration:underline !important;}
+.news_top .notice_news .txt		{float:left; font-size:24px; font-family:나눔명조, 바탕체; color:#333333; letter-spacing:0px; height:30px; vertical-align:middle;} /* 101111 수정 */
+.news_top .notice_news .txt01	{float:left; font-size:24px; font-family:바탕체; color:#333333; letter-spacing: 0px; font-weight:bold; vertical-align:middle;}
+.news_top .notice_news .txt02	{float:left; font-size:24px; font-family:맑은고딕,Arial,Malgun Gothic; *font-family:맑은고딕,Malgun Gothic; color:#333333; letter-spacing: 0px; font-weight:bold;} /* 110112 vertical-align 삭제/IE7 전용 arial폰트 삭제 */
+.news_top .notice_news .txt03	{float:left; font-size:24px; font-family:맑은고딕, Malgun Gothic; color:#333333; letter-spacing: 0px;}
+.news_top .notice_news .txts	{float:left; padding-top:3px; font-size:24px; font-family:바탕체; color:#333333; letter-spacing:0px; line-height:30px;}
+.news_top .notice_news .fl_right	{padding-top:3px;}
+
+.news_recommend .tit{text-align:center;padding:20px 0 15px 0;border-bottom:1px solid #e6e6e6;}
+.news_recommend ul{margin:25px 0px 25px 20px;}
+.news_recommend ul li{float:left;width:175px;background:url('http://www.hoppin.nate.com/resource/images/contents/blt_dotgray01.gif') 0 5px no-repeat;padding:0 0 17px 8px;}
+.news_recommend ul li a{color:#808080;font-size:12px;letter-spacing:-1px; font-family:맑은고딕, Malgun Gothic, 돋움, Dotum;}
+.news_recommend ul li a:hover{font-weight:bold;color:#4c4c4c;}
+/*************tommi*********************/
+
+
+
+
+
+
+
+/* 이벤트 팝업 */
+
+.apply_result		{}
+.apply_result dt	{padding:3px 0 0 37px; background:url('http://www.hoppin.nate.com/resource/images/popup/bg_dt_question.gif') no-repeat left; line-height:100%;}
+.apply_result dd	{margin-top:13px; border-top:1px solid #f3f3f3; border-bottom:1px solid #f3f3f3;}
+.apply_result dd ul	{padding:17px 0 5px 0;}
+.apply_result dd li	{float:left; padding:0 0 15px 10px; background:url('http://www.hoppin.nate.com/resource/images/common/blt_graydot01.gif') no-repeat 0 8px; line-height:100%;}
+.apply_result dd li .ex			{display:block; float:left; width:83px; padding-top:3px;}
+.apply_result dd li .ex_graph	{position:relative; float:left; width:205px; height:17px; border:1px solid #cccccc;}
+.apply_result dd li .ex_graph .t_12b_99	{position:absolute; top:0; right:13px; *right:11px;}
+.apply_result dd li .ex_graph .amount	{height:17px; border-right:1px solid #cccccc; background:url('http://www.hoppin.nate.com/resource/images/popup/bg_ex_graph.gif') repeat-x;}
+
+.event_info li	{float:left; padding:0 0 8px 10px; *padding:0 0 5px 10px; background:url('http://www.hoppin.nate.com/resource/images/common/blt_graydot01.gif') no-repeat 0 5px; line-height:100%;}
+.event_info li dt	{float:left; width:73px; height:16px; padding-top:2px; font-size:0; line-height:0;}
+.event_info li dd	{float:left; width:217px; height:15px; line-height:100%;}
+
+.detail_event_info		{padding:20px 0; margin-top:10px; border-top:1px solid #f3f3f3; border-bottom:1px solid #f3f3f3; text-align:center;}
+.detail_event_info p	{padding-bottom:10px;}
+
+.detail_coupon_info		{padding-bottom:20px; border-bottom:1px solid #f3f3f3; text-align:center;}
+.detail_coupon_info p	{padding-bottom:10px;}
+
+.detail_coupon_down	{padding-left:30px}
+
+
+
+
+
+
+/* news popup */
+
+.box_txt01 {border-top: 1px dotted #f2f2f2; padding: 20px 0;}
+.box_txt02 {margin: 0 auto; border-bottom: 2px solid #e6e6e6; padding: 0 0 20px 0;}
+.box_txt03 {border: 1px dotted #e0e0e0; padding: 15px; line-height: 16px;}
+
+dl.p_mvinfo {border-bottom: 2px solid #e6e6e6; padding: 0 0 20px 0;}
+dl.p_mvinfo dt	{padding-bottom:15px}
+dl.p_mvinfo dd {line-height: 12px; margin: 0 0 5px 0;}
+dl.p_mvinfo dl.review_fr {padding: 15px 0 0 0; margin: 15px 0 0 135px; background:url("/resource/images/global/bg_mid_dotline01.gif") repeat-x scroll left top transparent;}
+dl.p_mvinfo dl.review_fr dt {float: left; padding: 2px 0 20px 0; margin: 0 10px 0 0;}
+dl.p_mvinfo dl.review_fr dd {float: left; width: 250px; padding: 2px 0 0 0;}
+dl.p_mvinfo dd.vod_opt_p	{float:right; width:312px; _width:310px; margin-top:10px;}
+dl.p_mvinfo dd.itxt	{padding-top:5px; line-height:150%;} /* 101103 추가 */
+dl.p_mvinfo .thumb_movie_s,
+dl.p_mvinfo .thumb_layered_s,
+dl.p_mvinfo .thumb_ucc_s,
+dl.p_mvinfo .m_thumb_news_txt_s {cursor:default;}
+
+.popup .tab_menu05 {width: 100% !important;}
+.popup .tab_menu05 ul {width: 100% !important;}
+.popup .tab_menu05 li {width: 49%;}
+.popup .tab_menu05 li.on	{background:#ffffff;} /* 101103 추가 */
+
+.sns_preview {position: relative; width: 100%;}
+.sns_preview ul.nav li {font-weight: bold; color: #666; margin: 0 3px 0 0; display: inline;}
+.sns_preview ul.title li {background:url("/resource/images/common/bull_li_bar01.gif") no-repeat scroll right center transparent; color: #333; margin: 0 5px 0 0; padding: 2px 5px 0 0; float: left;}
+.sns_preview .info {border: 1px solid #e0e0e0; padding: 9px; border-bottom: none;}
+.sns_preview .info .thumb {float: left; margin: 0 10px 0 0;}
+
+.sns_preview dl {width: 210px; float: left;}
+.sns_preview .ico_srv {position: absolute; right: 0; top: 0;}
+.sns_preview dt {padding: 2px 0 0 0;}
+.sns_preview dd {line-height: 14px;}
+.sns_preview p.link {border: 1px solid #e0e0e0; border-top: 1px solid #f2f2f2; padding: 10px 0 10px 8px; text-decoration: underline;}
+.sns_preview p.jlink {text-decoration: none;}
+.sns_preview .btn_wrap {position: absolute; right: 0; bottom: -2px;}
+
+.h2_popup {border-bottom:1px solid #F3F3F3; padding-bottom:15px;}
+
+.btn_txt {background: url(http://www.hoppin.nate.com/resource/images/common/btn_txtbtn_l.gif) left top no-repeat; height: 20px; float: left;}
+.btn_txt a {background: url(http://www.hoppin.nate.com/resource/images/common/btn_txtbtn_r.gif) right top no-repeat; height: 17px; float: left; margin: 0 0 0 10px; padding: 3px 10px 0 0;}
+
+.login_area_19 {width: 230px; margin: 0 0 0 80px; height: 110px;}
+.login_area_19 .links {position: absolute; top: 65px; left: 0;}
+.ico_19 {background: url('http://www.hoppin.nate.com/resource/images/popup/ico_19.gif') left top no-repeat; padding: 0 0 0 80px; height: 56px;}
+.ico2_19 {background: url('http://www.hoppin.nate.com/resource/images/popup/ico_19.gif') 5px top no-repeat; padding: 0 0 0 80px;}
+
+.popup_banner {width:400px; border-bottom: 2px solid #e6e6e6; padding: 0 0 15px 0; text-align: center;}
+
+.sel_btn {position: relative;}
+.sel_btn .btn_b_download {position: absolute; right: 0; _right:48px; top: 0;}
+
+.list_input li {margin: 0 0 5px 0;}
+
+.popup_review {padding: 25px 0 0 0; border-bottom: 1px solid #e6e6e6;}
+.popup_review h3 {font-size: 16px; color: #333;}
+.popup_review .pre_conts	{padding:20px 0;} /* 101210 추가 */
+.popup_review img	{padding:10px 0;}/* 101210 추가 */
+.popup_review p {font-size: 11px; color: #666; line-height: 16px;} /* 101210 수정 */
+
+
+.info_person .thumb {margin: 0 20px 0 0; float: left;}
+.info_person .thumb img {border: 1px solid #e6e6e6; padding: 9px;}
+.info_person dl	{padding-top:10px;}
+.info_person dl.other dt {width: 40px; display: inline-block;}
+.info_person dl.other dd {display: inline; font-size: 11px; color: #808080;}
+
+
+.poplist_dline	{border-top: 2px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; padding: 15px 0 15px 4px;}
+.active_list	{padding:20px 0 15px 0;}
+.up_dot			{border-top:1px dotted #f2f2f2;}
+.active_list dt	{height:27px;}
+.active_list dd	{padding-bottom:5px;}
+
+
+ul.pop_list_thumb {padding: 0 0 30px 20px; background:url("/resource/images/global/bg_mid_dotline01.gif") repeat-x left bottom;}
+ul.pop_list_thumb li {float: left; padding: 0 5px;}
+ul.pop_list_thumb li.arrow {padding: 40px 0 0 0;}
+
+dl.pop_list_pinfo {background:url("/resource/images/global/bg_mid_dotline01.gif") repeat-x left bottom; padding: 10px 0 30px 0;}
+dl.pop_list_pinfo dt {background:url("/resource/images/common/blt_graydot01.gif") no-repeat 0 4px; padding: 0 0 0 7px; font-size: 12px; color: #4c4c4c; margin: 0 0 15px 0;}
+dl.pop_list_pinfo dd {font-size: 11px; color: #4c4c4c; margin: 0 0 5px 0;}
+dl.pop_list_pinfo dd p {line-height: 16px; font-size: 11px; color: #666;}
+
+
+#popup_photo {width: 800px; height: 600px; background: #000; position: relative;}
+#popup_photo .list_preview {position: absolute; left: 0; bottom: 0; height: 120px; width: 100%; background: #000; padding: 10px 0 0 0;}
+#popup_photo .list_preview p.title {color: #fff; font-size: 14px; font-weight: bold; position: absolute; top: 15px; left: 5px;}
+#popup_photo .list_preview .hd_box	{width:780px; height:111px; margin-left:9px; overflow-x:auto; overflow-y:hidden;}
+#popup_photo .list_preview ul {float: left; padding: 35px 0 0 0;}
+#popup_photo .list_preview li {float: left; margin: 0 3px 0 0;}
+#popup_photo .list_preview dl {position: absolute; top: 15px; right: 5px;}
+#popup_photo .list_preview dt {float: left; color: #fff; margin: 0 20px 0 0;}
+#popup_photo .list_preview dd {font-size: 11px; color: #fff; display: inline; padding: 0 3px;}
+#popup_photo .list_preview dd a {font-size: 11px; color: #fff;}
+
+
+
+
+/* 콘텐츠 구매 관련 팝업 */
+.useconts_info			{padding:12px 0; border:1px solid #e6e6e6; border-top:2px solid #4d4d4d; background:#f0f0f0;}
+.useconts_info dl		{float:left;}
+.useconts_info dt		{float:left; width:107px; border-right:1px solid #e6e6e6; text-align:center;}
+.useconts_info dt span	{line-height:120%;}
+.useconts_info dd		{float:left; padding-left:20px;}
+/* 110526 추가 */
+.useconts_info .help_info dt	{display:none;}
+.useconts_info .help_info dd	{width:300px; padding:5px 0 0 0 !important;} /* 110530 width 추가 */
+.useconts_info .help_info dd ul	{margin:5px 0 0 0 !important;}
+.useconts_info .help_info dd li	{width:200px; height:120% !important; padding:0 0 0 7px !important; background:url('http://www.hoppin.nate.com/resource/images/common/bull_dot_gray.gif') no-repeat left 4px;} /* 110530 width 추가 */
+/* //110526 추가 */
+
+
+
+/* event 0714 */
+
+ul.list_event {overflow: hidden; width: 780px;}
+ul.list_event li {float: left; margin: 0 20px 40px 0; height:195px;} /* 100917 height 추가 */
+ul.list_event .wrap_txt {width: 220px; padding: 0 0 0 10px;}
+ul.list_event .thumb {border: 1px solid #f2f2f2; background: #fff; padding: 9px;}
+ul.list_event .banner {position: relative;}
+ul.list_event .dday {position: absolute; top: 65px; left: 10px;}
+ul.list_event p.title {padding: 10px 10px 10px 0; border-bottom: 1px solid #f3f3f3;} /* 100811 padding 수정 */
+ul.list_event dl {clear: both;}
+ul.list_event dt {float: left; width: 30px; background: url(http://www.hoppin.nate.com/resource/images/common/ico_list_sgray.gif) left center no-repeat; padding: 0 0 0 8px;}
+
+
+.ev_topinfo {padding: 0 0 20px 20px; border-bottom: 2px solid #ccc;}
+.ev_topinfo .status {float: left; width: 450px;}
+.ev_topinfo .title {padding: 15px 0 0 60px;}
+.ev_detail	{border-left: 1px solid #f3f3f3; width: 232px; height: 50px; padding: 3px 0 0 20px; float: right;}
+.ev_detail dl	{clear: both;}
+.ev_detail dt	{float: left; width: 30px; background: url('http://www.hoppin.nate.com/resource/images/common/ico_list_sgray.gif') left 6px no-repeat; padding: 2px 0 0 8px;} /* 100811 backgounrd,padding 수정 */
+.ev_detail dd	{letter-spacing:0;line-height:160%;} /* 100811 line-height 추가 */
+
+.event_detail {background: #fff; padding: 0 0 30px 0; border-bottom: 2px solid #ccc; position: relative;}
+.event_detail .event_q {background: #fafafa url('http://www.hoppin.nate.com/resource/images/contents/ico_q.gif') 15px center no-repeat; padding: 15px 0 10px 65px; border: 1px solid #f2f2f2; width: 635px; margin: 0 auto;}
+.event_detail .select_a li {display: inline; margin: 0 40px 0 0; color: #808080; font-size: 10px;}
+.event_detail .icon {position: absolute; top: 19px; left: 29px;}
+
+.event_comment {position:relative; background: #f2f2f2; border: 1px solid #e6e6e6; width: 690px; padding: 14px 0 10px 10px; position: relative; margin: 0 auto;}
+.event_comment textarea {border-top: 1px solid #d3d3d3; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; height: 48px; width: 604px; float: left; margin: 0 5px 0 0;}
+.event_comment .text_limit {position: absolute; top: 25px; left: 590px; color: #bfbfbf; font-size: 10px;}
+.event_comment .t_11_a6	{position:absolute; top:48px; left:17px;}
+
+.input_cp {border: 1px solid #e6e6e6; background:#f2f2f2;}
+.input_cp .wrap {float: left; padding: 14px 0 0 20px;}
+.input_cp input {border-top: 1px solid #d3d3d3; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; height: 18px; width: 471px; margin: 0 10px 0 0;}
+.input_cp .info	{float: left; padding:6px 0 0 20px;} /* 101011 추가 */
+
+.coupon_list_top	{height:32px; border-bottom:2px solid #999999;}
+.coupon_list_top h4		{float:left;}
+.coupon_list_top .sort	{float:right; padding-top:11px;}
+.coupon_list_top .sort input	{margin-left:20px;}
+
+.coupon_list	{float:left; padding:15px 0;}
+.coupon_list li	{float:left; padding:5px 5px 1px 0;} /* 101203 padding 수정 */
+.coupon_list li.end	{padding-right:0;}
+
+ul.list_coupon li {position: relative; background: url(http://www.hoppin.nate.com/resource/images/contents/bg_coupon.gif) left top no-repeat; width: 166px; height: 187px; padding: 58px 0 0 19px; float: left; margin: 0 5px 15px 0;}
+ul.list_coupon .price {margin: 0 0 27px 0;}
+ul.list_coupon .download {position: absolute; top: 210px; left: 20px;}
+ul.list_coupon dl {margin: 0 0 3px 0;}
+
+ul.list_thumb_detail .thumb_so {float: left; margin: 0 20px 0 0;}
+ul.list_thumb_detail p.text_so {height: 60px; padding: 0 20px 0 0;}
+
+.top_bdr {border-top: 1px solid #e6e6e6;}
+
+.so_info {border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; background: #f5f5f5; padding: 10px 0 10px 20px;}
+.so_info ul {float: left; margin: 0 0 0 40px;}
+.so_info li {font-size: 11px; color: #999; text-decoration: underline; margin: 0 0 2px 0;}
+
+ul.list_soffer li {background: url(http://www.hoppin.nate.com/resource/images/contents/bg_soffer.gif) left top no-repeat; width: 760px; height: 219px; padding: 20px 0 0 0; position: relative; margin: 0 0 20px 0;}
+ul.list_soffer dl {clear: both; padding: 0 30px 0 20px;}
+ul.list_soffer dt {float: left; width: 30px; background: url(http://www.hoppin.nate.com/resource/images/common/ico_list_sgray.gif) left center no-repeat; padding: 0 0 0 8px;}
+ul.list_soffer .info {width: 250px; float: left;}
+ul.list_soffer .title, ul.list_soffer .sale, ul.list_soffer .button {text-align: center;}
+ul.list_soffer .price {padding: 0 20px 0 0; text-align: right;}
+ul.list_soffer .button {width: 250px; position: absolute; top: 200px; left: 0;}
+ul.list_soffer ul.solist {float: left; width: 493px; padding: 0 0 0 17px;}
+ul.list_soffer ul.solist li {background: none; width: 150px; height: 150px; float: left; margin: 0 10px 0 0; padding: 0;}
+
+ul.list_soffer02 li {position: relative; margin: 0 0 10px 0;}
+ul.list_soffer02 .button {position: absolute; left: 610px; top: 120px;}
+
+
+/* 101214 롤링 배너 추가 */
+.event_topbanner	{margin-bottom:20px;}
+.event_topbanner .numset	{position:absolute; bottom:0; *bottom:5px; right:0; height:17px;}
+.event_topbanner .numset a	{display:block; float:left; width:18px; height:17px; font-size:0; line-height:0; text-indent:-1000; opacity:0.5;filter:alpha(opacity=50);}
+.event_topbanner .numset a.no01			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat 0 -170px;}
+.event_topbanner .numset a.no01_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat 0 0; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no01:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat 0 0; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no02			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -18px 0;}
+.event_topbanner .numset a.no02_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -18px -17px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no02:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -18px -17px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no03			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -36px 0;}
+.event_topbanner .numset a.no03_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -36px -34px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no03:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -36px -34px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no04			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -54px 0;}
+.event_topbanner .numset a.no04_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -54px -51px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no04:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -54px -51px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no05			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -72px 0;}
+.event_topbanner .numset a.no05_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -72px -68px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no05:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -72px -68px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no06			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -90px 0;}
+.event_topbanner .numset a.no06_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -90px -85px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no06:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -90px -85px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no07			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -108px 0;}
+.event_topbanner .numset a.no07_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -108px -102px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no07:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -108px -102px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no08			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -126px 0;}
+.event_topbanner .numset a.no08_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -126px -119px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no08:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -126px -119px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no09			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -144px 0;}
+.event_topbanner .numset a.no09_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -144px -136px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no09:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -144px -136px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no10			{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -162px 0;}
+.event_topbanner .numset a.no10_on		{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -162px -153px; opacity:1.0;filter:alpha(opacity=100);}
+.event_topbanner .numset a.no10:hover	{background:url('http://www.hoppin.nate.com/resource/images/contents/btn_rolling_numset.gif') no-repeat -162px -153px; opacity:1.0;filter:alpha(opacity=100);}
+
+.event_rolling_banner		{position:relative; float:left; margin-right:10px; z-index:1;}
+.event_rolling_banner img	{font-size:0; line-height:0;}
+
+.spoffer_rolling_banner		{position:relative; float:left; z-index:1;}
+.spoffer_rolling_banner img	{font-size:0; line-height:0;}
+/* //101214 롤링 배너 추가 */
+
+/* //event 0714 */
+
+
+
+
+
+
+/* 감독다른작품 */
+.list_other_mv2 {background: url(http://www.hoppin.nate.com/resource/images/contents/bg_pinfo_line.gif) left bottom no-repeat; height: 154px; padding: 10px 0 0 35px; z-index: 99;}
+.list_other_mv2 li {float: left; margin: 0 15px 0 0;}
+.list_other_mv2 p.txt {margin: 0 0 10px 0;}
+.list_other_mv2 p.txt img {vertical-align: middle;}
+.list_other_mv2 .arrow_sel {position: absolute; top: 0;}
+
+
+
+
+
+
+/* 도움말 풍선 */
+.help_info_l	{position:absolute; top:0; left:0; width:237px; padding-top:20px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_top_helpinfo.png') no-repeat top; }
+.help_info_l dl	{padding:0 0 35px 20px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_helpinfo.png') no-repeat bottom;}
+.help_info_l dt	{padding:0 0 5px 0 !important;}
+.help_info_l dd	{padding:5px 0 0 0 !important;}
+.help_info_l ul	{margin:5px 0 0 0 !important;}
+.help_info_l li	{height:120% !important; padding:0 0 0 7px !important; background:url('http://www.hoppin.nate.com/resource/images/common/bull_dot_gray.gif') no-repeat left 4px;}
+.help_info_l .close	{display:block; position:absolute; top:13px; right:15px; width:10px; height:9px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_l_close.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+
+/* 110525 추가 */
+.help_info_l_r	{position:absolute; top:0; left:0; width:237px; padding-top:20px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_top_helpinfo_r.png') no-repeat top; }
+.help_info_l_r dl	{padding:0 0 35px 20px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_helpinfo_br.png') no-repeat bottom;}
+.help_info_l_r dt	{padding:0 0 5px 0 !important;}
+.help_info_l_r dd	{padding:5px 0 0 0 !important;}
+.help_info_l_r ul	{margin:5px 0 0 0 !important;}
+.help_info_l_r li	{height:120% !important; padding:0 0 0 7px !important; background:url('http://www.hoppin.nate.com/resource/images/common/bull_dot_gray.gif') no-repeat left 4px;}
+.help_info_l_r .close	{display:block; position:absolute; top:13px; right:15px; width:10px; height:9px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_l_close.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+
+.help_info_l_t	{position:absolute; top:0; left:0; width:237px; padding-top:33px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_top_helpinfo_t.png') no-repeat top; }
+.help_info_l_t dl	{padding:0 0 24px 20px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_helpinfo_t.png') no-repeat bottom;}
+.help_info_l_t dt	{padding:0 0 5px 0 !important;}
+.help_info_l_t dd	{padding:5px 0 0 0 !important;}
+.help_info_l_t ul	{margin:5px 0 0 0 !important;}
+.help_info_l_t li	{height:120% !important; padding:0 0 0 7px !important; background:url('http://www.hoppin.nate.com/resource/images/common/bull_dot_gray.gif') no-repeat left 4px;}
+.help_info_l_t .close	{display:block; position:absolute; top:25px; right:15px; width:10px; height:9px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_l_close.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+/* //110525 추가 */
+
+/* 101228 수정 */
+.help_info_l2	{position:absolute; top:0; left:0; width:504px; padding:0 0 5px 0; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_helinfo02_bot.png') no-repeat bottom left;}
+.help_info_l2 .bgtop	{padding:33px 0 15px 0; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_helpinfo02.png') no-repeat top left;}
+/* //101228 수정 */
+.help_info_l2 dl	{padding:0 0 20px 20px; }
+.help_info_l2 dt	{float:left; font-size:0; line-height:0;}
+.help_info_l2 dd	{float:left; padding-top:15px; font-size:0; line-height:0;}
+.help_info_l2 .close	{display:block; position:absolute; top:18px; right:12px; width:14px; height:13px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_l_close.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+
+.tbl_help{width:100%;border-top:2px solid #d6d6d6;border-bottom:2px solid #e6e6e6;}
+.tbl_help thead th{height:32px;border-bottom:1px solid #e6e6e6;background:#f3f3f3;border-right:1px solid #e6e6e6;}
+.tbl_help thead th.last{border-right:none;}
+.tbl_help tbody th{border-bottom:1px solid #e6e6e6;padding:10px;text-align:left;}
+.tbl_help tbody td{border-left:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;padding:10px;}
+
+
+
+/** tommi **/
+
+h4.tit {height: 25px; position: relative;}
+h4.tit_brd {position: relative; border-bottom: 2px solid #999; height: 25px;}
+h4 .more {position: absolute; right: 0; top: 5px;}
+
+
+
+
+/* 공통사용 class */
+
+ul.review_info {margin: 0 0 10px 0;}
+ul.review_info li {color: #bababa; font-size: 11px; float: left; background: url('http://www.hoppin.nate.com/resource/images/contents/bg_reply_li.gif') right center no-repeat; padding: 0 8px 0 0; margin: 0 8px 0 0; *line-height: 14px; width: auto;}
+ul.review_info li a:hover {color: #7052cc !important;}
+ul.review_info li.id a {color: #5e5e5e; text-decoration: underline;}
+ul.review_info li.scrap a {color: #8c8c8c; background: url('http://www.hoppin.nate.com/resource/images/common/ico_scrap.gif') no-repeat; padding: 0 0 0 15px;}
+ul.review_info li.report a {color: #8c8c8c; background: url('http://www.hoppin.nate.com/resource/images/common/ico_report.gif') no-repeat; padding: 0 0 0 15px;}
+ul.review_info li.report {background: none;}
+ul.review_info li.nobg {background: none;}
+
+p.sympathyb {position: absolute; top: 10px; right: 0; background: url('http://www.hoppin.nate.com/resource/images/common/bg_sympathy.gif') no-repeat; width: 34px; height: 47px; padding: 19px 0 0 32px; font-weight: bold; cursor: pointer;}
+p.sympathyb_on {position: absolute; top: 10px; right: 0; background: url('http://www.hoppin.nate.com/resource/images/common/bg_sympathy_p.gif') no-repeat; width: 34px; height: 47px; padding: 19px 0 0 32px; color: #583ab6; font-weight: bold; cursor: pointer;}
+
+.detailWrap {width: 500px;}
+.bdr99 {border-top: 2px solid #999; margin-bottom:36px;} /* 100730 상세탭과 코멘트 margin간격 추가 */
+
+
+
+
+/* ranking list in right side */
+ul.list_rank01 {padding: 0 0 15px 0; border-bottom:1px solid #e6e6e6;} /* 100813 padding-top 삭제 */
+ul.list_rank01 li {margin: 0 0 10px 0; *margin: 0 0 9px 0; position: relative;} /* 100813 margin값 수정. 101224 margin-bottom 수정  */
+ul.list_rank01 li.n10	{margin:0 0 8px -3px;} /* 100813 추가 */
+ul.list_rank01 li a.t_12_4d {padding: 0 0 0 20px;}
+ul.list_rank01 li a.no1{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no01.gif') left no-repeat;}
+ul.list_rank01 li a.no2{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no02.gif') left no-repeat;}
+ul.list_rank01 li a.no3{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no03.gif') left no-repeat;}
+ul.list_rank01 li a.no4{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no04.gif') left no-repeat;}
+ul.list_rank01 li a.no5{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no05.gif') left no-repeat;}
+ul.list_rank01 li a.no6{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no06.gif') left no-repeat;}
+ul.list_rank01 li a.no7{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no07.gif') left no-repeat;}
+ul.list_rank01 li a.no8{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no08.gif') left no-repeat;}
+ul.list_rank01 li a.no9{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no09.gif') left no-repeat;}
+ul.list_rank01 li a.no10{padding-left:23px; background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no10.gif') left no-repeat;} /* 100813 padding 추가 */
+
+ul.list_rank01 li a.no1:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no01on.gif') left no-repeat;}
+ul.list_rank01 li a.no2:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no02on.gif') left no-repeat;}
+ul.list_rank01 li a.no3:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no03on.gif') left no-repeat;}
+ul.list_rank01 li a.no4:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no04on.gif') left no-repeat;}
+ul.list_rank01 li a.no5:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no05on.gif') left no-repeat;}
+ul.list_rank01 li a.no6:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no06on.gif') left no-repeat;}
+ul.list_rank01 li a.no7:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no07on.gif') left no-repeat;}
+ul.list_rank01 li a.no8:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no08on.gif') left no-repeat;}
+ul.list_rank01 li a.no9:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no09on.gif') left no-repeat;}
+ul.list_rank01 li a.no10:hover{background: url('http://www.hoppin.nate.com/resource/images/contents/blt_no10on.gif') left no-repeat;}
+ul.list_rank01 .comments {margin: 0 0 0 5px; color: #888; letter-spacing:0;} /* 100813 ls0 추가 */
+ul.list_rank01 .score {position: absolute; right: -47px; top: 0; width: 32px; height: 22px; background: url('http://www.hoppin.nate.com/resource/images/contents/bg_rateover.gif') left top no-repeat; font-weight: bold; font-size: 14px; color: #7052cc; padding: 15px 0 0 10px; }
+
+ul.list_rank01 .thumb_layered_b {position: relative; z-index:50;}
+ul.list_rank01 p.rank {position: absolute; top: -3px; left: -3px;}
+
+
+
+
+
+/* rating in right side */
+.rating_list_g {position: absolute; color: #7052cc; display: block; right: 0; top: 0;}
+.rating_list_g .star_bg {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_p.gif') 0 0 no-repeat;  width: 50px; height: 11px;}
+.rating_list_g .star_0 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 0px;}
+.rating_list_g .star_1 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 6px;}
+.rating_list_g .star_2 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 11px;}
+.rating_g .star_3 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 16px;}
+.rating_list_g .star_4 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 22px;}
+.rating_list_g .star_5 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 25px;}
+.rating_list_g .star_6 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 30px;}
+.rating_list_g .star_7 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 35px;}
+.rating_list_g .star_8 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 41px;}
+.rating_list_g .star_9 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 44px;}
+.rating_list_g .star_10 {background: url('http://www.hoppin.nate.com/resource/images/common/bg_rating_ps.gif') 0 0 no-repeat; position: absolute; top:0; left: 0; text-indent: -3000px; width: 50px;}
+
+
+
+
+
+/* movie list detail */
+ul.list_thumb_detail {width: 760px;}
+ul.list_thumb_detail li {height: 250px; border-bottom: 1px solid #e6e6e6; *float: left;} /* 101210 height 수정 */
+
+ul.list_thumb_detail .detail_info {position: relative; float: left; width: 540px;  padding: 30px 0 0 0; }
+ul.list_thumb_detail .detail_info .thumb {float: left; margin: 0 10px 0 0; width: 130px; height: 152px; padding: 13px 0 0 30px; background: url('http://www.hoppin.nate.com/resource/images/contents/bg_m_poster160.jpg') no-repeat;}
+ul.list_thumb_detail .detail_info .thumb_layered_b {position: relative;}
+ul.list_thumb_detail .detail_info dl dt {font-size: 15px; font-weight: bold; padding:2px 0 15px 0;} /* 101109 padding 추가, 101124 padding 수정, 110119 font-size 축소 */
+ul.list_thumb_detail .detail_info dl dd {margin-bottom:3px; padding-left:170px; border-top:1px solid #FFF;} /* 101130 border추가 */
+ul.list_thumb_detail .detail_info .myrating {position: absolute; right: 50px; bottom: -35px; *bottom: -25px;}
+
+ul.list_thumb_detail .detail_info2 {position: relative; float: left; width: 462px; padding: 30px 0 0 0; }
+ul.list_thumb_detail .detail_info2 .thumb_movie_b {position: relative;}
+ul.list_thumb_detail .detail_info2 .ranking {position: absolute; top: -2px; left: -2px; z-index:2;}
+ul.list_thumb_detail .detail_info2 dl dt {font-size: 22px; font-weight: bold;  padding:2px 0 15px 0;} /* 101124 padding 추가 */
+ul.list_thumb_detail .detail_info2 dl dd {margin-bottom: 3px; padding-left:170px;} /* 101213 padding 추가 */
+ul.list_thumb_detail .detail_info2 .myrating {position: absolute; right: 5px; bottom: -20px; *bottom: -10px;}
+ul.list_thumb_detail .detail_info2 p.rank {position: absolute; top: -3px; left: -3px;}
+
+ul.list_thumb_detail .detail_opt {float: right; width: 195px;  height: 220px; _height: 230px; background: #f5f5f5; padding: 30px 0 0 10px;} /* 101210 height 수정 */
+ul.list_thumb_detail .detail_opt dl dt {float: left; width: 35px; }/* 100813 width수정 */
+ul.list_thumb_detail .detail_opt dl dd {padding: 0 0 3px 35px;} /* 100813 width수정 / 100917 padding 수정 */
+ul.list_thumb_detail .detail_opt dl.update dd {padding: 0 0 0 0;}
+ul.list_thumb_detail .detail_opt dl.update dd .rdo	{margin:0;} /* 100813 추가 */
+
+ul.list_thumb_detail .detail_rank {width: 60px; float: left; padding: 90px 0 0 0;}
+ul.list_thumb_detail .detail_rank p {text-align: center; vertical-align: middle;}
+
+ul.list_thumb_detail .rating_area	{padding-left:170px;} /* 101210 추가 */
+
+
+
+/* simple list */
+ul.list_thumb01 li {float: left; margin: 0 15px 20px 0; position: relative; *width: 160px;}
+ul.list_thumb01 .thumb {background:url("/resource/images/contents/bg_m_poster160.jpg") no-repeat; height:152px; padding:13px 0 0 30px; width:130px;}
+ul.list_thumb01 p.rank {position: absolute; top: -3px; left: -3px; z-index:2;}
+ul.list_thumb01 p.ranking {width: 150px; margin: 0 auto; color: #999; font-size: 11px; text-align: center; height: 15px; padding: 10px 0 0 0;}
+ul.list_thumb01 p.ranking img {vertical-align: middle;}
+ul.list_thumb01 p.ranking .num {margin: 0 5px 0 0; }
+ul.list_thumb01 p.ranking .num img {vertical-align: -1px;}
+ul.list_thumb01 p.ranking .al_top	{margin:0 2px;} /* 100809 추가 */
+ul.list_thumb01 .p_info	{padding:2px 0 0 10px;} /* 100811 추가 */
+
+
+
+
+/* mvdetail profile */
+ul.list_profile li {position: relative; height: 148px; margin: 0 0 15px 0;} /* 101208 height 수정 */
+ul.list_profile .thumb {float: left; margin: 0 20px 0 0;}
+ul.list_profile .thumb img {border: 1px solid #e6e6e6; padding: 9px;}
+ul.list_profile dl {padding: 10px 0 0 0;}
+ul.list_profile dt {margin: 0 0 10px 0;}
+ul.list_profile dd {font-size: 11px; color: #808080;}
+ul.list_profile dd .detail {width: 110px; display: inline-block; *line-height: 14px;}
+ul.list_profile .btn_detail_info {position: absolute; bottom: 5px; left: 139px;}
+
+
+
+
+
+/* review view */
+.review_view .review_topinfo {position: relative;}
+.review_view .review_topinfo p.title {font-size: 16px; color: #333; line-height: 26px; width:400px} /* 101209 width 추가 */
+.review_view .review_topinfo .ico_cyworld {padding: 0 0 0 23px; background: url('http://www.hoppin.nate.com/resource/images/common/ico_cyworld18.gif') left 5px no-repeat; font-size: 12px;}
+.review_view .review_topinfo p.address a {color: #b2b2b2; font-size: 10px; text-decoration: underline;}
+
+.review_view .review_topinfo p.sympathyb {position: absolute; top: 0; right: 0;}
+.review_view .review_topinfo p.sympathyb_on {position: absolute; top: 0; right: 0;}
+
+.review_view .review_contents {padding: 45px 0;}
+.review_view .review_contents p {font-size: 12px; color: #808080;}/* 20110809 윤재현 line-height: 17px; 제거  */
+.review_view .review_contents .image {margin: 20px 0;}
+
+.review_view .button {text-align: right; position: relative; border-top: 1px solid #e6e6e6; padding: 15px 0 0 0; width: 100%;}
+.review_view .button .btn_w_list {position: absolute; left: 0;}
+
+
+
+
+
+/* review write */
+table.rv_write {width: 100%; border-top: 1px solid #bfbfbf; border-bottom: 1px solid #bfbfbf;}
+table.rv_write th {background: #f3f3f3; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; padding: 10px 0 10px 15px; text-align: left; font-weight:normal;}
+table.rv_write td {border-bottom: 1px solid #e6e6e6; padding: 10px 0 10px 15px; font-size: 12px; color: #666;}
+table.rv_write td.nopd {padding: 0;}
+table.rv_write textarea {font-size: 11px; color: #a6a6a6; padding: 10px; width: 480px; height:100px; font-family:맑은고딕, Malgun Gothic, 돋움, Dotum;}
+table.rv_write img {vertical-align: middle;}
+table.rv_write .chk	{margin:0 1px 0 2px;}
+
+table.rv_write ul.opt_sns {position: relative;}
+table.rv_write ul.opt_sns li {margin: 0 0 8px 0;}
+table.rv_write ul.opt_sns .block {width: 85px; display: inline-block;}
+table.rv_write ul.opt_sns li.select {position: absolute; left: 165px; top: 20px;}
+
+.btn_listset {text-align: right; position: relative; border-top: 1px solid #e6e6e6; padding: 15px 0 0 0; width: 100%;}
+.btn_listset .btn_w_list {position: absolute; left: 0;}
+
+
+/* 101116 리뷰쓰기 페이징 */
+.sel_img .view_p	{float:left; width: 290px; overflow:hidden;}
+.sel_img ul li		{float: left; margin: 0 10px 0 0;}
+.sel_img .arrow		{float:left; padding: 35px 5px 0 5px;}
+.sel_img .thumb		{margin: 0 0 5px 0;}
+.sel_img .thumb img	{border: 1px solid #e6e6e6;}
+/* 101116 리뷰쓰기 페이징 end */
+
+
+
+
+
+/* movie home */
+.list_mainhot {width: 500px; float: left; _overflow: hidden;}
+.list_mainrank {float: left; margin-left: 40px; width: 220px;}
+
+.list_mainrank h5	{position:relative;}
+.list_mainrank .h5_more	{position:absolute; right:10px; top:0;}
+
+.w500 {width: 500px;}
+
+.conts760 {width: 760px;}
+
+ul.list_mainthumb {} /* 100728 hidden 삭제 */
+ul.list_mainthumb li {float: left; width: 155px; margin: 0 11px 0 0; padding:0 0 18px 0;} /* 100811 margin-bottom 수정 / 110119 margin-bottom삭제, padding-bttom추가 */
+ul.list_mainthumb .thumb {background:url("/resource/images/contents/bg_m_poster160.jpg") no-repeat; height:152px; margin:0 0 10px 0; padding:13px 0 0 30px; width:130px;}
+ul.list_mainthumb p.title {text-align: center; width: 150px;}
+ul.list_mainthumb p.info {width: 130px; border-bottom: 1px solid #f3f3f3; padding: 3px 0; margin: 0 10px;}
+ul.list_mainthumb .p_info	{padding:2px 0 0 10px;} /* 100811 추가 */
+ul.list_mainthumb .button {margin: 15px 0 0 15px;}
+ul.list_mainthumb .thumb_movie_b,
+ul.list_mainthumb .thumb_layered_b,
+ul.list_mainthumb .thumb_ucc_b	{margin-left:0; _margin-right:0;} /* 100813 추가, 101220 ie6 때문에 margin-right 추가 */
+
+ul.list_review01 {} /* 100727 overflow:hidden 삭제 */
+ul.list_review01 li {position: relative; height: 165px; margin: 0 20px 15px 0; float: left;}
+ul.list_review01 .thumb {background:url("/resource/images/contents/bg_m_poster160.jpg") no-repeat; height:152px; padding:13px 0 0 30px; width:130px; float: left; margin: 0 10px 0 0;}
+ul.list_review01 ul.review		{width: 170px; float: left; margin: 10px 0 0 0; border: none; position: relative; z-index:1000;}
+ul.list_review01 ul.review li	{width: 120px; height: 65px; padding: 0 50px 0 0; margin: 0 5px 0 0; }
+ul.list_review01 .sympathy {position: absolute; top: 0; right: 0; background: url(http://www.hoppin.nate.com/resource/images/common/bg_sym45.gif) no-repeat; width: 24px; height: 34px; padding: 11px 0 0 21px; font-size: 11px; color: #666; cursor: pointer;}
+ul.list_review01 .sympathy_on {position: absolute; top: 0; right: 0; background: url(http://www.hoppin.nate.com/resource/images/common/bg_sym45_on.gif) no-repeat; width: 24px; height: 34px; padding: 11px 0 0 21px; font-size: 11px; color: #583ab6; cursor: pointer;}
+ul.list_review01 .btnmore {position: absolute; bottom: 10px; right: 10px;}
+ul.list_review01 ul.review .m_over {position: absolute; bottom: -35px; right: -75px; z-index: 1;}
+
+
+
+
+
+
+/* review */
+.review {border-bottom: 1px solid #e5e5e5; margin: 0 0 15px 0;}
+.review ul.review_list li {position: relative; margin: 0 0 40px 0; z-index:95;} /* 101213 z-index:100->95 */
+.review ul.review_list .thumb {width: 95px; float: left; margin: 0 15px 0 0;}
+.review ul.review_list .thumb img {border: 1px solid #e6e6e6; padding: 4px; width:85px;} /* 101207 width 추가 */
+.review ul.review_list li.image .detail {width: 320px;}
+.review ul.review_list .detail {float: left; width: 420px;}
+.review ul.review_list .review_info li {margin: 0 8px 0 0;}
+
+.review p.notice {font-size: 14px; color: #4c4c4c; text-align: center; padding: 60px 0; border-top: 1px solid #e5e5e5;}
+.review .id {font-weight: bold; color: #7052cc;}
+
+.review p.title {margin: 0 0 7px 0; padding-bottom: 5px;}
+.review p.title a {color: #333;}
+.review p.title a:hover {color: #7052cc;}
+.review .ico_cyworld {padding: 0 0 0 20px; background: url(http://www.hoppin.nate.com/resource/images/common/ico_cyworld.gif) left top no-repeat; font-size: 12px;}
+.review p.title .re_num {color: #666; font-size: 11px;}
+.review p.text {font-size: 11px; color: #666; line-height: 16px; word-wrap:break-word;} /* 101103 word 추가 */
+.review p.text .read {color: #b2b2b2; margin: 0 0 0 5px;}
+.review p.text .read strong {color: #999;}
+
+.review p.sympathyb {position: absolute; top: 0; right: 0;}
+.review p.sympathyb_on {position: absolute; top: 0; right: 0;}
+
+
+
+
+
+/* movie detail */
+.topinfo_wrap	{min-height:150px; * min-height:155px;} /* 110128 추가 */
+.topinfo_wrap .detail_info {float: left; width: 520px;}
+.topinfo_wrap .detail_info .thumb {float: left; margin: 0 10px 0 0;}
+.topinfo_wrap .detail_info .thumb img {padding: 9px; border: 1px solid #e6e6e6; float: left; margin: 0 10px 0 0; background: #fff;}
+.topinfo_wrap .detail_info dl		{float:left; width:300px;} /* 110105 추가 - 좌측정보가 이미지보다 길면 이미지밑으로 떨어지는 문제 */
+.topinfo_wrap .detail_info dl dt	{font-size: 22px; font-weight: bold;}
+.topinfo_wrap .detail_info dl dd	{width:100%;padding:2px 0;} /* 101210 줄바꿈 되면 겹치는 문제때문에 height,margin 삭제 및 padding 추가 */
+
+.topinfo_wrap .detail_opt		{float: left; width: 205px; height: 140px; padding: 0 0 0 30px; border-left: 1px solid #f3f3f3;}
+.topinfo_wrap .detail_opt dl dt	{float: left; width: 33px; padding:2px 0 0 0;} /* 100811 width 수정 */
+.topinfo_wrap .detail_opt dl dd	{padding: 0 0 3px 33px;} /* 100811 padding 수정 */
+.topinfo_wrap .detail_opt .list_epi ul		{height: 130px; overflow-y: scroll; background: #fff; border: 1px solid #ebebeb; padding: 10px 0 0 10px;}
+.topinfo_wrap .detail_opt .list_epi ul li	{line-height: 20px;}
+.topinfo_wrap .detail_opt .list_epi ul li.on	{font-weight: bold; color: #333; font-size: 11px;}
+
+.topinfo_wrap .detail_opt .use_section		{margin: 0 0 0 -30px;}
+.topinfo_wrap .detail_opt .use_section ul	{margin:15px 14px 0 14px;}
+.topinfo_wrap .detail_opt .use_section li	{padding:0 0 0 8px;}
+.topinfo_wrap .detail_opt .use_condition			{position:relative; height:20px; padding:0 0 0 15px; z-index:10;}
+.topinfo_wrap .detail_opt .use_condition .opt_set	{float:left; position:static;}
+.topinfo_wrap .detail_opt .use_condition a.link		{float:right; position:static;}
+.topinfo_wrap .detail_opt .use_section .btns		{padding:5px 0 0 15px;} /* 110526 수정 */
+.topinfo_wrap .detail_opt .use_section .update		{position:relative; margin:0; padding:10px 0 0 15px;}
+.topinfo_wrap .detail_opt .use_section .update dt	{padding:0 0 3px 0;}
+.topinfo_wrap .detail_opt .use_section .update dd	{padding:0;}
+.topinfo_wrap .detail_opt .use_section .update dd .rdo	{margin:0 -3px 0 0; *margin:-2px -3px 0 0;}
+
+.info_tvepi dl dt		{float:left; width: 35px; padding:2px 0 0 0;} /* 100917 padding수정 */
+.info_tvepi dl dt img	{font-size:0;  vertical-align:top;} /* 110128 추가 */
+.info_tvepi dl dd		{padding:0 0 5px 35px;} /* 100917 추가, 110128 수정 */
+.info_tvepi .btn_wrap	{margin-right:-2px;} /* 100823 추가 */
+.info_tvepi li.gdot		{padding:2px 0 2px 11px; background:url('http://www.hoppin.nate.com/resource/images/common/bull_dot_gray.gif') no-repeat left 8px;}
+
+.mvinfo_player {border-top: 2px solid #333;}
+.mvinfo_player .player {float: left; width: 520px; height: 380px;}
+.mvinfo_player .player_info {float: left;}
+
+
+
+/* 101116 페이징관련 수정 */
+.list_preview {padding: 0 0 0 20px;}
+.list_preview .prev	{float: left; width:13px; padding: 15px 0 0 0; margin: 0 20px 0 0;}
+.list_preview .next	{float: left; width:13px; padding: 15px 0 0 0; margin: 0 0 0 10px;}
+.list_preview .view_p	{float: left; width:420px; overflow:hidden; position: relative;}
+.list_preview li	{float: left; width:75px; margin: 0 10px 0 0; text-align: center; position: relative;}
+.list_preview ul p	{margin: 5px 0 0 0;}
+.list_preview .btn_play	{position: absolute; top: 30px; right: 5px;}
+/* 101116 페이징관련 수정 end */
+
+.mvdetail_wrap {border-top: 2px solid #333;}
+.mvdetail_left {position:relative;  float: left; width: 520px; z-index:20;} /* 110121 position,z-index 추가(블루다임요청) */
+/*.mvdetail_left p.txt_synop	{line-height: 20px;}*/
+.mvdetail_left p.txt_synop	{font-size:13px; color:#4d4d4d !important; line-height:23px; letter-spacing:0;} /* 101020 추가 */
+.mvdetail_left h4 {position: relative; z-index: 50;}
+.mvdetail_left h4 .chk_condition {position: absolute; right: 0; top: 0;}
+.mvdetail_left h4 .chk_condition img {vertical-align: middle;}
+.mvdetail_left h4 .chk_condition label {margin: 0 5px 0 0;}
+
+.mvdetail_left .v_player	{margin:-20px 0 15px 0;} /* 100930 수정 */
+
+/* 100930 추가 */
+.mvdetail_left .top_detail	{position:relative; margin:0 0 80px 0;}
+.mvdetail_left .top_detail .play_bar	{position: absolute; bottom: -40px; left:0px; width:520px;}
+.mvdetail_left .top_detail .play_bar dt	{font-size:0; line-height:0; width:51px; margin:0 !important;}
+
+.mvdetail_left .top_detail .v_bar	{width: 445px;}
+/* 100930 추가 end */
+
+.mvdetail_right {position:relative; float: right; width: 220px; padding: 0 0 0 0; z-index:20;} /* 110113 position,z-index 추가 */
+.mvdetail_right .shadowbg {background: url('http://www.hoppin.nate.com/resource/images/contents/bg_detail_right.gif') left top no-repeat; padding: 0 0 0 20px;}
+.mvdetail_right dl.right_rate {padding: 0 0 0 20px;}
+.mvdetail_right dl.right_rate dt {width: 70px; float: left; padding: 3px 0 0 0; font-size: 11px;} /* 100907 width 수정 */
+.mvdetail_right dl.right_rate dt img {vertical-align: top;}
+.mvdetail_right h5				{position: relative; z-index: 50;}
+.mvdetail_right h5 .btn_arrow	{position: absolute; top: 0; left: 85px;}
+.mvdetail_right .related p.tag	{background: url(http://www.hoppin.nate.com/resource/images/contents/bg_mv_tag.gif) left top no-repeat; width: 66px; height: 53px; float: left; padding: 7px 0 0 9px;}
+.mvdetail_right .related p.tag span	{line-height:150% !important;} /* 100727 추가 */
+.mvdetail_right h5 .btn_more {_margin-top: 6px;}
+.mvdetail_right .list_thumb_r li {margin: 0 0 10px 0; border-top:1px solid #fafafa;}
+.mvdetail_right .list_thumb_r .page {color: #bfbfbf; font-size: 11px; font-weight: bold; padding: 0 0 0 15px;}
+.mvdetail_right .list_thumb_r .page strong {color: #7052cc;}
+.mvdetail_right .list_thumb_r .page img {vertical-align: middle;}
+
+.mvdetail_title {position: relative; height: 15px; margin: 0 0 20px 0;}
+.mvdetail_title .info {position: absolute; right: 0; padding: 0 0 4px 0;}
+.mvdetail_title .info a {text-decoration: underline;}
+
+.mvdetailed .poster {float: left; margin: 0 20px 0 0; width: 150px;}
+.mvdetailed .poster img {border: 1px solid #e6e6e6; padding: 9px;}
+.mvdetailed ul.info {font-size: 11px; color: #666; padding: 10px 0 0 0;}
+.mvdetailed ul.info li {float: left; width: 160px; margin: 0 0 5px 0; _line-height: 13px; font-size: 11px;}
+.mvdetailed .details {float: left; width: 330px;}
+.mvdetailed ul.photo li {float: left;}
+.mvdetailed ul.photo img {border: 1px solid #e6e6e6;}
+
+.info_person {position: relative; z-index: 99;}
+.info_person ul.list01 {width: 520px; overflow: hidden;}
+.info_person ul.list01 li {float: left;  margin: 0 10px 0 0; width: 73px; height: 141px; border: 1px solid #e6e6e6; padding: 9px 0 0 0; cursor: pointer;} /* 101208 height 수정 */
+.info_person ul.list01 li:hover {border: 1px solid #999;}
+.info_person ul.list01 li img	{margin-left:9px; font-size:0; line-heighT:0;}
+.info_person ul.list01 dl {text-align: center; margin:10px 0 0 0; _margin:5px 0 0 0; padding:0;}
+
+.list_other_mv {background: url('http://www.hoppin.nate.com/resource/images/contents/bg_pinfo_line.gif') left bottom no-repeat; height: 154px; width: 487px; padding: 33px 0 0 13px; position: absolute; top:115px; z-index: 99;}
+.list_other_mv li {float: left; margin: 0 5px 0 0;}
+.list_other_mv p.txt {margin: 0 0 5px 0;}
+.list_other_mv p.txt img {vertical-align: middle;}
+.list_other_mv .arrow_sel {position: absolute; top: 0;}
+.list_other_mv ul.list02 li {margin: 0 5px 0 0;}
+.list_profile_wrap {position: relative;}
+
+/* 101020 추가 */
+.silverlight_download	{margin-bottom:25px; width:520px; height:378px; background:#000; text-align:center;}
+.silverlight_download .info	{padding-top:113px;}
+.silverlight_download .btn	{padding-top:17px;}
+.silverlight_download .error	{padding-top:88px;}
+/* 101020 추가 end */
+
+
+/* 101201 추가 - vp 광고 */
+.vp_ad		{position:relative; margin:-1px 0 0 0; width:1px; height:1px; line-height:0; font-size:0; z-index:100;}
+.vp_ad .ban	{position:absolute; top:1px; left:260px; width:260px; height:379px; background:#000;} /* 101223 height 수정 */
+
+
+
+
+
+/* music list */
+
+ul.ms_rank li {height: 181px;}
+ul.ms_rank p.rank {position: absolute; top: 0; left: 0;}
+ul.ms_rank p.ranking {width: 120px; margin: 0 auto; color: #999; font-size: 11px; text-align: center; padding: 0 0 10px 0; height: 15px; margin: 30px 0 0 0;}
+ul.ms_rank p.ranking img {vertical-align: middle;}
+ul.ms_rank p.ranking .num {margin: 0 5px 0 0; }
+ul.ms_rank p.ranking .num img {vertical-align: -1px;}
+
+.thumb_music img {padding: 9px; background: #fff; border: 1px solid #e6e6e6;}
+
+.list_ms_favart li {display: inline; margin: 0 5px 0 0;}
+
+ul.list_music01 li {position: relative; _overflow: hidden;}
+ul.list_music01 li .btn_p {position: absolute; top: 70px; left: 110px;}
+
+.msdetailed {border-top: 2px solid #999; padding: 10px 0 0 0; position: relative; z-index: 99;}
+.msdetailed .thumb {float: left; margin: 0 20px 0 0;}
+.msdetailed .thumb img {border: 1px solid #e6e6e6; padding: 9px;}
+.msdetailed .details h5 {font-size: 30px; color: #333;}
+.msdetailed ul.info {font-size: 11px; color: #666; padding: 10px 0 0 0;}
+.msdetailed ul.info li {float: left; width: 160px; margin: 0 0 5px 0; _line-height: 17px; font-size: 11px; line-height: 17px;}
+.msdetailed .details {float: left; width: 330px; padding: 10px 0 0 0;}
+.msdetailed ul.photo li {float: left;}
+.msdetailed ul.photo img {border: 1px solid #e6e6e6;}
+.msdetailed ul.info2 {font-size: 11px; color: #666;}
+.msdetailed ul.info2 li {width: 160px; margin: 0 0 2px 0; _line-height: 17px; font-size: 11px; line-height: 17px;}
+
+
+table.list_songs {width: 100%;}
+table.list_songs td {background-color: #efefef; padding: 8px; font-size: 11px; color: #666;}
+table.list_songs td.dv {background: #efefef url(http://www.hoppin.nate.com/resource/images/common/bull_li_bar01.gif) right center no-repeat;}
+table.list_songs tr.odd td {background-color: #fafafa;}
+table.list_songs a {font-size: 10px; color: #8c8c8c;}
+table.list_songs a:hover {color: #7052cc;}
+table.list_songs a.listen {background: url(http://www.hoppin.nate.com/resource/images/common/ico_ms_listen.gif) left no-repeat; padding: 0 0 0 15px;}
+table.list_songs a.buy {background: url(http://www.hoppin.nate.com/resource/images/common/ico_ms_buy.gif) left no-repeat; padding: 0 0 0 15px;}
+
+h5.mstit {position: relative; border-bottom: 1px solid #e6e6e6; padding: 0 0 18px 0;}
+
+.list_rank01 .txt_artist {color: #808080; font-size: 11px; margin: 0 0 0 5px;}
+
+.ms_thumb_small {background: url(http://www.hoppin.nate.com/resource/images/common/bg_ms_sthumb.jpg) left top no-repeat; width: 100px; height: 109px; position: relative; padding: 12px 0 0 22px;}
+.ms_thumb_small .btn_play {position: absolute; left: 80px; top: 45px;}
+.ms_thumb_small .rank {position: absolute; left: 0; top: 0;}
+.ms_thumb_small .thumb {margin: 0 0 5px 0;}
+.ms_thumb_small .text {padding: 0 0 0 5px;}
+
+.ms_titlesong {width: 500px;}
+.ms_titlesong .thumb img {border: 1px solid #e6e6e6; padding: 9px;}
+.ms_titlesong .thumb {float: left; background: #fff; margin: 0 15px 0 0;}
+.ms_titlesong .list_songs {width: 330px; _width: 320px;}
+
+
+
+
+
+/* tv list */
+.thumb_tv {padding: 9px; border: 1px solid #e6e6e6;}
+.thumb_tv p {margin: 20px 0 0 0; text-align: center; width: 130px;}
+.thumb_tv .btn_p {position: absolute; top: 50px; left: 55px;}
+.thumb_tv .rank {position: absolute; top: 0; left: 0; margin: 0; text-align: left;}
+.thumb_tv .title {width: 130px !important;}
+
+.list_tv01 li {margin: 0 15px 15px 0 !important;}
+.list_tv02 li {margin: 0 10px 20px 0 !important;}
+
+.list_mainthumb ul.tv_info {text-align: center; width: 150px;}
+.list_mainthumb ul.tv_info li {display: inline; width: auto; margin: 0 !important; background:url("/resource/images/common/bull_li_bar01.gif") no-repeat right center; font-size: 10px; color: #666; padding: 0 7px; float: none;}
+
+.tab_tvrank {position: relative; padding: 0 0 0 0;} /* 101220 border-bottom 삭제 */
+.tab_tvrank li {display: inline; background:url("/resource/images/common/bull_li_bar01.gif") right 2px no-repeat; padding: 0 2px;} /* 101220 padding 수정 */
+.tab_tvrank .more {position: absolute; right: 0; top: 3px;}
+
+.rdo_sel {padding: 10px 0 15px 0;} /* 101224 padding 수정 */
+.rdo_sel li {display: inline; margin: 0 7px 0 0;}
+.rdo_sel img {vertical-align: middle;}
+
+
+ul.tv_info2		{float:left; text-align: center;}
+ul.tv_info2 li	{display: inline; width: auto; margin: 0 7px 0 3px !important; background:url("/resource/images/common/bull_li_bar01.gif") no-repeat right center; font-size: 10px; color: #666; padding: 0 7px 0 0; float: none; border: none !important;}
+
+.detail_opt dl.update dt {float: none !important; position: relative; width: 130px !important; margin: 0 0 5px 0;}
+.detail_opt dl.update dd {margin: 0 0 2px 0;}
+.detail_opt .btn_wrap	{margin-right:-2px;} /* 100730 버튼간 간격때문에 추가 */
+
+.opt_set		{font-size:0; line-height:0; border-right:1px solid #d9d9d9;} /* 100813 추가 */
+.opt_set img	{margin:0 -1px 0 0; padding:0; border:1px solid #d9d9d9;}
+
+.list_relphoto li {float: left; margin: 0 10px 0 0; height: 70px;}
+.list_relphoto img {border: 1px solid #e6e6e6;}
+
+.tapborder_top { border-top: 2px solid #999;}
+.tapborder_top li	{height:16px; *height:24px; padding-top:20px; *padding-top:12px;}
+.tapborder_top li.on {height:15px; *height:23px; padding-top:20px; *padding-top:12px;}
+
+.list_detailsmall li {clear: both; margin: 0 0 27px 0; height: 125px;} /* 110525 마진수정 */
+.list_detailsmall .thumb {background: url(http://www.hoppin.nate.com/resource/images/common/bg_tvthumb_small.jpg) left top no-repeat; width: 120px; height: 120px; padding: 11px 0 0 9px; position: relative; float: left;}
+.list_detailsmall .title {width: 90px; text-align: center;}
+.list_detailsmall .btn_play {position: absolute; top: 40px; left: 70px;}
+/*.list_detailsmall .btn_b_view_s,
+.list_detailsmall .btn_b_download_s,
+.list_detailsmall .btn_w_mybox_s,
+.list_detailsmall .btn_dview_s	{margin-right:-2px;} /* 110425 삭제 */
+
+.list_detailsmall dt	{position:relative; height:20px;}
+.list_detailsmall .tit_sec				{position:absolute; top:0; left:132px; *left:0px;}
+.list_detailsmall .tit_sec a			{float:left;}
+.list_detailsmall .tit_sec a.t_12b_33	{padding-right:2px; border-right:1px solid #fff;} /* 110603 추가 */
+.list_detailsmall .tit_sec a.link		{display:block; width:53px; height:14px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_link_usecondition.gif') no-repeat left top; font-size:0; text-indent:-3000px;}
+.list_detailsmall .tit_sec a:hover.link	{background:url('http://www.hoppin.nate.com/resource/images/common/btn_link_usecondition.gif') no-repeat -54px top;}
+
+
+
+
+
+
+/* comment */
+
+.comment_write				{position: relative; background: #f2f2f2; border: 1px solid #e6e6e6; padding: 10px 0 18px 10px; z-index: 50;}
+.comment_write textarea		{float: left; width: 400px; height: 43px; margin: 0 5px 0 0; padding: 3px 0 0 3px; border-top: 1px solid #d3d3d3; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; font-size: 11px;  color:#a6a6a6;}
+.comment_write .text_limit	{position: absolute; top: 65px; left: 390px; color: #bfbfbf; font-size: 10px;}
+.comment_write .chk			{margin:0 2px 0 2px;}
+
+ul.comment_list {width: 480px; margin: 0 0 0 20px;} /* 100730 margin:0 auto에서 수정 */
+ul.comment_list li {position: relative; border-bottom: 1px solid #e6e6e6; padding: 0 0 20px 0; margin-bottom: 20px; _height: 1%;}
+ul.comment_list li .thumb {float: left; margin: 0 15px 0 0;}
+ul.comment_list li .thumb img {padding: 4px; border: 1px solid #e6e6e6; background: #fff;}
+
+.reply p.text {width: 410px; margin: 0 0 10px 0; word-wrap:break-word;} /* 101103 word 추가 */
+.reply p.text .btn {margin: 0 0 0 10px; vertical-align:middle;} /* 100809 vertical-align 추가 */
+.reply .m_over {position: absolute; top: 60px; left: 470px; z-index: 99;}
+.reply .link {position: absolute; top: 15px; left: 40px; background: url('http://www.hoppin.nate.com/resource/images/common/bg_bln_id_top.gif') left top no-repeat; width: 104px; padding: 22px 0 0 0;} /* 101108 수정(height삭제,bg변경) */
+.reply .link ul	{padding: 0 0 10px 13px; background: url('http://www.hoppin.nate.com/resource/images/common/bg_bln_id.gif') left bottom no-repeat; } /* 101108 추가 */
+.reply .link li {margin: 0 0 5px 0; padding: 0 !important; border: none !important;}
+.photo .reply .link {top: 15px; left: 120px;} /* 100714 진혁추가 */
+.reply .sympathyb_on {top: 0;}
+.reply .sympathyb {top: 0;}
+.reply a.re_open {background: url(http://www.hoppin.nate.com/resource/images/common/btn_rearrow_down.gif) right center no-repeat; font-size: 11px; color: #8c8c8c; font-weight: bold; padding: 0 10px 0 0; _height: 1%;}
+.reply a.re_close {background: url(http://www.hoppin.nate.com/resource/images/common/btn_rearrow_up.gif) right center no-repeat; font-size: 11px; color: #8c8c8c; font-weight: bold; padding: 0 10px 0 0; _height: 1%;}
+
+.reply .modify_com	{}
+.reply .modify_com textarea	{width:374px; height:32px; padding:8px 10px; margin-bottom:10px; background:#f2f2f2; border:1px solid #e6e6e6; vertical-align:middle;}
+.reply .modify_com .btn_wrap	{margin-top:-10px}
+
+ul.reply_info {margin: 0 0 15px 0;}
+ul.reply_info li {float: left; background: url(http://www.hoppin.nate.com/resource/images/common/bull_li_bar01.gif) right center no-repeat; padding: 2px 5px 0 0 !important; margin: 0 5px 0 0; font-size: 11px; border: none !important; line-height: 13px;}
+ul.reply_info .id a {text-decoration: underline; color: #4c4c4c;}
+ul.reply_info .id a:hover, ul.reply_info .report a:hover {color: #583ab6;}
+ul.reply_info .date {color: #b2b2b2;}
+ul.reply_info .report {background: none;}
+ul.reply_info .report a {background: url(http://www.hoppin.nate.com/resource/images/common/ico_report.gif) left center no-repeat; padding: 0 0 0 15px; color: #808080;}
+
+.reply2	{padding: 20px 8px 0 10px;}
+.reply2 li,
+.reply2 .write	{background: url('http://www.hoppin.nate.com/resource/images/contents/ico_review.gif') left top no-repeat; padding: 0 0 0 15px !important; margin: 0 0 20px 0; border: none !important;}
+.reply2 .write .write_wrap	{background: #f2f2f2; border: 1px solid #e6e6e6; padding: 4px 0 4px 4px;}
+.reply2 .write input		{border-top: 1px solid #d3d3d3; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; height: 18px; width: 381px;}
+.reply2 .page			{color: #bfbfbf; font-size: 11px; font-weight: bold; padding: 0 0 0 15px;}
+.reply2 .page strong	{color: #7052cc;}
+.reply2 .page img		{vertical-align: middle;}
+.reply2 .modify_re .txt	{width:382px; height:16px; padding:2px 2px 0 2px;}
+
+br.clear {clear: both;}
+
+
+/* 코멘트의 사진 있는 경우 */
+.comment_list li.photo .reply			{float: left; width: 340px; padding: 0 0 5px 0;}
+.comment_list li.photo .reply p.text	{width: 310px; margin: 0 0 10px 0; word-wrap:break-word;} /* 101103 word 추가, 101208 width 수정 */
+.reply3			{float: left; padding: 20px 8px 0 90px;} /* 110516 float 추가 */
+.reply3 .reply	{width: 365px !important; padding: 0 0 5px 0;}
+.reply3 li		{float: left;}
+.reply3 li,
+.reply3 .write	{background: url('http://www.hoppin.nate.com/resource/images/contents/ico_review.gif') left top no-repeat; padding: 0 0 0 15px !important; margin: 0 0 20px 0; border: none !important;}
+.reply3 .write .write_wrap	{background: #f2f2f2; border: 1px solid #e6e6e6; padding: 4px 0 4px 4px; _height: 1%;}
+.reply3 .write input		{border-top: 1px solid #d3d3d3; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; height: 18px; width: 301px;}
+.reply3 .page			{color: #bfbfbf; font-size: 11px; font-weight: bold; padding: 0 0 0 15px;}
+.reply3 .page strong	{color: #7052cc;}
+.reply3 .page img		{vertical-align: middle;}
+.reply3 .modify_re		{margin-bottom:15px;}
+.reply3 .modify_re .txt	{width:302px; height:16px; padding:2px 2px 0 2px;}
+
+.comment p.notice	{font-size: 14px; color: #4c4c4c; text-align: center; padding: 60px 0; border-bottom: 1px solid #e5e5e5;}
+.comment .id		{font-weight: bold; color: #7052cc;}
+
+
+
+
+
+
+/* thumb */
+.thumb_layered_b		{position: relative; width: 155px; height: 155px; cursor: pointer;}
+/*.thumb_layered_b .photo	{position: absolute; left: 4px; top: 4px;}*/
+.thumb_layered_b .photo		{margin:4px 0 0 4px;}
+.thumb_layered_b .al_center .photo	{margin:4px 0 0 0;}
+.thumb_layered_b .border	{position: absolute; left: 0; top: 0;}
+.thumb_layered_b .wlayer	{position: absolute; left: 0; bottom: 0; _bottom: -1px;}
+.thumb_layered_b p.t_title	{position: absolute; left: 10px; top: 110px; padding: 0 8px 0 0;}
+.thumb_layered_b p.btn_p	{position: absolute; left: 110px; top: 65px;}
+
+.thumb_layered_s {position: relative; width: 115px; height: 115px; cursor: pointer;}
+/*.thumb_layered_s .photo		{position: absolute; left: 4px; top: 4px;}*/
+.thumb_layered_s .photo		{margin:4px 0 0 4px;}
+.thumb_layered_s .al_center .photo	{margin:4px 0 0 0;}
+.thumb_layered_s .border {position: absolute; left: 0; top: 0;}
+.thumb_layered_s .wlayer {position: absolute; left: 0; bottom: 0; _bottom: -1px;}
+.thumb_layered_s p.t_title {position: absolute; left: 10px; top: 87px; padding: 0 3px 0 0;}
+.thumb_layered_s p.btn_p {position: absolute; left: 75px; top: 50px; padding: 0 !important; margin: 0 !important;}
+.thumb_layered_s .ico_top {position: absolute; top: -5px; left: -5px;}
+
+.thumb_movie_b			{position: relative; width: 155px; height: 155px; cursor: pointer;}
+.thumb_movie_b .photo	{position: absolute; left: 26px; top: 4px;} /* 101203 위치 수정 */
+.thumb_movie_b .border	{position: absolute; left: 0; top: 0;}
+.thumb_movie_b .wlayer	{position: absolute; left: 0; bottom: 0;}
+.thumb_movie_b p.t_title	{position: absolute; left: 10px; top: 110px; padding: 3px 8px 0 0px;} /* 101203 padding 수정 */
+
+.thumb_movie_s {position: relative; width: 115px; height: 115px; cursor: pointer;}
+.thumb_movie_s .photo {position: absolute; left: 22px; top: 4px;} /* 101203 위치 수정 */
+.thumb_movie_s .border {position: absolute; left: 0; top: 0;}
+.thumb_movie_s .wlayer {position: absolute; left: 0; bottom: 0; _bottom: -1px;}
+.thumb_movie_s p.t_title {position: absolute; left: 10px; top: 85px; padding: 3px 3px 0 0px;} /* 101203 padding 수정 */
+
+.thumb_ucc_b {position: relative; width: 155px; height: 155px; cursor: pointer;}
+.thumb_ucc_b .photo {position: absolute; left: 4px; top: 4px;}
+.thumb_ucc_b .border {position: absolute; left: 0; top: 0;}
+.thumb_ucc_b .wlayer {position: absolute; left: 0; bottom: 0;}
+.thumb_ucc_b p.t_title {position: absolute; left: 10px; top: 115px; padding: 0 10px 0 0;}
+.thumb_ucc_b p.btn_p {position: absolute; left: 110px; top: 75px;}
+
+.thumb_ucc_s {position: relative; width: 115px; height: 115px; cursor: pointer;}
+.thumb_ucc_s .photo {position: absolute; left: 4px; top: 4px;}
+.thumb_ucc_s .border {position: absolute; left: 0; top: 0;}
+.thumb_ucc_s .wlayer {position: absolute; left: 0; bottom: 0; _bottom: -1px;}
+.thumb_ucc_s p.t_title {position: absolute; left: 10px; top: 87px; padding: 0 3px 0 0;}
+.thumb_ucc_s p.btn_p {position: absolute; left: 75px; top: 50px; padding: 0 !important; margin: 0 !important;}
+.thumb_ucc_s .ico_top {position: absolute; top: -5px; left: -5px;}
+
+.ico_premium	{position:absolute; top:0; left:0; z-index:1;}
+
+
+
+
+/* ucc */
+
+.listwthumb .thumb_ucc_s	{float: left; margin: 0 15px 0 0;}
+.listwthumb ul	{float: left;}
+.listwthumb li	{background: url(http://www.hoppin.nate.com/resource/images/common/blt_graydot01.gif) left 4px no-repeat; padding: 0 0 0 7px; margin: 0 0 8px 0;}
+
+.no_bdr {border: none !important;}
+p.p_info {padding: 8px 0 0 11px;}
+
+
+ul.list_ucc01 li {margin: 0 20px 20px 0 !important;}
+
+.tab_recent		{position: relative;}
+.tab_recent ul	{padding: 15px 0 0 10px; border: 1px solid #e6e6e6; height: 23px;}
+.tab_recent li	{background: url('http://www.hoppin.nate.com/resource/images/contents/bar_grayline01.gif') right center no-repeat; padding: 0 10px 0 0; margin: 0 10px 0 0; float: left;}
+.tab_recent li.btn	{background: none; position: absolute; right: 0; top: 0; padding: 0; margin: 0;}
+.tab_recent .next	{display:block; width:38px; height:38px; position: absolute; right:1px; _right:5px; top:1px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_rrrarrow.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+.tab_recent a		{color: #666; font-weight: bold; font-size: 11px;}
+.tab_recent a:hover	{color: #7A52CC;}
+
+.dv {background: url(http://www.hoppin.nate.com/resource/images/contents/bar_grayline01.gif) right center no-repeat; padding: 0 7px 0 0; margin: 0 7px 0 0;}
+
+ul.list_detail01 .detail {float: left; width: 370px; padding:0 0 20px 0;} /* 101208 padding 추가 */
+ul.list_detail01 li {position: relative; margin: 0 0 25px 0;}
+ul.list_detail01 .play_bar {position: absolute; bottom: 0; left: 130px; width:370px;} /* 100811 left,width 수정 */
+ul.list_detail01 .play_bar dt	{font-size:0; line-height:0; width:51px; margin:0 !important;} /* 100811 width,margin 추가 */
+
+.v_bar	{position: relative; border: 1px solid #e6e6e6; background: #f7f7f7; width: 315px; height: 6px;}
+.v_bar .current	{position: absolute; top: 0px; width: 36px; height: 6px; background: #b9addf; font-size:0; line-height:0;}
+
+ul.list_right01 {width: 115px;}
+ul.list_right01 li {margin: 0 0 15px 0;}
+
+ul.list_right01 .page {color: #bfbfbf; font-size: 11px; font-weight: bold; padding: 0 0 0 15px;}
+ul.list_right01 .page strong {color: #7052cc;}
+ul.list_right01 .page img {vertical-align: middle;}
+
+
+ul.ctn_info		{float: left; width:200px;} /* 101201 text-align:center 삭제, width 추가(크롭,사파리에러) */
+ul.ctn_info li	{display: inline; width: auto; margin: 0 !important; background:url("/resource/images/common/bull_li_bar01.gif") no-repeat right center; font-size: 10px; color: #b2b2b2; padding: 0 7px 0 0; float: none; border: none !important;}
+
+
+.ucc_topinfo {padding: 0 0 20px 0; border-bottom: 2px solid #333;}
+.ucc_topinfo .subject {float: left; padding-top:10px;} /* 101109 padding 추가 */
+.ucc_topinfo .option {border-left: 1px solid #f3f3f3; height: 50px; padding: 3px 0 0 20px; float: right; width: 260px;}
+
+.list_ucc_detail .detail_opt {width: 110px !important;}
+
+.ucc_interest {background: url('http://www.hoppin.nate.com/resource/images/contents/bg_ucc_interest.gif') left top no-repeat; width: 158px; height: 31px; padding: 35px 0 0 0; position: relative;}
+.ucc_interest p {font-size: 20px; color: #666; text-align: center; width: 55px; font-weight: bold;} /* 101223 width  수정 */
+.ucc_interest p.left {position: absolute; top: 35px; left: 8px;}
+.ucc_interest p.right {position: absolute; top: 35px; left: 100px;}
+
+.outlink	{margin:0 auto; padding:117px 0 0 0; width:430px; height:183px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_outlink.gif') no-repeat; text-align:center;}
+.outlink div	{font-size:0; line-height:0;}
+
+
+
+/* 스폰서 극장 */
+
+.sp_movie	{position:relative;}
+.sp_movie h3	{position:absolute; top:0; left:70px;}
+.sp_movie_box	{position:absolute; top:207px; left:70px; width:691px; height:387px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sp_moive_box.png') no-repeat;}
+
+.vp_area	{position:relative; margin:0 auto; width:522px; height:380px;}
+.vp_area .conts_layer	{position:absolute; top:0; left:0; width:522px; height:331px; padding:49px 0 0 0; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sp_movie_layer.gif') no-repeat; text-align:center;}
+.vp_area .conts_layer .how_sp_movie	{margin:40px auto 0 auto; padding:35px 0 0 0; width:443px; height:123px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sp_movie_layer_conts01.png') no-repeat; text-align:left;}
+.vp_area .conts_layer .how_sp_movie .how_about	{float:left; padding:0 0 0 29px;}
+.vp_area .conts_layer .how_sp_movie .how_info	{float:left; padding:0 0 0 94px;}
+.vp_area .conts_layer .how_sp_movie .how_info dt	{float:left; width:55px;}
+.vp_area .conts_layer .how_sp_movie .how_info dd	{float:left;}
+
+.vp_area .conts_layer .btns	{margin-top:27px;}
+.vp_area .conts_layer .btns img	{margin-right:2px;}
+.vp_area .conts_layer .close	{display:block; position:absolute; top:21px; right:38px; width:10px; height:9px; background:url('http://www.hoppin.nate.com/resource/images/contents/btn_sp_movie_close.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+
+.vp_area .conts_layer .how_sp_movie .tb01		{margin:0 0 0 38px; width:385px; text-align:left;}
+.vp_area .conts_layer .how_sp_movie .tb01 th	{margin:0; padding:0; vertical-align:top; text-align:left;}
+.vp_area .conts_layer .how_sp_movie .tb01 td	{margin:0; padding-bottom:14px; text-align:left;}
+
+.vp_area .conts_layer .how_sp_movie .sp01	{padding: 10px 0 0 73px;}
+
+.sp_movie_conts	{position:absolute; top:626px; left:227px;}
+.sp_movie_conts .sub_conts	{float:left; width:216px; font-size:0; line-height:0;}
+
+.vp_area .conts_layer .q_area	{margin:-28px 0 0 30px; _margin:-28px 0 0 -10px; width:454px; text-align:left;}
+.vp_area .conts_layer .q_tit	{padding:5px 0 0 11px; width:124px; height:26px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_q_tit.gif') no-repeat; text-align:left;}
+.vp_area .conts_layer .q_tit span	{vertical-align:middle;}
+.vp_area .conts_layer .q_conts			{margin:12px 0 0 10px;}
+.vp_area .conts_layer .q_conts dd		{margin-top:24px; width:443px; height:158px; background:#e7e7e7;}
+.vp_area .conts_layer .q_conts dd ul	{padding:25px 0 0 40px;}
+.vp_area .conts_layer .q_conts dd li	{height:24px;}
+.vp_area .conts_layer .q_conts dd .long_answer	{padding-top:59px; text-align:center;}
+.vp_area .conts_layer .q_conts dd .long_answer input	{width:281px; height:16px; padding:10px 20px; border:1px solid #808080; background:#fff;}
+
+
+/* 설문조사 팝업 */
+.q_research_conts	{width:500px; margin-top:30px; padding:22px 0 20px 0; border-top:2px solid #e6e6e6; border-bottom:2px solid #e6e6e6;}
+.q_research_conts .policy	{float:left; width:235px;}
+.q_research_conts .policy dt	{height:22px;}
+.q_research_conts .policy dd	{padding-bottom:10px;}
+.q_research_conts .policy dd .txt_box	{width:233px; height:114px; overflow-y:scroll; border:1px solid #e6e6e6;}
+.q_research_conts .policy dd .txt_box p	{padding:20px; line-height:150%;}
+.q_research_conts .policy dd.sel_rdo	{padding-left:10px;}
+.q_research_conts .policy dd label	{margin-right:22px;}
+
+.q_research_conts .ex_rdo		{float:left; width:500px; padding:20px 0; border-top:1px dotted #f2f2f2;}
+.q_research_conts .ex_rdo dt	{padding:0 0 10px 11px; background:url('http://www.hoppin.nate.com/resource/images/common/bull_dot_gray.gif') left 5px no-repeat;}
+.q_research_conts .ex_rdo dd	{padding:0 0 0 11px;}
+.q_research_conts .ex_rdo dd label		{margin-right:25px; vertical-align:middle;}
+.q_research_conts .ex_rdo dd label.etc	{margin-right:5px;}
+.q_research_conts .ex_rdo dd .txt	{width:302px; height:14px; background:#f2f2f2; padding:4px 9px 0 9px; margin-top:5px; vertical-align:bottom;}
+
+.sp_movie_apply_cancel	{position:absolute; top:300px; left:150px; width:333px; height:136px; background:url('http://www.hoppin.nate.com/resource/images/popup/bg_sp_movie_apply.png') no-repeat;}
+.sp_movie_apply_cancel .txt	{position:relative; text-align:center;}
+.sp_movie_apply_cancel .txt .close	{display:block; position:absolute; top:-30px; right:15px; width:8px; height:7px; background:url('http://www.hoppin.nate.com/resource/images/popup/btn_layer_close.gif') no-repeat; font-size:0; line-height:0; text-indent:-1000px;}
+
+
+
+
+
+/* 영화 메인 리뉴얼 */
+.subtop	{}
+.subtop .promtion	{float:left; height:225px; margin-top:-30px;}
+.subtop .sp_area	{float:right; height:225px;}
+
+.top_promtion		{width:770px; height:285px; margin-top:-30px}
+.top_promtion .list_section	{position:relative; width:100%; height:50px; margin:-50px auto 0 auto; *margin:-52px auto 0 auto; _margin:-54px auto 0 auto; background:#171717; opacity:0.95; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=95);}
+.top_promtion .list_section .prev_view	{float:left; display:block; width:31px; height:50px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_promo_prev.png') no-repeat; font-size:0; text-indent:-3000px;}
+.top_promtion .list_section .next_view	{float:left; display:block; width:31px; height:50px; background:url('http://www.hoppin.nate.com/resource/images/common/btn_promo_next.png') no-repeat; font-size:0; text-indent:-3000px;}
+.top_promtion .wraping {float:left; width:708px; height:50px; overflow:hidden;}
+.top_promtion ul	{float:left; width:1000px;}
+.top_promtion li	{float:left;}
+.top_promtion li img	{width:177px; height:50px;}
+
+.info_layer		{position:absolute; width:261px; height:149px; ;_width:260px; _height:148px; padding:15px 20px;}
+.info_layer dt	{padding-bottom:15px;}
+.info_layer dd	{line-height:150%;}
+.item01 .info_layer		{left:0; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer01.png') no-repeat; _background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer01.gif') no-repeat;}
+.item02 .info_layer		{left:20px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.png') no-repeat; _background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.gif') no-repeat;}
+.item03 .info_layer		{left:150px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.png') no-repeat;_background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.gif') no-repeat;}
+.item04 .info_layer		{left:270px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.png') no-repeat;_background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.gif') no-repeat;}
+.item05 .info_layer		{left:400px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.png') no-repeat;_background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer.gif') no-repeat;}
+.item06 .info_layer		{left:418px; background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer06.png') no-repeat;_background:url('http://www.hoppin.nate.com/resource/images/common/bg_main_info_layer06.gif') no-repeat;}
+
+
+/* 서브 메인 리스트 */
+.sublist		{height:40px; margin-top:30px; background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sublist_tab.gif') repeat-x;}
+.tabnum4 .cate	{width:192px;}
+.sublist .cate	{float:left; background:url('http://www.hoppin.nate.com/resource/images/contents/bull_sublist_li.gif') no-repeat right 13px;}
+.sublist .cate .cate_link	{display:block; width:100%; height:24px; padding:15px 0 0 0; font-size:0; text-align:center;}
+.sublist .on .cate_link	{cursor:default; height:23px;}
+.sublist .on .cate_link	{border-bottom:2px solid #999999;}
+.sublist .on .rec		{border-bottom:2px solid #ec8106 !important;}
+
+
+.list_view			{width:100%;}
+.list_view li		{float:left; width:92px; margin:20px 43px 0 0;}
+.list_view li.end	{margin-right:0;} /* 110621 추가 */
+
+.list_view li .pic			{position:relative; padding:0 2px 3px 0; margin:0;}
+.list_view li .pic .ico		{position:absolute; top:0; left:-4px;}
+.list_view li .pic .ico_br	{position:absolute; bottom:2px; right:2px;}
+.list_view li .pic .ico_r	{position:absolute; top:0; left:0;}
+.list_view li .pic .ico img	{margin-bottom:-6px}
+.list_view li .shadow130		{background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sublist_pic130.gif') no-repeat right top;}
+	*html .list_view li .shadow130 .ico_br	{position:absolute; top:114px; right:2px;}
+.list_view li .shadow68			{background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sublist_pic68.gif') no-repeat right top;}
+	*html .list_view li .shadow68 .ico_br	{position:absolute; top:52px; right:2px;}
+
+.list_view li dl	{margin:0;padding:0;}
+.list_view li dt		{padding-top:5px;}
+	*html .list_view li dt a.t_12_00		{color:#000000 !important;}
+.list_view li dd.info	{padding-top:3px;}
+.list_view li dd.info2	{padding-top:8px;}
+.list_view li dd.info2 .rating_p	{margin:0;}
+
+
+/* 110621 section 홈 개편 */
+.list_view_n		{width:100%;}
+.list_view_n li		{float:left; width:142px; margin:20px 15px 0 0;}
+.list_view_n li.end	{margin-right:0;}
+
+.list_view_n li .pic			{position:relative; padding:0 2px 3px 0; margin:0;}
+.list_view_n li .pic .ico		{position:absolute; top:0; left:-4px;}
+.list_view_n li .pic .ico_br	{position:absolute; bottom:2px; right:2px;}
+.list_view_n li .pic .ico_r	{position:absolute; top:0; left:0;}
+.list_view_n li .pic .ico img	{margin-bottom:-6px}
+.list_view_n li .shadow130		{background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sublist_pic130.gif') no-repeat right top;}
+	*html .list_view_n li .shadow130 .ico_br	{position:absolute; top:114px; right:2px;}
+.list_view_n li .shadow68			{background:url('http://www.hoppin.nate.com/resource/images/contents/bg_sublist_pic68.gif') no-repeat right top;}
+	*html .list_view_n li .shadow68 .ico_br	{position:absolute; top:52px; right:2px;}
+
+.list_view_n li dl	{margin:0;padding:0;}
+.list_view_n li dt		{padding-top:5px;}
+	*html .list_view_n li dt a.t_12_00		{color:#000000 !important;}
+.list_view_n li dd.info	{padding-top:3px;}
+.list_view_n li dd.info2	{padding-top:8px;}
+.list_view_n li dd.info2 .rating_p	{margin:0;}
+
+/* 110928 정액관 배너 추가 */
+.spermad_banner		{width:770px; height:285px; margin-bottom:20px;}
+.spermad_banner .btn_section	{position:relative; width:760px; height:50px; margin:-70px auto 0 auto;*margin:-72px auto 0 auto; _margin:-74px auto 0 auto;  }
+.spermad_banner .buybtn {float:left; width:760px; height:44px; padding-left:50px; overflow:hidden; margin:0 0 0 0;}
+
+/*
+.top_promtion		{width:770px; height:285px; margin-top:-30px}
+.top_promtion .list_section	{position:relative; width:100%; height:50px; margin:-50px auto 0 auto; *margin:-52px auto 0 auto; _margin:-54px auto 0 auto; */
+
+/* //정액관 배너 추가 */
+
+/*110929 추가*/
+.topinfo_wrap .detail_opt .use_nsec     {margin: 0 0 0 -30px;}
+.topinfo_wrap .detail_opt .use_nsec ul  {margin:15px 14px 0 14px;}
+.topinfo_wrap .detail_opt .use_nsec li  {padding:0 0 0 8px;}
+.topinfo_wrap .detail_opt .use_nsec .btns       {padding:5px 0 0 15px;}
