@@ -26,17 +26,12 @@ input.ipchk {top:-1px; position:relative; width:13px; height:13px; vertical-alig
 	ul.sns_list {height:29px; margin:0 !important; padding:0 0 0 1px !important; background:url('../../images/hpn_set_1111_n.gif') -140px top no-repeat;}
 		ul.sns_list li {float:left; display:inline; width:35px; height:29px; padding:0 !important; background:url('../../images/hpn_set_1111_n.gif') -141px top no-repeat;}
 			ul.sns_list li .gn_btn {width:34px; height:26px; margin:1px 0 0 0;}
-			ul.sns_list li .gs_cyworld {background-position:left -30px;}
-			ul.sns_list li .gs_me2day {background-position:-35px -30px;}
-			ul.sns_list li .gs_twitter {background-position:-70px -30px;}
-			ul.sns_list li .gs_facebook {background-position:-105px -30px;}
+			ul.sns_list li .gs_cyworld {background-position:left top;}
+			ul.sns_list li .gs_me2day {background-position:-35px top;}
+			ul.sns_list li .gs_twitter {background-position:-70px top;}
+			ul.sns_list li .gs_facebook {background-position:-105px top;}
 			ul.sns_list li .gs_scrap {width:68px; height:29px; margin:0; background-position:-180px top;}
-		ul.sns_list li.this {}
-			ul.sns_list li.this .gs_cyworld {background-position:left top;}
-			ul.sns_list li.this .gs_me2day {background-position:-35px top;}
-			ul.sns_list li.this .gs_twitter {background-position:-70px top;}
-			ul.sns_list li.this .gs_facebook {background-position:-105px top;}
-			ul.sns_list li.this .gs_scrap {background-position:-250px top;}
+
 /* tv프로그램 */
 .ss_tv {margin-left:-10px; padding:0;}
 .ss_tv .btn_program_detailview {clear:both;}
@@ -129,7 +124,7 @@ p.sns_s_explain {display:inline; font-size:11px; color:#999; letter-spacing:-1px
 			.sns_share_star_btn .sns_s_cancel {width:57px; margin-left:1px; background-position:-160px -60px;}
 
 /* 댓글 SNS 공유 */
-.share_cmt_sns {clear:both; float:left; margin:3px 0 -7px 0;}
+.share_cmt_sns {clear:both; float:left; margin:3px 0 -7px 0;_margin-bottom:-20px;}
 	.share_cmt_sns ul.sns_s_share {float:left; display:inline;}
 	.share_cmt_sns ul.sns_s_share li {margin-right:3px;}
 	.share_cmt_sns p.sns_s_explain {float:left; margin:6px 0 0 8px;}
