@@ -105,7 +105,7 @@ dl.right_rate .star_10 {width:72px;}
 
 /* SNS공유(작은사이즈) */
 ul.sns_s_share {}
-	ul.sns_s_share li {display:inline;}
+	ul.sns_s_share li {z-index:1; position:relative; display:inline;}
 		ul.sns_s_share li .gn_btn {width:18px; height:18px;}
 		ul.sns_s_share li .sns_s_cyworld {background-position:left -60px;}
 		ul.sns_s_share li .sns_s_me2day {background-position:-20px -60px;}
@@ -116,6 +116,9 @@ ul.sns_s_share {}
 		ul.sns_s_share li.this .sns_s_twitter, ul.sns_s_share li .sns_s_t {background-position:-40px -80px;}
 		ul.sns_s_share li.this .sns_s_facebook, ul.sns_s_share li .sns_s_f {background-position:-60px -80px;}
 p.sns_s_explain {display:inline; font-size:11px; color:#999; letter-spacing:-1px;}
+/* 말풍선 레이어 */
+.sns_txt_lyr {position:absolute; top:19px; left:-67px; clear:both; width:150px; height:21px; padding:15px 2px 0 0; font-size:11px; color:#666; letter-spacing:-1px; text-align:center; background:url('../../images/bg_txt_layer.png') left top no-repeat;_background:url('../../images/bg_txt_layer.gif') left top no-repeat;}
+	.sns_txt_lyr em {font-style:normal; font-weight:bold;}
 
 /* 별점 공유 레이어 */
 .sns_share_star {top:2px; position:relative; clear:both; width:192px; margin:0 0 0 -3px; padding:17px 0 0 0; background:url('../../images/bg_sns_share_star.gif') left top no-repeat;}
