@@ -224,51 +224,49 @@
 								</ul>
 							</div>
 							<!-- 퍼가기 레이어 -->
-							<div id="snsShareLayer" class="sns_share_layer">
-								<div class="ssl_shadow">
-									<div class="ssl_in">
-										<h3>영화정보 퍼가기</h3>
-										<p class="ssl_expn">영화정보를 복사하여 각종 블로그, 카페, 게시판 등에 사용할 수가 있습니다.</p>
-										<!-- 영화정보 -->
-										<h4>영화 정보</h4>
-										<div class="ssl_cont clfix">
-											<img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/REP/REP_GL0000184941_5_1.jpg" width="90" height="130" class="ssl_cont_img" alt="아이언맨 2" />
-											<div class="ssl_cont_info">
-												<h5>아이언맨 2 <i class="icn age19">(미성년자 관람불가)</i> <span>Iron man, 2010</span></h5>
-												<dl class="prgm_info">
-													<dt class="hide">장르 / 상영시간 / 개봉일</dt>
-													<dd class="prgm_s_info">스릴러,드라마 / 132분 / 개봉일 2011.02.17</dd>
-													<dt>감독 :</dt>
-													<dd>장-피에르 주네</dd>
-													<dt>배우 :</dt>
-													<dd>오드리 토투, 마티유 카소비츠, 오드리 토투</dd>
-												</dl>
-											</div>
-											<div class="clear"></div>
-											<!-- 복사하기 -->
-											<div class="ssl_copy clfix">
-												<input type="text" size="40" class="ssl_code" id="ssl_code" value="<html><head>hoppin</head><table><tr><td>.hoppin.co.kr/frontofficeweb/mar" />
-												<button type="button" class="gn_btn copy_code" onclick="copyText('ssl_code');" title="소스코드복사"><span class="ir">복사하기</span></button>
-											</div>
-											<p class="ssl_from"><em>hoppin</em> 영화</p>
+							<div id="snsShareLayer" class="sns_share_layer" style="display:none;">
+								<div class="ssl_in">
+									<h3>영화정보 퍼가기</h3>
+									<p class="ssl_expn">영화정보를 복사하여 각종 블로그, 카페, 게시판 등에 사용할 수가 있습니다.</p>
+									<!-- 영화정보 -->
+									<h4>영화 정보</h4>
+									<div class="ssl_cont clfix">
+										<img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/REP/REP_GL0000184941_5_1.jpg" width="90" height="130" class="ssl_cont_img" alt="아이언맨 2" />
+										<div class="ssl_cont_info">
+											<h5>아이언맨 2 <i class="icn age19">(미성년자 관람불가)</i> <span>Iron man, 2010</span></h5>
+											<dl class="prgm_info">
+												<dt class="hide">장르 / 상영시간 / 개봉일</dt>
+												<dd class="prgm_s_info">스릴러,드라마 / 132분 / 개봉일 2011.02.17</dd>
+												<dt>감독 :</dt>
+												<dd>장-피에르 주네</dd>
+												<dt>배우 :</dt>
+												<dd>오드리 토투, 마티유 카소비츠, 오드리 토투</dd>
+											</dl>
 										</div>
-										<!-- 영화 예고편 -->
-										<h4>영화 예고편</h4>
-										<div class="ssl_cont clfix">
-											<!-- 영상 -->
-											<div class="ssl_preview">
-												<img src="resource/images/temp/temp01.gif" width="280" height="204" border="0" alt="" />
-											</div>
-											<!-- 복사하기 -->
-											<div class="ssl_copy clfix">
-												<input type="text" size="40" class="ssl_code" id="ssl_code2"  value="<html><head>hoppin</head><table><tr><td>.hoppin.co.kr/frontofficeweb/mar" />
-												<button type="button" class="gn_btn copy_code" onclick="copyText('ssl_code2');" title="소스코드복사"><span class="ir">복사하기</span></button>
-											</div>
-											<p class="ssl_from"><em>hoppin</em> 영화</p>
+										<div class="clear"></div>
+										<!-- 복사하기 -->
+										<div class="ssl_copy clfix">
+											<input type="text" size="40" class="ssl_code" value="<html><head>hoppin</head><table><tr><td>.hoppin.co.kr/frontofficeweb/mar" />
+											<button type="button" class="gn_btn copy_code" title="소스코드복사"><span class="ir">복사하기</span></button>
 										</div>
-										<!-- 레이어 닫기버튼 -->
-										<button type="button" class="gn_btn ssl_close" onclick="snsSLClose();" title="레이어닫기"><span class="ir">닫기</span></button>
+										<p class="ssl_from"><em>hoppin</em> 영화</p>
 									</div>
+									<!-- 영화 예고편 -->
+									<h4>영화 예고편</h4>
+									<div class="ssl_cont clfix">
+										<!-- 영상 -->
+										<div class="ssl_preview">
+											<img src="resource/images/temp/temp01.gif" width="280" height="204" border="0" alt="" />
+										</div>
+										<!-- 복사하기 -->
+										<div class="ssl_copy clfix">
+											<input type="text" size="40" class="ssl_code" value="<html><head>hoppin</head><table><tr><td>.hoppin.co.kr/frontofficeweb/mar" />
+											<button type="button" class="gn_btn copy_code" title="소스코드복사"><span class="ir">복사하기</span></button>
+										</div>
+										<p class="ssl_from"><em>hoppin</em> 영화</p>
+									</div>
+									<!-- 레이어 닫기버튼 -->
+									<button type="button" class="gn_btn ssl_close" onclick="snsSLClose();" title="레이어닫기"><span class="ir">닫기</span></button>
 								</div>
 							</div>
 						</div>
@@ -308,102 +306,37 @@
 							<li onclick="GetReviewList(10);"><a href="#" onclick="return false;" class="t_12b_66"><span class="num" id="reviewTotalNum">1개의</span> 리뷰</a></li>
 						</ul>
 					</div>
-					<div class="detailWrap">
-					<div class="mvdetailed clfix mb40" id="SP_MovieBasicInfo">
-						<div class="poster">
-							<img width="90" height="130" src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/REP/REP_GL0000184941_1_1.jpg" onerror="this.src='/resource/images/contents/noimg_90x130.jpg'">
+					<!-- 리뷰 에디터 -->
+					<div class="detailWrap" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">
+						<style type="text/css">
+						div.btn_listset span {cursor:pointer}
+						div.btn_listset span a.btn {position:relative;z-index:-1;font-size:0px}
+						</style>
+						<!--  이미지 나열 좌우이동 -->
+						<style type="text/css">
+						  .review_thumb {width:240px; overflow:hidden;position:relative;overflow:hidden;}
+						  .review_thumb ul {position:relative; margin:0; padding:0; list-style:none; width:400px;}
+						  .review_thumb ul li {width:80px; margin:0; padding:0; float:left}
+						  .review_thumb img {width:63px;height:78px;}
+						</style>
+
+							<input type="hidden" name="ctsTpCd" id="ctsTpCd" value="FL">
+							<input type="hidden" name="serisId" id="serisId" value="">
+
+
+						<h4 class="mb20">
+							<img src="http://www.hoppin.nate.com/resource/images/contents/h4_mvd_review.gif" alt="review">
+						</h4>
+
+						<div class="review">
+							<p class="notice"><span class="id"> 명품도시인천님, </span>리뷰를 작성해 주세요.</p>
 						</div>
-						<div class="details">
-							<ul class="info clfix mb20">
-								<li>제목 : 쿵푸팬더 2</li>
-								<li>개봉일 : 2011.05.26</li>
-								<li>상영시간 : 95분</li>
-								<li>장르 : 애니메이션,액션/모험,코미디</li>
-								<li>제작년도 : 2011년</li>
-								<li>상세장르 :  코믹 애니메이션,코믹 액션,슬랩스틱</li>
-								<li>제작 국가 : 미국</li>
-								<li>관람등급 :
-
-									전체관람가
-
-								</li>
-								<li></li>
-
-							</ul>
-							<h5 class="mb10"><img src="http://www.hoppin.nate.com/resource/images/contents/txt_relatedphoto.gif" alt="관련포토" class="mr10">
-								<span class="btn_wrap btn_more">
-									<button type="button" class="btn"> </button>
-								</span>
-							</h5>
-							<ul class="photo">
-											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_1_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_1_1.jpg" width="72" height="68" alt="photo"></a></li>
-											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_2_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_2_1.jpg" width="72" height="68" alt="photo"></a></li>
-											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_3_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_3_1.jpg" width="72" height="68" alt="photo"></a></li>
-											<li><a href="javascript:photo('/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_4_1.jpg')"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/PST/PST_GL0000184941_4_1.jpg" width="72" height="68" alt="photo"></a></li>
-							</ul>
+						<div class="review">
+							<p class="notice">등록된 리뷰가 아직 없습니다.</p>
 						</div>
-					</div>
-					<h4 class="mvdetail_title"><img src="http://www.hoppin.nate.com/resource/images/contents/txt_01synop.gif" alt="01.시놉시스"></h4>
-					<p class="t_12_80 txt_synop mb40" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">용의 전사 포에게 내려진 두 번째 미션!
-					<br>쿵푸를 지켜라!
-					<br>
-					<br>그토록 원하던 용의 전사가 되어 무적의 5인방과 함께 평화의 계곡을 지키게 된 포. 진정한 용의 전사로 거듭나기 위해 시푸 사부와 쿵푸 수련에 매진하던 중, 셴 선생이 위대한 쿵푸 사부들을 하나 둘 씩 제거하고 있다는 소식을 듣게 된다.
-					<br>
-					<br>여전히 바람을 가르는 주먹의 소리보다 배에서울리는 꼬르륵 소리가 더 크고, 오랜 숙적인 계단 앞에서는 맥을 못 추는 천방지축 팬더 포. 이제 막 정식 수련을 시작하려는 포에게 쿵푸를 지켜야 한다는 막중한 미션이 주어지고, 포는 무적의 5인방과 함께 길을 떠난다.
-					<br>
-					<br>과연 포는 쿵푸의 대가들도 막지 못한 셴 선생의 비밀병기에 맞서 쿵푸를 지켜낼 수 있을까?
-					<br>
-					<br>[드디어 밝혀지는 출생의 비밀?!]
-					<br>1편에서 왜 팬더인 포의 아빠가 거위인지 궁금했다면 2편을 절대 놓치지 말기를.
-					<br>2편에서는 포의 출생에 대한 비밀과 함께 깜찍한 베이비 포의 모습이 공개된다.</p>
-					<style type="text/css">
-					a.btn {position:relative;z-index:-1}
-					</style>
-
-
-						<div class="m40"><div style="width: 500px;"></div><h4 class="mvdetail_title"><img alt="02.인물정보" src="http://www.hoppin.nate.com/resource/images/contents/txt_02characterinfo.gif"><span class="info" onclick="clickTrafic();"><a href="#getActorList" class="t_11_80" id="morePeopleInfo">더보기 [29]</a></span></h4><div class="info_person mb200 clfix"><ul class="list01 clfix"><li rolecd="001" data="GL0000139565"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80">감독</dt><dd class="t_11b_4c" title="여인영">여인영</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000005702"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="잭 블랙">잭 블랙</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000001829"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="안젤리나 졸리">안젤리나 졸리</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000000571"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="더스틴 호프만">더스틴 호프만</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000000628"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="성룡">성룡</dd><dd class="t_11_80"></dd></dl></li><li rolecd="" data="GL0000023416"><img alt="photo" src="http://www.hoppin.nate.com/resource/images/common/noimg_100_100.gif" onerror="this.src='/resource/images/common/noimg_100_100.gif'" style="width:55px;height:75px"><dl><dt class="t_11b_80"></dt><dd class="t_11b_4c" title="루시 리우">루시 리우</dd><dd class="t_11_80"></dd></dl></li></ul><div class="list_other_mv" style="z-index: 5; top: 135px; display: block; " data="GL0000139565" rolecd="001"><div style="left: 10px; " class="arrow_sel"><img class="png24" alt="" src="http://www.hoppin.nate.com/resource/images/contents/bg_pinfo_sel.png"></div><p class="txt t_11b_80"><img alt="이 인물의다른작품" class="png24" src="http://www.hoppin.nate.com/resource/images/contents/txt_directorothermv.png"> [1]  <a class="ml20" href="#" id="leftbutton"><img class="png24" alt="left" src="http://www.hoppin.nate.com/resource/images/contents/btn_trans_left.png"></a><a href="#" id="rightbutton"><img class="png24" alt="right" src="http://www.hoppin.nate.com/resource/images/contents/btn_trans_right.png"></a></p><div style="width:480px; overflow:hidden; position:relative"><ul class="list02 clfix" id="refContList" style="position: relative; width: 480px; "><li><div class="cell_movie_s" onclick="goDetail('/serviceportal/movie/movieDetail/searchDetailView.do?dpRepProdId=P00000004924&amp;dpSpaceId=100000000031');"><div class="pic"><a href="/serviceportal/movie/movieDetail/searchDetailView.do?dpRepProdId=P00000004924&amp;dpSpaceId=100000000031"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000176667/IMAGE/REP/REP_GL0000176667_1_1.jpg" alt="쿵푸 팬더" onerror="this.src='/resource/images/contents/nothumb_62x90.jpg'" width="68px" height="98px"></a></div><div class="info"><a href="/serviceportal/movie/movieDetail/searchDetailView.do?dpRepProdId=P00000004924&amp;dpSpaceId=100000000031" class=" t_11_66"><span class="t_11b_00">[영화]</span> 쿵푸 팬더</a></div><div class="shadow"></div></div></li></ul></div></div></div></div><h4 class="mvdetail_title"><img src="http://www.hoppin.nate.com/resource/images/contents/txt_03comment.gif" alt="03.코멘트"><span class="info"><a href="javascript:getCommentListMarket('MV','P00000011150','','CommentListBasic');" class="t_11_80">더보기 [0]</a></span></h4>
-					<!-- comment top -->
-					<div id="comment_top" class="comment_write clfix mb25">
-						<textarea class="t_11_a6" id="SP_CommentText" onfocus="javascript:SetFocus();" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">코멘트는 최대 200자까지 등록가능합니다.</textarea>
-						<span class="btn_wrap btn_b_reg2"><button type="submit" class="btn" onclick="javascript:CommentWrite('100000000024');">등록</button></span>
-						<p class="text_limit"><strong><span class="fc_999">0/200</span></strong></p>
-						<p class="mt10"></p>
-						<!-- SNS 댓글 -->
-						<div class="share_cmt_sns clfix">
-							<ul id="sns_share_small" class="sns_s_share">
-								<li><button type="button" class="gn_btn sns_s_cyworld" onmouseover="this.className='gn_btn sns_s_c';" onmouseout="this.className='gn_btn sns_s_cyworld';" title="싸이월드"><span class="ir">싸이월드</span></button></li>
-								<li><button type="button" class="gn_btn sns_s_me2day" onmouseover="this.className='gn_btn sns_s_m';" onmouseout="this.className='gn_btn sns_s_me2day';" title="미투데이"><span class="ir">미투데이</span></button></li>
-								<li><button type="button" class="gn_btn sns_s_twitter" onmouseover="this.className='gn_btn sns_s_t';" onmouseout="this.className='gn_btn sns_s_twitter';" title="트위터"><span class="ir">트위터</span></button></li>
-								<li><button type="button" class="gn_btn sns_s_facebook" onmouseover="this.className='gn_btn sns_s_f';" onmouseout="this.className='gn_btn sns_s_facebook';" title="페이스북"><span class="ir">페이스북</span></button></li>
-							</ul>
-							<p class="sns_s_explain">외부서비스를 선택하여 친구들과 공유해 보세요</p>
+						<div class="al_right">
+							<span class="btn_wrap btn_b_review_write"><button type="button" class="btn" onclick="GetReviewWrite('P00000007231', ''); Common.clickTfficStatAjax({pid:'nhp1',rid:clickId});">리뷰쓰기</button></span>
 						</div>
-					</div>
-					<!-- //comment top -->
-					<!--comment amount -->
-					<!-- //comment amount -->
-					<!-- comment list -->
-
-
-					<!-- 등록된 코멘트 없을 때 -->
-					<ul class="comment_list mb20" id="CommentLists">
-						<li>
-							<p class="t_12_66 al_center">등록된 코멘트가 아직 없습니다.</p>
-						</li>
-					</ul>
-
-					<h4 class="mvdetail_title">
-					<img src="http://www.hoppin.nate.com/resource/images/contents/txt_04review.gif" alt="04.리뷰">
-					<span class="info">
-					<a href="javascript:GetReviewList(10);" class="t_11_80">더보기 [0]</a>
-					</span></h4>
-					<!-- review // 리뷰없을 때 -->
-					<div class="review">
-						<p class="notice">등록된 리뷰가 아직 없습니다.</p>
-					</div>
-					<div class="al_right">
-						<span class="btn_wrap btn_b_review_write"><button type="button" class="btn" onclick="GetReviewWrite('P00000011150', ''); Common.clickTfficStatAjax({pid:'nhp1',rid:clickId});">리뷰쓰기</button></span>
-					</div>
 
 					</div>
 				</div>
@@ -436,7 +369,8 @@
 								<div class="sns_share_star_b">
 									<ul id="sns_share_small" class="sns_s_share">
 										<li><button type="button" class="gn_btn sns_s_cyworld" onmouseover="this.className='gn_btn sns_s_c';" onmouseout="this.className='gn_btn sns_s_cyworld';" title="싸이월드"><span class="ir">싸이월드</span></button></li>
-										<li><button type="button" class="gn_btn sns_s_me2day" onmouseover="this.className='gn_btn sns_s_m';" onmouseout="this.className='gn_btn sns_s_me2day';" title="미투데이"><span class="ir">미투데이</span></button></li>
+										<!-- 선택일 때 lli class="this" -->
+										<li class="this"><button type="button" class="gn_btn sns_s_me2day" onmouseover="this.className='gn_btn sns_s_m';" onmouseout="this.className='gn_btn sns_s_me2day';" title="미투데이"><span class="ir">미투데이</span></button></li>
 										<li><button type="button" class="gn_btn sns_s_twitter" onmouseover="this.className='gn_btn sns_s_t';" onmouseout="this.className='gn_btn sns_s_twitter';" title="트위터"><span class="ir">트위터</span></button></li>
 										<li><button type="button" class="gn_btn sns_s_facebook" onmouseover="this.className='gn_btn sns_s_f';" onmouseout="this.className='gn_btn sns_s_facebook';" title="페이스북"><span class="ir">페이스북</span></button></li>
 									</ul>

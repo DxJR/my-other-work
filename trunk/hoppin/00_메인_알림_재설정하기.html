@@ -1,0 +1,1629 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>hoppin</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/main.css?ver=45181" type="text/css">
+<link rel="stylesheet" href="resource/common/css/hoppin_renew_1111.css" type="text/css">
+<link type="text/css" href="http://www.hoppin.nate.com/resource/common/css/jquery.jscrollpane.css"  rel="stylesheet" media="all" >
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">DD_belatedPNG.fix('.png_bg');</script>
+<![endif]-->
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/main_common_wvp_plugin.js?20110808"></script>
+<script type="text/javascript" src="http://common.nate.com/nameUI/CommonScript.aspx?t=A&c=UTF8"></script>
+
+<script>
+
+
+bannercount = 2;
+
+$(document).ready(function(){
+	var _agent = navigator.userAgent;
+
+	if( _agent.search('iPad') != -1 || _agent.search('iPhone') != -1){
+		ShowIpadModalLayer();
+	}
+
+	$("div[id=img]").live('mouseover', showInfoLayer);
+	$("div[id=img]").live('mouseout', hideInfoLayer);
+	$(".info_layer").live('mouseover', showInfoLayer);
+	$(".info_layer").live('mouseout', hideInfoLayer);
+	$("a[id=aEvent]").live('mouseover', onMouseOver);
+	$("a[id=aEvent]").live('mouseout', outMouseOver);
+	$("a[id=aRank]").live('mouseover', onMouseOver);
+	$("a[id=aRank]").live('mouseout', outMouseOver);
+	$("a[id=rankTab]").live('mouseover', onRankTab);
+	$(".pre_a").live('click', pageChange);
+	$(".next_a").live('click', pageChange);
+
+	InitBanner();
+
+	$('.p_view').each(function(i){
+		changeBanner(this, i);
+	});
+
+	//프로모션 이미지 스크롤링
+	$('div.top_promtion').promotion();
+
+	function onMouseOver(){
+		if($(this).attr("id")  == "aEvent"){
+			$(this).attr("class", "t_12b_00");
+		}
+		else{
+			$(this).css("font-weight", "bold");
+		}
+	}
+
+	function outMouseOver(){
+		if($(this).attr("id")  == "aEvent"){
+			$(this).attr("class", "t_12_4c");
+		}
+		else{
+			$(this).css("font-weight", "");
+		}
+	}
+
+	function onRankTab(){
+		var ctgClCd = $(this).attr("ctgClCd");
+
+		if($(this).attr("class") == "on"){
+			return;
+		}
+
+		$(this).attr("class", "on");
+
+		rankingList(ctgClCd);
+
+		$("a[id=rankTab]").each(function(){
+			if($(this).attr("ctgClcd") != ctgClCd){
+				$(this).attr("class", "off");
+			}
+		});
+	}
+
+	function showInfoLayer(){
+		if($(this).attr("class") == "info_layer"){
+			$(this).css("display", "");
+		}
+		else{
+			var li = $(this).parents("li");
+			li.find(".info_layer").css("display", "");
+		}
+	}
+
+	function hideInfoLayer(){
+		if($(this).attr("class") == "info_layer"){
+			$(this).css("display", "none");
+		}
+		else{
+			var li = $(this).parents("li");
+			li.find(".info_layer").css("display", "none");
+		}
+	}
+
+
+});
+
+function getCookie(name){
+	var prefix = name + "=";
+	var cookieStartIndex = document.cookie.indexOf(prefix);
+	if (cookieStartIndex == -1)
+		return "";
+	var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
+	if (cookieEndIndex == -1)
+		cookieEndIndex = document.cookie.length;
+	return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+//08-31 공지 팝업
+//if( getCookie("noticePop0831") != "no" ){
+//	var newWin=window.open("http://www.hoppin.nate.com/resource/html/popup/pop0831/pop0831.html", "noticePop0831","width=500,height=450,scrollbars=no,resizable=no,left=0,top=0,directories=no,status=no,menubar=no");
+//	if(newWin) newWin.focus();
+//}
+
+</script>
+</head>
+
+<body>
+
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/nateglobalsearch.js"></script>
+<script type="text/javaScript">
+	var hoppin_isLogin = true;
+
+		var nation_cd = 'KR';
+		var serviceAble_yjh = 'Y';
+
+
+	$(document).ready(function() {
+		//검색어 자동완성
+		//SetGlobalSearch_left();
+		//검색어 히스토리
+		//SetGlobalHistory_left();
+	});
+
+	$(document).ready(function(){
+
+		//네이트 통합 검색 관련 스크립트 추가 2010-11-30
+		SetGlobalSearch_nate();
+		SetGlobalHistory_nate();
+		//네이트 통합 검색 본문 클릭시 검색 결과 숨김
+		$('body').click(function(){
+			//$('#searchresultlist').parent('div.opt_list').hide();
+		});
+	});
+
+	// -----------------------------------------------------------------------------------------------------------------
+	// 검색창 광고 관련
+	// -----------------------------------------------------------------------------------------------------------------
+	function hideBg(){
+
+	}
+	function showBg(){
+		if($("#input_search_all").val() !="") return;
+		$(".t_search").css("background", "url('/resource/images/common/txt_l_search01.gif') no-repeat");
+	}
+
+</script>
+
+
+
+<div id="header">
+	<h1><a href="http://www.nate.com" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG1'});">NATE</a></h1>
+
+	<h2><a href="http://www.hoppin.nate.com" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG2'});">Hoppin</a></h2>
+
+	<!-- search -->
+	<div id="searchWrap">
+
+		<form id="search" name="search" action="http://search.nate.com/search/all.html?" method="get" target="_blank">
+			<input type="hidden" name="thr" value="" />	<!-- 이 값은 네이트 협의 후 변경해야 함 -->
+			<input type="hidden" name="nq" value="1" />
+			<input type="hidden" name="en" value="1" />
+			<fieldset>
+				<legend>검색영역</legend>
+				<input type="text" id="input_search_all" name="q" class="searchBox" title="검색어 입력" onfocus="hideBg()" onblur="showBg()" value="" />
+				<input type="text" name="dummyText"style="display:none;"/><!-- submit을 막기위한 더미 -->
+				<input type="button" class="btn_service" title="검색" onclick='Common.goSearch($("#input_search_all").val(), "400000000001");Common.clickTfficStatAjax({pid:"nhp1",rid:"RNG13"});' />
+				<input type="button" class="btn_all" title="통합검색" onclick="search.submit();Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG14'});" />
+				<img height="4" width="7" alt="자동완성" src="http://www.hoppin.nate.com/resource/images/common/layer_on01.gif" id="acImg">
+				<div class="opt_list" style="display:none;">
+				<ul id="searchresultlist">
+				<!-- ajax 삽입영역 -->
+				</ul>
+				<div class="btn_area clfix" id="searchguide">
+						<!--검색 On/off 안내 레이어//-->
+						<div class="autosearh_info" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/global/img_autosearh_info.png" alt="기능을 다시 켤 때에는 검색창을 클릭하세요"  width="178" height="70"></div>
+						<div class="btn">
+							<a href="#" title="닫기"><img src="http://www.hoppin.nate.com/resource/images/common/btn_autosearch_close.gif" alt="검색 자동완성 기능 끄기" width="113" height="12"></a>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="gnbMenu">
+		<script type="text/javascript">
+		//<![CDATA[
+			var NateGNB = new classNateGNB();
+		//]]>
+		</script>
+		<noscript>
+		<div id="noscript_gnb">
+			<div>
+				<a href="http://www.nate.com/" title="네이트 메인으로" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG1'});">네이트 메인으로</a> <span>|</span>
+				<a href="http://www.nate.com/sitemap/" title="사이트맵">사이트맵</a>
+			</div>
+		</div>
+		</noscript>
+	</div>
+
+	<div class="promotionSpot">
+		<a href="http://www.hoppin.nate.com/myway.do" target="_self" ><img src="http://www.hoppin.nate.com/resource/images/event/myway/image_gnb_banner.jpg" alt="BANNER" /></a>
+	</div>
+
+
+</div>
+
+<!-- Wrap -->
+<div id="wrap">
+	<!-- ContensWrap -->
+	<div id="contentWrap">
+<!-- 리뉴얼 추가 -->
+		<div id="top_gnb">
+
+<ul class="common clifx">
+
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG1'});"><a href="/"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb01_on.gif" alt="홈"></a></li>
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG2'});"><a href="/serviceportal/movie/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb02.gif" alt="영화"></a></li>
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG3'});"><a href="/serviceportal/tv/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb03.gif" alt="TV프로그램"></a></li>
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG4'});"><a href="/serviceportal/music/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb04.gif" alt="뮤직비디오"></a></li>
+
+	<li	><a href="/serviceportal/bs/fixedamount/fdProd/searchProdList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb12.gif" alt="정액관"></a></li>
+
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG5'});"><a href="/serviceportal/event/event/selectEventMainList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb15.gif" alt="이벤트"></a></li>
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG6'});" class="no_brd"><a href="/serviceportal/mypage/myPageMain/searchMyPageMain.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb16.gif" alt="마이페이지"></a></li>
+
+</ul>
+<ul class="privacy clifx">
+
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG7'});" class="bar"><a href="/serviceportal/common/salePass/searchSalePassList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb10.gif" alt="이용권"></a></li>
+	<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG8'});" class="bar"><a href="/serviceportal/cscenter/main/searchCstmMain.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb11.gif" alt="고객센터"></a></li>
+	<li	class="etc"><a href="/serviceportal/bs/disney/home/main/searchMain.do" target="_blank"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb17.gif" alt="디즈니"></a></li>
+
+</ul>
+
+		</div>
+<!-- //리뉴얼 추가 -->
+
+		<!-- Contens Area -->
+		<div id="conts">
+			<div class="main_view clfix">
+				<!-- 프로모션 영역 -->
+				<div class="top_promtion">
+					<h2 class="none">프로모션</h2>
+					<a href="#">
+					<img src="http://img.hoppin.nate.com/resource_share/file/event/201111/2011113013473818.jpg" alt="" width="710" height="270" onerror="this.src='/resource/images/contents/nothumb_104x78.jpg'">
+					</a>
+					<div class="list_section clfix">
+						<a href="#" class="prev_view png_bg" title="이전보기">이전보기</a>
+						<div class="wraping clfix">
+							<ul>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201111/20111130134738114.png"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201111/2011113013473818.jpg"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="http://www.hoppin.nate.com/serviceportal/event/event/selectEventDetail.do?pageNo=1&evntPrgsStatCd=&evntNum=604" target="_blank"> </a>
+									</a>
+								</li>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201111/20111123143157620.png"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201111/20111124143109241.jpg"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="http://www.hoppin.nate.com/mywayEvent2.do" target="_blank"> </a>
+									</a>
+								</li>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201111/20111116143003493.png"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201111/20111116143003483.jpg"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="http://www.hoppin.nate.com/specialpage/disneyEvent.do" target="_blank"> </a>
+									</a>
+								</li>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201111/20111111172857294.png"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201111/20111111172857264.jpg"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="/serviceportal/event/event/selectEventDetail.do?pageNo=1&evntPrgsStatCd=&evntNum=597"> </a>
+									</a>
+								</li>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201110/20111018165741897.jpg"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201110/20111018165741791.jpg"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="http://www.hoppin.nate.com/serviceportal/event/event/searchEventPlainListForm.do?tabCd=MV07&menuId=67" target="_blank"> </a>
+									</a>
+								</li>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201110/20111031213655144.jpg"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201111/20111130130622331.jpg"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="/serviceportal/event/event/selectEventDetail.do?pageNo=1&evntPrgsStatCd=&evntNum=570"> </a>
+									</a>
+								</li>
+								<li>
+										<img src="http://img.hoppin.nate.com/resource_share/file/event/201110/20111007135049608.jpg"
+										  bigImg="http://img.hoppin.nate.com/resource_share/file/event/201110/20111007135049501.JPG"
+										  style="filter:Alpha(opacity=40); opacity:0.4; cursor:pointer;" alt="" width="162" height="50">
+												<a href="http://www.hoppin.nate.com/serviceportal/tv/tv/searchTvPlainListForm.do?tabCd=TV07&menuId=63" target="_blank"> </a>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="next_view png_bg" title="다음보기">다음보기</a>
+					</div>
+				</div>
+				<!-- //프로모션 영역 -->
+
+				<!-- 영화 -->
+				<div class="movie_section">
+					<h2><a href="/serviceportal/movie/main/searchDisplay.do" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD1'});"><img id="movieImg" src="http://www.hoppin.nate.com/resource/images/common/h2_main_movie.gif" width="25px" height="14px" alt="영화"></a>
+					<span class="al_top t_12_e5" id="movieForU" style="display:none;">| <span class="t_12b_70">명품도시인천</span><span class="t_12b_4c">님을 위한 추천 영화입니다.</span></span></h2>
+
+					<!-- 영화 좌측 배너 -->
+						<div class="p_view" style="overflow:hidden;width:162px;height:210px" onClick="Common.bannerTfficStatAjax('MAIN04');">
+								<a style="display:none" href="http://www.hoppin.nate.com/serviceportal/movie/movie/searchMoviePlainListForm.do?tabCd=MV07&menuId=42"  onclick="Common.ppsLogAjax({'dpSpaceId':'000000000021'}); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD2'});" interval="NE" bnrExpMthdCd="RL"><img src="http://img.hoppin.nate.com/resource_share/file/banner/20110930180413468_01.jpg" width="162" height="210" alt="영화 무료관" onerror="this.src='/resource/images/common/img_main_movie_p.jpg'"></a>
+						</div>
+
+					<!-- Sub list 보기 -->
+					<div class="list_area" id="movieList">
+
+
+
+
+<ul class="list_view clfix">
+	<li>
+		<div class="pic shadow130" id="img">
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011494', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00010970'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD12'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000199013/IMAGE/REP/REP_GL0000199013_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+
+		</div>
+		<dl>
+			<dt>
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011494', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00010970'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD17'});"
+			class="t_12_00" title="최종병기 활">최종병기 활</a>
+
+			</dt>
+			<dd class="info t_11_80"><a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션/모험</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라</a>
+. . .</dd>
+			<dd class="info2">
+				<div class="rating_p">
+					<!-- 숫자 -->
+					<div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="8"  width="6" height="7" /><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."  width="2" height="2"/><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_9.gif" alt="9" width="6" height="7"  /></div>
+					<!-- 별 (star_0 ~ star_10) -->
+					<div class="star_9">9</div>
+				</div>
+			</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item01"><div class="info_layer" style="display:none; top:-366px; ">
+			<dl>
+				<dt class="t_14b_00" title="최종병기 활">최종병기 활</dt>
+				<dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션/모험</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+. . .
+				 / 122분 / 개봉일 2011.08.10</dd>
+				<dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('김한민', '', 'GL0000077577', 'P00000011494', ''); return false;" class="t_11_80">김한민</a> </dd>
+				<dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('박해일', '', 'GL0000036439', 'P00000011494', ''); return false;" class="t_11_80">박해일</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('류승룡', '', 'GL0000096877', 'P00000011494', ''); return false;" class="t_11_80">류승룡</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('문채원', '', 'GL0000130821', 'P00000011494', ''); return false;" class="t_11_80">문채원</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김무열', '', 'GL0000132227', 'P00000011494', ''); return false;" class="t_11_80">김무열</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('이한위', '', 'GL0000016466', 'P00000011494', ''); return false;" class="t_11_80">이한위</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 50만 포로가 끌려간 병자호란,
+치열했던 전쟁의 한 복판에 역사가 기록하지 못한 위대한 신궁이 있었다.
+역적의 자손이자 조선 최고의...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li>
+		<div class="pic shadow130" id="img">
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011710', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00011212'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD13'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000159257/IMAGE/REP/REP_GL0000159257_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+
+		</div>
+		<dl>
+			<dt>
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011710', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00011212'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD18'});"
+			class="t_12_00" title="의뢰인">의뢰인</a>
+
+			</dt>
+			<dd class="info t_11_80"><a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('006'); return false;" class="t_11_66_c">스릴러</a></dd>
+			<dd class="info2">
+				<div class="rating_p">
+					<!-- 숫자 -->
+					<div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="8"  width="6" height="7" /><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."  width="2" height="2"/><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_6.gif" alt="6" width="6" height="7"  /></div>
+					<!-- 별 (star_0 ~ star_10) -->
+					<div class="star_9">9</div>
+				</div>
+			</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item02"><div class="info_layer" style="display:none; top:-366px; ">
+			<dl>
+				<dt class="t_14b_00" title="의뢰인">의뢰인</dt>
+				<dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('006'); return false;" class="t_11_66_c">스릴러</a>
+				 / 123분 / 개봉일 2011.09.29</dd>
+				<dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('손영성', '', 'GL0000105418', 'P00000011710', ''); return false;" class="t_11_80">손영성</a> </dd>
+				<dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('하정우', '', 'GL0000076051', 'P00000011710', ''); return false;" class="t_11_80">하정우</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('박희순', '', 'GL0000038598', 'P00000011710', ''); return false;" class="t_11_80">박희순</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('장혁', '', 'GL0000008022', 'P00000011710', ''); return false;" class="t_11_80">장혁</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('성동일', '', 'GL0000006704', 'P00000011710', ''); return false;" class="t_11_80">성동일</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김성령', '', 'GL0000020135', 'P00000011710', ''); return false;" class="t_11_80">김성령</a>
+,
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 피로 물든 침대, 사라진 시체, 그리고 살인 혐의.. 재판이 끝나기 전까진 누구도 믿을 수 없다!
+시체 없는 살인사건, 그러나 명백한...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li>
+		<div class="pic shadow130" id="img">
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011749', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00011261'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD14'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000185309/IMAGE/REP/REP_GL0000185309_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+
+		</div>
+		<dl>
+			<dt>
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011749', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00011261'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD19'});"
+			class="t_12_00" title="악질 경찰">악질 경찰</a>
+
+			</dt>
+			<dd class="info t_11_80"><a href="#" onClick="javascript:Common.movieGenreList('006'); return false;" class="t_11_66_c">스릴러</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a></dd>
+			<dd class="info2">
+				<div class="rating_p">
+					<!-- 숫자 -->
+					<div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_5.gif" alt="5"  width="6" height="7" /><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."  width="2" height="2"/><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_5.gif" alt="5" width="6" height="7"  /></div>
+					<!-- 별 (star_0 ~ star_10) -->
+					<div class="star_6">6</div>
+				</div>
+			</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item03"><div class="info_layer" style="display:none; top:-366px; ">
+			<dl>
+				<dt class="t_14b_00" title="악질 경찰">악질 경찰<img src="http://www.hoppin.nate.com/resource/images/common/ico_19_s.gif" class="al_middle" alt="19금"></dt>
+				<dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('006'); return false;" class="t_11_66_c">스릴러</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+				 / 121분 / 개봉일 2011.11.10</dd>
+				<dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('베르너 헤어조그', '', 'GL0000011139', 'P00000011749', ''); return false;" class="t_11_80">베르너 헤어조그</a> </dd>
+				<dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('니콜라스 케이지', '', 'GL0000000726', 'P00000011749', ''); return false;" class="t_11_80">니콜라스 케이지</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('발 킬머', '', 'GL0000001205', 'P00000011749', ''); return false;" class="t_11_80">발 킬머</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('에바 멘데스', '', 'GL0000006733', 'P00000011749', ''); return false;" class="t_11_80">에바 멘데스</a>
+,
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 권력이 부패를 만나면 더욱 악질이 된다!!
+뉴올리언즈 형사 테렌스 맥도나는 허리케인 카트리나가 불어 닥친 와중에 탈옥범을 구하려다...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li>
+		<div class="pic shadow130" id="img">
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011759', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00011247'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD15'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000199440/IMAGE/REP/REP_GL0000199440_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+
+		</div>
+		<dl>
+			<dt>
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011759', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00011247'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD20'});"
+			class="t_12_00" title="무협">무협</a>
+
+			</dt>
+			<dd class="info t_11_80"><a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션/모험</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라</a>
+. . .</dd>
+			<dd class="info2">
+				<div class="rating_p">
+					<!-- 숫자 -->
+					<div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="8"  width="6" height="7" /><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."  width="2" height="2"/><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_4.gif" alt="4" width="6" height="7"  /></div>
+					<!-- 별 (star_0 ~ star_10) -->
+					<div class="star_8">8</div>
+				</div>
+			</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item04"><div class="info_layer" style="display:none; top:-366px; ">
+			<dl>
+				<dt class="t_14b_00" title="무협">무협</dt>
+				<dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션/모험</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+. . .
+				 / 127분 / 개봉일 2011.11.17</dd>
+				<dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('진가신', '', 'GL0000003172', 'P00000011759', ''); return false;" class="t_11_80">진가신</a> </dd>
+				<dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('탕웨이', '', 'GL0000131300', 'P00000011759', ''); return false;" class="t_11_80">탕웨이</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('견자단', '', 'GL0000014684', 'P00000011759', ''); return false;" class="t_11_80">견자단</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('금성무', '', 'GL0000000271', 'P00000011759', ''); return false;" class="t_11_80">금성무</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('왕우', '', 'GL0000010845', 'P00000011759', ''); return false;" class="t_11_80">왕우</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('혜영홍', '', 'GL0000015356', 'P00000011759', ''); return false;" class="t_11_80">혜영홍</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 무武를 버린 자 vs 협俠을 쫓는 자. 그리고 그들을 추격하는 어두운 과거!
+청나라 말기, 중국 남부의 한 마을. 종이 기술자로 아내 아...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li>
+		<div class="pic shadow130" id="img">
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011150', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00010643'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD16'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000184941/IMAGE/REP/REP_GL0000184941_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+
+		</div>
+		<dl>
+			<dt>
+
+			<a
+				href="javascript:Common.goMovieDetail('P00000011150', '', {'dpSpaceId':'000000000011','MOVIEPRODID':'PDRS00010643'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD21'});"
+			class="t_12_00" title="쿵푸팬더 2">쿵푸팬더 2</a>
+
+			</dt>
+			<dd class="info t_11_80"><a href="#" onClick="javascript:Common.movieGenreList('001'); return false;" class="t_11_66_c">애니메이션</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션</a>
+. . .</dd>
+			<dd class="info2">
+				<div class="rating_p">
+					<!-- 숫자 -->
+					<div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="8"  width="6" height="7" /><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."  width="2" height="2"/><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_9.gif" alt="9" width="6" height="7"  /></div>
+					<!-- 별 (star_0 ~ star_10) -->
+					<div class="star_9">9</div>
+				</div>
+			</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item05"><div class="info_layer" style="display:none; top:-366px; ">
+			<dl>
+				<dt class="t_14b_00" title="쿵푸팬더 2">쿵푸팬더 2</dt>
+				<dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('001'); return false;" class="t_11_66_c">애니메이션</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('200'); return false;" class="t_11_66_c">액션/모험</a>
+,
+. . .
+				 / 95분 / 개봉일 2011.05.26</dd>
+				<dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('여인영', '', 'GL0000139565', 'P00000011150', ''); return false;" class="t_11_80">여인영</a> </dd>
+				<dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('잭 블랙', '', 'GL0000005702', 'P00000011150', ''); return false;" class="t_11_80">잭 블랙</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('안젤리나 졸리', '', 'GL0000001829', 'P00000011150', ''); return false;" class="t_11_80">안젤리나 졸리</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('더스틴 호프만', '', 'GL0000000571', 'P00000011150', ''); return false;" class="t_11_80">더스틴 호프만</a>
+,
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 용의 전사 포에게 내려진 두 번째 미션!
+쿵푸를 지켜라!
+그토록 원하던 용의 전사가 되어 무적의 5인방과 함께 평화의 계곡을 지키...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+</ul>
+<a href="javascript:void(0);" ctgClCd="FL" clCd="hot" class="next_a" title="다음보기">다음</a>
+<div class="view_cate"><a href="javascript:getHotList('FL', 1, 'tab'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD3'});" class="link01_on">Hot</a> | <a href="javascript:getRcmdList('FL', 1, 'tab'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMD4'});" class="link02">추천</a></div>
+<div class="mini_paging clfix">
+<a href="javascript:getHotList('FL', 1);" title="1" class="on"></a>
+<a href="javascript:getHotList('FL', 2);" title="2" ></a>
+<a href="javascript:getHotList('FL', 3);" title="3" ></a>
+</div>
+<input type="hidden" name="curPageNo" id="curPageNo" value="1">
+<input type="hidden" name="totalCnt" id="totalCnt" value="3">
+
+<input type="hidden" name="movie_rcmSerNum" id="movie_rcmSerNum" value="">
+
+					</div>
+					<!-- //Sub list 보기 -->
+				</div>
+				<!-- //영화 -->
+
+				<!-- Tv 프로그램 -->
+				<div class="tv_section">
+					<h2><a href="/serviceportal/tv/main/searchDisplay.do" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME1'});"><img id="tvImg" src="http://www.hoppin.nate.com/resource/images/common/h2_main_tv.gif" width="69px" height="14px" alt="TV 프로그램"></a>
+					<span class="al_top t_12_e5" id="tvForU" style="display:none;">| <span class="t_12b_70">명품도시인천</span><span class="t_12b_4c">님을 위한 추천 TV 프로그램입니다.</span></span></h2>
+
+					<!-- TV 좌측 배너 -->
+						<div class="p_view" style="overflow:hidden;width:162px;height:245px" onClick="Common.bannerTfficStatAjax('MAIN05');">
+							<a style="display:none" href="http://www.hoppin.nate.com/serviceportal/tv/tv/searchTvPlainListForm.do?tabCd=TV07&menuId=22" target="_blank" onclick="Common.ppsLogAjax({'dpSpaceId':'000000000022'}); Common.clickTfficStatAjax({pid:'nhp1',rid:'RME2'});" interval="NE" bnrExpMthdCd="RL"><img src="http://img.hoppin.nate.com/resource_share/file/banner/201110061935462_01.jpg" alt="[TV] 무료관 Open" width="164" height="245" onerror="this.src='/resource/images/common/img_main_tv_p.jpg'"></a>
+						</div>
+					<!-- Sub list 보기 -->
+					<div class="list_area" id="tvList">
+
+
+
+<ul class="list_view clfix">
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+			<div class="ico_br"><img class="png_bg" src="http://www.hoppin.nate.com/resource/images/contents/ico_free.png" alt="무료" width="42" height="16"></div> <!-- 무료 아이콘 -->
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011814', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011325'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME8'});"
+			><img index="1" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214924/IMAGE/STC/STC_GL0000214924_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011814', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011325'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME18'});"
+			class="t_12_00" title="무한도전 제278회">무한도전</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item01"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="무한도전 제278회">무한도전 제278회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('002'); return false;" class="t_11_66_c">MBC</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('002'); return false;" class="t_11_66_c">쇼오락</a>/
+					60분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('김태호', '', '', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">김태호</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('제영재', '', '', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">제영재</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('정준하', '', 'GL0000059752', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">정준하</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('유재석', '', 'GL0000085909', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">유재석</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('박명수', '', 'GL0000112569', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">박명수</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('정형돈', '', 'GL0000047987', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">정형돈</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('노홍철', '', 'GL0000112564', 'P00000011814', 'GL0000189535'); return false;" class="t_11_80">노홍철</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 성장 드라마 명수는 12살</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011813', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011322'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME9'});"
+			><img index="2" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214922/IMAGE/STC/STC_GL0000214922_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011813', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011322'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME19'});"
+			class="t_12_00" title="우리 결혼했어요 제111회">우리 결혼했어...</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item02"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="우리 결혼했어요 제111회">우리 결혼했어요 제111회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('002'); return false;" class="t_11_66_c">MBC</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('002'); return false;" class="t_11_66_c">쇼오락</a>/
+					60분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('정윤정', '', '', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">정윤정</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('강궁', '', '', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">강궁</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('박선희', '', '', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">박선희</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('닉쿤', '', 'GL0000150862', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">닉쿤</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('빅토리아', '', '', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">빅토리아</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김원준', '', '', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">김원준</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('박소현', '', '', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">박소현</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('이장우', '', 'GL0000146451', 'P00000011813', 'GL0000204878'); return false;" class="t_11_80">이장우</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 장우♡은정 : 딸보다 사위?
+은정 부인 몰래 장모님과 단둘이 쇼핑 데이트를 한 장우!
+이 사실을 모른 채 집에서 남편만 기다리고 있...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011824', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011326'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME10'});"
+			><img index="3" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214909/IMAGE/STC/STC_GL0000214909_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011824', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011326'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME20'});"
+			class="t_12_00" title="불후의 명곡 2 제27회">불후의 명곡 2</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item03"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="불후의 명곡 2 제27회">불후의 명곡 2 제27회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('001'); return false;" class="t_11_66_c">KBS</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('002'); return false;" class="t_11_66_c">쇼오락</a>/
+					120분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('권재영', '', 'GL0000134314', 'P00000011824', 'GL0000205208'); return false;" class="t_11_80">권재영</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('이민정', '', '', 'P00000011824', 'GL0000205208'); return false;" class="t_11_80">이민정</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('원승연', '', '', 'P00000011824', 'GL0000205208'); return false;" class="t_11_80">원승연</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('신동엽', '', 'GL0000001922', 'P00000011824', 'GL0000205208'); return false;" class="t_11_80">신동엽</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김구라', '', 'GL0000141674', 'P00000011824', 'GL0000205208'); return false;" class="t_11_80">김구라</a></dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 가을을 닮은 낭만의 가수!
+감성적인 보컬과 아름다운 노랫말로 사랑받아온 최백호!
+7명의 보컬리스트들이 최백호의 낭만을 노래한다! ...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011827', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011331'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME11'});"
+			><img index="4" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214905/IMAGE/STC/STC_GL0000214905_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011827', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011331'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME21'});"
+			class="t_12_00" title="광개토태왕 제53회">광개토태왕</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item04"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="광개토태왕 제53회">광개토태왕 제53회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('001'); return false;" class="t_11_66_c">KBS</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('001'); return false;" class="t_11_66_c">드라마</a>/
+					70분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('김종선', '', 'GL0000058972', 'P00000011827', 'GL0000205088'); return false;" class="t_11_80">김종선</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('이태곤', '', 'GL0000110055', 'P00000011827', 'GL0000205088'); return false;" class="t_11_80">이태곤</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김승수', '', 'GL0000002255', 'P00000011827', 'GL0000205088'); return false;" class="t_11_80">김승수</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('임호', '', 'GL0000062620', 'P00000011827', 'GL0000205088'); return false;" class="t_11_80">임호</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('오지은', '', 'GL0000117863', 'P00000011827', 'GL0000205088'); return false;" class="t_11_80">오지은</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('홍경인', '', 'GL0000000935', 'P00000011827', 'GL0000205088'); return false;" class="t_11_80">홍경인</a>
+,
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 담덕은 거란의 배후에서 음모를 조작한 이가 고운이었다는 사실을 믿지 않으려 한다. 후연은 고구려가 여전히 소금 등 물자 공급에 어려움을...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011825', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011327'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME12'});"
+			><img index="5" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214904/IMAGE/STC/STC_GL0000214904_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011825', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011327'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME22'});"
+			class="t_12_00" title="오작교 형제들 제35회">오작교 형제들</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item05"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="오작교 형제들 제35회">오작교 형제들 제35회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('001'); return false;" class="t_11_66_c">KBS</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('001'); return false;" class="t_11_66_c">드라마</a>/
+					65분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('기민수', '', 'GL0000058176', 'P00000011825', 'GL0000208688'); return false;" class="t_11_80">기민수</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('김용림', '', 'GL0000022306', 'P00000011825', 'GL0000208688'); return false;" class="t_11_80">김용림</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('백일섭', '', 'GL0000015516', 'P00000011825', 'GL0000208688'); return false;" class="t_11_80">백일섭</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김자옥', '', 'GL0000015925', 'P00000011825', 'GL0000208688'); return false;" class="t_11_80">김자옥</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('정웅인', '', 'GL0000001933', 'P00000011825', 'GL0000208688'); return false;" class="t_11_80">정웅인</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('류수영', '', 'GL0000008511', 'P00000011825', 'GL0000208688'); return false;" class="t_11_80">류수영</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 태희의 고백에 자은은 가슴이 벅차오르고 설렌다. 무슨 말을 해야 할지 몰라
+겨우 한마디를 내뱉은 자은. 태희는 자은의 대답을 해석하기 ...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011811', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011320'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME13'});"
+			><img index="1" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214920/IMAGE/STC/STC_GL0000214920_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011811', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011320'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME23'});"
+			class="t_12_00" title="쇼! 음악중심 제285회">쇼! 음악중심</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item01"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="쇼! 음악중심 제285회">쇼! 음악중심 제285회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('002'); return false;" class="t_11_66_c">MBC</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('002'); return false;" class="t_11_66_c">쇼오락</a>/
+					60분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('서창만', '', '', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">서창만</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('유호철', '', '', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">유호철</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('유리', '', '', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">유리</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('티파니', '', '', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">티파니</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('손호영', '', 'GL0000131687', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">손호영</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('부가킹즈', '', '', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">부가킹즈</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('원더걸스', '', '', 'P00000011811', 'GL0000189537'); return false;" class="t_11_80">원더걸</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> ♬ Comeback Stage
+․ 달콤한 멜로디! 보다 더욱 달콤한 매력으로 돌아왔다!
+올 겨울을 온통 핑크빛으로 물들일 사랑스런 일곱 요정 A...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011826', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011328'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME14'});"
+			><img index="2" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214929/IMAGE/STC/STC_GL0000214929_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011826', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011328'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME24'});"
+			class="t_12_00" title="내일이 오면 11회">내일이 오면</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item02"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="내일이 오면 11회">내일이 오면 11회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('003'); return false;" class="t_11_66_c">SBS</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('001'); return false;" class="t_11_66_c">드라마</a>/
+					60분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('장용우', '', 'GL0000058321', 'P00000011826', 'GL0000212790'); return false;" class="t_11_80">장용우</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('고두심', '', 'GL0000015689', 'P00000011826', 'GL0000212790'); return false;" class="t_11_80">고두심</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('서우', '', 'GL0000129141', 'P00000011826', 'GL0000212790'); return false;" class="t_11_80">서우</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('하석진', '', 'GL0000108136', 'P00000011826', 'GL0000212790'); return false;" class="t_11_80">하석진</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('이규한', '', 'GL0000105878', 'P00000011826', 'GL0000212790'); return false;" class="t_11_80">이규한</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('임현식', '', 'GL0000021477', 'P00000011826', 'GL0000212790'); return false;" class="t_11_80">임현식</a>
+,
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 정인, 순정과 정모와 걸어온다. 일각에서 정인을 계속 보고 있는 차 안의 한남자. 순정과 정모가 사라지고 정인 혼자 팸플릿을 보며 서있자...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011815', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011329'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME15'});"
+			><img index="3" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214912/IMAGE/STC/STC_GL0000214912_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011815', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011329'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME25'});"
+			class="t_12_00" title="연예가 중계 제1404회">연예가 중계</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item03"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="연예가 중계 제1404회">연예가 중계 제1404회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('001'); return false;" class="t_11_66_c">KBS</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('002'); return false;" class="t_11_66_c">쇼오락</a>/
+					60분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('박효규', '', 'GL0000129646', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">박효규</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('조성호', '', '', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">조성호</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김필준', '', '', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">김필준</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('하태석', '', '', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">하태석</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('박형근', '', '', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">박형근</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('이시영', '', 'GL0000137142', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">이시영</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('신현준', '', 'GL0000000008', 'P00000011815', 'GL0000203789'); return false;" class="t_11_80">신현준</a></dd>
+				<dd class="t_12_4c">&nbsp;</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011816', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011330'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME16'});"
+			><img index="4" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214917/IMAGE/STC/STC_GL0000214917_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011816', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011330'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME26'});"
+			class="t_12_00" title="천 번의 입맞춤 제31회">천 번의 입맞춤</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item04"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="천 번의 입맞춤 제31회">천 번의 입맞춤 제31회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('002'); return false;" class="t_11_66_c">MBC</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('001'); return false;" class="t_11_66_c">드라마</a>/
+					60분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('윤재문', '', 'GL0000109924', 'P00000011816', 'GL0000209223'); return false;" class="t_11_80">윤재문</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('서영희', '', 'GL0000037251', 'P00000011816', 'GL0000209223'); return false;" class="t_11_80">서영희</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('지현우', '', 'GL0000081961', 'P00000011816', 'GL0000209223'); return false;" class="t_11_80">지현우</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('류진', '', 'GL0000056552', 'P00000011816', 'GL0000209223'); return false;" class="t_11_80">류진</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김소은', '', 'GL0000108480', 'P00000011816', 'GL0000209223'); return false;" class="t_11_80">김소은</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('구승현', '', 'GL0000186940', 'P00000011816', 'GL0000209223'); return false;" class="t_11_80">구승현</a>
+,
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 우빈은 지선을 찾아가 주영과 헤어져야 하는 이유가 주영이 친어머니이기 때문이 전
+부냐고 캐묻지만 지선을 알수록 더 큰 상처가 될 뿐이...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+	<li style="height: 113px;">
+		<div class="pic shadow68" id="img" >
+
+			<a
+				href="javascript:Common.goSeriesDetail('P00000011812', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011321'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME17'});"
+			><img index="5" src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214907/IMAGE/STC/STC_GL0000214907_1_3.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt><a
+
+				href="javascript:Common.goSeriesDetail('P00000011812', 'N', '', {'dpSpaceId':'000000000013','TVPRODID':'PDRS00011321'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RME27'});"
+			class="t_12_00" title="가족의 탄생  제4회">가족의 탄생</a></dt>
+
+			<dd class="info t_11_80">2011.12.03(토) 방송</dd>
+		</dl>
+		<!-- 정보 레이어 팝업 -->
+		<div class="pos_rel_h1 item05"><div class="info_layer" style="display: none; top:-274px; ">
+			<dl>
+				<dt class="t_14b_00" title="가족의 탄생  제4회">가족의 탄생 제4회</dt>
+				<dd class="t_11_99">
+						<a href="#" onClick="javascript:brdList('001'); return false;" class="t_11_66_c">KBS</a>/
+						<a href="#" onClick="javascript:Common.tvGenreList('002'); return false;" class="t_11_66_c">쇼오락</a>/
+					70분
+				<dd class="t_12_4c"><strong>연출 :</strong> <a href="#" onClick="javascript:Common.openSearch('권재영', '', 'GL0000134314', 'P00000011812', 'GL0000213607'); return false;" class="t_11_80">권재영</a></dd>
+				<dd class="t_12_4c"><strong>출연 :</strong> <a href="#" onClick="javascript:Common.openSearch('이휘재', '', 'GL0000002048', 'P00000011812', 'GL0000213607'); return false;" class="t_11_80">이휘재</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('붐', '', '', 'P00000011812', 'GL0000213607'); return false;" class="t_11_80">붐</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김병만', '', 'GL0000056878', 'P00000011812', 'GL0000213607'); return false;" class="t_11_80">김병만</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('인피니트', '', '', 'P00000011812', 'GL0000213607'); return false;" class="t_11_80">인피니트</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('에이핑크', '', '', 'P00000011812', 'GL0000213607'); return false;" class="t_11_80">에이핑크</a>
+. . .</dd>
+				<dd class="t_12_4c"><strong>줄거리 :</strong> 미니말과 함께 하는 즐거운 하루!
+오늘 하루, 최고의 권력을 가질 수 있는 '엠씨왕'!
+휘근이 & 덕근이와의 당근 먹기 게임!
+미...</dd>
+			</dl>
+		</div></div>
+		<!-- //정보 레이어 팝업 -->
+	</li>
+</ul>
+<a href="javascript:void(0);" ctgClCd="TV" clCd="hot" class="next_a" title="다음보기">다음</a>
+
+<div class="view_cate"><a href="javascript:getHotList('TV', 1, 'tab'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RME3'});" class="link01_on">Hot</a> | <a href="javascript:getRcmdList('TV', 1, 'tab'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RME4'});" class="link02">추천</a></div>
+<div class="mini_paging clfix">
+<a href="javascript:getHotList('TV', 1);" title="1" class="on"></a>
+<a href="javascript:getHotList('TV', 2);" title="2" ></a>
+</div>
+<input type="hidden" name="curPageNo" id="curPageNo" value="1">
+<input type="hidden" name="totalCnt" id="totalCnt" value="2">
+
+<input type="hidden" name="tv_rcmSerNum" id="tv_rcmSerNum" value="">
+
+					</div>
+					<!-- //Sub list 보기 -->
+				</div>
+				<!-- //Tv 프로그램 -->
+
+
+                <!-- 정액관    -->
+                <div class="fixmount_section">
+                    <h2><a href="/serviceportal/bs/fixedamount/fdProd/searchProdList.do"><img src="http://www.hoppin.nate.com/resource/images/common/h2_main_fixmount.gif"   width="39px" height="14px" alt="정액관"></a></h2>
+
+                        <div class="p_view" style="overflow:hidden;width:162px;height:169px">
+                                <a style="display:none" href="http://www.hoppin.nate.com/serviceportal/event/event/selectEventDetail.do?evntPrgsStatCd=&evntNum=604"  interval="NE" bnrExpMthdCd="RD"><img src="http://img.hoppin.nate.com/resource_share/file/banner/20111130020654257_01.jpg" width="162" height="169" alt="정액관 배너" onerror="this.src='/resource/images/common/img_main_movie_p.jpg'"></a>
+                        </div>
+
+                    <!-- Sub list   보기 -->
+                    <div class="list_area" id="fdList">
+
+
+
+<ul class="list_view clfix">
+    <li>
+        <div class="pic shadow130" id="img">
+            <a href="javascript:Common.goFdDetail('FL', 'P00000011669', 'Y');""><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000146450/IMAGE/REP/REP_GL0000146450_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+        </div>
+        <dl>
+            <dt><a href="javascript:Common.goFdDetail('FL', 'P00000011669', 'Y');"" class="t_12_00">밀애</a></dt>
+        </dl>
+        <!-- 정보 레이어 팝업 -->
+        <div class="pos_rel_h1 item01"><div class="info_layer" style="display:none; top:-320px; ">
+            <dl>
+                <dt class="t_14b_00" title="밀애">밀애<img src="http://www.hoppin.nate.com/resource/images/common/ico_19_s.gif" class="al_middle" alt="19금"></dt>
+                <dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('016'); return false;" class="t_11_66_c">로맨스</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+                 / 112분 / 개봉일 2002.11.08</dd>
+                <dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('변영주', '', 'GL0000003169', 'P00000011669', ''); return false;" class="t_11_80">변영주</a> </dd>
+                <dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('김윤진', '', 'GL0000001266', 'P00000011669', ''); return false;" class="t_11_80">김윤진</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('이종원', '', 'GL0000015700', 'P00000011669', ''); return false;" class="t_11_80">이종원</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('계성용', '', 'GL0000038291', 'P00000011669', ''); return false;" class="t_11_80">계성용</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김민경', '', 'GL0000042009', 'P00000011669', ''); return false;" class="t_11_80">김민경</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('윤다경', '', 'GL0000042011', 'P00000011669', ''); return false;" class="t_11_80">윤다경</a>
+. . .</dd>
+                <dd class="t_12_4c"><strong>줄거리 :</strong> &lt;테러&gt; 서른의 전업주부 미흔의 집에 찾아온 빨간 스웨터의 여자. 그녀가 입을 열어 미흔의 남편을 '오빠'라 부르기 시작했다...</dd>
+            </dl>
+        </div></div>
+        <!-- //정보 레이어 팝업 -->
+    </li>
+    <li>
+        <div class="pic shadow130" id="img">
+            <a href="javascript:Common.goFdDetail('FL', 'P00000011677', 'Y');""><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000178945/IMAGE/REP/REP_GL0000178945_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+        </div>
+        <dl>
+            <dt><a href="javascript:Common.goFdDetail('FL', 'P00000011677', 'Y');"" class="t_12_00">아내가 결혼했다</a></dt>
+        </dl>
+        <!-- 정보 레이어 팝업 -->
+        <div class="pos_rel_h1 item02"><div class="info_layer" style="display:none; top:-320px; ">
+            <dl>
+                <dt class="t_14b_00" title="아내가 결혼했다">아내가 결혼했다<img src="http://www.hoppin.nate.com/resource/images/common/ico_19_s.gif" class="al_middle" alt="19금"></dt>
+                <dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+                 / 119분 / 개봉일 2008.10.23</dd>
+                <dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('정윤수', '', 'GL0000011243', 'P00000011677', ''); return false;" class="t_11_80">정윤수</a> </dd>
+                <dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('김주혁', '', 'GL0000010761', 'P00000011677', ''); return false;" class="t_11_80">김주혁</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('손예진', '', 'GL0000010243', 'P00000011677', ''); return false;" class="t_11_80">손예진</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('주상욱', '', 'GL0000121415', 'P00000011677', ''); return false;" class="t_11_80">주상욱</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('오정세', '', 'GL0000048586', 'P00000011677', ''); return false;" class="t_11_80">오정세</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('김병춘', '', 'GL0000016447', 'P00000011677', ''); return false;" class="t_11_80">김병춘</a>
+. . .</dd>
+                <dd class="t_12_4c"><strong>줄거리 :</strong> 추석 이벤트!! &lt;아내가 결혼했다&gt;를 오늘 하루만 무료로 제공합니다!!
+귀여운 외모와 넘치는 애교, 헌책을 사랑하는 지적...</dd>
+            </dl>
+        </div></div>
+        <!-- //정보 레이어 팝업 -->
+    </li>
+    <li>
+        <div class="pic shadow130" id="img">
+            <a href="javascript:Common.goFdDetail('FL', 'P00000011652', 'Y');""><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000182053/IMAGE/REP/REP_GL0000182053_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+        </div>
+        <dl>
+            <dt><a href="javascript:Common.goFdDetail('FL', 'P00000011652', 'Y');"" class="t_12_00">리멤버 미</a></dt>
+        </dl>
+        <!-- 정보 레이어 팝업 -->
+        <div class="pos_rel_h1 item03"><div class="info_layer" style="display:none; top:-320px; ">
+            <dl>
+                <dt class="t_14b_00" title="리멤버 미">리멤버 미</dt>
+                <dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('016'); return false;" class="t_11_66_c">로맨스</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('005'); return false;" class="t_11_66_c">드라마</a>
+                 / 112분 / 개봉일 2011.03.03</dd>
+                <dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('앨런 콜터', '', 'GL0000037419', 'P00000011652', ''); return false;" class="t_11_80">앨런 콜터</a> </dd>
+                <dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('로버트 패틴슨', '', 'GL0000080744', 'P00000011652', ''); return false;" class="t_11_80">로버트 패틴슨</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('에밀 드 라빈', '', 'GL0000055518', 'P00000011652', ''); return false;" class="t_11_80">에밀 드 라빈</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('크리스 쿠퍼', '', 'GL0000002041', 'P00000011652', ''); return false;" class="t_11_80">크리스 쿠</a>
+. . .</dd>
+                <dd class="t_12_4c"><strong>줄거리 :</strong> 절망 끝에 선 한 남자, 그러나 한줄기 사랑의 희망을 만나다!!
+부모님의 이혼 후 ‘타일러’(로버트 패틴슨)는 이어지는 불행한 사건...</dd>
+            </dl>
+        </div></div>
+        <!-- //정보 레이어 팝업 -->
+    </li>
+    <li>
+        <div class="pic shadow130" id="img">
+            <a href="javascript:Common.goFdDetail('FL', 'P00000011537', 'Y');""><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000188958/IMAGE/REP/REP_GL0000188958_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+        </div>
+        <dl>
+            <dt><a href="javascript:Common.goFdDetail('FL', 'P00000011537', 'Y');"" class="t_12_00">미키의 동영상</a></dt>
+        </dl>
+        <!-- 정보 레이어 팝업 -->
+        <div class="pos_rel_h1 item04"><div class="info_layer" style="display:none; top:-320px; ">
+            <dl>
+                <dt class="t_14b_00" title="미키의 동영상">미키의 동영상<img src="http://www.hoppin.nate.com/resource/images/common/ico_19_s.gif" class="al_middle" alt="19금"></dt>
+                <dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('016'); return false;" class="t_11_66_c">로맨스</a>
+                 / 60분 / 개봉일 2010.12.16</dd>
+                <dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('타키시마 히로요시', '', 'GL0000186750', 'P00000011537', ''); return false;" class="t_11_80">타키시마 히로요시</a> </dd>
+                <dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('모리모토 미우', '', 'GL0000189120', 'P00000011537', ''); return false;" class="t_11_80">모리모토 미우</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('시마다 이치코', '', 'GL0000189121', 'P00000011537', ''); return false;" class="t_11_80">시마다 이치코</a></dd>
+                <dd class="t_12_4c"><strong>줄거리 :</strong> 작가인 아야노는 체험을 바탕으로 한 자서전적인 소설을 상상으로 쓰고 있다. 소설의 주인공인 미키는 작가로 문단에서의 성공을 위해 높은...</dd>
+            </dl>
+        </div></div>
+        <!-- //정보 레이어 팝업 -->
+    </li>
+    <li>
+        <div class="pic shadow130" id="img">
+            <a href="javascript:Common.goFdDetail('FL', 'P00000011684', 'Y');""><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000212601/IMAGE/REP/REP_GL0000212601_5_1.jpg" alt="" width="90" height="130" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></a>
+        </div>
+        <dl>
+            <dt><a href="javascript:Common.goFdDetail('FL', 'P00000011684', 'Y');"" class="t_12_00">마지막 섹스 그...</a></dt>
+        </dl>
+        <!-- 정보 레이어 팝업 -->
+        <div class="pos_rel_h1 item05"><div class="info_layer" style="display:none; top:-320px; ">
+            <dl>
+                <dt class="t_14b_00" title="마지막 섹스 그리고 사랑">마지막 섹스 그리고 사랑<img src="http://www.hoppin.nate.com/resource/images/common/ico_19_s.gif" class="al_middle" alt="19금"></dt>
+                <dd class="t_11_99"><a href="#" onClick="javascript:Common.movieGenreList('016'); return false;" class="t_11_66_c">로맨스</a>
+,
+<a href="#" onClick="javascript:Common.movieGenreList('202'); return false;" class="t_11_66_c">독립/단편</a>
+. . .
+                 / 60분 / 개봉일 2011.11.10</dd>
+                <dd class="t_12_4c"><strong>감독 :</strong> <a href="#" onClick="javascript:Common.openSearch('이세일', '', 'GL0000027245', 'P00000011684', ''); return false;" class="t_11_80">이세일</a> </dd>
+                <dd class="t_12_4c"><strong>배우 :</strong> <a href="#" onClick="javascript:Common.openSearch('이브', '', 'GL0000212612', 'P00000011684', ''); return false;" class="t_11_80">이브</a>
+,
+<a href="#" onClick="javascript:Common.openSearch('지훈', '', 'GL0000212613', 'P00000011684', ''); return false;" class="t_11_80">지훈</a></dd>
+                <dd class="t_12_4c"><strong>줄거리 :</strong> 다니던 직장에서 쫓겨나고, 설상가상으로 몸에 이상증세가 나타나 병원을 찾은 경희에게 들려온 충격적인 진단결과. 그것은 바로 그녀가 에...</dd>
+            </dl>
+        </div></div>
+        <!-- //정보 레이어 팝업 -->
+    </li>
+</ul>
+    <a href="javascript:void(0);" ctgClCd="FA" class="next_a" title="이전보기">다음</a>
+<div class="mini_paging clfix">
+<a href="javascript:getFdList(1);" title="1" class="on"></a>
+<a href="javascript:getFdList(2);" title="2" ></a>
+</div>
+<input type="hidden" name="curPageNo" id="curPageNo" value="1">
+<input type="hidden" name="totalCnt" id="totalCnt" value="2">
+
+
+                    </div>
+                    <!-- //Sub list 보기 -->
+                </div>
+                <!-- //정액관  -->
+
+
+				<!-- 뮤직비디오 -->
+				<div class="mv_section">
+					<h2><a href="/serviceportal/music/main/searchDisplay.do" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF1'});"><img src="http://www.hoppin.nate.com/resource/images/common/h2_main_mv.gif" width="64px" height="14px" alt="뮤직비디오"></a>
+					<span class="al_top t_12_e5" id="mvForU" style="display:none;">| <span class="t_12b_70">명품도시인천</span><span class="t_12b_4c">님을 위한 추천 뮤직비디오입니다.</span></span></h2>
+
+                    <div class="thumb_view">
+						<a href="javascript:Common.bannerTfficStatAjax('MAIN06'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF2'}); Common.goDetail('MV','P00000011721','','000000000023'); ">
+						<img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/MV/GL0000214748/IMAGE/STC/STC_GL0000214748_1_12.jpg" alt="" width="102" height="102" onerror="this.src='/resource/images/contents/nothumb_144x144.jpg'">
+						</a>
+						<dl class="mt5">
+							<dt title="너랑 나"><a href="javascript:Common.bannerTfficStatAjax('MAIN06'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF2'});  Common.goDetail('MV','P00000011721','','000000000023');" class="t_12b_00">너랑 나</a></dt>
+							<dd title="아이유"><span class="t_11_80">아이유</span></dd>
+						</dl>
+                    </div>
+
+
+					<!-- Sub list 보기 -->
+					<div class="list_area" id="mvList">
+
+
+
+
+<ul class="list_view clfix">
+	<li>
+		<div class="pic shadow68">
+			<a
+				href="javascript:Common.goDetail('MV','P00000011722','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00011217'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF8'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/MV/GL0000214398/IMAGE/STC/STC_GL0000214398_1_12.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt title="Slave (Feat. pdogg)"><a
+
+			<a
+				href="javascript:Common.goDetail('MV','P00000011722','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00011217'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF13'});"
+			 class="t_12_00">Slave (Feat. p...</a></dt>
+			<dd class="info t_11_80" title="이승기">이승기</dd>
+		</dl>
+	</li>
+	<li>
+		<div class="pic shadow68">
+			<a
+				href="javascript:Common.goDetail('MV','P00000011716','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00011227'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF9'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/MV/GL0000214562/IMAGE/STC/STC_GL0000214562_1_12.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt title="지우란 말"><a
+
+			<a
+				href="javascript:Common.goDetail('MV','P00000011716','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00011227'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF14'});"
+			 class="t_12_00">지우란 말</a></dt>
+			<dd class="info t_11_80" title="이루">이루</dd>
+		</dl>
+	</li>
+	<li>
+		<div class="pic shadow68">
+			<a
+				href="javascript:Common.goDetail('MV','P00000011387','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00010885'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF10'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/MV/GL0000213802/IMAGE/STC/STC_GL0000213802_1_12.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt title="Oh My Gosh"><a
+
+			<a
+				href="javascript:Common.goDetail('MV','P00000011387','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00010885'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF15'});"
+			 class="t_12_00">Oh My Gosh</a></dt>
+			<dd class="info t_11_80" title="서인영">서인영</dd>
+		</dl>
+	</li>
+	<li>
+		<div class="pic shadow68">
+			<a
+				href="javascript:Common.goDetail('MV','P00000011153','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00010648'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF11'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/MV/GL0000213341/IMAGE/STC/STC_GL0000213341_1_12.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt title="Cry Cry"><a
+
+			<a
+				href="javascript:Common.goDetail('MV','P00000011153','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00010648'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF16'});"
+			 class="t_12_00">Cry Cry</a></dt>
+			<dd class="info t_11_80" title="티아라">티아라</dd>
+		</dl>
+	</li>
+	<li>
+		<div class="pic shadow68">
+			<a
+				href="javascript:Common.goDetail('MV','P00000011721','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00011214'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF12'});"
+			><img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/MV/GL0000214748/IMAGE/STC/STC_GL0000214748_1_12.jpg" alt="" width="90" height="68" onerror="this.src='/resource/images/contents/nothumb_144x108.jpg'"></a>
+		</div>
+		<dl>
+			<dt title="너랑 나"><a
+
+			<a
+				href="javascript:Common.goDetail('MV','P00000011721','',{'dpSpaceId':'000000000015','MUSICPRODID':'PDRS00011214'});" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF17'});"
+			 class="t_12_00">너랑 나</a></dt>
+			<dd class="info t_11_80" title="아이유">아이유</dd>
+		</dl>
+	</li>
+</ul>
+<a href="javascript:void(0);" ctgClCd="MV" clCd="hot" class="next_a" title="다음보기">다음</a>
+<div class="view_cate"><a href="javascript:getHotList('MV', 1, 'tab'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF3'});" class="link01_on">Hot</a> | <a href="javascript:getRcmdList('MV', 1, 'tab'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF4'});" class="link02">추천</a></div>
+<div class="mini_paging clfix">
+<a href="javascript:getHotList('MV', 1);" title="1" class="on"></a>
+<a href="javascript:getHotList('MV', 2);" title="2" ></a>
+<a href="javascript:getHotList('MV', 3);" title="3" ></a>
+</div>
+<input type="hidden" name="curPageNo" id="curPageNo" value="1">
+<input type="hidden" name="totalCnt" id="totalCnt" value="3">
+
+<input type="hidden" name="music_rcmSerNum" id="music_rcmSerNum" value="">
+
+					</div>
+					<!-- //Sub list 보기 -->
+
+				</div>
+				<!-- //뮤직비디오 -->
+			</div>
+
+			<div class="side_view">
+				<div class="login_view">
+					<p class="grt t_12_00"><a href="/serviceportal/mypage/myInfoMng/updateMemberInfo.do" class="t_12b_70">명품도시인천</a>님 반갑습니다.</p>
+					<dl>
+						<dt class="t_12b_00">이용내역</dt>
+						<dd class="clfix">
+							<ul class="mythings">
+								<li class="item01">
+									<a href="javascript:Common.fncChargeDotori();" class="ico" title="도토리" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB2'});"><img src="http://www.hoppin.nate.com/resource/images/common/bg_login_view01.gif" alt="도토리"></a>
+									<p class="t_11_00">도토리</p>
+									<p class="t_11_80"><a href="javascript:Common.fncChargeDotori();" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB2'});">223.3</a>개</p>
+								</li>
+								<li class="item02">
+									<a href="/serviceportal/mypage/myPassPoint/searchMyPassList.do" class="ico"title="이용권" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB3'});"><img src="http://www.hoppin.nate.com/resource/images/common/bg_login_view02.gif" alt="이용권"></a>
+									<p class="t_11_00">이용권</p>
+									<p class="t_11_80"><a href="/serviceportal/mypage/myPassPoint/searchMyPassList.do" class="t_11b_70" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB3'});">1</a>개</p>
+								</li>
+								<li class="item03">
+									<a href="/serviceportal/mypage/myPassPoint/searchMyHoppinPointHistList.do" class="ico"title="포인트" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB4'});"><img src="http://www.hoppin.nate.com/resource/images/common/bg_login_view03.gif" alt="포인트"></a>
+									<p class="t_11_00">포인트 </p>
+									<p class="t_11_80"><a href="/serviceportal/mypage/myPassPoint/searchMyHoppinPointHistList.do" class="t_11b_70" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB4'});">50,000</a>P</p>
+
+								</li>
+								<li class="item04">
+									<a href="/serviceportal/mypage/myPassPoint/searchMyCouponList.do" class="ico"title="쿠폰" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB5'});"><img src="http://www.hoppin.nate.com/resource/images/common/bg_login_view04.gif" alt="쿠폰"></a>
+									<p class="t_11_00">쿠폰</p>
+									<p class="t_11_80"><a href="/serviceportal/mypage/myPassPoint/searchMyCouponList.do" class="t_11b_70" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB5'});">0</a>개</p>
+
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<a href="http://xo.nate.com/logout.jsp?redirect=http://www.hoppin.nate.com" class="t_btn" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMB1'});">로그아웃</a>
+				</div>
+				<!-- SNS연동_설정하기 -->
+				<div class="sns_lyr_relate slr_new" style="display:none;">
+					<div class="slr_in">
+						<h6 class="hide">SNS연동 서비스가 새롭게 업데이트 되었습니다.</h6>
+						<p class="hide">지금 외부서비스와 연동을 하여 외부 친구들과 함께 나누어 보세요</p>
+						<a href="#"><span class="ir">외부 연동 설정하기</span></a>
+						<button type="button" class="gn_btn" onclick="this.parentNode.parentNode.style.display='none';" title="닫기"><span class="ir">닫기</span></button>
+					</div>
+				</div>
+				<!-- SNS연동_재설정하기 -->
+				<div class="sns_lyr_relate slr_re">
+					<div class="slr_in">
+						<h6 class="hide">SNS연동 서비스가 새롭게 업데이트 되었습니다.</h6>
+						<p class="hide">지금 외부서비스와 연동정보를 재 설정하여 외부 친구들과 함께 나누어 보세요</p>
+						<a href="#"><span class="ir">외부 연동 재 설정하기</span></a>
+						<button type="button" class="gn_btn" onclick="this.parentNode.parentNode.style.display='none';" title="닫기"><span class="ir">닫기</span></button>
+					</div>
+				</div>
+
+				<div id="contPlayList">
+
+<div class="er_play_zone_login mt10" >
+	<!-- 110513 수정 -->
+	<div class="pre_play">
+		<img src="http://img.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214522/IMAGE/STC/STC_GL0000214522_1_10.jpg" alt="" width="240" height="180" onerror="this.src='/resource/images/contents/noimg_240x180.jpg'" usemap="#contPlayImg">
+		<div class="tit png_bg"><a href="javascript:fncContPlayLink('P00000011635','TV','Y','N', 'Y', '', 'Y'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMC2'});" class="t_13b_80">개그콘서트 제 622회</a></div>
+		<div class="layer_play png_bg" onclick="fncContPlayLink('P00000011635','TV','Y','N', 'Y', '', 'Y'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMC1'});"  style="cursor:pointer;">이어play</div>
+		<div class="playtime png_bg">
+			<span class="t_10b_ff">01:18:52</span>
+			<span class="t_10b_99"> / 01:10:00</span>
+		</div>
+		<div class="recent_equip png_bg">
+		<img src="http://www.hoppin.nate.com/resource/images/common/ico_erplay_pc.gif" alt="최근이용기기-pc" width="84" height="20">
+		</div>
+		<a href="javascript:delContPlay('2136887');" class="pre_del png_bg" title="이어플레이 삭제">삭제</a>
+	</div>
+	<map name="contPlayImg">
+		<area shape="rect" coords="0,0,240,180" href="javascript:fncContPlayLink('P00000011635','TV','Y','N', 'Y', '', 'Y'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMC1'});"></area>
+	</map>
+	<!-- //110513 수정 -->
+	<!-- 스크롤 영역 -->
+	<div class="play_list">
+		<!--<div class="scroll_area"><div class="bar" style="height:31px;">스크롤바</div></div> //-->
+		<ul class="clfix">
+		</ul>
+	</div>
+	<!-- //스크롤 영역 -->
+</div>
+				</div>
+				<div class="quick_link">
+					<dl>
+						<dt>Quick link</dt>
+						<dd class="clfix">
+							<ul>
+								<li><a href="/serviceportal/cscenter/main/searchHoppinServiceIntro.do" class="link01 t_11b_4c" title="서비스소개" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF38'});">서비스소개</a></li>
+								<li><a href="/serviceportal/cscenter/main/searchDeviceGuide.do" class="link02 t_11b_4c" title="기기이용가이드" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF39'});">기기이용가이드</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="event_view">
+					<dl>
+						<dt><span class="t_12b_33">이벤트</span></dt>
+						<dd id="evntImgBanner" onClick="Common.bannerTfficStatAjax('MAIN03');">
+								<a href="/serviceportal/event/event/selectEventDetail.do?pageNo=1&evntPrgsStatCd=&evntNum=604"  onmouseover="OverBanner();" onmouseout="OutBanner();" title="<영화정액제오픈> 영화야 무제한 출시 기념" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF40'});"><img src="http://img.hoppin.nate.com/resource_share/file/event/201111/20111130132855652.jpg" alt="0" width="200" height="68" onerror="this.src='/resource/images/contents/noimg_175x130.jpg'"></a>
+								<a href="/serviceportal/event/event/selectEventDetail.do?pageNo=1&evntPrgsStatCd=&evntNum=555" style="display:none;" onmouseover="OverBanner();" onmouseout="OutBanner();" title="TV Mania 무제한 반값 할인" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF40'});"><img src="http://img.hoppin.nate.com/resource_share/file/event/201109/20110930192544165.jpg" alt="1" width="200" height="68" onerror="this.src='/resource/images/contents/noimg_175x130.jpg'"></a>
+						</dd>
+						<dd>
+							<ul>
+								<li>
+										<a href="http://www.hoppin.nate.com/serviceportal/cscenter/main/searchNoticeMain.do?mod=view&notiNum=354" target="_blank" class="t_12_4c" id="aEvent" title="[당첨자 발표] <그린랜턴> 이벤트 당첨자" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF41'});">
+[당첨자 발표] &lt;그린랜턴...										</a>
+								</li>
+								<li>
+										<a href="http://www.hoppin.nate.com/serviceportal/cscenter/main/searchNoticeMain.do?mod=view&notiNum=332" target="_blank" class="t_12_4c" id="aEvent" title="[안내] SBS 컨텐츠 3G서비스 중단" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF42'});">
+[안내] SBS 컨텐츠 3G서비스 중...										</a>
+								</li>
+								<li>
+										<a href="http://www.hoppin.nate.com/serviceportal/cscenter/main/searchNoticeMain.do?mod=view&notiNum=331" target="_blank" class="t_12_4c" id="aEvent" title="[당첨자 발표] <써니> 이벤트 당첨자" onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF43'});">
+[당첨자 발표] &lt;써니&gt...										</a>
+								</li>
+								<li>
+										<a href="http://www.hoppin.nate.com/serviceportal/cscenter/main/searchNoticeMain.do?mod=view&notiNum=330" target="_blank" class="t_12_4c" id="aEvent" title="[당첨자 발표] <추석영화 top10> 이벤트 당첨자 " onclick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF44'});">
+[당첨자 발표] &lt;추석영화...										</a>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="ranking_view mt10">
+					<h2 class="t_12b_00">랭킹</h2>
+					<h3 class="tit_movie"><a id="rankTab" ctgClCd="FL" href="/serviceportal/movie/movieRankList/searchHoppin.do" onmouseover="Common.ppsLogAjax({'dpSpaceId':'000000000017','action':'OVER'});"; onclick="Common.ppsLogAjax({'dpSpaceId':'000000000017','MOVIETP':'MV00','NEXTDPSPACEID':'100000000070'}); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF45'});" class="on">영화</a></h3>
+					<div class="view_ranking clfix" id="rankList">
+
+	<ul class="txt_ranking">
+		<li>
+			<span class="num">1</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000011494', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="최종병기 활">
+최종병기 활			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">2</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000010237', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="[무료] 우리형">
+[무료] 우리형			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">3</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000010228', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="[무료] 썸">
+[무료] 썸			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">4</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000011150', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="쿵푸팬더 2">
+쿵푸팬더 2			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">5</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000011710', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="의뢰인">
+의뢰인			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">6</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000007180', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="옥보단 3D">
+옥보단 3D			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">7</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000009716', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="금지된 섹스, 불륜 (무삭제판)">
+금지된 섹스, 불륜 (무삭제...			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">8</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000011136', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="해리 포터와 죽음의 성물 2">
+해리 포터와 죽음의 성물 2			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">9</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000011146', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="세 얼간이">
+세 얼간이			</a>
+            	<span class="stay">-</span>
+		</li>
+		<li>
+			<span class="num">10</span>
+
+				<a href="javascript:Common.goMovieDetail('P00000010992', '', '000000000017'); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF48'});" id="aRank" title="푸른소금">
+푸른소금			</a>
+            	<span class="stay">-</span>
+		</li>
+	</ul>
+					</div>
+					<h3 class="tit_tv"><a id="rankTab" ctgClCd="TV" href="/serviceportal/tv/rankDetailList/searchRankHoppinList.do" onmouseover="Common.ppsLogAjax({'dpSpaceId':'000000000018','action':'OVER'});"; onclick="Common.ppsLogAjax({'dpSpaceId':'000000000018','TVTP':'TV00','NEXTDPSPACEID':'200000000070'}); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF46'});" >TV</a></h3>
+					<h3 class="tit_mv"><a id="rankTab" ctgClCd="MV" href="/serviceportal/music/music/searchMusicPlainListForm.do?prKind=R" onmouseover="Common.ppsLogAjax({'dpSpaceId':'000000000019','action':'OVER'});"; onclick="Common.ppsLogAjax({'dpSpaceId':'000000000019','MUSICTP':'R','NEXTDPSPACEID':'300000000070'}); Common.clickTfficStatAjax({pid:'nhp1',rid:'RMF47'});" >뮤직비디오</a></h3>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- //Contens Area -->
+
+
+	</div>
+	<!-- //ContensWrap -->
+</div>
+<!-- //Wrap -->
+
+<!-- Footer -->
+<div id="footer">
+	<div class="inbox">
+		<div class="hoppin_copy clfix">
+			<div class="fl_left mt5"><a href="#" onclick="fncHpnPolicyMenu('F01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_logo.gif" ></a></div>
+			<div class="fl_left ml20">
+				<div class="info">
+					<a href="#" onclick="fncHpnPolicyMenu('F02'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info02.gif" ></a>
+					| <a href="#" onclick="fncHpnPolicyMenu('F03'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info03.gif" ></a>
+					| <a href="#" onclick="fncHpnPolicyMenu('F04'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info04.gif" ></a>
+					| <a href="#" onclick="fncHpnPolicyMenu('F05'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info05.gif" ></a>
+					<img src="http://www.hoppin.nate.com/resource/images/common/footer_info07.gif"  class="ml15">
+
+				</div>
+			</div>
+			<address class="info2"><img src="http://www.hoppin.nate.com/resource/images/common/footer_address.gif" ></address> <!-- 110127 추가 -->
+		</div>
+		<div class="coms_copy">
+			<p class="alert_right">
+				SK커뮤니케이션즈(주)는 정보제공업체 또는 정보제공자가 제공한 상기의 정보와 관련하여 발생한 문제에 대하여<br>
+				어떠한 책임도 부담하지 않으며, 모든 책임은 각 정보제공업체 또는 정보제공자에게 있습니다.
+			</p>
+			<p class="copyright">Copyright &copy; <a href="#" onclick="fncHpnPolicyMenu('F06'); return false;"><strong><span class="sk">SK</span> Communications.</strong></a> All rights reserved.</p>
+		</div>
+	</div>
+</div>
+<!-- //Footer -->
+<img src="http://stat.nate.com/stat/stat.tiff?cp_url=[hoppin_ndr.nate.com]" width="0" height="0" border="0" />
+
+</body>
+</html>
+<!-- modal 공지 레이어 -->
+<div class="modal_bg" style="display:none;"></div>
+<div class="errorm_box502" style="display:none;">
+	<div class="errorm_conts">
+		<div class="errorm_main clfix">
+			<div class="img"><img src="http://www.hoppin.nate.com/resource/images/global/img_error01.gif" alt="" width="154" height="146"></div>
+			<dl class="mt15">
+				<dt class="t_18b_33">서비스 준비 중입니다. </dt>
+				<dd class="t_12_80">안녕하세요, hoppin입니다.<br>현재 아이폰과 아이패드를 위한 서비스를 준비 중입니다. <br>멋진 모습으로 곧 찾아 뵙겠습니다.<br>감사합니다.</dd>
+			</dl>
+		</div>
+		<div class="btns">
+			<span class="btn_wrap btn_pre_view"><button class="btn" type="button" onclick="javascript:history.back();">이전 페이지 보기</button></span>
+		</div>
+	</div>
+</div>
+<!-- //modal 공지 레이어 -->

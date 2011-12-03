@@ -14,6 +14,8 @@ i.icn {top:-1px; position:relative; display:inline-block; text-indent:-9999em; f
     span.gn_btn {cursor:default;}
 input.ipchk {top:-1px; position:relative; width:13px; height:13px; vertical-align:middle;}
 
+#mywrap {z-index:2;}
+
 /* 컨텐츠 정보 */
 .topinfo_wrap .detail_info dl dd.t_11_80, .topinfo_wrap .detail_info dl dd.t_11_80 a.t_11_66_c {color:#999 !important;}
 .topinfo_wrap .detail_info dl dd.prgm_info {font-size:12px !important; color:#4d4d4d !important; letter-spacing:-1px;}
@@ -38,7 +40,8 @@ input.ipchk {top:-1px; position:relative; width:13px; height:13px; vertical-alig
 .topinfo_wrap .detail_opt .ss_tv .list_epi ul {height:70px;}
 /* 퍼가기 레이어 */
 .sns_share_layer {z-index:30; position:absolute; top:103px; right:30px;}
-	.ssl_in {position:relative; width:546px; padding:20px 25px; letter-spacing:-1px; border:1px solid #b3b3b3; background:#fff;}
+	.ssl_shadow {padding:0 2px 5px 3px; background:url('../../images/bg_ssl_shadow.png') right bottom no-repeat;_background:none;}
+	.ssl_in {position:relative; width:548px; padding:20px 25px; letter-spacing:-1px; border:1px solid #b3b3b3; background:#fff;}
 		.ssl_in h3 {padding-bottom:17px; font-size:14px; font-weight:bold; color:#333; border-bottom:2px solid #4d4d4d;}
 		.ssl_expn {margin-top:15px; margin-bottom:-9px; font-size:11px; color:#999; text-align:center;}
 		.ssl_in h4 {clear:both; margin:24px 0 0 5px; padding-left:8px; font-size:11px; line-height:12px; font-weight:bold; color:#4c4c4c; background:url('../../images/ico_arr_gray.gif') left 1px no-repeat;}
@@ -98,6 +101,7 @@ dl.right_rate .star_9 {width:63px;}
 dl.right_rate .star_10 {width:72px;}
 .rating_pb .star_0, .rating_pb .star_1, .rating_pb .star_2, .rating_pb .star_3, .rating_pb .star_4, .rating_pb .star_5, .rating_pb .star_6, .rating_pb .star_7, .rating_pb .star_8, .rating_pb .star_9, .rating_pb .star_10 {background-image:url('../../images/common/bg_rating_n_pbs.gif');}
 .rating_gb .star_0, .rating_gb .star_1, .rating_gb .star_2, .rating_gb .star_3, .rating_gb .star_4, .rating_gb .star_5, .rating_gb .star_6, .rating_gb .star_7, .rating_gb .star_8, .rating_gb .star_9, .rating_gb .star_10 {background-image:url('../../images/common/bg_rating_n_gbs.gif');}
+.rating_gb {padding-bottom:1px;}
 
 /* SNS공유(작은사이즈) */
 ul.sns_s_share {}
@@ -107,10 +111,10 @@ ul.sns_s_share {}
 		ul.sns_s_share li .sns_s_me2day {background-position:-20px -60px;}
 		ul.sns_s_share li .sns_s_twitter {background-position:-40px -60px;}
 		ul.sns_s_share li .sns_s_facebook {background-position:-60px -60px;}
-		ul.sns_s_share li.this .sns_s_cyworld {background-position:left -80px;}
-		ul.sns_s_share li.this .sns_s_me2day {background-position:-20px -80px;}
-		ul.sns_s_share li.this .sns_s_twitter {background-position:-40px -80px;}
-		ul.sns_s_share li.this .sns_s_facebook {background-position:-60px -80px;}
+		ul.sns_s_share li.this .sns_s_cyworld, ul.sns_s_share li .sns_s_c {background-position:left -80px;}
+		ul.sns_s_share li.this .sns_s_me2day, ul.sns_s_share li .sns_s_m {background-position:-20px -80px;}
+		ul.sns_s_share li.this .sns_s_twitter, ul.sns_s_share li .sns_s_t {background-position:-40px -80px;}
+		ul.sns_s_share li.this .sns_s_facebook, ul.sns_s_share li .sns_s_f {background-position:-60px -80px;}
 p.sns_s_explain {display:inline; font-size:11px; color:#999; letter-spacing:-1px;}
 
 /* 별점 공유 레이어 */
@@ -146,13 +150,18 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 		.review_sendout ul li.daum i.icn {width:30px; height:12px; background-position:-60px -100px;}
 		.review_sendout ul li.egloos i.icn {top:-1px; width:17px; height:12px; background-position:-90px -100px;}
 
+/* 코멘트/ 리뷰 */
+ul.comment_list li p.t_12_66, .review p.notice {font-size:12px; line-height:20px; color:#808080 !important;}
+	ul.comment_list li p.t_12_66 em, .review p.notice em {font-style:normal; color:#7052cc;}
+
+
 /* 외부서비스 연동 */
 .other_relate {}
 	.or_explain {padding:20px 0; border:1px solid #e6e6e6; background:#fafafa;}
 		.or_explain em {display:block; width:486px; height:11px; margin:0 auto; background:url('../../images/hpn_set_1111_n.gif') left -130px no-repeat;}
-	.or_list {clear:both; float:left; width:100%; margin-top:38px;}
-		.or_list li {clear:both; float:left; width:100%; padding:13px 0 12px 0; border-bottom:1px solid #e6e6e6;}
-		.or_list li.this {position:relative;}
+	.or_list {z-index:3; position:relative; clear:both; float:left; width:100%; margin-top:38px;}
+		.or_list li {z-index:1; clear:both; float:left; width:100%; padding:13px 0 12px 0; border-bottom:1px solid #e6e6e6;}
+		.or_list li.this {z-index:5; position:relative;}
 			.or_list li dl dt {float:left; display:inline; width:196px;}
 				.or_list li dl dt span {display:block; margin-top:7px; margin-left:47px; background-image:url('../../images/hpn_set_1111_n.gif'); background-repeat:no-repeat;}
 				.or_list li dl.cyworld dt span {width:73px; height:16px; background-position:left -145px;}
@@ -163,15 +172,16 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 				.or_list li dl.egloos dt span {width:64px; height:20px; margin-top:4px; background-position:-400px -145px;}
 				.or_list li dl.daum dt span {width:67px; height:13px; background-position:-350px -100px;}
 			.or_list li dl dd {float:left; display:inline;}
-			.or_list li dl dd.exp {width:366px; padding-top:8px; font-size:11px; letter-spacing:-1px; font-weight:bold; color:#8f8f8f;}
+			.or_list li dl dd.exp {width:360px; padding-top:8px; font-size:11px; letter-spacing:-1px; font-weight:bold; color:#8f8f8f;}
 				.or_list li dl dd.exp em.relative {font-style:normal; font-weight:normal; color:#000;}
 					.or_list li dl dd.exp em.relative i {font-weight:bold; font-style:normal;}
-			.or_list li dl dd.btn {width:177px;}
+			.or_list li dl dd.btn {width:183px;}
+				.or_list li dl dd.btn .gn_btn {margin-right:3px;}
 	.b_sns_relate {width:118px; height:25px; background-position:-110px -100px;}
 	.b_sns_dis {width:118px; height:25px; background-position:-230px -100px;}
 	.b_sns_help {width:55px; height:25px; background-position:-310px -60px;}
 	/* 알려드립니다 */
-	.or_noti {clear:both; position:relative; margin-top:60px; padding:9px 0 0 0;}
+	.or_noti {z-index:1; clear:both; position:relative; margin-top:60px; padding:9px 0 0 0;}
 		.or_noti dl {border:1px solid #e6e6e6; border-top:2px solid #999; border-bottom:2px solid #999;}
 		.or_noti dl dt {float:left; width:173px; height:68px; background:url('../../images/bg_or_noti_dt.gif') right 50% no-repeat;}
 			.or_noti dl dt span {display:block; width:63px; height:11px; margin:29px 0 0 55px; background:url('../../images/hpn_set_1111_n.gif') -340px -230px no-repeat;}
@@ -258,3 +268,12 @@ table.rv_write tr td.sns_s p.sns_s_explain {float:left; margin:6px 0 0 8px; font
 	/* footer */
 	#idNoCheck #footer {width:760px; border-top:0; background:none;}
 	#idNoCheck #footer .inbox {margin-left:0;}
+
+
+/* 메인 SNS연동 레이어 */
+.sns_lyr_relate {position:absolute; top:0; left:0; width:240px; height:140px;}
+	.slr_in {position:relative; clear:both; float:left; width:240px; height:140px;}
+		.slr_in a {display:inline-block; width:136px; height:27px; margin-top:95px; margin-left:51px;}
+		.slr_in .gn_btn {position:absolute; top:9px; right:11px; width:14px; height:13px; font:0/0 arial; background:none;}
+.slr_new {background-image:url('../../images/slr_new.gif');}
+.slr_re {background-image:url('../../images/slr_re.gif');}

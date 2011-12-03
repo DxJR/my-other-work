@@ -193,31 +193,33 @@
 						</ul>
 						<!-- 퍼가기 레이어 // TV프로그램일 때 ssl_tv 추가 -->
 						<div id="snsShareLayer" class="sns_share_layer ssl_tv" style="display:none;">
-							<div class="ssl_in">
-								<h3>TV프로그램 정보 퍼가기</h3>
-								<p class="ssl_expn">TV프로그램 정보를 복사하여 각종 블로그, 카페, 게시판 등에 사용할 수가 있습니다.</p>
-								<!-- TV정보 -->
-								<h4>TV정보</h4>
-								<div class="ssl_cont clfix">
-									<img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214505/IMAGE/STC/STC_GL0000214505_1_1.jpg" width="124" height="124" class="ssl_cont_img" alt="치티치티 뱅뱅" />
-									<div class="ssl_cont_info">
-										<h5>인생은 아름다워 <span>MBC / 드라마 / 25분</span></h5>
-										<ul class="prgm_info">
-											<li>연출 : 김병욱</li>
-											<li>출연 : 안내상 , 윤유선 , 윤계상 , 서지석</li>
-											<li>기간 : 2011. 9. 19 ~ (총 120부작) </li>
-										</ul>
+							<div class="ssl_shadow">
+								<div class="ssl_in">
+									<h3>TV프로그램 정보 퍼가기</h3>
+									<p class="ssl_expn">TV프로그램 정보를 복사하여 각종 블로그, 카페, 게시판 등에 사용할 수가 있습니다.</p>
+									<!-- TV정보 -->
+									<h4>TV정보</h4>
+									<div class="ssl_cont clfix">
+										<img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/TM/GL0000214505/IMAGE/STC/STC_GL0000214505_1_1.jpg" width="124" height="124" class="ssl_cont_img" alt="치티치티 뱅뱅" />
+										<div class="ssl_cont_info">
+											<h5>인생은 아름다워 <span>MBC / 드라마 / 25분</span></h5>
+											<ul class="prgm_info">
+												<li>연출 : 김병욱</li>
+												<li>출연 : 안내상 , 윤유선 , 윤계상 , 서지석</li>
+												<li>기간 : 2011. 9. 19 ~ (총 120부작) </li>
+											</ul>
+										</div>
+										<div class="clear"></div>
+										<!-- 복사하기 -->
+										<div class="ssl_copy clfix">
+											<input type="text" size="40" class="ssl_code" id="ssl_code" value="<html><head>hoppin</head><table><tr><td>.hoppin.co.kr/frontofficeweb/mar" />
+											<button type="button" class="gn_btn copy_code" onclick="copyText('ssl_code');" title="소스코드복사"><span class="ir">복사하기</span></button>
+										</div>
+										<p class="ssl_from"><em>hoppin</em> TV프로그램</p>
 									</div>
-									<div class="clear"></div>
-									<!-- 복사하기 -->
-									<div class="ssl_copy clfix">
-										<input type="text" size="40" class="ssl_code" id="ssl_code" value="<html><head>hoppin</head><table><tr><td>.hoppin.co.kr/frontofficeweb/mar" />
-										<button type="button" class="gn_btn copy_code" onclick="copyText('ssl_code');" title="소스코드복사"><span class="ir">복사하기</span></button>
-									</div>
-									<p class="ssl_from"><em>hoppin</em> TV프로그램</p>
+									<!-- 레이어 닫기버튼 -->
+									<button type="button" class="gn_btn ssl_close" onclick="snsSLClose();" title="레이어닫기"><span class="ir">닫기</span></button>
 								</div>
-								<!-- 레이어 닫기버튼 -->
-								<button type="button" class="gn_btn ssl_close" onclick="snsSLClose();" title="레이어닫기"><span class="ir">닫기</span></button>
 							</div>
 						</div>
 						<!-- 101209 추가 -->
@@ -365,12 +367,12 @@
 						<p class="mt10"></p>
 						<!-- SNS 댓글 -->
 						<div class="share_cmt_sns clfix">
-							<ul class="sns_s_share">
-								<li><button type="button" class="gn_btn sns_s_cyworld" title="싸이월드"><span class="ir">싸이월드</span></button></li>
+							<ul id="sns_share_small" class="sns_s_share">
+								<li><button type="button" class="gn_btn sns_s_cyworld" onmouseover="this.className='gn_btn sns_s_c';" onmouseout="this.className='gn_btn sns_s_cyworld';" title="싸이월드"><span class="ir">싸이월드</span></button></li>
 								<!-- 선택일 때 lli class="this" -->
-								<li class="this"><button type="button" class="gn_btn sns_s_me2day" title="미투데이"><span class="ir">미투데이</span></button></li>
-								<li><button type="button" class="gn_btn sns_s_twitter" title="트위터"><span class="ir">트위터</span></button></li>
-								<li><button type="button" class="gn_btn sns_s_facebook" title="페이스북"><span class="ir">페이스북</span></button></li>
+								<li class="this"><button type="button" class="gn_btn sns_s_me2day" onmouseover="this.className='gn_btn sns_s_m';" onmouseout="this.className='gn_btn sns_s_me2day';" title="미투데이"><span class="ir">미투데이</span></button></li>
+								<li><button type="button" class="gn_btn sns_s_twitter" onmouseover="this.className='gn_btn sns_s_t';" onmouseout="this.className='gn_btn sns_s_twitter';" title="트위터"><span class="ir">트위터</span></button></li>
+								<li><button type="button" class="gn_btn sns_s_facebook" onmouseover="this.className='gn_btn sns_s_f';" onmouseout="this.className='gn_btn sns_s_facebook';" title="페이스북"><span class="ir">페이스북</span></button></li>
 							</ul>
 							<p class="sns_s_explain">외부서비스를 선택하여 친구들과 공유해 보세요</p>
 						</div>
@@ -379,23 +381,27 @@
 					<!--comment amount -->
 					<!-- //comment amount -->
 					<!-- comment list -->
-					<ul class="comment_list mb20" id="CommentLists"><li id="comment_28730"><div class="reply"><ul class="reply_info clfix"><li class="id"><a href="#" onclick="Common.goMyPageHome(1001366670);return false;">별떵땡</a></li><li class="date ls0">2011.11.23 18:40</li><li class="report"><a href="javascript:SendReport('MV','28730','CM');">신고</a></li></ul><div class="modify_com" style="display:none;"><textarea class="t_11_80" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">eoqkr
-					대박</textarea><span class="btn_wrap btn_comment_ok"><button onclick="ConfirmCommentEdit(28730, this);return false;" class="btn">확인</button></span></div><p class="t_12_4d text"><br>eoqkr<br>대박<span class="btn"></span></p><p class="sympathyb" onmouseover="MouseOverAgree(28730, this);" onmouseout="MouseOutAgree(28730, this);" onclick="MouseClickAgree(28730,'MV', this);">0</p><p class="m_over" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/common/img_bln_symp.png" alt="공감이되시면 눌러주세요" class="png24"></p><a href="#" class="re_close" onclick="ToggleCommentReply(this, 'MV');return false;">리플 [0]</a><p></p></div><div class="reply2" style=""><div class="write"><div class="write_wrap"><input type="text" class="t_11_66" maxlength="50" value="리플은 최대 50자까지 등록 가능합니다." onfocus="javascript:FocusCommentReply(this);" onkeyup="ReplyChangeContent(this);checkCommentSubmit(event, '28730', this);"><span class="btn_wrap btn_c_reg"><button class="btn" onclick="WriteCommentReply('28730', this);return false;">등록</button></span></div></div><ul></ul><div class="page"></div></div></li><li id="comment_28727"><div class="reply"><ul class="reply_info clfix"><li class="id"><a href="#" onclick="Common.goMyPageHome(1001144772);return false;">푸르닝</a></li><li class="date ls0">2011.11.23 17:42</li><li class="report"><a href="javascript:SendReport('MV','28727','CM');">신고</a></li></ul><div class="modify_com" style="display:none;"><textarea class="t_11_80" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">완전 재밌어요!! 대박임 완전 귀여워 대박대박!!! 워우....짱..</textarea><span class="btn_wrap btn_comment_ok"><button onclick="ConfirmCommentEdit(28727, this);return false;" class="btn">확인</button></span></div><p class="t_12_4d text"><br>완전 재밌어요!! 대박임 완전 귀여워 대박대박!!! 워우....짱..<span class="btn"></span></p><p class="sympathyb" onmouseover="MouseOverAgree(28727, this);" onmouseout="MouseOutAgree(28727, this);" onclick="MouseClickAgree(28727,'MV', this);">0</p><p class="m_over" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/common/img_bln_symp.png" alt="공감이되시면 눌러주세요" class="png24"></p><a href="#" class="re_open" onclick="ToggleCommentReply(this, 'MV');return false;">리플 [0]</a><p></p></div><div class="reply2" style="display:none;"><div class="write"><div class="write_wrap"><input type="text" class="t_11_66" maxlength="50" value="리플은 최대 50자까지 등록 가능합니다." onfocus="javascript:FocusCommentReply(this);" onkeyup="ReplyChangeContent(this);checkCommentSubmit(event, '28727', this);"><span class="btn_wrap btn_c_reg"><button class="btn" onclick="WriteCommentReply('28727', this);return false;">등록</button></span></div></div><ul></ul><div class="page"></div></div></li><li id="comment_28568"><div class="reply"><ul class="reply_info clfix"><li class="id"><a href="#" onclick="Common.goMyPageHome(1001104357);return false;">princessMJ</a></li><li class="date ls0">2011.11.23 01:15</li><li class="report"><a href="javascript:SendReport('MV','28568','CM');">신고</a></li></ul><div class="modify_com" style="display:none;"><textarea class="t_11_80" onkeydown="javascript:CommentKeyDown(this);" onkeyup="javascript:CommentKeyDown(this);">너무재밌어요^^</textarea><span class="btn_wrap btn_comment_ok"><button onclick="ConfirmCommentEdit(28568, this);return false;" class="btn">확인</button></span></div><p class="t_12_4d text"><br>너무재밌어요^^<span class="btn"></span></p><p class="sympathyb" onmouseover="MouseOverAgree(28568, this);" onmouseout="MouseOutAgree(28568, this);" onclick="MouseClickAgree(28568,'MV', this);">0</p><p class="m_over" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/common/img_bln_symp.png" alt="공감이되시면 눌러주세요" class="png24"></p><a href="#" class="re_open" onclick="ToggleCommentReply(this, 'MV');return false;">리플 [0]</a><p></p></div><div class="reply2" style="display:none;"><div class="write"><div class="write_wrap"><input type="text" class="t_11_66" maxlength="50" value="리플은 최대 50자까지 등록 가능합니다." onfocus="javascript:FocusCommentReply(this);" onkeyup="ReplyChangeContent(this);checkCommentSubmit(event, '28568', this);"><span class="btn_wrap btn_c_reg"><button class="btn" onclick="WriteCommentReply('28568', this);return false;">등록</button></span></div></div><ul></ul><div class="page"></div></div></li></ul>
 
+					<!-- 등록된 코멘트 없을 때 -->
+					<ul class="comment_list mb20" id="CommentLists">
+						<li>
+							<p class="t_12_66 al_center">등록된 코멘트가 아직 없습니다.</p>
+						</li>
+					</ul>
 
 					<h4 class="mvdetail_title">
 					<img src="http://www.hoppin.nate.com/resource/images/contents/txt_04review.gif" alt="04.리뷰">
 					<span class="info">
 					<a href="javascript:GetReviewList(10);" class="t_11_80">더보기 [0]</a>
 					</span></h4>
-							<!-- review -->
-							<div class="review">
-								<p class="notice"><span class="id"></span>리뷰를 작성해 주세요.</p>
-							</div>
-							<div class="al_right">
-								<span class="btn_wrap btn_b_review_write"><button type="button" class="btn" onclick="GetReviewWrite('P00000011150', ''); Common.clickTfficStatAjax({pid:'nhp1',rid:clickId});">리뷰쓰기</button></span>
-							</div>
-							<!-- //review -->
+					<!-- review // 리뷰없을 때 -->
+					<div class="review">
+						<p class="notice">등록된 리뷰가 아직 없습니다.</p>
+					</div>
+					<div class="al_right">
+						<span class="btn_wrap btn_b_review_write"><button type="button" class="btn" onclick="GetReviewWrite('P00000011150', ''); Common.clickTfficStatAjax({pid:'nhp1',rid:clickId});">리뷰쓰기</button></span>
+					</div>
+
 					</div>
 				</div>
 				<!-- left end -->
@@ -451,12 +457,12 @@
 							<div class="sns_share_star" style="display:none;">
 								<h6>친구들과 공유</h6>
 								<div class="sns_share_star_b">
-									<ul class="sns_s_share">
-										<li><button type="button" class="gn_btn sns_s_cyworld" title="싸이월드"><span class="ir">싸이월드</span></button></li>
+									<ul id="sns_share_small" class="sns_s_share">
+										<li><button type="button" class="gn_btn sns_s_cyworld" onmouseover="this.className='gn_btn sns_s_c';" onmouseout="this.className='gn_btn sns_s_cyworld';" title="싸이월드"><span class="ir">싸이월드</span></button></li>
 										<!-- 선택일 때 lli class="this" -->
-										<li class="this"><button type="button" class="gn_btn sns_s_me2day" title="미투데이"><span class="ir">미투데이</span></button></li>
-										<li><button type="button" class="gn_btn sns_s_twitter" title="트위터"><span class="ir">트위터</span></button></li>
-										<li><button type="button" class="gn_btn sns_s_facebook" title="페이스북"><span class="ir">페이스북</span></button></li>
+										<li class="this"><button type="button" class="gn_btn sns_s_me2day" onmouseover="this.className='gn_btn sns_s_m';" onmouseout="this.className='gn_btn sns_s_me2day';" title="미투데이"><span class="ir">미투데이</span></button></li>
+										<li><button type="button" class="gn_btn sns_s_twitter" onmouseover="this.className='gn_btn sns_s_t';" onmouseout="this.className='gn_btn sns_s_twitter';" title="트위터"><span class="ir">트위터</span></button></li>
+										<li><button type="button" class="gn_btn sns_s_facebook" onmouseover="this.className='gn_btn sns_s_f';" onmouseout="this.className='gn_btn sns_s_facebook';" title="페이스북"><span class="ir">페이스북</span></button></li>
 									</ul>
 									<div class="sns_share_star_btn">
 										<button type="button" class="gn_btn sns_s_send" title="평가하기"><span class="ir">평가하기</span></button>
