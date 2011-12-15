@@ -243,34 +243,6 @@ ul.comment_list li p.t_12_66, .review p.notice {font-size:12px; line-height:20px
 	.ordh_db_02 {height:395px; background:url('../../images/ordet_daum.gif') left -190px no-repeat;}
 
 
-/* 19세 인증 */
-#idNoCheck {background:#fafafa;}
-	/* header */
-	#idNoCheck #header {width:760px; height:42px; border-bottom:1px solid #2800a4;}
-		#idNoCheck #header h1 {top:11px; left:1px; width:73px; height:25px; padding:0; background:url('../../images/hpn_age19.gif') left top no-repeat;}
-			#idNoCheck #header h1 a {width:73px; height:25px;}
-			#idNoCheck #header h2{top:17px; left:88px; width:auto; height:auto; padding-left:11px; text-indent:0; font-size:14px; font-weight:bold; color:#000; letter-spacing:-1px; border-left:1px solid #000; background:none;}
-	/* content */
-	#idNoCheck #wrap {width:668px; padding:0 46px; border-top:3px solid #7052cc; background:none;}
-	#idNoCheck #contentWrap {width:668px; background:none;}
-		/* 성인인증 */
-		.chk_id_no {margin-top:92px; padding:15px 0 0 152px; background:url('../../images/age_19.gif') left top no-repeat;}
-			.chk_id_no h3 {width:514px; height:28px; background:url('../../images/hpn_age19.gif') left -60px no-repeat;}
-			.chk_id_no p {margin:16px 0 23px 0; font-size:16px; color:#4c4c4c; font-weight:bold; letter-spacing:-1px; line-height:24px;}
-				.chk_id_no p em {font-style:normal; color:#7052cc;}
-			.chk_id_no a.out19age {width:120px; height:39px; margin-left:-1px; background:url('../../images/hpn_age19.gif') -80px 0 no-repeat;}
-		/* 추천 무료영화관 */
-		.rcmd_freemovie {width:631px; margin-top:93px; padding:27px 0 30px 35px; border:1px solid #efefef; border-top:2px solid #d9d9d9; background:#fdfdfd;}
-			.rf_left {float:left; display:inline; margin-top:1px;}
-				.rf_left h3 {width:135px; height:52px; background:url('../../images/hpn_age19.gif') -210px 0 no-repeat;}
-				.rf_left p {width:144px; height:24px; margin-top:11px; background:url('../../images/hpn_age19.gif') -350px 0 no-repeat;}
-			.rcmd_freemovie ul {float:left; display:inline; margin:0 0 0 23px;}
-				.rcmd_freemovie li {float:left; display:inline; width:92px; margin-left:12px; padding:0 0 0 1px; background:url('../../images/rcmd_freemovie.gif') left top no-repeat;}
-					.rcmd_freemovie li a, .rcmd_freemovie li img {display:block; color:#333;}
-					.rcmd_freemovie li img {margin-left:2px; margin-bottom:9px;}
-	/* footer */
-	#idNoCheck #footer {width:760px; border-top:0; background:none;}
-	#idNoCheck #footer .inbox {margin-left:0;}
 
 
 /* 메인 SNS연동 레이어 */
