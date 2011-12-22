@@ -1,0 +1,60 @@
+@charset "euc-kr";
+
+html { .overflow:scroll; .overflow-x:auto; }
+html,body { margin:0; padding:0; color:#333; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td, span { margin:0; padding:0; }
+body { color:#333; font-size:15px; font-family:"Malgun Gothic", Dotum, Gulim, Apple-Gothic, sans-serif; letter-spacing:-1px; line-height:1em; background-color:#fff; -webkit-text-size-adjust:none; word-wrap:break-word; word-break:break-all; }
+table { border-collapse:collapse; border-spacing:0; }
+a {text-decoration:none; font-family:"Malgun Gothic", Dotum, Gulim, Apple-Gothic, sans-serif; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+strong { font-weight:bold; }
+button { margin:0; padding:0; border:none; font-family:"Malgun Gothic", Dotum, Gulim, Apple-Gothic, sans-serif; cursor:pointer; font-size:15px; }
+li { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+q:before,q:after { content:''; }
+abbr,acronym { border:0; font-variant:normal; }
+hr { display:none; }
+textarea { -webkit-appearance:none; -webkit-border-radius:0; }
+input[type="checkbox"] { background-color:#fff; width:16px; height:16px; }
+input:checked[type="checkbox"] { background-color:#fff; -webkit-appearance:checkbox; }
+input[type="button"], input[type="text"], input[type="image"] {-webkit-appearance:none;-webkit-border-radius:0;}
+
+legend {position:absolute; top:0; left:0; width:0; height:0; padding:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+.ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+i, em {font-style:normal;}
+i.icn {top:-1px; position:relative; display:inline-block; text-indent:-9999em; font:0/0 arial; overflow:hidden; vertical-align:middle; background-image:url(''); background-repeat:no-repeat;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 Arial;}
+
+/* to preserve line-height and selector appearance */
+sup { vertical-align:text-top; }
+sub { vertical-align:text-bottom; }
+input,textarea,select { font-family:inherit; font-size:inherit; font-weight:inherit; }
+textarea, input { outline-color:-moz-use-text-color; outline-style:none; outline-width:medium; }
+textarea { resize:none; }
+/* to enable resizing for IE */
+input,textarea,select { *font-size:100%; }
+
+/* because legend doesn't inherit in IE */
+legend { color:#000; }
+label { cursor:pointer; }
+
+
+#m_news {line-height:1.25em;}
+
+#m_head {position:relative; height:54px; padding-top:32px; font-size:40px; font-weight:bold; text-align:center; border-bottom:2px solid #505050; background:#d8d8d8;}
+	#m_head a.to-home {position:absolute; top:11px; left:9px; display:block; width:76px; height:42px; padding:18px 0 0 25px; font-size:24px; color:#505050; text-align:left; text-shadow:0 1px 0 #fff; background:url('../../images/btn_to-home.png') left top no-repeat;}
+
+.m_news_list {}
+	.m_news_list li {border-bottom:1px solid #8c8c8c;}
+		.m_news_list li a.m_news_link {display:block; padding:19px 29px; background:url('../../images/bg_arw_right.png') 96% 29px no-repeat;}
+			.m_news_list li a.m_news_link .tit {display:block; font-size:24px; color:#282828;}
+			.m_news_list li a.m_news_link .date {display:block; margin-top:15px; padding-left:1px; font-size:18px; color:#464646;}
+.m_news_view {display:none; padding:13px; font-size:24px; color:#282828; line-height:27px; border-top:1px solid #8c8c8c; background:#f2f2f2;}
+	.mnv_article {padding:26px;}
+		/* 현재선택일 때 */
+		.m_news_list li.this a.m_news_link {background:url('../../images/bg_arw_down.png') 97% 34px no-repeat;}
+		.m_news_list li.this .m_news_view {display:block;}
+.m_news_more:link, .m_news_more:visited, .m_news_more:active, .m_news_more:hover {display:block; margin-top:-1px; padding:20px 0 24px 0; font-size:22px; color:#5b3d38; text-align:center; border-top:1px solid #929292; background:#f2f2f2;}

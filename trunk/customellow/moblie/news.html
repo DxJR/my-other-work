@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Customellow</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="user-scalable=yes, initial-scale=0.6, maximum-scale=0.6, minimum-scale=0.6, width=device-width" />
+<link rel="stylesheet" href="http://m.customellow.com/common/css/mobile.css" type="text/css" />
+<link rel="stylesheet" href="common/css/m_news.css" type="text/css" />
+<script type="text/javascript">
+//<![CDATA[
+	// 목록 toggle 스크립트
+	var mNews = {
+		init : function() {
+			this.newsList = document.getElementById("mNewsList");
+			this.newsLink = this.newsList.getElementsByTagName("a");
+			this.newsLi = this.newsList.getElementsByTagName("li");
+			mNews.showSelect();
+		},
+
+		hideAll : function() {
+			for (var i=0; i<this.newsLi.length;i++ )
+			{
+				this.newsLi[i].className=null;
+			}
+		},
+
+		showSelect : function() {
+			for (var i=0; i<this.newsLink.length;i++ )
+			{
+				this.newsLink[i].onclick = function() {
+					if (this.className=="m_news_link")
+					{
+						if (this.parentNode.className=="this")
+						{
+							mNews.hideAll();
+						} else {
+							mNews.hideAll();
+							this.parentNode.className="this";
+						}
+					}
+				}
+			}
+		}
+	}
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="m_news">
+	<!-- head -->
+	<div id="m_head">
+		<h2>News</h2>
+		<a href="#" class="to-home">Home</a>
+	</div>
+	<!-- content -->
+	<div id="m_content">
+		<ul id="mNewsList" class="m_news_list">
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#" class="m_news_link">
+					<em class="tit">커스텀멜로우 이벤트를 안내해 드립니다.</em>
+					<span class="date">2011/11/29</span>
+				</a>
+				<div class="m_news_view">
+					<img src="images/test_temp.gif" width="100%" alt="이벤트 안내" />
+					<div class="mnv_article">
+						[당첨자 안내]<br />
+						 당첨자를 안내 해 드립니다.
+						 <br />
+						 <br />
+						1.홍길동
+						<br />
+						2.홍길동
+						<br />
+						3.홍길동
+					</div>
+				</div>
+			</li>
+		</ul>
+		<a href="#" class="m_news_more">더보기</a>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	mNews.init(); // 목록 toggle 스크립트 실행
+//]]>
+</script>
+
+</body>
+</html>
