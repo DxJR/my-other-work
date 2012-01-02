@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* ============ Default ============ */
+html {height:100%;}
+body {width:100%; height:100%; margin:0; padding:0; font-size:12px; line-height:1.2em; font-family:font-family:Helvetica, AppleGothic, sans-serif; background:url('images/bg_pattern.gif');}
+ol, ul, li, dl, dt, dd {list-style:none;}
+ul, ol, li, dl, dt, dd, form, p, h1, h2, h3, h4, h5, h6, blockquote, fieldset {margin:0; padding:0;}
+img, fieldset {border:0;}
+hr {clear:both;}
+em {font-style:normal;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+table caption {width:0; height:0; text-indent:-1000em; font:0/0 arial; overflow:hidden;}
+legend {position:absolute; top:0; left:0; width:0; height:0; padding:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 Arial;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+/* float 해제 */
+.f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
+* html .f_clear {height:1px;}
+.f_clear {display: block;min-height:1px;}
+
+#GridLens {width:100%; background:url('images/bg_top.gif') left top repeat-x;}
+
+header {width:1145px; height:795px; margin:0 auto; background:url('images/ttttt.png') 45px top no-repeat;}
+
+.grd_set {position:relative; width:1115px; margin:0 auto; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-repeat:no-repeat;}
+
+
+.gridlens_brandnew {height:302px; background-position:37px top; background-image:url('images/gridlens_01_brandnew.png');}
+.gridlens_mode_camera {height:526px; background-position:2px top; background-image:url('images/gridlens_02_camera.png');}
+.gridlens_mode_create_grid {height:524px; background-position:61px top; background-image:url('images/gridlens_03_grid.png');}
+.gridlens_mode_gallery_share {height:658px; background-position:28px top; background-image:url('images/gridlens_04_gallery.png');}
+
+footer {width:1145px; height:47px; padding-bottom:30px; margin:0 auto; background:url('images/footer.png') 76px top no-repeat;}
