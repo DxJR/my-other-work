@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>hoppin</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/base.css" type="text/css">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/layout_n.css" type="text/css">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/class_n.css" type="text/css">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/mypage_n.css" type="text/css">
+	<!-- SNS 연동설정 -->
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/global.css" type="text/css">
+	<style type="text/css">
+	.ico_premium	{position:absolute; top:0; left:0; z-index:1;}
+	</style>
+	<link rel="stylesheet" href="resource/common/css/hoppin_renew_1111.css" type="text/css">
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-ui-1.7.2.custom.min.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/common.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/UTIL.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/UI2.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/AJAX2.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/URL2.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/MyPageUI.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery.validity.cust.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/wvp/wvp.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/blockUI.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jqueryFn.js"></script>
+	<script type="text/javascript" src="http://common.nate.com/nameUI/CommonScript.aspx?t=A&c=UTF8"></script>
+	<!--[if IE 6]>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('.png_bg, img');</script>
+	<![endif]-->
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/SNS.js"></script>
+<script type="text/javascript" src="resource/common/js/hpn_n1111.js"></script>
+</head>
+
+<body>
+	<!-- @include_page path="/serviceportal/mypage/myPageMain/myPageUserCheck.do"/ -->
+
+	<!-- 네이트 Top 영역 시작 -->
+<!-- Top area -->
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/nateglobalsearch.js"></script>
+
+
+
+
+<div id="header">
+	<h1><a href="http://www.nate.com" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG1'});">NATE</a></h1>
+
+	<h2><a href="http://www.hoppin.nate.com" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG2'});">Hoppin</a></h2>
+
+	<!-- search -->
+	<div id="searchWrap">
+
+		<form id="search" name="search" action="http://search.nate.com/search/all.html?" method="get" target="_blank">
+			<input type="hidden" name="thr" value="" />	<!-- 이 값은 네이트 협의 후 변경해야 함 -->
+			<input type="hidden" name="nq" value="1" />
+			<input type="hidden" name="en" value="1" />
+			<fieldset>
+				<legend>검색영역</legend>
+				<input type="text" id="input_search_all" name="q" class="searchBox" title="검색어 입력" onfocus="hideBg()" onblur="showBg()" value="" />
+				<input type="text" name="dummyText"style="display:none;"/><!-- submit을 막기위한 더미 -->
+				<input type="button" class="btn_service" title="검색" onclick='Common.goSearch($("#input_search_all").val(), "400000000001");Common.clickTfficStatAjax({pid:"nhp1",rid:"RNG13"});' />
+				<input type="button" class="btn_all" title="통합검색" onclick="search.submit();Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG14'});" />
+				<img height="4" width="7" alt="자동완성" src="http://www.hoppin.nate.com/resource/images/common/layer_on01.gif" id="acImg">
+				<div class="opt_list" style="display:none;">
+				<ul id="searchresultlist">
+				<!-- ajax 삽입영역 -->
+				</ul>
+				<div class="btn_area clfix" id="searchguide">
+						<!--검색 On/off 안내 레이어//-->
+						<div class="autosearh_info" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/global/img_autosearh_info.png" alt="기능을 다시 켤 때에는 검색창을 클릭하세요"  width="178" height="70"></div>
+						<div class="btn">
+							<a href="#" title="닫기"><img src="http://www.hoppin.nate.com/resource/images/common/btn_autosearch_close.gif" alt="검색 자동완성 기능 끄기" width="113" height="12"></a>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="gnbMenu">
+
+		<div id="noscript_gnb">
+			<div>
+				<a href="http://www.nate.com/" title="네이트 메인으로" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG1'});">네이트 메인으로</a> <span>|</span>
+				<a href="http://www.nate.com/sitemap/" title="사이트맵">사이트맵</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="promotionSpot">
+		<a href="http://www.hoppin.nate.com/myway.do" target="_self" ><img src="http://www.hoppin.nate.com/resource/images/event/myway/image_gnb_banner.jpg" alt="BANNER" /></a>
+	</div>
+
+
+</div>
+<!-- //Top area -->	<!-- 네이트 Top 영역 끝 -->
+	<hr>
+
+	<!-- 마이페이지  Conts 영역 시작 -->
+	<div id="mywrap">
+		<div id="contentWrap">
+
+		<!-- 마이페이지  Top 영역 시작 -->
+
+<!-- 외부 연동 설정 도메인 -->
+
+<div id="top_gnb">
+	<ul class="common clifx">
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG1'});"><a href="http://www.hoppin.nate.com"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb01.gif" alt="홈"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG2'});"><a href="http://www.hoppin.nate.com/serviceportal/movie/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb02.gif" alt="영화"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG3'});"><a href="http://www.hoppin.nate.com/serviceportal/tv/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb03.gif" alt="TV프로그램"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG4'});"><a href="http://www.hoppin.nate.com/serviceportal/music/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb04.gif" alt="뮤직비디오"></a></li>
+
+		<li class="no_brd"><a href="http://www.hoppin.nate.com/serviceportal/bs/disney/home/main/searchMain.do" target="_blank"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb14.gif" alt="디즈니"></a></li>
+
+	</ul>
+	<ul class="privacy clifx">
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG5'});"><a href="http://www.hoppin.nate.com/serviceportal/event/event/selectEventMainList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb08.gif" alt="이벤트"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG6'});" class="bar"><a href="http://www.hoppin.nate.com/serviceportal/mypage/myPageMain/searchMyPageMain.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb09_on.gif" alt="마이페이지"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG7'});" class="etc"><a href="http://www.hoppin.nate.com/serviceportal/common/salePass/searchSalePassList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb10.gif" alt="이용권"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG8'});" class="etc"><a href="http://www.hoppin.nate.com/serviceportal/cscenter/main/searchCstmMain.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb11.gif" alt="고객센터"></a></li>
+	</ul>
+</div>
+	    <!-- 마이페이지  Top 영역 끝 -->
+
+		<!-- 마이페이지  LNB 영역 시작 -->
+
+
+<!-- No Image -->
+
+
+<!-- 외부 연동 설정 도메인 -->
+
+<!-- 좌측메뉴 pps click -->
+	<!-- 나의 Myp LEFT MENU -->
+
+
+
+<form id="myPageMainFrm">
+</form>
+
+<div id="mysnb">
+
+	<div class="profile">
+		<div class="account clfix">
+			<div class="pic"><a href="#" onclick="fncProfileImgUpdate(); return false;"><img id="menuProfile" src="http://www.hoppin.nate.com/resource/images/global/input_img.gif" alt="프로필 이미지" onerror="this.src='http://www.hoppin.nate.com/resource/images/global/input_img.gif'" width="50" height="50"></a></div>
+
+			<div class="my"><a href="#" class="t_13b_33" onclick="fncGoMenu('A01'); return false;">가나다</a>님</div>
+			<div class="btns">
+				<button class="wbtn mr5" style="width:77px;" onclick="fncGoMenu('U01')">개인정보관리</button><button class="wbtn" style="width:48px;" onclick="fncGoMenu('U02')">방명록</button>
+			</div>
+		</div>
+		<div class="belong">
+			<dl class="clfix">
+				<dt>도토리</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncChargeDotori(); return false;">223.3</a> <span class="t_11_99">개</span></dd>
+				<dd class="btn"><a href="#" onclick="Common.fncChargeDotori(); return false;"><img src="http://www.hoppin.nate.com/resource/images/mypage/btn_mypage_charge.gif" alt="충전"></a></dd>
+			</dl>
+			<dl class="clfix">
+				<dt>이용권</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncGoSearchMyPassList(); return false;">1</a> <span class="t_11_99">개</span></dd>
+				<dd class="btn"><a href="#" onclick="Common.fncGoSearchSalePassList(); return false;"><img src="http://www.hoppin.nate.com/resource/images/mypage/btn_mypage_buy.gif" alt="구매"></a></dd>
+			</dl>
+			<dl class="clfix">
+				<dt>포인트</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncGoSearchMyHoppinPointHistList(); return false;">50,000</a> <span class="t_11_99">P</span></dd>
+				<dd></dd>
+			</dl>
+			<dl class="clfix">
+				<dt>쿠폰</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncGoSearchMyCouponList(); return false;">0</a> <span class="t_11_99">개</span></dd>
+				<dd class="btn"><a href="#" onclick="Common.fncGoSearchMyCouponList(); return false;"><img src="http://www.hoppin.nate.com/resource/images/mypage/btn_mypage_reg.gif" alt="등록"></a></dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="conts">
+		<h1><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A01'}); fncGoMenu('A01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/h1_snb_mypage.gif" alt="마이페이지"></a></h1>
+		<ul class="clfix">
+
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A02'}); fncGoMenu('A02'); return false;">구매리스트<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A03'}); fncGoMenu('A03'); return false;">관심+리스트<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A04'}); fncGoMenu('A04'); return false;">나의 글<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A05'}); fncGoMenu('A05'); return false;">나의 별점<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A06'}); fncGoMenu('A06'); return false;">이웃 hoppin 리스트<span class="onbull">&nbsp;</span></a></li>
+			<li  class="on" ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A07'}); fncGoMenu('A07'); return false;">외부 서비스 연동<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A08'}); fncGoMenu('A08'); return false;">나의 문의 내역<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A09'}); fncGoMenu('A09'); return false;">나의 이벤트 내역<span class="onbull">&nbsp;</span></a></li>
+			<li  class="no_brd" ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A10'}); fncGoMenu('A10'); return false;">이용동의 해지<span class="onbull">&nbsp;</span></a></li> <!-- 해당 메뉴일때 on -->
+		</ul>
+
+		<div class="snb_banner"><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'S01'}); fncGoMenu('S01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/ban_my_style_movie.gif" alt="나의 영화취향"></a></div>
+	</div>
+</div>
+		<!-- 마이페이지  LNB 영역 끝 -->
+
+		<!-- conts area -->
+
+<!-- conts area -->
+
+	<div id="conts">
+	<form id="mySnsListForm" method="POST">
+		<input type="hidden" name="userMngNum" value="">
+		<input type="hidden" name="snsTgtSvcCd">
+		<!-- top area -->
+		<h3 class="tit_line"><span class="t_14b_00">외부 서비스 연동</span></h3>
+
+		<!-- 외부서비스연동 추가 -->
+		<div class="other_relate">
+			<p class="or_explain"><em><i class="ir">hoppin의 다양한 컨텐츠와 정보를 언제든지 트위터, 페이스북, 싸이월드, 미투데이, 블로그 친구들과 공유할 수 있어요</i></em></p>
+			<ul id="orList" class="or_list">
+				<li>
+					<dl class="cyworld clfix">
+						<dt><span><i class="ir">cyworld</i></span></dt>
+						<dd class="exp">싸이월드 서비스와 연동</dd>
+						<dd class="btn">
+							<button type="button" class="gn_btn b_sns_relate" title="연동하기"><span class="ir">연동하기</span></button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="me2day clfix">
+						<dt><span><i class="ir">me2day</i></span></dt>
+						<dd class="exp">미투데이 서비스와 연동</dd>
+						<dd class="btn">
+							<button type="button" class="gn_btn b_sns_relate" title="연동하기"><span class="ir">연동하기</span></button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="twitter clfix">
+						<dt><span><i class="ir">twitter</i></span></dt>
+						<dd class="exp">트위터 서비스와 연동</dd>
+						<dd class="btn">
+							<button type="button" class="gn_btn b_sns_relate" title="연동하기"><span class="ir">연동하기</span></button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="facebook clfix">
+						<dt><span><i class="ir">facebook</i></span></dt>
+						<dd class="exp"><em class="relative"><i>허니대장님</i>과 <i>연동</i>되었습니다.</em></dd>
+						<dd class="btn">
+							<button type="button" class="gn_btn b_sns_dis" title="해제하기"><span class="ir">해제하기</span></button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tistory clfix">
+						<dt><span><i class="ir">tistory</i></span></dt>
+						<dd class="exp"><em class="relative"><i>티스토리 블로그</i>와 <i>연동</i>되었습니다.</em></dd>
+						<dd class="btn">
+							<button type="button" class="gn_btn b_sns_dis" onclick="toggleEle('ords_tistory');" title="해제하기"><span class="ir">해제하기</span></button>
+							<button type="button" class="gn_btn b_sns_help" onclick="toggleEle('ordsh_tistory');" title="도움말"><span class="ir">도움말</span></button>
+						</dd>
+					</dl>
+					<!-- 연동하기 -->
+					<div id="ords_tistory" class="or_detail_set">
+						<fieldset class="tistory">
+							<legend>티스토리 블로그와 연동하기</legend>
+							<dl class="or_service_set clfix">
+								<dt class="blog_addr"><span ><i class="ir">블로그 주소</i></span></dt>
+								<dd><input type="text" size="30" title="블로그 주소 입력" value="http://" /></dd>
+								<dt class="blog_id"><span ><i class="ir">블로그 ID</i></span></dt>
+								<dd><input type="text" size="30" title="블로그 아이디 입력" /></dd>
+								<dt class="blog_pwd"><span ><i class="ir">블로그 PW</i></span></dt>
+								<dd><input type="password" size="30" title="블로그 비밀번호 입력" /></dd>
+								<dt class="blog_api"><span ><i class="ir">블로그 API</i></span></dt>
+								<dd><input type="text" size="30" title="블로그 API 입력" /></dd>
+							</dl>
+							<p class="orss_exp"><span class="ir">연동을 하면 리뷰 작성시 이글루스에 함께 등록 됩니다.</span></p>
+							<div class="orss_btn_wrap">
+								<button type="submit" class="gn_btn b_set_relate" title="연동"><span class="ir">연동</span></button>
+							</div>
+						</fieldset>
+					</div>
+					<!-- 설정 도움말 -->
+					<div id="ordsh_tistory" class="ordet_help">
+						<div class="ordet_help_in">
+							<h3>티스토리 연동 설정 도움말</h3>
+							<div class="hide ordh_ti_01">
+								<ol>
+									<li>내 블로그에 관한 정보를 입력하세요.</li>
+									<li>연동 버튼을 클릭하세요</li>
+								</ol>
+							</div>
+							<h4>내 티스토리 Blog API 확인 방법</h4>
+							<div class="hide ordh_ti_02">
+								<ol>
+									<li>내 티스토리 접속  &gt;  내 블로그  &gt;  관리  &gt;  글설정  &gt; Blog API</li>
+									<li>Blog API 사용설정에서 사용에 체크하시고 확인 버튼을 누르세요</li>
+								</ol>
+							</div>
+							<i class="ordet_cnr"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<dl class="daum clfix">
+						<dt><span><i class="ir">daum blog</i></span></dt>
+						<dd class="exp">다음블로그 서비스와 연동</dd>
+						<dd class="btn">
+							<button type="button" class="gn_btn b_sns_relate" onclick="toggleEle('ords_daumblog');" title="연동하기"><span class="ir">연동하기</span></button>
+							<button type="button" class="gn_btn b_sns_help" onclick="toggleEle('ordsh_daumblog');" title="도움말"><span class="ir">도움말</span></button>
+						</dd>
+					</dl>
+					<!-- 연동하기 -->
+					<div id="ords_daumblog" class="or_detail_set">
+						<fieldset class="daum">
+							<legend>다음 블로그와 연동하기</legend>
+							<dl class="or_service_set clfix">
+								<dt class="blog_addr"><span ><i class="ir">블로그 주소</i></span></dt>
+								<dd><input type="text" size="30" title="블로그 주소 입력" value="http://" /></dd>
+								<dt class="blog_id"><span ><i class="ir">블로그 ID</i></span></dt>
+								<dd><input type="text" size="30" title="블로그 아이디 입력" /></dd>
+							</dl>
+							<p class="orss_exp"><span class="ir">연동을 하면 리뷰 작성시 이글루스에 함께 등록 됩니다.</span></p>
+							<div class="orss_btn_wrap">
+								<button type="submit" class="gn_btn b_set_change" title="변경"><span class="ir">변경</span></button>
+								<button type="button" class="gn_btn b_set_disc" title="해지"><span class="ir">해지</span></button>
+							</div>
+						</fieldset>
+					</div>
+					<!-- 설정 도움말 -->
+					<div id="ordsh_daumblog" class="ordet_help">
+						<div class="ordet_help_in">
+							<h3>다음 블로그 연동 설정 도움말</h3>
+							<div class="hide ordh_db_01">
+								<ol>
+									<li>내 블로그에 관한 정보를 입력하고 연동 버튼을 클릭하세요.</li>
+									<li>연동 버튼을 클릭하면 다음 블로그를 연동할 팝업이 뜹니다.</li>
+								</ol>
+							</div>
+							<h4>다음 블로그 연동을 위한 팝업 창</h4>
+							<div class="hide ordh_db_02">
+								<ol>
+									<li>로그인 버튼을 클릭하여 연동할 다음 아이디로 로그인해 주세요.</li>
+									<li>연동할 다음 아이디로 로그인 된 것을 확인 후 확인 버튼을 클릭하면 연동이 완료가 됩니다.</li>
+								</ol>
+							</div>
+							<i class="ordet_cnr"></i>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			<!-- 알려드립니다 -->
+			<div class="or_noti">
+				<dl>
+					<dt><span><i class="ir">알려드립니다</i></span></dt>
+					<dd class="explin">
+						<span><i class="ir">현재 제공하는 외부 서비스 연동은 총7가지 서비스 입니다. 점차 더 많은 서비스로 연계할 예정이며, 각 서비스 계정이 없으시다면 아래 주소로 가입후 연동 해주시기 바랍니다.</i></span>
+					</dd>
+					<dd class="list clfix">
+						<ul>
+							<li><a href="#">싸이월드<span>cyworld</span></a></li>
+							<li><a href="#">미투데이<span>me2day</span></a></li>
+							<li><a href="#">트위터<span>twitter</span></a></li>
+							<li><a href="#">페이스북<span>facebook</span></a></li>
+							<li><a href="#">티스토리<span>tistory</span></a></li>
+							<li><a href="#">다음 블로그<span>blog.daum</span></a></li>
+						</ul>
+					</dd>
+				</dl>
+				<i class="icn ornt_cnr"></i>
+			</div>
+		</div>
+
+	</form>
+
+	</div>
+<!-- //conts area -->
+<img src="http://stat.nate.com/stat/stat.tiff?cp_url=[www.hoppin_ndr.nate.com/serviceportal/mypage/myInfoMng/searchMySnsLinkList.do]" width="0" height="0" border="0" />
+
+		<!-- //conts area -->
+	  	</div>
+	</div>
+	<!-- 마이페이지  Conts 영역 끝 -->
+	<hr>
+
+	<!-- 마이페이지  Footer 영역 시작 -->
+<div id="footer">
+<div class="myinbox">
+  	<div class="hoppin_copy clfix">
+		<div class="fl_left mt5"><a href="#" onclick="fncHpnPolicyMenu('F01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_logo.gif" ></a></div>
+		<div class="fl_left ml20">
+			<div class="info"><a href="#" onclick="fncHpnPolicyMenu('F02'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info02.gif" ></a>
+			| <a href="#" onclick="fncHpnPolicyMenu('F03'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info03.gif" ></a>
+			| <a href="#" onclick="fncHpnPolicyMenu('F04'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info04.gif" ></a>
+			| <a href="#" onclick="fncHpnPolicyMenu('F05'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info05.gif" ></a> <img src="http://www.hoppin.nate.com/resource/images/common/footer_info07.gif" alt="" class="ml15"></div>
+		</div>
+		<address class="info2"><img src="http://www.hoppin.nate.com/resource/images/common/footer_address.gif" ></address> <!-- 110127 추가 -->
+	</div>
+	<div class="coms_copy">
+		<p class="alert_right">
+			SK커뮤니케이션즈(주)는 정보제공업체 또는 정보제공자가 제공한 상기의 정보와 관련하여 발생한 문제에 대하여<br>
+			어떠한 책임도 부담하지 않으며, 모든 책임은 각 정보제공업체 또는 정보제공자에게 있습니다.
+		</p>
+		<p class="copyright">Copyright &copy; <a href="#" onclick="fncHpnPolicyMenu('F06'); return false;"><strong><span class="sk">SK</span> Communications.</strong></a> All rights reserved.</p>
+	</div></div></div>
+	<!-- 마이페이지 Footer 영역 끝 -->
+
+</body>
+
+</html>

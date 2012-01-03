@@ -2,7 +2,6 @@
 
 /* 퍼가기 개선 추가 : 2011.11 */
 button::-moz-focus-inner {border:0; padding:0;}
-.ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em;_text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
 .clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 arial;}
 .ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
 .hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
@@ -252,3 +251,10 @@ ul.comment_list li p.t_12_66, .review p.notice {font-size:12px; line-height:20px
 		.slr_in .gn_btn {position:absolute; top:9px; right:11px; width:14px; height:13px; font:0/0 arial; background:none;}
 .slr_new {background-image:url('../../images/slr_new.gif');}
 .slr_re {background-image:url('../../images/slr_re.gif');}
+
+
+
+.detailview_list .prd_section .rating_area .rate_mystar {float:left; display:inline; margin-top:1px;}
+.detailview_list .prd_section .rating_area .rating_gb {z-index:10; position:relative;}
+.detailview_list .prd_section .rating_area .sns_share_star {z-index:9; position:absolute; top:24px; left:6px;}
+.detailview_list .prd_section .rating_area .sns_share_star_b ul.sns_s_share li {float:none; border-bottom:0;}
