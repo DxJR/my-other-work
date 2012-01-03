@@ -13,22 +13,59 @@ a:hover {text-decoration:underline;}
 table caption {width:0; height:0; text-indent:-1000em; font:0/0 arial; overflow:hidden;}
 legend {position:absolute; top:0; left:0; width:0; height:0; padding:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
 .clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 Arial;}
-.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
-/* float 해제 */
-.f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
-* html .f_clear {height:1px;}
-.f_clear {display: block;min-height:1px;}
 
 #GridLens {width:100%; background:url('images/bg_top.gif') left top repeat-x;}
 
-header {width:1145px; height:795px; margin:0 auto; background:url('images/ttttt.png') 45px top no-repeat;}
+/* animaition */
+@-webkit-keyframes moveToDown {
+	0% {opacity:0; top:-500px;}
+	20% {opacity:0.2;}
+	70% {top:50px;}		
+	100% {top:0;}	
+}
 
+@-webkit-keyframes aniIcon {
+	0% {opacity:0; top:550px;}
+	60% {opacity:0; top:550px;}
+	90% {opacity:0.5; top:430px;}		
+	100% {opacity:1; top:499px;}	
+}
+
+/* header */
+header {position:relative; width:1145px; height:795px; margin:0 auto;}
+	header * {position:absolute; font:0/0 arial; overflow:hidden; background-posiiton:left top; background-repeat:no-repeat; -webkit-animation-timing-function:ease-out;}
+	.obj_grid {z-index:3; left:149px; width:524px; height:387px; background-image:url('images/ani_grid.png'); -webkit-animation-name:moveToDown;  -webkit-animation-duration:0.6s;}
+	.obj_lens {left:317px; width:365px; height:471px; background-image:url('images/ani_lens.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.9s;}
+	.obj_ani_01 {left:45px; width:74px; height:413px; background-image:url('images/ani_object_01.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.7s;}
+	.obj_ani_02 {left:91px; width:59px; height:226px; background-image:url('images/ani_object_02.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.5s;}
+	.obj_ani_03 {left:148px; width:127px; height:560px; background-image:url('images/ani_object_03.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:1.2s;}
+	.obj_ani_04 {z-index:4; left:215px; width:164px; height:123px; background-image:url('images/ani_object_04.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.6s;}
+	.obj_ani_05 {left:644px; width:81px; height:151px; background-image:url('images/ani_object_05.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.9s;}
+	.obj_ani_06 {left:844px; width:38px; height:99px; background-image:url('images/ani_object_06.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:1s;}
+	.obj_ani_07 {z-index:3; left:847px; width:95px; height:206px; background-image:url('images/ani_object_07.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:1.1s;}
+	.obj_ani_08 {z-index:3; left:1090px; width:65px; height:123px; background-image:url('images/ani_object_08.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.8s;}
+	.obj_icon {left:551px; top:499px; width:355px; height:236px; background-image:url('images/ani_object_icon.png'); -webkit-animation-name:aniIcon; -webkit-animation-duration:0.8s;}
+	.obj_price {left:235px; top:469px; width:355px; height:250px; background-image:url('images/ani_object_price.png');}
+	.obj_hand_left {left:509px; top:389px; width:198px; height:115px; background-image:url('images/ani_body_01.png');}
+	.obj_hand_right {left:898px; top:21px; width:226px; height:312px; background-image:url('images/ani_body_02.png');}
+	.obj_foot {z-index:3; left:881px; top:617px; width:180px; height:97px; background-image:url('images/ani_body_03.png');}
+	.obj_eye1 {left:912px; top:233px; width:32px; height:35px; background-image:url('images/ani_body_eye_01.png');}
+	.obj_eye2 {left:996px; top:296px; width:84px; height:109px; background-image:url('images/ani_body_eye_02.png');}
+	.obj_eye3 {left:1090px; top:261px; width:35px; height:46px; background-image:url('images/ani_body_eye_03.png');}
+	.obj_water {z-index:3; left:696px; top:681px; width:349px; height:114px; background-image:url('images/ani_object_water.png');}
+	.obj_iphone_lt {left:597px; top:189px; width:160px; height:185px; background-image:url('images/mask_iphone.png');}
+	/* iphone */
+	.obj_iphone {position:relative; left:597px; top:134px; width:618px; height:624px; overflow:visible; background-image:url('images/iphone.png');}
+			
+
+
+
+/* content */
 .grd_set {position:relative; width:1115px; margin:0 auto; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-repeat:no-repeat;}
-
-
 .gridlens_brandnew {height:302px; background-position:37px top; background-image:url('images/gridlens_01_brandnew.png');}
 .gridlens_mode_camera {height:526px; background-position:2px top; background-image:url('images/gridlens_02_camera.png');}
 .gridlens_mode_create_grid {height:524px; background-position:61px top; background-image:url('images/gridlens_03_grid.png');}
 .gridlens_mode_gallery_share {height:658px; background-position:28px top; background-image:url('images/gridlens_04_gallery.png');}
 
+/* footer */
 footer {width:1145px; height:47px; padding-bottom:30px; margin:0 auto; background:url('images/footer.png') 76px top no-repeat;}
