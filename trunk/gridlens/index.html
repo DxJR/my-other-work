@@ -30,10 +30,25 @@
 		<div class="obj_eye3"></div>
 		<div class="obj_water"></div>
 		<div class="obj_iphone">
+			<div class="iphoneMask">
+				<div id="iphoneScreen">
+					<div id="ipsc_stp5"></div>
+				</div>
+			</div>
 		</div>
 		<div class="obj_iphone_lt"></div>
+		<div class="screen_select">
+			<ul>
+				<li><button type="button" class="button scs_cm" onclick="document.getElementById('iphoneScreen').style.left='0';" title="Camera Mode"><span class="ir">Camera Mode</span></button></li>
+				<li><button type="button" class="button scs_ccg" onclick="document.getElementById('iphoneScreen').style.left='-239px';" title="Create Custom Grid"><span class="ir">Create Custom Grid</span></button></li>
+				<li><button type="button" class="button scs_g" onclick="document.getElementById('iphoneScreen').style.left='-478px';" title="Gallery"><span class="ir">Gallery</span></button></li>
+				<li><button type="button" class="button scs_f" onclick="document.getElementById('iphoneScreen').style.left='-717px'; document.getElementById('ipsc_stp5').style.display='none';" title="Filters"><span class="ir">Filters</span></button></li>
+				<li><button type="button" class="button scs_s" onclick="document.getElementById('iphoneScreen').style.left='-717px'; document.getElementById('ipsc_stp5').style.display='block';" title="Share"><span class="ir">Share</span></button></li>
+			</ul>
+		</div>
 	</header>
-	
+
+
 	<div class="grd_set gridlens_brandnew">
 	</div>
 
