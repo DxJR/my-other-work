@@ -32,10 +32,10 @@ span.button {cursor:default;}
 }
 
 @-webkit-keyframes aniIcon {
-	0% {opacity:0; top:550px;}
-	60% {opacity:0; top:550px;}
-	90% {opacity:0.5; top:430px;}
-	100% {opacity:1; top:499px;}
+	0% {opacity:0; left:451px;}
+	60% {opacity:0; left:451px;}
+	90% {opacity:0.2;}
+	100% {opacity:1; left:551px;}
 }
 
 @-webkit-keyframes aniPrice {
@@ -46,23 +46,21 @@ span.button {cursor:default;}
 }
 
 @-webkit-keyframes aniHandLeft {
-	0% {opacity:0; -webkit-transform:rotate(-180deg);}
-	80% {opacity:0; -webkit-transform:rotate(-180deg);}
-	90% {opacity:0.5; -webkit-transform:rotate(5deg);}
+	0% {opacity:0; -webkit-transform:rotate(-40deg);}
+	80% {opacity:0; -webkit-transform:rotate(-40deg);}
 	100% {opacity:1; -webkit-transform:rotate(0);}
 }
 
 @-webkit-keyframes aniHandRight {
-	0% {opacity:0; -webkit-transform:rotate(200deg);}
-	80% {opacity:0; -webkit-transform:rotate(200deg);}
-	90% {opacity:0.5; -webkit-transform:rotate(-5deg);}
+	0% {opacity:0; -webkit-transform:rotate(40deg);}
+	80% {opacity:0; -webkit-transform:rotate(40deg);}
 	100% {opacity:1; -webkit-transform:rotate(0);}
 }
 
 @-webkit-keyframes aniIphone {
-	0% {opacity:0; left:100px; top:-700px;}
-	40% {left:100px; top:-700px;}
-	100% {opacity:1; left:597px; top:134px;}
+	0% {opacity:0; left:797px;}
+	40% {opacity:0; left:797px;}
+	100% {opacity:1; left:597px;}
 }
 
 @-webkit-keyframes aniIFoot {
@@ -100,6 +98,7 @@ header {position:relative; width:1145px; height:795px; margin:0 auto;}
 	.obj_ani_08 {z-index:3; left:1090px; width:65px; height:123px; background-image:url('images/ani_object_08.png'); -webkit-animation-name:moveToDown; -webkit-animation-duration:0.8s;}
 	.obj_icon {left:551px; top:499px; width:355px; height:236px; background-image:url('images/ani_object_icon.png'); -webkit-animation-name:aniIcon; -webkit-animation-duration:0.8s;}
 	.obj_price {left:235px; top:469px; width:355px; height:250px; background-image:url('images/ani_object_price.png'); -webkit-animation-name:aniPrice; -webkit-animation-duration:1s;}
+		.obj_price a {display:block; width:370px; height:170px;}
 	.obj_hand_left {left:509px; top:389px; width:198px; height:115px; background-image:url('images/ani_body_01.png'); -webkit-animation-name:aniHandLeft; -webkit-animation-duration:1.4s;}
 	.obj_hand_right {left:898px; top:21px; width:226px; height:312px; background-image:url('images/ani_body_02.png'); -webkit-animation-name:aniHandRight; -webkit-animation-duration:1.6s;}
 	.obj_foot {z-index:3; left:881px; top:617px; width:180px; height:97px; background-image:url('images/ani_body_03.png'); -webkit-animation-name:aniIFoot; -webkit-animation-duration:1.6s;}
@@ -131,5 +130,11 @@ header {position:relative; width:1145px; height:795px; margin:0 auto;}
 .gridlens_mode_create_grid {height:524px; background-position:61px top; background-image:url('images/gridlens_03_grid.png');}
 .gridlens_mode_gallery_share {height:658px; background-position:28px top; background-image:url('images/gridlens_04_gallery.png');}
 
+.flickr_comm {position:absolute; left:123px; bottom:0px;}
+	.flickr_comm a {display:block; width:370px; height:105px;}
+
 /* footer */
-footer {width:1145px; height:47px; padding-bottom:30px; margin:0 auto; background:url('images/footer.png') 76px top no-repeat;}
+footer {position:relative; width:1145px; height:47px; padding-bottom:30px; margin:0 auto; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('images/footer.png') 76px top no-repeat;}
+	footer a {position:absolute; top:31px; display:block;}
+	footer a.bucketlabs {left:530px; width:80px; height:15px;}
+	footer a.e-mail {left:760px; width:20px; height:15px;}
