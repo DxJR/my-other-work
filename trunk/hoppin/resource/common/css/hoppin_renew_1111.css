@@ -258,3 +258,12 @@ ul.comment_list li p.t_12_66, .review p.notice {font-size:12px; line-height:20px
 .detailview_list .prd_section .rating_area .rating_gb {z-index:10; position:relative;}
 .detailview_list .prd_section .rating_area .sns_share_star {z-index:9; position:absolute; top:24px; left:6px;}
 .detailview_list .prd_section .rating_area .sns_share_star_b ul.sns_s_share li {float:none; border-bottom:0;}
+
+ul.list_ratings li .rate_mystar {clear:both; float:left; display:inline; margin-left:10px;}
+ul.list_ratings .rating_gb .sns_share_star {z-index:9; position:absolute; top:24px; left:6px;}
+ul.list_ratings .rating_gb .sns_share_star .sns_share_star_b ul.sns_s_share li {float:none; border-bottom:0;}
+
+ul.list_myst_mvrate li .rate_mystar {clear:both; float:left; display:inline; margin-left:10px;}
+ul.list_myst_mvrate .rating_gb .sns_share_star {z-index:9; position:absolute; top:24px; left:6px;}
+ul.list_myst_mvrate .rating_gb .sns_share_star .sns_share_star_b ul.sns_s_share li {float:none; border-bottom:0;}
+

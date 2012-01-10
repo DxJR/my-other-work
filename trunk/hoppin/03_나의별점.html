@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>hoppin</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/base.css" type="text/css">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/layout_n.css" type="text/css">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/class_n.css" type="text/css">
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/mypage_n.css" type="text/css">
+	<!-- SNS 연동설정 -->
+	<link rel="stylesheet" href="http://www.hoppin.nate.com/resource/common/css/global.css" type="text/css">
+	<style type="text/css">
+	.ico_premium	{position:absolute; top:0; left:0; z-index:1;}
+	</style>
+	<link rel="stylesheet" href="resource/common/css/hoppin_renew_1111.css" type="text/css">
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery-ui-1.7.2.custom.min.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/common.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/UTIL.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/UI2.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/AJAX2.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/URL2.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/MyPageUI.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jquery.validity.cust.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/wvp/wvp.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/blockUI.js"></script>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/jqueryFn.js"></script>
+	<script type="text/javascript" src="http://common.nate.com/nameUI/CommonScript.aspx?t=A&c=UTF8"></script>
+	<!--[if IE 6]>
+	<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('.png_bg, img');</script>
+	<![endif]-->
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/SNS.js"></script>
+<script type="text/javascript" src="resource/common/js/hpn_n1111.js"></script>
+</head>
+
+<body>
+	<!-- @include_page path="/serviceportal/mypage/myPageMain/myPageUserCheck.do"/ -->
+
+	<!-- 네이트 Top 영역 시작 -->
+<!-- Top area -->
+<script type="text/javascript" src="http://www.hoppin.nate.com/resource/common/js/nateglobalsearch.js"></script>
+
+
+
+
+<div id="header">
+	<h1><a href="http://www.nate.com" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG1'});">NATE</a></h1>
+
+	<h2><a href="http://www.hoppin.nate.com" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG2'});">Hoppin</a></h2>
+
+	<!-- search -->
+	<div id="searchWrap">
+
+		<form id="search" name="search" action="http://search.nate.com/search/all.html?" method="get" target="_blank">
+			<input type="hidden" name="thr" value="" />	<!-- 이 값은 네이트 협의 후 변경해야 함 -->
+			<input type="hidden" name="nq" value="1" />
+			<input type="hidden" name="en" value="1" />
+			<fieldset>
+				<legend>검색영역</legend>
+				<input type="text" id="input_search_all" name="q" class="searchBox" title="검색어 입력" onfocus="hideBg()" onblur="showBg()" value="" />
+				<input type="text" name="dummyText"style="display:none;"/><!-- submit을 막기위한 더미 -->
+				<input type="button" class="btn_service" title="검색" onclick='Common.goSearch($("#input_search_all").val(), "400000000001");Common.clickTfficStatAjax({pid:"nhp1",rid:"RNG13"});' />
+				<input type="button" class="btn_all" title="통합검색" onclick="search.submit();Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG14'});" />
+				<img height="4" width="7" alt="자동완성" src="http://www.hoppin.nate.com/resource/images/common/layer_on01.gif" id="acImg">
+				<div class="opt_list" style="display:none;">
+				<ul id="searchresultlist">
+				<!-- ajax 삽입영역 -->
+				</ul>
+				<div class="btn_area clfix" id="searchguide">
+						<!--검색 On/off 안내 레이어//-->
+						<div class="autosearh_info" style="display:none;"><img src="http://www.hoppin.nate.com/resource/images/global/img_autosearh_info.png" alt="기능을 다시 켤 때에는 검색창을 클릭하세요"  width="178" height="70"></div>
+						<div class="btn">
+							<a href="#" title="닫기"><img src="http://www.hoppin.nate.com/resource/images/common/btn_autosearch_close.gif" alt="검색 자동완성 기능 끄기" width="113" height="12"></a>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="gnbMenu">
+
+		<div id="noscript_gnb">
+			<div>
+				<a href="http://www.nate.com/" title="네이트 메인으로" onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RNG1'});">네이트 메인으로</a> <span>|</span>
+				<a href="http://www.nate.com/sitemap/" title="사이트맵">사이트맵</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="promotionSpot">
+		<a href="http://www.hoppin.nate.com/myway.do" target="_self" ><img src="http://www.hoppin.nate.com/resource/images/event/myway/image_gnb_banner.jpg" alt="BANNER" /></a>
+	</div>
+
+
+</div>
+<!-- //Top area -->	<!-- 네이트 Top 영역 끝 -->
+	<hr>
+
+	<!-- 마이페이지  Conts 영역 시작 -->
+	<div id="mywrap">
+		<div id="contentWrap">
+
+		<!-- 마이페이지  Top 영역 시작 -->
+
+<!-- 외부 연동 설정 도메인 -->
+
+<div id="top_gnb">
+	<ul class="common clifx">
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG1'});"><a href="http://www.hoppin.nate.com"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb01.gif" alt="홈"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG2'});"><a href="http://www.hoppin.nate.com/serviceportal/movie/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb02.gif" alt="영화"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG3'});"><a href="http://www.hoppin.nate.com/serviceportal/tv/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb03.gif" alt="TV프로그램"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG4'});"><a href="http://www.hoppin.nate.com/serviceportal/music/main/searchDisplay.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb04.gif" alt="뮤직비디오"></a></li>
+
+		<li class="no_brd"><a href="http://www.hoppin.nate.com/serviceportal/bs/disney/home/main/searchMain.do" target="_blank"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb14.gif" alt="디즈니"></a></li>
+
+	</ul>
+	<ul class="privacy clifx">
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG5'});"><a href="http://www.hoppin.nate.com/serviceportal/event/event/selectEventMainList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb08.gif" alt="이벤트"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG6'});" class="bar"><a href="http://www.hoppin.nate.com/serviceportal/mypage/myPageMain/searchMyPageMain.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb09_on.gif" alt="마이페이지"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG7'});" class="etc"><a href="http://www.hoppin.nate.com/serviceportal/common/salePass/searchSalePassList.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb10.gif" alt="이용권"></a></li>
+		<li onClick="Common.clickTfficStatAjax({pid:'nhp1',rid:'RHG8'});" class="etc"><a href="http://www.hoppin.nate.com/serviceportal/cscenter/main/searchCstmMain.do"><img src="http://www.hoppin.nate.com/resource/images/common/menu_gnb11.gif" alt="고객센터"></a></li>
+	</ul>
+</div>
+	    <!-- 마이페이지  Top 영역 끝 -->
+
+		<!-- 마이페이지  LNB 영역 시작 -->
+
+
+<!-- No Image -->
+
+
+<!-- 외부 연동 설정 도메인 -->
+
+<!-- 좌측메뉴 pps click -->
+	<!-- 나의 Myp LEFT MENU -->
+
+
+
+<form id="myPageMainFrm">
+</form>
+
+<div id="mysnb">
+
+	<div class="profile">
+		<div class="account clfix">
+			<div class="pic"><a href="#" onclick="fncProfileImgUpdate(); return false;"><img id="menuProfile" src="http://www.hoppin.nate.com/resource/images/global/input_img.gif" alt="프로필 이미지" onerror="this.src='http://www.hoppin.nate.com/resource/images/global/input_img.gif'" width="50" height="50"></a></div>
+
+			<div class="my"><a href="#" class="t_13b_33" onclick="fncGoMenu('A01'); return false;">가나다</a>님</div>
+			<div class="btns">
+				<button class="wbtn mr5" style="width:77px;" onclick="fncGoMenu('U01')">개인정보관리</button><button class="wbtn" style="width:48px;" onclick="fncGoMenu('U02')">방명록</button>
+			</div>
+		</div>
+		<div class="belong">
+			<dl class="clfix">
+				<dt>도토리</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncChargeDotori(); return false;">223.3</a> <span class="t_11_99">개</span></dd>
+				<dd class="btn"><a href="#" onclick="Common.fncChargeDotori(); return false;"><img src="http://www.hoppin.nate.com/resource/images/mypage/btn_mypage_charge.gif" alt="충전"></a></dd>
+			</dl>
+			<dl class="clfix">
+				<dt>이용권</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncGoSearchMyPassList(); return false;">1</a> <span class="t_11_99">개</span></dd>
+				<dd class="btn"><a href="#" onclick="Common.fncGoSearchSalePassList(); return false;"><img src="http://www.hoppin.nate.com/resource/images/mypage/btn_mypage_buy.gif" alt="구매"></a></dd>
+			</dl>
+			<dl class="clfix">
+				<dt>포인트</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncGoSearchMyHoppinPointHistList(); return false;">50,000</a> <span class="t_11_99">P</span></dd>
+				<dd></dd>
+			</dl>
+			<dl class="clfix">
+				<dt>쿠폰</dt>
+				<dd class="amount"><a href="#" class="t_11b_70" onclick="Common.fncGoSearchMyCouponList(); return false;">0</a> <span class="t_11_99">개</span></dd>
+				<dd class="btn"><a href="#" onclick="Common.fncGoSearchMyCouponList(); return false;"><img src="http://www.hoppin.nate.com/resource/images/mypage/btn_mypage_reg.gif" alt="등록"></a></dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="conts">
+		<h1><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A01'}); fncGoMenu('A01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/h1_snb_mypage.gif" alt="마이페이지"></a></h1>
+		<ul class="clfix">
+
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A02'}); fncGoMenu('A02'); return false;">구매리스트<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A03'}); fncGoMenu('A03'); return false;">관심+리스트<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A04'}); fncGoMenu('A04'); return false;">나의 글<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A05'}); fncGoMenu('A05'); return false;">나의 별점<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A06'}); fncGoMenu('A06'); return false;">이웃 hoppin 리스트<span class="onbull">&nbsp;</span></a></li>
+			<li  class="on" ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A07'}); fncGoMenu('A07'); return false;">외부 서비스 연동<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A08'}); fncGoMenu('A08'); return false;">나의 문의 내역<span class="onbull">&nbsp;</span></a></li>
+			<li ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A09'}); fncGoMenu('A09'); return false;">나의 이벤트 내역<span class="onbull">&nbsp;</span></a></li>
+			<li  class="no_brd" ><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'A10'}); fncGoMenu('A10'); return false;">이용동의 해지<span class="onbull">&nbsp;</span></a></li> <!-- 해당 메뉴일때 on -->
+		</ul>
+
+		<div class="snb_banner"><a href="#" onclick="Common.ppsLogAjax({'dpSpaceId':'800000000070','MYPAGETP':'S01'}); fncGoMenu('S01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/ban_my_style_movie.gif" alt="나의 영화취향"></a></div>
+	</div>
+</div>
+		<!-- 마이페이지  LNB 영역 끝 -->
+
+		<!-- conts area -->
+
+<!-- conts area -->
+
+<div id="conts">
+			<h3 class="tit_line"><span class="t_14b_00">나의 별점</span></h3>
+
+			<p class="search_result mt15">
+				<span class="t_12b_33">나의 별점 영상이<span class="t_12b_70"> 7</span>개의 콘텐츠가 있습니다.</span>
+			</p>
+
+			<!-- tab area2 -->
+			<div class="tab_menu02 mt15">
+				<div class="pos_rel">
+					<div class="chk_condition">
+						<input type="radio" class="rdo" name="radioSort" value="crtSort" onclick="fncSortRadioBtn();" checked=""><label for="new"><img src="http://www.hoppin.nate.com/resource/images/common/txt_sort_list01_on.gif" alt="최신순"></label>
+						<input type="radio" class="rdo" name="radioSort" value="inqrSort" onclick="fncSortRadioBtn();"><label for="view"><img src="http://www.hoppin.nate.com/resource/images/common/txt_sort_list02.gif" alt="조회순"></label>
+						<input type="radio" class="rdo" name="radioSort" value="starSort" onclick="fncSortRadioBtn();"><label for="rating"><img src="http://www.hoppin.nate.com/resource/images/common/txt_sort_list03.gif" alt="나의 별점 순"></label>
+						<input type="radio" class="rdo" name="radioSort" value="starCrtSort" onclick="fncSortRadioBtn();"><label for="rating"><img src="http://www.hoppin.nate.com/resource/images/common/txt_sort_list06.gif" alt="별점 등록시간 순"></label>
+					</div>
+
+					<div class="view_amount v00">
+							<!-- 구매함/보관함/리뷰/코멘트 -->
+	<!-- 나의 별점 -->
+
+
+<input type="hidden" id="pagingRow" name="pagingRow" value="8">
+<ul>
+<li onclick="javascript:UI2.SetTabDropDownSelectEvent(this);return false;">
+<a href="#" class="t_11b_4c">8개씩 보기</a>
+<a href="#" class="open" title="펼치기">펼치기</a>
+</li>
+<li class="opt tbl" onclick="javascript:UI2.SetTabDropDownSelectValue(this, 8); gotoAjaxPage('1'); return false;">
+<a href="#" class="t_11b_4c">8개씩 보기</a>
+</li>
+<li class="opt" onclick="javascript:UI2.SetTabDropDownSelectValue(this, 16); gotoAjaxPage('1'); return false;">
+<a href="#" class="t_11b_4c">16개씩 보기</a>
+</li>
+</ul> 	<!-- 설정 갯수 보기 -->
+					</div>
+					<div class="view_amount v01"> <!-- 펼쳐진 경우 '_on' 추가 -->
+						<input type="hidden" name="ctsTpCd" value="">
+<ul>
+<li onclick="javascript:UI2.SetTabDropDownSelectEvent(this); return false;">
+<a href="#" class="t_11_4c">ALL TYPE</a>
+<a href="#" class="open" title="펼치기">접기</a>
+</li>
+<li class="opt tbl" onclick="javascript:UI2.SetTabDropDownSelectValue(this, ''); gotoAjaxPage('1'); return false;">
+<a href="#" class="t_11b_4c">ALL</a>
+</li>
+<li class="opt" onclick="javascript:UI2.SetTabDropDownSelectValue(this, 'FL'); gotoAjaxPage('1'); return false;">
+<a href="#" class="t_11b_4c">영화</a>
+</li>
+<li class="opt" onclick="javascript:UI2.SetTabDropDownSelectValue(this, 'TV'); gotoAjaxPage('1'); return false;">
+<a href="#" class="t_11b_4c">TV</a>
+</li>
+</ul> 					<!-- 콘텐츠 타입 -->
+					</div>
+				</div>
+			</div>
+			<!-- //tab area2 -->
+
+			<span id="myStarGrdListInclude">
+
+	<!-- DTO -->
+
+	<!-- 영화 -->
+	<!-- TV -->
+	<!-- 뮤직 비디오 -->
+
+<!-- No Image -->
+
+<!-- Myp StarGrd 전시 공간 영역 번호 -->
+	<!-- 800000000024  나의 별점 전시영역 -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+	UI2.SetBigStarRank();  //큰별점 부여
+});
+</script>
+
+<ul class="list_ratings clfix" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000012588','FL','Y','800000000024');">
+			<p class="ico_premium"><img src="http://www.hoppin.nate.com/resource/images/common/ico_p.png" alt="premium" class="png24"></p>
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000183703/IMAGE/REP/REP_GL0000183703_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 창피해</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_7.gif" alt="0"></div><div class="star_8">8</div></div>
+		<div class="rating_gb ml10">
+			<div class="star_bg">
+				<img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_1.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif">
+			</div>
+			<div class="star_10">10</div>
+			<!-- 친구들과 공유 -->
+			<div class="sns_share_star" style="display:non;">
+				<h6>친구들과 공유</h6>
+				<div class="sns_share_star_b">
+					<ul id="sns_share_small" class="sns_s_share">
+						<li><button type="button" class="gn_btn sns_s_cyworld" onmouseover="this.className='gn_btn sns_s_c';" onmouseout="this.className='gn_btn sns_s_cyworld';" title="싸이월드"><span class="ir">싸이월드</span></button></li>
+						<li><button type="button" class="gn_btn sns_s_me2day" onmouseover="this.className='gn_btn sns_s_m';" onmouseout="this.className='gn_btn sns_s_me2day';" title="미투데이"><span class="ir">미투데이</span></button></li>
+						<li><button type="button" class="gn_btn sns_s_twitter" onmouseover="this.className='gn_btn sns_s_t';" onmouseout="this.className='gn_btn sns_s_twitter';" title="트위터"><span class="ir">트위터</span></button></li>
+						<li><button type="button" class="gn_btn sns_s_facebook" onmouseover="this.className='gn_btn sns_s_f';" onmouseout="this.className='gn_btn sns_s_facebook';" title="페이스북"><span class="ir">페이스북</span></button></li>
+					</ul>
+					<div class="sns_share_star_btn">
+						<button type="button" class="gn_btn sns_s_send" title="평가하기"><span class="ir">평가하기</span></button>
+						<button type="button" class="gn_btn sns_s_cancel" title="취소"><span class="ir">취소</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000012578','FL','Y','800000000024');">
+			<p class="ico_premium"><img src="http://www.hoppin.nate.com/resource/images/common/ico_p.png" alt="premium" class="png24"></p>
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000216427/IMAGE/REP/REP_GL0000216427_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 특수본</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_4.gif" alt="0"></div><div class="star_8">8</div></div>
+			<!-- 별점 입력하기 버튼 -->
+			<div class="rate_mystar">
+				<button type="button" class="gn_btn rt_mystar" title="별점 입력 하기" onmouseover="document.getElementById('hpn_rt_gb00001').style.display='block'; this.parentNode.style.display='none';"><span class="ir">별점입력하기</span></button>
+			</div>
+		<div class="rating_gb ml10" style="display:none;"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_1.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif"></div><div class="star_10">10</div>
+			<input type="hidden" value="10"><input type="hidden" value="P00000012578"><input type="hidden" value="Y"><input type="hidden" value="FL"><input type="hidden" value="800000000024">
+		</div>
+	</li>
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000012541','FL','Y','800000000024');">
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000180903/IMAGE/REP/REP_GL0000180903_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 물없는 바다</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_1.gif" alt="1"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_0.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_0.gif" alt="0"></div><div class="star_10">10</div></div>
+		<div class="rating_gb ml10"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_1.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif"></div><div class="star_10">10</div>
+			<input type="hidden" value="10"><input type="hidden" value="P00000012541"><input type="hidden" value="Y"><input type="hidden" value="FL"><input type="hidden" value="800000000024">
+		</div>
+	</li>
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000012396','FL','Y','800000000024');">
+			<p class="ico_premium"><img src="http://www.hoppin.nate.com/resource/images/common/ico_p.png" alt="premium" class="png24"></p>
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000205583/IMAGE/REP/REP_GL0000205583_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 하얀정글</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_1.gif" alt="1"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_0.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_0.gif" alt="0"></div><div class="star_10">10</div></div>
+		<div class="rating_gb ml10"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_1.gif" alt="1"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif" alt="0"></div><div class="star_10">10</div>
+			<input type="hidden" value="10"><input type="hidden" value="P00000012396"><input type="hidden" value="Y"><input type="hidden" value="FL"><input type="hidden" value="800000000024">
+		</div>
+	</li>
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000012117','FL','Y','800000000024');">
+			<p class="ico_premium"><img src="http://www.hoppin.nate.com/resource/images/common/ico_p.png" alt="premium" class="png24"></p>
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000214301/IMAGE/REP/REP_GL0000214301_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 사랑 그리고 불륜</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_6.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_0.gif" alt="0"></div><div class="star_6">6</div></div>
+		<div class="rating_gb ml10"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_9.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif" alt="0"></div><div class="star_9">9</div>
+			<input type="hidden" value="9"><input type="hidden" value="P00000012117"><input type="hidden" value="Y"><input type="hidden" value="FL"><input type="hidden" value="800000000024">
+		</div>
+	</li>
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000011973','FL','Y','800000000024');">
+			<p class="ico_premium"><img src="http://www.hoppin.nate.com/resource/images/common/ico_p.png" alt="premium" class="png24"></p>
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000214545/IMAGE/REP/REP_GL0000214545_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 손님1 첫번째 이야기</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_5.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_5.gif" alt="0"></div><div class="star_5">5</div></div>
+		<div class="rating_gb ml10"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_6.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif" alt="0"></div><div class="star_6">6</div>
+			<input type="hidden" value="6"><input type="hidden" value="P00000011973"><input type="hidden" value="Y"><input type="hidden" value="FL"><input type="hidden" value="800000000024">
+		</div>
+	</li>
+	<li>
+	 <!-- 영화 -->
+		<div class="cell_movie" onclick="Common.goMarketDetailLink('P00000011710','FL','Y','800000000024');">
+			<p class="ico_premium"><img src="http://www.hoppin.nate.com/resource/images/common/ico_p.png" alt="premium" class="png24"></p>
+			<div class="pic"><img src="http://www.hoppin.nate.com/resource_share/img/GLOSSARY/FL/GL0000159257/IMAGE/REP/REP_GL0000159257_5_1.jpg" width="98px" height="140px" alt="" onerror="this.src='/resource/images/contents/nothumb_90x130.jpg'"></div>
+			<div class="info">
+				<a href="#" class="t_12_66" onclick="return false;"><span class="t_12b_00">[영화]</span> 의뢰인</a>
+			</div>
+			<div class="shadow"></div>
+		</div>
+			<div class="rating_p mt15 mb5"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_8.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate10p_4.gif" alt="0"></div><div class="star_8">8</div></div>
+		<div class="rating_gb ml10"><div class="star_bg"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_1.gif" alt="1"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif" alt="0"><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_d.gif" alt="."><img src="http://www.hoppin.nate.com/resource/images/common/num_rate15g_0.gif" alt="0"></div><div class="star_10">10</div>
+			<input type="hidden" value="10"><input type="hidden" value="P00000011710"><input type="hidden" value="Y"><input type="hidden" value="FL"><input type="hidden" value="800000000024">
+		</div>
+	</li>
+</ul>
+
+<div class="paging">
+<script type="text/javascript">
+    function gotoPage(pageNo) {
+	    try {
+	        if(gotoAjaxPage)
+	        {
+	        	gotoAjaxPage(pageNo);
+	        	return;
+	        }
+	    } catch(e) {}
+
+        var form = document.getElementById("myStarGrdFrm");
+        form.pageNo.value = pageNo;
+        form.target = "_self";
+        form.method = "post";
+        form.submit();
+    }
+</script>
+<input id="pageNo" name="pageNo" type="hidden" value="1">
+<div class="num"><a href="javascript:gotoPage(1)" class="on" onclick="window.scrollTo(0,0);">1</a>
+</div><a href="#" onclick="return false;" class="ppre" style="cursor:default;" title="처음으로">처음으로</a>
+<a href="#" onclick="return false;" class="pre" style="cursor:default;" title="이전가기">이전가기</a>
+<a href="#" onclick="return false;" class="next" style="cursor:default;" title="다음가기">다음가기</a>
+<a href="#" onclick="return false;" class="nnext" style="cursor:default;" title="맨끝으로">맨끝으로</a>
+
+</div>
+			</span>
+
+		</div>
+<!-- //conts area -->
+<img src="http://stat.nate.com/stat/stat.tiff?cp_url=[www.hoppin_ndr.nate.com/serviceportal/mypage/myInfoMng/searchMySnsLinkList.do]" width="0" height="0" border="0" />
+
+		<!-- //conts area -->
+	  	</div>
+	</div>
+	<!-- 마이페이지  Conts 영역 끝 -->
+	<hr>
+
+	<!-- 마이페이지  Footer 영역 시작 -->
+<div id="footer">
+<div class="myinbox">
+  	<div class="hoppin_copy clfix">
+		<div class="fl_left mt5"><a href="#" onclick="fncHpnPolicyMenu('F01'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_logo.gif" ></a></div>
+		<div class="fl_left ml20">
+			<div class="info"><a href="#" onclick="fncHpnPolicyMenu('F02'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info02.gif" ></a>
+			| <a href="#" onclick="fncHpnPolicyMenu('F03'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info03.gif" ></a>
+			| <a href="#" onclick="fncHpnPolicyMenu('F04'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info04.gif" ></a>
+			| <a href="#" onclick="fncHpnPolicyMenu('F05'); return false;"><img src="http://www.hoppin.nate.com/resource/images/common/footer_info05.gif" ></a> <img src="http://www.hoppin.nate.com/resource/images/common/footer_info07.gif" alt="" class="ml15"></div>
+		</div>
+		<address class="info2"><img src="http://www.hoppin.nate.com/resource/images/common/footer_address.gif" ></address> <!-- 110127 추가 -->
+	</div>
+	<div class="coms_copy">
+		<p class="alert_right">
+			SK커뮤니케이션즈(주)는 정보제공업체 또는 정보제공자가 제공한 상기의 정보와 관련하여 발생한 문제에 대하여<br>
+			어떠한 책임도 부담하지 않으며, 모든 책임은 각 정보제공업체 또는 정보제공자에게 있습니다.
+		</p>
+		<p class="copyright">Copyright &copy; <a href="#" onclick="fncHpnPolicyMenu('F06'); return false;"><strong><span class="sk">SK</span> Communications.</strong></a> All rights reserved.</p>
+	</div></div></div>
+	<!-- 마이페이지 Footer 영역 끝 -->
+
+</body>
+
+</html>
