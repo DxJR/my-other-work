@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.index {padding-top:48px; padding-bottom:20px;}
+.idx_v {position:relative; width:883px; margin-left:42px; overflow:hidden;}
+	.idx_v01 {height:410px; background:url('../images/idx_v_01.jpg') left top no-repeat;}
+	.idx_v02 {height:321px; padding-top:350px; background:url('../images/idx_v_03.jpg') left bottom no-repeat;}
+	.idx_v03 {position:absolute; top:0; left:0; height:350px; margin-left:0; background:url('../images/idx_v_02.jpg') left top no-repeat;}
+
+.idx_btn {margin:65px 0 68px 26px;}
+	.idx_btn li {display:inline; margin-left:16px; font:0/0 arial;}

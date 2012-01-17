@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/*joinus.css*/
+body{background:url(../images/bg_body.gif) repeat-y;}
+#joinus{width:955px; margin-left:23px;}
+.h2_joinus{margin:32px 0 20px 25px; float:left;}
+.navi{float:right; padding-right:30px; height:25px; margin-top:50px;}
+.joinus_start{margin-top:20px; margin-bottom:20px;}
+#joinus h4{padding-left:30px; padding-top:14px;}
+.esse{margin:0 35px 10px 0; text-align:right;}
+
+#joinus form{clear:both; /*border:1px solid #5eb3bc;*/ width:905px;  margin-left:24px;}
+#joinus table{line-height:19px; margin-left:30px; width:837px;}
+#joinus table th{height:30px; width:140px; background:#f3f3f3; border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3;}
+#joinus table td{padding-left:10px;border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3;}
+.provision_radio{overflow:hidden; padding-left:380px; margin:20px 0;}
+.provision_radio dt{float:left; padding-right:5px; margin-top:5px;}
+#joinus textarea{margin-left:30px; margin-top:15px;}
+.btn_joinus{margin-bottom:30px;}
+#joinus input{margin:5px 0 5px 0;}
