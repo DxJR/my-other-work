@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* ============ Default ============ */
+html, body {width:100%; height:100%;_overflow:auto; _overflow-x:hidden;}
+body {font-size:12px; line-height:14px; color:#555; font-family:'돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#a0dae2;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
+li {list-style:none;}
+img, fieldset {border:0;}
+hr {display:none;}
+em, i {font-style:normal;}
+a {cursor:pointer; text-decoration:none;}
+a:hover {text-decoration:underline;}
+table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
+legend {position:absolute; top:0; left:0; display:inline;}
+button {cursor:pointer;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 arial;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+.ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em;_text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
+form {clear:both;}
+input, select {font-size:100%; vertical-align:middle;}
+input, textarea, select {font-size:12px;}
+button::-moz-focus-inner {border:0; padding:0;}
+textarea{overflow:auto}
+input:focus {outline:none;}
+input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
+.iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+.select {padding:3px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+
+/* 버튼 */
+.gbtn {position:relative; display:inline-block; width:auto; margin:0; padding:0; line-height:1; border:0; overflow:visible; cursor:pointer; vertical-align:middle; white-space:nowrap; font-family:'Arial','Tahoma','Dotum','AppleGothic','sans-serif'; background-repeat:no-repeat; background-color:transparent;}
+.gbtn:hover {text-decoration:none;}
+.gbtn span {position:relative; display:inline-block;}
+    input.gbtn {text-indent:-9999em;}
+    span.gbtn {cursor:default;}
+
+
+#wrap {width:958px; margin:0 auto;}
+
+/* Header */
+#header {position:relative; clear:both; float:left; width:100%; height:255px; background:url('../images/bg_header.gif') left bottom no-repeat;}
+	#header h1 {float:left; display:inline; margin:14px 0 0 12px; font:0/0 arial;}
+	#gnb {float:left; display:inline; margin:27px 0 0 46px;}
+		#gnb li {float:left; display:inline; margin-left:27px; font:0/0 arial;}
+
+/* contents */
+#contents {position:relative; clear:both; background:#fff;}
+	/* sub head */
+	.subhead-wrap {position:relative; padding:0 0 0 30px;}
+		.subhead-wrap h2 {font:0/0 arial;}
+		.now-location {position:absolute; bottom:0; right:0; font-size:12px; color:#000;}
+			.now-location a {color:#000;}
+			.now-location em {color:#4494a6;}
+
+/* Footer */
+#footer {position:relative; clear:both; padding-top:36px; padding-bottom:50px; text-align:center; font-size:11px; color:#fff; background:url('../images/bg_footer.gif') left top no-repeat;}
+	#footer dl dt, #footer dl dd {float:left; display:inline; white-space:nowrap;}
+	#footer dl dt {margin-left:3px;}
+	#footer dl dd a {color:#fff;}
+	#footer p {clear:both; padding-top:1px;}

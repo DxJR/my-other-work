@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>회원가입</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/joinus.css" />
+</head>
+<body>
+	<div id="joinus">
+		<h2 class="h2_joinus"><img src="../images/util/h2_joinus.gif" alt="회원가입" /></h2>
+		<p class="navi"><a href="index.html">HOME</a> &gt; <span style="color:#4494a6">회원가입</span></p>
+		<form action="#" method="post">
+		<fieldset>
+			<legend class="skip">가입서식 작성</legend>
+			<h4><img src="../images/util/font_basicinfo.gif" alt="기본정보" /></h4>
+			<p class="esse"><img src="../images/util/bul_check.png" alt="체크표시" /> 는 필수사항입니다.</p>
+
+			<table  width="100%" summary="필수입력 서식 작성">
+			<caption class="skip">필수입력 서식 작성</caption>
+				<tbody>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="uid">희망 ID</label></th>
+						<td><input type="text" name="uid" id="uid" /> <input type="image" src="../images/util/btn_idoverlap.gif" alt="아이디중복검사" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="pwd">비밀번호</label></th>
+						<td><input type="password" name="pwd" id="pwd" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="pwd2">비밀번호 확인</label></th>
+						<td><input type="password" name="pwd2" id="pwd2" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="uname">성명</label></th>
+						<td><input type="text" name="uname" id="uname" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="jumin">주민등록번호</label></th>
+						<td><input type="text" maxlength="13" name="jumin" id="jumin" title="주민번호" /> - 없이 입력</td>
+					</tr>
+
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="email">이메일</label></th>
+						<td><input type="text" size="15" name="email" id="email" /> @
+							<select name="email2" id="email2" title="메일계정선택">
+								<option value="">선택하세요</option>
+								<option value="naver.com">naver.com</option>
+								<option value="hanmail.net">hanmail.net</option>
+								<option value="chol.com">chol.com</option>
+								<option value="dreamwiz.com">dreamwiz.com</option>
+								<option value="freechal.com">freechal.com</option>
+								<option value="empal.com">empal.com</option>
+								<option value="hanmir.com">hanmir.com</option>
+								<option value="hanafos.com">hanafos.com</option>
+								<option value="hitel.net">hitel.net</option>
+								<option value="hotmail.com">hotmail.com</option>
+								<option value="korea.com">korea.com</option>
+								<option value="lycos.co.kr">lycos.co.kr</option>
+								<option value="nate.com">nate.com</option>
+								<option value="netian.com">netian.com</option>
+								<option value="gmail.com">gmail.com</option>
+								<option value="paran.com">paran.com</option>
+								<option value="yahoo.co.kr">yahoo.co.kr</option>
+								<option value="">직접입력</option>
+							</select>
+						<input type="text" name="email3" id="email3" title="이메일 직접입력" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> 메일링 서비스</th>
+						<td>
+							<dl>
+								<dt>뉴스메일을 수신 하시겠습니까?</dt>
+								<dd>
+									<input type="radio" name="mailing" value="y" id="y" /><label for="y">예</label>
+									<input type="radio" name="mailing" value="n" id="n" checked="checked" /><label	for="n">아니오</label>
+								</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="tel">전화번호</label></th>
+						<td>
+							<select name="tel" id="tel" title="국번선택">
+								<option value="">선택</option>
+								<option value="02">02</option>
+								<option value="031">031</option>
+								<option value="032">032</option>
+								<option value="033">033</option>
+								<option value="041">041</option>
+								<option value="042">042</option>
+								<option value="043">043</option>
+								<option value="051">051</option>
+								<option value="052">052</option>
+								<option value="053">053</option>
+								<option value="054">054</option>
+								<option value="055">055</option>
+								<option value="061">061</option>
+								<option value="062">062</option>
+								<option value="063">063</option>
+								<option value="064">064</option>
+								<option value="0505">0505</option>
+							</select>
+							<input type="text" size="7" maxlength="4" name="tel1" title="전화번호 중간자리" /> -
+							<input type="text" size="7" maxlength="4" name="tel2" title="전화번호 뒷자리" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="cell">휴대폰</label></th>
+						<td>
+							<select name="cell" id="cell" title="국번선택">
+								<option value="">선택</option>
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>
+							<input type="text" size="7" maxlength="4" name="cell1" title="전화번호 중간자리" /> -
+							<input type="text" size="7" maxlength="4" name="cell2" title="전화번호 뒷자리" /></td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="image" src="../images/util/bul_check.png" alt="체크표시" /> <label for="add1">주소</label></th>
+						<td><input type="text" size="7" maxlength="3" name="add1" id="add1" title="우편번호 앞자리" /> - <input type="text" size="7" maxlength="3" name="add2" id="add2" title="우편번호 뒷자리" />
+							<input type="image" src="../images/util/btn_add.gif" alt="우편번호검색" />
+							<p><input type="text" size="30" name="add3" title=" 기본주소" /><br /><input type="text" size="40"  name="add4" title=" 상세주소" /></p>
+						</td>
+					</tr>
+					<!--<tr>
+						<th scope="row"><label for="day">거래희망일</label></th>
+						<td>
+							<select name="day" id="day" title="거래희망 년">
+								<option value="">선택</option>
+								<option value="2011">2011</option>
+								<option value="2012">2012</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+							</select> 년
+							<select name="day" id="day1" title="거래희망 월">
+								<option value="">선택</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select> 월
+							<select name="day" id="day2" title="거래희망 일">
+								<option value="">선택</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select> 일
+						</td>
+					</tr>-->
+				</tbody>
+			</table>
+
+
+				<textarea cols="136" rows="8" id="provision" name="provision">
+
+제1조(목적)
+
+이 약관은 티커(전자상거래 사업자)가 운영하는 티커 사이버 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리•의무 및 책임사항을 규정함을 목적으로 합니다. ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+
+
+
+
+
+
+제2조(정의)
+
+①"몰” 이란 티커 회사가 재화 또는 용역(이하 “재화등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.
+
+②이용자”란 “몰”에 접속하여 이 약관에 따라 “몰”이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+
+③ ‘회원’이라 함은 “몰”에 개인정보를 제공하여 회원등록을 한 자로서, “몰”의 정보를 지속적으로 제공받으며, “몰”이 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.
+
+④‘비회원’이라 함은 회원에 가입하지 않고 “몰”이 제공하는 서비스를 이용하는 자를 말합니다.
+
+				</textarea>
+				<textarea cols="136" rows="8" id="provision2" name="provision2">
+
+제1조(목적)
+
+이 약관은 티커(전자상거래 사업자)가 운영하는 티커 사이버 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리•의무 및 책임사항을 규정함을 목적으로 합니다. ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+
+
+
+
+
+
+제2조(정의)
+
+①"몰” 이란 티커 회사가 재화 또는 용역(이하 “재화등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.
+
+②이용자”란 “몰”에 접속하여 이 약관에 따라 “몰”이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+
+③ ‘회원’이라 함은 “몰”에 개인정보를 제공하여 회원등록을 한 자로서, “몰”의 정보를 지속적으로 제공받으며, “몰”이 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.
+
+④‘비회원’이라 함은 회원에 가입하지 않고 “몰”이 제공하는 서비스를 이용하는 자를 말합니다.
+
+				</textarea>
+			<dl class="provision_radio">
+				<dt>이용약관에 동의합니다.</dt>
+				<dd><input type="checkbox" name="provision_agree" id="yy" /></dd>
+			</dl>
+			<p align="center" class="btn_joinus"><input type="image" src="../images/util/btn_joinus.gif" alt="회원가입" /> <input type="image" value="취소" src="../images/util/btn_cancel.gif" alt="취소" /></p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

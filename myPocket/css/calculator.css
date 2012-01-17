@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+/* calculator.css */
+body{background:url(../images/bg_body.gif) repeat-y;}
+#wrap{width:955px; margin-left:23px;}
+#wrap h3{margin-top:44px; margin-left:20px;}
+
+#utilmenu{position:absolute; top:14px; right:20px; }
+#utilmenu li{float:left; margin-right:30px;}
+
+#util_topmenu{clear:both; margin-left:16px; margin-top:14px; width:923px; height:32px;;padding:4px 0; border-top:2px dashed #eed5c8; border-bottom:2px dashed #eed5c8;}
+#util_topmenu li{float:left;padding:0 15px 0 15px;}
+#util_topmenu .main_btn1{position:absolute; top:700px; left:63px;}
+#util_topmenu .main_btn2{position:absolute; top:700px; left:320px;}
+#util_topmenu .main_btn3{position:absolute; top:700px; left:580px;}
+
+.navi{float:right; padding-right:30px; height:25px; margin-top:50px;}
+
+#calcul_list{clear:both; height:140px; position:relative;}
+#article{position:absolute; width:340px; top:0; left:255px;}
+#calcul_tab{overflow:hidden; width:100%; background:url(../images/util/line_tab.gif) repeat-x left bottom;}
+#calcul_tab li{float:left;}
+#calcul_tab ul{position:absolute; top:35px; left:0;}
+#calcul_tab ul li{width:340px; line-height:18px; text-indent:11px;}
+
+.calcultable{ width:919px; margin-left:18px;}
+.calcultable th{height:30px; width:140px; background:#f3f3f3;}
+.calcultable td{height:25px;}
+.calcultable .lth{height:55px;}
+
+#wrap h4{margin-left:20px; margin-top:20px;}
+.esse{margin:0 20px 10px 18px; text-align:right; border-bottom:2px solid #b3c4d4;}
+
+#wrap h5{margin:15px 0 20px 20px;}
+.livetable1{line-height:19px; margin-left:30px; width:900px;}
+.livetable2{line-height:19px; margin-left:30px; width:900px;}
+
+.livetable1 th, .livetable2 th{height:30px; width:140px; background:#f3f3f3; border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3;}
+.livetable1 td, .livetable2 td{padding-left:10px;border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3;}
