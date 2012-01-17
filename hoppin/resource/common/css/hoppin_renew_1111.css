@@ -267,3 +267,6 @@ ul.list_myst_mvrate li .rate_mystar {clear:both; float:left; display:inline; mar
 ul.list_myst_mvrate .rating_gb .sns_share_star {z-index:9; position:absolute; top:24px; left:6px;}
 ul.list_myst_mvrate .rating_gb .sns_share_star .sns_share_star_b ul.sns_s_share li {float:none; border-bottom:0;}
 
+
+.detailview_list {position:relative; z-index:11;}
+.w_list .use_section {position:relative;}
