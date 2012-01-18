@@ -131,9 +131,9 @@ p.sns_s_explain {display:inline; font-size:11px; color:#999; letter-spacing:-1px
 
 /* 댓글 SNS 공유 */
 .share_cmt_sns {clear:both; float:left; margin:3px 0 -7px 0;_margin-bottom:-20px;}
-	.share_cmt_sns ul.sns_s_share {float:left; display:inline;}
-	.share_cmt_sns ul.sns_s_share li {margin-right:3px;}
-	.share_cmt_sns p.sns_s_explain {float:left; margin:6px 0 0 8px;}
+	.share_cmt_sns ul.sns_s_share, .comment_write ul.sns_s_share {float:left; display:inline;}
+	.share_cmt_sns ul.sns_s_share li, .comment_write ul.sns_s_share li {margin-right:3px;}
+	.share_cmt_sns p.sns_s_explain, .comment_write p.sns_s_explain {float:left; margin:6px 0 0 8px;}
 
 /* 리뷰 */
 table.rv_write tr td.sns_s ul.sns_s_share {float:left;}
