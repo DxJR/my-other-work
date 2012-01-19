@@ -43,13 +43,15 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 		#gnb li {float:left; display:inline; margin-left:27px; font:0/0 arial;}
 
 /* contents */
-#contents {position:relative; clear:both; background:#fff;}
+#contents {position:relative; clear:both; padding:40px 0; background:#fff;}
 	/* sub head */
-	.subhead-wrap {position:relative; padding:0 0 0 30px;}
+	.subhead-wrap {position:relative; padding:0 0 0 27px;}
 		.subhead-wrap h2 {font:0/0 arial;}
-		.now-location {position:absolute; bottom:0; right:0; font-size:12px; color:#000;}
+		.now-location {position:absolute; bottom:0; right:31px; font-size:12px; color:#000;}
 			.now-location a {color:#000;}
 			.now-location em {color:#4494a6;}
+	/* */
+	.content_inner {padding:30px 60px 0 56px;}
 
 /* Footer */
 #footer {position:relative; clear:both; padding-top:36px; padding-bottom:50px; text-align:center; font-size:11px; color:#fff; background:url('../images/bg_footer.gif') left top no-repeat;}

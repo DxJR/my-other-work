@@ -1,14 +1,10 @@
 @charset "utf-8";
 
 
-.withmap {padding:37px 31px 10px 27px;}
-	.withmap .subhead-wrap {padding-left:0;}
 
-
-.content_inner {padding:0 35px 0 29px;}
 #mapShow {height:379px; margin:20px 0 0 0; font:0/0 arial; border-top:2px solid #366774; border-bottom:1px solid #d3d3d3;}
 	.map_location {height:34px; border-bottom:1px solid #d3d3d3; background:#f8f8f8;}
-	.map_view {clear:both; float:left; width:581px; height:344px; overflow:hidden; border:1px solid #f2f2f2; border-top:0; border-bottom:0;}
+	.map_view {clear:both; float:left; width:587px; height:344px; overflow:hidden; border:1px solid #f2f2f2; border-top:0; border-bottom:0;}
 	.map_spot {float:left; display:inline; width:240px; height:344px; margin-left:11px; border:1px solid #d3d3d3; border-top:0; border-bottom:0; background:red;}
 
 .howto-map {clear:both; padding-top:10px; color:#969696; text-align:left;}
