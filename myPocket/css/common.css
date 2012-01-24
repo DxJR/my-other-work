@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ============ Default ============ */
-html, body {width:100%; height:100%;_overflow:auto; _overflow-x:hidden;}
+html, body {width:100%; height:100%;}
 body {font-size:12px; line-height:14px; color:#555; font-family:'돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#a0dae2;}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
 li {list-style:none;}
@@ -25,6 +25,10 @@ input:focus {outline:none;}
 input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
 .iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
 .select {padding:3px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+/* float 해제 */
+.f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
+* html .f_clear {height:1px;}
+.f_clear {display: block;min-height:1px;}
 
 /* 버튼 */
 .gbtn {position:relative; display:inline-block; width:auto; margin:0; padding:0; line-height:1; border:0; overflow:visible; cursor:pointer; vertical-align:middle; white-space:nowrap; font-family:'Arial','Tahoma','Dotum','AppleGothic','sans-serif'; background-repeat:no-repeat; background-color:transparent;}
@@ -59,3 +63,34 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 	#footer dl dt {margin-left:3px;}
 	#footer dl dd a {color:#fff;}
 	#footer p {clear:both; padding-top:1px;}
+
+
+/* login */
+.login_wrap {width:824px; margin:64px 0 0 11px; font-family:'나눔고딕','돋움'; letter-spacing:-1px; background:url('../images/bg_login.gif') left top repeat-y;}
+	.fds_login {position:relative; background:url('../images/bg_login-top.gif') left top no-repeat;}
+		.fds_login legend {display:block; width:100%; height:40px; .margin-left:-7px; padding:39px 0 31px 0; text-indent:0; overflow:visible; visibility:visible; background:url('../images/bg_login-dot.gif') left bottom repeat-x;}
+			.fds_login legend img {margin-left:21px;}
+		.fds_login dl {float:left; display:inline; width:425px; margin:173px 0 0 129px}
+			.fds_login dl dt {clear:both; float:left; display:inline; width:66px; margin-top:22px; padding-right:13px; font-size:18px; .line-height:18px; font-family:'나눔고딕','돋움'; text-align:right;}
+			.fds_login dl dd {float:left; display:inline; width:346px; margin-top:6px;}
+				.fds_login dl dd input {width:344px; height:40px; font-size:18px; border:1px solid #c1c1c1;}
+		.fds_login .btn_fds_login {float:left; display:inline; width:136px; height:95px; margin:177px 0 0 9px; background:url('../images/btn_login.gif') left top no-repeat;}
+	.fds_login_menu {clear:both; width:100%; padding:66px 0 82px 0; font-size:18px; .line-height:18px; color:#7b7b7b; background:url('../images/bg_login-bottom.gif') left bottom no-repeat;}
+		.fds_login_menu	dl {clear:both; float:left; width:100%; padding-top:29px; background:url('../images/bg_login-dot.gif') left top repeat-x;}
+			.fds_login_menu	dl dt {clear:both; float:left; width:433px; margin-top:20px; padding-right:17px; text-align:right;}
+			.fds_login_menu	dl dd {float:left; display:inline; width:374px; margin-top:20px;}
+				.fds_login_menu	dl dd a {padding-left:16px; color:#7b7b7b; background:url('../images/ico_arw-r-orange.gif') left 7px no-repeat;}
+
+/* find */
+.fdyr-wrap {position:relative; clear:both; float:left; width:827px; margin:56px 0 0 12px; border:1px solid #dbdbdb;}
+.find-id {margin-top:68px;}
+	fieldset.find_yours {clear:both; width:829px; margin:0; padding:0; font-size:15px; letter-spacing:-1px;}
+		fieldset.find_yours legend {display:block; width:100%; height:40px; .margin-left:-7px; padding:18px 0 0 0; text-indent:0; overflow:visible; visibility:visible; background:#e9e9e9 url('../images/bg_login-dot.gif') left bottom repeat-x;}
+			fieldset.find_yours legend img {margin-left:21px;}
+		fieldset.find_yours dl {clear:both; float:left; width:645px; margin:113px 0 0 0;}
+			fieldset.find_yours dl dt {clear:both; float:left; width:211px; margin-top:20px; padding-right:14px; _line-height:18px; font-weight:bold; text-align:right;}
+			fieldset.find_yours dl dd {float:left; display:inline; width:420px; margin-top:12px;}
+				fieldset.find_yours dl dd input {width:219px; height:23px; padding-top:3px; font-size:15px; border:1px solid #c9c9c9;}
+				fieldset.find_yours dl dd select {width:175px; height:26px; border:1px solid #c9c9c9;}
+	.find-btn-wrap {clear:both; margin-top:58px; padding:23px 0; text-align:center; background:url('../images/bg_fb-wrap.gif') left top repeat-x;}
+		.fb-ok {width:82px; height:42px; background:url('../images/btn_fd-ok.gif') left top no-repeat;}
