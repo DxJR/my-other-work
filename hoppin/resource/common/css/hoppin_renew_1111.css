@@ -271,6 +271,10 @@ ul.list_myst_mvrate .rating_gb .sns_share_star .sns_share_star_b ul.sns_s_share 
 .detailview_list {position:relative; z-index:11;}
 .w_list .use_section {position:relative;}
 
+
+
+
 #myStarGrdListInclude ul.list_ratings {z-index:11; position:relative;}
-#myStarGrdListInclude ul.list_ratings li {position:relative;}
+#myStarGrdListInclude ul.list_ratings li {position:relative; height:205px; overflow:visible;}
 #myStarGrdListInclude ul.list_ratings li .sns_share_star {position:absolute; top:203px; left:13px;}
+#myStarGrdListInclude .paging {clear:both; margin-top:10px;}
