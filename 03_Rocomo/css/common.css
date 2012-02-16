@@ -216,9 +216,17 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 	.tbl_09_01 thead tr th.tbl_th04 {width:158px;}
 	.tbl_09_01 thead tr th.tbl_th05 {width:117px;}
 
+/* 10 */
+.head10-wrap {padding:20px 0 0 0;}
+	.head10-wrap h3 {padding-left:40px; padding-bottom:18px; font:0/0 arial; background:url('../images/bg_head_10.gif') left bottom repeat-x;}
 
-
-
+/* 11 */
+.expl-11 {padding:20px; text-align:left;}
+.mnu11 {height:50px; margin-top:35px; font:0/0 arial; border:1px solid #adadad; background:url('../images/bg_mnu-11.gif') left top repeat-x;}
+	.mnu11 ul {margin:16px 0 0 0; padding-left:17px;}
+		.mnu11 ul li {display:inline; margin-right:115px;}
+.cont11 {margin-top:25px; margin-bottom:40px;}
+	.cont11 h4 {padding:0 0 12px 15px; font:0/0 arial; border-bottom:1px solid #8a8a8a;}
 
 
 /* Footer */
