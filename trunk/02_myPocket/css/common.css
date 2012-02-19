@@ -99,4 +99,13 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 .sub_menu {width:925px; height:44px; margin-left:18px; background:url('../images/bg_sub_menu.gif') left top repeat-x;}
 	.sub_menu dt, .sub_menu dd {position:relative; float:left; display:inline; font:0/0 arial;}
 		.sub_menu dt img {position:absolute; top:5px; left:13px}
-	.sub_menu dd ul li {float:left; display:inline; margin-top:6px; margin-right:15px;}
+	.sub_menu dd ul li {float:left; display:inline; margin-top:6px; margin-right:25px;}
+	.sub_menu dd ul li.last {margin-right:0;}
+
+/* 페이징 */
+.paging {margin-bottom:-23px; font-size:12px; line-height:14px; text-align:center;}
+	.paging a {margin:0 2px; padding:0 4px; font-family:굴림; font-size:16px; line-height:16px; color:#8f8f8f;}
+		.paging a em {font-weight:bold; color:#1e1e1e;}
+	.paging a.func {margin:; padding:0; text-align:center;}
+	.paging a.fnr {margin-left:-2px;}
+	.paging img {top:-1px; position:relative; vertical-align:middle;}

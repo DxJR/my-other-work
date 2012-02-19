@@ -41,12 +41,13 @@
 	.artcl-list td.kind {font:0/0 arial;}
 		.artcl-list td.kind img {margin:-1px 2px 0 2px;}
 
-.btn-artc-wrap {width:810px; height:30px; margin-top:20px; margin-left:10px; text-align:right; font:0/0 arial;}
+.btn-artc-wrap {position:relative; width:810px; height:30px; margin-top:20px; margin-left:10px; text-align:right; font:0/0 arial;}
 	.btn-artc-wrap .fl {float:left;}
 	.btn-artc-wrap img {margin-left:7px;}
 	.btn-artc-wrap .fl img {margin-left:0; margin-right:7px;}
 
-.artc-detail {position:relative; width:802px; height:168px; margin:55px 0 0 70px; padding-top:15px; background:#a0dbe3;}
+.article-date {width:802px; margin:55px 0 0 68px; font-size:12px; color:#747474; text-align:right;}
+.artc-detail {position:relative; width:802px; height:168px; margin:5px 0 0 70px; padding-top:15px; background:#a0dbe3;}
 	.artc-detail .artc-d-l {float:left; display:inline; width:196px; height:156px; margin:0 0 0 27px; padding:0 30px 0 0; font-size:13px; line-height:1.2; color:#707571; border-right:1px solid #fff;}
 		.artc-detail .artc-d-l h3 {margin-top:-4px; font-size:27px; line-height:1.2; letter-spacing:-1px; color:#413f40; font-weight:bold;}
 		.artc-detail .artc-d-l p {margin-top:2px;}
@@ -60,3 +61,50 @@
 
 
 .artcl-myfind {margin-top:-24px;}
+
+
+.artcl-connect {margin:16px 0 0 15px;}
+	.artcl-connect thead tr th, .artcl-connect tbody tr td {height:32px; font-size:16px; font-weight:bold; color:#534f4f; text-align:center; border-bottom:1px solid #c3c3c3;}
+	.artcl-connect thead tr th {border-top:1px solid #777; border-bottom:1px solid #777;}
+	.artcl-connect tbody tr td {height:47px;}
+	.artcl-connect thead tr th.name {width:316px;}
+	.artcl-connect thead tr th.phone {width:493px;}
+
+.a-rgst-s {}
+	.a-rgst-s thead tr th.check {width:38px;}
+	.a-rgst-s thead tr th.id {width:206px;}
+	.a-rgst-s thead tr th.name {width:289px;}
+	.a-rgst-s thead tr th.phone {width:276px;}
+
+.myrequest {margin-top:40px;}
+	.myrequest thead tr th.check {width:38px;}
+	.myrequest thead tr th.date {width:100px;}
+	.myrequest thead tr th.name {width:182px;}
+	.myrequest thead tr th.a-name {width:205px;}
+	.myrequest thead tr th.price {width:153px;}
+	.myrequest thead tr th.view {width:131px;}
+	.myrequest tbody tr td {padding:0; height:46px;}
+
+.cont_sub_menu {clear:both; width:923px; height:44px; margin:37px 0 0 17px; background:url('../images/util/bg_cont_sub_menu.gif') left top repeat-x;}
+	.cont_sub_menu ul {clear:both; float:left; display:inline; margin-left:13px;}
+		.cont_sub_menu ul li {float:left; display:inline; margin:8px 46px 0 0; font:0/0 arial;}
+		.cont_sub_menu ul li.last {margin-right:0;}
+
+.calc-wrap {clear:both; float:left; margin-left:-40px;}
+	.calc-obj {float:left; width:210px; height:138px; text-align:center; background:url('../images/bg_calc.gif') 44px top no-repeat;}
+		.calc-obj img {margin-top:114px;}
+	.calc-input {float:left; display:inline; margin-left:23px; border-top:2px solid #b4a6a0;}
+		.calc-input tr th {width:170px; height:42px; text-align:center; border-bottom:2px solid #b4a6a0; border-left:2px solid #b4a6a0; background:#f2cec0;}
+		.calc-input tr td {width:438px; padding-left:27px; font-weight:bold; font-size:18px; color:#646464; border-bottom:2px solid #b4a6a0; border-right:2px solid #b4a6a0;}
+			.calc-input tr td select {width:210px;}
+			.calc-input tr td ul li {float:left; display:inline; margin-right:80px;}
+			.calc-input tr td ul li.last {margin-right:0;}
+				.calc-input tr td ul li label {margin-left:4px;}
+			.calc-input tr td input.ipt {width:208px; margin-right:10px;}
+			.calc-input tr td select, .calc-input tr td input.ipt {height:23px; border-top:1px solid #4f4f4f; border-left:1px solid #4f4f4f; border-right:1px solid #eeeeee; border-bottom:1px solid #eeeeee; background:#f4f4f4;}
+.calc-wrap .btnwrap {clear:both; margin-top:3px; text-align:right;}
+.calc_result {clear:both; width:923px; margin:43px 0 0 17px; padding-top:44px; background:url('../images/bg_calc_btn_wrap.gif') left top repeat-x;}
+	.clacr_in {clear:both; float:right; display:inline; width:639px; height:41px; margin-right:52px; padding-top:14px; background:url('../images/bg_calc_result.gif') left top no-repeat;}
+		.clacr_in em.calcr-tit {float:left; display:inline; margin-left:15px;}
+		.clacr_in strong {float:left; display:inline; width:414px; margin-left:96px; text-align:right;}
+		.clacr_in strong em {padding-right:20px; font-weight:bold; font-size:27px; color:#f87467; letter-spacing:-3px;}
