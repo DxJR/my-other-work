@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	var average = ({
+		$ : function(obj) {return document.getElementById(obj)},	
+		
+		init : function() {
+			this._name = this.$("userList").getElementsByTagName("dt");
+			this._age = this.$("userList").getElementsByTagName("input");
+		},		
+		
+		cal : function() {
+			for (var i=0; i<this._age.length; i++) {
+				if (i==0) {
+					var _sum = Number(this._age[i].value);
+				} else {
+					var _sum = _sum + Number(this._age[i].value); // 전체합
+				}
+			}
+			
+			this._avr = _sum / this._age.length; // 평균값
+			
+			var _arDep = new Array;
+			var _arName = new Array;
+			
+			for (var j=0; j<this._age.length; j++) {
+				_arDep.push(Math.abs(this._avr - this._age[j].value)); // 평균과의 차이값을 배열 _arDep에 push();
+				_arName.push(this._name[j].childNodes[0].nodeValue);
+			}
+			console.log(_arDep.sort());				
+			console.log(_arName[0]);			
+
+		},
+	});	
+</script>
+<style type="text/css">
+	ul, li, dl, dt, dd {margin:0; padding:0; list-style:none;}
+	
+	li {margin-bottom:20px;}
+	dt, dd {display:inline;}
+</style>
+</head>
+
+<body>
+
+<button type="button" onclick="average.cal();">dd</button>
+
+<ul id="userList">
+	<li>
+		<dl>
+			<dt>여선영</dt>
+			<dd><input type="text" value="35" /></dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>박미림</dt>
+			<dd><input type="text" value="33" /></dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>민경욱</dt>
+			<dd><input type="text" value="33" /></dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>이현국</dt>
+			<dd><input type="text" value="32" /></dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>오수연</dt>
+			<dd><input type="text" value="30" /></dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>최서현</dt>
+			<dd><input type="text" value="27" /></dd>
+		</dl>
+	</li>		
+</ul>
+
+<script type="text/javascript">
+	average.init();
+</script>
+
+</body>
+</html>

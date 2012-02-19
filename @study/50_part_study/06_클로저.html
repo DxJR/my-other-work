@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	function saySNS() {
+		var sayAlert = function() {alert(sns);console.log('실행1');};
+		var sns = 'Hello SNS';
+		console.log('실행-외부');
+		return sayAlert;
+	}
+	
+	function newClosure(someNum){
+		var num = someNum;
+		return function(x) {num += x; alert('num='+num);}
+	}
+</script>
+</head>
+
+<body>
+
+<button type="button" onclick="saySNS()();">실행</button>
+<br />
+<button type="button" onclick="closure1 = newClosure(40); closure1(5);">실행2</button>
+
+
+
+
+</body>
+</html>

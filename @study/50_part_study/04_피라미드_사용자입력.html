@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	#writeWrap {text-align:center;}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var inputWrap = document.createElement('fieldset');
+		document.body.appendChild(inputWrap);
+		
+		var inputTxt = document.createElement('input');
+		inputTxt.setAttribute('type','text');
+		inputTxt.setAttribute('id','starLine');
+		
+		var makeBtn = document.createElement('button');
+		var makeBtnTxt = document.createTextNode('만들기');
+		makeBtn.appendChild(makeBtnTxt);
+
+		inputWrap.appendChild(inputTxt);
+		inputWrap.appendChild(makeBtn);
+
+		writeEle = document.createElement('div');
+		writeEle.setAttribute('id','writeWrap');
+		document.body.appendChild(writeEle);
+				
+		makeBtn.onclick=function() {
+			makePyramid();
+			resetAll();
+		}		
+	}
+	
+	function makePyramid() {
+		var pyramidLineNum = document.getElementById('starLine').value;
+		var pyramidLineNum = Number(pyramidLineNum);
+		
+		for (var i=0; i<pyramidLineNum+1; i++) {
+			console.log(i);
+			for (var s=0; s<i; s++) {
+				var star = document.createTextNode('*');
+				writeEle.appendChild(star);
+			}
+			var lineBreak = document.createElement('br');
+			writeEle.appendChild(lineBreak);
+		}
+		
+		processNum = 1;
+	}
+	
+	function resetAll() {
+		var starNum = document.getElementById('starLine');
+		var starWrap = document.getElementById('writeWrap');
+		
+		
+		if (processNum!=='1') {
+			starNum.value='';
+			document.removeElement(wirteEle);
+
+		}		
+	}
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

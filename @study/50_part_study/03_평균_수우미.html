@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+		function resultEve() {
+			var valueEve = (Number(document.getElementById("subject_k").value) + Number(document.getElementById("subject_k").value) + Number(document.getElementById("subject_k").value)) / 3;
+			
+			var prntWrap = document.getElementById('prntEveHere')		
+			var prtRlt = document.createElement('strong');
+			prntWrap.appendChild(prtRlt);
+			var relt = "평균 :"+valueEve+"점";
+			var crtRel = document.createTextNode(relt)
+			prtRlt.appendChild(crtRel);
+		}
+		
+		function resultGrad(id) {
+			var obj = document.getElementById(id).value;
+			if ( obj >= 90) {
+				grd = "수";
+			} else if ( obj >= 80) {
+				grd = "우";			
+			} else if ( obj >= 70) {
+				grd = "미";			
+			} else if ( obj >= 60) {
+				grd = "양";			
+			} else if ( obj <= 50) {
+				grd = "가";			
+			}
+			return grd;
+		}
+		
+		function prntGrad() {
+			resultEve();
+			var grdK = resultGrad('subject_k');
+			var grdE = resultGrad('subject_e');
+			var grdM = resultGrad('subject_m');
+			var grdPrntHere = document.getElementsByTagName('em');
+			grdPrntHere[0].innerHTML = grdK;
+			grdPrntHere[1].innerHTML = grdE;
+			grdPrntHere[2].innerHTML = grdM;						
+			
+		}
+		
+		window.onload=function() {
+			document.getElementsByTagName('button')[0].onclick=function(){prntGrad();}		
+		}
+</script>
+<style type="text/css">
+	dl dt {clear:both; float:left; margin-bottom:20px;}
+	dl dd {float:left; margin-bottom:20px; font-size:34px;}
+	p {clear:both;}
+	input {width:300px; height:50px; font-size:30px; border:3px solid #d8d8d8;}
+	
+	em {display:block; font-size:30px; color:red; font-weight:bold;}
+	button {width:420px; height:50px; font-size:34px;}
+	
+	#prntEveHere {width:420px; text-align:center; color:green; font-size:40px;}
+</style>
+</head>
+
+<body>
+
+<dl id="sbjList">
+	<dt>국어 <em></em></dt>
+	<dd><input type="text" size="10" id="subject_k" /> 점</dd>
+	<dt>영어 <em></em></dt>
+	<dd><input type="text" size="10" id="subject_e" /> 점</dd>
+	<dt>수학 <em></em></dt>
+	<dd><input type="text" size="10" id="subject_m" /> 점</dd>		
+</dl>
+
+<p><button>계산하기</button></p>
+
+<p id="prntEveHere"></p>
+
+</body>
+</html>

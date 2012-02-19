@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+
+
+<script type="text/javascript">		
+	function factorial(n) {
+		if (n>1) {
+			return n * factorial(n-1);
+		} else {
+			return 1;
+		}
+	}	
+	window.onload=function() {
+		var btn = document.getElementById('f_btn');
+		var show = document.getElementById('show');
+		
+		btn.onclick = function() {
+			var fNum = document.getElementById('f_num').value;
+			var rels = factorial(fNum);
+			var rNum = document.createTextNode(rels);
+			show.appendChild(rNum);
+		}
+		
+	}
+</script>
+
+<input type="text" id="f_num" />
+<button type="button" id="f_btn">실행</button>
+<div id="show"></div>
+</body>
+</html>
