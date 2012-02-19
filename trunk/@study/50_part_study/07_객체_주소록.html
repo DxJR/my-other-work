@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	
+	var addressBook = {
+	    ulEle : document.getElementById('address'),
+	    liEle : typeof(this.ulEle),
+	    ede : "아닙니다.",
+	    
+	    hideAll : function() {
+	       return typeof(this.ul);        
+	    },
+	    toggle : function() {
+	        
+	    },
+	    /* 정렬하기 */
+        sortList : function(ary){ 
+          return ary.sort();  
+        },	    
+	}
+	
+	window.onload=function() {
+	    console.log(addressBook.liEle);
+	}
+</script>
+</head>
+
+<body>
+
+<ul id="address">
+    <li>
+        <div class="">
+            
+        </div>
+    </li>
+</ul>
+
+
+</body>
+</html>

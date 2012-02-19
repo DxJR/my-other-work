@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>closure</title>
+</head>
+<body>
+<style type="text/css">
+ .ulClass{float:left;width:100%;}
+ .ulClass li{float:left;width:25%;height:200px;}
+ .ulClass li:nth-child(1){background-color:green;}
+ .ulClass li:nth-child(2){background-color:red;}
+ .ulClass li:nth-child(3){background-color:blue;}
+ .ulClass li:nth-child(4){background-color:pink;}
+</style>
+<div class="divClass">
+ <h1>let's learn to function</h1>
+ <ul id="ulGroup" class="ulClass">
+  <li>element1</li>
+  <li>element2</li>
+  <li>element3</li>
+  <li>element4</li>
+ </ul>
+</div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+	function outerFunc() {
+		var ulEle = document.getElementById('ulGroup');
+		var liEle = ulEle.getElementsByTagName('li');
+
+		for (var i=0; i<liEle.length; i++) {
+			liEle[i].onclick = function(i) {
+				return function() {
+					alert(liEle[i].childNodes[0].nodeValue);
+				};
+			}(i);
+		}		
+	}
+	
+
+	
+	
+	
+	window.onload=function() {
+		outerFunc();
+	}
+/*]]>*/
+</script>
+
+</body>
+</html>
