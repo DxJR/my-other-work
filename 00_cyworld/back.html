@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>사이좋은 사람들 싸이월드</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="robots" content="nofollow" />
+<meta http-equiv="pragma" content="no-cache" />
+<link rel="stylesheet" type="text/css" href="css/mh-common.css" />
+<link rel="stylesheet" href="http://minihp-uidev.cyworld.com/pims/common/css/minihp-common_net.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://minihp-uidev.cyworld.com/pims/common/css/socialGNB.css" />
+<link rel="stylesheet" href="http://minihp-uidev.cyworld.com/pims/common/css/minihp-home.css" type="text/css" />
+<link rel="stylesheet" href="http://minihp-uidev.cyworld.com/pims/common/css/renew/minihp-photo.css" type="text/css" />
+<!-- 공감 테스트용 스타일 // 개발적용시 꼭 삭제해주세요 -->
+<style type="text/css">
+	/* Type Text */
+	.social_mod_txt { float:left; }
+	.social_mod_txt span.txt_feel { float:left; padding:0; margin:0; width:24px; color:#8F8F8F; font-family:Dotum; font-size:11px; letter-spacing:-1px; }
+	.social_mod_txt p.info { float:left; margin:0; padding:0; font-size:11px; font-family:Dotum; letter-spacing:-1px; color:#8F8F8F; }
+	.social_mod_txt a.on { float:left; display:block; margin:0 10px 0 0; padding:0; width:43px; height:12px; background:url('http://img.csp.cyworld.co.kr/images/ico_feel.gif') no-repeat 24px -20px; overflow:hidden; text-decoration:none !important; color:#8F8F8F !important; font-family:Dotum; font-size:11px; letter-spacing:-1px; }
+	.social_mod_txt a.off { float:left; display:block; margin:0 10px 0 0; padding:0; width:43px; height:12px; background:url('http://img.csp.cyworld.co.kr/images/ico_feel.gif') no-repeat 24px 0; overflow:hidden; text-decoration:none !important; color:#8F8F8F !important; font-family:Dotum; font-size:11px; letter-spacing:-1px; }
+	.social_mod_txt a.loading_on { float:left; display:block; margin:0 10px 0 0; padding:0; width:43px; height:12px; background:url('http://img.csp.cyworld.co.kr/images/txt_loading_on.gif') no-repeat 24px 0; overflow:hidden; text-decoration:none !important; color:#8F8F8F !important; font-family:Dotum; font-size:11px; letter-spacing:-1px; }
+	.social_mod_txt a.loading_off { float:left; display:block; margin:0 10px 0 0; padding:0; width:43px; height:12px; background:url('http://img.csp.cyworld.co.kr/images/txt_loading_off.gif') no-repeat 24px 0; overflow:hidden; text-decoration:none !important; color:#8F8F8F !important; font-family:Dotum; font-size:11px; letter-spacing:-1px; }
+	.social_mod_txt p.count { clear:none; float:left; margin:0; padding:0; font-family:Dotum; font-size:11px; letter-spacing:-1px; color:#8F8F8F; }
+	.social_mod_txt p.count a.info { float:left; color:#F75405; font-weight:normal; letter-spacing:0; display:inline; width:auto; text-decoration:none;  }
+	.social_mod_txt p.count a.b { display:inline; width:auto; font-weight:bold; text-decoration:none; color:#8F8F8F; }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+
+	function goToPhoto() {
+		var homeContWrap = document.getElementById('maincontent');
+		var photoContWrap = document.getElementById('wideDiv');
+		var menuHome = document.getElementById('imgMenuHome');
+		var menuPhoto = document.getElementById('imgMenuPhoto');
+
+		menuHome.src='http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m01_0.gif';
+		menuPhoto.src='http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m05_1.gif';
+		homeContWrap.style.display='none';
+		photoContWrap.style.display='inline';
+	}
+
+	function goToHome() {
+		var homeContWrap = document.getElementById('maincontent');
+		var photoContWrap = document.getElementById('wideDiv');
+		var menuHome = document.getElementById('imgMenuHome');
+		var menuPhoto = document.getElementById('imgMenuPhoto');
+
+		menuHome.src='http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m01_1.gif';
+		menuPhoto.src='http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m05_0.gif';
+		homeContWrap.style.display='inline';
+		photoContWrap.style.display='none';
+	}
+
+	function showLayer() {
+		var contLayer = document.getElementById('cywContent');
+		var photoAniThumb = document.getElementById('mhpShowAni');
+
+		var showAni = function() {
+			contLayer.style.display='inline';
+			contLayer.setAttribute('onclick','closeLayer();');
+			photoAniThumb.style.display='none';
+		}
+
+		photoAniThumb.style.display='inline';
+		photoAniThumb.className='mhpShowAni showCyPhoto';
+		setTimeout(showAni,500);
+
+	}
+
+
+	function closeLayer() {
+		var contLayer = document.getElementById('cywContent');
+		var photoAniThumb = document.getElementById('mhpShowAni');
+
+		var closeAni = function() {
+			contLayer.setAttribute('onclick','');
+			photoAniThumb.style.display='none';
+		}
+
+		photoAniThumb.style.display='inline';
+		contLayer.style.display='none';
+		photoAniThumb.className='mhpShowAni closeCyPhoto';
+		setTimeout(closeAni,500);
+	}
+//]]>
+</script>
+</head>
+
+<body id="cywBody">
+
+<div id="cyWrap">
+	<h1 class="hide">사이좋은 사람들 싸이월드</h1>
+	<div id="cywGnbWrap">
+		<h2 class="hide">바로가기</h2>
+		<ul class="cywGnb">
+			<li><a href="#fnc"><em>싸이월드</em></a></li>
+			<li><a href="#fnc">미니홈피</a></li>
+			<li><a href="#fnc">클럽</a></li>
+			<li><a href="#fnc">블로그</a></li>
+			<li><a href="#fnc">타운</a></li>
+			<li><a href="#fnc">선물가게</a></li>
+		</ul>
+		<div class="cywClub">
+            <select id="goMyClub">
+              <option selected="selected">클럽 바로가기</option>
+              <option>-------------------------</option>
+              <option>로그인이 필요합니다</option>
+            </select>
+			<a href="#fnc"><img src="http://c1img.cyworld.co.kr/img/button/navi_login.gif" width="48" height="18" border="0" alt="로그인" /></a>
+		</div>
+	</div>
+	<div id="cywFoot">
+		<div class="cyfMsg"><span class="ir">안녕하세요. 사이좋은 사람들 싸이월드 입니다^^</span></div>
+	</div>
+</div>
+
+
+
+
+
+<div id="cywPims">
+	<!-- 방문한 미니홈피 -->
+	<div id="cywVisited">
+		<ul>
+			<li id="menu_sub01" class="this"><a href="#fnc" onclick="document.getElementById('cyUser1').style.display='inline';document.getElementById('cyUser2').style.display='none';document.getElementById('menu_sub01').className='this';document.getElementById('menu_sub02').className=''; goToHome();">이현국</a></li>
+			<li id="menu_sub02"><a href="#fnc" onclick="document.getElementById('cyUser2').style.display='inline';document.getElementById('cyUser1').style.display='none';document.getElementById('menu_sub02').className='this';document.getElementById('menu_sub01').className='';">김연아</a></li>
+			<li><a href="#">아이유</a></li>
+			<li><a href="#">장나라</a></li>
+		</ul>
+	</div>
+	<div class="minihpWrap" id="cyUser1" style="display:inline;">
+		<h2 class="hide">이현국님 미니홈피</h2>
+		<div id="minihp-skin" style="background-image:url('http://c1img.cyworld.co.kr/img/mall/effect2/2012/01/120131_pompon_d_o.gif');"></div>
+		<div id="minihp">
+			<!--메뉴탭-->
+			<div id="menu">
+				<h3 class="hide">미니홈피 메뉴</h3>
+				<ul>
+					<li><a href="#홈" onclick="goToHome(); return false;" id="aMenuHome"><img id="imgMenuHome" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m01_1.gif" alt="홈" title="홈" /></a></li>
+					<li><a href="#프로필" onclick="return false;"><img id="imgMenuProfile" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m02_0.gif" alt="프로필" title="프로필" /></a></li>
+					<li><a href="#다이어리" onclick="return false;"><img id="imgMenuDiary" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m03_0.gif" alt="다이어리" title="다이어리" /></a></li>
+					<li><a href="#쥬크박스" onclick="return false;"><img id="imgMenuJukeBox" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m04_0.gif" alt="쥬크박스" title="쥬크박스" /></a></li>
+					<li><a href="#사진첩" onclick="goToPhoto(); return false;"><img id="imgMenuPhoto" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m05_0.gif" alt="사진첩" title="사진첩" /></a></li>
+					<li><a href="#게시판" onclick="return false;" id="aMenuBoard"><img id="imgMenuBoard" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m07_0.gif" alt="게시판" title="게시판" /></a></li>
+					<li><a href="#방명록" onclick="return false;" id="aMenuGuest"><img id="imgMenuGuest" src="http://c1img2.cyworld.co.kr/img/pwin2/52/mainstyle%5F529571/m08_0.gif" alt="방명록" title="방명록" /></a></li>
+				</ul>
+			</div>
+			<!-- 소셜 GNB -->
+			<div id="socialGNB">
+				<div class="miniGNB">
+					<div class="gnbWrap">
+						<div class="srvWrap">
+							<!-- [Link] -->
+							<p class="linkBtn linkMain"><a href="#fnc" title="메인으로 이동">메인</a></p>
+							<!-- [Search] -->
+							<div class="searchBox">
+								<fieldset>
+									<legend>통합검색영역</legend>
+									<div id="acWrap">
+										<input type="text" value="" class="stext" title="검색어 입력" onclick="document.getElementById('Layer_ChangeDisplay').style.display='none';">
+										<input type="button" value="검색" class="sbtn" title="검색하기">
+										<img id="acImg" src="./img/arr_search.gif" width="5" height="3" alt="자동완성" style="display:block">
+										<div id="acDiv" style="display:none;">
+											<div class="ac-mod">
+												<div id="viewDiv">
+													<ul class="cmh">
+														<li><strong>정엽</strong> 푸른밤</li>
+														<li class="on"><strong>정엽</strong> 담배가게아가씨</li>
+														<li><strong>정엽</strong> 아무 일도 없었다</li>
+														<li><strong>정엽</strong> 짝사랑</li>
+														<li><strong>정엽</strong> 나쁜남자</li>
+														<li class="last">나는 가수다<strong> 정엽</strong></li>
+														<li>나가수 <strong>정엽</strong></li>
+													</ul>
+												</div>
+												<div class="func">
+													<span><a href="#fnc" class="ltr">끝단어 더보기</a><a href="#fnc" class="ltr" style="display:none">첫단어 더보기</a></span>
+													<span><a href="#fnc">끄기</a></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div id="rankDiv" style="display:none">
+									<ol>
+										<li style="top:0;">정엽</li>
+										<li style="top:20px;">나얼 결혼 선언</li>
+										<li style="top:40px;">김현중 사진 공개</li>
+										<li style="top:60px;">양준혁 전 여친</li>
+										<li style="top:80px;">김연아 집 공개</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="logWrap">
+							<!-- [History] -->
+							<div class="historyBox">
+								<ol>
+									<li><a href="#fnc">홍길동</a></li>
+									<li><a href="#fnc">홍길동</a><button type="button" class="delbtn" title="삭제" style="display:inline"><span>삭제</span></button></li>
+									<li class="nbg"><a href="#fnc">홍길동</a></li>
+								</ol>
+								<button type="button" class="prevbtn"><span>이전</span></button>
+								<button type="button" class="nextbtn"><span>다음</span></button>
+							</div>
+							<!-- [History] -->
+							<div class="historyBox" style="display:none">
+								<p class="txt">방문한 히스토리가 남아요.</p>
+							</div>
+							<!-- [Link] -->
+							<p class="linkBtn linkHome"><a href="#fnc" title="내미니홈피로 이동">내미니홈피</a></p>
+							<!-- [Link] -->
+							<p class="linkBtn linkView"><a href="#fnc" title="내모아보기로 이동">내모아보기</a></p>
+							<!-- [Link] -->
+							<p class="linkBtn linkNew"><a href="#fnc" title="마이싸이월드로 이동">소식</a> <em>99<i>+</i></em></p>
+							<!-- [Direct] -->
+							<div class="directBox">
+								<p>
+									<a href="#fnc" class="gobtn closed">바로가기</a>
+								</p>
+								<div class="quickLayer">
+									<iframe frameborder="0" scrolling="no" style="width:176px; height:285px; display:none;" src="http://loginsvc.cyworld.com/js/quick/cyQuick_frame.asp?serviceDomain=minihp&amp;minihpService=false&amp;home_id="></iframe>
+								</div>
+							</div>
+							<!-- [Personal] -->
+							<div class="nameBox">
+								<p>
+									<a href="#fnc" class="name">홍길동</a>
+									<a href="#fnc" class="random" title="랜덤으로 이동">랜덤</a>
+								</p>
+								<div class="nameLayer" style="display:none;">
+									<ul>
+										<li><a href="#fnc">싸이월드 환경설정</a></li>
+										<li><a href="#fnc">내 일촌</a> <i>|</i> <a href="#fnc">팬관리</a></li>
+										<li class="last"><a href="#fnc">로그아웃</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 컨텐츠  -->
+			<div id="content">
+				<!-- 상단기본정보 -->
+				<div id="head">
+					<div class="head-title-wrap">
+						<h3 class="minihp-title"><a href="#fnc" title="미니홈피미니홈피미니홈피 Validation 통과!" style="color:#ff6600;">이현국 : 하다가 중지하면 한 만큼은 이익이다.</a></h3>
+						<div class="url-uabtn">
+							<div class="user-action">
+								<a href="#fnc" class="button e-make-fan" title="이현국님 팬되기(새창)"><span>팬되기</span></a>
+								<a href="#fnc" class="button e-make-onedeg" title="이현국님과 일촌맺기(새창)"><span>일촌맺기</span></a>
+							</div>
+							<em class="url" title="이 미니홈피 주소">www.cyworld.com/mypaolo <a href="#fnc" class="add-n-favorite"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/button/btn_add-favorite.gif" width="9" height="9" alt="즐겨찾기추가" title="이 미니홈피를 즐겨찾기에 추가(새창)"></a></em>
+						</div>
+					</div>
+					<!-- 카운터 -->
+					<dl class="counter">
+						<dt class="hide">카운터</dt>
+						<dd>
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/icon/ico_today.gif" width="29" height="5" border="0" alt="오늘방문자"><span>578957</span>
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/icon/ico_bar02.gif" width="1" height="7" border="0" class="bar" alt="|">
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/icon/ico_total.gif" width="29" height="5" border="0" alt="전체방문자">59578
+						 </dd>
+					</dl>
+				</div>
+				<!-- 좌측대문영역 //  기본형 : mhgt-deft // 확장형 : mhgt-expd // 전체형 : mhgt-overlay -->
+				<div id="userInfo-folder" class="mhgt-overlay">
+					<h4 class="hide">사용자 기본정보</h4>
+					<!-- Today is -->
+					<div class="mh_todayis" style="display:non;">
+						<span class="mhtdi">TODAY IS..</span>
+						<em id="idSpnEmotion" class="mhemo" title="행복"><i class="em01"></i>행복</em>
+						<!-- 레이어 열리면 tc-open 추가 -->
+						<button type="button" class="mhbtn todayis-chg" onclick="ndrStatClick('cpm1','RLA01','toggleTodayis()','J'); return false;" title="감정변경(레이어 열림)"><span class="ir">변경</span></button>
+					</div>
+					<!-- 대문사진 -->
+					<div class="mhgt-mphoto">
+						<a href="#fnc" onclick="PreViewWindow('47815753'); return false;"><img src="http://cyimg37.cyworld.com/common/file_down.asp?redirect=%2f370028%2f2012%2f1%2f11%2f15%2f20120111205325_23738506.jpg" width="153" height="275" alt="이현국님의 대문사진" id="myphoto"></a>
+					</div>
+					<!-- 대문글 // Today is 있으면 mhgt-with-today 추가 -->
+					<div id="mhgtMsg" class="mhgt-msg mhgt-with-today">
+						<p class="mhgt-cmt">MBC 뉴스데스크 신경민 앵커가 1년여 만에 도중 하차하게 됐다. 많은 기자들이 제작 거부를 불사하며 반대했음에도 MBC는 어제 그의 교체를 결정했다. 우리는 뉴스 앵커건 누구건 그 인사권이 사장의 고유 권한임을 인정한다. 그러나 공영방송의 주요 뉴스 진행자란 자리의 비중을 감안할 때 이번 인사를 놓고 제기되는 의문점들을 지나칠 수 없다.</p>
+						<!-- 대문관련버튼 -->
+						<div class="mhgt-fnc">
+							<a href="#fnc" onclick="ndrStatClick('cpm1','RLA03','popHistoryPropylWin(47815753)','J'); return false;" class="mhgt-history" title="대문 히스토리(팝업)"><span class="ir">대문히스토리</span></a>
+							<i class="bar">|</i>
+							<a href="#fnc" class="mhgt-set" title="대문설정(팝업)"><span class="ir">대문설정</span></a>
+							<i class="bar">|</i>
+							<a href="#fnc" class="mhgt-reply" title="대문댓글(팝업)"><i class="new">(New)</i> 댓글</a>
+						</div>
+						<!-- 스크롤 -->
+						<div class="mhgate-scrl">
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/button/btn_scrolldown.gif" alt="아래로 스크롤" title="아래로 스크롤">
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/button/btn_scrollup.gif" alt="위로 스크롤" title="위로 스크롤">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!-- 기본정보 -->
+					<dl class="mhgt-profile">
+						<dt><a href="#fnc" class="name-ui">이현국님</a></dt>
+						<dd class="mhgt-pdetail">
+							<em class="gender male" title="남성"><span class="ir">(남성)</span></em>
+							<span class="birth" title="생년월일">1981.8.17 +</span>
+							<a href="mailto:paolo2000@nate.com" class="mhgt-mail" title="메일보내기(메일클라이언트 실행)"><span class="ir">메일작성</span></a>
+						</dd>
+					</dl>
+					<!-- 홈주인 일촌 파도타기 -->
+					<dl class="mhgt-surf">
+						<dt class="hide">이현국님 일촌 파도타기</dt>
+						<dd>
+							<!-- 목록 열렸을 때 span 태그 class="arrow down" -->
+							<button type="button" class="mhbtn mhosurf" title="일촌목록열기"><span>파도타기<i class="arrow arw-up"></i></span></button>
+							<div class="mhgt-mholist" style="display:none;">
+								<ul>
+									<li><a href="#fnc">이현국(UI개발)</a></li>
+									<li><a href="#fnc">이현국(UI개발)</a></li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!-- 주 컨텐츠 -->
+				<div id="maincontent" style="display:inline;"><iframe name="main_inside" id="main_inside" width="430" height="376" scrolling="auto" marginheight="0" marginwidth="0" frameborder="0" src="ifr_00_home.html" title="미니홈피 컨텐츠 프레임" align="left"></iframe></div>
+				<!-- 다이어리
+				<div id="wideDiv" class="contents-diarywide">
+					<div id="maincontent" style="z-index:6;">
+						<iframe name="ifrm_brd_list_wide" id="main_inside" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" width="650" height="396" src="http://minihp-uidev.cyworld.com/00_%b0%f8%c5%eb%b8%f0%b5%e2/mhp-w-test_diary_test.html" title="미니홈피 다이어리" align="left" allowtransparency="true"></iframe>
+					</div>
+				</div>
+				-->
+				<div id="wideDiv" class="contents-bbswide" style="display:none;">
+					<div id="maincontent" style="z-index:6;">
+						<iframe name="ifrm_brd_list_wide" id="main_inside" scrolling="auto" marginheight="0" marginwidth="0" frameborder="0" width="619" height="376" src="ifr_03_photo.html" title="미니홈피 사진첩" align="left"></iframe>
+					</div>
+				</div>
+				<!-- 레퓨테이션 및 뮤직플레이어 -->
+				<div id="subcontent">
+					<!-- 레퓨테이션 -->
+					<div id="reputation">
+						<h4 class="hide">레퓨테이션</h4>
+						<ul class="etc-info">
+							<li class="reply"><a href="#RecentlyReplyLayer" title="최근댓글보기">댓글</a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New"></li>
+							<li class="scrap">
+								<a href="#lyr-scrap" title="이 미니홈피에서 스크랩 해간 게시물 숫자">스크랩<em>3026</em></a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New">
+							</li>
+							<li class="myapps">
+								<a href="#fnc" title="내가 보유중인 앱스 숫자">앱스<em>9866</em></a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New">
+							</li>
+							<li class="myfan">
+								<a href="#fnc" title="팬 숫자">소망상자</a>
+							</li>
+						</ul>
+						<dl class="active-rate" style="margin-top:5px;">
+							<dt class="hide">활동지수</dt>
+							<dd class="active-rate-content">
+								<dl>
+									<dt>액티브</dt>
+									<dd>
+										<span class="r-graph active"><span class="grp" style="width:59%;"></span><strong style="display:none;"><span class="left"></span><span class="body">7207<span class="ar"></span></span><span class="right"></span></strong></span>
+										<em class="ar-static">(정체)</em>
+									</dd>
+									<dt>페이머스</dt>
+									<dd>
+										<span class="r-graph famous"><span class="grp" style="width:59%;"></span><strong style="display:none;"><span class="left"></span><span class="body">7207<span class="ar"></span></span><span class="right"></span></strong></span>
+										<em class="ar-up">(상승)</em>
+									</dd>
+									<dt>프랜들리</dt>
+									<dd>
+										<span class="r-graph friendly"><span class="grp" style="width:59%;"></span><strong style="display:none;"><span class="left"></span><span class="body">7207<span class="ar"></span></span><span class="right"></span></strong></span>
+										<em class="ar-down">(하락)</em>
+									</dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+					<!-- 추천아이템/소망상자 -->
+					<div id="shop-item" style="padding-top:7px; border-top:1px solid #ededed;">
+						<p class="item-menu" id="mall_event"><a href='javascript:ndrStatClick("cpm1","RRA11", "http://www.cyworld.com/mall/mall5_index.asp?inflow=ML10","Y");'><strong title="선물가게">선물가게</strong></a> / <a href='javascript:ndrStatClick("cpm1","RRA13","fnGoBGMItemEvent()","J");' title="추천BGM">추천BGM</a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New"></p>
+						<p class="item-toggle" id="si_control">
+							<button type="button" class="button shopitem-toggle sit-open" title="접기" onclick="javascript:ndrStatClick('cpm1','RRA22','setItemLayer()','J');"><span>접기</span></button>
+						</p>
+						<div id="si-detail" style="display:;">
+							<ul class="si-list" id="siList">
+								<li class="first"><a href="javascript:ndrStatClick('cpm1','RRA12','fnGoMallItem(148355,&quot;스킨&quot;,&quot;&quot;)','J');" title="스킨&gt;길을 잃다"><img src="http://c1img.cyworld.co.kr/img/mall/items2/2012/01/120202_nanzangeee_s_c.gif" alt="스킨&gt;길을 잃다" style="margin-left: -40px; margin-top: -40px; "></a></li>
+								<li><a href="javascript:ndrStatClick('cpm1','RRA12','fnGoMallItem(148409,&quot;미니홈피스티커&quot;,&quot;&quot;)','J');" title="미니홈피 스티커&gt;닭쳐!!"><img src="http://c1img.cyworld.co.kr/img/mall/items2/2012/02/sticker_no_c.gif" alt="미니홈피 스티커&gt;닭쳐!!" style="margin-left: -40px; margin-top: -40px; "></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="minihp-shop-item"></div>
+	</div>
+	<div class="minihpWrap" id="cyUser2" style="display:none;">
+		<h2 class="hide">이현국님 미니홈피</h2>
+		<div id="minihp-skin" style="background-image:url('http://c1img.cyworld.co.kr/img/mall/effect2/2012/02/120207_nanzangeee_s_o.jpg');"></div>
+		<div id="minihp">
+			<!--메뉴탭-->
+			<div id="menu">
+				<h3 class="hide">미니홈피 메뉴</h3>
+				<ul>
+					<li><a href="#홈" onclick="return false;" id="aMenuHome"><img id="imgMenuHome" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m01_1.gif" alt="홈" title="홈"></a></li>
+					<li><a href="#프로필" onclick="return false;"><img id="imgMenuProfile" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m02_0.gif" alt="프로필" title="프로필"></a></li>
+					<li><a href="#다이어리" onclick="return false;"><img id="imgMenuDiary" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m03_0.gif" alt="다이어리" title="다이어리"></a></li>
+					<li><a href="#쥬크박스" onclick="return false;"><img id="imgMenuJukeBox" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m04_0.gif" alt="쥬크박스" title="쥬크박스"></a></li>
+					<li><a href="#사진첩" onclick="return false;"><img id="imgMenuPhoto" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m05_0.gif" alt="사진첩" title="사진첩"></a></li>
+					<li><a href="#게시판" onclick="return false;" id="aMenuBoard"><img id="imgMenuBoard" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m07_0.gif" alt="게시판" title="게시판"></a></li>
+					<li><a href="#방명록" onclick="return false;" id="aMenuGuest"><img id="imgMenuGuest" src="http://c1img2.cyworld.co.kr/img/pwin2/63/mainstyle%5F630832/m08_0.gif" alt="방명록" title="방명록"></a></li>
+				</ul>
+			</div>
+			<!-- 소셜 GNB -->
+			<div id="socialGNB">
+				<div class="miniGNB">
+					<div class="gnbWrap">
+						<div class="srvWrap">
+							<!-- [Link] -->
+							<p class="linkBtn linkMain"><a href="#fnc" title="메인으로 이동">메인</a></p>
+							<!-- [Search] -->
+							<div class="searchBox">
+								<fieldset>
+									<legend>통합검색영역</legend>
+									<div id="acWrap">
+										<input type="text" value="" class="stext" title="검색어 입력" onclick="document.getElementById('Layer_ChangeDisplay').style.display='none';">
+										<input type="button" value="검색" class="sbtn" title="검색하기">
+										<img id="acImg" src="./img/arr_search.gif" width="5" height="3" alt="자동완성" style="display:block">
+										<div id="acDiv" style="display:none;">
+											<div class="ac-mod">
+												<div id="viewDiv">
+													<ul class="cmh">
+														<li><strong>정엽</strong> 푸른밤</li>
+														<li class="on"><strong>정엽</strong> 담배가게아가씨</li>
+														<li><strong>정엽</strong> 아무 일도 없었다</li>
+														<li><strong>정엽</strong> 짝사랑</li>
+														<li><strong>정엽</strong> 나쁜남자</li>
+														<li class="last">나는 가수다<strong> 정엽</strong></li>
+														<li>나가수 <strong>정엽</strong></li>
+													</ul>
+												</div>
+												<div class="func">
+													<span><a href="#fnc" class="ltr">끝단어 더보기</a><a href="#fnc" class="ltr" style="display:none">첫단어 더보기</a></span>
+													<span><a href="#fnc">끄기</a></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div id="rankDiv" style="display:none">
+									<ol>
+										<li style="top:0;">정엽</li>
+										<li style="top:20px;">나얼 결혼 선언</li>
+										<li style="top:40px;">김현중 사진 공개</li>
+										<li style="top:60px;">양준혁 전 여친</li>
+										<li style="top:80px;">김연아 집 공개</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="logWrap">
+							<!-- [History] -->
+							<div class="historyBox">
+								<ol>
+									<li><a href="#fnc">홍길동</a></li>
+									<li><a href="#fnc">홍길동</a><button type="button" class="delbtn" title="삭제" style="display:inline"><span>삭제</span></button></li>
+									<li class="nbg"><a href="#fnc">홍길동</a></li>
+								</ol>
+								<button type="button" class="prevbtn"><span>이전</span></button>
+								<button type="button" class="nextbtn"><span>다음</span></button>
+							</div>
+							<!-- [History] -->
+							<div class="historyBox" style="display:none">
+								<p class="txt">방문한 히스토리가 남아요.</p>
+							</div>
+							<!-- [Link] -->
+							<p class="linkBtn linkHome"><a href="#fnc" title="내미니홈피로 이동">내미니홈피</a></p>
+							<!-- [Link] -->
+							<p class="linkBtn linkView"><a href="#fnc" title="내모아보기로 이동">내모아보기</a></p>
+							<!-- [Link] -->
+							<p class="linkBtn linkNew"><a href="#fnc" title="마이싸이월드로 이동">소식</a> <em>99<i>+</i></em></p>
+							<!-- [Direct] -->
+							<div class="directBox">
+								<p>
+									<a href="#fnc" class="gobtn closed">바로가기</a>
+								</p>
+								<div class="quickLayer">
+									<iframe frameborder="0" scrolling="no" style="width:176px; height:285px; display:none;" src="http://loginsvc.cyworld.com/js/quick/cyQuick_frame.asp?serviceDomain=minihp&amp;minihpService=false&amp;home_id="></iframe>
+								</div>
+							</div>
+							<!-- [Personal] -->
+							<div class="nameBox">
+								<p>
+									<a href="#fnc" class="name">홍길동</a>
+									<a href="#fnc" class="random" title="랜덤으로 이동">랜덤</a>
+								</p>
+								<div class="nameLayer" style="display:none;">
+									<ul>
+										<li><a href="#fnc">싸이월드 환경설정</a></li>
+										<li><a href="#fnc">내 일촌</a> <i>|</i> <a href="#fnc">팬관리</a></li>
+										<li class="last"><a href="#fnc">로그아웃</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 컨텐츠  -->
+			<div id="content">
+				<!-- 상단기본정보 -->
+				<div id="head">
+					<div class="head-title-wrap">
+						<h3 class="minihp-title"><a href="#fnc" title="미니홈피미니홈피미니홈피 Validation 통과!" style="color:#fff;">김연아님 미니홈피</a></h3>
+						<div class="url-uabtn">
+							<div class="user-action">
+								<a href="#fnc" class="button e-make-fan" title="이현국님 팬되기(새창)"><span>팬되기</span></a>
+								<a href="#fnc" class="button e-make-onedeg" title="이현국님과 일촌맺기(새창)"><span>일촌맺기</span></a>
+							</div>
+							<em class="url" title="이 미니홈피 주소">www.cyworld.com/mypaolo <a href="#fnc" class="add-n-favorite"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/button/btn_add-favorite.gif" width="9" height="9" alt="즐겨찾기추가" title="이 미니홈피를 즐겨찾기에 추가(새창)"></a></em>
+						</div>
+					</div>
+					<!-- 카운터 -->
+					<dl class="counter">
+						<dt class="hide">카운터</dt>
+						<dd>
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/icon/ico_today.gif" width="29" height="5" border="0" alt="오늘방문자"><span>578957</span>
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/icon/ico_bar02.gif" width="1" height="7" border="0" class="bar" alt="|">
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/icon/ico_total.gif" width="29" height="5" border="0" alt="전체방문자">59578
+						 </dd>
+					</dl>
+				</div>
+				<!-- 좌측대문영역 //  기본형 : mhgt-deft // 확장형 : mhgt-expd // 전체형 : mhgt-overlay -->
+				<div id="userInfo-folder" class="mhgt-overlay">
+					<h4 class="hide">사용자 기본정보</h4>
+					<!-- Today is -->
+					<div class="mh_todayis" style="display:non;">
+						<span class="mhtdi">TODAY IS..</span>
+						<em id="idSpnEmotion" class="mhemo" title="행복"><i class="em01"></i>행복</em>
+						<!-- 레이어 열리면 tc-open 추가 -->
+						<button type="button" class="mhbtn todayis-chg" onclick="ndrStatClick('cpm1','RLA01','toggleTodayis()','J'); return false;" title="감정변경(레이어 열림)"><span class="ir">변경</span></button>
+					</div>
+					<!-- 대문사진 -->
+					<div class="mhgt-mphoto">
+						<a href="#fnc" onclick="PreViewWindow('47815753'); return false;"><img src="http://cyimg37.cyworld.com/common/file_down.asp?redirect=%2F370028%2F2012%2F1%2F25%2F66%2Funtitled%2Ejpg" width="153" height="275" alt="이현국님의 대문사진" id="myphoto"></a>
+					</div>
+					<!-- 대문글 // Today is 있으면 mhgt-with-today 추가 -->
+					<div id="mhgtMsg" class="mhgt-msg mhgt-with-today">
+						<p class="mhgt-cmt">MBC 뉴스데스크 신경민 앵커가 1년여 만에 도중 하차하게 됐다. 많은 기자들이 제작 거부를 불사하며 반대했음에도 MBC는 어제 그의 교체를 결정했다. 우리는 뉴스 앵커건 누구건 그 인사권이 사장의 고유 권한임을 인정한다. 그러나 공영방송의 주요 뉴스 진행자란 자리의 비중을 감안할 때 이번 인사를 놓고 제기되는 의문점들을 지나칠 수 없다.</p>
+						<!-- 대문관련버튼 -->
+						<div class="mhgt-fnc">
+							<a href="#fnc" onclick="ndrStatClick('cpm1','RLA03','popHistoryPropylWin(47815753)','J'); return false;" class="mhgt-history" title="대문 히스토리(팝업)"><span class="ir">대문히스토리</span></a>
+							<i class="bar">|</i>
+							<a href="#fnc" class="mhgt-set" title="대문설정(팝업)"><span class="ir">대문설정</span></a>
+							<i class="bar">|</i>
+							<a href="#fnc" class="mhgt-reply" title="대문댓글(팝업)"><i class="new">(New)</i> 댓글</a>
+						</div>
+						<!-- 스크롤 -->
+						<div class="mhgate-scrl">
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/button/btn_scrolldown.gif" alt="아래로 스크롤" title="아래로 스크롤">
+							<img src="http://minihp-uidev.cyworld.com/img/pims/renew/button/btn_scrollup.gif" alt="위로 스크롤" title="위로 스크롤">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!-- 기본정보 -->
+					<dl class="mhgt-profile">
+						<dt><a href="#fnc" class="name-ui">김연아</a></dt>
+						<dd class="mhgt-pdetail">
+							<em class="gender female" title="남성"><span class="ir">(여성)</span></em>
+							<span class="birth" title="생년월일">1981.8.17 +</span>
+							<a href="mailto:paolo2000@nate.com" class="mhgt-mail" title="메일보내기(메일클라이언트 실행)"><span class="ir">메일작성</span></a>
+						</dd>
+					</dl>
+					<!-- 홈주인 일촌 파도타기 -->
+					<dl class="mhgt-surf">
+						<dt class="hide">이현국님 일촌 파도타기</dt>
+						<dd>
+							<!-- 목록 열렸을 때 span 태그 class="arrow down" -->
+							<button type="button" class="mhbtn mhosurf" title="일촌목록열기"><span>파도타기<i class="arrow arw-up"></i></span></button>
+							<div class="mhgt-mholist" style="display:none;">
+								<ul>
+									<li><a href="#fnc">이현국(UI개발)</a></li>
+									<li><a href="#fnc">이현국(UI개발)</a></li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!-- 주 컨텐츠 -->
+				<div id="maincontent" style="display:inline;"><iframe name="main_inside" id="main_inside" width="430" height="376" scrolling="auto" marginheight="0" marginwidth="0" frameborder="0" src="ifr_00_home_02.html" title="미니홈피 컨텐츠 프레임" align="left"></iframe></div>
+				<!-- 다이어리
+				<div id="wideDiv" class="contents-diarywide">
+					<div id="maincontent" style="z-index:6;">
+						<iframe name="ifrm_brd_list_wide" id="main_inside" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" width="650" height="396" src="http://minihp-uidev.cyworld.com/00_%b0%f8%c5%eb%b8%f0%b5%e2/mhp-w-test_diary_test.html" title="미니홈피 다이어리" align="left" allowtransparency="true"></iframe>
+					</div>
+				</div>
+				-->
+				<div id="wideDiv" class="contents-bbswide" style="display:none;">
+					<div id="maincontent" style="z-index:6;">
+						<iframe name="ifrm_brd_list_wide" id="main_inside" scrolling="auto" marginheight="0" marginwidth="0" frameborder="0" width="619" height="376" src="ifr_03_photo.html" title="미니홈피 사진첩" align="left"></iframe>
+					</div>
+				</div>
+				<!-- 레퓨테이션 및 뮤직플레이어 -->
+				<div id="subcontent">
+					<!-- 레퓨테이션 -->
+					<div id="reputation">
+						<h4 class="hide">레퓨테이션</h4>
+						<ul class="etc-info">
+							<li class="reply"><a href="#RecentlyReplyLayer" title="최근댓글보기">댓글</a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New"></li>
+							<li class="scrap">
+								<a href="#lyr-scrap" title="이 미니홈피에서 스크랩 해간 게시물 숫자">스크랩<em>3026</em></a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New">
+							</li>
+							<li class="myapps">
+								<a href="#fnc" title="내가 보유중인 앱스 숫자">앱스<em>9866</em></a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New">
+							</li>
+							<li class="myfan">
+								<a href="#fnc" title="팬 숫자">소망상자</a>
+							</li>
+						</ul>
+						<dl class="active-rate" style="margin-top:5px;">
+							<dt class="hide">활동지수</dt>
+							<dd class="active-rate-content">
+								<dl>
+									<dt>액티브</dt>
+									<dd>
+										<span class="r-graph active"><span class="grp" style="width:59%;"></span><strong style="display:none;"><span class="left"></span><span class="body">7207<span class="ar"></span></span><span class="right"></span></strong></span>
+										<em class="ar-static">(정체)</em>
+									</dd>
+									<dt>페이머스</dt>
+									<dd>
+										<span class="r-graph famous"><span class="grp" style="width:59%;"></span><strong style="display:none;"><span class="left"></span><span class="body">7207<span class="ar"></span></span><span class="right"></span></strong></span>
+										<em class="ar-up">(상승)</em>
+									</dd>
+									<dt>프랜들리</dt>
+									<dd>
+										<span class="r-graph friendly"><span class="grp" style="width:59%;"></span><strong style="display:none;"><span class="left"></span><span class="body">7207<span class="ar"></span></span><span class="right"></span></strong></span>
+										<em class="ar-down">(하락)</em>
+									</dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+					<!-- 추천아이템/소망상자 -->
+					<div id="shop-item" style="padding-top:7px; border-top:1px solid #ededed;">
+						<p class="item-menu" id="mall_event"><a href='javascript:ndrStatClick("cpm1","RRA11", "http://www.cyworld.com/mall/mall5_index.asp?inflow=ML10","Y");'><strong title="선물가게">선물가게</strong></a> / <a href='javascript:ndrStatClick("cpm1","RRA13","fnGoBGMItemEvent()","J");' title="추천BGM">추천BGM</a><img src="http://c1img.cyworld.co.kr/img/pims/renew/icon/ico_new4.gif" width="6" height="5" border="0" alt="New"></p>
+						<p class="item-toggle" id="si_control">
+							<button type="button" class="button shopitem-toggle sit-open" title="접기" onclick="javascript:ndrStatClick('cpm1','RRA22','setItemLayer()','J');"><span>접기</span></button>
+						</p>
+						<div id="si-detail" style="display:;">
+							<ul class="si-list" id="siList">
+								<li class="first"><a href="javascript:ndrStatClick('cpm1','RRA12','fnGoMallItem(148355,&quot;스킨&quot;,&quot;&quot;)','J');" title="스킨&gt;길을 잃다"><img src="http://c1img.cyworld.co.kr/img/mall/items2/2012/01/120202_nanzangeee_s_c.gif" alt="스킨&gt;길을 잃다" style="margin-left: -40px; margin-top: -40px; "></a></li>
+								<li><a href="javascript:ndrStatClick('cpm1','RRA12','fnGoMallItem(148409,&quot;미니홈피스티커&quot;,&quot;&quot;)','J');" title="미니홈피 스티커&gt;닭쳐!!"><img src="http://c1img.cyworld.co.kr/img/mall/items2/2012/02/sticker_no_c.gif" alt="미니홈피 스티커&gt;닭쳐!!" style="margin-left: -40px; margin-top: -40px; "></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="minihp-shop-item"></div>
+	</div>
+</div>
+
+
+
+<!-- 실제 컨텐츠 보여주는 레이어 -->
+<div id="cywContent" style="display:none;">
+	<div id="cywCin">
+		<!-- div id="mhpaParent" 끝나는 지점이 하단 copyright 바로 윗부분 입니다. -->
+		<div id="mhpaParent" class="f_clear">
+			<div id="mh-pa-head" class="f_clear">
+				<!-- 팝업일 때 이미지명 bi_mhpa-gray.gif -->
+				<h1><img src="../images/logo_photo_popup" width="137" height="20" alt="싸이월드 미니홈피" /></h1>
+				<div class="pa-go-service">
+					<a href="#fnc" class="goCymain" title="싸이월드 메인으로 이동(새창)" target="_blank"><span class="ir">싸이월드</span></a>
+					<a href="#fnc" class="goMhsection" title="미니홈피 섹션으로 이동(새창)" target="_blank"><span class="ir">미니홈피</span></a>
+				</div>
+				<div class="pa-go-minihp">
+					<a href="#fnc" title="새창에서 열림"><strong>김근오</strong>님 기본홈가기</a>
+				</div>
+				<div class="pa-go-event">
+					<img src="../images/icon/folder-up.gif" alt="new" width="14" height="10" />
+					<a href="#fnc" title="자세히보기">50장을 한꺼번에! 여러장 올리기</a>
+				</div>
+				<!-- 네비게이션 -->
+				<div id="mp-w-topnavi">
+					<div class="mpwt-wrap f_clear">
+						<!-- 현재위치 -->
+						<dl class="n-folder">
+							<dt class="hide">현재위치</dt>
+							<dd>
+								<div class="folder-set">
+									<ol>
+										<!-- 비활성화일때 클래스명 : fld_list_set_off -->
+										<!-- 활성화일때 클래스명 : fld_list_set_on -->
+										<!-- 네비 펼쳐졌을때 클래스명 : fld_list_set_open -->
+										<li class="fld_list_set_on" id="mp-w-pNaviWhere"> <a href="#fnc" class="show-folder-list" title="폴더목록 전체보기"> <span class="ico ico-agr"></span> <em>유럽여행사진이잔뜩있어요~</em> <i class="new">(New)</i> <span class="angle_open"></span> </a>
+											<!-- 폴더 목록 -->
+											<div class="navi_new" style="display:none;">
+												<div class="navi_in">
+													<dl>
+														<dt class="hide"><em>폴더목록</em></dt>
+														<dd><a href="#fnc" title="전체보기"><span class="all"></span><em>전체보기</em></a></dd>
+														<!-- 현재 위치해있는 폴더는 <strong>태그 삽입 -->
+														<dd><a href="#fnc" title="travel"><span class="ico-f-n"></span><strong><em>travel</em></strong></a></dd>
+														<dd><a href="#fnc" title="U"><span class="ico-f-n"></span><em>U</em></a></dd>
+														<dd class="dot_line"><img src="http://c1img.cyworld.co.kr/img/pims/renew//line_navi_dotted_long.gif" alt="구분선" width="185" height="6" /></dd>
+														<dd><a href="#fnc" title="S K communications"><span class="ico-f"></span><span class="fname">S K communicationscommunicationscommunicationscommunications</span></a></dd>
+														<dt><a href="#fnc" class="open" title="중국 기행사진"><span class="fname">중국기행사진중국기행사진중국기행사진중국기행사진중국기행사진</span></a></dt>
+														<dd>
+															<ul>
+																<li><a href="#fnc" title="소풍 ?" class="closed"><span class="ico-f-g"></span><em>소풍 ?</em></a></li>
+																<li><a href="#fnc" title="파릇파릇새내기시절이생각난당" class="closed"><span class="ico-f-n"></span><em>파릇파릇새내기시절이생각난당</em></a></li>
+																<li class="dot_line"><img src="http://c1img.cyworld.co.kr/img/pims/renew/line_navi_dotted_long.gif" alt="구분선" width="185" height="6" /></li>
+																<li><a href="#fnc" title="소풍 ;;"><span class="ico-f-n"></span><em>소풍 ;;</em></a></li>
+																<li><a href="#fnc" title="운동화"><span class="ico-f"></span><em>운동화</em></a></li>
+																<li><a href="#fnc" title="회사사람들은여기에다넣어서보여줄꺼임."><span class="ico-f"></span><span class="fname">회사사람들은여기에다넣어서보여줄꺼임회사사람들은여기에다넣어서보여줄꺼임.</span></a></li>
+															</ul>
+														</dd>
+														<dt><a href="#fnc" class="open" title="우리 가족 폴더"><em>우리 가족 폴더</em></a></dt>
+														<dd>
+															<ul>
+																<li><a href="#fnc" title="회사사람들, 저쪽친구" class="closed"><span class="ico-f-g"></span><em>회사사람들, 저쪽친구</em></a></li>
+																<li><a href="#fnc" title="파릇파릇새내기시절이.." class="closed"><span class="ico-f-g"></span><em>운동회라라라-</em></a></li>
+															</ul>
+														</dd>
+														<dt><a href="#fnc" class="close" title="중국 기행사진"><em>중국 기행사진</em></a></dt>
+														<dd style="display:none;">
+															<ul>
+																<li><a href="#fnc" title="소풍 ?" class="closed"><span class="ico-f-g"></span><em>소풍 ?</em></a></li>
+																<li><a href="#fnc" title="파릇파릇새내기시절이생각난당" class="closed"><span class="ico-f-n"></span><em>파릇파릇새내기시절이생각난당</em></a></li>
+																<li><a href="#fnc" title="소풍 ;;"><span class="ico-f-n"></span><em>소풍 ;;</em></a></li>
+																<li><a href="#fnc" title="운동화"><span class="ico-f"></span><em>운동화</em></a></li>
+																<li><a href="#fnc" title="회사사람들은여기에다넣어서보여줄꺼임."><span class="ico-f"></span><em>회사사람들은여기에다넣어서보여줄꺼임.</em></a></li>
+															</ul>
+														</dd>
+														<dt><a href="#fnc" class="close" title="우리 가족 폴더"><em>우리 가족 폴더</em></a></dt>
+														<dd style="display:none;">
+															<ul>
+																<li><a href="#fnc" title="소풍 ?" class="closed"><span class="ico-f-g"></span><em>소풍 ?</em></a></li>
+																<li><a href="#fnc" title="파릇파릇새내기시절이생각난당" class="closed"><span class="ico-f-n"></span><em>파릇파릇새내기시절이생각난당</em></a></li>
+																<li><a href="#fnc" title="소풍 ;;"><span class="ico-f-n"></span><em>소풍 ;;</em></a></li>
+																<li><a href="#fnc" title="운동화"><span class="ico-f"></span><em>운동화</em></a></li>
+																<li><a href="#fnc" title="회사사람들은여기에다넣어서보여줄꺼임."><span class="ico-f"></span><em>회사사람들은여기에다넣어서보여줄꺼임.</em></a></li>
+															</ul>
+														</dd>
+														<dt><a href="#fnc" class="close" title="친구들사진+++"><em>친구들사진+++</em></a></dt>
+														<dd style="display:none;">
+															<ul>
+																<li><a href="#fnc" title="소풍 ?" class="closed"><span class="ico-f-g"></span><em>소풍 ?</em></a></li>
+																<li><a href="#fnc" title="파릇파릇새내기시절이생각난당" class="closed"><span class="ico-f-n"></span><em>파릇파릇새내기시절이생각난당</em></a></li>
+																<li><a href="#fnc" title="소풍 ;;"><span class="ico-f-n"></span><em>소풍 ;;</em></a></li>
+																<li><a href="#fnc" title="운동화"><span class="ico-f"></span><em>운동화</em></a></li>
+																<li><a href="#fnc" title="회사사람들은여기에다넣어서보여줄꺼임."><span class="ico-f"></span><em>회사사람들은여기에다넣어서보여줄꺼임.</em></a></li>
+															</ul>
+														</dd>
+													</dl>
+												</div>
+												<!-- 아래 메뉴 -->
+												<div class="bottom_menu" id="mp-w-pNavi"> <a href="#fnc" title="폴더관리" class="fld_manage">폴더관리</a> <a href="#fnc" title="폴더목록 닫기" class="close_navi">닫기</a> </div>
+											</div>
+										</li>
+									</ol>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div id="mh-pa-content" class="f_clear">
+				<!-- 사진출력 -->
+				<div id="mhpaSc" class="mhpa-screen">
+					<div class="title-area">
+						<p class="mhpby-chk"><input type="checkbox" id="mhpaby0000001" class="check" title="사진선택" /></p>
+						<h3>
+							<label for="mhpaby0000001">[스크랩]맨하튼 브리지</label>
+							<span class="mhpaH3r">
+								<a href="#fnc" title="댓글보기" class="reply-top">댓글 <em>5</em>개</a>
+								<a href="#fnc" title="스크랩하기" class="scrap">스크랩</a>
+							</span>
+						</h3>
+					</div>
+					<div class="mhp-pic">
+						<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="760" border="0" alt="컴즈유엑스디센타파티" />
+					</div>
+					<!-- EXIF정보 / 원본보기 -->
+					<div id="p-etc-info">
+						<ul class="pe-info">
+							<li class="exif"><a href="#fnc" title="EXIF 정보 보기"><i><span>EXIF정보</span></i></a></li>
+							<li class="origin"><a href="#fnc" title="원본사이즈로 보기(새창)"><i><span>원본보기</span></i></a></li>
+						</ul>
+					</div>
+					<div id="inPpaging">
+						<i class="pabpL" title="이전 사진이 없습니다" onmouseover="document.getElementById('padbLOver').style.display='inline'" onmouseout="document.getElementById('padbLOver').style.display='none'"><i class="in"><span class="ir">이전사진없음</span></i></i>
+						<div class="padbOver" id="padbLOver">
+							<img src="../images/key_left.gif" alt="좌측 보기" width="27" height="25" />
+						</div>
+						<a href="#fnc" class="pabpR" title="다음사진보기"onmouseover="document.getElementById('padbROver').style.display='inline'" onmouseout="document.getElementById('padbROver').style.display='none'"><i class="in"><span class="ir">다음사진</span></i></a>
+						<div class="padbOver" id="padbROver">
+							<img src="../images/key_right.gif" alt="dn측 보기" width="27" height="25" />
+						</div>
+					</div>
+				</div>
+				<!-- 사진내용 -->
+				<div class="mhpa-uc">
+					<!-- 게시물정보 / 게시물내용 -->
+					<div class="article-wrap">
+						<!-- 게시물정보 -->
+						<dl class="article-info">
+							<dt class="hide">작성자</dt>
+							<dd class="write"><a href="#fnc" class="name-ui">김근오</a></dd>
+							<dt class="hide">작성일</dt>
+							<dd class="date">2009.11.21 17:43</dd>
+						</dl>
+						<!-- 게시물내용 -->
+						<div id="article-body" class="ab-show">
+							<!-- 본문 -->
+							<div class="atc-content">
+								<span id="brd_content_0" name="brd_content_0">
+									<style>P {MARGIN-TOP:2px; MARGIN-BOTTOM:2px}</style>
+									<p></p>
+									<p>'내맘을 아냐고, 해바라기2' 로 음원시장에 강자로 떠오른</p>
+									<p>써니사이드의 멤버 MJ 가 세번째싱글 가지고 돌아왔다.<br>이번 앨범은 '이나이먹고 뭐했길래' 로 큰인기를 끌었던</p>
+									<p>&nbsp;미스에스가 극찬을 하며 직접 참여의사를 표시했고 또한 </p>
+									<p>'휘성, 거미’ 등등이 몸담았던 엠보트 출신의 호소력짙은</p>
+									<p>보이스 'I WISH' 의 오윤혜가 참여하여 노래에 서정성을 더했다.<br><br>이노래 '새벽두시반'은 전작 '내맘을아냐고'의 연장선상에 있는 </p>
+									<p>곡으로써 남,녀 각각 만남 그리고 헤어짐 또 그리움을 애절함으로 풀어낸 진부하지 않은 특색있는 곡이다.<br><br>대한민국 남자감성랩을 대표하는 실력파 MJ 와 여자랩퍼의 </p>
+									<p>선두격인 미스에스 오유미 그리고 매니아층이 두터운 오윤혜가</p>
+									<p>만들어내는 환상의 하모니로 신선한 충격을 던져줄 것이다.<br><br>작곡에는 Ab에비뉴 의 '사랑둘이서'로 깊은인상을 주었던 </p>
+									<p>히트작곡가 김두현이 맡았고, 또한 MJ 본인이 직접 작사, </p>
+									<p>프로듀싱에 참여하여 역량을 과시했다. </p>
+									<p></p>
+								</span>
+								<button type="button" onclick="document.getElementById('mhpShowAni').className='mhpShowAni closeCyPhoto';">테스트</button>
+							</div>
+							<!-- 출처/공개설정 -->
+							<dl class="atc-detail-info">
+							<dt>공개설정 :</dt>
+							<dd class="public-set">
+								<span class="permit" id="bopenText0">전체공개</span><a href="#temp" onclick="viewBopenLayer('0');" class="article-per-btn"><img src="http://renoimg.cyworld.co.kr/img/pims/reno2/button/btn_down.gif" id="updownBtn0" width="11" height="11"alt="공개설정" title="공개설정 열기" /></a>
+								<!-- 공개설정  레이어 -->
+								<div id="bopenLayer0" class="open_layer" style="display:none;">
+									<form id="bopenFrm0" name="bopenFrm0">
+										<ul>
+											<li><input type="radio" name="bopen" id="openlevel1" class="radio" title="전체에게 공개" value="4" checked="checked" /> <label for="openlevel1" title="전체에게 공개">전체공개</label></li>
+											<li><input type="radio" name="bopen" id="openlevel2" class="radio" title="일촌에게만 공개" value="1" /> <label for="openlevel2" title="일촌에게만 공개">일촌공개</label></li>
+											<li><input type="radio" name="bopen" id="openlevel3" class="radio" title="비공개" value="0" /> <label for="openlevel3" title="비공개">비공개</label></li>
+										</ul>
+										<p><button type="button" class="button t-ok" onclick="changeBopen('1999738045','0', '56')" title="확인"><span class="ir">확인</span></button></p>
+									</form>
+								</div>
+							</dd>
+							<dd><a href="#fnc" title="from ABCDEFGHJKLMNOP" class="from">from ABCDEFGHJKLMNOP</a></dd>
+						</dl>
+							<div class="clear"></div>
+						</div>
+						<!-- 공감 // 스크랩 -->
+						<div class="metoo-fnbtn">
+							<!-- function 버튼 -->
+							<ul class="fnb fnb-r">
+								<!-- 첫번째일 때 class="first" 추가 -->
+								<li class="first"><a href="#fnc" title="스크랩(새창)">스크랩</a></li>
+							</ul>
+							<!-- 공감(여기에 공감 삽입) -->
+							<div class="metoo_wrap">
+								<!-- 테스트용 공감 -->
+								<div class="1303106564861 social_mod_txt" sprecommendee_gb="" sptype="social_mod_txt" spkey="239562a448a7834ac3d81f85bbcc4124" mkey="360569445168295105" spsvccode="2" spownertid="36538240" spfolderno="71" spitemseq="614338037" spurl="http://minihp.cyworld.com/pims/main/pims_main.asp?tid=36538240&amp;urlstr=phot&amp;item_seq=614338037&amp;board_no=71&amp;urlstrsub=search&amp;seq=71" sptitle="　" spthumbnail="" spsummary="&nbsp;1차, 2차.. 본선진출 그리고 5차 합숙까지..&nbsp;이&nbsp;뜨거운&nbsp;순간을 함께&nbsp;했다는&nbsp;사실만으로여자 top 10으로 이름을 올려 보았단 것 만으로도과분할 만큼&nbsp;넘치는 응원과 지지를 받아본 것만으로도이미 너무&nbsp;감사해&nbsp;속상하고 외로운 마음은 딱&nbsp;오늘까지만.열심히 쑥쑥 자라, " spismobile="" spwritertid="36538240" spwriterbid="" spownerbid="" spwriternm="김지원" spcategory="드림 프로젝트" spwritertype="" sprecommendee_id="65562991" sprecommendee_nm="MBC신입사원" spcorpid="" sptag1="드림 프로젝트" sptag2="" sptag3="" sptag4=""><a class="off" onclick="this.blur(); SPLoader.checkRecommend(event)" href="javascript:;" alt="싸이월드 공감" title="싸이월드 공감" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">공감</a><p class="count"><a href="javascript:;" onclick=" window.open(&quot;http://csp.cyworld.com/bi/bi_profile_pop.php?mkey=,2,36538240,71,614338037,http%3A%2F%2Fminihp.cyworld.com%2Fpims%2Fmain%2Fpims_main.asp%3Ftid%3D36538240%26urlstr%3Dphot%26item_seq%3D614338037%26board_no%3D71%26urlstrsub%3Dsearch%26seq%3D71&amp;svc_cd=2&amp;id=239562a448a7834ac3d81f85bbcc4124&amp;loginurl=http%3A%2F%2Fc.cyworld.com%2Fbridge%3Fredirection%3Dhttp%3A%2F%2Fc.cyworld.com%2Fmoa%3Fid%3D47815753%26f%3DMDBD&quot;,&quot;mem_pop&quot;, &quot;width=360,height=420,scrollbars=no,resizable=no&quot;); this.blur(); SPLoader.clickCount(2);" class="info hnum" val="2" title="2">2명</a>이 공감했습니다.</p></div>
+							</div>
+						</div>
+						<!-- 공감 // 스크랩 -->
+						<div class="metoo-fnbtn">
+							<ul class="fnb fnb-r">
+								<!-- 첫번째일 때 class="first" 추가 -->
+								<li class="first"><a href="#fnc" title="게시물 수정">수정</a></li>
+								<li><a href="#fnc" title="게시물 다른폴더로 이동(새창)">이동</a></li>
+								<li><a href="#fnc" title="게시물 삭제">삭제</a></li>
+								<li><a href="#fnc" title="게시물 다른곳으로 보내기(새창)">보내기</a></li>
+							</ul>
+							<!-- 공감(여기에 공감 삽입) -->
+							<div class="metoo_wrap">
+								<!-- 테스트용 공감 -->
+								<div class="1303106564861 social_mod_txt" sprecommendee_gb="" sptype="social_mod_txt" spkey="239562a448a7834ac3d81f85bbcc4124" mkey="360569445168295105" spsvccode="2" spownertid="36538240" spfolderno="71" spitemseq="614338037" spurl="http://minihp.cyworld.com/pims/main/pims_main.asp?tid=36538240&amp;urlstr=phot&amp;item_seq=614338037&amp;board_no=71&amp;urlstrsub=search&amp;seq=71" sptitle="　" spthumbnail="" spsummary="&nbsp;1차, 2차.. 본선진출 그리고 5차 합숙까지..&nbsp;이&nbsp;뜨거운&nbsp;순간을 함께&nbsp;했다는&nbsp;사실만으로여자 top 10으로 이름을 올려 보았단 것 만으로도과분할 만큼&nbsp;넘치는 응원과 지지를 받아본 것만으로도이미 너무&nbsp;감사해&nbsp;속상하고 외로운 마음은 딱&nbsp;오늘까지만.열심히 쑥쑥 자라, " spismobile="" spwritertid="36538240" spwriterbid="" spownerbid="" spwriternm="김지원" spcategory="드림 프로젝트" spwritertype="" sprecommendee_id="65562991" sprecommendee_nm="MBC신입사원" spcorpid="" sptag1="드림 프로젝트" sptag2="" sptag3="" sptag4=""><a class="off" onclick="this.blur(); SPLoader.checkRecommend(event)" href="javascript:;" alt="싸이월드 공감" title="싸이월드 공감" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">공감</a><p class="count"><a href="javascript:;" onclick=" window.open(&quot;http://csp.cyworld.com/bi/bi_profile_pop.php?mkey=,2,36538240,71,614338037,http%3A%2F%2Fminihp.cyworld.com%2Fpims%2Fmain%2Fpims_main.asp%3Ftid%3D36538240%26urlstr%3Dphot%26item_seq%3D614338037%26board_no%3D71%26urlstrsub%3Dsearch%26seq%3D71&amp;svc_cd=2&amp;id=239562a448a7834ac3d81f85bbcc4124&amp;loginurl=http%3A%2F%2Fc.cyworld.com%2Fbridge%3Fredirection%3Dhttp%3A%2F%2Fc.cyworld.com%2Fmoa%3Fid%3D47815753%26f%3DMDBD&quot;,&quot;mem_pop&quot;, &quot;width=360,height=420,scrollbars=no,resizable=no&quot;); this.blur(); SPLoader.clickCount(2);" class="info hnum" val="2" title="2">2명</a>이 공감했습니다.</p></div>
+							</div>
+						</div>
+						<!-- 공감 // 스크랩 // 홈주인일 때 mefn-owner 추가 -->
+						<div class="metoo-fnbtn mefn-owner">
+							<ul class="fnb fnb-l">
+								<!-- 첫번째일 때 class="first" 추가 -->
+								<li class="first">
+									<a href="#fnc" title="폴더 대표사진으로 등록(새창)">대표 사진 등록</a>
+								</li>
+								<li><a href="#fnc" title="스티커 붙이기(새창)">스티커</a></li>
+							</ul>
+							<ul class="fnb fnb-r">
+								<li class="first"><a title="스크랩" href="javascript:ScrapBook(486129548,4)">스크랩</a></li>
+							</ul>
+							<!-- 공감(여기에 공감 삽입) -->
+							<div class="metoo_wrap">
+								<!-- 테스트용 공감 -->
+								<div class="1303106564861 social_mod_txt" sprecommendee_gb="" sptype="social_mod_txt" spkey="239562a448a7834ac3d81f85bbcc4124" mkey="360569445168295105" spsvccode="2" spownertid="36538240" spfolderno="71" spitemseq="614338037" spurl="http://minihp.cyworld.com/pims/main/pims_main.asp?tid=36538240&amp;urlstr=phot&amp;item_seq=614338037&amp;board_no=71&amp;urlstrsub=search&amp;seq=71" sptitle="　" spthumbnail="" spsummary="&nbsp;1차, 2차.. 본선진출 그리고 5차 합숙까지..&nbsp;이&nbsp;뜨거운&nbsp;순간을 함께&nbsp;했다는&nbsp;사실만으로여자 top 10으로 이름을 올려 보았단 것 만으로도과분할 만큼&nbsp;넘치는 응원과 지지를 받아본 것만으로도이미 너무&nbsp;감사해&nbsp;속상하고 외로운 마음은 딱&nbsp;오늘까지만.열심히 쑥쑥 자라, " spismobile="" spwritertid="36538240" spwriterbid="" spownerbid="" spwriternm="김지원" spcategory="드림 프로젝트" spwritertype="" sprecommendee_id="65562991" sprecommendee_nm="MBC신입사원" spcorpid="" sptag1="드림 프로젝트" sptag2="" sptag3="" sptag4=""><a class="off" onclick="this.blur(); SPLoader.checkRecommend(event)" href="javascript:;" alt="싸이월드 공감" title="싸이월드 공감" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown">공감</a><p class="count"><a href="javascript:;" onclick=" window.open(&quot;http://csp.cyworld.com/bi/bi_profile_pop.php?mkey=,2,36538240,71,614338037,http%3A%2F%2Fminihp.cyworld.com%2Fpims%2Fmain%2Fpims_main.asp%3Ftid%3D36538240%26urlstr%3Dphot%26item_seq%3D614338037%26board_no%3D71%26urlstrsub%3Dsearch%26seq%3D71&amp;svc_cd=2&amp;id=239562a448a7834ac3d81f85bbcc4124&amp;loginurl=http%3A%2F%2Fc.cyworld.com%2Fbridge%3Fredirection%3Dhttp%3A%2F%2Fc.cyworld.com%2Fmoa%3Fid%3D47815753%26f%3DMDBD&quot;,&quot;mem_pop&quot;, &quot;width=360,height=420,scrollbars=no,resizable=no&quot;); this.blur(); SPLoader.clickCount(2);" class="info hnum" val="2" title="2">2명</a>이 공감했습니다.</p></div>
+							</div>
+						</div>
+						<!-- 댓글 -->
+						<table cellpadding="0" cellspacing="0" border="0" width="760" class="minihompy-comment">
+							<thead>
+								<tr>
+									<th>사진댓글</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="reply112697967_103752247">
+									<td class="first">
+										<span id="replyWriterNm112697967_103752247"><a href="javascript:nameUIOpen('63970927','ND');" class="sname01">정효빈</a> : </span><span id="replyArea112697967_103752247"><span id="comment112697967_103752247" style="word-break:break-all; word-wrap:break-word;">언니 저언니 저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니저언니왕팬이에여!!&gt;.&lt;</span>
+										<span class="date">(2011.03.22 15:47)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<!-- 댓글공감 -->
+										<div class="social_mod_reple">
+											<a class="on" title="싸이월드 공감" href="#fnc">공감</a><!--a class="off" href="#fnc">공감취소</a-->
+											<p class="count"><a href="#fnc" title="김현증 차지현님 외 29명">67</a></p>
+										</div>
+										<a href="javascript:reply0.actionWrite('103752247', {parent_writer_id:'63970927'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<tr id="reply112697967_103754689">
+									<td class="">
+										<span id="replyWriterNm112697967_103754689"><a href="javascript:nameUIOpen('64652931','ND');" class="sname01">신예은</a> : </span><span id="replyArea112697967_103754689"><span id="comment112697967_103754689" style="word-break:break-all; word-wrap:break-word;">저 언니 완전 좋아해요 팬이예요</span>
+										<span class="date">(2011.03.22 16:00)</span>
+										<!-- 댓글공감취소 -->
+										<div class="social_mod_reple">
+											<a class="off" href="#fnc">공감취소</a>
+											<p class="count"><a href="#fnc" title="김현증 차지현님 외 29명">67</a></p>
+										</div>
+										<a href="javascript:reply0.actionWrite('103754689', {parent_writer_id:'64652931'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<!-- 재댓글 입력 -->
+								<tr>
+									<td class="write-reply write-reply2">
+										<input type="text" title="댓글입력폼" size="50" class="comment-input" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글입력완료" class="comment-submit" />
+									</td>
+								</tr>
+								<!-- 재댓글 -->
+								<tr>
+									<td class="reply">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_this-reply.gif" border="0" alt="윗글의 댓글내용" class="ico-reply" />
+										<a href="#fnc" class="sname01">성동순</a> :
+										비밀은 화이트보드 ㅎㅎ
+										<span class="date">(2007.07.29 22:00)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="new" class="new" />
+										<a href="#fnc"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-modify.gif" border="0" alt="수정버튼" title="이 댓글 수정하기" class="modify" /></a>
+										<a href="#fnc"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-delete.gif" border="0" alt="삭제버튼" title="이 댓글 삭제하기" /></a>
+									</td>
+								</tr>
+								<!-- 재댓글 수정  -->
+								<tr>
+									<td class="write-reply write-reply2-modify">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_this-reply.gif" border="0" alt="윗글의 댓글내용" class="ico-reply" />
+										<!-- width값 계산을 위한 span -->
+										<span class="for-input-size"><a href="#fnc" class="sname01">성동순</a> :</span>
+										<!-- 작성자명에 따라 계산된 input의 width값을 style에 입력 -->
+										<input type="text" title="댓글수정폼" size="50" class="comment-input" value="비밀은 화이트보드 ㅎㅎ" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글수정완료" class="comment-submit" />
+									</td>
+								</tr>
+								<tr id="reply112697967_103762975">
+									<td class="">
+										<span id="replyWriterNm112697967_103762975"><a href="javascript:nameUIOpen('61203898','ND');" class="sname01">김은혜</a> : </span><span id="replyArea112697967_103762975"><span id="comment112697967_103762975" style="word-break:break-all; word-wrap:break-word;">저 언니 완존 팬이에여~싸랑해여 근데 혹시 일진이였나여;;??</span>
+										<span class="date">(2011.03.22 16:35)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103762975', {parent_writer_id:'61203898'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<tr id="reply112697967_103763157">
+									<td class="">
+										<span id="replyWriterNm112697967_103763157"><a href="javascript:nameUIOpen('65164875','ND');" class="sname01">김주영</a> : </span><span id="replyArea112697967_103763157"><span id="comment112697967_103763157" style="word-break:break-all; word-wrap:break-word;">아이유언니~&gt;&lt;저진쩌진짜진짜언니 팬이구엿 드림하이 정말열씨미 봣써여~</span>
+										<span class="date">(2011.03.22 16:36)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103763157', {parent_writer_id:'65164875'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<!-- 댓글 수정 -->
+								<tr>
+									<td class="write-reply write-reply-modify">
+										<!-- width값 계산을 위한 span -->
+										<span class="for-input-size"><a href="#fnc" class="sname01">김주영</a> :</span>
+										<!-- 작성자명에 따라 계산된 input의 width값을 style에 입력 -->
+										<input type="text" title="댓글수정폼" size="50" class="comment-input" value="아이유언니~&gt;&lt;저진쩌진짜진짜언니 팬이구엿 드림하이 정말열씨미 봣써여~" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글수정완료" class="comment-submit" />
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">유승호</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">누나~악플신경쓰지마세여~^^</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">유승호</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">누나~악플신경쓰지마세여~^^</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">유승호</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">누나~악플신경쓰지마세여~^^</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">유승호</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">누나~악플신경쓰지마세여~^^</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">이현국</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">아이유! 아이유!</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<!-- 비회원 댓글 입력 -->
+								<tr>
+									<td class="write-reply no-login">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_user-name.gif" border="0" alt="이름" class="comment-reply-name" />
+										<input type="text" title="작성자 이메일주소 입력폼" class="comment-email" />
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_password.gif" border="0" alt="비밀번호" class="comment-reply-password" />
+										<input type="password" title="작성자 비밀번호 입력폼" class="comment-password" />
+										<br />
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_reply.gif" border="0" alt="댓글" class="comment-reply-title" />
+										<input type="text" title="댓글입력폼" size="50" class="comment-input" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글입력완료" class="comment-submit" />
+									</td>
+								</tr>
+								<!-- 비회원 댓글 수정 -->
+								<tr>
+									<td class="write-reply no-login-modify">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_password.gif" border="0" alt="비밀번호" class="comment-reply-password" />
+										<input type="password" title="작성자 비밀번호 입력폼" class="comment-password" />
+										<br />
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_reply.gif" border="0" alt="댓글" class="comment-reply-title" />
+										<input type="text" title="댓글입력폼" size="50" class="comment-input" value="비회원 댓글 수정 글" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글입력완료" class="comment-submit" />
+									</td>
+								</tr>
+								<!-- 비회원 댓글 삭제 -->
+								<tr>
+									<td class="write-reply no-login-del">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_password.gif" border="0" alt="비밀번호" class="comment-reply-password" />
+										<input type="password" title="작성자 비밀번호 입력폼" class="comment-password" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="비밀번호입력완료" class="comment-submit pwd-btn" />
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">유승호</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">누나~악플신경쓰지마세여~^^</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<!-- 비회원 재댓글 입력 -->
+								<tr>
+									<td class="write-reply reply2-no-login">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_user-name.gif" border="0" alt="이름" class="comment-reply-name" />
+										<input type="text" title="작성자 이메일주소 입력폼" class="comment-email" />
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_password.gif" border="0" alt="비밀번호" class="comment-reply-password" />
+										<input type="password" title="작성자 비밀번호 입력폼" class="comment-password" />
+										<br />
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_reply.gif" border="0" alt="댓글" class="comment-reply-title" />
+										<input type="text" title="댓글입력폼" size="50" class="comment-input" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글입력완료" class="comment-submit" />
+									</td>
+								</tr>
+								<!-- 비회원 재댓글 수정 -->
+								<tr>
+									<td class="write-reply write-reply2-no-login-modify">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_password.gif" border="0" alt="비밀번호" class="comment-reply-password" />
+										<input type="password" title="작성자 비밀번호 입력폼" class="comment-password" />
+										<br />
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_reply.gif" border="0" alt="댓글" class="comment-reply-title" />
+										<input type="text" title="댓글입력폼" size="50" class="comment-input" value="비회원 댓글 수정 글" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글입력완료" class="comment-submit" />
+									</td>
+								</tr>
+								<!-- 비회원 재댓글 삭제 -->
+								<tr>
+									<td class="write-reply reply2-no-login-del">
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_password.gif" border="0" alt="비밀번호" class="comment-reply-password" />
+										<input type="password" title="작성자 비밀번호 입력폼" class="comment-password" />
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="비밀번호입력완료" class="comment-submit pwd-btn" />
+									</td>
+								</tr>
+								<tr id="reply112697967_103767929">
+									<td class="">
+										<span id="replyWriterNm112697967_103767929"><a href="javascript:nameUIOpen('53683819','ND');" class="sname01">유승호</a> : </span><span id="replyArea112697967_103767929"><span id="comment112697967_103767929" style="word-break:break-all; word-wrap:break-word;">누나~악플신경쓰지마세여~^^</span>
+										<span class="date">(2011.03.22 16:53)</span>
+										<img src="http://c1img.cyworld.co.kr/img/ico/new.gif" border="0" alt="새 댓글" class="new">
+										<a href="javascript:reply0.actionWrite('103767929', {parent_writer_id:'53683819'});"><img src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-reply.gif" border="0" alt="댓글버튼" title="이 댓글에 댓글달기"></a>
+										</span>
+									</td>
+								</tr>
+								<!-- 댓글입력폼 -->
+								<tr>
+									<td class="write-reply">
+										<!--실명인증 안한 외국인일경우 실명인증 팝업페이지 호출 함수 추가 -->
+										<img src="http://c1img.cyworld.co.kr/img/pims/reno15/ico_reply.gif" border="0" alt="댓글" class="comment-reply-title">
+										<input type="text" id="frm112697967_comment_0" maxlength="300" title="댓글입력폼" size="50" class="comment-input" onfocus="confirm_check(this);" onkeydown="if(event.keyCode==13) return reply0.reply_check('0', CYREPLY_WRITE);">
+										<input type="image" src="http://c1img.cyworld.co.kr/img/pims/reno15/btn_comment-submit.gif" title="댓글입력완료" class="comment-submit" onclick="return reply0.reply_check('0', CYREPLY_WRITE);">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 사진 페이징 -->
+			<div id="mh-pa-foot">
+				<div class="mhpap-wrap">
+					<ul id="mhpaReply" class="mhpap-reply">
+						<li>
+							<a href="#fnc">
+								<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/fan-temp01.gif" width="70" height="50" border="0" alt="사진제목출력" title="사진제목출력" />
+							</a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+						<li>
+							<a href="#fnc">
+								<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/fan-temp01.gif" width="70" height="50" border="0" alt="사진제목출력" title="사진제목출력" />
+							</a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+						<li>
+							<a href="#fnc">
+								<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/fan-temp01.gif" width="70" height="50" border="0" alt="사진제목출력" title="사진제목출력" />
+							</a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+						<li>
+							<a href="#fnc">
+								<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/fan-temp01.gif" width="70" height="50" border="0" alt="사진제목출력" title="사진제목출력" />
+							</a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+						<!-- 현재사진일 때 -->
+						<li class="current">
+							<a href="#fnc"><i></i><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/fan-temp01.gif" width="70" height="50" border="0" alt="사진제목출력" title="현재사진" /></a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+						<li>
+							<a href="#fnc">
+								<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/fan-temp01.gif" width="70" height="50" border="0" alt="사진제목출력" title="사진제목출력" />
+							</a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+						<li>
+							<a href="#fnc">
+								<img src="http://minihp-uidev.cyworld.com/img/pims/renew/f-temp-opb.gif" width="70" height="50" border="0" alt="사진없음" title="사진이 없습니다." />
+							</a>
+							<em class="mhpr-tit">오늘점심은 샌드위치<span>(2)</span></em>
+						</li>
+					</ul>
+					<!-- 이전/다음 내용 없을 때 i 태그 -->
+					<i class="button btn-pgL" title="이전 사진이 없습니다"><i class="in"><span class="ir">이전사진없음</span></i></i>
+					<button type="button" class="button btn-pgR" title="다음사진"><i class="in"><span class="ir">다음</span></i></button>
+				</div>
+			</div>
+		</div>
+		<!-- // id="mhpaParent" 끝 -->
+	</div>
+</div>
+
+
+<div id="mhpShowAni" class="mhpShowAni" style="display:none;">
+	<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" border="0" alt="컴즈유엑스디센타파티" />
+</div>
+
+<div id="cywDimd"></div>
+
+</body>
+</html>
