@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<script language='javascript'>
+		document.ondblclick = function(event)
+		{
+			if(window.event) {
+				EventStatus = window.event.srcElement.tagName;
+			} else {
+				EventStatus = event.target.tagName; 
+			}
+
+			if(EventStatus!='INPUT' && EventStatus!='TEXTAREA') {
+				ua = navigator.userAgent;
+				sh = document.documentElement.scrollHeight;
+				st = document.documentElement.scrollTop;
+				ch = document.documentElement.clientHeight;
+
+				if (ua.indexOf('Chrome') > 0) {
+					st = document.body.scrollTop;
+				} else if (ua.indexOf('MSIE 6.0') > 0) {
+					sh = document.body.scrollHeight;
+					st = document.body.scrollTop;
+					ch = document.body.clientHeight;
+				}
+
+				if(sh - st == ch) {
+					window.scrollTo(0,0);
+				} else {
+					window.scrollTo(0,sh);
+				}
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+<center>
+<div style="text-align:center; width:600px; height:5000px;"><strong>테스트용 페이지 (상단)</stong></div>
+<div style="text-align:center; width:600px;"><strong>테스트용 페이지 (하단)</stong></div>
+</center>
+
+</body>
+
+</html>

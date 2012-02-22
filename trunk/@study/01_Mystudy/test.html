@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	#ex {position:absolute; top:100px; left:-180px; width:300px; height:450px; border:1px solid blue; background:red;}
+</style>
+<script type="text/javascript">
+ 	
+	var mhFS = ({	
+		init : function() {
+			obj = document.getElementById('ex');
+			objX = parseInt(obj.style.left);
+			sOn_Set = null;
+			sOut_Set = null;
+		},
+						
+		slideOn : function() {
+			console.log(objX); // 왜 NaN 값이 나올까?
+			if (objX !== 0) {
+				objX = objX + 1;
+			}
+			
+			obj.style.left = objX + "px";
+			
+			sOn_Set = setTimeout('mhFS.slideOn()', 500);
+			
+			if (objX == 0) {
+				clearTimeout(sO_Set);
+			}
+
+		},		
+		
+		slideOut : function() {
+			if (objX !== -180) {
+				objX = objX - 1;
+			}
+			
+			obj.style.left = objX + "px";
+			
+			sOut_Set = setTimeout('mhFS.slideOut()', 500);
+			
+			if (objX == -180) {
+				clearTimeout(sOut_Set);
+			}
+			
+			console.log('Out');
+		},
+
+		slideAction : function() {
+			obj.style.left = '-180px';
+			
+			obj.onmouseover = function() {
+				mhFS.slideOn();
+				clearTimeout(sOn_Set);
+			};
+			
+			obj.onmouseout = function() {
+				mhFS.slideOut();
+				clearTimeout(sOut_Set);
+			};
+			
+		},
+	
+	});
+	
+	window.onload = function() {
+		mhFS.init();
+		mhFS.slideAction();
+	}
+</script>
+</head>
+
+<body>
+
+
+<div id="ex"></div>
+
+
+</body>
+</html>

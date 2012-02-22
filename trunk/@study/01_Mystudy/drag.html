@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	#dragThis {top:0; left:0; width:100px; height:100px; font-family:arial; font-size:13px; line-height:100px; color:#fff; text-align:center; background:red;}
+</style>
+<script type="text/javascript">
+	
+  function getX(e) {
+  	return e.pageX || e.clientX + document.body.scrollLeft || 0;
+  }
+  
+  function getY(e) {
+  	return e.pageY || e.clientY + document.body.scrollTop || 0;
+  }
+  
+  var curDrag, origX, origY;
+  
+  
+  document.onmousedown = function(e) {
+  	console.log('클릭');
+  	e = fixEvent(e);
+  	
+  	if (e.target.className=="draggable") {
+  		curDrag = e.target;
+		  		
+  		origX = getX(e) + (parseInt(curDrag.style.left) || 0);
+  		origY = getY(e) + (parseInt(curDrag.style.top) || 0);
+		console.log(origX,origY);  		
+  		
+  		document.onmousemove = dragMove;
+  		document.onmouseup = dragStop;
+  	}
+  };
+  
+  function dragMove(e) {
+  	console.log('무브',origX,origY);
+  	e = fixEvent(e);
+  	
+  	curDrag.style.left = getX(e) - origX + "px";
+  	curDrag.style.top = getY(e) - origY + "px";
+  }
+  
+  function dragStop(e) {
+  	e = fixEvent(e);
+
+  	curDrag = document.onmousemove = document.onmouseup = null;
+  }
+  
+  function fixEvent(e) {
+  	if (!e) {
+  		e = window.event;
+  		e.target = e.srcElement;
+  		e.layerX = e.offsetX;
+  		e.layerY = e.offsetY;
+  	}
+  	return e;
+  }
+</script>
+</head>
+
+<body id="mhBody">
+<div style="position:relative; width:100%; height:100%;">
+
+<div id="dragThis" class="draggable" style="position:absolute;">
+
+
+</div>
+</div>
+
+
+</body>
+</html>

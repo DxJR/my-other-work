@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript">
+	if (window.addEventListener) {
+		window.addEventListener("load", setupEvents, false);		
+	} else if (window.attachEvent) {
+		window.attachEvent("onload", setupEvents);
+	} else {
+		window.onload=setupEvents;
+	}
+	
+	function setupEvents(evnt) {
+		document.studyForm.onsubmit=checkForm;
+	}
+	
+	function checkForm(evnt){
+		var opts = document.studyForm.sfSelect.options;
+		for (i=0; i < opts.length; i++) {
+			if (opts[i].selected) {
+				alert(opts[i].text + " " + opts[i].value);
+			} 
+		}
+		return false;
+	}
+</script>
+</head>
+
+<body>
+
+<form name="studyForm">
+	<select name="sfSelect" multiple="multiple">
+		<option value="Opt1">Option One</option>
+		<option value="Opt2">Option Two</option>
+		<option value="Opt3">Option Three</option>		
+	</select>
+	<input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
