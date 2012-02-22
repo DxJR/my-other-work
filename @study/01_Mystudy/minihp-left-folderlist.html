@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	body {margin:0; padding:0;}
+
+	#mhLeftFolder {position:absolute; top:50px; left:0; width:200px; height:400px; background:#fff;}
+</style>
+<script type="text/javascript">
+
+	var obj = null;	
+	var objX = null;
+	var mhLonAction = null;
+	var mhLoutAction = null;
+	
+	function mhLon() {
+		obj = document.getElementById('mhLeftFolder');
+		objX = parseInt(obj.style.left);
+
+		if (objX !== 50) {
+			objX = objX + 5;
+		}
+
+		obj.style.left = objX + "px";
+
+		mhLonAction = setTimeout ("mhLon()", 3);
+
+		if (objX==0) {
+			clearTimeout(mhLonAction);
+		}
+	}
+
+	function mhLout() {
+		if (objX !== -180) {
+			objX = objX - 5;
+		}
+		obj.style.left = objX + "px";
+
+		mhLoutAction = setTimeout("mhLout()", 3);
+	
+		if (objX==-180) {
+			clearTimeout(mhLoutAction);
+		}
+	}
+
+	function mhLfAni() {
+		obj = document.getElementById('mhLeftFolder');
+		objIn = document.getElementById('innnn');
+		
+		obj.onmouseover = function() {
+			mhLon();
+			clearTimeout(mhLoutAction);
+		};
+		
+		obj.onmouseout = function() {
+			mhLout();
+			clearTimeout(mhLonAction);
+		};
+	}
+
+
+</script>
+</head>
+
+<body onload="mhLfAni();">
+
+
+<div style="width:983px; height:532px; background:red;">
+</div>
+
+
+<div id="mhLeftFolder" class="hi" style="left:-180px;">
+	<div id="innnn" style="width:150px; height:350px; margin:20px 0 0 0; background:blue;">
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+	#appleEx {position:absolute; left:0; width:200px; height:60px; overflow:hidden; border:1px solid red;}
+		#appleEx ul {list-style:none; margin:0; padding:0;}
+		#appleEx li {float:left; width:100px; height:60px; opacity:0.6; list-style:none; margin:0 5px; padding:0; text-align:center; line-height:60px; background:green;}
+</style>
+<script type="text/javascript">
+	function moveCom() {
+		var obj = document.getElementById('appleEx');
+		var objLeft = parseInt(obj.style.left);
+
+		console.log(objLeft);		
+
+		if (objLeft <= 250) {
+			objLeft = objLeft + 10;
+			obj.style.left = objLeft + "px";
+		}		
+
+
+		moveAction = setTimeout("moveCom()", 5);
+		if (objLeft == 200) {
+			clearTimeout(moveAction);
+		}
+	}
+</script>
+</head>
+
+<body onload="moveCom();">
+
+
+<div id="appleEx" style="left:0;">
+	<ul>
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+		<li>555</li>
+		<li>666</li>		
+	</ul>
+</div>
+
+</body>
+</html>
