@@ -4,8 +4,239 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
+    var addressBook = {
+       users : [
+		    {
+		        name : '오수연',
+		        team : 'UI개발팀',
+		        birth : '1983.07.10',
+		        service : '이글루스',
+		        tel : '010-8706-7221'
+		    },       
+		    {
+		        name : '여선영',
+		        team : 'UI개발팀',
+		        birth : '1978.07.10',
+		        service : '글로벌 미니홈피',
+		        tel : '010-6434-3528'
+		    },
+
+		    {
+		        name : '민경욱',
+		        team : 'UI개발팀',
+		        birth : '1980.07.10',
+		        service : '블로그, 클럽',
+		        tel : '010-4282-0788'
+		    },
+		    {
+		        name : '이현국',
+		        team : 'UI개발팀',
+		        birth : '1981.08.17',
+		        service : '미니홈피',
+		        tel : '010-9167-7230'
+		    },
+		    {
+		        name : '박미림',
+		        team : 'UI개발팀',
+		        birth : '1980.04.02',
+		        service : '글로벌 미니홈피',
+		        tel : '010-9069-0402'
+		    },		    
+		    {
+		        name : '최서현',
+		        team : 'UI개발팀',
+		        birth : '1986.09.14',
+		        service : '글로벌 미니홈피',
+		        tel : '010-3480-9604'
+		    },                                                          
+       ],
+       
+       init : function() {
+       		this.makeDefault();
+       		this.createDom();
+       },
+
+		makeDefault : function() {
+			// 버튼생성
+			var createButton = function(action, inText) {
+				var btn = document.createElement('button');			
+				var btnW = document.createTextNode(''+inText+'');
+				btn.appendChild(btnW);
+				document.body.appendChild(btn);
+				btn.onclick = function() {
+					addressBook.sortList(''+action+'');
+				}			
+			}
+			createButton('name','이름정렬');
+			createButton('birth','나이정렬');
+
+
+	   		this.wrapEle = document.createElement('ul');
+	   		this.wrapEle.setAttribute('id','addrBook');
+	   		document.body.appendChild(this.wrapEle);
+   				
+		},       
+       // createDom & appendChild
+       createDom : function(s) {
+
+		if (s) {
+	       	document.body.innerHTML ='';
+	       	this.makeDefault();					
+		}
+   		for (var i=0; this.users.length>i; i++) {
+   			var wLi = document.createElement('li');
+   			wLi.className='userlist';
+
+			
+			// 이름
+			if (s) {
+				if (s=='birth') {
+					var name = document.createTextNode(this.sortData[this.newSortName[i]][0]);				
+					this.sortData[this.newSortName[i]].shift();
+				} else {
+					var name = document.createTextNode(this.newSortName[i]);								
+				}
+			} else {
+				var name = document.createTextNode(this.users[i].name);
+			}
+			
+			wLi.appendChild(name);
+			       			
+   			var inDiv = document.createElement('div');
+   			var inUl = document.createElement('ul');
+   			inDiv.appendChild(inUl);
+   			wLi.appendChild(inDiv);
+   			this.wrapEle.appendChild(wLi);
+			
+
+			if (s) {			
+				var data = this.sortData[this.newSortName[i]];   				   						
+			}
+			
+			// 하위 li 데이터 넣기
+	   		var inDataMake = function(i,arg) {
+				if (s) {
+		   			return function() {
+					  for (var j=0; data.length>j; j++) {
+		   				var newLi = document.createElement('li');
+			   			var keys = document.createTextNode(data[j]);		   			
+		   				newLi.appendChild(keys);
+		   				inUl.appendChild(newLi);
+		   			  }
+					}(i);
+				} else {
+		   			return function() {
+		   				var newLi = document.createElement('li');
+			   			var keys = document.createTextNode(addressBook.users[i][arg]);		   			
+		   				newLi.appendChild(keys);
+		   				inUl.appendChild(newLi);
+					}(i,arg);
+				}
+	   		};	
+	   		
+	   		if (s) {
+				inDataMake(i);
+	   		} else {
+		   		inDataMake(i,'team');
+		   		inDataMake(i,'birth');
+		   		inDataMake(i,'service');
+		   		inDataMake(i,'tel');	   		
+	   		}
+
+			//데이터 전체 hide
+       		this.hideAll();
+
+			// 데이터 toggle
+	   		wLi.onclick = function() {
+	   			addressBook.hideAll();
+				this.lastChild.style.display = 'block';
+//				console.log(this.childNodes);  // 왜 이게 안찍힐까?
+	   		}
+	   		
+	   		document.getElementsByTagName('div')[0].style.display='block'; // 첫번째는 열림
+   		}       
+       },
+
+
+       //hideAll
+       hideAll : function() {
+   		this.wholeWrap = document.getElementById('addrBook');
+   		this.userData = this.wholeWrap.getElementsByTagName('div');
+       	for (var i=0; this.userData.length>i; i++) {
+       		this.userData[i].style.display='none';
+       	}
+       },
+
+
+       //정렬
+       sortList : function(w) {
+		this.sortData = {};
+		sortName = [];
+		
+		for (var i=0; this.users.length>i; i++) {
+			var keys = this.users[i][''+w+''];
+			sortName.push(keys);
+
+			var sortAry = [];
+			if (w=='birth') {
+				sortAry.push(this.users[i]['name']);
+			}
+			sortAry.push(this.users[i]['team']);
+			sortAry.push(this.users[i]['birth']);
+			sortAry.push(this.users[i]['service']);
+			sortAry.push(this.users[i]['tel']);			
+
+			this.sortData[keys] = sortAry;
+		};
+		this.newSortName = sortName.sort();
+  
+		addressBook.createDom(''+w+'');
+       },
+       
+       
+       
+       /* 정렬 데이터 넣기
+       sortInsert : function(s) {
+		for (var i=0; this.users.length>i; i++) {
+   			var wLi = document.createElement('li');
+   			wLi.className='userlist';
+			
+			// 이름
+			var name = document.createTextNode(this.newSortName[i]);			
+			wLi.appendChild(name);
+			
+   			var inDiv = document.createElement('div');
+   			var inUl = document.createElement('ul');
+   			inDiv.appendChild(inUl);
+   			wLi.appendChild(inDiv);
+   			this.wrapEle.appendChild(wLi);
+			data = this.sortData[this.newSortName[i]];   			
 	
+			// 하위 li 데이터 넣기
+	   		var inDataMake = function(i) {
+	   			return function() {
+				  for (var j=0; data.length>j; j++) {
+	   				var newLi = document.createElement('li');
+		   			var keys = document.createTextNode(data[j]);		   			
+	   				newLi.appendChild(keys);
+	   				inUl.appendChild(newLi);
+	   			  }
+				}(i);
+	   		};		
+	   		inDataMake(i);
+		};
+		
+       },
+       */
+       
+    };
+        
+    
+    window.onload=function() {
+    	addressBook.init();
+    }
 </script>
+
 </head>
 
 <body>
