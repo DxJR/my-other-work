@@ -62,7 +62,6 @@
 			contLayer.setAttribute('onclick','closeLayer();');
 			photoAniThumb.style.display='none';
 		}
-
 		photoAniThumb.style.display='inline';
 		photoAniThumb.className='mhpShowAni showCyPhoto';
 		setTimeout(showAni,500);
@@ -83,6 +82,26 @@
 		contLayer.style.display='none';
 		photoAniThumb.className='mhpShowAni closeCyPhoto';
 		setTimeout(closeAni,500);
+	}
+
+	function resizeW() {
+		var photoAniThumb = document.getElementById('mhpShowAni');
+		photoAniThumb.style.marginLeft=document.getElementById('cywPims').offsetLeft+'px';
+		var positionTop = Number(document.getElementById('cywPims').offsetTop+170);
+		var newStyle = document.createElement('style');
+		var newInit = newStyle.setAttribute('type','text/css');
+		var aniStyle = document.createTextNode('@-webkit-keyframes showCyPhoto {0% {top:'+positionTop+'px; left:95px; width:66px; height:66px;}} .closeCyPhoto {top:'+positionTop+'px;}');
+		newStyle.appendChild(aniStyle);
+		document.getElementsByTagName('head')[0].appendChild(newStyle);
+	}
+
+	window.onload = function() {
+		resizeW();
+	}
+
+
+	window.onresize = function() {
+		resizeW();
 	}
 //]]>
 </script>
@@ -781,7 +800,7 @@
 							</span>
 						</h3>
 					</div>
-					<div class="mhp-pic">
+					<div id="showObj" class="mhp-pic">
 						<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="760" border="0" alt="컴즈유엑스디센타파티" />
 					</div>
 					<!-- EXIF정보 / 원본보기 -->
@@ -832,7 +851,6 @@
 									<p>프로듀싱에 참여하여 역량을 과시했다. </p>
 									<p></p>
 								</span>
-								<button type="button" onclick="document.getElementById('mhpShowAni').className='mhpShowAni closeCyPhoto';">테스트</button>
 							</div>
 							<!-- 출처/공개설정 -->
 							<dl class="atc-detail-info">
@@ -1194,6 +1212,40 @@
 
 <div id="mhpShowAni" class="mhpShowAni" style="display:none;">
 	<img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" border="0" alt="컴즈유엑스디센타파티" />
+</div>
+
+
+<!-- 뮤직플레이어 -->
+<div id="cywMusic">
+	<div class="cywMusicIn">
+		<div class="cywMIsong">
+			<a href="#" class="cover"><img src="http://musicimg.cyworld.com/ALBUM/015/121/15121208.jpg" width="56" height="56" border="0" alt="AILEE : HEAVEN" /></a>
+			<ul>
+				<li class="title"><a href="#">Know Your Name (Feat. Dok2)</a></li>
+				<li><a href="#">박재범</a></li>
+				<li><a href="#">New Breed</a></li>
+			</ul>
+		</div>
+		<div class="cywMImarket">
+			<ul>
+				<li><a href="#" onclick="document.getElementById('cywDimd').style.backgroundColor='#f60';document.getElementById('cywDimd').style.opacity='0.5';">곡정보</a></li>
+				<li><a href="#" onclick="document.getElementById('cywDimd').style.backgroundColor='#000';document.getElementById('cywDimd').style.opacity='0.7';">구입+MP3</a></li>
+				<li><a href="#" onclick="document.getElementById('cywDimd').style.backgroundColor='#fff';document.getElementById('cywDimd').style.opacity='0';">담기</a></li>
+				<li class="break"><a href="#">소망상자</a></li>
+				<li><a href="#">링</a></li>
+				<li><a href="#">벨</a></li>
+			</ul>
+			<img src="images/bgm_p.gif" border="0" alt="" />
+		</div>
+		<div class="cywMIplaylist">
+			<select>
+				<option>이현국님 배경음악</option>
+				<option>김연아님 배경음악</option>
+				<option>아이유님 배경음악</option>
+				<option>장나라님 배경음악</option>
+			</select>
+		</div>
+	</div>
 </div>
 
 <div id="cywDimd"></div>

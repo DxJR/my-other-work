@@ -163,6 +163,23 @@
 				}
 			}
 		}
+
+		function objXY() {
+			var obj = document.getElementById('mhpwThumb');
+			var objHref = obj.getElementsByTagName('a');
+			var resultXY = [];
+			for (var i=0; objHref.length>i; i++)
+			{
+				objHref[i].onclick = function() {
+					resultXY = [];
+					objX = this.parentNode.offsetLeft;
+					objY = this.parentNode.offsetTop;
+					resultXY.push(objX, objY);
+					console.log(resultXY);
+				}
+			}
+			console.log(resultXY);
+		}
 	//]]>
 	</script>
 	<div id="mh-pa-content">
@@ -170,12 +187,13 @@
 		<div class="mhpw-thumb">
 			<ul id="mhpwThumb">
 				<li>
-					<a href="#fnc" onclick="parent.showLayer();console.log(this.innerHTML);"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a>
+					<!--<a href="#fnc" onclick="parent.showLayer();console.log(this.innerHTML);"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a>-->
+					<a href="#fnc" onclick="parent.showLayer();"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" id="imgtest"/></a>
 					<!-- 선택되었을 때 chk-this 추가 -->
 					<p class="chkIr chk-this" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p>
 				</li>
-				<li><a href="#fnc"><i class="swf" title="플래시 파일 입니다"><span>플래시</span></i><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
-				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
+				<li><a href="#fnc" onclick="console.log(offsetParent.offsetTop);"><i class="swf" title="플래시 파일 입니다"><span>플래시</span></i><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
+				<li><a href="#fnc" onclick="console.log(offsetParent.offsetTop);"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
@@ -190,7 +208,7 @@
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
-				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
+				<li onclick="console.log(this.offsetTop);"><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
 				<li><a href="#fnc"><img src="http://minihp-uidev.cyworld.com/img/pims/renew/temp/temp-ph.gif" width="66" height="66" border="0" alt="사진제목" title="사진제목" /></a> <p class="chkIr" title="사진선택"><i></i><input type="checkbox" title="사진선택" /></p></li>
