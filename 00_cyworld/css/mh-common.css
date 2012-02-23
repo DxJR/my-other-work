@@ -48,7 +48,7 @@ i.icn {position:relative; top:-1px; display:inline-block; text-indent:-9999em; f
 	#cywFoot {position:absolute; width:100%; bottom:8px; height:428px; background:url('http://c1img.cyworld.co.kr/img/pwin/pwin_back0.gif') left bottom repeat-x;}
 		.cyfMsg {width:439px; height:66px; margin:0 auto; background:url('http://c1img.cyworld.co.kr/img/main/notice02.gif') left top no-repeat;}
 
-#cywDimd {position:absolute; z-index:2; top:0; left:0; width:100%; height:100%; opacity:0.7; filter:Alpha(opacity=70); background-color:#fff;}
+#cywDimd {position:absolute; z-index:2; top:0; left:0; width:100%; height:100%; /*opacity:0.7; filter:Alpha(opacity=70); background-color:#fff;*/}
 
 
 /*#cywPimsAllWrap {}*/
@@ -83,10 +83,31 @@ i.icn {position:relative; top:-1px; display:inline-block; text-indent:-9999em; f
 
 
 
-@-webkit-keyframes showCyPhoto {0% {top:307px; left:281px; width:66px;}}
-@-webkit-keyframes closeCyPhoto {0% {top:143px; left:267px; width:760px;}}
+/*@-webkit-keyframes showCyPhoto {0% {top:167px; left:92px; width:66px; height:66px;}}*/
+@-webkit-keyframes closeCyPhoto {0% {top:142px; left:79px; width:760px;}}
 
 .mhpShowAni {z-index:9999; position:absolute; -webkit-animation-timing-function:ease-in-out; -webkit-animation-duration:0.5s;}
-	.mhpShowAni img {width:100%; height:100%;}
-.showCyPhoto {top:143px; left:267px; width:760px; -webkit-animation-name:showCyPhoto;}
-.closeCyPhoto {top:307px; left:281px; width:66px; -webkit-animation-name:closeCyPhoto;}
+	.mhpShowAni img {width:100%;}
+.showCyPhoto {top:142px; left:79px; width:760px; -webkit-animation-name:showCyPhoto;}
+.closeCyPhoto {left:92px; width:66px; height:66px; -webkit-animation-name:closeCyPhoto;}
+
+
+
+/* 뮤직플레이어 */
+#cywMusic {z-index:998; position:fixed; bottom:0; left:0; width:100%; height:60px;}
+	.cywMusicIn {position:relative; width:932px; height:60px; margin:0 auto; overflow:hidden; background:#3c4146;}
+	.cywMIsong {float:left; width:320px;}
+		.cywMIsong a.cover {float:left; border:2px solid #3c4146;}
+		.cywMIsong ul {float:left; margin:7px 0 0 8px;}
+			.cywMIsong ul li {clear:both; margin-top:1px;font-size:11px;}
+				.cywMIsong ul li a {color:#969ba0;}
+			.cywMIsong ul li.title {margin-bottom:5px; font-size:16px; font-weight:bold;}
+				.cywMIsong ul li.title a {color:#cdd2d7;}
+	.cywMImarket {float:left; margin:4px 0 0 5px;}
+		.cywMImarket ul {float:left;}
+			.cywMImarket li {float:left; margin:4px 0 0 5px;}
+				.cywMImarket li a {display:block; width:48px; height:20px; font-size:11px; color:#828c96; line-height:22px; letter-spacing:-1px; text-align:center; border:1px solid #c8cdd2; background:#fff;}
+			.cywMImarket li.break {clear:both;}
+		.cywMImarket img {float:left; margin:1px 0 0 10px;}
+	.cywMIplaylist {float:left; margin:12px 0 0 6px;}
+		.cywMIplaylist select {padding:7px; font-size:12px; color:#666;}
