@@ -7,37 +7,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="imagetoolbar" content="no" />
 <![endif]-->
-<link rel="stylesheet" href="" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_common.css" type="text/css" />
 <!--[if IE]><link rel="stylesheet" type="text/css" href="" media="all" /><![endif]-->
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
 <script type="text/javascript" src="../js/edtn_lib.js"></script>
-<style type="text/css">
-
-/* Select */
-.select {display:inline-block; *display:inline; position:relative; background:#fff; line-height:normal; vertical-align:middle; *zoom:1}
-.select * {margin:0; padding:0; font-size:12px; font-family:Tahoma, Sans-serif; cursor:pointer}
-.select .my_value {overflow:visible; position:relative; top:0; left:0; z-index:2; border:1px solid #bababa; background:transparent; color:#666; text-align:left; line-height:19px; _line-height:normal}
-.select .my_value.selected {font-weight:bold}
-.select.open .my_value, .select .my_value.outLine {border:1px solid #999}
-.select button.my_value {width:100%; height:21px; *padding-left:5px; text-indent:5px; *text-indent:0}
-.select div.my_value {height:19px; text-indent:8px}
-.select .ctrl {position:absolute; top:0; right:0; width:18px; height:19px; border:1px solid #bababa; border-left:1px solid #eaeaea; background:#fff}
-.select .arrow {position:absolute; width:0; height:0; top:9px; right:6px; border-top:3px solid #999; border-left:3px solid #fff; border-right:3px solid #fff; font-size:0; line-height:0}
-.select ul {overflow:hidden; position:absolute; top:20px; left:0; width:100%; border:0; border-top:1px solid #bababa; border-bottom:1px solid #bababa; background:#fff; list-style:none}
-.select ul.a_list {display:none}
-.select.open ul.a_list {display:block}
-.select ul.i_list {left:-2000%}
-.select.open ul.i_list {left:0}
-.select li {overflow:hidden; position:relative; height:18px; border-left:1px solid #bababa; border-right:1px solid #bababa; white-space:nowrap}
-.select li input.option {position:absolute; width:100%; height:20px; line-height:20px}
-.select li label {position:absolute; top:0; left:0; width:100%; height:18px; background:#fff; color:#767676; line-height:18px; text-indent:8px; *text-indent:6px}
-.select li a {display:block; height:18px; background:#fff; color:#767676; line-height:18px; text-indent:8px; *text-indent:6px; text-decoration:none}
-.select li.hover * {background:#999; color:#fff}
-.select_go {overflow:visible; height:21px; width:28px; *margin:-1px 0 -1px 4px; padding:0; border:1px solid #bababa; background:#eee; font:bold 11px Tahoma; color:#767676; line-height:19px; _line-height:normal; vertical-align:middle; cursor:pointer}
-</style>
 <script type="text/javascript">
 //<![CDATA[
-
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
 //]]>
 </script>
 </head>
@@ -45,72 +24,43 @@
 <body>
 
 
+<div style="padding:30px;">
+	<form class="jqtransform">
+		<select title="">
+			<option>family site</option>
+			<option>www.byheydey.com</option>
+			<option>www.studioheydey.com</option>
+		</select>
 
-<!-- UI Object -->
-<h1>Anchor :Drop Down Link</h1>
-<div class="select" style="width:200px;">
-	<span class="ctrl"><span class="arrow"></span></span>
-	<button type="button" class="my_value">Select Link</button>
-	<ul class="a_list">
-	<li class="hover"><a href="#1">Link_1</a></li>
-	<li class=""><a href="#2">Link_2</a></li>
-	<li class=""><a href="#3">Link_3</a></li>
-	</ul>
-</div>
-<div class="select" style="width:200px;">
-	<span class="ctrl"><span class="arrow"></span></span>
-	<button type="button" class="my_value">Select Link</button>
-	<ul class="a_list">
-	<li><a href="#1">Link_1</a></li>
-	<li><a href="#2">Link_2</a></li>
-	<li><a href="#3">Link_3</a></li>
-	</ul>
-</div>
-<br>
-<br>
-<br>
-<h1>Single Select Form :Radio Input(Emulate Select/Option)</h1>
-
-<div class="select" style="width:200px;">
-	<span class="ctrl"><span class="arrow"></span></span>
-	<div class="my_value">Select Option1</div>
-	<ul class="i_list">
-	<li><input name="c" id="c0" type="radio" checked="checked" class="option"><label for="c0">Select Option1</label></li>
-	<li><input name="c" id="c1" type="radio" value="" class="option"><label for="c1">Option_1</label></li>
-	<li><input name="c" id="c2" type="radio" value="" class="option"><label for="c2">Option_2</label></li>
-	<li><input name="c" id="c3" type="radio" value="" class="option"><label for="c3">Option_3</label></li>
-	</ul>
-</div>
-
-	<div class="select" style="width:200px;">
-		<span class="ctrl"><span class="arrow"></span></span>
-		<div class="my_value">Select Option2</div>
-		<ul class="i_list">
-		<li><input name="d" id="d0" type="radio" checked="checked" class="option"><label for="d0">Select Option2</label></li>
-		<li><input name="d" id="d1" type="radio" value="" class="option"><label for="d1">Option_1</label></li>
-		<li><input name="d" id="d2" type="radio" value="" class="option"><label for="d2">Option_2</label></li>
-		<li><input name="d" id="d3" type="radio" value="" class="option"><label for="d3">Option_3</label></li>
-		</ul>
+<br /><br /><br /><br />
+	<div class="jqtype2">
+		<select title="">
+			<option>이메일 사이트 선택</option>
+			<option>paran.com 가강강</option>
+			<option>gmail.com가갸거겨</option>
+			<option>naver.com</option>
+		</select>
 	</div>
-<button type="submit" class="select_go">GO</button>
-<br>
-<br>
-<br>
-<!-- //UI Object -->
 
-<script type="text/javascript">
-//<![CDATA[
+<br /><br /><br /><br />
 
-//]]>
-</script>
-<style type="text/css">
-	ul li {display:block; margin-bottom:10px; padding:10px; background:red;}
-	ul li.selected {background:blue;}
-</style>
-<ul>
-	<li onclick="this.childNodes[0].checked='true'; console.log(this.childNodes[0].checked); if(this.childNodes[0].checked=='true') {this.className='selected'; console.log('ok');} else {this.className=''; console.log('no');};"><input type="radio" name="test" id="ipradio01" /><label for="ipradio01">안녕?</label></li>
-	<li onclick="this.childNodes[0].checked='true'; if(this.childNodes[0].checked=='true') {this.className='selected';} else {this.className=''; console.log('no');};"><input type="radio" name="test" id="ipradio02" /><label for="ipradio02">asdasd안녕?</label></li>
-</ul>
+		<div style="clear:both; margin:30px">
+			<ul>
+				<li><input type="radio" name="de2" id="d32" class="radio" title="" checked="checked" /><label for="d32" style="font-family:ngEB; font-size:12px;">주문 고객 정보와 동일</label></li>
+				<li><input type="radio" name="de2" id="d33" class="radio" title="" /><label for="d33" style="font-family:ngEB; font-size:12px;">새로운 주소</label></li>
+			</ul>
+		</div>
+
+
+		<div style="clear:both; margin:30px">
+			<ul>
+				<li><input type="checkbox" id="chk002" title="" checked="checked" /><label for="chk002">asdasdads</label></li>
+				<li><input type="checkbox" id="chk003" title="" /><label for="chk003">asasdasasddasdas</label></li>
+			</ul>
+		</div>
+
+	</form>
+</div>
 
 </body>
 </html>
