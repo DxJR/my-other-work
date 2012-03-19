@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/* Font */
+@font-face {font-family:gpp; src:url('../font/GaramondPremrPro.eot'); src:local('☺'), url('../font/GaramondPremrPro.ttf') format('truetype')}
+@font-face {font-family:hnB; src:url('../font/HelveticaNeue-Bold.eot'); src:local('☺'), url('../font/HelveticaNeue-Bold.ttf') format('truetype')}
+@font-face {font-family:hnR; src:url('../font/HelveticaNeue-Roman.eot'); src:local('☺'), url('../font/HelveticaNeue-Roman.ttf') format('truetype')}
+@font-face {font-family:ng; src:url('../font/NanumGothic.eot'); src:local('☺'), url('../font/NanumGothic.ttf') format('truetype')}
+@font-face {font-family:ngB; src:url('../font/NanumGothicBold.eot'); src:local('☺'), url('../font/NanumGothicBold.ttf') format('truetype')}
+@font-face {font-family:ngEB; src:url('../font/NanumGothicExtraBold.eot'); src:local('☺'), url('../font/NanumGothicExtraBold.ttf') format('truetype')}
+@font-face {font-family:rB; src:url('../font/Replica-Bold.eot'); src:local('☺'), url('../font/Replica-Bold.ttf') format('truetype')}
+@font-face {font-family:rL; src:url('../font/Replica-Light.eot'); src:local('☺'), url('../font/Replica-Light.ttf') format('truetype')}
+@font-face {font-family:rR; src:url('../font/Replica-Regular.eot'); src:local('☺'), url('../font/Replica-Regular.ttf') format('truetype')}
+
+
+/* Default */
+html, body {width:100%; height:100%;}
+body {font-size:12px; color:#555; font-family:'돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#fff;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
+li {list-style:none;}
+img, fieldset {border:0;}
+hr {display:none;}
+em, i {font-style:normal;}
+a {cursor:pointer; text-decoration:none;}
+a:hover {text-decoration:none;}
+table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
+legend {position:absolute; top:0; left:0; display:inline;}
+button {cursor:pointer;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 arial;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+.ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em;_text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
+form {clear:both;}
+input, select {font-size:100%; vertical-align:middle;}
+input, textarea, select {font-size:12px;}
+button::-moz-focus-inner {border:0; padding:0;}
+textarea{overflow:auto}
+input:focus {outline:none;}
+input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
+.iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+/* float 해제 */
+.f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
+* html .f_clear {height:1px;}
+.f_clear {display: block;min-height:1px;}
+
+/* 버튼 */
+.gbtn {position:relative; display:inline-block; width:auto; margin:0; padding:0; line-height:1; border:0; overflow:visible; cursor:pointer; vertical-align:middle; white-space:nowrap; font-family:'Arial','Tahoma','Dotum','AppleGothic','sans-serif'; background-repeat:no-repeat; background-color:transparent;}
+.gbtn:hover {text-decoration:none;}
+.gbtn span {position:relative; display:inline-block;}
+    input.gbtn {text-indent:-9999em;}
+    span.gbtn {cursor:default;}
+
+/* form */
+form.jqtransformdone label{float:left; display:block; margin-top:3px;}
+form.jqtransformdone div.rowElem {clear:both; padding:4px 0px;}
+
+/* Radio */
+.jqTransformRadioWrapper {float:left; display:block; margin:5px 4px 0 4px;}
+.jqTransformRadio {display:block; width:12px; height:12px; margin-right:1px; vertical-align:middle; background:transparent url('../images/common/radio.gif') left top no-repeat;}
+
+/* Checkbox */
+span.jqTransformCheckboxWrapper {float:left; display:block; margin-top:5px;}
+a.jqTransformCheckbox {display:block; width:18px; height:19px; vertical-align:middle; background:transparent url('../images/common/checkbox.gif') center top no-repeat;}
+
+/* Checked - Used for both Radio and Checkbox */
+a.jqTransformChecked {background-position:left -20px;}
+
+/* Select */
+.jqTransformSelectWrapper {position:relative; float:left; width:45px; height:24px; background:url('../images/common/bg_select.gif') left top no-repeat;}
+	.jqTransformSelectWrapper div span {position:absolute; float:none; height:19px; padding:5px 0 0 5px; font-size:11px; color:#999; font-family:arial; white-space: nowrap; overflow:hidden; cursor:pointer;}
+	.jqTransformSelectWrapper a.jqTransformSelectOpen {position:absolute; right:0; display: block; width:17px; height:24px; background:url('../images/common/bg_select.gif') right top no-repeat;}
+	.jqTransformSelectWrapper ul {z-index:10; position:absolute; top:23px; left:0; display:none; width:43px; height:150px; margin:0; padding:0; border:solid 1px #e6e6e6; overflow:auto; overflow-y:auto; background-color:#fff;}
+	.jqTransformSelectWrapper ul a {display:block; height:16px; padding:4px 0 0 4px; font-size:11px; color:#999; font-family:arial; text-decoration:none; background-color: #fff;}
+	.jqTransformSelectWrapper ul a.selected, .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color:#999; background:#454545;}
+
+/* Select Type2 */
+.jqtype2 .jqTransformSelectWrapper {height:28px; background:url('../images/common/bg_select.gif') left -30px no-repeat;}
+	.jqtype2 .jqTransformSelectWrapper div span {height:20px; padding:8px 0 0 10px; font-size:12px; color:#333; font-family:'dotum','돋움';}
+	.jqtype2 a.jqTransformSelectOpen {width:17px; height:28px; background:url('../images/common/bg_select.gif') right -30px no-repeat;}
+	.jqtype2 ul {top:23px;}
+	.jqtype2 ul a {height:21px; padding:4px 0 0 9px; font-size:12px; color:#333;}
+	.jqtype2 ul a.selected, .jqtype2 ul a:hover, .jqtype2 ul a.selected:hover {color:#333; background:#dadada;}
+
+/* Hidden - used to hide the original form elements */
+.jqTransformHidden {display:none;}
+
+
+/*** Layout ***/
+#wrap {width:980px; margin:0 auto;}
+/* header */
+#header {z-index:2; position:relative; height:129px; padding-top:20px;}
+	/* gnb */
+	#gnb {position:relative; float:right; width:500px; margin-top:-48px;}
+		/* my favorite brand */
+		#select_favorite {float:left; display:inline; width:193px; padding-left:15px;}
+		/* gnb_btn */
+		.gnb_btn {float:left; display:inline; width:216px; margin-top:9px;}
+			.gnb_btn li {float:left; display:inline; width:86px; margin-left:22px; margin-bottom:8px;}
+		.gnb_login .gnb_btn {width:76px;}
+			.gnb_login .gnb_btn li {width:76px; margin-left:0;}
+		/* button */
+		.gnb_btn .gbtn {height:10px; overflow:hidden; background-image:url('../images/common/set_header.gif'); background-repeat:no-repeat; background-color:#fff;}
+		.gb_login {width:25px; background-position:left top;}
+		.gb_logout {width:35px; background-position:-30px top;}
+		.gb_signin {width:34px; background-position:-70px top;}
+		.gb_mypage {width:42px; background-position:-105px top;}
+		.gb_basket {width:34px; background-position:-150px top;}
+		.gb_press {width:35px; background-position:-315px top;}
+		.gb_order {width:36px; background-position:-185px top;}
+		.gb_review {width:35px; background-position:-355px top;}
+		.gb_faq {width:54px; background-position:-225px top;}
+		.gb_event {width:63px; background-position:-395px top;}
+		.gb_question {width:32px; background-position:-280px top;}
+	/* snb */
+	#snb {clear:both; float:left; width:100%; height:35px; margin-top:19px; border-top:1px solid #333; border-bottom:2px solid #333; background:#fff;}
+		.snb_btn {}
+			.snb_btn li {float:left; border-right:1px solid #333;}
+		/* button */
+		.snb_btn .gbtn {width:120px; height:35px; overflow:hidden; background-image:url('../images/common/set_header.gif'); background-repeat:no-repeat;}
+		.sb_furniture {background-position:left -10px;}
+		.sb_furniture:hover, .snb_btn li.this .sb_furniture {background-position:left -50px;}
+		.sb_tableware {background-position:-120px -10px;}
+		.sb_tableware:hover, .snb_btn li.this .sb_tableware {background-position:-120px -50px;}
+		.sb_stationary {background-position:-240px -10px;}
+		.sb_stationary:hover, .snb_btn li.this .sb_stationary {background-position:-240px -50px;}
+		.sb_fabric {background-position:-360px -10px;}
+		.sb_fabric:hover, .snb_btn li.this .sb_fabric {background-position:-360px -50px;}
+		.sb_lighting {background-position:-480px -10px;}
+		.sb_lighting:hover, .snb_btn li.this .sb_lighting {background-position:-480px -50px;}
+		/* sorting brand */
+		#sorting_brand {position:relative; float:right;}
+			.sb_brand {width:139px; height:35px; overflow:hidden; background:url('../images/common/set_header.gif') left -90px no-repeat;}
+			.sb_brand:hover, .lyr_open .sb_brand {background-position:-140px -90px;}
+			/* sorting brand layer */
+			.lyr_brand {position:absolute; top:35px; right:0; display:none; padding-top:1px; background:url('../images/common/bg_lyr_brand.gif') left top no-repeat;}
+				.lyr_brand li {clear:both; border-bottom:1px solid #4f4f4e;}
+					.lyr_brand li .gbtn {width:293px; height:37px; background-image:url('../images/common/set_brand-nav.gif'); background-repeat:no-repeat;}
+				.lyr_brand li.last {border-bottom:0;}
+				/* button */
+				.lb_almedhals {background-position:left top;}
+				.lb_almedhals:hover {background-position:-300px top;}
+				.lb_anneblack {background-position:left -38px;}
+				.lb_anneblack:hover {background-position:-300px -38px;}
+				.lb_byheydey {background-position:left -76px;}
+				.lb_byheydey:hover {background-position:-300px -76px;}
+				.lb_danskvintage {background-position:left -114px;}
+				.lb_danskvintage:hover {background-position:-300px -114px;}
+				.lb_guss {background-position:left -152px;}
+				.lb_guss:hover {background-position:-300px -152px;}
+				.lb_montana {background-position:left -190px;}
+				.lb_montana:hover {background-position:-300px -190px;}
+				.lb_saitowood {background-position:left -228px;}
+				.lb_saitowood:hover {background-position:-300px -228px;}
+				.lb_sceltevie {background-position:left -266px;}
+				.lb_sceltevie:hover {background-position:-300px -266px;}
+			/* layer open */
+			.lyr_open .lyr_brand {display:inline;}
+/* contentwrap */
+#contentwrap {z-index:1; position:relative; clear:both; margin-top:30px;}
+/* footer */
+#footer {clear:both; height:149px;}
