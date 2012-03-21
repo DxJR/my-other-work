@@ -151,8 +151,6 @@ a.jqTransformChecked {background-position:left -20px;}
 				.lb_saitowood:hover {background-position:-300px -228px;}
 				.lb_sceltevie {background-position:left -266px;}
 				.lb_sceltevie:hover {background-position:-300px -266px;}
-			/* layer open */
-			.lyr_open .lyr_brand {display:inline;}
 /* contentwrap */
 #contentwrap {z-index:1; position:relative; clear:both; margin-top:30px;}
 /* footer */

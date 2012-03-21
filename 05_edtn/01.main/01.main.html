@@ -16,7 +16,21 @@
 <script type="text/javascript">
 //<![CDATA[
 	$(function() {
+		// select / input
 		$("form.jqtransform").jqTransform();
+		// toggle Brand
+		var brandTimer = null;
+		$("#sorting_brand").mouseover(function(){
+			$(this).addClass('lyr_open');
+			if (brandTimer) {
+				clearTimeout(brandTimer);
+			}
+			$('#lyr_head_brand').show(250);
+		});
+		$("#sorting_brand").mouseout(function(){
+			$(this).removeClass('lyr_open');
+			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+		});
 	});
 //]]>
 </script>
@@ -50,7 +64,7 @@
 				</div>
 				<ul class="gnb_btn">
 					<li><a href="#" class="gbtn gb_login"><span class="ir">로그인</span></a></li>
-<!--					<li><a href="#" class="gbtn gb_logout"><span class="ir">로그아웃</span></a></li> -->
+					<!--<li><a href="#" class="gbtn gb_logout"><span class="ir">로그아웃</span></a></li> -->
 					<li><a href="#" class="gbtn gb_signin"><span class="ir">회원가입</span></a></li>
 					<li><a href="#" class="gbtn gb_mypage"><span class="ir">마이페이지</span></a></li>
 				</ul>
@@ -78,7 +92,7 @@
 			<div id="sorting_brand">
 				<a href="#" class="gbtn sb_brand"><span class="ir">Sorting Brand</span></a>
 				<!-- sorting brand layer -->
-				<div class="lyr_brand">
+				<div id="lyr_head_brand" class="lyr_brand">
 					<ul>
 						<li><a href="#" class="gbtn lb_almedhals"><span class="ir"><strong>Almedhals</strong> : furniture, Denmark</span></a></li>
 						<li><a href="#" class="gbtn lb_anneblack"><span class="ir"><strong>Anne Black</strong> : tableware, Denmark</span></a></li>
