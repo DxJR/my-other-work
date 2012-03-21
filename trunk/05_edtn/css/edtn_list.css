@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* 제품 style */
+.p_photo {font:0/0 arial;}
+.p_desc {margin-top:6px; font-family:arial; font-size:11px; color:#999; line-height:18px;}
+p.p_tit a {color:#000;}
+p.p_txt a {color:#999;}
+p.p_sale span {text-decoration:line-through;}
+p.p_sale strong {display:block; color:#ed1100;}
+
+/* 더보기 */
+.prod_b_more {clear:both; padding-top:1px;}
+	.prod_b_more a {height:31px; padding-top:12px; font-size:16px; text-align:center;}
+		.prod_b_more a img {top:-2px; position:relative; margin-right:6px; vertical-align:middle;}
+
+/* 로케이션 */
+.p_to_up {margin-top:3px; text-indent:-5px; font-family:arial; font-weight:normal; font-size:11px; color:#999;}
+	.p_to_up a, .p_to_up span {margin:0 3px; color:#999;}
+
+/* 제품목록 */
+.d_prod_list {clear:both;}
+	.prod_list {margin-top:7px;}
+		.prod_list ul li {float:left; display:inline; width:190px; height:284px; margin-right:2px;}
+		.prod_list ul li.lb {margin-right:0;}
+
+/* 브랜드 메인이미지*/
+.d_ban {clear:both; margin-bottom:40px; font:0/0 arial;}
+
+/* 제품상세 */
+.d_prod_view_top {margin-top:4px;}
+	.d_prod_view_top .p_photo {float:left; width:300px; height:300px; font:0/0 arial;}
+	.d_prod_view_top .p_desc {float:left; width:466px; margin-top:0;}
+	.d_prod_view_top .p_exs {height:36px; padding-top:17px; padding-left:20px;}
+		.d_prod_view_top .p_tit {font-family:rB; font-size:24px; color:#333; border-top:1px solid #d9d9d9;}
+		.d_prod_view_top .p_brand {font-family:rL; font-size:24px; color:#333; border-top:1px solid #d9d9d9;}
+			.d_prod_view_top .p_brand em {}
+			.d_prod_view_top .p_brand .b_gobrandshop {top:-1px; position:relative; vertical-align:middle;}
+			.d_prod_view_top .p_brand .from {float:right; width:194px;}
+		.d_prod_view_top .p_price {font-family:rL; font-size:24px; color:#333; border-top:1px solid #d9d9d9;}
+		.d_prod_view_top .p_descript {padding:14px 0 0 20px; font-family:arial; font-size:11px; color:#999; line-height:20px; border-top:1px solid #d9d9d9;}
+			.d_prod_view_top .p_descript .desc {float:left; width:240px;}
+			.d_prod_view_top .p_descript .sns {float:left; display:inline; width:194px; margin-left:12px;}
+				.d_prod_view_top .p_descript .sns .b_facebook {margin-top:6px;}
+		.d_prod_view_top .p_btn {clear:both; padding:24px 0 0 20px;}
+			.d_prod_view_top .p_btn * {float:left;}
+			.d_prod_view_top .p_btn .pb_r {float:right;}
+				.d_prod_view_top .p_btn .pb_r * {margin-left:2px;}

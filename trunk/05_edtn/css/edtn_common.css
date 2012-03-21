@@ -36,6 +36,7 @@ textarea{overflow:auto}
 input:focus {outline:none;}
 input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
 .iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+i.won {text-decoration:line-through;}
 /* float 해제 */
 .f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
 * html .f_clear {height:1px;}
@@ -47,6 +48,17 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 .gbtn span {position:relative; display:inline-block;}
     input.gbtn {text-indent:-9999em;}
     span.gbtn {cursor:default;}
+.b_s_b4d {display:block; font-family:ngEB; color:#999; background:#333;}
+.b_s_b4d:hover {background:#4d4d4d;}
+.b_s_cw {display:block; color:#333; border-top:1px solid #333; border-bottom:1px solid #333; background:#fff;}
+.b_s_cw:hover {background:url('../images/common/bg_btn_s_cw.gif') repeat;}
+.b_facebook {width:47px; height:24px; overflow:hidden; background:url('../images/common/set_button.gif') left -20px no-repeat;}
+.b_facebook:hover {background-position:-50px -20px;}
+.b_gobrandshop {width:90px; height:19px; overflow:hidden; background:url('../images/common/set_button.gif') left top no-repeat;}
+.b_gobrandshop:hover {background-position:-95px top;}
+.b_buy {display:block; width:130px; height:35px; padding-top:15px; font-family:rB; font-size:24px; color:#fff; text-align:center; background:#333;}
+.b_buy:hover {background:#4d4d4d;}
+.b_cart, .b_wish {width:96px; height:34px; padding-top:14px; font-family:rB; font-size:24px;}
 
 /* form */
 form.jqtransformdone label{float:left; display:block; margin-top:3px;}
@@ -90,7 +102,7 @@ a.jqTransformChecked {background-position:left -20px;}
 	/* gnb */
 	#gnb {position:relative; float:right; width:500px; margin-top:-48px;}
 		/* my favorite brand */
-		#select_favorite {float:left; display:inline; width:193px; padding-left:15px;}
+		#select_favorite {float:left; display:inline; width:193px; height:30px; padding-left:15px;}
 		/* gnb_btn */
 		.gnb_btn {float:left; display:inline; width:216px; margin-top:9px;}
 			.gnb_btn li {float:left; display:inline; width:86px; margin-left:22px; margin-bottom:8px;}
@@ -110,7 +122,7 @@ a.jqTransformChecked {background-position:left -20px;}
 		.gb_event {width:63px; background-position:-395px top;}
 		.gb_question {width:32px; background-position:-280px top;}
 	/* snb */
-	#snb {clear:both; float:left; width:100%; height:35px; margin-top:19px; border-top:1px solid #333; border-bottom:2px solid #333; background:#fff;}
+	#h_snb {clear:both; float:left; width:100%; height:35px; margin-top:19px; border-top:1px solid #333; border-bottom:2px solid #333; background:#fff;}
 		.snb_btn {}
 			.snb_btn li {float:left; border-right:1px solid #333;}
 		/* button */
@@ -153,5 +165,43 @@ a.jqTransformChecked {background-position:left -20px;}
 				.lb_sceltevie:hover {background-position:-300px -266px;}
 /* contentwrap */
 #contentwrap {z-index:1; position:relative; clear:both; margin-top:30px;}
+	/* snb */
+	#snb {float:left; width:184px;}
+		#snb h2 {margin-top:-3px; padding-bottom:7px; font-family:rB; font-size:16px; color:#333; border-bottom:1px solid #343434;}
+		#snb ul {}
+			#snb ul li {border-top:1px solid #d9d9d9;}
+			#snb ul li.first {border-top:0;}
+				#snb ul li a {display:block; padding:7px 0 8px 0; font-family:rR; font-size:14px; color:#999;}
+				#snb ul li a:hover, #snb ul li a.this {color:#333;}
+		/* brand */
+		#snb .brand .b_tit {display:block; margin-bottom:11px; font:0/0 arial;}
+			#snb .brand h2 {font-family:ngEB; font-size:13px; color:#999;}
+			#snb .brand h2.this {color:#333;}
+		/* mypage / help desk */
+		#snb .snb_k ul li a {font-family:ngEB; font-size:13px;}
+	#content {float:left; display:inline; width:766px; margin-left:30px;}
 /* footer */
-#footer {clear:both; height:149px;}
+#footer {position:relative; clear:both; height:140px; padding-top:40px;}
+	.f_heydey_link {float:left; display:inline;}
+		.f_heydey_link ul li {float:left; display:inline; margin-top:18px; margin-right:10px; padding-left:11px; background:url('../images/common/ico_bar_foot.gif') left 1px no-repeat;}
+		.f_heydey_link ul li.first {padding-left:1px; background:none;}
+			.f_heydey_link ul li a.gbtn {height:8px; overflow:hidden; background-image:url('../images/common/set_footer.gif'); background-repeat:no-repeat;}
+			.f_heydey_link ul li a.fb_company {width:31px; background-position:left top;}
+			.f_heydey_link ul li a.fb_job {width:31px; background-position:-35px top;}
+			.f_heydey_link ul li a.fb_policy {width:31px; background-position:-70px top;}
+			.f_heydey_link ul li a.fb_personalinfo {width:62px; background-position:-105px top;}
+			.f_heydey_link ul li a.fb_cooperate {width:33px; background-position:-170px top;}
+			.f_heydey_link ul li a.fb_cooperate_info {width:70px; background-position:-205px top;}
+	.f_settlement {float:right; padding-right:11px;}
+		.f_settlement li {float:left; display:inline; margin-left:19px;}
+			.f_settlement li.first {margin-top:7px;}
+			.f_settlement li a.fb_sgic {width:66px; height:18px; overflow:hidden; background:url('../images/common/set_footer.gif') left -10px no-repeat;}
+			.f_settlement li a.fb_kcp {width:35px; height:28px; overflow:hidden; background:url('../images/common/set_footer.gif') -70px -10px no-repeat;}
+	.f_devide {clear:both; float:left; width:100%; margin-top:7px; padding-top:9px; border-top:1px solid #e5e5e5;}
+		.f_devide address {position:relative; float:left;}
+			.f_devide address p {clear:both; float:left; overflow:hidden; background-image:url('../images/common/set_footer.gif'); background-repeat:no-repeat;}
+			.f_devide address p.f_addr {position:relative; width:491px; height:10px; background-position:left -40px;}
+				.f_devide address p.f_addr a {z-index:3; position:absolute; top:1px; right:0; display:block; width:94px; height:9px; text-indent:-9999em; overflow:hidden; background:url('../images/common/set_footer.gif') -397px -41px no-repeat;}
+			.f_devide address p.f_si {width:381px; height:8px; margin-top:6px; background-position:left -55px;}
+			.f_devide address p.f_copy {width:264px; height:4px; margin-top:10px; background-position:-110px -10px;}
+		.f_devide .familysite {float:right; display:inline; margin:1px 10px 0 0;}
