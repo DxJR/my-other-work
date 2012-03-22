@@ -463,7 +463,51 @@
 					</div>
 					<!-- 상품평 작성 -->
 					<div class="clear"></div>
-					<div class="write_review" id="id_write_view" style="display:none;">
+					<div class="write_review" id="id_write_view">
+						<h6 class="hide">상품평 쓰기</h6>
+						<div class="box_lgray">
+							<dl>
+								<dt>이름</dt>
+								<dd class="name"><p class="dd_txt">공혜리</p></dd>
+								<dt class="grade">평점</dt>
+								<dd class="grade">
+									<form class="jqtransform">
+										<div class="jqtype2">
+											<select title="">
+												<option>★★★★★</option>
+												<option>★★★★</option>
+												<option>★★★</option>
+												<option>★★</option>
+												<option>★</option>
+											</select>
+										</div>
+									</form>
+								</dd>
+								<dt>제목</dt>
+								<dd class="input"><input type="text" style="width:330px;" title="제목"></dd>
+								<dt class="content">내용</dt>
+								<dd class="content"><textarea></textarea></dd>
+							</dl>
+							<!-- btn -->
+							<div class="btn">
+								<a href="#" class="b_s_b4d b_wr_ok">상품평 쓰기 완료</a>
+								<a href="#" class="b_s_cw b_wr_cancel">상품평 쓰기 취소</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!-- 상품평없음 / 상품평 없을 때 dpr_temp 추가 -->
+				<div class="d_prod_review dpr_temp">
+					<h5>상품평</h5>
+					<p class="review_temp"><em>등록된 상품리뷰가 없습니다.</em></p>
+					<!-- btn -->
+					<div class="btnr">
+						<a href="#" onclick="close_layer('id_write_view'); return false;" class="b_w_review">상품평 쓰기</a>
+					</div>
+					<!-- 상품평 작성 -->
+					<div class="clear"></div>
+					<div class="write_review" id="id_write_view">
 						<h6 class="hide">상품평 쓰기</h6>
 						<div class="box_lgray">
 							<dl>
