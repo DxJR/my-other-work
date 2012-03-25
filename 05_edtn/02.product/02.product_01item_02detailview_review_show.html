@@ -8,7 +8,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <![endif]-->
 <link rel="stylesheet" href="../css/edtn_common.css" type="text/css" />
-<link rel="stylesheet" href="../css/edtn_list.css" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_product.css" type="text/css" />
 <!--[if IE]><link rel="stylesheet" type="text/css" href="" media="all" /><![endif]-->
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
@@ -372,7 +372,7 @@
 										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
 									</td>
 								</tr>
-								<tr class="ques" id="id_ques08" onclick="review('8'); this.scrollIntoView(); return false;">
+								<tr class="ques ques_bfr" id="id_ques08" onclick="review('8'); this.scrollIntoView(); return false;">
 									<td class="cell_no">5</td>
 									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
 									<td class="cell_star">★★★★★</td>
@@ -393,14 +393,14 @@
 										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
 									</td>
 								</tr>
-								<tr class="ques" id="id_ques09" onclick="review('9'); this.scrollIntoView(); return false;">
+								<tr class="ques_none" id="id_ques09" onclick="review('9'); this.scrollIntoView(); return false;">
 									<td class="cell_no">5</td>
 									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
 									<td class="cell_star">★★★★★</td>
 									<td class="cell_name">노동균</td>
 									<td class="cell_date">2009.05.05</td>
 								</tr>
-								<tr class="ans_none" id="id_ans09">
+								<tr class="ans" id="id_ans09">
 									<td colspan="5" class="ans_td">
 										<p class="p_txt">
 											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
@@ -463,7 +463,7 @@
 					</div>
 					<!-- 상품평 작성 -->
 					<div class="clear"></div>
-					<div class="write_review" id="id_write_view" style="display:inline;">
+					<div class="write_review" id="id_write_view" style="display:none;">
 						<h6 class="hide">상품평 쓰기</h6>
 						<div class="box_lgray">
 							<dl>
@@ -523,12 +523,12 @@
 		</div>
 
 		<div class="f_devide">
-			<address>
+			<div class="address">
 				<h2 class="hide">Heydey 사이트정보</h2>
 				<p class="f_addr"><span class="ir">(주)스튜디오헤이데이. 서울특별시 마포구 상수동 324-12 고객센터 1599 7193 팩스 02 334 5517 이메일</span> <a href="mailto:info@objectheydey.com"><span class="ir">info@objectheydey.com</span></a></p>
 				<p class="f_si"><span class="ir">사업자등록번호 105-87-18086 통신판매업신고 마포 1249호 개인정보취급책임자 오명아 대표 노환탁</span></p>
 				<p class="f_copy"><span class="ir">copyright 2012 studio heydey, inc. all rights reserved.</span></p>
-			</address>
+			</div>
 			<div class="familysite">
 				<form class="jqtransform">
 					<select title="family site">
