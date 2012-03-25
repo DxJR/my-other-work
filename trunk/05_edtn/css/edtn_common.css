@@ -13,7 +13,7 @@
 
 
 /* Default */
-html, body {width:100%; height:100%;}
+html, body {width:100%; height:100%;_overflow-x:hidden;}
 body {font-size:12px; color:#555; font-family:'돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#fff;}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
 li {list-style:none;}
@@ -35,7 +35,6 @@ button::-moz-focus-inner {border:0; padding:0;}
 textarea{overflow:auto}
 input:focus {outline:none;}
 input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
-.iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
 i.won {text-decoration:line-through;}
 /* float 해제 */
 .f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
@@ -48,7 +47,7 @@ i.won {text-decoration:line-through;}
 .gbtn span {position:relative; display:inline-block;}
     input.gbtn {text-indent:-9999em;}
     span.gbtn {cursor:default;}
-.b_s_b4d {display:block; font-family:ngEB; color:#999; background:#333;}
+.b_s_b4d {display:inline-block; font-family:ngEB; color:#999; vertical-align:middle; background:#333;}
 .b_s_b4d:hover {background:#4d4d4d;}
 .b_s_cw {display:block; color:#333; border-top:1px solid #333; border-bottom:1px solid #333; background:#fff;}
 .b_s_cw:hover {background:url('../images/common/bg_btn_s_cw.gif') repeat;}
@@ -61,11 +60,11 @@ i.won {text-decoration:line-through;}
 .b_cart, .b_wish {width:96px; height:34px; padding-top:14px; font-family:rB; font-size:24px;}
 
 /* form */
-form.jqtransformdone label{float:left; display:block; margin-top:3px;}
+form.jqtransformdone label{float:left; font-family:ngEB; font-size:12px;}
 form.jqtransformdone div.rowElem {clear:both; padding:4px 0px;}
 
 /* Radio */
-.jqTransformRadioWrapper {float:left; display:block; margin:5px 4px 0 4px;}
+.jqTransformRadioWrapper {float:left; margin:2px 4px 0 0;}
 .jqTransformRadio {display:block; width:12px; height:12px; margin-right:1px; vertical-align:middle; background:transparent url('../images/common/radio.gif') left top no-repeat;}
 
 /* Checkbox */
@@ -122,11 +121,11 @@ a.jqTransformChecked {background-position:left -20px;}
 		.gb_event {width:63px; background-position:-395px top;}
 		.gb_question {width:32px; background-position:-280px top;}
 	/* snb */
-	#h_snb {clear:both; float:left; width:100%; height:35px; margin-top:19px; border-top:1px solid #333; border-bottom:2px solid #333; background:#fff;}
+	#h_snb {clear:both; float:left; width:100%; height:35px; margin-top:19px;.margin-top:65px; border-top:1px solid #333; border-bottom:2px solid #333; background:#fff;}
 		.snb_btn {}
 			.snb_btn li {float:left; border-right:1px solid #333;}
 		/* button */
-		.snb_btn .gbtn {width:120px; height:35px; overflow:hidden; background-image:url('../images/common/set_header.gif'); background-repeat:no-repeat;}
+		.snb_btn .gbtn {float:left; width:120px; height:35px; overflow:hidden; background-image:url('../images/common/set_header.gif'); background-repeat:no-repeat;}
 		.sb_furniture {background-position:left -10px;}
 		.sb_furniture:hover, .snb_btn li.this .sb_furniture {background-position:left -50px;}
 		.sb_tableware {background-position:-120px -10px;}
@@ -139,12 +138,12 @@ a.jqTransformChecked {background-position:left -20px;}
 		.sb_lighting:hover, .snb_btn li.this .sb_lighting {background-position:-480px -50px;}
 		/* sorting brand */
 		#sorting_brand {position:relative; float:right;}
-			.sb_brand {width:139px; height:35px; overflow:hidden; background:url('../images/common/set_header.gif') left -90px no-repeat;}
+			.sb_brand {float:left; width:139px; height:35px; overflow:hidden; background:url('../images/common/set_header.gif') left -90px no-repeat;}
 			.sb_brand:hover, .lyr_open .sb_brand {background-position:-140px -90px;}
 			/* sorting brand layer */
-			.lyr_brand {position:absolute; top:35px; right:0; display:none; padding-top:1px; background:url('../images/common/bg_lyr_brand.gif') left top no-repeat;}
-				.lyr_brand li {clear:both; border-bottom:1px solid #4f4f4e;}
-					.lyr_brand li .gbtn {width:293px; height:37px; background-image:url('../images/common/set_brand-nav.gif'); background-repeat:no-repeat;}
+			.lyr_brand {position:absolute; top:35px; right:0;_right:-1px; display:none; padding-top:1px; background:url('../images/common/bg_lyr_brand.gif') left top no-repeat;}
+				.lyr_brand li {clear:both; float:left; border-bottom:1px solid #4f4f4e;}
+					.lyr_brand li .gbtn {float:left; width:293px; height:37px; background-image:url('../images/common/set_brand-nav.gif'); background-repeat:no-repeat;}
 				.lyr_brand li.last {border-bottom:0;}
 				/* button */
 				.lb_almedhals {background-position:left top;}
@@ -164,14 +163,14 @@ a.jqTransformChecked {background-position:left -20px;}
 				.lb_sceltevie {background-position:left -266px;}
 				.lb_sceltevie:hover {background-position:-300px -266px;}
 /* contentwrap */
-#contentwrap {z-index:1; position:relative; clear:both; margin-top:30px;}
+#contentwrap {clear:both; margin-top:30px;.margin-top:48px;_margin-top:30px;}
 	/* snb */
 	#snb {float:left; width:184px;}
 		#snb h2 {margin-top:-3px; padding-bottom:7px; font-family:rB; font-size:16px; color:#333; border-bottom:1px solid #343434;}
 		#snb ul {}
-			#snb ul li {border-top:1px solid #d9d9d9;}
+			#snb ul li {clear:both; _float:left; _width:100%; border-top:1px solid #d9d9d9;}
 			#snb ul li.first {border-top:0;}
-				#snb ul li a {display:block; padding:7px 0 8px 0; font-family:rR; font-size:14px; color:#999;}
+				#snb ul li a {display:block;_float:left; _width:100%; padding:7px 0 8px 0; font-family:rR; font-size:14px; color:#999; white-space:nowrap;}
 				#snb ul li a:hover, #snb ul li a.this {color:#333;}
 		/* brand */
 		#snb .brand .b_tit {display:block; margin-bottom:11px; font:0/0 arial;}
@@ -179,7 +178,7 @@ a.jqTransformChecked {background-position:left -20px;}
 			#snb .brand h2.this {color:#333;}
 		/* mypage / help desk */
 		#snb .snb_k ul li a {font-family:ngEB; font-size:13px;}
-	#content {float:left; display:inline; width:766px; margin-left:30px;}
+	#content {float:left; display:inline; width:766px; padding-left:30px;}
 /* footer */
 #footer {position:relative; clear:both; height:140px; padding-top:40px;}
 	.f_heydey_link {float:left; display:inline;}
@@ -198,10 +197,10 @@ a.jqTransformChecked {background-position:left -20px;}
 			.f_settlement li a.fb_sgic {width:66px; height:18px; overflow:hidden; background:url('../images/common/set_footer.gif') left -10px no-repeat;}
 			.f_settlement li a.fb_kcp {width:35px; height:28px; overflow:hidden; background:url('../images/common/set_footer.gif') -70px -10px no-repeat;}
 	.f_devide {clear:both; float:left; width:100%; margin-top:7px; padding-top:9px; border-top:1px solid #e5e5e5;}
-		.f_devide address {position:relative; float:left;}
-			.f_devide address p {clear:both; float:left; overflow:hidden; background-image:url('../images/common/set_footer.gif'); background-repeat:no-repeat;}
-			.f_devide address p.f_addr {position:relative; width:491px; height:10px; background-position:left -40px;}
-				.f_devide address p.f_addr a {z-index:3; position:absolute; top:1px; right:0; display:block; width:94px; height:9px; text-indent:-9999em; overflow:hidden; background:url('../images/common/set_footer.gif') -397px -41px no-repeat;}
-			.f_devide address p.f_si {width:381px; height:8px; margin-top:6px; background-position:left -55px;}
-			.f_devide address p.f_copy {width:264px; height:4px; margin-top:10px; background-position:-110px -10px;}
+		.f_devide .address {position:relative; float:left;}
+			.f_devide .address p {clear:both; float:left; overflow:hidden; background-image:url('../images/common/set_footer.gif'); background-repeat:no-repeat;}
+			.f_devide .address p.f_addr {position:relative; width:491px; height:10px; background-position:left -40px;}
+				.f_devide .address p.f_addr a {z-index:3; position:absolute; top:1px; right:0; display:block; width:94px; height:9px; text-indent:-9999em; overflow:hidden; background:url('../images/common/set_footer.gif') -397px -41px no-repeat;}
+			.f_devide .address p.f_si {width:381px; height:8px; margin-top:6px; background-position:left -55px;}
+			.f_devide .address p.f_copy {width:264px; height:4px; margin-top:10px; background-position:-110px -10px;}
 		.f_devide .familysite {float:right; display:inline; margin:1px 10px 0 0;}

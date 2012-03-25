@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>edtn:</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/edtn_common.css" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_product.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/edtn_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		// select / input
+		$("form.jqtransform").jqTransform();
+		// toggle Brand
+		var brandTimer = null;
+		$("#sorting_brand").mouseover(function(){
+			$(this).addClass('lyr_open');
+			if (brandTimer) {
+				clearTimeout(brandTimer);
+			}
+			$('#lyr_head_brand').show(250);
+		});
+		$("#sorting_brand").mouseout(function(){
+			$(this).removeClass('lyr_open');
+			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+		});
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- logo -->
+		<h1>
+			<img src="../images/common/bi_objectheydey.gif" width="176" height="39" alt="Object Heydey : Heydey Private Collection" usemap="#heydeyBi" />
+			<map id="heydeyBi" name="heydeyBi">
+				<area shape="rect" coords="0,0,176,39" alt="OBJECT HEYDEY" href="#" />
+			</map>
+		</h1>
+		<!-- GNB -->
+		<div id="gnb">
+			<!-- login area -->
+			<div class="gnb_login">
+				<!-- my favorite brand -->
+				<div id="select_favorite">
+					<form class="jqtransform">
+						<select title="my favorite brand">
+							<option>my favorite brand</option>
+							<option>www.byheydey.com</option>
+							<option>www.studioheydey.com</option>
+						</select>
+					</form>
+				</div>
+				<ul class="gnb_btn">
+					<li><a href="#" class="gbtn gb_logout"><span class="ir">로그아웃</span></a></li>
+					<li><a href="#" class="gbtn gb_mypage"><span class="ir">마이페이지</span></a></li>
+				</ul>
+			</div>
+			<ul class="gnb_btn">
+				<li><a href="#" class="gbtn gb_basket"><span class="ir">장바구니</span></a></li>
+				<li><a href="#" class="gbtn gb_press"><span class="ir">보도자료</span></a></li>
+				<li><a href="#" class="gbtn gb_order"><span class="ir">주문 내역</span></a></li>
+				<li><a href="#" class="gbtn gb_review"><span class="ir">제품리뷰</span></a></li>
+				<li><a href="#" class="gbtn gb_faq"><span class="ir">자주묻는 질문</span></a></li>
+				<li><a href="#" class="gbtn gb_event"><span class="ir">진행중인 이벤트</span></a></li>
+				<li><a href="#" class="gbtn gb_question"><span class="ir">1:1 문의</span></a></li>
+			</ul>
+		</div>
+		<!-- HEAD SNB -->
+		<div id="h_snb">
+			<ul class="snb_btn">
+				<li><a href="#" class="gbtn sb_furniture"><span class="ir">Furniture</span></a></li>
+				<li><a href="#" class="gbtn sb_tableware"><span class="ir">Tableware</span></a></li>
+				<li><a href="#" class="gbtn sb_stationary"><span class="ir">Stationary</span></a></li>
+				<li><a href="#" class="gbtn sb_fabric"><span class="ir">Fabric</span></a></li>
+				<li><a href="#" class="gbtn sb_lighting"><span class="ir">Lighting</span></a></li>
+			</ul>
+			<!-- sorting brand -->
+			<div id="sorting_brand">
+				<a href="#" class="gbtn sb_brand"><span class="ir">Sorting Brand</span></a>
+				<!-- sorting brand layer -->
+				<div id="lyr_head_brand" class="lyr_brand">
+					<ul>
+						<li><a href="#" class="gbtn lb_almedhals"><span class="ir"><strong>Almedhals</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_anneblack"><span class="ir"><strong>Anne Black</strong> : tableware, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_byheydey"><span class="ir"><strong>Byheydey</strong> : furniture, Korea</span></a></li>
+						<li><a href="#" class="gbtn lb_danskvintage"><span class="ir"><strong>Dansk Vintage</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_guss"><span class="ir"><strong>Guss</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_montana"><span class="ir"><strong>Montana</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_saitowood"><span class="ir"><strong>Saito Wood</strong> : stationary, Japan</span></a></li>
+						<li class="last"><a href="#" class="gbtn lb_sceltevie"><span class="ir"><strong>Sceltevie</strong> : stationary, Japan</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- contentwrap // 쇼핑카트일 때 class="s_cart" -->
+	<div id="contentwrap" class="s_cart">
+		<!-- snb -->
+		<div id="snb">
+			<div class="shoping_cart_left">
+				<h2>주문서 작성</h2>
+				<p>고객님의 주문 정보를 <span>입력해 주세요.</span></p>
+				<ol>
+					<li>STEP 1 <em>장바구니</em></li>
+					<!-- 현재 선택일 때 class="this" -->
+					<li class="this">STEP 2 <em>주문서 작성 및 결제</em></li>
+					<li>STEP 3 <em>주문 완료</em></li>
+				</ol>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<p class="s_cart2_explain">
+				주문하시고자 하는 상품의 정보를 다시 한번 확인하시고
+				<span>주문정보를 정확히 입력해 주세요.</span>
+			</p>
+			<div class="d_content">
+				<!-- board_list -->
+				<div class="shopping_cart sc_step2_tbl">
+					<h3 class="hide">주문정보</h3>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<thead>
+							<tr>
+								<th class="sct_title">상품명</th>
+								<th class="sct_option">옵션</th>
+								<th class="sct_amount">수량</th>
+								<th class="sct_point">적립포인트</th>
+								<th class="sct_price">주문금액</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- loop // 첫번째 줄일 때 tr class="first" -->
+							<tr class="first">
+								<td class="sct_title">
+									<div class="sct_tit_in">
+										<p class="p_tit"><a href="#">Jardin de Chouette</a></p>
+										<p class="p_txt">Style Book Lovely Ruffle Ops</p>
+									</div>
+								</td>
+								<td class="sct_option">
+									<p class="p_etc">size: free<br />color: violet</p>
+								</td>
+								<td class="sct_amount">1</td>
+								<td class="sct_point">P 13,450</td>
+								<td class="sct_price">
+									<p class="sale"><i class="won">W</i> 274,000</p>
+									<p><i class="won">W</i> 274,000</p>
+								</td>
+							</tr>
+							<!-- //loop -->
+							<tr>
+								<td class="sct_title">
+									<div class="sct_tit_in">
+										<p class="p_tit"><a href="#">Jardin de Chouette</a></p>
+										<p class="p_txt">Style Book Lovely Ruffle Ops</p>
+									</div>
+								</td>
+								<td class="sct_option">
+									<p class="p_etc">size: free<br />color: violet</p>
+								</td>
+								<td class="sct_amount">1</td>
+								<td class="sct_point">P 13,450</td>
+								<td class="sct_price">
+									<p class="sale"><i class="won">W</i> 274,000</p>
+									<p><i class="won">W</i> 274,000</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="sct_title">
+									<div class="sct_tit_in">
+										<p class="p_tit"><a href="#">Jardin de Chouette</a></p>
+										<p class="p_txt">Style Book Lovely Ruffle Ops</p>
+									</div>
+								</td>
+								<td class="sct_option">
+									<p class="p_etc">size: free<br />color: violet</p>
+								</td>
+								<td class="sct_amount">1</td>
+								<td class="sct_point">P 13,450</td>
+								<td class="sct_price">
+									<p class="sale"><i class="won">W</i> 274,000</p>
+									<p><i class="won">W</i> 274,000</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="sct_title">
+									<div class="sct_tit_in">
+										<p class="p_tit"><a href="#">Jardin de Chouette</a></p>
+										<p class="p_txt">Style Book Lovely Ruffle Ops</p>
+									</div>
+								</td>
+								<td class="sct_option">
+									<p class="p_etc">size: free<br />color: violet</p>
+								</td>
+								<td class="sct_amount">1</td>
+								<td class="sct_point">P 13,450</td>
+								<td class="sct_price">
+									<p class="sale"><i class="won">W</i> 274,000</p>
+									<p><i class="won">W</i> 274,000</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 총 금액 -->
+				<div class="sc_mid_total">
+					<em>총 주문 금액 <span><i class="won">W</i> 53,432,000</span></em>
+					<em>배송비 <span><i class="won">W</i> 52,500</span></em>
+					<strong>총 결제 금액 <span><i class="won">W</i> 53,432,000</span></strong>
+				</div>
+				<form class="jqtransform">
+				<!-- 주문고객정보 -->
+				<div class="datatable">
+					<h3>01 / <span>주문 고객 정보</span></h3>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody>
+							<tr class="sco_name">
+								<th>주문자</th>
+								<td><input type="text" class="iptxt" value="김영두" /></td>
+							</tr>
+							<tr class="sco_zipcode">
+								<th>우편번호</th>
+								<td>
+									<input type="text" class="iptxt" value="121" /> - <input type="text" class="iptxt" />
+									<a href="#" class="b_s_b4d">우편번호찾기</a>
+								</td>
+							</tr>
+							<tr class="sco_addr1">
+								<th>주소</th>
+								<td>
+									<input type="text" class="iptxt" value="서울 마포구 상수동" />
+								</td>
+							</tr>
+							<tr class="sco_addr2">
+								<th>나머지 주소</th>
+								<td>
+									<input type="text" class="iptxt" value="324-12" />
+								</td>
+							</tr>
+							<tr class="sco_tel">
+								<th>전화번호</th>
+								<td>
+									<div class="jqtype2">
+										<select>
+											<option>02</option>
+										</select>
+									</div>
+									-
+									<input type="text" class="iptxt" value="334" /> -
+									<input type="text" class="iptxt" value="334" />
+								</td>
+							</tr>
+							<tr class="sco_tel">
+								<th>휴대폰번호</th>
+								<td>
+									<div class="jqtype2">
+										<select>
+											<option>02</option>
+										</select>
+									</div>
+									-
+									<input type="text" class="iptxt" value="334" /> -
+									<input type="text" class="iptxt" value="334" />
+								</td>
+							</tr>
+							<tr class="sco_email">
+								<th>이메일</th>
+								<td>
+									<input type="text" class="iptxt" value="ggsetewtwe" /> @
+									<input type="text" class="iptxt" value="naver.com" />
+									<div class="jqtype2">
+										<select title="">
+											<option>이메일 사이트 선택</option>
+											<option>paran.com</option>
+											<option>gmail.com</option>
+											<option>naver.com</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="sco_etc">위 내용으로 회원정보를 수정하시려면 오른쪽의 수정버튼을 눌러주세요. <a href="#" class="b_s_b4d">회원정보 반영</a></p>
+				</div>
+				<!-- 배송지정보 -->
+				<div class="datatable">
+					<h3>02 / <span>배송지 정보</span></h3>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody>
+							<tr class="sco_adjust">
+								<th>기존주소 적용</th>
+								<td>
+									<ul>
+										<li>
+											<input type="radio" name="address_adj" id="address_adj01" checked="checked" />
+											<label for="address_adj01">주문 고객 정보와 동일</label>
+										</li>
+										<li>
+											<input type="radio" name="address_adj" id="address_adj02" />
+											<label for="address_adj02">새로운 주소</label>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="sco_name">
+								<th>주문자</th>
+								<td><input type="text" class="iptxt" value="김영두" /></td>
+							</tr>
+							<tr class="sco_zipcode">
+								<th>우편번호</th>
+								<td>
+									<input type="text" class="iptxt" value="121" /> - <input type="text" class="iptxt" />
+									<a href="#" class="b_s_b4d">우편번호찾기</a>
+								</td>
+							</tr>
+							<tr class="sco_addr1">
+								<th>주소</th>
+								<td>
+									<input type="text" class="iptxt" value="서울 마포구 상수동" />
+								</td>
+							</tr>
+							<tr class="sco_addr2">
+								<th>나머지 주소</th>
+								<td>
+									<input type="text" class="iptxt" value="324-12" />
+								</td>
+							</tr>
+							<tr class="sco_tel">
+								<th>전화번호</th>
+								<td>
+									<div class="jqtype2">
+										<select>
+											<option>02</option>
+										</select>
+									</div>
+									-
+									<input type="text" class="iptxt" value="334" /> -
+									<input type="text" class="iptxt" value="334" />
+								</td>
+							</tr>
+							<tr class="sco_tel">
+								<th>휴대폰번호</th>
+								<td>
+									<div class="jqtype2">
+										<select>
+											<option>02</option>
+										</select>
+									</div>
+									-
+									<input type="text" class="iptxt" value="334" /> -
+									<input type="text" class="iptxt" value="334" />
+								</td>
+							</tr>
+							<tr class="sco_message">
+								<th>배송 유의사항</th>
+								<td>
+									<input type="text" class="iptxt" value="부재시 경비실에 맡겨 주세요~" />
+									<em>ex) 부재시 경비실 위탁요망, 전화연락 후 배송 등...</em>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 할인정보 -->
+				<div class="datatable">
+					<h3>03 / <span>할인정보</span></h3>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody>
+							<tr class="sco_point">
+								<th>포인트</th>
+								<td>
+									<input type="text" class="iptxt" value="23,000" /> Point
+									<em class="my">보유 마일리지 : 104 Point</em>
+								</td>
+							</tr>
+							<tr class="sco_coupon">
+								<th>쿠폰사용</th>
+								<td>
+									<div class="jqtype2">
+										<select>
+											<option>사용하실 쿠폰을 선택하세요.</option>
+										</select>
+									</div>
+									<em class="my">적용가능 쿠폰 : 1장</em>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="sco_etc"><em>마일리지는 상품금액 30,000원 이상 결제시 사용 가능합니다.<br />정상판매가 상품 중 일부 상품[%할인쿠폰제외상품]은 %할인쿠폰이 적용되지 않습니다.</em></p>
+				</div>
+				<!-- 최종정산내역 & 결제수단 -->
+				<div class="sco_total_payment">
+					<!-- 최종정산내역 -->
+					<div class="sco_total">
+						<h3>최종<span>정산내역</span></h3>
+						<ul>
+							<li><span>총 주문금액</span> <i class="won">W</i> 53,432,000</li>
+							<li><span>포인트 사용</span> P 0</li>
+							<li><span>배송료</span> <i class="won">W</i> 2,500</li>
+							<li><span>쿠폰 사용액</span> <i class="won">W</i> 2,000</li>
+							<li class="total"><span>총결제액</span> <i class="won">W</i> 53,432,000</li>
+						</ul>
+					</div>
+					<!-- 결제 수단 -->
+					<div class="sco_payment">
+						<h3>결제 수단</h3>
+						<div class="scop_in">
+							<!-- 결제방법선택 -->
+							<ul class="scop_select">
+								<li>
+									<input type="radio" name="payment" id="payment01" /><label for="payment01">신용카드</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="payment02" /><label for="payment02">실시간 계좌이체</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="payment03" checked="checked" /><label for="payment03">무통장 입금 (가상계좌)</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="payment04" /><label for="payment04">휴대폰 결제</label>
+								</li>
+							</ul>
+							<!-- 무통장 입금(가상계좌) -->
+							<div class="scop_account" >
+								<!-- 결제실행 -->
+								<div class="scop_process">
+									<table cellpadding="0" cellspacing="0" border="0" class="payment_process">
+										<tbody>
+											<tr class="payselect">
+												<th>입금은행</th>
+												<td>
+													<div class="jqtype2">
+														<select>
+															<option>은행선택</option>
+														</select>
+													</div>
+												</td>
+											</tr>
+											<tr class="payradio">
+												<th>현금영수증</th>
+												<td>
+													<ul class="pr2">
+														<li>
+															<input type="radio" name="cardtype" id="cardtype01" checked="checked" /><label for="cardtype01">미발급</label>
+														</li>
+														<li>
+															<input type="radio" name="cardtype" id="cardtype02" /><label for="cardtype02">발급</label>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="scopc_exp">결제 완료 후 5일 이내에<br />입금되지 않을 경우 자동 취소 됩니다.</p>
+								</div>
+								<!-- 버튼 -->
+								<div class="btnw">
+									<a href="#" class="b_s_b4d">결제하기</a>
+									<a href="#" class="b_s_cw">장바구니로 가기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="f_heydey_link">
+			<h2 class="hide">Heydey 소개 및 약관</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_company"><span class="ir">회사소개</span></a></li>
+				<li><a href="#" class="gbtn fb_job"><span class="ir">채용정보</span></a></li>
+				<li><a href="#" class="gbtn fb_policy"><span class="ir">이용약관</span></a></li>
+				<li><a href="#" class="gbtn fb_personalinfo"><span class="ir">개인정보취급방침</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate"><span class="ir">업무제휴</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate_info"><span class="ir">협력업체정보시스템</span></a></li>
+			</ul>
+		</div>
+		<div class="f_settlement">
+			<h2 class="hide">안전결제정보</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_sgic"><span class="ir">서울보증보험</span></a></li>
+				<li><a href="#" class="gbtn fb_kcp"><span class="ir">한국사이버결제</span></a></li>
+			</ul>
+		</div>
+
+		<div class="f_devide">
+			<div class="address">
+				<h2 class="hide">Heydey 사이트정보</h2>
+				<p class="f_addr"><span class="ir">(주)스튜디오헤이데이. 서울특별시 마포구 상수동 324-12 고객센터 1599 7193 팩스 02 334 5517 이메일</span> <a href="mailto:info@objectheydey.com"><span class="ir">info@objectheydey.com</span></a></p>
+				<p class="f_si"><span class="ir">사업자등록번호 105-87-18086 통신판매업신고 마포 1249호 개인정보취급책임자 오명아 대표 노환탁</span></p>
+				<p class="f_copy"><span class="ir">copyright 2012 studio heydey, inc. all rights reserved.</span></p>
+			</div>
+			<div class="familysite">
+				<form class="jqtransform">
+					<select title="family site">
+						<option>family site</option>
+						<option>www.byheydey.com</option>
+						<option>www.studioheydey.com</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
