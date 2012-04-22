@@ -25,11 +25,11 @@
 			if (brandTimer) {
 				clearTimeout(brandTimer);
 			}
-			$('#lyr_head_brand').show(250);
+			$('#lyr_head_brand').slideDown(250);
 		});
 		$("#sorting_brand").mouseout(function(){
 			$(this).removeClass('lyr_open');
-			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
 		});
 	});
 //]]>
@@ -482,7 +482,7 @@
 										</tbody>
 									</table>
 									<p class="card_info">
-										<strong>&lt;신용카드 5만원 이상 구매 시 2,3개월 무이자 할부 적용 카드사 안내&gt;</strong>
+										<strong>&lt;신용카드 5만원 이상 구매시 2,3개월 무이자 할부 안내&gt;</strong>
 										롯데카드 / 비씨카드 / 신한카드 / 현대카드 / 외환카드 /<br />
 										KB국민카드 / 삼성카드 / 씨티카드 / 하나SK카드 / NH농협카드
 									</p>

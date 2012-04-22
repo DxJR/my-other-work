@@ -2,7 +2,7 @@
 
 /* 팝업 */
 #edtn_pop {padding:0 0 0 20px;}
-	#edtn_pop h1 {float:left; padding:16px 0 1px 0; font-family:rB; font-size:21px; color:#333; border-bottom:3px solid #333;}
+	#edtn_pop h1 {float:left; width:176px; height:23px; margin-top:20px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background:url('../images/common/bi_objectheydey.gif') left top no-repeat;}
 
 .pop_explain {clear:both; padding:26px 0 0 0; font-family:ngEB; font-size:12px; color:#999; line-height:19px;}
 	.pop_explain strong {color:#333;}

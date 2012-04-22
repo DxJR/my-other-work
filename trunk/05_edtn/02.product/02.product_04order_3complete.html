@@ -25,11 +25,11 @@
 			if (brandTimer) {
 				clearTimeout(brandTimer);
 			}
-			$('#lyr_head_brand').show(250);
+			$('#lyr_head_brand').slideDown(250);
 		});
 		$("#sorting_brand").mouseout(function(){
 			$(this).removeClass('lyr_open');
-			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
 		});
 	});
 //]]>
@@ -129,7 +129,7 @@
 				<p>오브젝트 헤이데이를 이용해 주셔서 감사합니다.<br />주문하신 상품은 주문/배송조회 버튼을 통해<br />확인하실 수 있습니다.</p>
 				<!-- 버튼 -->
 				<div class="btnw">
-					<a href="#" class="b_s_b4d">결제하기</a>
+					<a href="#" class="b_s_b4d">주문/배송 조회</a>
 					<a href="#" class="b_s_cw">메인으로 가기</a>
 				</div>
 			</div>
