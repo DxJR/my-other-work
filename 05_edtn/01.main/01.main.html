@@ -25,11 +25,11 @@
 			if (brandTimer) {
 				clearTimeout(brandTimer);
 			}
-			$('#lyr_head_brand').show(250);
+			$('#lyr_head_brand').slideDown(250);
 		});
 		$("#sorting_brand").mouseout(function(){
 			$(this).removeClass('lyr_open');
-			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
 		});
 	});
 //]]>
@@ -242,7 +242,7 @@
 					<h2 class="hide">브랜드 목록</h2>
 					<ul class="idx_bc_list">
 						<li>
-							<em>Almedhals</em>
+							<em><a href="#">Almedhals</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Tableware</a></li>
 								<li><a href="#">Stationary</a></li>
@@ -250,7 +250,7 @@
 							</ul>
 						</li>
 						<li>
-							<em>Anne black</em>
+							<em><a href="#">Anne black</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Tableware</a></li>
 								<li><a href="#">Stationary</a></li>
@@ -258,7 +258,7 @@
 							</ul>
 						</li>
 						<li>
-							<em>Byheydey</em>
+							<em><a href="#">Byheydey</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Furniture</a></li>
 								<li><a href="#">Stationary</a></li>
@@ -266,39 +266,39 @@
 							</ul>
 						</li>
 						<li>
-							<em>Dansk Vintage </em>
+							<em><a href="#">Dansk Vintage</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Furniture</a></li>
 								<li><a href="#">Lighting</a></li>
 							</ul>
 						</li>
 						<li>
-							<em>Guss</em>
+							<em><a href="#">Guss</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Furniture</a></li>
 							</ul>
 						</li>
 						<li>
-							<em>Hay</em>
+							<em><a href="#">Hay</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Furniture</a></li>
 							</ul>
 						</li>
 						<li>
-							<em>Montana</em>
+							<em><a href="#">Montana</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Furniture</a></li>
 							</ul>
 						</li>
 						<li>
-							<em>Saito wood</em>
+							<em><a href="#">Saito wood</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Tableware</a></li>
 								<li><a href="#">Stationary</a></li>
 							</ul>
 						</li>
 						<li class="last">
-							<em>Sceltevie</em>
+							<em><a href="#">Sceltevie</a></em>
 							<ul class="idx_bcl_in">
 								<li><a href="#">Tableware</a></li>
 								<li><a href="#">Stationary</a></li>

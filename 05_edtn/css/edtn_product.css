@@ -264,7 +264,7 @@ p.p_sale strong {display:block; color:#ed1100;}
 				.scop_account .payment_process tr.payselect td {padding-top:0px; padding-bottom:16px;}
 /* 주문완료 */
 .d_complete, .d_rcmd {font-family:ngEB; color:#999;}
-	.d_complete h3, .d_rcmd h3 {float:left; width:90px; margin-top:1px; font-size:12px;}
+	.d_complete h3, .d_rcmd h3 {float:left; width:90px; margin-top:-1px; font-size:12px; line-height:19px;}
 		.d_complete h3 span, .d_rcmd h3 span {display:block;}
 	.d_complete {margin-top:17px;}
 		.d_complete p {float:left; width:662px; font-family:ng; font-size:24px; letter-spacing:-1px;}
@@ -273,10 +273,10 @@ p.p_sale strong {display:block; color:#ed1100;}
 			.d_complete .btnw a.b_s_cw {float:left; display:inline; margin-left:10px;}
 	.d_rcmd {clear:both; float:left; width:100%; margin:30px 0 0 0; padding-top:27px; border-top:1px solid #333;}
 		.d_rcmda {position:relative; float:left; display:inline; width:220px; height:300px; margin:3px 1px 0 0;}
-			.d_rcmda h4 {position:absolute; top:15px; left:18px; font-family:rB; font-size:23px; color:#333;}
-			.d_rcmda a {display:block; height:252px; padding:48px 0 0 18px; font-size:11px; color:#787878; line-height:18px;}
+			.d_rcmda h4 {position:absolute; top:-9999em; font-family:rB; font-size:23px; color:#333;}
+			.d_rcmda a {display:block; width:220px; height:300px; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
 				.d_rcmda a span {display:block;}
 		.d_rcmd .last {margin-right:0;}
-		.d_rcmd .montana {background:url('../images/bg_montana.jpg') left top no-repeat;}
-		.d_rcmd .hay {background:url('../images/bg_hay.jpg') left top no-repeat;}
-		.d_rcmd .byheydey {background:url('../images/bg_byheydey.jpg') left top no-repeat;}
+		.d_rcmd .montana {background:url('../images/d_rcmda_01.jpg') left top no-repeat;}
+		.d_rcmd .hay {background:url('../images/d_rcmda_02.jpg') left top no-repeat;}
+		.d_rcmd .byheydey {background:url('../images/d_rcmda_03.jpg') left top no-repeat;}

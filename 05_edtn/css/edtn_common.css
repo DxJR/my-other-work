@@ -104,7 +104,7 @@ a.jqTransformChecked {background-position:left -20px;}
 		#select_favorite {float:left; display:inline; width:193px; height:30px; padding-left:15px;}
 		/* gnb_btn */
 		.gnb_btn {float:left; display:inline; width:216px; margin-top:9px;}
-			.gnb_btn li {float:left; display:inline; width:86px; margin-left:22px; margin-bottom:8px;}
+			.gnb_btn li {float:left; display:inline; width:86px; height:18px; margin-left:22px;}
 		.gnb_login .gnb_btn {width:76px;}
 			.gnb_login .gnb_btn li {width:76px; margin-left:0;}
 		/* button */
@@ -141,7 +141,8 @@ a.jqTransformChecked {background-position:left -20px;}
 			.sb_brand {float:left; width:139px; height:35px; overflow:hidden; background:url('../images/common/set_header.gif') left -90px no-repeat;}
 			.sb_brand:hover, .lyr_open .sb_brand {background-position:-140px -90px;}
 			/* sorting brand layer */
-			.lyr_brand {position:absolute; top:35px; right:0;_right:-1px; display:none; padding-top:1px; background:url('../images/common/bg_lyr_brand.gif') left top no-repeat;}
+			.lyr_brand {position:absolute; top:35px; right:0;_right:-1px; display:none; background:url('../images/common/bg_lyr_brand.gif') left top no-repeat;}
+				.lyr_brand ul {padding-top:1px;}
 				.lyr_brand li {clear:both; float:left; border-bottom:1px solid #4f4f4e;}
 					.lyr_brand li .gbtn {float:left; width:293px; height:37px; background-image:url('../images/common/set_brand-nav.gif'); background-repeat:no-repeat;}
 				.lyr_brand li.last {border-bottom:0;}
@@ -175,7 +176,9 @@ a.jqTransformChecked {background-position:left -20px;}
 		/* brand */
 		#snb .brand .b_tit {display:block; margin-bottom:11px; font:0/0 arial;}
 			#snb .brand h2 {font-family:ngEB; font-size:13px; color:#999;}
+				#snb .brand h2 a {color:#999;}
 			#snb .brand h2.this {color:#333;}
+				#snb .brand h2.this a {color:#333;}
 		/* mypage / help desk */
 		#snb .snb_k ul li a {font-family:ngEB; font-size:13px;}
 	#content {float:left; display:inline; width:766px; padding-left:30px;}

@@ -25,11 +25,11 @@
 			if (brandTimer) {
 				clearTimeout(brandTimer);
 			}
-			$('#lyr_head_brand').show(250);
+			$('#lyr_head_brand').slideDown(250);
 		});
 		$("#sorting_brand").mouseout(function(){
 			$(this).removeClass('lyr_open');
-			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
 		});
 	});
 //]]>
@@ -457,13 +457,13 @@
 							</span>
 							<!-- btn -->
 							<div class="btnr">
-								<a href="#" onclick="close_layer('id_write_view'); return false;" class="b_w_review">상품평 쓰기</a>
+								<a href="#" onclick="review_toggle('id_write_view'); return false;" class="b_w_review">상품평 쓰기</a>
 							</div>
 						</div>
 					</div>
 					<!-- 상품평 작성 -->
 					<div class="clear"></div>
-					<div class="write_review" id="id_write_view" style="display:inline;">
+					<div class="write_review" id="id_write_view">
 						<h6 class="hide">상품평 쓰기</h6>
 						<div class="box_lgray">
 							<dl>
@@ -571,6 +571,18 @@
 		} else
 		{
 			obj.style.display='none';
+		}
+	}
+	function review_toggle(id_name) {
+		var obj = document.getElementById(id_name);
+		if (obj.style.visibility!='visible')
+		{
+			obj.style.visibility='visible';
+			obj.style.height='390px';
+		} else
+		{
+			obj.style.visibility='hidden';
+			obj.style.height='0';
 		}
 	}
 </script>

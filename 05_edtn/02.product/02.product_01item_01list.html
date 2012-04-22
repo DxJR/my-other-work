@@ -25,11 +25,11 @@
 			if (brandTimer) {
 				clearTimeout(brandTimer);
 			}
-			$('#lyr_head_brand').show(250);
+			$('#lyr_head_brand').slideDown(250);
 		});
 		$("#sorting_brand").mouseout(function(){
 			$(this).removeClass('lyr_open');
-			brandTimer=setTimeout("$('#lyr_head_brand').hide(250)", 100);
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
 		});
 	});
 //]]>
