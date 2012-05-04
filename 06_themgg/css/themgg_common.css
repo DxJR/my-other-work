@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* Default */
+html, body {width:100%; height:100%;}
+body {font-size:12px; color:#555; font-family:'돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#ffcc00;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
+li {list-style:none;}
+img, fieldset {border:0;}
+hr {display:none;}
+em, i {font-style:normal;}
+a {cursor:pointer; text-decoration:none;}
+a:hover {text-decoration:none;}
+table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
+legend {position:absolute; top:0; left:0; display:inline;}
+button {cursor:pointer;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 arial;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+.ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em;_text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
+form {clear:both;}
+input, select {font-size:100%; vertical-align:middle;}
+input, textarea, select {font-size:12px;}
+button::-moz-focus-inner {border:0; padding:0;}
+textarea{overflow:auto}
+input:focus {outline:none;}
+input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
+.iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+/* float 해제 */
+.f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
+* html .f_clear {height:1px;}
+.f_clear {display: block;min-height:1px;}
+
+/* 버튼 */
+.gbtn {position:relative; display:inline-block; width:auto; margin:0; padding:0; line-height:1; border:0; overflow:visible; cursor:pointer; vertical-align:middle; white-space:nowrap; font-family:'Arial','Tahoma','Dotum','AppleGothic','sans-serif'; background-repeat:no-repeat; background-color:transparent;}
+.gbtn:hover {text-decoration:none;}
+.gbtn span {position:relative; display:inline-block;}
+    input.gbtn {text-indent:-9999em;}
+    span.gbtn {cursor:default;}
+
+/* form */
+form.jqtransformdone label{float:left; display:block; margin-top:3px;}
+form.jqtransformdone div.rowElem {clear:both; padding:4px 0px;}
+
+/* Radio */
+.jqTransformRadioWrapper {float:left; display:block; margin:5px 4px 0 4px;}
+.jqTransformRadio {display:block; width:12px; height:12px; margin-right:1px; vertical-align:middle; background:transparent url('../images/common/radio.gif') left top no-repeat;}
+
+/* Checkbox */
+span.jqTransformCheckboxWrapper {float:left; display:block; margin-top:5px;}
+a.jqTransformCheckbox {display:block; width:18px; height:19px; vertical-align:middle; background:transparent url('../images/common/checkbox.gif') center top no-repeat;}
+
+/* Checked - Used for both Radio and Checkbox */
+a.jqTransformChecked {background-position:left -20px;}
+
+/* Select */
+.jqTransformSelectWrapper {position:relative; float:left; width:45px; height:24px; background:url('../images/common/bg_select.gif') left top no-repeat;}
+	.jqTransformSelectWrapper div span {position:absolute; float:none; height:19px; padding:5px 0 0 5px; font-size:11px; color:#999; font-family:arial; white-space: nowrap; overflow:hidden; cursor:pointer;}
+	.jqTransformSelectWrapper a.jqTransformSelectOpen {position:absolute; right:0; display: block; width:17px; height:24px; background:url('../images/common/bg_select.gif') right top no-repeat;}
+	.jqTransformSelectWrapper ul {z-index:10; position:absolute; top:23px; left:0; display:none; width:43px; height:150px; margin:0; padding:0; border:solid 1px #e6e6e6; overflow:auto; overflow-y:auto; background-color:#fff;}
+	.jqTransformSelectWrapper ul a {display:block; height:16px; padding:4px 0 0 4px; font-size:11px; color:#999; font-family:arial; text-decoration:none; background-color: #fff;}
+	.jqTransformSelectWrapper ul a.selected, .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color:#999; background:#454545;}
+
+/* Select Type2 */
+.jqtype2 .jqTransformSelectWrapper {height:28px; background:url('../images/common/bg_select.gif') left -30px no-repeat;}
+	.jqtype2 .jqTransformSelectWrapper div span {height:20px; padding:8px 0 0 10px; font-size:12px; color:#333; font-family:'dotum','돋움';}
+	.jqtype2 a.jqTransformSelectOpen {width:17px; height:28px; background:url('../images/common/bg_select.gif') right -30px no-repeat;}
+	.jqtype2 ul {top:23px;}
+	.jqtype2 ul a {height:21px; padding:4px 0 0 9px; font-size:12px; color:#333;}
+	.jqtype2 ul a.selected, .jqtype2 ul a:hover, .jqtype2 ul a.selected:hover {color:#333; background:#dadada;}
+
+/* Hidden - used to hide the original form elements */
+.jqTransformHidden {display:none;}
+
+
+
+/* wrap */
+#wrap {width:1115px; margin:0 auto;}
+
+/* header */
+#header {position:relative; height:235px; padding-top:100px;}
+	/* h1group */
+	#h1group {position:relative; float:left; width:302px; height:91px; overflow:hidden; background:url('../images/themgg_set.gif') left top no-repeat;}
+		.gotohome {position:absolute; top:0; left:0; width:302px; height:91px;}
+			.gotohome a {display:block; width:100%; height:91px;}
+	/* gnb */
+	#gnb {position:absolute; right:6px;}
+		#gnb li {float:left; display:inline; margin-bottom:7px;}
+		#gnb li.lb {clear:both; margin-left:25px; margin-right:1px; padding-right:10px; background:url('../images/bg_gnb_lb.gif') right top no-repeat;}
+		#gnb li.line2 {margin-left:0; background:url('../images/bg_gnb_2lb.gif') right top no-repeat;}
+			#gnb li a.gbtn {background-image:url('../images/themgg_set.gif');}
+			#gnb li a.signin {width:72px; height:17px; background-position:left -100px;}
+			#gnb li a.register {width:96px; height:17px; background-position:-80px -100px;}
+			#gnb li a.about {width:81px; height:19px; background-position:-180px -100px;}
+			#gnb li a.contact {width:113px; height:19px; background-position:-270px -100px;}
+			#gnb li a.favorite {width:98px; height:17px; background-position:-390px -100px;}
+	/* search */
+	.iSearch {top:154px; right:0; width:291px; height:35px; padding:0; text-align:left; background:url('../images/bg_top_search.gif') left top no-repeat;}
+		.iSearch .iText, .iSearch .iText:hover {left:0; width:245px; height:29px; float:left; display:inline; margin:2px 0 0 2px; padding-top:0; font-family:arial; color:#333; font-size:18px; text-align:right; border:0; background:#ffdf60;}
+		.iSearch .iText:focus {border:0; text-align:left; background:#ffdf60;}
+		.iSearch .submit {float:left; display:inline; margin:2px 0 0 0;}
+	/* snb */
+	#snb {clear:both; padding-top:85px;}
+		#snb ul li {float:left; display:inline; width:223px;}
+			#snb ul li a {display:block; width:100%; height:43px; text-align:center; border-bottom:16px solid #000;}
+				#snb ul li a i.gbtn {height:17px; margin-top:13px; background-image:url('../images/themgg_set.gif');}
+			#snb ul li a.dream i {width:71px; background-position:left -140px;}
+			#snb ul li a.meet i {width:55px; background-position:-80px -140px;}
+			#snb ul li a.eat i {width:39px; background-position:-140px -140px;}
+			#snb ul li a.wear i {width:58px; background-position:-180px -140px;}
+			#snb ul li a.live i {width:42px; background-position:-240px -140px;}
+		#snb ul li.active {background:#ffd631;}
+
+/* content */
+#content {position:relative; clear:both;}
+	/* 블로그 컨텐츠 */
+	#siBody {width:853px; padding:0 0 50px 0; background:#fff0b3;}
