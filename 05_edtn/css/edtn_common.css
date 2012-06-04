@@ -1,12 +1,21 @@
 @charset "utf-8";
 
 /* Font */
-@font-face {font-family:gpp; src:url('../font/GaramondPremrPro.eot'); src:local('☺'), url('../font/GaramondPremrPro.ttf') format('truetype')}
+@font-face {font-family:gpp; src:url('../font/Times_New_Roman.eot'); src:local('☺'), url('../font/Times_New_Roman.ttf') format('truetype')}
 @font-face {font-family:hnB; src:url('../font/HelveticaNeue-Bold.eot'); src:local('☺'), url('../font/HelveticaNeue-Bold.ttf') format('truetype')}
 @font-face {font-family:hnR; src:url('../font/HelveticaNeue-Roman.eot'); src:local('☺'), url('../font/HelveticaNeue-Roman.ttf') format('truetype')}
+
+/*
 @font-face {font-family:ng; src:url('../font/NanumGothic.eot'); src:local('☺'), url('../font/NanumGothic.ttf') format('truetype')}
 @font-face {font-family:ngB; src:url('../font/NanumGothicBold.eot'); src:local('☺'), url('../font/NanumGothicBold.ttf') format('truetype')}
 @font-face {font-family:ngEB; src:url('../font/NanumGothicExtraBold.eot'); src:local('☺'), url('../font/NanumGothicExtraBold.ttf') format('truetype')}
+*/
+
+@font-face {font-family:ng; src:url('../font/malgun.eot'); src:local('☺'), url('../font/malgun.ttf') format('truetype')}
+@font-face {font-family:ngB; src:url('../font/malgunbd.eot'); src:local('☺'), url('../font/malgunbd.ttf') format('truetype')}
+@font-face {font-family:ngEB; src:url('../font/malgunbd.eot'); src:local('☺'), url('../font/malgunbd.ttf') format('truetype')}
+
+
 @font-face {font-family:rB; src:url('../font/Replica-Bold.eot'); src:local('☺'), url('../font/Replica-Bold.ttf') format('truetype')}
 @font-face {font-family:rL; src:url('../font/Replica-Light.eot'); src:local('☺'), url('../font/Replica-Light.ttf') format('truetype')}
 @font-face {font-family:rR; src:url('../font/Replica-Regular.eot'); src:local('☺'), url('../font/Replica-Regular.ttf') format('truetype')}
@@ -36,6 +45,7 @@ textarea{overflow:auto}
 input:focus {outline:none;}
 input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
 i.won {text-decoration:line-through;}
+.lb {display:block;}
 /* float 해제 */
 .f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
 * html .f_clear {height:1px;}
@@ -54,10 +64,17 @@ i.won {text-decoration:line-through;}
 .b_facebook {width:47px; height:24px; overflow:hidden; background:url('../images/common/set_button.gif') left -20px no-repeat;}
 .b_facebook:hover {background-position:-50px -20px;}
 .b_gobrandshop {width:90px; height:19px; overflow:hidden; background:url('../images/common/set_button.gif') left top no-repeat;}
-.b_gobrandshop:hover {background-position:-95px top;}
+.b_gobrandshop_g {width:90px; height:19px; overflow:hidden; background:url('../images/common/set_button.gif') left -50px no-repeat;}
+.b_gobrandshop:hover, .b_gobrandshop_g:hover {background-position:-95px top;}
 .b_buy {display:block; width:130px; height:35px; padding-top:15px; font-family:rB; font-size:24px; color:#fff; text-align:center; background:#333;}
 .b_buy:hover {background:#4d4d4d;}
 .b_cart, .b_wish {width:96px; height:34px; padding-top:14px; font-family:rB; font-size:24px;}
+.b_list_delete {width:17px; height:17px; background:url('../images/common/set_button.gif') -100px -20px no-repeat;}
+
+/* 아이콘 */
+.icn {position:relative; top:-1px; display:inline-block; font:0/0 arial; overflow:hidden; vertical-align:middle; background-image:url('../images/common/set_icon.gif'); background-repeat:no-repeat;}
+.i_amount {width:9px; height:10px; background-position:left top;}
+
 
 /* form */
 form.jqtransformdone label{float:left; font-family:ngEB; font-size:12px;}
