@@ -50,7 +50,7 @@
 		.idx_r_rcmdobj .idx_tit h2 {background-position:left -15px;}
 		.idx_r_rcmdobj ul {border-top:1px solid #e6e6e6;}
 			.idx_r_rcmdobj ul li {clear:both; width:293px; border-bottom:1px solid #e6e6e6;}
-				.idx_r_rcmdobj ul li a {position:relative;_position:staitc; display:block; width:293px; height:130px; font-family:gpp, sans-serif; font-size:20px; color:#333; line-height:21px; text-align:right; overflow:hidden;}
+				.idx_r_rcmdobj ul li a {position:relative;_position:static; display:block; width:293px; height:130px; font-family:gpp, sans-serif; font-size:20px; color:#333; line-height:21px; text-align:right; overflow:hidden;}
 				.idx_r_rcmdobj ul li a .description {position:absolute; _position:static; top:17px; left:10px;_float:left; display:block; text-align:left;_margin-top:-117px; _padding-left:10px;}
 				.idx_r_rcmdobj ul li a em i {display:block;_clear:both;_float:left;}
 				.idx_r_rcmdobj ul li a .price {display:block; color:#999; _clear:both;_float:left;}
