@@ -10,7 +10,7 @@ p.p_sale strong {display:block; color:#ed1100;}
 
 /* 더보기 */
 .prod_b_more {clear:both; padding-top:1px;}
-	.prod_b_more a {display:block; height:31px; padding-top:12px; font-size:16px; text-align:center;}
+	.prod_b_more a {display:block; height:31px; padding-top:12px; font-size:16px; font-family:ngEB; letter-spacing:-1px; text-align:center;}
 		.prod_b_more a img {top:-2px; position:relative; margin-right:6px; vertical-align:middle;}
 
 /* 로케이션 */
@@ -137,10 +137,10 @@ p.p_sale strong {display:block; color:#ed1100;}
 				.shopping_cart table tbody tr td.sct_check p input {position:absolute;_position:static; top:0; left:1px; width:13px; height:13px;}
 		.shopping_cart table tbody tr td.sct_image {width:100px; font:0/0 arial;}
 		.shopping_cart table tbody tr td.sct_title {width:180px; padding-right:10px; font-weight:normal;}
-			.shopping_cart table tbody tr td.sct_title .sct_tit_in {position:relative; _position:static;height:87px; padding-top:3px;}
-			.shopping_cart table tbody tr td.sct_title p.p_tit a {font-weight:bold; color:#343434;}
-			.shopping_cart table tbody tr td.sct_title p.p_txt {margin-top:4px;}
-			.shopping_cart table tbody tr td.sct_title p.p_etc {position:absolute;_position:static; bottom:-1px; _margin-top:17px; line-height:18px;}
+			.sct_tit_in {position:relative; _position:static;height:87px; padding-top:3px;}
+			p.p_tit a {font-weight:bold; color:#343434;}
+			p.p_txt {margin-top:4px;}
+			p.p_etc {position:absolute;_position:static; bottom:-1px; _margin-top:17px; line-height:18px;}
 		.shopping_cart table tbody tr td.sct_point {width:105px; padding-top:23px;}
 		.shopping_cart table tbody tr td.sct_price {width:189px; padding-top:23px; color:#e80000;}
 			.shopping_cart table tbody tr td.sct_price p {margin-bottom:4px;}
