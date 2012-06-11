@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.b_s_cw {font-family:ngEB; font-size:12px;}
+
+
+/* 로그인 */
+.rgform_wp #content {width:667px; margin:0; padding:0;}
+.regist_wp {}
+	.regist_wp h2 {margin:0 0 16px 0; font-family:rB; font-size:24px; color:#333; line-height:16px;}
+	/* 로그인폼 */
+	.rg_login {clear:both; padding:20px 0; border-top:1px solid #d9d9d9;}
+		/* 로그인영역 */
+		.rgl_f {position:relative; clear:both; float:left; width:470px; font-family:ngEB; font-size:12px; color:#333;}
+			.rgl_f p {margin-bottom:10px;}
+				.rgl_f label {display:inline-block; width:79px; margin:4px 0 0 0; letter-spacing:-1px;}
+				.rgl_f input.iptxt {width:166px; height:26px; margin:0 6px 0 0; padding:0 9px; font-family:dotum; font-size:12px; color:#333; line-height:26px; vertical-align:middle; border:1px solid #d9d9d9; background:#fff;}
+				.rgl_f label.id_save {float:none; width:auto; margin:0 0 0 2px; font-size:11px; color:#a6a6a6;}
+				.rgl_f .b_s_b4d, .rgl_f .b_s_cw {float:left; display:inline; width:97px; height:43px; margin:5px 0 0 79px; padding:0 0 0 15px; text-align:left;}
+				.rgl_f .b_s_cw {width:110px; margin-left:10px; padding-left:0;}
+		/* 우측설명 */
+		.rg_description {float:left; padding:5px 0 0 0; font-family:ngEB; font-size:11px; color:#a6a6a6; line-height:17px; letter-spacing:-1px;}
+			.rg_description h3 {font-size:11px; color:#333;}
+	/* 하단설명 */
+	.rg_explain {clear:both; float:left; width:100%; padding:15px 0 0 0; font-family:ngEB; font-size:12px; color:#999; line-height:19px; border-top:1px solid #d9d9d9;}
+		.rg_explain ul {clear:both; float:left; display:inline; margin:0 0 0 79px;}
+			.rg_explain ul li {float:left; width:196px;}
+				.rg_explain .b_s_cw {width:110px; height:32px; margin:17px 0 0 0; padding:9px 0 0 0;}
+
+/* 회원/비회원 로그인 */
+.rg_mon .rgl_f h3 {position:absolute; top:5px; left:0; font-family:ngEB; font-size:12px; color:#333; letter-spacing:-1px;}
+.rg_mon .rgl_f input.iptxt {margin-left:79px;}
+.rg_mon .rgl_f input.ip_id {background:url('../images/common/set_rgmon.gif') 10px top no-repeat;}
+.rg_mon .rgl_f input.ip_pwd {background:url('../images/common/set_rgmon.gif') 10px -30px no-repeat;}
+.rg_mon .rgl_f input.ip_num {background:url('../images/common/set_rgmon.gif') 10px -60px no-repeat;}
+.rg_mon .rgl_f input.ip_email {background:url('../images/common/set_rgmon.gif') 10px -90px no-repeat;}
+
+/* 아이디검색 */
+.src_explain {clear:both; padding:15px 0 17px 0; font-family:ngEB; font-size:12px; color:#999; line-height:19px; letter-spacing:-1px; border-top:1px solid #d9d9d9;}
+.rgl_bl {border-bottom:1px solid #d9d9d9;}
+	.rgl_bl .rgl_f {width:100%;}
+	.rgl_bl .sep {margin:0 1px 0 -6px; font-family:돋움; color:#999; font-size:12px;}
+
+/* 우측배너 */
+.grb_wrap {float:left; display:inline; margin:0 0 0 20px; font:0/0 arial;}

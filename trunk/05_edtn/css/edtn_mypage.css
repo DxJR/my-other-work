@@ -170,4 +170,4 @@
 	.mpu_if_detail .btnw {margin-top:20px; padding-top:20px; border-top:1px solid #333;}
 		.mpu_if_detail .btnw a.b_s_b4d, .mpu_if_detail .btnw a.b_s_cw {float:left;}
 		.mpu_if_detail .btnw a.b_s_b4d {display:inline; width:82px; margin:0 15px 0 96px;}
-		.mpu_if_detail .btnw a.b_s_cw {width:110px;}
+		.mpu_if_detail .btnw a.b_s_cw {width:110px; font-family:ngEB; font-size:12px;}
