@@ -147,27 +147,3 @@
 	.mpu_info ul {float:left; display:inline; margin:0 0 0 75px;}
 		.mpu_info ul li {float:left; width:100px;}
 		.mpu_info ul li.name {width:85px;}
-.mpu_if_detail {margin-top:21px;}
-	.mpu_if_detail table {width:766px;}
-	.mpu_if_detail table tbody tr th {width:96px;}
-	.mpu_if_detail table tbody tr td {width:670px; font-family:ngEB; font-size:11px; color:#a6a6a6;}
-	/* 아이디 */
-	table tbody tr.sco_id td {padding-top:18px;}
-	/* 비밀번호 */
-	table tbody tr.sco_password td p {display:inline-block; margin:2px 0 0 3px;}
-	/* 이메일 수신여부 */
-	table tbody tr.sco_email_permit th, table tbody tr.sco_email_permit td {border-bottom:1px solid #d9d9d9;}
-	table tbody tr.sco_email_permit td {padding-top:16px; padding-bottom:16px;}
-		.sco_p_radio {}
-			.sco_p_radio li label {padding-right:10px;}
-		table tbody tr.sco_email_permit td p {float:left; width:255px; margin-top:9px; line-height:19px; letter-spacing:-1px;}
-		table tbody tr.sco_email_permit td p.sco_p_exp {clear:both;}
-	/* 전화번호 */
-	table tbody tr.sco_tel_home th {padding-top:25px;}
-	table tbody tr.sco_tel_home td {padding-top:20px;}
-	/* SMS 수신여부 */
-	table tbody tr.sco_sms_permit td {padding-top:16px;}
-	.mpu_if_detail .btnw {margin-top:20px; padding-top:20px; border-top:1px solid #333;}
-		.mpu_if_detail .btnw a.b_s_b4d, .mpu_if_detail .btnw a.b_s_cw {float:left;}
-		.mpu_if_detail .btnw a.b_s_b4d {display:inline; width:82px; margin:0 15px 0 96px;}
-		.mpu_if_detail .btnw a.b_s_cw {width:110px; font-family:ngEB; font-size:12px;}
