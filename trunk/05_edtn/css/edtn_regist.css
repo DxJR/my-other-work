@@ -42,3 +42,62 @@
 
 /* 우측배너 */
 .grb_wrap {float:left; display:inline; margin:0 0 0 20px; font:0/0 arial;}
+
+
+/* 회원가입 */
+.rg_process {}
+	/* 좌측 */
+	.rg_process #snb {width:128px;}
+	.rg_process .rg_p {padding-top:0; border-top:0;}
+		.rg_process .rg_p ol {margin-top:0;}
+	/* 우측 */
+	.rg_process #content {width:822px;}
+	.rg_process .rg_exp {margin-top:-5px; font-family:ngEB; font-size:12px; color:#a6a6a6; line-height:19px; letter-spacing:-1px;}
+/* STEP 1 */
+.rg_policy {clear:both; margin:21px 0 0 0; border-top:1px solid #333;}
+	/* 서비스 이용약관 */
+	.rg_policy_in {position:relative; padding:21px 0 25px 72px;}
+		.rg_policy_in h3 {position:absolute; top:20px; left:0; width:70px; font-family:ngEB; font-size:12px; color:#333; line-height:19px; letter-spacing:-1px;}
+		.rg_policy_in textarea {width:750px; height:175px; font-family:돋움; font-size:12px; color:#999; line-height:20px; letter-spacing:-1px; border:0;}
+	.rgp_in_pp {border-top:1px solid #d9d9d9;}
+	/* 개인정보입력 */
+	.rg_p_ip_info {clear:both; padding:30px 0 0 0; border-top:1px solid #333;}
+		.rg_p_ip_wrap {clear:both; height:149px;}
+		/* 좌측입력 */
+		.rg_p_ip_user {clear:both; float:left; width:530px; font-family:ngEB; font-size:12px; color:#333;}
+			.rg_p_ip_user p {margin-bottom:10px;}
+				.rg_p_ip_user label {display:inline-block; width:73px; margin:4px 0 0 0; letter-spacing:-1px;}
+				.rg_p_ip_user input.iptxt {width:166px; height:26px; margin:0 6px 0 0; padding:0 9px; font-family:dotum; font-size:12px; color:#333; line-height:26px; vertical-align:middle; border:1px solid #d9d9d9; background:#fff;}
+				.rg_p_ip_user .sep {margin:0 1px 0 -6px; font-family:돋움; color:#999; font-size:12px;}
+			.rg_p_ip_user ul {clear:both; margin:1px 0 0 73px;}
+				.rg_p_ip_user ul li {clear:both; float:left; margin:2px 0 0 0; white-space:nowrap;}
+					.rg_p_ip_user ul li label {float:none; margin-left:4px; color:#a6a6a6;}
+		/* 우측설명 */
+		.rg_p_ip_exp {float:left; width:290px; margin:-5px 0 0 0; font-family:ngEB; font-size:11px; color:#a6a6a6; letter-spacing:-1px; line-height:19px;}
+	/* 버튼들 */
+	.rg_p_ip_btn {clear:both; padding:20px 0 0 0; border-top:1px solid #333;}
+		.rg_p_ip_btn .b_s_b4d, .rg_p_ip_btn .b_s_cw {float:left; display:inline; width:97px; height:43px; margin:0 0 0 73px; padding:0 0 0 15px; text-align:left;}
+		.rg_p_ip_btn .b_s_cw {width:110px; margin-left:10px; padding-left:0;}
+/* STEP 2 */
+.rg_p_step2 {}
+	/* 아이디 */
+	.rg_p_step2 table tbody tr.sco_id td input.iptxt {width:136px;}
+		.rg_p_step2 table tbody tr.sco_id td a.b_s_b4d {margin-left:9px;}
+	/* 비밀번호 */
+	.rg_p_step2 table tbody tr.sco_password td input.iptxt {width:219px;}
+	/* 이메일 수신여부 */
+	.rg_p_step2 table tbody tr.sco_email_permit td p.sco_point {margin:-1px 0 0 23px; width:auto;}
+	/* SMS 수신여부 */
+	.rg_p_step2 table tbody tr.sco_sms_permit td p.sco_point {margin:2px 0 0 23px; width:auto;}
+
+/* STEP 3 */
+.rg_process .d_complete, .rg_process .d_rcmd {position:relative; padding:0 0 0 160px; border-top:1px solid #333;}
+	.rg_process .d_complete {padding-top:23px; line-height:31px;}
+		.rg_process .d_complete h3, .rg_process .d_rcmd h3 {position:absolute; top:0; left:0; width:160px;}
+		.rg_process .d_complete h3 {top:23px; font-family:ng; font-weight:normal; font-size:24px; color:#999; line-height:32px; letter-spacing:-3px;}
+			.rg_process .d_complete h3 strong {font-size:23px; color:#333;}
+			.rg_process .d_complete .btnw {padding-left:0; line-height:14px;}
+	.rg_process .d_rcmd {width:auto; padding-top:27px;}
+		.rg_process .d_rcmd h3 {top:26px; font-family:ngEB; font-size:12px; color:#a6a6a6; line-height:19px; letter-spacing:-1px;}
+		.rg_process .d_rcmd .byheydey {margin-right:0;}
+	.rg_process .d_complete .border-b, .rg_process .d_rcmd .border-b {position:absolute; top:-1px; left:158px; clear:both; display:block; width:2px; height:1px; font:0/0 arial; overflow:hidden; background:#fff;}
