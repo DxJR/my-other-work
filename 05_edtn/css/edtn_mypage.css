@@ -22,7 +22,7 @@
 		.mps_cont li.last {border-bottom:0;}
 			.mps_cont li em {color:#333;}
 	/* 하단컨텐츠 */
-	.d_latest_purchase {position:relative; clear:both; border-bottom:1px solid #333;}
+	.d_latest_purchase {position:relative; .position:static; clear:both; border-bottom:1px solid #333;}
 		.mypage_mid_head {clear:both; float:left; display:inline; width:113px; margin:0 2px 0 113px; padding:18px 0 0 0; font-family:ngB; font-size:12px; color:#333; letter-spacing:-1px; border-top:1px solid #d9d9d9;}
 		.board_list, .prod_list {float:left; width:538px; margin-top:0; padding-bottom:17px; border-top:1px solid #d9d9d9;}
 		.board_list {padding-bottom:9px;}
@@ -74,7 +74,7 @@
 						.mpw_function .b_list_delete {position:absolute; top:26px; right:2px;}
 						.mpw_function .mpw_facebook {position:absolute; top:163px; left:0;}
 				.mpw_brand, .mpw_price, .mpw_sca {clear:both; height:21px; padding:8px 0 0 10px; font-family:arial; font-size:11px; color:#999; border-bottom:1px solid #d9d9d9;}
-					.mpw_brand .b_gobrandshop_g {float:right; display:inline; margin:-3px 108px 0 0;}
+					.mpw_brand .b_gobrandshop_g {float:right; display:inline; margin:-3px 108px 0 0; .margin-top:-15px;}
 				.mpw_sca {height:auto; border-bottom:0;}
 					.mpw_price {}
 					.mpw_amount {float:right; display:inline; width:194px; margin:-26px 0 0 0;}
@@ -85,7 +85,7 @@
 		.mpw_func_bottom {float:right; margin:20px 0 0 0;}
 			.mpw_func_bottom .b_s_b4d {float:left; display:inline; width:167px; height:30px; margin-right:34px; padding:13px 0 0 0; letter-spacing:-1px;  text-align:center;}
 			.mpw_func_bottom .b_s_cw {float:left; display:inline; width:96px; height:29px; margin-right:2px; padding-top:12px; font-family:ngEB; font-size:12px;}
-.mpw_wrap .border-b {bottom:63px; left:-228px; width:226px; background-color:#333;}
+.mpw_wrap .border-b {bottom:63px; .bottom:65px; _bottom:64px; left:-228px; width:226px; background-color:#333;}
 
 /* 주문/배송조회 */
 .mp_explain {font-family:ngEB; font-size:12px; line-height:19px; color:#999; letter-spacing:-1px;}
@@ -135,7 +135,7 @@
 		.cplist tbody tr td {padding:19px 0 17px 0; font-family:돋움;}
 		.cplist tbody tr td.cpl_no {font-family:arial;}
 		.cplist tbody tr td.cpl_name em {display:block; padding:5px 0 0 0; font-family:arial; color:#c8a76a;}
-	.cp_explain {clear:both; float:left; padding:23px 0 27px 0; letter-spacing:-1px; border-bottom:1px solid #d9d9d9;}
+	.cp_explain {clear:both; float:left; width:766px; padding:23px 0 27px 0; letter-spacing:-1px; border-bottom:1px solid #d9d9d9;}
 		.cp_explain h3 {float:left; width:122px; margin:2px 0 0 0; font-family:ngEB; font-size:12px; color:#333; line-height:19px;}
 		.cp_explain ul {float:left; width:644px;}
 			.cp_explain ul li {clear:both; float:left; width:100%; margin:4px 0 0 0; font-family:ngEB; font-size:12px; color:#999;}

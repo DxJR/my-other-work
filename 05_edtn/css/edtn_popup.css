@@ -10,3 +10,17 @@
 .pop_btn {clear:both; padding-top:19px;}
 	.pop_btn a.b_s_b4d {float:left; width:82px; height:30px; margin-right:10px; padding:13px 0 0 15px;}
 	.pop_btn a.b_s_cw {float:left; width:110px; height:29px; padding:12px 0 0 0; font-family:ngEB; font-weight:bold;}
+
+
+.p_regist {}
+	.p_regist h2 {clear:both; padding:28px 0 10px 0; font-family:ngEB; font-size:12px; color:#999; letter-spacing:-1px;}
+	.p_regi_desc {clear:both; width:338px; padding:9px 10px; font-family:dotum; font-size:12px; color:#333; line-height:18px; border:1px solid #d9d9d9;}
+	.p_regi_idcheck {margin:6px 0 3px 0;}
+		.p_regi_idcheck .iptxt {width:176px; height:28px; padding:0 0 0 10px; font-size:12px; border:0; line-height:28px; background:#e6e6e6;}
+		.p_regi_idcheck .b_s_b4d {width:87px; height:28px; margin-left:6px; font-size:12px; letter-spacing:-1px; text-align:center; border:0;}
+	.p_regi_zip {}
+		.p_regi_zip .iptxt {width:231px;}
+	.p_regi_zip_result {clear:both; width:358px;}
+		.p_regi_zip_result ul li {padding:9px 0 8px 9px; border-bottom:1px solid #d9d9d9;}
+			.p_regi_zip_result ul li a {font-family:dotum; font-size:12px; color:#999;}
+				.p_regi_zip_result ul li a strong {display:inline-block; width:52px; font-weight:normal; white-space:nowrap;}
