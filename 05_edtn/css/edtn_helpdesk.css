@@ -19,35 +19,17 @@
 	/* 하단컨텐츠 */
 	.hdu_cont_wrap {position:relative; .position:static; clear:both; border-bottom:1px solid #333;}
 		.hdu_mid_head {clear:both; float:left; display:inline; width:113px; margin:0 2px 0 113px; padding:18px 0 0 0; font-family:ngB; font-size:12px; color:#333; letter-spacing:-1px; border-top:1px solid #d9d9d9;}
-		.hdu_content {float:left; width:538px; margin-top:0; padding-bottom:17px; border-top:1px solid #d9d9d9;}
-		.board_list {padding-bottom:9px;}
-		/* 주문현황 */
-		.mpos {float:left; display:inline; width:190px; padding:17px 0 8px 0; font-family:ngB; font-size:12px; letter-spacing:-1px;}
-			.mpos h5 {font-size:12px; color:#333; line-height:18px;}
-			.head_exp {color:#999; line-height:20px;}
-			.mpos_how {margin-top:9px; color:#e80000; letter-spacing:0;}
-				.mpos_how em {position:relative; top:2px; font-family:rB; font-size:24px;}
-			.mposh_0 {color:#999;}
-		.mpos_last {width:157px;}
-		/* 최근 구매내역 */
-		.recent_order_list {margin-top:18px;}
-			/* thead */
-			.recent_order_list thead tr th {padding-bottom:9px; font-family:ngB; font-size:12px; color:#999; letter-spacing:-1px; text-align:center;}
-			.recent_order_list thead tr th.ro_no {width:70px; text-align:left;}
-			.recent_order_list thead tr th.ro_object {width:230px; text-indent:75px; text-align:left;}
-			.recent_order_list thead tr th.ro_price {width:82px;}
-			.recent_order_list thead tr th.ro_date {width:88px;}
-			.recent_order_list thead tr th.ro_status {width:68px;}
-			/* tbody */
-			.recent_order_list tbody tr td {padding:9px 0; font-family:arial; font-size:10px; color:#9f9f9f; text-align:center; border-top:1px solid #d9d9d9;}
-			.recent_order_list tbody tr td.cell_no, .recent_order_list tbody tr td.cell_l10 {text-align:left;}
-			.recent_order_list tbody tr td.cell_c {font-size:12px; text-align:right;}
-			.recent_order_list tbody tr td.cell_l10 a {color:#9f9f9f;}
-			.recent_order_list tbody tr td.cell_price_left .t_gray span {text-decoration:line-through;}
-			.recent_order_list tbody tr td.cell_c .t_11d {position:relative; top:2px; left:-1px;}
-		/* 최근 위시리스트 */
-		.prod_list ul {margin-top:21px;}
-			.prod_list ul li {width:133px; height:187px; margin:0 2px 0 0;}
-				.prod_list ul li p.p_tit a {display:block; width:125px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-				.prod_list ul li p.p_txt, .prod_list ul li p.p_price {margin-top:-3px;}
-			.prod_list ul li.last {margin-right:0;}
+		.hdu_content {float:left; width:538px; margin-top:0; padding:16px 0 17px 0; font-family:ngEB; font-size:12px; line-height:20px; color:#999; letter-spacing:-1px; border-top:1px solid #d9d9d9;}
+			.lt_m {letter-spacing:-2px;}
+			.hdu_content a {color:#999;}
+			.hdu_content h5 {padding-top:20px; font-size:12px;}
+			.hdu_content h5.first {padding-top:0;}
+			.hdu_content table {margin:6px 0 5px 0; border:1px solid #d9d9d9; border-collapse:collapse;}
+				.hdu_content table tr th, .hdu_content table tr td {padding-left:10px; text-align:left;}
+				.hdu_content table thead tr th {width:70px; height:38px;}
+				.hdu_content table thead tr th.first {width:81px;}
+				.hdu_content table tbody tr td {height:36px;}
+			.hdu_c_btn {margin-top:11px;}
+				.hdu_c_btn .b_s_b4d {width:101px; height:25px; margin-right:-2px; padding-top:4px; text-align:center;}
+			.hdu_content p.exp {font-size:11px;}
+				.hdu_content p.exp em {color:#b86b6b;}
