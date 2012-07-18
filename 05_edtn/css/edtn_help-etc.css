@@ -33,3 +33,33 @@
 				.hdu_c_btn .b_s_b4d {width:101px; height:25px; margin-right:-2px; padding-top:4px; text-align:center;}
 			.hdu_content p.exp {font-size:11px;}
 				.hdu_content p.exp em {color:#b86b6b;}
+
+/* 게시판 */
+.hd_brd_title {clear:both; float:left; width:100%; margin:-5px 0 20px 0; font-size:12px; font-family:ngEB; color:#999; line-height:19px;}
+	.hd_brd_title h3 {float:left; display:inline; margin:1px 0 0 0; font-size:12px;}
+	.hd_brd_title p {float:left; display:inline; margin-left:33px;}
+.hd_brd_list {clear:both;}
+	.hd_brd_list thead tr th {height:31px; font-size:11px; font-family:ngEB; color:#333; text-align:left; border:1px solid #333; border-width:1px 0;}
+	.hd_brd_list thead tr th.no {width:78px;}
+	.hd_brd_list thead tr th.subject {width:588px;}
+	.hd_brd_list thead tr th.date {width:100px; text-align:center;}
+	.hd_brd_list tbody tr td {color:#999; text-align:left; border-bottom:1px solid #d9d9d9; vertical-align:top;}
+	.hd_brd_list tbody tr td.no, .hd_brd_list tbody tr td.date {padding-top:20px; font-size:10px; font-family:arial;}
+	.hd_brd_list tbody tr td.subject {padding-top:19px; padding-bottom:18px; font-size:12px; font-family:dotum;}
+		.hd_brd_list tbody tr td.subject a {color:#999;}
+		.hd_brd_list tbody tr td.subject a:hover {text-decoration:underline;}
+	.hd_brd_list tbody tr td.date {text-align:center;}
+.hd_brd_more {z-index:2; position:relative; margin-top:-2px;}
+
+
+/*Provision */
+.prv_tit {margin-top:-3px; padding-bottom:8px; color:#999; border-bottom:1px solid #333;}
+	.prv_tit h3 {font-size:12px; font-family:ngEB;}
+.prv_policy, .prv_personal {padding-bottom:25px; font-family:dotum; font-size:12px; color:#999; line-height:20px; border-bottom:1px solid #333;}
+	.prv_policy h4, .prv_personal h4, .prv_personal h5 {margin-top:20px; font-size:12px;}
+	.prv_policy ol li ol {padding-left:14px;}
+
+.prv_personal {padding-top:16px;}
+.prv_personal h4, .prv_personal h5 {font-weight:normal;}
+.prv_personal h5 {margin-top:0;}
+.prv_personal .mt {margin-top:20px;}
