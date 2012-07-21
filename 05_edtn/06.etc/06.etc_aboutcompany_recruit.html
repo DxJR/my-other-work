@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>edtn:</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/edtn_common.css" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_product.css" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_help-etc.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/edtn_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		// select / input
+		$("form.jqtransform").jqTransform();
+		// toggle Brand
+		var brandTimer = null;
+		$("#sorting_brand").mouseover(function(){
+			$(this).addClass('lyr_open');
+			if (brandTimer) {
+				clearTimeout(brandTimer);
+			}
+			$('#lyr_head_brand').slideDown(250);
+		});
+		$("#sorting_brand").mouseout(function(){
+			$(this).removeClass('lyr_open');
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
+		});
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- logo -->
+		<h1>
+			<img src="../images/common/bi_objectheydey.gif" width="176" height="39" alt="Object Heydey : Heydey Private Collection" usemap="#heydeyBi" />
+			<map id="heydeyBi" name="heydeyBi">
+				<area shape="rect" coords="0,0,176,39" alt="OBJECT HEYDEY" href="#" />
+			</map>
+		</h1>
+		<!-- GNB -->
+		<div id="gnb">
+			<!-- login area -->
+			<div class="gnb_login">
+				<!-- my favorite brand -->
+				<div id="select_favorite">
+					<form class="jqtransform">
+						<select title="my favorite brand">
+							<option>my favorite brand</option>
+							<option>www.byheydey.com</option>
+							<option>www.studioheydey.com</option>
+						</select>
+					</form>
+				</div>
+				<ul class="gnb_btn">
+					<li><a href="#" class="gbtn gb_logout"><span class="ir">로그아웃</span></a></li>
+					<li><a href="#" class="gbtn gb_mypage"><span class="ir">마이페이지</span></a></li>
+				</ul>
+			</div>
+			<ul class="gnb_btn">
+				<li><a href="#" class="gbtn gb_basket"><span class="ir">장바구니</span></a></li>
+				<li><a href="#" class="gbtn gb_press"><span class="ir">보도자료</span></a></li>
+				<li><a href="#" class="gbtn gb_order"><span class="ir">주문 내역</span></a></li>
+				<li><a href="#" class="gbtn gb_review"><span class="ir">제품리뷰</span></a></li>
+				<li><a href="#" class="gbtn gb_faq"><span class="ir">자주묻는 질문</span></a></li>
+				<li><a href="#" class="gbtn gb_event"><span class="ir">진행중인 이벤트</span></a></li>
+				<li><a href="#" class="gbtn gb_question"><span class="ir">1:1 문의</span></a></li>
+			</ul>
+		</div>
+		<!-- HEAD SNB -->
+		<div id="h_snb">
+			<ul class="snb_btn">
+				<li><a href="#" class="gbtn sb_furniture"><span class="ir">Furniture</span></a></li>
+				<li><a href="#" class="gbtn sb_tableware"><span class="ir">Tableware</span></a></li>
+				<li><a href="#" class="gbtn sb_stationary"><span class="ir">Stationary</span></a></li>
+				<li><a href="#" class="gbtn sb_fabric"><span class="ir">Fabric</span></a></li>
+				<li><a href="#" class="gbtn sb_lighting"><span class="ir">Lighting</span></a></li>
+			</ul>
+			<!-- sorting brand -->
+			<div id="sorting_brand">
+				<a href="#" class="gbtn sb_brand"><span class="ir">Sorting Brand</span></a>
+				<!-- sorting brand layer -->
+				<div id="lyr_head_brand" class="lyr_brand">
+					<ul>
+						<li><a href="#" class="gbtn lb_almedhals"><span class="ir"><strong>Almedhals</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_anneblack"><span class="ir"><strong>Anne Black</strong> : tableware, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_byheydey"><span class="ir"><strong>Byheydey</strong> : furniture, Korea</span></a></li>
+						<li><a href="#" class="gbtn lb_danskvintage"><span class="ir"><strong>Dansk Vintage</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_guss"><span class="ir"><strong>Guss</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_montana"><span class="ir"><strong>Montana</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_saitowood"><span class="ir"><strong>Saito Wood</strong> : stationary, Japan</span></a></li>
+						<li class="last"><a href="#" class="gbtn lb_sceltevie"><span class="ir"><strong>Sceltevie</strong> : stationary, Japan</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- contentwrap -->
+	<div id="contentwrap">
+		<!-- snb -->
+		<div id="snb">
+			<!-- 브랜드페이지일 때 class="brand" // mypage 또는 help desk 처럼 한글일 때 class="snb_k" -->
+			<div class="snb_in snb_k">
+				<h2>About Company</h2>
+				<ul>
+					<li class="first"><a href="#">회사개요</a></li>
+					<li><a href="#">연혁</a></li>
+					<li><a href="#">경영이념</a></li>
+					<li><a href="#">윤리경영</a></li>
+					<li><a href="#" class="this">채용정보</a></li>
+					<li><a href="#">찾아오시는 길</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="prv_tit">
+				<h3>채용정보</h3>
+			</div>
+			<p class="ac_subscript">공간에 영민한 이들의 개성과 능력을 중시하고, <span class="lb">다양한 성장 기회를 제공하는 오브젝트헤이데이에서</span> 여러분의 꿈을 펼쳐 보시기 바랍니다.</p>
+			<div class="ac_explain ace_01">
+				<h4>1/ <span class="lb">PASSION</span></h4>
+				<p>자기가 하는 모든 일을 적극적으로 열심히 <span class="lb">수행하는 사람, 일에 대해 몰입할 수 있는 사람,</span> 인터넷 관련 분야에 관심이 많고 이 분야를 <span class="lb">발전시키는 일에 재미와 보람을 느끼는 사람.</span></p>
+			</div>
+			<div class="ac_explain ace_02">
+				<h4>2/ <span class="lb">INNOVATION</span></h4>
+				<p>어떤 일이든지 새로운 분야와 새로운 방식을 <span class="lb">찾아서 더 좋은 방향으로 해결하려고 하는 사람,</span> 새로운 것을 좋아하고 끊임없이 새로운 가치를 <span class="lb">창출해 내는 사람, 급변하는 인터넷 산업에 빠르고</span> 능동적으로 대처할 수 있는 사람</p>
+			</div>
+			<div class="ac_explain ace_03">
+				<h4>3/ <span class="lb">CREATIVITY</span></h4>
+				<p>새로운 아이디어를 창출해 낼 수 있는 능력을 <span class="lb">갖춘 사람, 기존 서비스의 틀에 얽매이지 않고</span> 사고할 수 있는 사람, 서비스, User Interface, <span class="lb">디자인, 기술 등이 창의적인 사람</span></p>
+			</div>
+			<div class="clear"></div>
+			<div class="ac_detail">
+				<h4>DETAIL <span class="lb">RECRUIT</span></h4>
+				<div class="acd_how">
+					<h5>채용방식</h5>
+					<p>
+						<span class="acdh_l">헤이데이에서는 유능한 인재들에게 언제든지 <span class="lb">헤이데이와 함께 할 수 있는 기회를 제공하고자</span> 인력풀 시스템을 운영하고 있습니다. <span class="lb">인력풀 시스템의 운영에 따라 신규 인력에 대한</span> 소요 또는 결원 발생 시 수시 채용을 하고 있으며,</span>
+						<span class="acdh_r">특정 직무에 한해 대규모의 인원이 필요한 <span class="lb">경우 공개 채용 방식을 진행하고 있습니다.</span> 수시 채용을 하고 있으며, 특정 직무에 한해 <span class="lb">대규모의 인원이 필요한 경우 공개 채용</span> 방식을 진행하고 있습니다.</span>
+					</p>
+				</div>
+				<div class="acd_how acdh_step">
+					<h5>전형절차</h5>
+					<p><span class="ir">온라인지원 - 서류심사 - 직무면접 - 인성면접 - 채용</span></p>
+				</div>
+				<div class="acd_how">
+					<h5>채용 부문</h5>
+					<p>
+						<span class="acdh_l">PLANNING DIRECTOR / SENIOR PLANNER / <span class="lb">JUNIOR PLANNER / SENIOR MD / JUNIOR MD /</span> TELEMARKETER / </span>
+						<span class="acdh_r">ART DIRECTOR / SENIOR DESIGNER / <span class="lb">JUNIOR DESIGNER / WEB PLANNER /</span> WEB PROGRAMMER</span>
+					</p>
+				</div>
+				<div class="acd_how">
+					<h5>지원서 접수</h5>
+					<p>
+						<span class="acdh_l">헤이데이의 입사 지원 접수는 온라인으로만 접수를 <span class="lb">받고 있습니다. 접수하신 지원서는 인력풀에</span> 저장되어 헤이데이의 인력채용 시 우선 고려 <span class="lb">대상으로 지정됩니다.</span></span>
+						<span class="acdh_r">필수 양식의 기재 후 자요롭게 작성하셔서 <span class="lb">아래 메일로 지원 바랍니다.</span></span>
+					</p>
+				</div>
+				<div class="acd_how acdh_prop">
+					<div class="acdh_l">
+						<h5>필수 양식:</h5>
+						<p>이력 / 사진 / 포트폴리오 / 지원분야 / 희망연봉</p>
+					</div>
+					<div class="acdh_r">
+						<h5>지원메일:</h5>
+						<p><a href="mailto:recruit@objectheydey.com">recruit@objectheydey.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="f_heydey_link">
+			<h2 class="hide">Heydey 소개 및 약관</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_company"><span class="ir">회사소개</span></a></li>
+				<li><a href="#" class="gbtn fb_job"><span class="ir">채용정보</span></a></li>
+				<li><a href="#" class="gbtn fb_policy"><span class="ir">이용약관</span></a></li>
+				<li><a href="#" class="gbtn fb_personalinfo"><span class="ir">개인정보취급방침</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate"><span class="ir">업무제휴</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate_info"><span class="ir">협력업체정보시스템</span></a></li>
+			</ul>
+		</div>
+		<div class="f_settlement">
+			<h2 class="hide">안전결제정보</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_sgic"><span class="ir">서울보증보험</span></a></li>
+				<li><a href="#" class="gbtn fb_kcp"><span class="ir">한국사이버결제</span></a></li>
+			</ul>
+		</div>
+		<div class="f_devide">
+			<div class="address">
+				<h2 class="hide">Heydey 사이트정보</h2>
+				<p class="f_addr"><span class="ir">(주)스튜디오헤이데이. 서울특별시 마포구 상수동 324-12 고객센터 1599 7193 팩스 02 334 5517 이메일</span> <a href="mailto:info@objectheydey.com"><span class="ir">info@objectheydey.com</span></a></p>
+				<p class="f_si"><span class="ir">사업자등록번호 105-87-18086 통신판매업신고 마포 1249호 개인정보취급책임자 오명아 대표 노환탁</span></p>
+				<p class="f_copy"><span class="ir">copyright 2012 studio heydey, inc. all rights reserved.</span></p>
+			</div>
+			<div class="familysite">
+				<form class="jqtransform">
+					<select title="family site">
+						<option>family site</option>
+						<option>www.byheydey.com</option>
+						<option>www.studioheydey.com</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
