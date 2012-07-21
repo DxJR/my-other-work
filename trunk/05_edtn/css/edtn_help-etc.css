@@ -63,3 +63,58 @@
 .prv_personal h4, .prv_personal h5 {font-weight:normal;}
 .prv_personal h5 {margin-top:0;}
 .prv_personal .mt {margin-top:20px;}
+
+/* 입점안내 */
+#snb h2.hdj_tit {margin-top:5px; padding:0; font-family:rB; font-size:24px; color:#333; line-height:25px; border-bottom:0;}
+.hdj_subscript {margin-top:-5px; font-family:ng; font-size:24px; color:#999; line-height:32px; letter-spacing:-3px;}
+.hdj_s_subscript {margin-top:6px; font-family:ngEB; font-size:12px; color:#999; letter-spacing:-1px;}
+.hdj_step_surmary {width:764px; height:188px; margin-top:33px; margin-bottom:20px; border:1px solid #e5dfcd; background:url('../images/hdj_step_srm.gif') left top no-repeat;}
+.hdj_step {clear:both; float:left; width:100%; margin-top:16px;}
+	.hdj_step h3, .hdj_step p {float:left; display:inline; height:37px; padding-bottom:16px; font-family:ngEB; font-size:12px; color:#999; line-height:18px; letter-spacing:-1px; border-bottom:1px solid #d9d9d9;}
+	.hdj_step h3 {width:125px;}
+	.hdj_step p {width:639px; margin-left:2px;}
+.hdj_step_last h3, .hdj_step_last p {border-bottom:0;}
+.hdj_cos_form {position:relative; clear:both; padding-top:20px;}
+	.hdj_cos_form fieldset {position:relative; padding:0 0 0 125px;}
+		.hdj_cos_form fieldset legend {width:123px; height:auto; padding-top:17px; text-indent:0; font-family:ngEB; font-size:12px; color:#333; line-height:normal; letter-spacing:-1px; overflow:visible; visibility:visible; border-top:1px solid #333;}
+	.hdj_cos_form table {width:639px; border-top:1px solid #333;}
+		.hdj_cos_form table tr th {width:96px; padding-top:16px; font-family:ngEB; font-size:12px; color:#999; text-align:left; letter-spacing:-1px; vertical-align:top;}
+		.hdj_cos_form table tr td {width:543px; padding-top:10px; color:#999;}
+			.hdj_cos_form table tr td input.iptxt, .hdj_cos_form table tr td .txtarea {height:26px; padding:0 9px; font-family:dotum; font-size:12px; color:#333; line-height:26px; vertical-align:middle; border:1px solid #d9d9d9; background:#fff;}
+			.hdj_cos_form table tr td .jqtype2 {display:inline-block; vertical-align:middle;}
+			.hdj_cos_form table tr.hdjc_first th {padding-top:26px;}
+			.hdj_cos_form table tr.hdjc_first td {padding-top:20px;}
+			/* 사이즈1 */
+			.hdj_cos_form table tr.hdjc_def td input.iptxt {width:221px;}
+			/* 사이즈2 */
+			.hdj_cos_form table tr.hdjc_szf td input.iptxt {width:523px;}
+			/* 이메일 */
+			.hdj_cos_form table tr.hdjc_email td {font-family:ngEB; font-size:12px;}
+			.hdj_cos_form table tr.hdjc_email td input.iptxt {width:136px; margin-right:-1px;}
+			.hdj_cos_form table tr.hdjc_email td select {width:125px;}
+			.hdj_cos_form table tr.hdjc_email td .jqtype2 {margin-left:13px; .margin:-28px 0 0 345px;}
+			/* 제안내용 */
+			.hdj_cos_form table tr.hdjc_textarea td .txtarea {width:523px; height:209px; padding-top:7px; line-height:17px; overflow:auto;}
+	/* 버튼들 */
+	.hdj_btn {position:relative; clear:both; height:43px; margin-top:20px; padding:20px 0 0 221px; border-top:1px solid #333;}
+		.hdj_btn .b_s_b4d, .hdj_btn .b_s_cw {float:left; display:inline; width:97px; height:43px; padding:0 0 0 15px; font-weight:bold; .line-height:43px; text-align:left;}
+		.hdj_btn .b_s_cw {width:110px; margin-left:10px; padding-left:0; _line-height:40px;}
+.hdj_cos_form .border-b {bottom:63px; left:123px;}
+
+/* 채용정보 */
+.ac_subscript {margin-top:22px; margin-bottom:30px; font-family:ngEB; font-size:24px; color:#333; line-height:38px; letter-spacing:-3px;}
+.ac_explain {float:left; display:inline;}
+	.ac_explain h4 {font-family:rB; font-size:16px; line-height:17px; color:#333;}
+	.ac_explain p {margin-top:5px; font-family:ngEB; font-size:12px; color:#999; letter-spacing:-1px; line-height:18px;}
+	.ace_01 {width:269px;}
+	.ace_02 {width:277px;}
+	.ace_03 {width:220px;}
+.ac_detail {position:relative; clear:both; margin-top:47px; padding:26px 0 0 269px; border-top:1px solid #d9d9d9;}
+	.ac_detail h4 {position:absolute; top:27px; left:0; font-family:rB; font-size:16px; color:#333; line-height:18px;}
+	.acd_how {clear:both; float:left; width:100%; margin-bottom:23px; font-family:ngEB; font-size:12px; line-height:18px; color:#999; letter-spacing:-1px;}
+		.acd_how h5 {padding-bottom:1px; font-size:12px; color:#333;}
+		.acdh_l {clear:both; float:left; width:282px;}
+		.acdh_r {float:left; width:215px;}
+	.acdh_step {}
+		.acdh_step p {position:relative; width:495px; height:52px; margin-top:7px; border:1px solid #e5dfcd; background:url('../images/acdh_step.gif') left top no-repeat;}
+	.acdh_prop, .acdh_prop h5, .acdh_prop a {color:#ea1111;}
