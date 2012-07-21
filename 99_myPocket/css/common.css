@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* ============ Default ============ */
+html, body {width:100%; height:100%;}
+body {font-size:12px; line-height:14px; color:#555; font-family:'돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#a0dae2;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
+li {list-style:none;}
+img, fieldset {border:0;}
+hr {display:none;}
+em, i {font-style:normal;}
+a {cursor:pointer; text-decoration:none;}
+a:hover {text-decoration:underline;}
+table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
+legend {position:absolute; top:0; left:0; display:inline;}
+button {cursor:pointer;}
+.clear {clear:both; float:none; width:0; height:0; margin:0; padding:0; font:0/0 arial;}
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+.ir {zoom:-10; z-index:-1; position:relative; display:block; width:100%;_width:0;_height:0;.text-indent:-9999em;_text-indent:-9999em; font-size:9px;_font-size:0;_line-height:0; text-align:center; white-space:nowrap; overflow:hidden;}
+form {clear:both;}
+input, select {font-size:100%; vertical-align:middle;}
+input, textarea, select {font-size:12px;}
+button::-moz-focus-inner {border:0; padding:0;}
+textarea{overflow:auto}
+input:focus {outline:none;}
+input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:13px; vertical-align:middle;}
+.iptxt {height:18px; padding-top:2px; padding-left:2px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+.select {padding:3px; font-family:dotum; font-size:12px; color:#555; border:1px solid #ccc;}
+/* float 해제 */
+.f_clear:after {content: "."; height: 0; display: block; visibility: hidden; clear:both;}
+* html .f_clear {height:1px;}
+.f_clear {display: block;min-height:1px;}
+
+/* 버튼 */
+.gbtn {position:relative; display:inline-block; width:auto; margin:0; padding:0; line-height:1; border:0; overflow:visible; cursor:pointer; vertical-align:middle; white-space:nowrap; font-family:'Arial','Tahoma','Dotum','AppleGothic','sans-serif'; background-repeat:no-repeat; background-color:transparent;}
+.gbtn:hover {text-decoration:none;}
+.gbtn span {position:relative; display:inline-block;}
+    input.gbtn {text-indent:-9999em;}
+    span.gbtn {cursor:default;}
+
+
+#wrap {width:958px; margin:0 auto;}
+
+/* Header */
+#header {position:relative; clear:both; float:left; width:100%; height:255px; background:url('../images/bg_header.gif') left bottom no-repeat;}
+	#header h1 {float:left; display:inline; margin:14px 0 0 12px; font:0/0 arial;}
+	#gnb {float:left; display:inline; margin:27px 0 0 46px;}
+		#gnb li {float:left; display:inline; margin-left:27px; font:0/0 arial;}
+
+/* contents */
+#contents {position:relative; clear:both; padding:40px 0; background:#fff;}
+	/* sub head */
+	.subhead-wrap {position:relative; clear:both; padding:0 0 0 27px;}
+		.subhead-wrap h2 {font:0/0 arial;}
+		.now-location {position:absolute; bottom:0; right:31px; font-size:12px; color:#000;}
+			.now-location a {color:#000;}
+			.now-location em {color:#4494a6;}
+	/* */
+	.content_inner {padding:30px 60px 0 56px;}
+
+/* Footer */
+#footer {position:relative; clear:both; padding-top:36px; padding-bottom:50px; text-align:center; font-size:11px; color:#fff; background:url('../images/bg_footer.gif') left top no-repeat;}
+	#footer dl dt, #footer dl dd {float:left; display:inline; white-space:nowrap;}
+	#footer dl dt {margin-left:3px;}
+	#footer dl dd a {color:#fff;}
+	#footer p {clear:both; padding-top:1px;}
+
+
+/* login */
+.login_wrap {width:824px; margin:64px 0 0 11px; font-family:'나눔고딕','돋움'; letter-spacing:-1px; background:url('../images/bg_login.gif') left top repeat-y;}
+	.fds_login {position:relative; background:url('../images/bg_login-top.gif') left top no-repeat;}
+		.fds_login legend {display:block; width:100%; height:40px; .margin-left:-7px; padding:39px 0 31px 0; text-indent:0; overflow:visible; visibility:visible; background:url('../images/bg_login-dot.gif') left bottom repeat-x;}
+			.fds_login legend img {margin-left:21px;}
+		.fds_login dl {float:left; display:inline; width:425px; margin:173px 0 0 129px}
+			.fds_login dl dt {clear:both; float:left; display:inline; width:66px; margin-top:22px; padding-right:13px; font-size:18px; .line-height:18px; font-family:'나눔고딕','돋움'; text-align:right;}
+			.fds_login dl dd {float:left; display:inline; width:346px; margin-top:6px;}
+				.fds_login dl dd input {width:344px; height:40px; font-size:18px; border:1px solid #c1c1c1;}
+		.fds_login .btn_fds_login {float:left; display:inline; width:136px; height:95px; margin:177px 0 0 9px; background:url('../images/btn_login.gif') left top no-repeat;}
+	.fds_login_menu {clear:both; width:100%; padding:66px 0 82px 0; font-size:18px; .line-height:18px; color:#7b7b7b; background:url('../images/bg_login-bottom.gif') left bottom no-repeat;}
+		.fds_login_menu	dl {clear:both; float:left; width:100%; padding-top:29px; background:url('../images/bg_login-dot.gif') left top repeat-x;}
+			.fds_login_menu	dl dt {clear:both; float:left; width:433px; margin-top:20px; padding-right:17px; text-align:right;}
+			.fds_login_menu	dl dd {float:left; display:inline; width:374px; margin-top:20px;}
+				.fds_login_menu	dl dd a {padding-left:16px; color:#7b7b7b; background:url('../images/ico_arw-r-orange.gif') left 7px no-repeat;}
+
+/* find */
+.fdyr-wrap {position:relative; clear:both; float:left; width:827px; margin:56px 0 0 12px; border:1px solid #dbdbdb;}
+.find-id {margin-top:68px;}
+	fieldset.find_yours {clear:both; width:829px; margin:0; padding:0; font-size:15px; letter-spacing:-1px;}
+		fieldset.find_yours legend {display:block; width:100%; height:40px; .margin-left:-7px; padding:18px 0 0 0; text-indent:0; overflow:visible; visibility:visible; background:#e9e9e9 url('../images/bg_login-dot.gif') left bottom repeat-x;}
+			fieldset.find_yours legend img {margin-left:21px;}
+		fieldset.find_yours dl {clear:both; float:left; width:645px; margin:113px 0 0 0;}
+			fieldset.find_yours dl dt {clear:both; float:left; width:211px; margin-top:20px; padding-right:14px; _line-height:18px; font-weight:bold; text-align:right;}
+			fieldset.find_yours dl dd {float:left; display:inline; width:420px; margin-top:12px;}
+				fieldset.find_yours dl dd input {width:219px; height:23px; padding-top:3px; font-size:15px; border:1px solid #c9c9c9;}
+				fieldset.find_yours dl dd select {width:175px; height:26px; border:1px solid #c9c9c9;}
+	.find-btn-wrap {clear:both; margin-top:58px; padding:23px 0; text-align:center; background:url('../images/bg_fb-wrap.gif') left top repeat-x;}
+		.fb-ok {width:82px; height:42px; background:url('../images/btn_fd-ok.gif') left top no-repeat;}
+
+/* 서브메뉴 */
+.sub_menu {width:925px; height:44px; margin-left:18px; background:url('../images/bg_sub_menu.gif') left top repeat-x;}
+	.sub_menu dt, .sub_menu dd {position:relative; float:left; display:inline; font:0/0 arial;}
+		.sub_menu dt img {position:absolute; top:5px; left:13px}
+	.sub_menu dd ul li {float:left; display:inline; margin-top:6px; margin-right:25px;}
+	.sub_menu dd ul li.last {margin-right:0;}
+
+/* 페이징 */
+.paging {margin-bottom:-23px; font-size:12px; line-height:14px; text-align:center;}
+	.paging a {margin:0 2px; padding:0 4px; font-family:굴림; font-size:16px; line-height:16px; color:#8f8f8f;}
+		.paging a em {font-weight:bold; color:#1e1e1e;}
+	.paging a.func {margin:; padding:0; text-align:center;}
+	.paging a.fnr {margin-left:-2px;}
+	.paging img {top:-1px; position:relative; vertical-align:middle;}
