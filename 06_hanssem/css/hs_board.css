@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* 게시판검색 */
+.cont_b_search {position:relative; height:35px; margin:12px 0 0 0; padding:6px 0 0 0; border:1px solid #e2e2e2; border-width:1px 0;}
+	.cont_b_search select {width:103px;}
+	.cont_b_search .jqTransformSelectWrapper {margin:4px 10px 0 0;}
+	.cont_b_search .cont_b_go {margin-left:-3px;}
+	.b_s_grd {position:absolute; top:-1px; right:0; display:block; width:117px; height:28px; padding:13px 0 0 10px; font-family:ngEB; font-size:12px; color:#0057a0; letter-spacing:-1px; border:1px solid #ccdce8; border-width:1px 0 1px 1px; background:url('../images/bg_b_s_grd.gif') left top repeat;}
+		.b_s_grd img {margin:0 0 0 9px; vertical-align:middle;}
+	/*  전시품 등급 가이드 */
+	#sgrd-guide {z-index:12; position:absolute; top:-1px; left:0; clear:both; display:none;}
+		.sgrdg_in {z-index:2; position:relative; width:701px; height:228px; padding:18px 0 0 30px; font-family:ngEB; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
+			.sgrdg_in h3 {font-size:16px; color:#0057a0;}
+			.sgrdg_in .explain {margin-top:4px; font-size:12px; color:#0057a0; line-height:18px;}
+			.grade_w {float:left; display:inline; width:203px; height:100px; margin-top:16px; padding:18px 0 0 20px; border:1px solid #ccdce8; border-left:0; background:#fff;}
+				.grade_w h4, .grade_w .grade {font-size:16px; color:#d7182a;}
+				.grade_w .gw_explain {margin-top:3px; font-size:12px; color:#808080; line-height:18px; letter-spacing:-1px;}
+			.grade_w_c {border-right:0;}
+		.close_lyr {position:absolute; top:20px; right:20px; clear:both; width:21px; height:21px;}
+			.b_c_layer {width:21px; height:21px; text-indent:-9999em; background-position:left top;}
+		/* shadow */
+		#sgrd-guide .shadow {z-index:1; position:absolute; right:-7px; bottom:-7px; clear:both; width:739px; height:254px; background:url('../images/bg_sgrd_guide.png') right bottom no-repeat;}
+
+/* 전시품 할인판매 */
+.sr_item_list {clear:both; margin-top:28px; border-bottom:1px solid #333;}
+	/* thead */
+	.sr_item_list thead tr th {padding-bottom:8px; font-family:ngEB; font-size:12px; color:#333; text-align:left; border-bottom:1px solid #333;}
+	.sr_item_list thead tr th.no {width:52px;}
+	.sr_item_list thead tr th.item {width:246px;}
+	.sr_item_list thead tr th.shop {width:171px;}
+	.sr_item_list thead tr th.discount {width:96px;}
+	.sr_item_list thead tr th.sell {width:86px;}
+	.sr_item_list thead tr th.date {width:80px;}
+	/* tbody */
+	.sr_item_list tbody tr td {padding:14px 0 15px 0; font-family:mgB; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-top:1px solid #e2e2e2; vertical-align:top;}
+		.sr_item_list tbody tr td a {float:left; color:#a6a6a6;}
+		.sr_item_list tbody tr td strong {font-weight:normal;}
+		.sr_item_list tbody tr td strong, .sr_item_list tbody tr td em {color:#d7182a;}
+		.sr_item_list tbody tr td em.complete {color:#a6a6a6;}
+	.sr_item_list tbody tr.first td {border-top:0;}
+	.sr_item_list tbody tr.this td {background-color:#f9f9f9;}
+/* 내용보기 */
+.sr_item_view {clear:both; margin:28px 0 0 0; font-family:mg; font-size:12px; line-height:18px; color:#a6a6a6;}
+	.sr_item_view h3 {font-weight:normal; font-size:16px; color:#333; line-height:18px; letter-spacing:-1px;}
+	/* 기본정보 */
+	.sriv_info_w {clear:both; float:left; width:100%; margin:14px 0 0 0; padding:11px 0 12px 0; border:1px solid #e2e2e2; border-width:1px 0;}
+		.sr_grd {float:left; color:#d7182a; white-space:nowrap;}
+		.sr_palce {float:left; display:inline; margin-left:48px;}
+		.sr_article {float:right; display:inline; margin-right:17px;}
+	/* 상세정보 */
+	.sriv_article {clear:both; float:left; width:100%; margin-bottom:37px; padding-top:20px;}
+		.sriv_article .img {display:block; margin-bottom:20px; text-align:center;}
+		.sriva_in {clear:both; float:left; width:100%; margin-top:-6px; line-height:22px;}
+			.sriva_in h4 {float:left; width:140px; font-weight:normal; font-size:12px; color:#333; letter-spacing:-1px;}
+			.sriva_in_uw {float:left; width:330px;}
+			.sriva_in_info {float:left; width:260px;}
+	/* 하단목록 */
+	.sr_item_view .sr_item_list {}
+		.sr_item_view .sr_item_list thead tr th {height:0; font:0/0 arial; overflow:hidden;}
+	/* 하단버튼 */
+	.btn_w_bottom {position:relative; clear:both; padding-top:8px;}
+		.bwb_l {float:left; margin-top:8px; font-size:15px; font-family:dotum; color:#d6d6d6;}
+			.b_p_sriva {position:relative; top:-2px; font-family:mg; font-size:12px; color:#333;}
+				.b_p_sriva .icn {width:4px; height:7px;}
+			.b_p_l {margin-right:6px;}
+				.b_p_l .icn {margin-right:2px; background-position:-100px top;}
+			.b_p_r {margin-left:6px;}
+				.b_p_r .icn {margin-left:2px; background-position:-105px top;}
+		.btn_w_bottom .b_list_all {position:relative; right:-5px; float:right; width:73px; height:37px; background-position:-25px top;}
+/* 전시품 구매 문의 */
+.sib_pi_w {position:relative; margin-top:12px; padding:10px 20px; font-family:ngEB; font-size:12px; color:#0057a0; line-height:21px; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
+	.sib_pi_w h3 {font-size:12px;}
+.sib_pi_agr {margin-top:13px; padding-left:20px; font-family:ngEB; font-size:12px; color:#0057a0;}
+	.sib_pi_agr .check {top:0; margin-right:4px;}
+/* 문의작성폼 */
+.sib_write {clear:both; margin-top:13px;}
+	.sib_write_in {padding:0 20px; font-family:mg; font-size:12px; color:#a6a6a6; border:1px solid #e2e2e2; border-width:1px 0; background:#fcfcfc;}
+		.hsm_form_def tr th {width:80px; padding-top:12px; font-weight:normal; text-align:left; vertical-align:top; border-bottom:1px solid #e2e2e2;}
+		.hsm_form_def tr td {width:611px; padding:10px 0; border-bottom:1px solid #e2e2e2;}
+		/* 고객명/아이디 */
+		tr.hfd_name td .hfiptxt input, tr.hfd_id td .hfiptxt input {width:245px;}
+		/* 이메일주소 */
+		tr.hfd_email td .hfiptxt input {width:111px;}
+		tr.hfd_email td .hfiptxt, tr.hfd_email td i {float:left; display:inline;}
+		tr.hfd_email td i {margin:2px 3px 0 3px;}
+		tr.hfd_email td select {width:99px;}
+		/* 핸드폰번호 */
+		tr.hfd_cellp td .hfiptxt {margin-left:5px; margin-right:-4px;}
+			tr.hfd_cellp td .hfiptxt input {width:75px;}
+		tr.hfd_cellp td select {width:63px;}
+		/* 주소 */
+		tr.hfd_addr td .hfiptxt {margin-right:1px; margin-bottom:10px;}
+			tr.hfd_addr td .hfiptxt input {width:75px;}
+		.b_s_zipcode {width:98px; height:33px; margin:-4px 0 -8px -3px; background-position:-145px -40px;}
+		tr.hfd_addr td .itx_su {margin-bottom:0;}
+			tr.hfd_addr td .itx_su input {width:245px;}
+		tr.hfd_addr td select {width:63px;}
+		/* 제목 */
+		tr.hfd_subject td .hfiptxt input {width:500px;}
+		/* 문의상품 */
+		tr.hfd_qkind td select {width:103px;}
+		tr.hfd_qkind td .jqTransformSelectWrapper {margin-right:10px;}
+		tr.hfd_qkind td .hfiptxt {margin-left:-5px;}
+			tr.hfd_qkind td .hfiptxt input {width:245px;}
+		/* 내용 */
+		tr.hfd_cont th, tr.hfd_cont td {border-bottom:0;}
+		tr.hfd_cont td .hftxtarea textarea {width:599px; height:238px;}
+	/* 등록버튼 */
+	.submit_btn {clear:both; margin-top:20px; text-align:center;}
+		.b_q_submit {width:143px; height:40px; background-position:left -40px;}
