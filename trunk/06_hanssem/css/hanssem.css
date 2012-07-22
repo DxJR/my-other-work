@@ -89,9 +89,9 @@ a.jqTransformChecked {background-position:left -20px;}
 
 /* 작성자폼 */
 .hfiptxt {display:inline-block; height:21px; padding:0 0 0 2px; background:url('../images/bg_iptxt.gif') left top no-repeat;}
-	.hfiptxt input {height:21px; padding:0 0 0 3px; border:0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:20px !important; background:url('../images/bg_iptxt.gif') right top no-repeat;}
+	.hfiptxt input {height:21px; padding:0 0 0 3px; border:0; font-family:mg; font-size:12px; color:#4c4c4c; line-height:20px !important; background:url('../images/bg_iptxt.gif') right top no-repeat;}
 .hftxtarea {position:relative; display:inline-block; border-top:1px solid #abadb3; border-right:1px solid #dbdfe6; border-bottom:1px solid #e3e9ef; border-left:1px solid #e2e3ea; background:#fff;}
-	.hftxtarea textarea {padding:5px; font-family:mg; font-size:12px; color:#a6a6a6; line-height:20px; border:0; overflow:auto;}
+	.hftxtarea textarea {padding:5px; font-family:mg; font-size:12px; color:#4c4c4c; line-height:20px; border:0; overflow:auto;}
 	.hftxtarea i {position:absolute; display:block; width:2px; height:2px; font:0/0 arial; overflow:hidden; background-image:url('../images/cnr_hftxtarea.gif'); background-repeat:no-repeat;}
 	.hftxtarea i.lt {top:-1px; left:-1px; background-position:left top;}
 	.hftxtarea i.rt {top:-1px; right:-1px; background-position:right top;}
