@@ -3,9 +3,6 @@
 /* Font */
 @font-face {font-family:mg; src:url('font/malgun.eot'); src:local('☺'), url('font/malgun.ttf') format('truetype'); font-weight:normal;}
 @font-face {font-family:mgB; src:url('font/malgunbd.eot'); src:local('☺'), url('font/malgunbd.ttf') format('truetype'); font-weight:normal;}
-@font-face {font-family:ng; src:url('font/NanumGothic.eot'); src:local('☺'), url('font/NanumGothic.ttf') format('truetype'); font-weight:normal;}
-@font-face {font-family:ngB; src:url('font/NanumGothicBold.eot'); src:local('☺'), url('font/NanumGothicBold.ttf') format('truetype'); font-weight:normal;}
-@font-face {font-family:ngEB; src:url('font/NanumGothicExtraBold.eot'); src:local('☺'), url('font/NanumGothicExtraBold.ttf') format('truetype'); font-weight:normal;}
 
 
 /* Default */

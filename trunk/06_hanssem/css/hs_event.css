@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* 제목 */
+.ctw_event h2 {width:36px; background-position:left -50px;}
+.ctw_event .ctw_exp {width:264px; height:30px; background-position:left -70px;}
+/* 하위메뉴 */
+.hcsm_event_now, .hcsm_event_now strong {width:77px; background-position:left top;}
+	.hcsm_event_now strong {background-position:left -15px;}
+.hcsm_event_old, .hcsm_event_old strong {width:55px; background-position:-80px top;}
+	.hcsm_event_old strong {background-position:-80px -15px;}
+/* 메인이벤트 */
+.hs_event_main {margin-top:20px; font:0/0 arial;}
+/* 이벤트목록 */
+.hse_list {clear:both; margin-top:20px; font:0/0 arial;}
+	.hse_list li {display:inline-block; width:100%; padding:20px 0; border-top:1px solid #e6e6e6;}
+	.hse_list li.nth-2d {width:360px; margin-left:-360px;}
+/* 지난이벤트 */
+.hse_list_old {margin-top:0;}
+	.hse_list_old li {border-top:0; border-bottom:1px solid #e6e6e6;}
+/* 이벤트 자세히보기 */
+.hse_view_w {position:relative; clear:both;}
+	/* 이벤트 소개 이미지 */
+	.hsev_visual {position:relative; left:-58px; clear:both; margin:12px 0 0 0;}
+	/* 댓글목록 */
+	.hsev_replay_w {clear:both; margin-top:17px;}
+		.hsev_replay_w h4 {font-family:mg; font-weight:normal; font-size:12px; color:#333;}
+		.hs_reply_list {clear:both; margin-top:8px; border-top:1px solid #e2e2e2;}
+			.hs_reply_list li {position:relative; padding:12px 0 12px 0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-bottom:1px solid #e2e2e2;}
+				.hs_reply_list li .content {padding-right:120px;}
+				.hs_reply_list li .function {position:absolute; top:13px; right:0; font-size:0;}
+					.b_r_modify, .b_r_delete, .b_r_write {width:20px; height:19px; margin-left:3px;}
+					.b_r_modify {background-position:-110px top;}
+					.b_r_delete {background-position:-131px top;}
+					.b_r_write {margin-left:25px; background-position:-151px top;}
+		/* 재댓글 */
+		.hsrl_2d {margin-top:12px; margin-bottom:-12px; border-top:0;}
+			.hsrl_2d li {padding-left:40px; border-top:1px solid #e2e2e2; border-bottom:0; background:url('../images/ico_hsrl_2d.gif') 10px 11px no-repeat;}
+		/* 재댓글작성 */
+		.hsev_ir_write {position:relative; margin-top:12px; padding:15px 0 0 40px; font-size:0; border-top:1px solid #e2e2e2; border-bottom:0; background:url('../images/ico_hsrl_2d.gif') 10px 11px no-repeat;}
+			.hsev_ir_write .hfiptxt {top:-2px;}
+				.hsev_ir_write .hfiptxt input {width:556px; color:#4c4c4c;}
+			.b_hsrm_ok {width:63px; height:33px; margin-left:7px; background-position:-150px -80px;}
+			.b_hsrm_cancel {width:60px; height:33px; background-position:-213px -80px;}
+		/* 댓글수정 */
+		.hs_reply_list li.hsev_r_modify {}
+			.hs_reply_list li.hsev_r_modify .content, .hs_reply_list li.hsev_r_modify .writer, .hs_reply_list li.hsev_r_modify .function {display:none;}
+			.hs_reply_list li.hsev_r_modify .hsev_ir_write {margin:3px 0 0 0; padding:0; border-top:0; border-bottom:0; background:none;}
+				.hs_reply_list li.hsev_r_modify .hsev_ir_write .hfiptxt input {width:596px;}
+	/* 한줄 댓글 쓰기 */
+	.hsev_write {position:relative; margin-top:50px; padding:20px 0 25px 30px; border:1px solid #ccdce8; border-width:1px 0 1px 0; background:url('../images/bg_b_s_grd.gif') left top repeat;}
+		.hsev_write p {width:131px; height:13px; margin-bottom:3px; overflow:hidden; background:url('../images/hsev_write_tit.gif') left top no-repeat;}
+		.hsev_write .hfiptxt input {width:601px;}
+		.b_hsevw_ok {top:2px; width:63px; height:33px; margin-left:4px; background:url('../images/btn_hsev_r_write.png') left top no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/btn_hsev_r_write.png',sizingMethod='crop');}
+	/* 이벤트 목록 버튼 */
+	.hsev_btn_w {clear:both; margin-top:20px; text-align:center;}
+		.b_event_list {width:143px; height:41px; background-position:left -80px;}
