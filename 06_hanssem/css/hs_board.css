@@ -1,21 +1,35 @@
 @charset "utf-8";
 
+/* 제목 */
+.ctw_board h2 {width:92px; background-position:left top;}
+	.ctw_board .ctw_exp {width:446px; height:30px; background-position:left -20px;}
+
 /* 게시판검색 */
 .cont_b_search {position:relative; height:35px; margin:12px 0 0 0; padding:6px 0 0 0; border:1px solid #e2e2e2; border-width:1px 0;}
 	.cont_b_search select {width:103px;}
 	.cont_b_search .jqTransformSelectWrapper {margin:4px 10px 0 0;}
 	.cont_b_search .cont_b_go {margin-left:-3px;}
-	.b_s_grd {position:absolute; top:-1px; right:0; display:block; width:117px; height:28px; padding:13px 0 0 10px; font-family:ngEB; font-size:12px; color:#0057a0; letter-spacing:-1px; border:1px solid #ccdce8; border-width:1px 0 1px 1px; background:url('../images/bg_b_s_grd.gif') left top repeat;}
-		.b_s_grd img {margin:0 0 0 9px; vertical-align:middle;}
+	.b_s_grd {position:absolute; top:-1px; right:0; width:128px; height:43px; background-position:left -155px;}
 	/*  전시품 등급 가이드 */
 	#sgrd-guide {z-index:12; position:absolute; top:-1px; left:0; clear:both; display:none;}
 		.sgrdg_in {z-index:2; position:relative; width:701px; height:228px; padding:18px 0 0 30px; font-family:ngEB; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
-			.sgrdg_in h3 {font-size:16px; color:#0057a0;}
-			.sgrdg_in .explain {margin-top:4px; font-size:12px; color:#0057a0; line-height:18px;}
-			.grade_w {float:left; display:inline; width:203px; height:100px; margin-top:16px; padding:18px 0 0 20px; border:1px solid #ccdce8; border-left:0; background:#fff;}
-				.grade_w h4, .grade_w .grade {font-size:16px; color:#d7182a;}
-				.grade_w .gw_explain {margin-top:3px; font-size:12px; color:#808080; line-height:18px; letter-spacing:-1px;}
+		.sgrdg_in h3, .sgrdg_in .explain, .grade_w h4, .grade_w .grade, .grade_w .gw_explain {overflow:hidden; background-image:url('../images/set_sgrdg.gif'); background-repeat:no-repeat;}
+			.sgrdg_in h3 {width:118px; height:16px; background-position:left top;}
+			.sgrdg_in .explain {width:290px; height:30px; margin-top:10px; background-position:-120px top;}
+			.grade_w {float:left; display:inline; width:203px; height:98px; margin-top:20px; padding:20px 0 0 20px; border:1px solid #ccdce8; border-left:0; background:#fff;}
+				.grade_w h4, .grade_w .grade {height:16px;}
+				.grade_w .grade {width:127px; margin-top:6px;}
+				.grade_w .gw_explain {margin-top:10px; height:30px;}
+			.grade_w_a h4 {width:41px; background-position:left -30px;}
+			.grade_w_a .grade {background-position:left -50px;}
+			.grade_w_a .gw_explain {width:122px; background-position:left -70px;}
+			.grade_w_b h4 {width:38px; background-position:-45px -30px;}
+			.grade_w_b .grade {background-position:-130px -50px;}
+			.grade_w_b .gw_explain {width:180px; background-position:-130px -70px;}
 			.grade_w_c {border-right:0;}
+			.grade_w_c h4 {width:39px; background-position:-85px -30px;}
+			.grade_w_c .grade {background-position:-260px -50px;}
+			.grade_w_c .gw_explain {width:123px; background-position:left -100px;}
 		.close_lyr {position:absolute; top:20px; right:20px; clear:both; width:21px; height:21px;}
 			.b_c_layer {width:21px; height:21px; text-indent:-9999em; background-position:left top;}
 		/* shadow */
@@ -24,15 +38,22 @@
 /* 전시품 할인판매 */
 .sr_item_list {clear:both; margin-top:28px; border-bottom:1px solid #333;}
 	/* thead */
-	.sr_item_list thead tr th {padding-bottom:8px; font-family:ngEB; font-size:12px; color:#333; text-align:left; border-bottom:1px solid #333;}
+	.sr_item_list thead tr th {padding-bottom:8px; text-align:left; border-bottom:1px solid #333;}
+		.sr_item_list thead tr th .icn {top:0; height:12px;}
 	.sr_item_list thead tr th.no {width:52px;}
+		.sr_item_list thead tr th.no .icn {width:21px; background-position:-130px -155px;}
 	.sr_item_list thead tr th.item {width:246px;}
+		.sr_item_list thead tr th.item .icn {width:31px; background-position:-155px -155px;}
 	.sr_item_list thead tr th.shop {width:171px;}
+		.sr_item_list thead tr th.shop .icn {width:31px; background-position:-190px -155px;}
 	.sr_item_list thead tr th.discount {width:96px;}
+		.sr_item_list thead tr th.discount .icn {width:57px; background-position:-225px -155px;}
 	.sr_item_list thead tr th.sell {width:86px;}
+		.sr_item_list thead tr th.sell .icn {width:43px; background-position:-285px -155px;}
 	.sr_item_list thead tr th.date {width:80px;}
+		.sr_item_list thead tr th.date .icn {width:31px; background-position:-330px -155px;}
 	/* tbody */
-	.sr_item_list tbody tr td {padding:14px 0 15px 0; font-family:mgB; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-top:1px solid #e2e2e2; vertical-align:top;}
+	.sr_item_list tbody tr td {padding:14px 0 15px 0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-top:1px solid #e2e2e2; vertical-align:top;}
 		.sr_item_list tbody tr td a {float:left; color:#a6a6a6;}
 		.sr_item_list tbody tr td strong {font-weight:normal;}
 		.sr_item_list tbody tr td strong, .sr_item_list tbody tr td em {color:#d7182a;}
@@ -57,6 +78,7 @@
 	/* 하단목록 */
 	.sr_item_view .sr_item_list {}
 		.sr_item_view .sr_item_list thead tr th {height:0; font:0/0 arial; overflow:hidden;}
+		.sr_item_view .sr_item_list thead tr th .icn {height:0;}
 	/* 하단버튼 */
 	.btn_w_bottom {position:relative; clear:both; padding-top:8px;}
 		.bwb_l {float:left; margin-top:8px; font-size:15px; font-family:dotum; color:#d6d6d6;}
@@ -68,10 +90,11 @@
 				.b_p_r .icn {margin-left:2px; background-position:-105px top;}
 		.btn_w_bottom .b_list_all {position:relative; right:-5px; float:right; width:73px; height:37px; background-position:-25px top;}
 /* 전시품 구매 문의 */
-.sib_pi_w {position:relative; margin-top:12px; padding:10px 20px; font-family:ngEB; font-size:12px; color:#0057a0; line-height:21px; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
-	.sib_pi_w h3 {font-size:12px;}
-.sib_pi_agr {margin-top:13px; padding-left:20px; font-family:ngEB; font-size:12px; color:#0057a0;}
+.sib_pi_w {position:relative; height:731px; height:129px; margin-top:12px; text-indent:-9999em; font:0/0 arial; overflow:hidden; border:1px solid #ccdce8; border-width:1px 0; background:url('../images/sib_pi_w.gif') left top repeat;}
+	.sib_pi_w h3, .sib_pi_w ul {position:absolute; top:-9999em; left:-9999em;}
+.sib_pi_agr {margin-top:13px; padding-left:20px;}
 	.sib_pi_agr .check {top:0; margin-right:4px;}
+	.sib_pi_agr label {position:relative; top:2px; display:inline-block; width:55px; height:12px; overflow:hidden; background:url('../images/sib_pi_agree.gif') left top no-repeat;}
 /* 문의작성폼 */
 .sib_write {clear:both; margin-top:13px;}
 	.sib_write_in {padding:0 20px; font-family:mg; font-size:12px; color:#a6a6a6; border:1px solid #e2e2e2; border-width:1px 0; background:#fcfcfc;}

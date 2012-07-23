@@ -34,22 +34,22 @@
 		<!-- 최상단 공통메뉴 -->
 		<div id="twrap">
 			<h2 class="hide">한샘 주요 사이트</h2>
-			<p class="hstw_af"><button type="button" class="gbtn b_add_f">한샘 인테리어 즐겨찾기</button></p>
+			<p class="hstw_af"><button type="button" class="gbtn b_add_f"><span class="ir">한샘 인테리어 즐겨찾기</span></button></p>
 			<ul class="hstw_fs">
-				<li><a href="#">한샘닷컴</a></li>
-				<li><a href="#">한샘몰</a></li>
-				<li class="last"><a href="#">한샘부엌</a></li>
+				<li><a href="#" class="gbtn b_fs_hcom"><span class="ir">한샘닷컴</span></a></li>
+				<li><a href="#" class="gbtn b_fs_hmall"><span class="ir">한샘몰</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_fs_hkitchen"><span class="ir">한샘부엌</span></a></li>
 			</ul>
 		</div>
 		<!-- GNB -->
 		<div id="gnb">
 			<h2 class="hide">자주쓰는메뉴</h2>
 			<ul class="m_gnb">
-				<li><a href="#">한샘 통합 로그인</a></li>
-				<li><a href="#">한샘인테리어 스토리</a></li>
-				<li><a href="#">전시품 할인판매</a></li>
-				<li><a href="#">이벤트</a></li>
-				<li class="last"><a href="#">매장안내</a></li>
+				<li><a href="#" class="gbtn b_gnb_login"><span class="ir">한샘 통합 로그인</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -60,21 +60,21 @@
 			<div id="snb">
 				<h2 class="hide">카테고리메뉴</h2>
 				<ul class="m_snb">
-					<li class="first"><a href="#">거실</a></li>
-					<li><a href="#">다이닝룸</a></li>
-					<li><a href="#">침실</a></li>
-					<li><a href="#">메트리스</a></li>
-					<li><a href="#">드레스룸</a></li>
-					<li><a href="#">서재.홈오피스</a></li>
-					<li><a href="#">키즈.자녀방</a></li>
+					<li class="first"><a href="#" class="b_snb_living"><i class="icn"></i><span class="ir">거실</span></a></li>
+					<li><a href="#" class="b_snb_dining"><i class="icn"></i><span class="ir">다이닝룸</span></a></li>
+					<li><a href="#" class="b_snb_bed"><i class="icn"></i><span class="ir">침실</span></a></li>
+					<li><a href="#" class="b_snb_mattress"><i class="icn"></i><span class="ir">메트리스</span></a></li>
+					<li><a href="#" class="b_snb_dress"><i class="icn"></i><span class="ir">드레스룸</span></a></li>
+					<li><a href="#" class="b_snb_office"><i class="icn"></i><span class="ir">서재.홈오피스</span></a></li>
+					<li><a href="#" class="b_snb_kids"><i class="icn"></i><span class="ir">키즈.자녀방</span></a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- content -->
 		<div id="content">
-			<div class="cont_tit_wrap">
-				<h2>전시품 할인 판매</h2>
-				<p class="ctw_exp">매장 전시품을 할인하여 판매하는 게시판입니다. 전시품은 예약제가 아닌 선착순으로 판매됩니다. <span class="lb">자세한 판매정보는 해당 매장에 직접 연락 후 확인 바랍니다</span></p>
+			<div class="cont_tit_wrap ctw_board">
+				<h2><span class="ir">전시품 할인 판매</span></h2>
+				<p class="ctw_exp"><span class="ir">매장 전시품을 할인하여 판매하는 게시판입니다. 전시품은 예약제가 아닌 선착순으로 판매됩니다. 자세한 판매정보는 해당 매장에 직접 연락 후 확인 바랍니다</span></p>
 			</div>
 			<!-- 검색 -->
 			<fieldset class="cont_b_search">
@@ -103,26 +103,26 @@
 					</select>
 					<input type="image" class="cont_b_go" src="../images/btn_b_search.gif" />
 				</form>
-				<a href="#" class="b_s_grd" onclick="showLayer('sgrd-guide'); return false;">전시품 등급 가이드 <img src="../images/ico_b_s_grd.gif" width="6" height="11" alt="&gt;" /></a>
+				<a href="#" class="gbtn b_s_grd" onclick="showLayer('sgrd-guide'); return false;"><span class="ir">전시품 등급 가이드</span></a>
 				<!-- 전시품 등급 가이드 레이어 -->
 				<div id="sgrd-guide" style="display:inline;">
 					<div class="sgrdg_in">
-						<h3>전시품 등급 가이드</h3>
-						<p class="explain">전시용으로 진열되어 있는 제품으로 판매 할인율 가이드입니다. <span class="lb">구매 시 참고 바랍니다.</span></p>
-						<div class="grade_w">
-							<h4>A등급</h4>
-							<p class="grade"><strong>할인율: 10% - 20%</strong></p>
-							<p class="gw_explain">정상 제품에 가까운 품질의 <span class="lb">제품입니다.</span></p>
+						<h3><span class="ir">전시품 등급 가이드</span></h3>
+						<p class="explain"><span class="ir">전시용으로 진열되어 있는 제품으로 판매 할인율 가이드입니다. 구매 시 참고 바랍니다.</span></p>
+						<div class="grade_w grade_w_a">
+							<h4><span class="ir">A등급</span></h4>
+							<p class="grade"><span class="ir"><strong>할인율: 10% - 20%</strong></span></p>
+							<p class="gw_explain"><span class="ir">정상 제품에 가까운 품질의 제품입니다.</span></p>
 						</div>
-						<div class="grade_w">
-							<h4>B등급</h4>
-							<p class="grade"><strong>할인율: 20% - 30%</strong></p>
-							<p class="gw_explain">전시 중 약간의 이색, 찍힘, 얼룩, 긁힘이 <span class="lb">있는 제품입니다.</span></p>
+						<div class="grade_w grade_w_b">
+							<h4><span class="ir">B등급</span></h4>
+							<p class="grade"><span class="ir"><strong>할인율: 20% - 30%</strong></span></p>
+							<p class="gw_explain"><span class="ir">전시 중 약간의 이색, 찍힘, 얼룩, 긁힘이 있는 제품입니다.</span></p>
 						</div>
 						<div class="grade_w grade_w_c">
-							<h4>C등급</h4>
-							<p class="grade"><strong>할인율: 30% - 50%</strong></p>
-							<p class="gw_explain">사용에 불편함은 없으나, <span class="lb">수리가 필요한 제품입니다.</span></p>
+							<h4><span class="ir">C등급</span></h4>
+							<p class="grade"><span class="ir"><strong>할인율: 30% - 50%</strong></span></p>
+							<p class="gw_explain"><span class="ir">사용에 불편함은 없으나, 수리가 필요한 제품입니다.</span></p>
 						</div>
 						<p class="close_lyr"><button type="button" class="gbtn b_c_layer" onclick="closeLayer('sgrd-guide');" title="닫기"><span class="ir">닫기</span></button></p>
 					</div>
@@ -134,12 +134,12 @@
 			<table cellpadding="0" cellspacing="0" summary="전시품 할인판매 상품목록" class="sr_item_list">
 				<thead>
 					<tr>
-						<th class="no">번호</th>
-						<th class="item">상품명</th>
-						<th class="shop">매장명</th>
-						<th class="discount">할인율/등급</th>
-						<th class="sell">판매여부</th>
-						<th class="date">등록일</th>
+						<th class="no"><i class="icn"><span class="ir">번호</span></i></th>
+						<th class="item"><i class="icn"><span class="ir">상품명</span></i></th>
+						<th class="shop"><i class="icn"><span class="ir">매장명</span></i></th>
+						<th class="discount"><i class="icn"><span class="ir">할인율/등급</span></i></th>
+						<th class="sell"><i class="icn"><span class="ir">판매여부</span></i></th>
+						<th class="date"><i class="icn"><span class="ir">등록일</span></i></th>
 					</tr>
 				</thead>
 				<tbody>
