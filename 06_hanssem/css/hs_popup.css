@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+body {background-color:#fff;}
+
+#p_wrap {padding:20px;}
+	#p_header {margin-bottom:30px;}
+.p_hd2, .p_fir {position:relative; overflow:hidden; background-image:url('../images/set_popup.gif'); background-repeat:no-repeat;}
+.p_hd2 {height:14px; margin-bottom:14px;}
+
+
+/* 우편번호검색 */
+.p_zip_search {width:326px;}
+	.p_zip_search .p_hd2 {width:76px; background-position:left top;}
+	.zip_s_wrap {padding:10px 14px 7px 14px; font-size:0; border:1px solid #e2e2e2; border-width:1px 0; background-color:#fcfcfc;}
+		.zip_s_wrap .exp {width:239px; height:30px; margin-bottom:8px; background-position:left -50px;}
+		.zip_s_wrap .hfiptxt {top:-2px; margin-right:7px;}
+			.zip_s_wrap .hfiptxt input {width:215px;}
+	/* 검색결과 */
+	.zs_result_w {position:relative; height:209px; border-bottom:1px solid #e2e2e2; overflow:auto;}
+		.zs_result_list {margin-top:-1px;}
+			.zs_result_list li {padding:10px 0 7px 0; font-size:0; border-top:1px solid #e2e2e2;}
+				.zs_result_list li strong, .zs_result_list li em {display:inline-block; font-family:mg; font-size:12px; font-weight:normal; color:#a6a6a6; line-height:17px; vertical-align:top;}
+				.zs_result_list li strong {width:66px; padding-left:14px;}
+				.zs_result_list li em {width:228px;}
