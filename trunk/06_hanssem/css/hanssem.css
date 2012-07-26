@@ -43,7 +43,10 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 /* 아이콘 */
 .icn {position:relative; top:-1px; display:inline-block; font:0/0 arial; overflow:hidden; vertical-align:middle; background-image:url('../images/set_hanssem.gif'); background-repeat:no-repeat;}
 
-
+.i_p_new, .i_p_hot, .i_p_newhot {height:26px;}
+.i_p_new {width:43px; background:url('../images/ico_hsp_new.png') left top no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ico_hsp_new.png', sizingMethod='crop');}
+.i_p_hot {width:43px; background:url('../images/ico_hsp_hot.png') left top no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ico_hsp_hot.png', sizingMethod='crop');}
+.i_p_newhot {width:76px; background:url('../images/ico_hsp_newhot.png') left top no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ico_hsp_newhot.png', sizingMethod='crop');}
 
 /* form */
 form.jqtransformdone label{float:left; font-family:ngEB; font-size:12px;}
@@ -118,6 +121,8 @@ a.jqTransformChecked {background-position:left -20px;}
 				ul.m_gnb li {float:left; display:inline; padding:0 19px 0 13px; background:url('../images/bar_hs_gnb.gif') right 50% no-repeat;}
 					ul.m_gnb li .gbtn {height:12px;}
 					.b_gnb_login {width:80px; background-position:left -140px;}
+					.b_gnb_logout {width:43px; background-position:-340px -140px;}
+					.b_gnb_wishlist {width:54px; background-position:-390px -140px;}
 					.b_gnb_sotry {width:98px; background-position:-80px -140px;}
 					.b_gnb_sale {width:77px; background-position:-180px -140px;}
 					.b_gnb_event {width:32px; background-position:-260px -140px;}
@@ -129,17 +134,96 @@ a.jqTransformChecked {background-position:left -20px;}
 		#sidebar {float:left;}
 			/* snb */
 			#snb {padding:34px 0 0 0;}
+				#snb .icn {background-image:url('../images/set_snb.gif');}
+				/* 1depth */
 				ul.m_snb {width:151px;}
 					ul.m_snb li {border-bottom:1px solid #e2e2e2;}
 						ul.m_snb li a {display:block; height:23px; padding:10px 0 0 0;}
 						ul.m_snb li a .icn {top:0; height:14px;}
-						.b_snb_living .icn {width:24px; background-position:-180px top;}
-						.b_snb_dining .icn {width:50px; background-position:-205px top;}
-						.b_snb_bed .icn {width:24px; background-position:-255px top;}
-						.b_snb_mattress .icn {width:50px; background-position:-280px top;}
-						.b_snb_dress .icn {width:50px; background-position:-330px top;}
-						.b_snb_office .icn {width:77px; background-position:-180px -20px;}
-						.b_snb_kids .icn {width:65px; background-position:-260px -20px;}
+					ul.m_snb li.this {border-bottom:1px solid #343434;}
+						ul.m_snb li.this ul.m_2d_snb {display:block;}
+						/* link */
+						.b_snb_bed .icn {width:24px; background-position:left top;}
+						.b_snb_mattress .icn {width:50px; background-position:-25px top;}
+						.b_snb_dress .icn {width:50px; background-position:-80px top;}
+						.b_snb_living .icn {width:24px; background-position:-135px top;}
+						.b_snb_dining .icn {width:50px; background-position:-160px top;}
+						.b_snb_kids .icn {width:65px; background-position:-215px top;}
+						.b_snb_office .icn {width:77px; background-position:-285px top;}
+						/* hover */
+						.b_snb_bed:hover .icn, li.this .b_snb_bed .icn {width:24px; background-position:left -15px;}
+						.b_snb_mattress:hover .icn, li.this .b_snb_mattress .icn {width:50px; background-position:-25px -15px;}
+						.b_snb_dress:hover .icn, li.this .b_snb_dress .icn {width:50px; background-position:-80px -15px;}
+						.b_snb_living:hover .icn, li.this .b_snb_living .icn {width:24px; background-position:-135px -15px;}
+						.b_snb_dining:hover .icn, li.this .b_snb_dining .icn {width:50px; background-position:-160px -15px;}
+						.b_snb_kids:hover .icn, li.this .b_snb_kids .icn {width:65px; background-position:-215px -15px;}
+						.b_snb_office:hover .icn, li.this .b_snb_office .icn {width:77px; background-position:-285px -15px;}
+				/* 2depth */
+				ul.m_2d_snb {display:none; border-top:1px solid #343434;}
+					ul.m_2d_snb li {}
+					ul.m_2d_snb li.last {border-bottom:0;}
+						ul.m_2d_snb li a {height:21px; padding-top:12px;}
+						ul.m_2d_snb li a .icn {height:10px; margin-left:14px;}
+						/* link */
+						.b_s2_ins .icn {width:102px; background-position:left -30px;}
+						.b_s2_guide .icn {width:86px; background-position:-105px -30px;}
+						.b_s2_product .icn {width:57px; background-position:-195px -30px;}
+						/* hover */
+						.b_s2_ins:hover .icn, li.now .b_s2_ins .icn {width:102px; background-position:left -45px;}
+						.b_s2_guide:hover .icn, li.now .b_s2_guide .icn {width:86px; background-position:-105px -45px;}
+						.b_s2_product:hover .icn, li.now .b_s2_product .icn, li.open .b_s2_product .icn {width:57px; background-position:-195px -45px;}
+				/* 3depth */
+				ul.m_3d_snb {position:relative; display:none; top:-9px; margin-bottom:1px;}
+					ul.m_3d_snb li {border-bottom:0;}
+					ul.m_3d_snb li.last {}
+						ul.m_3d_snb li a {height:17px; padding:5px 0 0 0; background:url('../images/bg_3d_snb.gif') 15px 10px no-repeat;}
+						ul.m_3d_snb li a .icn {height:12px; margin-left:23px;}
+						/* link */
+						.b_s3_bed .icn {width:21px; background-position:left -60px;}
+						.b_s3_chest .icn {width:22px; background-position:-25px -60px;}
+						.b_s3_bichest .icn {width:43px; background-position:-50px -60px;}
+						.b_s3_btable .icn {width:22px; background-position:-95px -60px;}
+						.b_s3_dtable .icn {width:53px; background-position:-120px -60px;}
+						.b_s3_mirror .icn {width:22px; background-position:-175px -60px;}
+						.b_s3_ceye .icn {width:52px; background-position:left -90px;}
+						.b_s3_snight .icn {width:53px; background-position:-55px -90px;}
+						.b_s3_nratex .icn {width:53px; background-position:-110px -90px;}
+						.b_s3_alto .icn {width:22px; background-position:left -120px;}
+						.b_s3_ssofa .icn {width:43px; background-position:left -150px;}
+						.b_s3_fsofa .icn {width:53px; background-position:-45px -150px;}
+						.b_s3_isofa .icn {width:43px; background-position:-100px -150px;}
+						.b_s3_rriner .icn {width:52px; background-position:-145px -150px;}
+						.b_s3_dchest .icn {width:33px; background-position:-200px -150px;}
+						.b_s3_ditable .icn {width:53px; background-position:-235px -150px;}
+						.b_s3_ftable .icn {width:22px; background-position:left -180px;}
+						.b_s3_chair .icn {width:22px; background-position:-25px -180px;}
+						.b_s3_desk .icn {width:22px; background-position:left -210px;}
+						.b_s3_dschest .icn {width:43px; background-position:-25px -210px;}
+						.b_s3_bcase .icn {width:22px; background-position:-70px -210px;}
+						.b_s3_cschest .icn {width:56px; background-position:-95px -210px;}
+						/* hover */
+						.b_s3_bed:hover .icn, li.current .b_s3_bed .icn {width:21px; background-position:left -75px;}
+						.b_s3_chest:hover .icn, li.current .b_s3_chest .icn {width:22px; background-position:-25px -75px;}
+						.b_s3_bichest:hover .icn, li.current .b_s3_bichest .icn {width:43px; background-position:-50px -75px;}
+						.b_s3_btable:hover .icn, li.current .b_s3_btable .icn {width:22px; background-position:-95px -75px;}
+						.b_s3_dtable:hover .icn, li.current .b_s3_dtable .icn {width:53px; background-position:-120px -75px;}
+						.b_s3_mirror:hover .icn, li.current .b_s3_mirror .icn {width:22px; background-position:-175px -75px;}
+						.b_s3_ceye:hover .icn, li.current .b_s3_ceye .icn {width:52px; background-position:left -105px;}
+						.b_s3_snight:hover .icn, li.current .b_s3_snight .icn {width:53px; background-position:-55px -105px;}
+						.b_s3_nratex:hover .icn, li.current .b_s3_nratex .icn {width:53px; background-position:-110px -105px;}
+						.b_s3_alto:hover .icn, li.current .b_s3_alto .icn {width:22px; background-position:left -135px;}
+						.b_s3_ssofa:hover .icn, li.current .b_s3_ssofa .icn {width:43px; background-position:left -165px;}
+						.b_s3_fsofa:hover .icn, li.current .b_s3_fsofa .icn {width:53px; background-position:-45px -165px;}
+						.b_s3_isofa:hover .icn, li.current .b_s3_isofa .icn {width:43px; background-position:-100px -165px;}
+						.b_s3_rriner:hover .icn, li.current .b_s3_rriner .icn {width:52px; background-position:-145px -165px;}
+						.b_s3_dchest:hover .icn, li.current .b_s3_dchest .icn {width:33px; background-position:-200px -165px;}
+						.b_s3_ditable:hover .icn, li.current .b_s3_ditable .icn {width:53px; background-position:-235px -165px;}
+						.b_s3_ftable:hover .icn, li.current .b_s3_ftable .icn {width:22px; background-position:left -195px;}
+						.b_s3_chair:hover .icn, li.current .b_s3_chair .icn {width:22px; background-position:-25px -195px;}
+						.b_s3_desk:hover .icn, li.current .b_s3_desk .icn {width:22px; background-position:left -225px;}
+						.b_s3_dschest:hover .icn, li.current .b_s3_dschest .icn {width:43px; background-position:-25px -225px;}
+						.b_s3_bcase:hover .icn, li.current .b_s3_bcase .icn {width:22px; background-position:-70px -225px;}
+						.b_s3_cschest:hover .icn, li.current .b_s3_cschest .icn {width:56px; background-position:-95px -225px;}
 		/* content */
 		#content {float:right; width:731px; padding:0 0 0 30px;}
 			/* 제목 */

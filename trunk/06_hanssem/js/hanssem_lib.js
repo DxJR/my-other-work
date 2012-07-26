@@ -75,3 +75,37 @@ function closeLayer(id) {
 		var obj = document.getElementById(id);
 		obj.style.display='none';
 }
+
+var snbFunc = ({
+	init : function() {
+		ul3depth = $(".m_3d_snb");
+		parentEle = $(".m_2d_snb>li.last");
+		this.snbAnimation();
+	},
+
+	snbAnimation : function() {
+		$(".m_2d_snb>li.last .b_s2_product").each(function(index){
+			$(this).click(function(){
+				var parentClass = $(this).parent().attr("class");
+				if (parentClass=="last")
+				{
+					$(this).blur();
+					$(this).parent().addClass("now");
+					$(this).next().slideDown(250);
+				} else {
+					$(this).blur();
+					$(this).parent().removeClass("now");
+					$(this).next().slideUp(250);
+				}
+			});
+		});
+
+	},
+
+	resetClass : function() {
+		for (var i=0; i < parentEle.length ; i++ )
+		{
+			parentEle[i].className='last';
+		}
+	}
+});

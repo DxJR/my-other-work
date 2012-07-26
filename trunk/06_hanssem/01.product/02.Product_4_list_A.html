@@ -8,7 +8,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <![endif]-->
 <link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
-<link rel="stylesheet" href="../css/hs_board.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_product.css" type="text/css" />
 <!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
@@ -46,7 +46,8 @@
 		<div id="gnb">
 			<h2 class="hide">자주쓰는메뉴</h2>
 			<ul class="m_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span class="ir">한샘 통합 로그인</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_logout"><span class="ir">로그아웃</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_wishlist"><span class="ir">위시리스트</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
@@ -117,17 +118,17 @@
 						</ul>
 					</li>
 					<!-- 거실 -->
-					<li>
+					<li class="this">
 						<a href="#" class="b_snb_living"><i class="icn"></i><span class="ir">거실</span></a>
 						<!-- 2depth -->
 						<ul class="m_2d_snb">
 							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
 							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
-							<li class="last">
+							<li class="last now">
 								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
 								<!-- 3depth -->
-								<ul class="m_3d_snb">
-									<li><a href="#" class="b_s3_ssofa"><i class="icn"></i><span class="ir">가죽소파</span></a></li>
+								<ul class="m_3d_snb" style="display:block;">
+									<li class="current"><a href="#" class="b_s3_ssofa"><i class="icn"></i><span class="ir">가죽소파</span></a></li>
 									<li><a href="#" class="b_s3_fsofa"><i class="icn"></i><span class="ir">패브릭소파</span></a></li>
 									<li><a href="#" class="b_s3_isofa"><i class="icn"></i><span class="ir">수입소파</span></a></li>
 									<li><a href="#" class="b_s3_rriner"><i class="icn"></i><span class="ir">리클라이너</span></a></li>
@@ -197,110 +198,114 @@
 		</div>
 		<!-- content -->
 		<div id="content">
-			<div class="cont_tit_wrap ctw_board">
-				<h2><span class="ir">전시품 할인 판매</span></h2>
-				<p class="ctw_exp"><span class="ir">매장 전시품을 할인하여 판매하는 게시판입니다. 전시품은 예약제가 아닌 선착순으로 판매됩니다. 자세한 판매정보는 해당 매장에 직접 연락 후 확인 바랍니다</span></p>
+			<div class="cont_tit_wrap ctw_leathersofa">
+				<h2><span class="ir">가죽소파</span></h2>
 			</div>
-			<!-- 개인정보수집 동의 -->
-			<div class="sib_pi_w">
-				<h3>&lt;개인정보의 수집, 이용 목적 및 보유, 이용기간&gt;</h3>
-				<ul>
-					<li>- 서비스 이용에 따른 본인식별, 이메일, 휴대폰번호 이용</li>
-					<li>- 기타 원활한 양질의 서비스 제공 등</li>
-					<li>- 고객 정보는 Q&A DB로 저장되어, 고객의 필요한 정보 확인 및 회신을 위하여 이용됩니다.</li>
-					<li>- 고객이 삭제를 원하는 경우 접수된 내용 회신 후 삭제 처리됩니다.</li>
-				</ul>
-			</div>
-			<p class="sib_pi_agr"><input type="checkbox" id="sib_pi_agree" class="check" /><label for="sib_pi_agree"><span class="ir">동의합니다.</span></label></p>
-			<!-- 문의내용작성 -->
-			<fieldset class="sib_write">
-				<legend>전시품 구매 문의 작성</legend>
-				<form class="jqtransform">
-					<div class="sib_write_in">
-						<table cellpadding="0" cellspacing="0" class="hsm_form_def">
-							<tbody>
-								<tr class="hfd_name">
-									<th>고객명</th>
-									<td><span class="hfiptxt"><input type="text" size="30" /></span></td>
-								</tr>
-								<tr class="hfd_id">
-									<th>한샘 아이디</th>
-									<td><span class="hfiptxt"><input type="text" size="30" /></span></td>
-								</tr>
-								<tr class="hfd_email">
-									<th>이메일 주소</th>
-									<td>
-										<span class="hfiptxt"><input type="text" size="30" /></span> <i class="at">@</i>
-										<select>
-											<option>이메일 주소 선택</option>
-											<option>nate.com</option>
-											<option>nate.com</option>
-											<option>nate.com</option>
-											<option>nate.com</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="hfd_cellp">
-									<th>핸드폰 번호</th>
-									<td>
-										<select>
-											<option>010</option>
-											<option>010</option>
-											<option>010</option>
-											<option>010</option>
-										</select>
-										<span class="hfiptxt"><input type="text" size="30" /></span>
-										<span class="hfiptxt"><input type="text" size="30" /></span>
-									</td>
-								</tr>
-								<tr class="hfd_addr">
-									<th>주소</th>
-									<td>
-										<span class="hfiptxt"><input type="text" size="30" /></span>
-										<span class="hfiptxt"><input type="text" size="30" /></span>
-										<button type="button" class="gbtn b_s_zipcode"><span class="ir">우편번호 검색</span></button>
-										<br />
-										<span class="hfiptxt itx_su itx_su1"><input type="text" size="30" /></span>
-										<span class="hfiptxt itx_su"><input type="text" size="30" /></span>
-									</td>
-								</tr>
-								<tr class="hfd_subject">
-									<th>제목</th>
-									<td>
-										<span class="hfiptxt"><input type="text" size="30" /></span>
-									</td>
-								</tr>
-								<tr class="hfd_qkind">
-									<th>문의상품</th>
-									<td>
-										<select>
-											<option>선택해주세요</option>
-											<option>선택해주세요</option>
-											<option>선택해주세요</option>
-										</select>
-										<select>
-											<option>선택해주세요</option>
-											<option>선택해주세요</option>
-											<option>선택해주세요</option>
-										</select>
-										<span class="hfiptxt"><input type="text" size="30" value="상품명을 입력해 주세요." /></span>
-									</td>
-								</tr>
-								<tr class="hfd_cont">
-									<th>내용</th>
-									<td>
-										<div class="hftxtarea">
-											<textarea rows="5" cols="30"></textarea>
-											<i class="lt"></i><i class="rt"></i><i class="lb"></i><i class="rb"></i>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+			<!-- 제품목록 -->
+			<ul class="hs_product_list">
+				<li>
+					<!-- 레이어 -->
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
 					</div>
-					<p class="submit_btn"><button type="submit" class="gbtn b_q_submit"><span class="ir">문의등록</span></button></p>
-				</form>
-			</fieldset>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a> <em class="icn i_p_new">(NEW)</em>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<!-- 짝수번째 일 때 class="nth-2d" -->
+				<li class="nth-2d">
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a> <em class="icn i_p_hot">(HOT)</em>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<li>
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a> <em class="icn i_p_newhot">(NEW &amp; HOT)</em>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<li class="nth-2d">
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a> <em class="icn i_p_new">(NEW)</em>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<li>
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a> <em class="icn i_p_newhot">(NEW &amp; HOT)</em>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<li class="nth-2d">
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<li>
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+				<li class="nth-2d">
+					<div class="hsp_list_toption">
+						<h3 class="hsplt_tit">위더스2 5000 데코</h3>
+						<p class="hsplt_kind"><a href="#">3인용</a> <a href="#">코너형</a> <a href="#">스툴</a></p>
+						<span class="shadow"></span>
+					</div>
+					<p class="hsp_thumb"><a href="#"><img src="../images/temp/temp_006.jpg" width="345" height="220" border="0" alt="위더스2 5000 모듈형" /></a></p>
+					<p class="hsp_exp">
+						<a href="#">&lt;위더스2 5000 데코&gt;</a>
+						<span class="lb"><a href="#">3인용</a> / <a href="#">코너형</a> / <a href="#">스툴</a></span>
+					</p>
+				</li>
+			</ul>
+			<!-- 더보기 버튼 -->
+			<div class="hsp_btn_w">
+				<button type="button" class="gbtn b_item_more"><span class="ir">더 많은 상품 보기</span></button>
+			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
