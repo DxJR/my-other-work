@@ -76,6 +76,7 @@ function closeLayer(id) {
 		obj.style.display='none';
 }
 
+// snb
 var snbFunc = ({
 	init : function() {
 		ul3depth = $(".m_3d_snb");
@@ -109,3 +110,13 @@ var snbFunc = ({
 		}
 	}
 });
+
+function productListAction() {
+	$(".hsp_thumb").bind('mouseover', function() {
+		$(".hsp_thumb").prev().css('display','none');
+		$(this).prev().css('display','block');
+	});
+	$(".hsp_thumb").prev().bind('mouseleave', function() {
+		$(this).css('display','none');
+	})
+}
