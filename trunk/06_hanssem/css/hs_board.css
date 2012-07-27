@@ -5,7 +5,7 @@
 	.ctw_board .ctw_exp {width:446px; height:30px; background-position:left -20px;}
 
 /* 게시판검색 */
-.cont_b_search {position:relative; height:35px; margin:12px 0 0 0; padding:6px 0 0 0; border:1px solid #e2e2e2; border-width:1px 0;}
+.cont_b_search {position:relative; clear:both; height:35px; margin:12px 0 0 0; padding:6px 0 0 0; border:1px solid #e2e2e2; border-width:1px 0;}
 	.cont_b_search select {width:103px;}
 	.cont_b_search .jqTransformSelectWrapper {margin:4px 10px 0 0;}
 	.cont_b_search .cont_b_go {margin-left:-3px;}
@@ -39,19 +39,12 @@
 .sr_item_list {clear:both; margin-top:28px; border-bottom:1px solid #333;}
 	/* thead */
 	.sr_item_list thead tr th {padding-bottom:8px; text-align:left; border-bottom:1px solid #333;}
-		.sr_item_list thead tr th .icn {top:0; height:12px;}
 	.sr_item_list thead tr th.no {width:52px;}
-		.sr_item_list thead tr th.no .icn {width:21px; background-position:-130px -155px;}
 	.sr_item_list thead tr th.item {width:246px;}
-		.sr_item_list thead tr th.item .icn {width:31px; background-position:-155px -155px;}
 	.sr_item_list thead tr th.shop {width:171px;}
-		.sr_item_list thead tr th.shop .icn {width:31px; background-position:-190px -155px;}
 	.sr_item_list thead tr th.discount {width:96px;}
-		.sr_item_list thead tr th.discount .icn {width:57px; background-position:-225px -155px;}
 	.sr_item_list thead tr th.sell {width:86px;}
-		.sr_item_list thead tr th.sell .icn {width:43px; background-position:-285px -155px;}
 	.sr_item_list thead tr th.date {width:80px;}
-		.sr_item_list thead tr th.date .icn {width:31px; background-position:-330px -155px;}
 	/* tbody */
 	.sr_item_list tbody tr td {padding:14px 0 15px 0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-top:1px solid #e2e2e2; vertical-align:top;}
 		.sr_item_list tbody tr td a {float:left; color:#a6a6a6;}
@@ -80,8 +73,8 @@
 		.sr_item_view .sr_item_list thead tr th {height:0; font:0/0 arial; overflow:hidden;}
 		.sr_item_view .sr_item_list thead tr th .icn {height:0;}
 	/* 하단버튼 */
-	.btn_w_bottom {position:relative; clear:both; padding-top:8px;}
-		.bwb_l {float:left; margin-top:8px; font-size:15px; font-family:dotum; color:#d6d6d6;}
+	.btn_w_bottom {padding-top:8px;}
+		.bwb_l {margin-top:8px; font-size:15px; font-family:dotum; color:#d6d6d6;}
 			.b_p_sriva {position:relative; top:-2px; font-family:mg; font-size:12px; color:#333;}
 				.b_p_sriva .icn {width:4px; height:7px;}
 			.b_p_l {margin-right:6px;}

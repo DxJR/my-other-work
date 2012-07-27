@@ -39,6 +39,10 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
     input.gbtn {text-indent:-9999em;}
     span.gbtn {cursor:default;}
 .b_s_search {width:63px; height:33px; background-position:-245px -40px;}
+.b_r_modify, .b_r_delete, .b_r_write {width:20px; height:19px; margin-left:3px;}
+.b_r_modify {background-position:-110px top;}
+.b_r_delete {background-position:-131px top;}
+.b_r_write {background-position:-151px top;}
 
 /* 아이콘 */
 .icn {position:relative; top:-1px; display:inline-block; font:0/0 arial; overflow:hidden; vertical-align:middle; background-image:url('../images/set_hanssem.gif'); background-repeat:no-repeat;}
@@ -227,10 +231,28 @@ a.jqTransformChecked {background-position:left -20px;}
 		/* content */
 		#content {float:right; width:731px; padding:0 0 0 30px;}
 			/* 제목 */
-			.cont_tit_wrap {}
+			.cont_tit_wrap {clear:both; font-size:0;}
 				.cont_tit_wrap h2, .ctw_exp {overflow:hidden; background-image:url('../images/set_ctw.gif'); background-repeat:no-repeat;}
-				.cont_tit_wrap h2 {height:14px;}
+				.cont_tit_wrap h2 {display:inline-block; height:14px;}
+				.ctw_count {display:inline-block; margin:-1px 0 0 9px; font-family:mg; font-size:11px; color:#a6a6a6; letter-spacing:-1px; line-height:normal; vertical-align:top;}
+					.ctw_count em {letter-spacing:0;}
 				.ctw_exp {margin-top:10px;}
+			/* 테이블 스타일 */
+			.sr_item_list thead tr th .icn {top:0; height:12px; background-image:url('../images/set_table.gif');}
+			.sr_item_list thead tr th.no .icn {width:21px; background-position:left top;}
+			.sr_item_list thead tr th.item .icn {width:31px; background-position:-25px top;}
+			.sr_item_list thead tr th.shop .icn {width:31px; background-position:-60px top;}
+			.sr_item_list thead tr th.discount .icn {width:57px; background-position:-95px top;}
+			.sr_item_list thead tr th.sell .icn {width:43px; background-position:-155px top;}
+			.sr_item_list thead tr th.date .icn {width:31px; background-position:left -15px;}
+			.sr_item_list thead tr th.itemphoto .icn {width:44px; background-position:-35px -15px;}
+			.sr_item_list thead tr th.option .icn {width:21px; background-position:-85px -15px;}
+			.sr_item_list thead tr th.price .icn {width:21px; background-position:-110px -15px;}
+			.sr_item_list thead tr th.delete .icn {width:21px; background-position:-135px -15px;}
+			/* 하단버튼 */
+			.btn_w_bottom {position:relative; clear:both;}
+				.bwb_l {float:left;}
+				.bwb_r {float:right;}
 	/*  footer */
 	#footer {clear:both; height:93px; margin:30px 0 0 0; padding:0 0 100px 30px;}
 		/* familysite */
