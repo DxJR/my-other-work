@@ -28,10 +28,7 @@
 			.hs_reply_list li {position:relative; padding:12px 0 12px 0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-bottom:1px solid #e2e2e2;}
 				.hs_reply_list li .content {padding-right:120px;}
 				.hs_reply_list li .function {position:absolute; top:13px; right:0; font-size:0;}
-					.b_r_modify, .b_r_delete, .b_r_write {width:20px; height:19px; margin-left:3px;}
-					.b_r_modify {background-position:-110px top;}
-					.b_r_delete {background-position:-131px top;}
-					.b_r_write {margin-left:25px; background-position:-151px top;}
+				.hs_reply_list li .function .b_r_write {margin-left:25px;}
 		/* Àç´ñ±Û */
 		.hsrl_2d {margin-top:12px; margin-bottom:-12px; border-top:0;}
 			.hsrl_2d li {padding-left:40px; border-top:1px solid #e2e2e2; border-bottom:0; background:url('../images/ico_hsrl_2d.gif') 10px 11px no-repeat;}

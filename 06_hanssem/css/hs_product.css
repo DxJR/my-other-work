@@ -3,8 +3,10 @@
 /* 제목 */
 	/* 가죽소파 */
 	.ctw_leathersofa h2 {width:53px; background-position:left -100px;}
+	/* 거실장 */
+	.ctw_livingroomchest h2 {width:38px; background-position:-55px -100px;}
 
-/* 제품목록 */
+/* 제품목록 A */
 .hs_product_list {clear:both; float:left; width:100%;}
 	.hs_product_list li {position:relative; clear:both; float:left; display:inline; width:100%; height:280px; padding-top:20px; border-bottom:1px solid #e2e2e2;}
 		/* hover 레이어 */
@@ -22,9 +24,107 @@
 			.hsp_exp .i_p_new, .hsp_exp .i_p_hot, .hsp_exp .i_p_newhot {position:absolute; top:27px; left:6px;}
 			.hsp_exp, .hsp_exp a {font-family:mg; font-size:11px; color:#a6a6a6; line-height:17px;}
 			.hsp_exp a:hover {color:#333;}
+	/* 2의배수 */
 	.hs_product_list li.nth-2d {clear:none; width:345px; padding-left:20px; margin-left:-366px; border-left:1px solid #e2e2e2; }
 		.hs_product_list li.nth-2d .hsp_list_toption {left:20px;}
 			.hs_product_list li.nth-2d .hsp_exp .i_p_new, .hs_product_list li.nth-2d .hsp_exp .i_p_hot, .hs_product_list li.nth-2d .hsp_exp .i_p_newhot {left:26px;}
+/*  제품목록 B */
+.hs_product_b_list {clear:both; float:left; width:100%; margin-top:10px; border-top:1px solid #e2e2e2;}
+	.hs_product_b_list li {position:relative; float:left; display:inline; width:182px; height:249px; border-left:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2;}
+		.hs_product_b_list li .hsp_exp .i_p_new, .hs_product_b_list li .hsp_exp .i_p_hot, .hs_product_b_list li .hsp_exp .i_p_newhot {position:absolute; top:7px; left:6px;}
+		.hs_product_b_list li .hsp_exp {margin-top:6px; padding-left:14px;}
+		.hs_product_b_list li .hsp_exp, .hs_product_b_list li .hsp_exp a {line-height:19px;}
+	/*  4n-1 */
+	.hs_product_b_list li.nth-4n-3 {width:100%; border-left:0;}
+	/*  4n-2 */
+	.hs_product_b_list li.nth-4n-2 {margin-left:-549px;}
+	/*  4n-3 */
+	.hs_product_b_list li.nth-4n-1 {margin-left:-366px;}
+	/*  4n-4 */
+	.hs_product_b_list li.nth-4n {margin-left:-183px;}
 /* 더보기버튼 */
 .hsp_btn_w {clear:both; padding-top:19px; text-align:center;}
-.b_item_more {width:141px; height:40px; background-position:left -220px;}
+	.b_item_more {width:141px; height:40px; background-position:left -220px;}
+/* 상품자세히보기 */
+.hs_product_detail_w {clear:both; float:left; width:100%; margin-top:10px; padding:40px 0 0 0; border-top:1px solid #e2e2e2;}
+	/* 이미지 */
+	.hspd_img {float:left; width:320px; min-height:320px;_height:320px; font:0/0 arial;}
+	/* 상품요약 */
+	.hspd_summary {float:left; display:inline; width:381px; margin:-5px 0 0 30px; font-family:mg;}
+		/* 제목/가격 */
+		.hspd_summary h3, .hspd_price {font-size:22px; color:#333; line-height:28px; letter-spacing:-2px;}
+		.hspd_price {margin-top:3px; letter-spacing:-1px;}
+		/* 규격/색상 */
+		.hspd_dmt {clear:both; margin:13px 0 0 0;}
+			.hspd_dmt h4, .hspd_dmt p {float:left; display:inline; margin-top:-1px; font-weight:normal; font-size:12px; color:#a6a6a6; line-height:20px; letter-spacing:-1px;}
+			.hspd_dmt p {padding-left:4px;}
+		/* 옵션선택 */
+		.hspd_opt_w_w {clear:both; margin:16px 0 0 0; padding:0 0 4px 0; border-top:1px solid #e2e2e2;}
+			.hspd_opt_w {margin:16px 0 -4px 0;}
+				.hspd_opt_w h4 {font-weight:normal; color:#a6a6a6; letter-spacing:-1px;}
+				.hspd_opt {clear:both; margin-top:5px; font-size:0;}
+					.hspd_opt li {position:relative; display:inline-block; margin-right:1px;}
+						.hspd_opt li i {position:absolute; top:-1px; left:-1px; clear:both; display:none; width:28px; height:28px; font:0/0 arial; border:2px solid #d7182a; overflow:hidden; background:transparent;}
+					/* 선택일 때 */
+					.hspd_opt li.this {z-index:2;}
+						.hspd_opt li.this i {display:block;}
+				/* 가죽컬러 */
+				.hspd_color_w {}
+				.b_p_color {width:30px; height:30px; background-image:none;}
+				/* 높이 */
+				.b_p_option {width:30px; height:30px; font-family:mg; font-size:12px; color:#808080; letter-spacing:-1px; line-height:30px; text-align:center; border:1px solid #dadada; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -o-box-sizing:border-box; -e-box-sizing:border-box; box-sizing:border-box; background:url('../images/bg_b_p_option.gif') left top repeat;}
+				.hspd_opt li.this .b_p_option {color:#d7182a;}
+		/* 제품관련버튼 */
+		.hspd_func_w {position:relative; clear:both; height:47px; margin:20px 0 0 0; padding:18px 0 0 0; font-size:0; border-top:1px solid #e2e2e2;}
+			.fnc_l {float:left; display:inline; margin-left:-3px;}
+				.b_p_print {width:89px; height:47px; background-position:-150px -190px;}
+				.b_p_wishlist {width:90px; height:47px; background-position:-239px -190px;}
+			.fnc_r {float:right; margin-top:2px;}
+				.b_p_email, .b_p_blog {height:39px; border:1px solid #e2e2e2; border-width:0 1px;}
+				.b_p_email {width:79px; margin-right:-1px; background-position:-335px -190px;}
+				.b_p_blog {width:90px; background-position:-412px -190px;}
+	/*  제품상세정보 */
+	.hspd_description_w {clear:both; float:left; width:100%; margin:34px 0 0 0; padding:17px 0 0 0; font-family:mg; font-size:12px; border-top:1px solid #e2e2e2;}
+		.hspd_description_w h4 {font-size:12px; font-weight:normal; color:#333; line-height:18px; letter-spacing:-1px;}
+		.hspd_d_visual {z-index:2; position:relative; margin:17px 0 -1px 0; font:0/0 arial; background:#fff;}
+		/* 상세설명템플릿 */
+		.hspd_d_explain {z-index:1; position:relative; clear:both; float:left; width:100%; padding:15px 0 16px 0; border-top:1px solid #e2e2e2;}
+			.hspd_d_explain h5 {clear:both; float:left; width:140px; font-size:12px; font-weight:normal; color:#333; line-height:20px; letter-spacing:-1px;}
+			.hspd_de_cont {float:left; width:591px; color:#a6a6a6; line-height:20px; letter-spacing:-1px;}
+				.hspd_de_cont strong {font-weight:normal; color:#333;}
+				.hspd_de_cont img {margin:5px 0 15px 0;}
+
+
+/* 위시리스트 */
+	/* 제목 */
+	.ctw_wishlist h2 {width:62px; background-position:left -115px;}
+	.ctw_wishlist .ctw_exp {width:347px; height:30px; background-position:left -130px;}
+	/*  목록 */
+	.hspd_wishlist {clear:both; margin-top:25px;}
+		/* thead */
+		.hspd_wishlist thead tr th {padding:15px 0; text-align:left; border-top:1px solid #333;}
+		.hspd_wishlist thead tr th.no {width:66px;}
+		.hspd_wishlist thead tr th.itemphoto {width:119px;}
+		.hspd_wishlist thead tr th.item {width:288px;}
+		.hspd_wishlist thead tr th.option {width:115px;}
+		.hspd_wishlist thead tr th.price {width:121px;}
+		.hspd_wishlist thead tr th.delete {width:22px;}
+		/* tbody */
+		.hspd_wishlist tbody tr td {padding:14px 0 5px 0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; border-top:1px solid #e2e2e2; vertical-align:top;}
+			.hspd_wishlist tbody tr td a {display:inline-block; color:#a6a6a6;}
+			.hspd_wishlist tbody tr td img {margin-top:-9px;}
+			.hspd_wishlist tbody tr td em {color:#d7182a;}
+			.hspd_wishlist tbody tr td .gbtn {margin-top:3px; margin-right:-3px;}
+			.hspd_wishlist tbody tr td .b_r_delete {margin-top:1px; margin-right:0;}
+	/* 합계 */
+	.hspd_wl_total {height:40px; padding:12px 0 0 0; font-size:0; font-family:mg; color:#0057a0; border:1px solid #ccdce8; border-width:1px 0; background:url('../images/bg_b_s_grd.gif') left top repeat;}
+		.hspd_wl_total h3 {position:relative; top:1px; display:inline-block; width:175px; padding:0 0 0 10px; font-weight:normal; font-size:12px;}
+		.hspd_wl_total p {display:inline-block; font-size:0;}
+			.hspd_wl_total p em {display:inline-block; width:403px; font-size:12px;}
+			.hspd_wl_total p strong {position:relative; top:3px; display:inline-block; font-size:16px; color:#d7182a;}
+	/* 하단버튼 */
+	.bwb_wishlist {margin-top:15px;}
+		.bwb_l {margin-left:-2px;}
+		.bwb_r {margin-right:-3px;}
+		.b_wl_deleteall {width:147px; height:47px; background-position:-315px top;}
+		.b_wl_estimateprint {width:149px; height:47px; background-position:-315px -50px;}
