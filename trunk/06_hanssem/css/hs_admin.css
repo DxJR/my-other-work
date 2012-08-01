@@ -71,6 +71,19 @@
 		#had_footer h4 {font-weight:normal;}
 
 
+/* 로그인 */
+#had_login {}
+	#had_login #had_container {height:548px;}
+	.had_login_w {top:50%; left:50%; position:relative; width:396px; height:160px; margin:-80px 0 0 -198px;}
+		fieldset.had_login {margin-top:30px}
+		.had_login_w p {width:290px; height:31px; padding:10px 0 0 0; font-size:0; border-top:1px solid #e3e3e3;}
+			.had_login_w p label {position:relative; top:5px; display:inline-block; width:59px; font-family:dotum; font-size:12px; color:#333;}
+			.had_login_w p .hfiptxt input {width:225px; font-size:12px; font-family:dotum; color:#333;}
+		.had_login_w p.had_id_save {}
+			.had_login_w p.had_id_save label {width:75px;}
+			.had_login_w p.had_id_save .check {top:1px;}
+		.had_l_b_go {position:absolute; top:47px; right:0;}
+
 /* 제품관리 */
 	/* 목록 */
 	.had_tbl_ilist {margin-top:20px;}

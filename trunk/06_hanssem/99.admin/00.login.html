@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>한샘인테리어 ADMIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_admin.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<!-- 로그인일 때 id="had_login" -->
+<body id="had_login">
+
+<!-- wrap -->
+<div id="had_wrap">
+	<!-- container -->
+	<div id="had_container">
+		<div class="had_login_w">
+			<h1><a href="#"><img src="../images/admin/bi_hsadmin.gif" width="248" height="17" alt="한샘인테리어 ADMIN" /></a></h1>
+			<fieldset class="had_login">
+				<legend>한샘인테리어 ADMIN</legend>
+				<p><label for="had_l_id">아이디</label> <span class="hfiptxt"><input type="text" class="iptxt" id="had_l_id" /></span></p>
+				<p><label for="had_l_pwd">비밀번호</label> <span class="hfiptxt"><input type="password" class="iptxt" id="had_l_pwd" /></span></p>
+				<p  class="had_id_save"><label for="had_l_idsave">아이디 저장</label> <input type="checkbox" id="had_l_idsave" class="check" /></p>
+				<input type="image" class="had_l_b_go" src="../images/admin/btn_admin_go.gif" width="85" height="85" alt="로그인" />
+			</fieldset>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="had_footer">
+		<h3 class="hide">사이트정보</h3>
+		<h4>한샘인테리어 웹사이트 관리자</h4>
+		<p>Copyright 2012 Hanssem Interior. <span class="lb">all rights reserved.</span></p>
+	</div>
+</div>
+
+</body>
+</html>
