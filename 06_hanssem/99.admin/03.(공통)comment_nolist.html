@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>한샘인테리어 ADMIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_admin.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="had_wrap">
+	<!-- header -->
+	<div id="had_header">
+		<h1><a href="#"><img src="../images/admin/bi_hsadmin.gif" width="248" height="17" alt="한샘인테리어 ADMIN" /></a></h1>
+		<div class="had_h_r">
+			<em><span>관리자</span>님 안녕하세요.</em>
+			<a href="#" class="b_st_adm">로그아웃</a>
+			<a href="#" class="b_st_adm">본 사이트 보기</a>
+		</div>
+		<ul class="had_gnb">
+			<li><a href="#">메인화면</a></li>
+			<li><a href="#">제품관리</a></li>
+			<!-- 현재선택일 때 class="this" 추가 -->
+			<li class="this"><a href="#">게시판관리</a></li>
+			<li><a href="#">이벤트</a></li>
+			<li><a href="#">매장관리</a></li>
+			<li><a href="#">기타</a></li>
+		</ul>
+	</div>
+	<!-- container -->
+	<div id="had_container">
+		<!-- sidebar -->
+		<div id="had_sidebar">
+			<h2>게시판 관리</h2>
+			<ul class="had_snb">
+				<li><a href="#">전시품 할인판매 게시판</a></li>
+				<!-- 현재선택일 때 class="this" 추가 -->
+				<li class="this"><a href="#">전시품 할인판매 신청</a></li>
+				<li><a href="#">전시품 할인판매 신청 대기</a></li>
+			</ul>
+		</div>
+		<!-- content -->
+		<div id="had_content">
+			<h3>전시품 할인판매 신청</h3>
+			<!-- 분류검색 -->
+			<fieldset class="had_category had_ba_src">
+				<legend>카테고리 검색</legend>
+				<form class="jqtransform">
+					<select>
+						<option>분류1</option>
+						<option>분류1</option>
+						<option>분류1</option>
+					</select>
+					<select class="had_c_g2">
+						<option>분류2</option>
+						<option>분류2</option>
+						<option>분류2</option>
+					</select>
+					<select>
+						<option>분류3</option>
+						<option>분류3</option>
+						<option>분류3</option>
+					</select>
+					<input type="image" src="../images/admin/btn_category_search.gif" width="41" height="25" class="ip_img" alt="검색" />
+				</form>
+			</fieldset>
+			<!-- 게시물없음 -->
+			<p class="had_brd_temp"><strong>등록된 해당 게시글이 없습니다.</strong></p>
+			<!-- 페이징 / 버튼 -->
+			<div class="pag_btn_w pbw_brd">
+				<div class="had_b_r">
+					<a href="#" class="b_st_adm2 b_c_red">글 쓰기</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="had_footer">
+		<h3 class="hide">사이트정보</h3>
+		<h4>한샘인테리어 웹사이트 관리자</h4>
+		<p>Copyright 2012 Hanssem Interior. <span class="lb">all rights reserved.</span></p>
+	</div>
+</div>
+
+</body>
+</html>
