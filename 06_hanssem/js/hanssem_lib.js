@@ -120,3 +120,13 @@ function productListAction() {
 		$(this).css('display','none');
 	})
 }
+
+// table tr hover 
+function tableHover() {
+	$(".hsf_si_list>tbody>tr").bind('mouseover', function() {
+		this.className='hover';
+	});
+	$(".hsf_si_list>tbody>tr").bind('mouseleave', function() {
+		this.className='';
+	});
+}
