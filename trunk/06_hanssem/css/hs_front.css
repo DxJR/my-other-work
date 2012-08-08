@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* 제목 */
+.ctw_shopinfo h2 {width:48px; background-position:left -165px;}
+.ctw_shopinfo .ctw_exp {width:186px; height:30px; background-position:left -180px;}
+
+
+/* 매장안내 */
+	.hsf_si_visual {clear:both; margin:15px 0 0 0; font:0/0 arial;}
+	/* shop 1~3 */
+	.hsf_shop_w {clear:both; height:191px; border:1px solid #e3e3e3; border-width:0 0 1px 1px;}
+		.hsf_shop_by {float:left; display:inline; width:212px; height:171px; padding:20px 0 0 30px; border-right:1px solid #e3e3e3;}
+			.hsf_shop_by h3, .hsf_shop_by p, .hsf_shop_by a {background-image:url('../images/set_shopinfo.gif'); background-repeat:no-repeat;}
+			.hsf_shop_by h3 {height:30px;}
+			.hsf_shop_by .exp {height:30px; margin-top:6px;}
+			.hsf_shop_by .str {height:31px; margin-top:10px; border:1px solid #ccdce8;}
+			.hsf_shop_by .moveto {margin-top:20px; background:none;}
+				.hsf_shop_by .moveto a {height:12px;}
+		.hsfsb_01 {}
+			.hsfsb_01 h3 {width:68px; background-position:left top;}
+			.hsfsb_01 .exp {width:124px; background-position:left -35px;}
+			.hsfsb_01 .str {width:184px; background-position:left -70px;}
+				.hsfsb_01 .moveto a {width:135px; background-position:left -105px;}
+		.hsfsb_02 {width:213px;}
+			.hsfsb_02 h3 {width:56px; background-position:-190px top;}
+			.hsfsb_02 .exp {width:148px; background-position:-190px -35px;}
+			.hsfsb_02 .str {width:83px; background-position:-190px -70px;}
+				.hsfsb_02 .moveto a {width:127px; background-position:-190px -105px;}
+		.hsfsb_03 {}
+			.hsfsb_03 h3 {width:67px; background-position:-350px top;}
+			.hsfsb_03 .exp {width:137px; background-position:-350px -35px;}
+			.hsfsb_03 .str {width:38px; background-position:-350px -70px;}
+				.hsfsb_03 .moveto a {width:135px; background-position:-350px -105px;}
+	/* 하부메뉴 */
+	.hsf_mvt_mr {clear:both; height:142px; margin-top:30px;}
+		.hsf_mvt_mr li {float:left; display:inline; width:214px; height:142px; padding:0 0 0 30px; background:url('../images/bg_hsf_mvt_mr.gif') right top no-repeat;}
+		.hsf_mvt_mr li.last {width:213px; background:none;}
+			.hsf_mvt_mr li a {display:block; background-image:url('../images/set_shopinfo.gif');}
+			.b_hsfmvt_fsm {width:199px; height:131px; background-position:left -130px;}
+			.b_hsfmvt_sf {width:189px; height:131px; background-position:-210px -130px;}
+			.b_hsfmvt_cc {width:196px; height:142px; background-position:-410px -130px;}
+	/* 대리점 전시품 할인판매 */
+	.hsf_ssds_w {position:relative; clear:both; margin:19px 0 0 0; padding:5px 0 0 122px; border-top:1px solid #e3e3e3;}
+		.hsf_ssds_w h3 {position:absolute; top:20px; left:29px; width:66px; height:30px; background:url('../images/set_shopinfo.gif') -500px top no-repeat;}
+		.hsf_ssds_list {}
+			.hsf_ssds_list li {border-bottom:1px solid #e2e2e2;}
+				.hsf_ssds_list li a {display:block; height:29px; padding:12px 0 0 0; font-size:0; color:#a6a6a6;}
+					.hsf_ssds_list li a em, .hsf_ssds_list li a span, .hsf_ssds_list li a strong, .hsf_ssds_list li a i {display:inline-block; font-weight:normal; font-family:mg; font-size:12px;}
+					.hsf_ssds_list li a em {width:260px;}
+					.hsf_ssds_list li a span {width:165px;}
+					.hsf_ssds_list li a strong {width:123px; color:#d7182a;}
+					.hsf_ssds_list li a i {width:61px; color:#d7182a;}
+				.hsf_ssds_list li a:hover {color:#333;}
+
+/* 탭메뉴 */
+.hsf_si_tab_w {position:relative; clear:both; height:44px; margin-top:15px; background:url('../images/bg_hsf_si_tab_w.gif') left bottom repeat-x;}
+	.hsf_si_tab {}
+		.hsf_si_tab li {float:left; display:inline; margin-right:1px;}
+			.hsf_si_tab li a {width:140px; height:42px; border:1px solid #ccdce8; border-bottom:0; background-image:url('../images/set_shopinfo.gif');}
+			.b_fsit_asf {background-position:left -280px;}
+			.b_fsit_fsi {background-position:-140px -280px;}
+			.b_fsit_si {background-position:-280px -280px;}
+			.b_fsit_ii {background-position:-420px -280px;}
+		.hsf_si_tab li.this {}
+			.hsf_si_tab li.this a {height:43px; border-color:#0057a0;}
+			.hsf_si_tab li.this .b_fsit_asf {background-position:left -330px;}
+			.hsf_si_tab li.this .b_fsit_fsi {background-position:-140px -330px;}
+			.hsf_si_tab li.this .b_fsit_si {background-position:-280px -330px;}
+			.hsf_si_tab li.this .b_fsit_ii {background-position:-420px -330px;}
+	.hsf_si_tab_w p {position:absolute; top:16px; right:0; clear:both;}
+		.b_hcc {width:102px; height:12px; background:url('../images/set_shopinfo.gif') left -375px no-repeat;}
+		.b_hcc:hover {background:url('../images/set_shopinfo.gif') -110px -375px no-repeat;}
+/* 제휴카드 레이어 */
+.hsf_corp_card_w {z-index:9999; position:absolute; top:0; left:-1px; clear:both; display:none; width:739px; height:443px;}
+	.hsf_in_pr {position:relative;}
+		.hsf_in_pr .hsf_cc_in {position:relative; width:739px; height:443px; text-align:left; overflow:hidden; background:url('../images/hsf_corp_card.png') left top no-repeat;}
+			.hsf_in_pr .hsf_cc_in .ir {position:absolute; top:-9999em;}
+		.hsf_in_pr .b_w_close {position:absolute; top:21px; right:28px;}
+			.b_hsf_mcl {width:21px; height:21px; background-position:-180px top;}
+
+/* 매장검색 */
+.hsf_si_ssrch {clear:both; margin:38px 0 0 0; text-align:center;}
+	.hsf_si_ssrch .jqtype3 {position:relative; display:inline-block; margin:2px -7px 0 0; vertical-align:top;}
+	.hsf_si_ssrch select {width:183px;}
+	.hsf_si_ssrch .jqtype3 .jqTransformSelectWrapper {margin-right:10px; text-align:left;}
+
+/* 매장목록 */
+.hsf_si_list {clear:both; margin-top:34px; border-bottom:1px solid #333;}
+	/* thead */
+	.hsf_si_list thead tr th {height:32px; text-align:left; border-top:1px solid #333;}
+	.hsf_si_list thead tr th .icn {top:0; height:12px; background-image:url('../images/set_table.gif');}
+	.hsf_si_list thead tr th.shop {width:210px; padding-left:30px;}
+		.hsf_si_list thead tr th.shop .icn {width:31px; background-position:-60px top;}
+	.hsf_si_list thead tr th.category {width:118px;}
+		.hsf_si_list thead tr th.category .icn {width:22px; background-position:0 -30px;}
+	.hsf_si_list thead tr th.where {width:270px;}
+		.hsf_si_list thead tr th.where .icn {width:21px; background-position:-25px -30px;}
+	.hsf_si_list thead tr th.tel {width:103px;}
+		.hsf_si_list thead tr th.tel .icn {width:43px; background-position:-50px -30px;}
+	/* tbody */
+	.hsf_si_list tbody tr td {height:41px; font-family:mg; font-size:12px; color:#a6a6a6; text-align:left; border-top:1px solid #e2e2e2; cursor:pointer;}
+	.hsf_si_list tbody tr.hover td {color:#333;}
+	.hsf_si_list tbody tr td.shop {padding-left:30px;}
+
+/* 플래그샵소개 */
+.hsf_fsi_vw {clear:both; margin-top:30px; font:0/0 arial;}
+
+/* 서브컨텐츠 */
+.hsf_fsi_sc_w {clear:both; float:left; width:100%; margin:21px 0 -14px 0;}
+	/* 좌측메뉴 */
+	.hsf_fsisc_mn {float:left; display:inline; width:152px;}
+		.hsf_fsisc_mn li {border-top:1px solid #e3e3e3;}
+		.hsf_fsisc_mn li.first {border-top:0;}
+			.hsf_fsisc_mn li a {width:152px; height:31px; background-image:url('../images/set_shopinfo.gif');}
+			.b_sfisc_sp {background-position:left -390px;}
+			.b_sfisc_ms {background-position:-155px -390px;}
+			.b_sfisc_cc {background-position:-310px -390px;}
+			.b_sfisc_ec {background-position:-465px -390px;}
+		.hsf_fsisc_mn li.this .b_sfisc_sp {background-position:left -425px;}
+		.hsf_fsisc_mn li.this .b_sfisc_ms {background-position:-155px -425px;}
+	/* 컨텐츠 */
+	.hsf_fsisc_cnt {float:left; display:inline; width:549px; padding:9px 0 0 30px;}
+		.hsf_fsin_st {margin-bottom:30px; background-image:url('../images/set_fscnt_in.gif'); background-repeat:no-repeat;}
+		.hsf_fscnt_in_01 {width:495px; height:97px; background-position:left top;}
+		.hsf_fscnt_in_02 {width:520px; height:75px; background-position:left -100px;}
+		.hsf_fscnt_in_03 {width:486px; height:75px; background-position:left -180px;}
+		.hsf_fscnt_in_04 {width:503px; height:75px; background-position:left -260px;}
+	/* 멤버쉽 */
+	.hsf_mbs_w {}
+		.hsf_mbs_w .hsf_fsin_st {width:549px; background-image:url('../images/set_hsf_mbs.gif'); background-repeat:no-repeat;}
+		.hsf_mbs_w .hsf_fscnt_in_01 {height:170px; background-position:left top;}
+		.hsf_mbs_w .hsf_fscnt_in_02 {height:230px; background-position:left -180px;}
+		.hsf_mbs_w .hsf_fscnt_in_03 {height:248px; background-position:left -420px;}
+
+
+/* 한샘스토어 소개 */
+.hsf_hsi_w {clear:both; margin:5px 0 -14px 0;}
+	.hsf_hsi_w li {padding:25px 0; border-top:1px solid #e3e3e3;}
+	.hsf_hsi_w li.first {border-top:0;}
+		.hsf_hsi_w .hsf_fsin_st {width:719px; margin-bottom:0; background-image:url('../images/set_hsf_hsi.gif'); background-repeat:no-repeat;}
+		.hsf_hsi_w .hsf_fscnt_in_01 {height:56px; background-position:left top;}
+		.hsf_hsi_w .hsf_fscnt_in_02 {height:56px; background-position:left -60px;}
+		.hsf_hsi_w .hsf_fscnt_in_03 {height:78px; background-position:left -120px;}
+		.hsf_hsi_w .hsf_fscnt_in_04 {height:100px; background-position:left -210px;}
+		.hsf_hsi_w .hsf_fscnt_in_05 {height:78px; background-position:left -320px;}
+
+/* 한샘인테리어 소개 */
+.hsf_sl_tb_w {clear:both; height:116px; margin-top:30px;}
+	.hsf_sl_tb_w li {float:left; display:inline; width:365px; height:116px; font:0/0 arial;}
+	.hsf_sl_tb_w li.first {margin-right:1px;}
+	/* 매장지역선택 */
+	.hsf_sls_w {clear:both; margin:16px 0 -22px 0;}
+		.hsf_sls_w select {width:103px;}
+		.hsf_sls_w .jqTransformSelectWrapper {position:relative; top:4px; margin-right:7px;}
+
+/* 매장상세정보 */
+.hsf_shop_detail_w {clear:both; margin-top:24px; font-family:mg; letter-spacing:-1px;}
+	.hsf_shop_detail_w h3 {font-size:22px; color:#333; line-height:30px;}
+	.hsf_sd_cont {clear:both; float:left; width:100%; margin-top:13px;}
+		.hsf_sd_cont .col_left, .hsf_sd_cont .col_mid, .hsf_sd_cont .col_right {float:left; display:inline; font-size:12px; color:#a6a6a6; line-height:22px;}
+			.hsf_sd_cont h4 {display:block; font-weight:normal; color:#333;}
+		.hsf_sd_cont .col_left {width:240px;}
+			.hsf_sd_cont .col_left h4 {display:inline;}
+		.hsf_sd_cont .col_mid {width:230px;}
+		.hsf_sd_cont .col_right {width:260px;}
+	.hsf_sd_map {clear:both; margin-top:25px;}
+	.hsf_sd_btn_w {clear:both; margin-top:19px; text-align:center;}
+		.b_slv {width:143px; height:40px; background-position:left -265px;}
