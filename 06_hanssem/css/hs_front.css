@@ -73,7 +73,7 @@
 /* 제휴카드 레이어 */
 .hsf_corp_card_w {z-index:9999; position:absolute; top:0; left:-1px; clear:both; display:none; width:739px; height:443px;}
 	.hsf_in_pr {position:relative;}
-		.hsf_in_pr .hsf_cc_in {position:relative; width:739px; height:443px; text-align:left; overflow:hidden; background:url('../images/hsf_corp_card.png') left top no-repeat;}
+		.hsf_in_pr .hsf_cc_in {position:relative; width:739px; height:443px; text-align:left; overflow:hidden; background:url('../images/hsf_corp_card.png') left top no-repeat; _background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/hsf_corp_card.png', sizingMethod='crop');}
 			.hsf_in_pr .hsf_cc_in .ir {position:absolute; top:-9999em;}
 		.hsf_in_pr .b_w_close {position:absolute; top:21px; right:28px;}
 			.b_hsf_mcl {width:21px; height:21px; background-position:-180px top;}

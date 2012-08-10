@@ -5,9 +5,9 @@
 .ctw_event .ctw_exp {width:264px; height:30px; background-position:left -70px;}
 /* 하위메뉴 */
 .hcsm_event_now, .hcsm_event_now strong {width:77px; background-position:left top;}
-	.hcsm_event_now strong {background-position:left -15px;}
+	.hcsm_event_now:hover, .hcsm_event_now strong {background-position:left -15px;}
 .hcsm_event_old, .hcsm_event_old strong {width:55px; background-position:-80px top;}
-	.hcsm_event_old strong {background-position:-80px -15px;}
+	.hcsm_event_old:hover, .hcsm_event_old strong {background-position:-80px -15px;}
 /* 메인이벤트 */
 .hs_event_main {margin-top:20px; font:0/0 arial;}
 /* 이벤트목록 */
@@ -43,6 +43,9 @@
 			.hs_reply_list li.hsev_r_modify .content, .hs_reply_list li.hsev_r_modify .writer, .hs_reply_list li.hsev_r_modify .function {display:none;}
 			.hs_reply_list li.hsev_r_modify .hsev_ir_write {margin:3px 0 0 0; padding:0; border-top:0; border-bottom:0; background:none;}
 				.hs_reply_list li.hsev_r_modify .hsev_ir_write .hfiptxt input {width:596px;}
+		/* 내용없음 */
+		.hs_list_temp {height:42px; margin:8px 0 0 0; border-color:#e2e2e2;}
+			.hs_list_temp strong {line-height:42px;}
 	/* 한줄 댓글 쓰기 */
 	.hsev_write {position:relative; margin-top:50px; padding:20px 0 25px 30px; border:1px solid #ccdce8; border-width:1px 0 1px 0; background:url('../images/bg_b_s_grd.gif') left top repeat;}
 		.hsev_write p {width:131px; height:13px; margin-bottom:3px; overflow:hidden; background:url('../images/hsev_write_tit.gif') left top no-repeat;}

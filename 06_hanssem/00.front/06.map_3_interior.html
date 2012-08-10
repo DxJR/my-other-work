@@ -19,7 +19,6 @@
 		$("form.jqtransform").jqTransform();
 		snbFunc.init();
 		productListAction();
-		tableHover(); // 매장목록관련
 	});
 //]]>
 </script>
@@ -51,9 +50,9 @@
 				<li><a href="#" class="gbtn b_gnb_logout"><span class="ir">로그아웃</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_wishlist"><span class="ir">위시리스트</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a></li>
-				<li><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
-				<li class="last"><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -197,6 +196,14 @@
 					</li>
 				</ul>
 			</div>
+			<!-- 좌측검색 -->
+			<div id="hs_cm_search">
+				<fieldset>
+					<legend>한샘인테리어 검색</legend>
+					<input type="text" id="hscms_ipt" class="iptxt" value="제품 검색" />
+					<button type="submit" class="gbtn b_hscms_go"><span class="ir">검색</span></button>
+				</fieldset>
+			</div>
 		</div>
 		<!-- content -->
 		<div id="content">
@@ -252,8 +259,8 @@
 			</div>
 			<!-- 상단배너 -->
 			<ul class="hsf_sl_tb_w">
-				<li class="first"><img src="../images/hsf_sl_t_b01.gif" width="365" height="116" alt="한샘인테리어 대리점 전시품 할인 판매" /></li>
-				<li><img src="../images/hsf_sl_t_b02.gif" width="365" height="116" alt="한샘인테리어 대리점 전시품 구매 문의" /></li>
+				<li class="first"><a href="#"><img src="../images/hsf_sl_t_b01.gif" width="365" height="116" alt="한샘인테리어 대리점 전시품 할인 판매" /></a></li>
+				<li><a href="#"><img src="../images/hsf_sl_t_b02.gif" width="365" height="116" alt="한샘인테리어 대리점 전시품 구매 문의" /></a></li>
 			</ul>
 			<!-- 매장지역선택 -->
 			<div class="hsf_sls_w">

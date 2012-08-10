@@ -22,3 +22,5 @@ body {background-color:#fff;}
 				.zs_result_list li strong, .zs_result_list li em {display:inline-block; font-family:mg; font-size:12px; font-weight:normal; color:#a6a6a6; line-height:17px; vertical-align:top;}
 				.zs_result_list li strong {width:66px; padding-left:14px;}
 				.zs_result_list li em {width:228px;}
+			/* hover */
+			.zs_result_list li.hover strong, .zs_result_list li.hover em {color:#333;}
