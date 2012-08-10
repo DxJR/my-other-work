@@ -36,9 +36,9 @@
 		</div>
 		<ul class="had_gnb">
 			<li><a href="#">메인화면</a></li>
-			<li><a href="#">제품관리</a></li>
 			<!-- 현재선택일 때 class="this" 추가 -->
-			<li class="this"><a href="#">게시판관리</a></li>
+			<li class="this"><a href="#">제품관리</a></li>
+			<li><a href="#">게시판관리</a></li>
 			<li><a href="#">이벤트</a></li>
 			<li><a href="#">매장관리</a></li>
 			<li><a href="#">기타</a></li>
@@ -48,20 +48,26 @@
 	<div id="had_container">
 		<!-- sidebar -->
 		<div id="had_sidebar">
-			<h2>게시판 관리</h2>
+			<h2>제품 관리</h2>
 			<ul class="had_snb">
-				<li><a href="#">전시품 할인판매 게시판</a></li>
+				<li><a href="#">아이콘 등록</a></li>
 				<!-- 현재선택일 때 class="this" 추가 -->
-				<li class="this"><a href="#">전시품 할인판매 신청</a></li>
-				<li><a href="#">전시품 할인판매 신청 대기</a></li>
+				<li class="this"><a href="#">옵션 등록 및 수정</a></li>
+				<li><a href="#">옵션 변동사항 입력</a></li>
+				<li><a href="#">제품 등록</a></li>
+				<li><a href="#">제품 수정 및 삭제</a></li>
+				<li><a href="#">위시리스트 확인</a></li>
 			</ul>
 		</div>
 		<!-- content -->
 		<div id="had_content">
-			<h3>전시품 할인판매 신청</h3>
-			<!-- 분류검색 -->
-			<fieldset class="had_category had_ba_src">
+			<h3>옵션 등록 및 수정</h3>
+			<!-- 2차제목 -->
+			<h4 class="had_tit_lv4">제품 목록</h4>
+			<!-- 카테고리검색 -->
+			<fieldset class="had_category">
 				<legend>카테고리 검색</legend>
+				<strong>카테고리</strong>
 				<form class="jqtransform">
 					<select>
 						<option>분류1</option>
@@ -73,156 +79,96 @@
 						<option>분류2</option>
 						<option>분류2</option>
 					</select>
-					<select>
-						<option>분류3</option>
-						<option>분류3</option>
-						<option>분류3</option>
-					</select>
 					<input type="image" src="../images/admin/btn_category_search.gif" width="41" height="25" class="ip_img" alt="검색" />
 				</form>
 			</fieldset>
 			<!-- 목록 -->
-			<table cellpadding="0" cellspacing="0" class="had_tbl_set had_tbl_ddc">
+			<table cellpadding="0" cellspacing="0" class="had_tbl_set had_tbl_ilist">
 				<thead>
 					<tr>
-						<th class="chk">선택</th>
-						<th class="num">번호</th>
-						<th class="item">상품명 / 분류</th>
-						<th class="shop">매장명</th>
-						<th class="disc">할인율 <span class="lb">등급</span></th>
-						<th class="date">등록일 <span class="lb">판매여부</span></th>
-						<th class="modify">수정</th>
-						<th class="delete">삭제</th>
-						<th class="cell_last show">노출전환</th>
+						<th class="grp1">분류1</th>
+						<th class="grp2">분류2</th>
+						<th class="iname2">상품명</th>
+						<th class="option">옵션</th>
+						<th class="cell_last rnm">등록 및 수정</th>
 					</tr>
 				</thead>
 				<tbody>
 					<!-- 첫번째일 때 class="first" 추가 -->
 					<tr class="first">
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> <em class="c_pnt_r">판매중</em></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong class="c_pnt_r">ON</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> -</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> 판매완료</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> <em class="c_pnt_r">판매중</em></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong class="c_pnt_r">ON</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> -</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> 판매완료</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> -</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> 판매완료</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> <em class="c_pnt_r">판매중</em></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong class="c_pnt_r">ON</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> -</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
-					</tr>
-					<tr>
-						<td class="ta_c"><input type="checkbox" class="check" /></td>
-						<td class="ta_c">148</td>
-						<td>론도 2000 거실장 2800 세트 <br />거실 &gt; 거실장</td>
-						<td>한샘인테리어 광명점 <br /> TEL 02-2930-2029</td>
-						<td>20.00% <br /> A등급</td>
-						<td>2012.08.21 <br /> 판매완료</td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
-						<td class="ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
-						<td class="cell_last ta_c va_m"><strong>OFF</strong></td>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
 					</tr>
 				</tbody>
 			</table>
 			<!-- 페이징 / 버튼 -->
-			<div class="pag_btn_w pbw_brd">
+			<div class="pag_btn_w">
 				<!-- 페이징 -->
 				<div class="had_paging">
 					<a href="#" class="p_fnc pfn_l">&lt;&lt;</a>
@@ -240,10 +186,6 @@
 					<a href="#">10</a>
 					<a href="#" class="p_fnc pfn_r">&gt;</a>
 					<a href="#" class="p_fnc pfn_r">&gt;&gt;</a>
-				</div>
-				<div class="had_b_r">
-					<a href="#" class="b_st_adm2 b_c_black">선택항목 삭제</a>
-					<a href="#" class="b_st_adm2 b_c_red">글 쓰기</a>
 				</div>
 			</div>
 		</div>

@@ -46,12 +46,28 @@
 		<div id="gnb">
 			<h2 class="hide">자주쓰는메뉴</h2>
 			<ul class="m_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span class="ir">한샘 통합 로그인</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_login" onclick="showLayer('hs_gnb_login'); return false;"><span class="ir">로그인</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a></li>
-				<li><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
-				<li class="last"><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
 			</ul>
+			<!-- 로그인 레이어 -->
+			<div id="hs_gnb_login">
+				<div class="hsgl_in">
+					<h3><span class="ir">로그인</span></h3>
+					<p class="hsgl_exp"><span class="ir">한샘닷컴의 아이디와 패스워드를 입력해 주십시오.</span></p>
+					<fieldset class="hsgl_form">
+						<legend>한샘닷컴 로그인</legend>
+						<p class="hsgl_f_id"><label for="had_l_id"><span class="ir">아이디</span></label> <span class="hfiptxt"><input type="text" class="iptxt" id="had_l_id" /></span></p>
+						<p class="hsgl_f_pwd"><label for="had_l_pwd"><span class="ir">비밀번호</span></label> <span class="hfiptxt"><input type="password" class="iptxt" id="had_l_pwd" /></span></p>
+						<p class="hsc_lg_menu"><a href="#">회원가입</a> / <a href="#">아이디패스워드 찾기</a></p>
+						<input type="image" class="hsgl_b_go" src="../images/common/btn_hsgl_go.gif" width="65" height="59" alt="로그인" />
+					</fieldset>
+					<p class="close_lyr"><button type="button" class="gbtn b_c_layer" onclick="closeLayer('hs_gnb_login');" title="닫기"><span class="ir">닫기</span></button></p>
+				</div>
+				<div class="shadow_bg"></div>
+			</div>
 		</div>
 	</div>
 	<!-- container -->
@@ -194,6 +210,14 @@
 					</li>
 				</ul>
 			</div>
+			<!-- 좌측검색 -->
+			<div id="hs_cm_search">
+				<fieldset>
+					<legend>한샘인테리어 검색</legend>
+					<input type="text" id="hscms_ipt" class="iptxt" value="제품 검색" />
+					<button type="submit" class="gbtn b_hscms_go"><span class="ir">검색</span></button>
+				</fieldset>
+			</div>
 		</div>
 		<!-- content -->
 		<div id="content">
@@ -232,22 +256,22 @@
 				<!-- 전시품 등급 가이드 레이어 -->
 				<div id="sgrd-guide">
 					<div class="sgrdg_in">
-						<h3>전시품 등급 가이드</h3>
-						<p class="explain">전시용으로 진열되어 있는 제품으로 판매 할인율 가이드입니다. <span class="lb">구매 시 참고 바랍니다.</span></p>
-						<div class="grade_w">
-							<h4>A등급</h4>
-							<p class="grade"><strong>할인율: 10% - 20%</strong></p>
-							<p class="gw_explain">정상 제품에 가까운 품질의 <span class="lb">제품입니다.</span></p>
+						<h3><span class="ir">전시품 등급 가이드</span></h3>
+						<p class="explain"><span class="ir">전시용으로 진열되어 있는 제품으로 판매 할인율 가이드입니다. 구매 시 참고 바랍니다.</span></p>
+						<div class="grade_w grade_w_a">
+							<h4><span class="ir">A등급</span></h4>
+							<p class="grade"><span class="ir"><strong>할인율: 10% - 20%</strong></span></p>
+							<p class="gw_explain"><span class="ir">정상 제품에 가까운 품질의 제품입니다.</span></p>
 						</div>
-						<div class="grade_w">
-							<h4>B등급</h4>
-							<p class="grade"><strong>할인율: 20% - 30%</strong></p>
-							<p class="gw_explain">전시 중 약간의 이색, 찍힘, 얼룩, 긁힘이 <span class="lb">있는 제품입니다.</span></p>
+						<div class="grade_w grade_w_b">
+							<h4><span class="ir">B등급</span></h4>
+							<p class="grade"><span class="ir"><strong>할인율: 20% - 30%</strong></span></p>
+							<p class="gw_explain"><span class="ir">전시 중 약간의 이색, 찍힘, 얼룩, 긁힘이 있는 제품입니다.</span></p>
 						</div>
 						<div class="grade_w grade_w_c">
-							<h4>C등급</h4>
-							<p class="grade"><strong>할인율: 30% - 50%</strong></p>
-							<p class="gw_explain">사용에 불편함은 없으나, <span class="lb">수리가 필요한 제품입니다.</span></p>
+							<h4><span class="ir">C등급</span></h4>
+							<p class="grade"><span class="ir"><strong>할인율: 30% - 50%</strong></span></p>
+							<p class="gw_explain"><span class="ir">사용에 불편함은 없으나, 수리가 필요한 제품입니다.</span></p>
 						</div>
 						<p class="close_lyr"><button type="button" class="gbtn b_c_layer" onclick="closeLayer('sgrd-guide');" title="닫기"><span class="ir">닫기</span></button></p>
 					</div>
@@ -293,7 +317,7 @@
 					</div>
 				</div>
 				<!-- 하단목록 -->
-				<table cellpadding="0" cellspacing="0" summary="전시품 할인판매 상품목록" class="sr_item_list">
+				<table cellpadding="0" cellspacing="0" summary="전시품 할인판매 상품목록" id="hs_show_item_list" class="sr_item_list">
 					<thead>
 					<tr>
 						<th class="no"><i class="icn"><span class="ir">번호</span></i></th>

@@ -1,21 +1,5 @@
 @charset "utf-8";
 
-/* 서브메뉴 */
-#sbi_submenu h2.sm_t_view .icn {width:67px; background-position:left top;}
-.sbi_sm_tpl li a.b_sbist_01 .icn {width:70px; background-position:left -20px;}
-.sbi_sm_tpl li.this a.b_sbist_01 .icn {background-position:left -40px;}
-.sbi_sm_tpl li a.b_sbist_02 .icn {width:82px; background-position:-75px -20px;}
-.sbi_sm_tpl li.this a.b_sbist_02 .icn {background-position:-75px -40px;}
-.sbi_sm_tpl li a.b_sbist_03 .icn {width:44px; background-position:-160px -20px;}
-.sbi_sm_tpl li.this a.b_sbist_03 .icn {background-position:-160px -40px;}
-.sbi_sm_tpl li a.b_sbist_04 .icn {width:81px; background-position:-210px -20px;}
-.sbi_sm_tpl li.this a.b_sbist_04 .icn {background-position:-210px -40px;}
-
-/* 컨텐츠제목 */
-.sbi_tit_cont h3.sbtc_st01 .icn {width:106px; background-position:left top;}
-.sbi_tit_cont h3.sbtc_st02 .icn {width:125px; background-position:left -25px;}
-
-
 /* 거래내역조회 */
 .sbi_tbl_s {}
 
@@ -26,14 +10,14 @@
 	.sbi_tbl_s_2 tr td.s_tbl_c02 {width:439px;}
 	.sbi_tbl_s_2 tr.s_tbl_r03 .ipst02 {width:236px;}
 .sbi_tbl_s2_2 {}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c01 {width:33px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c02 {width:57px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c03 {width:59px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c04 {width:54px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c05 {width:130px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c06 {width:89px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c07 {width:49px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c08 {width:65px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c09 {width:142px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c10 {width:57px;}
-	.sbi_tbl_s2 tr th.s_tbl_s2_c11 {width:162px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c01 {width:33px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c02 {width:57px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c03 {width:59px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c04 {width:54px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c05 {width:130px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c06 {width:89px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c07 {width:49px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c08 {width:65px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c09 {width:142px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c10 {width:57px;}
+	.sbi_tbl_s2_2 tr th.s_tbl_s2_c11 {width:162px;}

@@ -62,6 +62,29 @@ jQuery(function($){
 	select_a.click(set_anchor).click(hide_option).focus(i_hover).hover(i_hover);
 	select_input.change(set_label).focus(set_label);
 	select_label.hover(i_hover).click(hide_option);
+
+	// 좌측검색
+	var btnSearchComm = $('#hs_cm_search .b_hscms_go');
+	if (btnSearchComm)	{
+		if (document.getElementById('hscms_ipt'))	{
+			formCheck('hscms_ipt');
+		}
+		btnSearchComm.bind('mouseover',function() {
+			this.className='gbtn b_hscms_go b_hscms_go_over';
+		});
+		btnSearchComm.bind('mouseleave',function() {
+			this.className='gbtn b_hscms_go';
+		});
+	};
+
+	// Product List
+	showItemListHover(".hs_product_b_list>li");
+	// 전시품 할인판매
+	showItemListHover("#hs_show_item_list>tbody>tr");
+	// 매장찾기
+	showItemListHover(".hsf_si_list>tbody>tr");
+	// 우편번호 검색결과
+	showItemListHover(".zs_result_list>li");
 });
 
 // show layer
@@ -121,12 +144,30 @@ function productListAction() {
 	})
 }
 
-// table tr hover 
-function tableHover() {
-	$(".hsf_si_list>tbody>tr").bind('mouseover', function() {
-		this.className='hover';
+// 리스트 hover
+function showItemListHover(objElement) {
+	$(""+objElement+"").bind('mouseover', function() {
+		$(this).addClass("hover");
 	});
-	$(".hsf_si_list>tbody>tr").bind('mouseleave', function() {
-		this.className='';
+	$(""+objElement+"").bind('mouseleave', function() {
+		$(this).removeClass("hover");
 	});
+}
+
+// 폼 검사
+function formCheck(id) {
+	var inpObj = document.getElementById(id);
+	if (inpObj.value!=="") {
+		var inpObjValue=inpObj.value;
+	}
+	inpObj.onfocus = function() {
+		if (inpObj.value==inpObjValue){
+			inpObj.value="";
+		}
+	}
+	inpObj.onblur = function() {
+		if (inpObj.value=="") {
+			inpObj.value=inpObjValue;
+		}
+	}
 }

@@ -49,9 +49,9 @@
 				<li><a href="#" class="gbtn b_gnb_logout"><span class="ir">로그아웃</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_wishlist"><span class="ir">위시리스트</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a></li>
-				<li><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
-				<li class="last"><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -195,6 +195,14 @@
 					</li>
 				</ul>
 			</div>
+			<!-- 좌측검색 -->
+			<div id="hs_cm_search">
+				<fieldset>
+					<legend>한샘인테리어 검색</legend>
+					<input type="text" id="hscms_ipt" class="iptxt" value="제품 검색" />
+					<button type="submit" class="gbtn b_hscms_go"><span class="ir">검색</span></button>
+				</fieldset>
+			</div>
 		</div>
 		<!-- content -->
 		<div id="content">
@@ -256,7 +264,7 @@
 				</div>
 			</fieldset>
 			<!-- 목록 -->
-			<table cellpadding="0" cellspacing="0" summary="전시품 할인판매 상품목록" class="sr_item_list">
+			<table cellpadding="0" cellspacing="0" summary="전시품 할인판매 상품목록" id="hs_show_item_list" class="sr_item_list">
 				<thead>
 					<tr>
 						<th class="no"><i class="icn"><span class="ir">번호</span></i></th>
@@ -383,6 +391,7 @@
 				<a href="#">10</a>
 				<a href="#" class="fnc">&gt;</a>
 				<a href="#" class="fnc">&gt;&gt;</a>
+				<a href="#" class="gbtn b_sibq"><span class="ir">전시품 구매문의</span></a>
 			</div>
 		</div>
 		<div class="clear"></div>

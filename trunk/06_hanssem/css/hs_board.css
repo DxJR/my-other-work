@@ -12,7 +12,7 @@
 	.b_s_grd {position:absolute; top:-1px; right:0; width:128px; height:43px; background-position:left -155px;}
 	/*  전시품 등급 가이드 */
 	#sgrd-guide {z-index:12; position:absolute; top:-1px; left:0; clear:both; display:none;}
-		.sgrdg_in {z-index:2; position:relative; width:701px; height:228px; padding:18px 0 0 30px; font-family:ngEB; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
+		.sgrdg_in {z-index:2; position:relative; width:701px; height:228px; padding:18px 0 0 30px; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
 		.sgrdg_in h3, .sgrdg_in .explain, .grade_w h4, .grade_w .grade, .grade_w .gw_explain {overflow:hidden; background-image:url('../images/set_sgrdg.gif'); background-repeat:no-repeat;}
 			.sgrdg_in h3 {width:118px; height:16px; background-position:left top;}
 			.sgrdg_in .explain {width:290px; height:30px; margin-top:10px; background-position:-120px top;}
@@ -30,8 +30,6 @@
 			.grade_w_c h4 {width:39px; background-position:-85px -30px;}
 			.grade_w_c .grade {background-position:-260px -50px;}
 			.grade_w_c .gw_explain {width:123px; background-position:left -100px;}
-		.close_lyr {position:absolute; top:20px; right:20px; clear:both; width:21px; height:21px;}
-			.b_c_layer {width:21px; height:21px; text-indent:-9999em; background-position:left top;}
 		/* shadow */
 		#sgrd-guide .shadow {z-index:1; position:absolute; right:-7px; bottom:-7px; clear:both; width:739px; height:254px; background:url('../images/bg_sgrd_guide.png') right bottom no-repeat;}
 
@@ -53,6 +51,8 @@
 		.sr_item_list tbody tr td em.complete {color:#a6a6a6;}
 	.sr_item_list tbody tr.first td {border-top:0;}
 	.sr_item_list tbody tr.this td {background-color:#f9f9f9;}
+	/* hover */
+	.sr_item_list tbody tr.hover td, .sr_item_list tbody tr.hover td a, .sr_item_list tbody tr.hover td em.complete {color:#333;}
 /* 내용보기 */
 .sr_item_view {clear:both; margin:28px 0 0 0; font-family:mg; font-size:12px; line-height:18px; color:#a6a6a6;}
 	.sr_item_view h3 {font-weight:normal; font-size:16px; color:#333; line-height:18px; letter-spacing:-1px;}
@@ -82,12 +82,15 @@
 			.b_p_r {margin-left:6px;}
 				.b_p_r .icn {margin-left:2px; background-position:-105px top;}
 		.btn_w_bottom .b_list_all {position:relative; right:-5px; float:right; width:73px; height:37px; background-position:-25px top;}
+		.b_sibq {width:110px; height:38px; background-position:-150px -260px;}
+		.btn_w_bottom .b_sibq {top:10px; left:5px;}
+		.paging .b_sibq {position:absolute; top:-3px; right:-5px; height:38px; margin:0; border:0; vertical-align:middle; background:url('../images/set_hanssem.gif') -150px -260px no-repeat;}
 /* 전시품 구매 문의 */
 .sib_pi_w {position:relative; height:731px; height:129px; margin-top:12px; text-indent:-9999em; font:0/0 arial; overflow:hidden; border:1px solid #ccdce8; border-width:1px 0; background:url('../images/sib_pi_w.gif') left top repeat;}
 	.sib_pi_w h3, .sib_pi_w ul {position:absolute; top:-9999em; left:-9999em;}
-.sib_pi_agr {margin-top:13px; padding-left:20px;}
+.sib_pi_agr {margin-top:15px; padding-left:20px;}
 	.sib_pi_agr .check {top:0; margin-right:4px;}
-	.sib_pi_agr label {position:relative; top:2px; display:inline-block; width:55px; height:12px; overflow:hidden; background:url('../images/sib_pi_agree.gif') left top no-repeat;}
+	.sib_pi_agr label {position:relative; display:inline-block; width:55px; height:12px; overflow:hidden; vertical-align:top; background:url('../images/sib_pi_agree.gif') left top no-repeat;}
 /* 문의작성폼 */
 .sib_write {clear:both; margin-top:13px;}
 	.sib_write_in {padding:0 20px; font-family:mg; font-size:12px; color:#a6a6a6; border:1px solid #e2e2e2; border-width:1px 0; background:#fcfcfc;}
@@ -124,3 +127,4 @@
 	/* 등록버튼 */
 	.submit_btn {clear:both; margin-top:20px; text-align:center;}
 		.b_q_submit {width:143px; height:40px; background-position:left -40px;}
+		.b_q_cancel {width:143px; height:40px; background-position:-270px -260px;}
