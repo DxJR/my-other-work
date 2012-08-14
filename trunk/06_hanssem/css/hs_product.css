@@ -1,10 +1,29 @@
 @charset "utf-8";
 
 /* 제목 */
-	/* 가죽소파 */
 	.ctw_leathersofa h2 {width:53px; background-position:left -100px;}
-	/* 거실장 */
 	.ctw_livingroomchest h2 {width:38px; background-position:-55px -100px;}
+	.ctw_bed h2 {width:24px; background-position:-95px -100px;}
+	.ctw_clotheschest h2 {width:26px; background-position:-120px -100px;}
+	.ctw_builtinchest h2 {width:51px; height:15px; background-position:-150px -100px;}
+	.ctw_btable h2 {width:26px; background-position:-205px -100px;}
+	.ctw_stable h2 {width:38px; background-position:-235px -100px;}
+	.ctw_mtable h2 {width:38px; background-position:-275px -100px;}
+	.ctw_mirror h2 {width:26px; height:15px; background-position:-315px -100px;}
+	.ctw_comforteye h2 {width:61px; background-position:-345px -100px;}
+	.ctw_silentnight h2 {width:62px; background-position:-410px -100px;}
+	.ctw_nottlatex h2 {width:63px; background-position:-65px -115px;}
+	.ctw_altofebricsofa h2 {width:88px; background-position:-130px -115px;}
+	.ctw_isofa h2 {width:51px; background-position:-220px -115px;}
+	.ctw_rclyner h2 {width:61px; background-position:-275px -115px;}
+	.ctw_lrtable h2 {width:63px; background-position:-380px -115px;}
+	.ctw_dtable h2 {width:26px; background-position:-445px -115px;}
+	.ctw_chair h2 {width:26px; background-position:-270px -70px;}
+	.ctw_desk h2 {width:26px; background-position:-300px -70px;}
+	.ctw_deskchest h2 {width:51px; background-position:-330px -70px;}
+	.ctw_bookcase h2 {width:26px; background-position:-385px -70px;}
+	.ctw_cchest h2 {width:67px; background-position:-415px -70px;}
+	.ctw_fsofa h2 {width:65px; background-position:-270px -85px;}
 
 /* 제품목록 A */
 .hs_product_list {clear:both; float:left; width:100%;}
@@ -149,3 +168,57 @@
 		.hspal_h_tl {text-align:left;}
 		.hspal_wls {clear:both; margin:46px 0 -8px 0; font-family:mg; font-size:12px; color:#333; line-height:18px;}
 		.hspal_pd .hspd_wishlist thead tr th.price {width:143px;}
+
+/* 수입소파 */
+.import_sofa_index {clear:both; margin-top:10px; border-top:1px solid #e2e2e2;}
+	.import_sofa_index li {float:left; display:inline; margin-top:20px; margin-right:1px; font:0/0 arial;}
+		.import_sofa_index li a {position:relative; display:inline-block; height:100%;}
+			.import_sofa_index li a span {position:absolute; bottom:0; left:0; width:100%;}
+	.import_sofa_index li.isi_01 {width:259px; height:364px;}
+		.import_sofa_index li.isi_01 a:hover span {height:345px; background:url('../images/isi_over_01.png') left top no-repeat;}
+	.import_sofa_index li.isi_02 {width:471px; height:333px; margin-right:0;}
+		.import_sofa_index li.isi_02 a:hover span {height:314px; background:url('../images/isi_over_02.png') left top no-repeat;}
+	.import_sofa_index li.isi_03 {clear:both; width:219px; height:286px;}
+		.import_sofa_index li.isi_03 a:hover span {height:267px; background:url('../images/isi_over_03.png') left top no-repeat;}
+	.import_sofa_index li.isi_04 {width:267px; height:208px;}
+		.import_sofa_index li.isi_04 a:hover span {height:189px; background:url('../images/isi_over_04.png') left top no-repeat;}
+	.import_sofa_index li.isi_05 {width:243px; height:246px; margin-right:0;}
+		.import_sofa_index li.isi_05 a:hover span {height:227px; background:url('../images/isi_over_05.png') left top no-repeat;}
+
+/* 서브메뉴 */
+.is_sub_menu {clear:both; margin-top:10px; border:1px solid #e2e2e2; border-width:1px 0;}
+	.is_sub_menu li a.ism_01 {width:32px; background-position:left -30px;}
+		.is_sub_menu li a.ism_01 strong {background-position:left -45px;}
+	.is_sub_menu li a.ism_02 {width:52px; background-position:-35px -30px;}
+		.is_sub_menu li a.ism_02 strong {background-position:-35px -45px;}
+	.is_sub_menu li a.ism_03 {width:32px; background-position:-90px -30px;}
+		.is_sub_menu li a.ism_03 strong {background-position:-90px -45px;}
+	.is_sub_menu li a.ism_04 {width:32px; background-position:-125px -30px;}
+		.is_sub_menu li a.ism_04 strong {background-position:-125px -45px;}
+	.is_sub_menu li a.ism_05 {width:31px; background-position:-160px -30px;}
+		.is_sub_menu li a.ism_05 strong {background-position:-160px -45px;}
+/* 컨텐츠 */
+.isc_w {position:relative; clear:both; margin-top:20px; background-position:left top; background-repeat:no-repeat;}
+.isc_01 {height:1098px; padding-bottom:20px; border-bottom:1px solid #e3e3e3; background-image:url('../images/isc_01.jpg');}
+.isc_02 {height:769px; border-bottom:1px solid #e3e3e3; background-image:url('../images/isc_02.jpg');}
+.isc_03 {height:1069px; background-image:url('../images/isc_03.jpg');}
+.isc_04 {height:1097px; background-image:url('../images/isc_04.jpg');}
+.isc_05 {height:850px; padding-bottom:20px; border-bottom:1px solid #e3e3e3; background-image:url('../images/isc_05.jpg');}
+
+/* 한샘패브릭관 */
+.hsfs_visual {clear:both; margin:10px 0 0 0; padding:20px 0 0 0; font:0/0 arial; border-top:1px solid #e2e2e2;}
+.hsfs_what {clear:both; margin-top:30px; padding-bottom:30px; border-bottom:1px solid #e3e3e3;}
+	.hsfs_what_in {height:99px; background:url('../images/set_hsfs.jpg') left top no-repeat;}
+.hsfs_osi {position:relative; clear:both; padding:10px 0 10px 122px; border-bottom:1px solid #e3e3e3;}
+	.hsfs_osi h3 {position:absolute; top:30px; left:0; width:62px; height:14px; background:url('../images/set_hsfs.jpg') -620px -110px no-repeat;}
+	.hsfs_osi ul {}
+		.hsfs_osi ul li {padding:20px 0; border-bottom:1px solid #e3e3e3;}
+			.hsfs_osi ul li .hsfs_osi_in {height:83px; background-image:url('../images/set_hsfs.jpg'); background-repeat:no-repaet;}
+		.hsfs_osi ul li.ct .hsfs_osi_in {background-position:left -110px;}
+		.hsfs_osi ul li.bl .hsfs_osi_in {background-position:left -200px;}
+		.hsfs_osi ul li.rg .hsfs_osi_in {background-position:left -290px;}
+		.hsfs_osi ul li.cs .hsfs_osi_in {background-position:left -380px;}
+		.hsfs_osi ul li.frsf .hsfs_osi_in {background-position:left -470px;}
+		.hsfs_osi ul li.pbf .hsfs_osi_in {background-position:left -560px;}
+		.hsfs_osi ul li.iwp {border-bottom:0;}
+		.hsfs_osi ul li.iwp .hsfs_osi_in {background-position:left -650px;}

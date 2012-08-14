@@ -302,16 +302,15 @@ a.jqTransformChecked {background-position:left -20px;}
 			.f_familysite .jqTransformSelectWrapper div span, .f_familysite .jqTransformSelectWrapper ul a {font-family:arial; font-size:9px; color:#999; line-height:17px;}
 			.f_familysite .jqTransformSelectWrapper ul {top:auto; bottom:23px;}
 			.jqTransformSelectWrapper ul a {line-height:normal;}
-		.f_hanssem {float:right; width:819px; height:75px; padding:18px 0 0 20px; letter-spacing:-1px; background:#fff;}
-			.f_h_cont {float:left; display:inline; font-family:mgB; font-size:9px; line-height:14px; color:#a0a0a0;}
-				.f_h_cont h3 {float:left; padding-right:2px; font-size:9px; font-weight:normal;}
-			.fhc_info {width:198px;}
-			.fhc_s_info {width:259px;}
-			.fhc_copy {width:343px; letter-spacing:0; background:url('../images/common/bi_footer.gif') right 5px no-repeat;}
+		.f_hanssem {float:right; width:819px; height:73px; padding:20px 0 0 20px; letter-spacing:-1px; background:#fff url('../images/common/bi_footer.gif') 727px 23px no-repeat;;}
+			.f_h_cont {float:left; display:inline; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hanssem.gif'); background-repeat:no-repeat;}
+			.fhc_info {width:148px; height:37px; background-position:left -330px;}
+			.fhc_s_info {width:223px; height:37px; margin-left:50px; background-position:-150px -330px;}
+			.fhc_copy {width:160px; height:23px; margin-left:42px; background-position:left -370px;}
 
 
 /* 컨텐츠 하위메뉴 */
-.hs_cont_sub_menu {clear:both; margin-top:12px; padding:15px 0; border:1px solid #e2e2e2; border-width:1px 0;}
+.hs_cont_sub_menu {clear:both; margin-top:12px; padding:13px 0 17px 0; border:1px solid #e2e2e2; border-width:1px 0;}
 	.hs_cont_sub_menu li {display:inline-block; margin-right:8px; padding:0 18px 0 0; font-size:0; background:url('../images/bar_hs_gnb.gif') right 50% no-repeat;}
 		.hs_cont_sub_menu li .gbtn, .hs_cont_sub_menu li a strong {height:12px; background-image:url('../images/set_hcsm.gif'); background-repeat:no-repeat;}
 			.hs_cont_sub_menu li a strong {display:block; overflow:hidden;}
@@ -320,3 +319,17 @@ a.jqTransformChecked {background-position:left -20px;}
 /* 내용없음 */
 .hs_list_temp {clear:both; height:71px; margin:30px 0 0 0; font-family:mg; font-size:12px; color:#a6a6a6; text-align:center; border:1px solid #333; border-width:1px 0;}
 	.hs_list_temp strong {font-weight:normal; line-height:71px;}
+
+/* 한샘스토리 */
+.ctw_hs_story h2 {width:112px; height:14px; background-position:-40px -50px;}
+.hs_story_sm {}
+	.hs_story_sm li .gbtn {height:13px;}
+	.hs_story_sm li a.hsst_01 {width:55px; background-position:left -60px;}
+		.hs_story_sm li a.hsst_01 strong {background-position:left -75px;}
+	.hs_story_sm li a.hsst_02 {width:93px; background-position:-60px -60px;}
+		.hs_story_sm li a.hsst_02 strong {background-position:-60px -75px;}
+	.hs_story_sm li a.hsst_03 {width:55px; background-position:-155px -60px;}
+		.hs_story_sm li a.hsst_03 strong {background-position:-155px -75px;}
+	.hs_story_sm li a.hsst_04 {width:56px; background-position:-210px -60px;}
+		.hs_story_sm li a.hsst_04 strong {background-position:-210px -75px;}
+.hsst_w {clear:both; margin:20px 0 0 0; font:0/0 arial;}

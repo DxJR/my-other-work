@@ -4,6 +4,7 @@
 /* 좌측영역 */
 	/* 검색 */
 	.hs_main_w #hs_cm_search {position:absolute; bottom:47px; margin:0;}
+		.hs_main_w #hs_cm_search input {width:130px; background:url('../images/bg_hs_cm_search_idx.gif') left top no-repeat;}
 	/* 상위 텍스트 메뉴 */
 	.hsm_ltm_w {clear:both; font-family:mg; font-size:12px; letter-spacing:-1px; color:#a6a6a6;}
 		.hsm_ltm_w a {color:#a6a6a6;}
