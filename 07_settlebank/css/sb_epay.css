@@ -21,3 +21,80 @@
 	.sbi_tbl_s2_2 tr th.s_tbl_s2_c09 {width:142px;}
 	.sbi_tbl_s2_2 tr th.s_tbl_s2_c10 {width:57px;}
 	.sbi_tbl_s2_2 tr th.s_tbl_s2_c11 {width:162px;}
+
+/* 환불관리 */
+.sbi_tbl_s_3 {}
+	.sbi_tbl_s_3 tr th {width:98px;}
+	.sbi_tbl_s_3 tr td {width:789px;}
+.sbi_tbl_s_3-2 {margin-bottom:15px;}
+	.sbi_tbl_s_3-2 tr th {width:98px;}
+	.sbi_tbl_s_3-2 tr td.s_tbl_c01 {width:196px;}
+	.sbi_tbl_s_3-2 tr td.s_tbl_c02 {width:186px;}
+	.sbi_tbl_s_3-2 tr td.s_tbl_c03 {width:171px;}
+.sbi_tbl_s2_3 {}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c01 {width:33px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c02 {width:29px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c03 {width:53px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c04 {width:129px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c05 {width:59px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c06 {width:63px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c07 {width:70px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c08 {width:44px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c09 {width:64px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c10 {width:59px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c11 {width:103px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c12 {width:30px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c13 {width:90px;}
+	.sbi_tbl_s2_3 tr th.s_tbl_s2_c14 {width:68px;}
+
+/* 현금영수증 조회 */
+.sbi_tbl_s_4 {}
+	.sbi_tbl_s_4 tr th {width:118px;}
+	.sbi_tbl_s_4 tr td.s_tbl_c01 {width:212px;}
+	.sbi_tbl_s_4 tr td.s_tbl_c02 {width:419px;}
+.sbi_tbl_s2_4 {}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c01 {width:33px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c02 {width:63px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c03 {width:59px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c04 {width:71px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c05 {width:131px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c06 {width:90px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c07 {width:47px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c08 {width:69px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c09 {width:103px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c10 {width:76px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c11 {width:81px;}
+	.sbi_tbl_s2_4 tr th.s_tbl_s2_c12 {width:73px;}
+
+/* 정산입금내역조회 */
+.sbi_tbl_s_5 {}
+	.sbi_tbl_s_5 tr th {width:98px;}
+	.sbi_tbl_s_5 tr td {width:789px;}
+.sbi_tbl_s2_5 {}
+	.sbi_tbl_s2_5 tr th {height:23px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c01 {width:58px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c02 {width:62px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c03 {width:64px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c04 {width:64px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c05 {width:40px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c06 {width:56px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c07 {width:51px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c08 {width:51px;}
+	.sbi_tbl_s2_5 tr th.s_tbl_s2_c09 {width:61px;}
+
+/* 정산입금달력 */
+.cal_ym_w {clear:both; width:220px; height:25px; margin:28px auto 0 auto;}
+	.cal_ym_w .ym_l, .cal_ym_w .ym_r {position:relative; float:left; display:inline; padding:5px; font:0/0 arial;}
+	.cal_ym_w .ym_l {margin-right:15px;}
+	.cal_ym_w .ym_r {margin-left:11px;}
+	.cal_ym_w .jqTransformSelectWrapper {margin-right:4px;}
+.sbi_tbl_cal {margin-top:13px;}
+	.sbi_tbl_cal tr th {width:129px; height:37px;}
+	.sbi_tbl_cal tr th.s_tbl_cal_c03, .sbi_tbl_cal tr th.s_tbl_cal_c05 {width:128px;}
+	.sbi_tbl_cal tr th.s_tbl_cal_c07 {border-right:0;}
+	.sbi_tbl_cal tr td {padding:10px; vertical-align:top; text-align:left;}
+		.sbi_tbl_cal tr td .cal_in {position:relative; width:109px; height:59px; font-family:arial; font-size:10px; color:#4c4c4c;}
+			.sbi_tbl_cal tr td .cal_in p {position:relative; top:-3px; line-height:20px;}
+				.sbi_tbl_cal tr td .cal_in p img {position:relative; top:-1px; margin-right:1px; vertical-align:middle;}
+			.sbi_tbl_cal tr td .cal_in em {position:absolute; top:0; right:0; color:#999;}
+			.sbi_tbl_cal tr td.sun .cal_in em {color:#f92d2d;}

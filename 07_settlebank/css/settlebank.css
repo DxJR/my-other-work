@@ -47,12 +47,14 @@ form.jqtransformdone label{float:left; font-family:ngEB; font-size:12px;}
 form.jqtransformdone div.rowElem {clear:both; padding:4px 0px;}
 
 /* Radio */
-.jqTransformRadioWrapper {float:left; margin:2px 4px 0 0;}
+.jqTransformRadioWrapper {position:relative; float:left; margin:0 3px 0 0; vertical-align:middle;}
 .jqTransformRadio {display:block; width:12px; height:12px; margin-right:1px; vertical-align:middle; background:transparent url('../images/common/radio.gif') left top no-repeat;}
 
 /* Checkbox */
 span.jqTransformCheckboxWrapper {float:left; display:block; margin-top:5px;}
 a.jqTransformCheckbox {display:block; width:18px; height:19px; vertical-align:middle; background:transparent url('../images/common/checkbox.gif') center top no-repeat;}
+.sbi_tbr_w {}
+	.sbi_tbr_w li {float:left; display:inline; margin-right:17px; color:#582525;}
 
 /* Checked - Used for both Radio and Checkbox */
 a.jqTransformChecked {background-position:left -20px;}
@@ -125,7 +127,7 @@ a.jqTransformChecked {background-position:left -20px;}
 					.sbi_tit_cont p a {color:#999;}
 			/* 실제컨텐츠 */
 			.sbi_cont_w {clear:both; padding:9px 0 0 0;}
-				.sbi_tbl_s {margin-top:10px; border-top:1px solid #dadada;}
+				.sbi_tbl_s {clear:both; margin-top:10px; border-top:1px solid #dadada;}
 					.sbi_tbl_s tr th, .sbi_tbl_s tr td {height:43px; border-bottom:1px solid #dadada;}
 					.sbi_tbl_s tr th {width:118px; background:#fbf5f5;}
 					.sbi_tbl_s tr td {padding-left:20px; font-family:dotum; font-size:12px; color:#999;}
@@ -135,11 +137,13 @@ a.jqTransformChecked {background-position:left -20px;}
 						.ipst01, .ipst02 {position:relative; width:145px; height:16px; padding:5px 0 0 9px; font-family:dotum; font-size:12px; color:#582525; line-height:normal; border:1px solid #e0c4c4;}
 						.ipst02 {border-color:#ccc;}
 						.sbi_tbl_s tr td select {width:139px;}
+						.sbi_tbl_s tr td select.i_ts_year, select.i_ts_year {width:71px;}
+						.sbi_tbl_s tr td select.i_ts_month, select.i_ts_month {width:47px;}
 					.sbi_tbl_s tr.s_tbl_r01 td .b_src_shop img {position:relative; top:2px; left:-2px; vertical-align:middle;}
 					.b_slt_date img {vertical-align:top;}
 					.sbi_tbl_s tr.s_tbl_r02 td .jqTransformSelectWrapper {margin-right:4px;}
 					.sbi_tbl_s tr.s_tbl_r02 td .ipst02 {width:76px;}
-				.sbi_tbl_s2 {border-top:1px solid #e4d2d2;}
+				.sbi_tbl_s2 {clear:both; border-top:1px solid #e4d2d2;}
 					.sbi_tbl_s2 tr th, .sbi_tbl_s2 tr td {border-style:solid; border-width:0 1px 1px 0;}
 					.sbi_tbl_s2 tr th.c_l, .sbi_tbl_s2 tr td.c_l {border-right:0;}
 					.sbi_tbl_s2 tr th {width:auto; height:38px; border-color:#e4d2d2;}
@@ -161,6 +165,8 @@ a.jqTransformChecked {background-position:left -20px;}
 				.btn_mid_c {clear:both; margin:14px 0 0 0; text-align:center;}
 				/* 가운데 우측버튼 */
 				.btn_mid_r {clear:both; margin:0; text-align:right;}
+				/* 가운데 좌측설명 */
+				.exp_mid_l {float:left; display:inline; margin:3px 0 -36px 0; font-family:dotum; font-size:11px; color:#999; line-height:16px; white-space:nowrap;}
 	/*  footer */
 	#footer {position:relative; clear:both; height:72px; margin:120px 0 0 0; padding:0; border-top:1px solid #dcdcdc; background:#fafafa;}
 		.f_s_cont {float:left; display:inline; margin:33px 0 0 28px; font:0/0 arial;}
