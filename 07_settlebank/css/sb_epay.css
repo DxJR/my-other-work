@@ -98,3 +98,91 @@
 				.sbi_tbl_cal tr td .cal_in p img {position:relative; top:-1px; margin-right:1px; vertical-align:middle;}
 			.sbi_tbl_cal tr td .cal_in em {position:absolute; top:0; right:0; color:#999;}
 			.sbi_tbl_cal tr td.sun .cal_in em {color:#f92d2d;}
+
+/* 금융사별 정산내역 */
+.sbi_tbl_s_7 {}
+	.sbi_tbl_s_7 tr th {width:98px;}
+	.sbi_tbl_s_7 tr td {width:789px;}
+		.sbi_tbl_s_7 tr td .ipst02 {width:76px;}
+.sbi_tbl_s2_7 {}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c01 {width:152px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c02 {width:95px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c03 {width:95px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c04 {width:95px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c05 {width:95px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c06 {width:95px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c07 {width:82px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c08 {width:95px;}
+	.sbi_tbl_s2_7 tr th.s_tbl_s2_c09 {width:95px;}
+	.sbi_tbl_s2_7 tr.temp td {text-align:center; border-right:0;}
+
+/* 위임사 정산내역 */
+.sbi_tbl_s_8 {}
+	.sbi_tbl_s_8 tr th {width:98px;}
+	.sbi_tbl_s_8 tr td {width:789px;}
+		.sbi_tbl_s_8 tr.s_tbl_r01 td select {width:194px;}
+		.sbi_tbl_s_8 tr.s_tbl_r02 td select {width:79px;}
+		.sbi_tbl_s_8 tr.s_tbl_r02 td .ds {float:left; display:inline; margin:2px 7px 0 2px; color:#4c4c4c;}
+		.sbi_tbl_s_8 tr.s_tbl_r05 td .check {top:0px; margin-right:2px;}
+		.sbi_tbl_s_8 tr.s_tbl_r05 td label {float:none; color:#582525;}
+.sbi_tbl_s2_8 {}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c01 {width:63px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c02 {width:107px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c03 {width:116px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c04 {width:75px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c05 {width:100px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c06 {width:87px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c07 {width:87px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c08 {width:87px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c09 {width:89px;}
+	.sbi_tbl_s2_8 tr th.s_tbl_s2_c10 {width:87px;}
+.sbi_tbl_s2_8-2 {}
+	.sbi_tbl_s2_8-2 tr th {height:23px;}
+	.sbi_tbl_s2_8-2 tr th.s_tbl_s2_c01 {width:100px;}
+	.sbi_tbl_s2_8-2 tr th.s_tbl_s2_c02 {width:99px;}
+	.sbi_tbl_s2_8-2 tr th.s_tbl_s2_c03 {width:99px;}
+	.sbi_tbl_s2_8-2 tr th.s_tbl_s2_c07 {width:85px;}
+	.sbi_tbl_s2_8-2 tr th.s_tbl_s2_c08 {width:115px;}
+
+/* 정산보고서 */
+.sbi_tbl_s_13 {}
+	.sbi_tbl_s_13 tr th {width:98px;}
+	.sbi_tbl_s_13 tr td {width:789px;}
+		.sbi_tbl_s_13 tr.s_tbl_r01 td select {width:137px;}
+		.sbi_tbl_s_13 tr.s_tbl_r03 td .ipst02 {width:76px;}
+.sbi_tbl_s2_13 {}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c01 {width:124px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c02 {width:97px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c03 {width:97px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c04 {width:97px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c05 {width:96px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c06 {width:97px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c07 {width:97px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c08 {width:97px;}
+	.sbi_tbl_s2_13 tr th.s_tbl_s2_c09 {width:97px;}
+	.sbi_tbl_s2_13 tr td {padding-right:9px; text-align:right;}
+	.sbi_tbl_s2_13 tr td.sbi_in_t, .sbi_tbl_s2_13 tr td.sbi_in_t_r, .sbi_tbl_s2_13 tr td.sbi_in_t2 {padding-right:0; color:#582525; text-align:center;}
+	.sbi_tbl_s2_13 tr td.sbi_in_t_r {width:43px; line-height:16px;}
+	.sbi_tbl_s2_13 tr td.sbi_in_t2 {width:80px;}
+
+/* 정산대사확인 */
+.sbi_tbl_s_14 {}
+	.sbi_tbl_s_14 tr th {width:118px;}
+	.sbi_tbl_s_14 tr td {width:769px;}
+.sbi_tbl_s2_14 {}
+	.sbi_tbl_s2_14 tr th {height:23px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c01 {width:32px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c02 {width:62px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c03 {width:76px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c04 {width:58px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c05 {width:51px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c06 {width:67px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c07 {width:85px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c08 {width:85px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c09 {width:100px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c10 {width:67px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c11 {width:46px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c12 {width:55px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c13 {width:39px;}
+	.sbi_tbl_s2_14 tr th.s_tbl_s2_c14 {width:71px;}
+	.sbi_tbl_s2_14 tr td {padding:5px 0 4px 0; line-height:18px;}
