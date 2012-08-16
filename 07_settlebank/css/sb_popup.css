@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+#pop_wrap {position:relative; padding:24px 20px;}
+	#pop_wrap h1 {margin-bottom:15px;}
+	.pop_t_date {position:absolute; top:25px; right:22px; font-family:arial; font-size:10px; color:#4c4c4c;}
+	.ipf_w {position:relative;}
+	.pop_exp01 {margin-top:-3px; font-family:dotum; font-size:11px; color:#999; line-height:16px;}
+	.t_eng {font-family:arial;}
+	.sbi_tbl_p_s tr th.c_l, .sbi_tbl_p_s tr td.c_l {border-right:0;}
+	.sbi_tbl_p_s tr th.c_ne, .sbi_tbl_p_s tr td.c_ne {font-family:arial; font-size:11px;}
+.btn_p_wrap {clear:both; margin-top:20px; font-size:0; text-align:center;}
+	.btn_p_wrap img {margin:0 2px;}
+
+
+.popSt01 {width:580px;}
+.popSt02 {width:500px;}
+.popSt03 {width:584px;}
+.popSt04 {width:743px;}
+
+.sbi_tbl_p_s {margin-top:0; margin-bottom:15px;}
+	.sbi_tbl_p_s tr th {width:98px; height:37px;}
+	.sbi_tbl_p_s tr td {width:482px; height:37px; color:#582525;}
+
+
+/* 거래내역조회 */
+.sbi_tbl_p_s_1-2 {}
+	.sbi_tbl_p_s_1-2 tr td {width:173px;}
+	.sbi_tbl_p_s_1-2 tr td.s_tbl_c02 {width:171px;}
+
+/* 현금영수증 등록 */
+.sbi_tbl_p_s_2 {}
+	.sbi_tbl_p_s_2 tr td .ipst01 {width:229px; border-color:#ccc;}
+	.sbi_tbl_p_s_2 tr td .ipfile {position:absolute; top:5px; left:0; opacity:0; filter:alpha(opacity=0); width:325px; height:22px;}
+.pop_upexp_w {position:relative; clear:both; height:180px; margin:13px 0 0 0; padding:20px 15px; font-family:dotum; font-size:12px; color:#4c4c4c; line-height:17px; background:#fafafa;}
+	.pop_upexp_w h2 {padding-bottom:1px;}
+	.pop_upexp_w h3 {margin:15px 0 1px 0; font-size:12px;}
+	.pop_upexp_w .lb {font-family:arial; font-size:10px;}
+	.b_exec_p_dn {position:absolute; top:17px; right:15px;}
+
+/* 결제수단별 거래내역 */
+.sbi_tbl_p_s_3 {}
+	.sbi_tbl_p_s_3 tr th {border-right:1px solid #e4d2d2;}
+	.sbi_tbl_p_s_3 tr th.s_tbl_c01 {width:137px;}
+	.sbi_tbl_p_s_3 tr th.s_tbl_c02 {width:124px;}
+	.sbi_tbl_p_s_3 tr th.s_tbl_c03 {width:123px;}
+	.sbi_tbl_p_s_3 tr th.s_tbl_c04 {width:113px;}
+	.sbi_tbl_p_s_3 tr td {width:auto; padding-left:0; color:#4c4c4c; text-align:center; border:1px solid #e1e1e1; border-width:0 1px 1px 0;}
+	.sbi_tbl_p_s_3 tr.result td {font-weight:bold;}
+
+/* 결제수단별 거래내역 */
+.sbi_tbl_p_s_4 {}
+	.sbi_tbl_p_s_4 tr th {border-right:1px solid #e4d2d2;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c01 {width:63px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c02 {width:68px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c03 {width:60px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c04 {width:68px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c05 {width:60px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c06 {width:68px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c07 {width:60px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c08 {width:60px;}
+	.sbi_tbl_p_s_4 tr th.s_tbl_c09 {width:69px;}
+	.sbi_tbl_p_s_4 tr td {width:auto; padding-left:0; color:#4c4c4c; text-align:center; border:1px solid #e1e1e1; border-width:0 1px 1px 0;}
+	.sbi_tbl_p_s_4 tr.result td {font-weight:bold;}
+
+/* 위임사수수료 관리 편집/등록 */
+.sbi_tbl_p_s_5 {}
+	.sbi_tbl_p_s_5 tr th {width:98px;}
+	.sbi_tbl_p_s_5 tr td {width:382px;}
+		.sbi_tbl_p_s_5 tr.s_tbl_r01 td select {width:194px;}
+		.sbi_tbl_p_s_5 tr td .ipst01 {border-color:#ccc;}
+
+/* 상점 수수료관리 편집/등록 */
+.sbi_tbl_p_s_6 {}
+	.sbi_tbl_p_s_6 tr th {width:98px;}
+	.sbi_tbl_p_s_6 tr td {width:253px;}
+	.sbi_tbl_p_s_6 tr td.s_tbl_c04 {width:254px;}
+		.sbi_tbl_p_s_6 tr.s_tbl_r01 td select {width:194px;}
+		.sbi_tbl_p_s_6 tr td .ipst01 {border-color:#ccc;}
+
+/* 금융사 수수료관리 편집/등록 */
+.sbi_tbl_p_s_7 {}
+	.sbi_tbl_p_s_7 tr th {width:98px;}
+	.sbi_tbl_p_s_7 tr td {width:253px;}
+	.sbi_tbl_p_s_7 tr td.s_tbl_c04 {width:254px;}
+		.sbi_tbl_p_s_7 tr.s_tbl_r01 td select {width:194px;}
+		.sbi_tbl_p_s_7 tr td .ipst01 {border-color:#ccc;}
+
+/* 결제수단별 거래내역 */
+.sbi_tbl_p_s_8 {}
+	.sbi_tbl_p_s_8 tr th {width:118px;}
+	.sbi_tbl_p_s_8 tr td {width:362px;}

@@ -139,7 +139,7 @@ a.jqTransformChecked {background-position:left -20px;}
 						.sbi_tbl_s tr td select {width:139px;}
 						.sbi_tbl_s tr td select.i_ts_year, select.i_ts_year {width:71px;}
 						.sbi_tbl_s tr td select.i_ts_month, select.i_ts_month {width:47px;}
-					.sbi_tbl_s tr.s_tbl_r01 td .b_src_shop img {position:relative; top:2px; left:-2px; vertical-align:middle;}
+					.b_src_shop img {position:relative; top:2px; left:-2px; vertical-align:middle;}
 					.b_slt_date img {vertical-align:top;}
 					.sbi_tbl_s tr.s_tbl_r02 td .jqTransformSelectWrapper {margin-right:4px;}
 					.sbi_tbl_s tr.s_tbl_r02 td .ipst02 {width:76px;}

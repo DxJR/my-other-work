@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_popup.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="pop_wrap" class="popSt01">
+	<h1><img src="../images/pop_tit_02.gif" alt="현금영수증 등록" /></h1>
+	<form class="jqtransform">
+		<table cellpadding="0" cellspacing="0" class="sbi_tbl_s sbi_tbl_p_s sbi_tbl_p_s_2">
+			<tr class="s_tbl_r01">
+				<th><img src="../images/i_ts_58.gif" border="0" alt="엑셀업로드" /></th>
+				<td>
+					<div class="ipf_w">
+						<input type="text" class="ipst01" />
+						<a href="#" class="b_src_shop"><img src="../images/b_fileup.gif" border="0" alt="파일불러오기" /></a>
+						<input type="file" class="ipfile" />
+					</div>
+				</td>
+			</tr>
+		</table>
+		<p class="pop_exp01">
+			업로드할 파일은 확장자가 <span class="t_eng">xls</span>이어야 합니다. <span class="lb">예) <span class="t_eng">CR_settlebank_20120923.xls</span></span>
+		</p>
+		<div class="pop_upexp_w">
+			<h2><img src="../images/pux_tit.gif" alt="셈플 양식을 다운로드 하신 후에 해당내용을 기입하세요." /></h2>
+			<h3>발급</h3>
+			<p>승인구분(0(발급))|거래일자|금액|요청구분(0(소득공제), 1(지출증빙) 중 택일)|번호구분(1(카드번호), 2(주민등록번호), 3(사업자번호), 4(휴대폰번호) 중 택일)|현금영수증번호|거래번호|취소사유 <span class="lb">ex) 0l20111019000000l100000l0l4l01011345678lSBank_VBNKtest00000020110808171645000615l</span></p>
+			<h3>취소</h3>
+			<p>승인구분(0(발급))|거래일자|금액|요청구분(0(소득공제), 1(지출증빙) 중 택일)|번호구분(1(카드번호), 2(주민등록번호), 3(사업자번호), 4(휴대폰번호) 중 택일)|현금영수증번호|거래번호|취소사유 <span class="lb">ex) 0l20111019000000l100000l0l4l01011345678lSBank_VBNKtest00000020110808171645000615l</span></p>
+			<a href="#" class="b_exec_p_dn"><img src="../images/b_exec_p_dn.gif" alt="다운로드" /></a>
+		</div>
+		<div class="btn_p_wrap">
+			<a href="#"><img src="../images/btn_regi.gif" alt="등록" /></a>
+			<a href="#"><img src="../images/btn_cancel.gif" alt="취소" /></a>
+		</div>
+	</form>
+
+</div>
+
+
+</body>
+</html>
