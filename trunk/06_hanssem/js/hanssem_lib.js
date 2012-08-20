@@ -85,6 +85,7 @@ jQuery(function($){
 	showItemListHover(".hsf_si_list>tbody>tr");
 	// 우편번호 검색결과
 	showItemListHover(".zs_result_list>li");
+	$("body").addClass('load_after');
 });
 
 // show layer
@@ -142,7 +143,7 @@ function productListAction() {
 	$(".hsp_thumb").prev().bind('mouseleave', function() {
 		$(this).css('display','none');
 	})
-}
+};
 
 // 리스트 hover
 function showItemListHover(objElement) {
@@ -152,7 +153,7 @@ function showItemListHover(objElement) {
 	$(""+objElement+"").bind('mouseleave', function() {
 		$(this).removeClass("hover");
 	});
-}
+};
 
 // 폼 검사
 function formCheck(id) {
@@ -170,4 +171,10 @@ function formCheck(id) {
 			inpObj.value=inpObjValue;
 		}
 	}
-}
+};
+
+// Mrs.패리스 스타일 액션
+function mrsHide() {
+	$("#hs_mrs_c_wrap div").css("display","none");
+	$("#hs_mrs_m li").removeClass("this");
+};
