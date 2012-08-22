@@ -149,21 +149,22 @@ a.jqTransformChecked {background-position:left -20px;}
 					.b_slt_date img {vertical-align:top;}
 					.sbi_tbl_s tr.s_tbl_r02 td .jqTransformSelectWrapper {margin-right:4px;}
 					.sbi_tbl_s tr.s_tbl_r02 td .ipst02 {width:76px;}
-				.sbi_tbl_s2 {clear:both; border-top:1px solid #e4d2d2;}
-					.sbi_tbl_s2 tr th, .sbi_tbl_s2 tr td {border-style:solid; border-width:0 1px 1px 0;}
+				.sbi_tbl_w {position:relative; clear:both; width:907px; overflow:auto;}
+				.sbi_tbl_s2 {clear:both; width:auto; border-top:1px solid #e4d2d2;}
+					.sbi_tbl_s2 tr th, .sbi_tbl_s2 tr td {border-style:solid; border-width:0 1px 1px 0; white-space:nowrap;}
 					.sbi_tbl_s2 tr th.c_l, .sbi_tbl_s2 tr td.c_l {border-right:0;}
 					.sbi_tbl_s2 tr th {width:auto; height:38px; font-size:11px; border-color:#e4d2d2;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c01 {width:37px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c02 {width:63px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c03 {width:69px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c04 {width:141px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c05 {width:99px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c06 {width:116px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c07 {width:81px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c08 {width:73px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c09 {width:75px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c10 {width:79px;}
-					.sbi_tbl_s2 tr th.s_tbl_s2_c11 {width:64px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c01 {min-width:37px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c02 {min-width:63px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c03 {min-width:69px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c04 {min-width:141px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c05 {min-width:99px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c06 {min-width:116px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c07 {min-width:81px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c08 {min-width:73px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c09 {min-width:75px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c10 {min-width:79px;}
+					.sbi_tbl_s2 tr th.s_tbl_s2_c11 {min-width:64px;}
 					.sbi_tbl_s2 tr td {height:auto; min-height:25px; padding:9px 0 6px 0; font-family:dotum; font-size:12px; color:#4c4c4c; text-align:center; border-color:#dadada;}
 					.sbi_tbl_s2 tr td.c_ne, .c_ne {font-family:arial; font-size:10px;}
 						.sbi_tbl_s2 tr td a {color:#4c4c4c;}
