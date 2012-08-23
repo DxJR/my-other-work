@@ -57,10 +57,10 @@
 		<div id="sidebar">
 			<!-- 서브메뉴 -->
 			<div id="sbi_submenu">
-				<h2><img src="../images/sm_t_view.gif" border="0" alt="거래조회" /></h2>
+				<h2 class="sm_t_view"><img src="../images/sm_t_view.gif" border="0" alt="거래조회" /></h2>
 				<ul class="sbi_sm_tpl">
-					<li class="first"><a href="#"><img src="../images/b_sbist_01_over.gif" border="0" alt="거래내역 조회" /></a></li>
-					<li><a href="#"><img src="../images/b_sbist_02.gif" border="0" alt="거래내역 재전송" /></a></li>
+					<li class="first"><a href="#"><img src="../images/b_sbist_01.gif" border="0" alt="거래내역 조회" /></a></li>
+					<li><a href="#"><img src="../images/b_sbist_02_over.gif" border="0" alt="거래내역 재전송" /></a></li>
 					<li><a href="#"><img src="../images/b_sbist_03.gif" border="0" alt="환불관리" /></a></li>
 					<li><a href="#"><img src="../images/b_sbist_04.gif" border="0" alt="현금영수증 조회" /></a></li>
 				</ul>
@@ -70,13 +70,13 @@
 		<div id="content">
 			<!-- 제목/현재위치 -->
 			<div class="sbi_tit_cont">
-				<h3><img src="../images/sbtc_st01.gif" border="0" alt="거래내역 조회" /></h3>
+				<h3><img src="../images/sbtc_st02.gif" border="0" alt="거래내역 재전송" /></h3>
 				<p class="sbi_location"><a href="#">인트라넷</a> &gt; <a href="#">정산조회</a> &gt; <a href="#">정산입금 내역조회</a></p>
 			</div>
 			<!-- 실제컨텐츠 -->
 			<div class="sbi_cont_w">
 				<form class="jqtransform">
-				<table cellpadding="0" cellspacing="0" class="sbi_tbl_s">
+				<table cellpadding="0" cellspacing="0" class="sbi_tbl_s sbi_tbl_s_2">
 					<tr class="s_tbl_r01">
 						<th>상점아이디</th>
 						<td colspan="3">
@@ -101,10 +101,8 @@
 						</td>
 					</tr>
 					<tr class="s_tbl_r03">
-						<th>거래금액</th>
+						<th>거래번호</th>
 						<td colspan="3">
-							<input type="text" class="ipst02" />
-							<span class="ds">~</span>
 							<input type="text" class="ipst02" />
 						</td>
 					</tr>
@@ -115,13 +113,16 @@
 						</td>
 					</tr>
 					<tr class="s_tbl_r05">
-						<th>주민/사업자등록번호</th>
+						<th>주문자명</th>
 						<td class="s_tbl_c01">
 							<input type="text" class="ipst02" />
 						</td>
-						<th>주문자명</th>
+						<th>전송상태</th>
 						<td class="s_tbl_c02">
-							<input type="text" class="ipst02" />
+							<select>
+								<option>전체</option>
+								<option>전체</option>
+							</select>
 						</td>
 					</tr>
 					<tr class="s_tbl_r06">
@@ -132,23 +133,7 @@
 								<option>전체</option>
 							</select>
 						</td>
-						<th>승인상태</th>
-						<td class="s_tbl_c02">
-							<select>
-								<option>전체</option>
-								<option>전체</option>
-							</select>
-						</td>
-					</tr>
-					<tr class="s_tbl_r07">
 						<th>거래상태</th>
-						<td class="s_tbl_c01">
-							<select>
-								<option>전체</option>
-								<option>전체</option>
-							</select>
-						</td>
-						<th>정산상태</th>
 						<td class="s_tbl_c02">
 							<select>
 								<option>전체</option>
@@ -158,164 +143,167 @@
 					</tr>
 				</table>
 				<p class="btn_mid_c"><a href="#" class="b_srt"><img src="../images/b_srt.gif" border="0" alt="조회" /></a></p>
-				<p class="btn_mid_r"><a href="#" class="b_exc_down"><img src="../images/b_exc_down.gif" border="0" alt="엑셀다운로드" /></a></p>
+				<p class="btn_mid_r">
+					<a href="#" class="b_tl_re"><img src="../images/b_tl_re.gif" border="0" alt="거래내역 재전송" /></a>
+					<a href="#" class="b_ss_c"><img src="../images/b_ss_c.gif" border="0" alt="전송상태 변경" /></a>
+				</p>
 				<div class="sbi_tbl_w">
 					<table cellpadding="0" cellspacing="0" class="sbi_tbl_s sbi_tbl_s2">
 						<colgroup>
-							<col width="37" />
-							<col width="63" />
-							<col width="69" />
-							<col width="141" />
-							<col width="99" />
-							<col width="116" />
-							<col width="81" />
-							<col width="73" />
-							<col width="75" />
-							<col width="79" />
-							<col width="64" />
+							<col width="33" />
+							<col width="57" />
+							<col width="59" />
+							<col width="54" />
+							<col width="130" />
+							<col width="89" />
+							<col width="49" />
+							<col width="65" />
+							<col width="142" />
+							<col width="57" />
+							<col width="162" />
 						</colgroup>
 						<tr>
-							<th>순번</th>
-							<th>구분</th>
+							<th>선택</th>
+							<th>거래일자</th>
 							<th>상점아이디</th>
+							<th>결제수단</th>
 							<th>거래번호</th>
 							<th>주문번호</th>
-							<th>카드/계좌번호</th>
-							<th>주문자명</th>
-							<th>거래일자</th>
 							<th>금액</th>
 							<th>거래상태</th>
-							<th class="c_l">인증타입</th>
+							<th>상품명</th>
+							<th>NOTI 상태</th>
+							<th class="c_l">NOTI URL</th>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
-							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
-							<td>20120118528202012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
-							<td>1,000,000</td>
-							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
-						</tr>
-						<tr>
-							<td>1</td>
 							<td>신용카드</td>
-							<td>mid_test</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>신용카드</td>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
 							<td>mid_test</td>
+							<td>신용카드</td>
 							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
 							<td>2012011852820</td>
-							<td>0000-0000-****-9999</td>
-							<td>가상쇼핑몰</td>
-							<td>20120293</td>
 							<td>1,000,000</td>
 							<td>정산요청중</td>
-							<td class="c_l">VISA</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="check" /></td>
+							<td>20120118</td>
+							<td>mid_test</td>
+							<td>신용카드</td>
+							<td>SBank_CARDmid_test00 <br /> SBank_CARDmid_test00</td>
+							<td>2012011852820</td>
+							<td>1,000,000</td>
+							<td>정산요청중</td>
+							<td>세틀뱅크 테스트상품정보</td>
+							<td>전송성공</td>
+							<td class="c_l"><a href="#">http://pg.settlebankhttp://pg.set...</a></td>
 						</tr>
 					</table>
 				</div>
