@@ -281,7 +281,8 @@ a.jqTransformChecked {background-position:left -20px;}
 			/* 제목 */
 			.cont_tit_wrap {clear:both; font-size:0;}
 				.cont_tit_wrap h2, .ctw_exp {overflow:hidden; background-image:url('../images/set_ctw.gif'); background-repeat:no-repeat;}
-				.cont_tit_wrap h2 {display:inline-block; height:14px;}
+				.cont_tit_wrap h2 {.float:left; display:inline-block; height:14px;.margin-right:10px;}
+				.ctw_exp {clear:both;}
 				.ctw_count {display:inline-block; margin:-1px 0 0 9px; font-family:mg; font-size:11px; color:#a6a6a6; letter-spacing:-1px; line-height:normal; vertical-align:top;}
 					.ctw_count em {letter-spacing:0;}
 				.ctw_exp {margin-top:10px;}
