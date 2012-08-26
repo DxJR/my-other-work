@@ -132,7 +132,7 @@ a.jqTransformChecked {background-position:left -20px;}
 		/* gnb */
 		#gnb {position:relative; float:right; width:731px; padding:0 0 0 30px;}
 			ul.m_gnb {float:right;}
-				ul.m_gnb li {float:left; display:inline; padding:0 19px 0 13px; background:url('../images/bar_hs_gnb.gif') right 50% no-repeat;}
+				ul.m_gnb li {position:relative; float:left; display:inline; padding:0 19px 0 13px; background:url('../images/bar_hs_gnb.gif') right 50% no-repeat;}
 					ul.m_gnb li .gbtn {height:12px;}
 					.b_gnb_login {width:32px; background-position:left -140px;}
 					.b_gnb_login:hover {background-position:left -310px;}
@@ -141,7 +141,7 @@ a.jqTransformChecked {background-position:left -20px;}
 					.b_gnb_wishlist {width:54px; background-position:-390px -140px;}
 					.b_gnb_wishlist:hover {background-position:-390px -310px;}
 					.b_gnb_sotry {width:98px; background-position:-80px -140px;}
-					.b_gnb_sotry:hover {background-position:-80px -310px;}
+					ul.m_gnb li.this .b_gnb_sotry, .b_gnb_sotry:hover {background-position:-80px -310px;}
 					.b_gnb_sale {width:77px; background-position:-180px -140px;}
 					.b_gnb_sale:hover {background-position:-180px -310px;}
 					.b_gnb_event {width:32px; background-position:-260px -140px;}
@@ -149,6 +149,12 @@ a.jqTransformChecked {background-position:left -20px;}
 					.b_gnb_shop {width:43px; background-position:-295px -140px;}
 					.b_gnb_shop:hover {background-position:-295px -310px;}
 				ul.m_gnb li.last {padding-right:0; background:none;}
+			/* 한샘인테리어 스토리 2차메뉴 */
+			#m_gnb_t_lyr {z-index:3; position:absolute; top:22px; left:-3px; display:none; width:198px; height:168px; background:url('../images/bg_t_over_lyr.png') left top no-repeat;}
+				#m_gnb_t_lyr ul {}
+					#m_gnb_t_lyr ul li {clear:both; float:none; display:block; margin:0 0 1px 0; padding:0; background:none;}
+						#m_gnb_t_lyr ul li a {display:block; width:180px; height:23px; padding:8px 0 0 10px; font-family:mg; color:#8da7ba; line-height:normal;}
+						#m_gnb_t_lyr ul li a:hover {color:#0057a0;}
 			/* 상단로그인 */
 			#hs_gnb_login {z-index:999; position:absolute; top:22px; right:9px; clear:both; display:none; width:431px; height:223px;}
 				.hsgl_in {z-index:2; position:relative; width:393px; height:194px; margin:0 0 0 1px; padding:20px 0 0 30px; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_sls_blue.gif') left top repeat;}
@@ -420,3 +426,36 @@ a.jqTransformChecked {background-position:left -20px;}
 					.hs_mrs_cm_p3 ul li.this a.b_mrs_hw, .hs_mrs_cm_p3 ul li a.b_mrs_hw:hover {background-position:-480px -200px;}
 			.hs_mrs_cont {position:absolute; top:0; left:0; width:550px;}
 				.hs_mrs_cont div {display:none;}
+
+/* 신혼 라이프스타일 공간제안 */
+.ctw_hs_story_slgj {padding-bottom:10px; border-bottom:1px solid #e2e2e2;}
+	.ctw_hs_story_slgj h2 {width:156px; background-position:-100px top;}
+.hs_slgj_w {position:relative; clear:both; margin-top:20px;}
+	.hs_slgj_img {clear:both; font:0/0 arial;}
+	.hs_slgj_mm {clear:both; height:130px; margin:20px 0 0 0;}
+		.hs_slgj_mm li {float:left; display:inline;}
+	.hs_st_lmc_w {position:relative; clear:both; margin-top:17px; padding:20px 0 20px 144px; border:1px solid #e3e3e3; border-width:1px 0;}
+		.hs_st_lmc_w h3 {position:absolute; top:20px; left:0;}
+	.slgj_mm2 {height:68px; border-bottom:1px solid #e3e3e3;}
+	.hs_slgj_in_w {clear:both; margin-top:20px;}
+		.hs_slgj_i_s {font:0/0 arial; margin-bottom:20px;}
+	.hs_slgj_i2 {margin-top:30px;}
+		.hs_slgj_i2 .hs_slgj_i_s {margin-bottom:30px;}
+
+/* 7존 침대 컴포트파이*/
+.ctw_hs_story_7zn {}
+	.ctw_hs_story_7zn h2 {width:112px; background-position:-260px top;}
+	.hs_story_7zn {}
+		.hs7z_01 {width:77px; background-position:left -90px;}
+		.hs7z_01 strong, .hs7z_01:hover {background-position:left -105px;}
+		.hs7z_02 {width:42px; background-position:-80px -90px;}
+		.hs7z_02 strong, .hs7z_02:hover {background-position:-80px -105px;}
+		.hs7z_03 {width:55px; background-position:-125px -90px;}
+		.hs7z_03 strong, .hs7z_03:hover {background-position:-125px -105px;}
+	.hs_7z_01_w {position:relative; clear:both; width:701px; height:407px; padding:287px 0 0 30px; background:url('../images/bg_7z_01.jpg') left top no-repeat;}
+	.stlc_7z {margin-top:30px; padding:0 0 30px 116px; border-width:0;}
+	.stlc_7z_t {	border-width:0 0 1px 0;}
+		.stlc_7z h3 {top:0px;}
+		.stlc_7z .in_cont_w {margin-top:20px;}
+		.stlc_7z .icw_v {margin-top:0;}
+		
