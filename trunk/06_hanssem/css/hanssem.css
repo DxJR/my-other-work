@@ -6,7 +6,7 @@
 
 
 /* Default */
-html, body {width:100%; height:100%;_overflow-x:hidden;}
+html, body {width:100%; height:100%;.overflow-x:hidden;}
 body {font-size:12px; color:#555; line-height:normal; font-family:'ngEB', '돋움', 'Dotum','굴림', 'Gulim', 'Arial', 'Tahoma', 'AppleGothic','sans-serif'; background-color:#f5f5f5;}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0}
 li {list-style:none;}
@@ -97,14 +97,14 @@ a.jqTransformChecked {background-position:left -20px;}
 
 /* 페이징 */
 .paging {position:relative; clear:both; margin-top:20px; font-size:0; text-align:center;}
-	.paging a {display:inline-block; min-width:25px; height:25px; margin-right:-1px; font-family:arial; font-size:11px; line-height:26px; color:#a6a6a6; border:1px solid #e2e2e2; vertical-align:top; background:#f9f9f9;}
-	.paging a.fnc {font-family:dotum; font-size:12px; letter-spacing:-5px; text-indent:-6px;}
+	.paging a {display:inline-block; min-width:25px; height:25px; margin-right:-1px;.margin-right:-2px; font-family:arial; font-size:11px; line-height:26px; color:#a6a6a6; border:1px solid #e2e2e2; vertical-align:top; background:#f9f9f9;}
+	.paging a.fnc {font-family:dotum; font-size:12px; letter-spacing:-5px; text-indent:-6px;.text-indent:0;}
 	.paging a.this {position:relative; color:#d7182a; font-weight:bold; border-color:#d7182a; background:#fff;}
 		.paging a.this strong {line-height:26px;}
 
 /* 작성자폼 */
 .hfiptxt {position:relative; display:inline-block; height:21px; padding:0 0 0 2px; background:url('../images/bg_iptxt.gif') left top no-repeat;}
-	.hfiptxt input {height:21px; padding:0 0 0 3px; border:0; font-family:mg; font-size:12px; color:#4c4c4c; line-height:20px !important; background:url('../images/bg_iptxt.gif') right top no-repeat;}
+	.hfiptxt input {height:21px; .margin-top:-1px; padding:0 0 0 3px; border:0; font-family:mg; font-size:12px; color:#4c4c4c; line-height:20px !important; background:url('../images/bg_iptxt.gif') right top no-repeat;}
 .hftxtarea {position:relative; display:inline-block; border-top:1px solid #abadb3; border-right:1px solid #dbdfe6; border-bottom:1px solid #e3e9ef; border-left:1px solid #e2e3ea; background:#fff;}
 	.hftxtarea textarea {padding:5px; font-family:mg; font-size:12px; color:#4c4c4c; line-height:20px; border:0; overflow:auto;}
 	.hftxtarea i {position:absolute; display:block; width:2px; height:2px; font:0/0 arial; overflow:hidden; background-image:url('../images/cnr_hftxtarea.gif'); background-repeat:no-repeat;}
@@ -116,7 +116,7 @@ a.jqTransformChecked {background-position:left -20px;}
 /* layout */
 #wrap {position:relative; width:1030px; margin:0 auto;}
 	/* header */
-	#header {position:relative; height:81px; padding:59px 30px 0 30px; background:#fff url('../images/common/bg_side.gif') left top repeat-y;}
+	#header {z-index:2; position:relative; height:81px; padding:59px 30px 0 30px; background:#fff url('../images/common/bg_side.gif') left top repeat-y;}
 		#header h1 {float:left;}
 		/* 최상단 공통메뉴 */
 		#twrap {position:absolute; top:0; left:0; clear:both; width:100%; height:30px; background:#f5f5f5;}
@@ -162,7 +162,7 @@ a.jqTransformChecked {background-position:left -20px;}
 						.hsgl_in h3 .ir, .hsgl_in .hsgl_exp .ir {position:absolute; top:-9999em; left:-9999em;}
 					.hsgl_in h3 {width:42px; height:16px; background:url('../images/hsgl_h3.png') left top no-repeat;}
 					.hsgl_in .hsgl_exp {width:238px; height:12px; margin-top:7px; background:url('../images/hsgl_exp.png') left top no-repeat;}
-					.hsgl_form {position:relative; width:348px; height:93px; margin-top:19px; padding:15px 0 0 15px; border:1px solid #ccdce8; border-width:1px 0; background:#fff;}
+					.hsgl_form {position:relative; clear:both; .float:left; width:348px; height:93px; margin-top:19px; padding:15px 0 0 15px; border:1px solid #ccdce8; border-width:1px 0; background:#fff;}
 						.hsgl_form p {margin-bottom:10px;}
 							.hsgl_form p label {display:inline-block; width:52px; height:12px; vertical-align:middle; background-repeat:no-repeat; background-position:left top;}
 							.hsgl_form p .hfiptxt input {width:195px;}
@@ -173,10 +173,10 @@ a.jqTransformChecked {background-position:left -20px;}
 							.hsgl_form p.hsc_lg_menu a:hover {color:#333;}
 						.hsgl_form .hsgl_b_go {position:absolute; top:14px; left:278px;}
 					.close_lyr {position:absolute; top:20px; right:20px; clear:both; width:21px; height:21px;}
-						.b_c_layer {width:21px; height:21px; text-indent:-9999em; background-position:left top;}
+						.b_c_layer {width:21px; height:21px; text-indent:-9999em;.text-indent:0; background-position:left top;}
 				#hs_gnb_login .shadow_bg {z-index:1; position:absolute; top:0; right:0; width:431px; height:223px; background:url('../images/bg_hsgl_shadow.png') left top no-repeat; _background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg_hsgl_shadow.png', sizingMethod='crop');}
 	/* container */
-	#container {position:relative; padding:0 30px 70px 30px; background:#fff url('../images/common/bg_side.gif') left top repeat-y;}
+	#container {position:relative; clear:both; width:970px; padding:0 30px 70px 30px; background:#fff url('../images/common/bg_side.gif') left top repeat-y;}
 		/* sidebar */
 		#sidebar {float:left;}
 			/* snb */
@@ -273,7 +273,7 @@ a.jqTransformChecked {background-position:left -20px;}
 						.b_s3_cschest:hover .icn, li.current .b_s3_cschest .icn {width:56px; background-position:-95px -225px;}
 			/* 좌측검색 */
 			#hs_cm_search {clear:both; margin-top:40px;}
-				#hs_cm_search input {top:1px; position:relative; width:93px; height:24px; margin:0 -1px 0 0; padding:0 5px; border:0; font-family:mg; font-size:11px; color:#a6a6a6; line-height:24px; background:url('../images/bg_hs_cm_search.gif') left top no-repeat;}
+				#hs_cm_search input {top:1px;.top:0; position:relative; width:93px; height:24px; margin:0 -1px 0 0;.margin-right:2px; padding:0 5px; border:0; font-family:mg; font-size:11px; color:#a6a6a6; line-height:24px; background:url('../images/bg_hs_cm_search.gif') left top no-repeat;}
 				.b_hscms_go {width:47px; height:28px; vertical-align:top; background-position:-150px -155px;}
 				.b_hscms_go_over {background-position:-200px -155px;}
 		/* content */
@@ -317,8 +317,8 @@ a.jqTransformChecked {background-position:left -20px;}
 
 
 /* 컨텐츠 하위메뉴 */
-.hs_cont_sub_menu {clear:both; margin-top:12px; padding:13px 0 17px 0; border:1px solid #e2e2e2; border-width:1px 0;}
-	.hs_cont_sub_menu li {display:inline-block; margin-right:8px; padding:0 18px 0 0; font-size:0; background:url('../images/bar_hs_gnb.gif') right 50% no-repeat;}
+.hs_cont_sub_menu {clear:both; .height:10px; margin-top:12px; padding:13px 0 17px 0; border:1px solid #e2e2e2; border-width:1px 0;}
+	.hs_cont_sub_menu li {.float:left; display:inline-block; margin-right:8px; padding:0 18px 0 0; font-size:0; background:url('../images/bar_hs_gnb.gif') right 50% no-repeat;}
 		.hs_cont_sub_menu li .gbtn, .hs_cont_sub_menu li a strong {height:12px; background-image:url('../images/set_hcsm.gif'); background-repeat:no-repeat;}
 			.hs_cont_sub_menu li a strong {display:block; overflow:hidden;}
 	.hs_cont_sub_menu li.last {margin-right:0; padding-right:0; background:none;}
@@ -458,4 +458,4 @@ a.jqTransformChecked {background-position:left -20px;}
 		.stlc_7z h3 {top:0px;}
 		.stlc_7z .in_cont_w {margin-top:20px;}
 		.stlc_7z .icw_v {margin-top:0;}
-		
+

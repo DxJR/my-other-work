@@ -5,11 +5,11 @@
 	.ctw_board .ctw_exp {width:446px; height:30px; background-position:left -20px;}
 
 /* 게시판검색 */
-.cont_b_search {position:relative; clear:both; height:35px; margin:12px 0 0 0; padding:6px 0 0 0; border:1px solid #e2e2e2; border-width:1px 0;}
+.cont_b_search {z-index:1; position:relative; clear:both; height:35px;.height:36px; margin:12px 0 0 0; padding:6px 0 0 0; border:1px solid #e2e2e2; border-width:1px 0;}
 	.cont_b_search select {width:103px;}
 	.cont_b_search .jqTransformSelectWrapper {margin:4px 10px 0 0;}
 	.cont_b_search .cont_b_go {margin-left:-3px;}
-	.b_s_grd {position:absolute; top:-1px; right:0; width:128px; height:43px; background-position:left -155px;}
+	.b_s_grd {position:absolute; top:-1px;.top:0; right:0; width:128px; height:43px; background-position:left -155px;}
 	/*  전시품 등급 가이드 */
 	#sgrd-guide {z-index:12; position:absolute; top:-1px; left:0; clear:both; display:none;}
 		.sgrdg_in {z-index:2; position:relative; width:701px; height:228px; padding:18px 0 0 30px; border:1px solid #ccdce8; border-width:1px 0; background:#fff url('../images/bg_b_s_grd.gif') left top repeat;}
@@ -110,7 +110,7 @@
 		/* 주소 */
 		tr.hfd_addr td .hfiptxt {margin-right:1px; margin-bottom:10px;}
 			tr.hfd_addr td .hfiptxt input {width:75px;}
-		.b_s_zipcode {width:98px; height:33px; margin:-4px 0 -8px -3px; background-position:-145px -40px;}
+		.b_s_zipcode {width:98px; height:33px; margin:-4px 0 -8px -3px;.margin-left:2px; background-position:-145px -40px;}
 		tr.hfd_addr td .itx_su {margin-bottom:0;}
 			tr.hfd_addr td .itx_su input {width:245px;}
 		tr.hfd_addr td select {width:63px;}
