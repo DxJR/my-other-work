@@ -42,18 +42,18 @@
 	/* 대리점 전시품 할인판매 */
 	.hsf_ssds_w {position:relative; clear:both; margin:19px 0 0 0; padding:5px 0 0 122px; border-top:1px solid #e3e3e3;}
 		.hsf_ssds_w h3 {position:absolute; top:20px; left:29px; width:66px; height:30px; background:url('../images/set_shopinfo.gif') -500px top no-repeat;}
-		.hsf_ssds_list {}
+		.hsf_ssds_list {clear:both;}
 			.hsf_ssds_list li {border-bottom:1px solid #e2e2e2;}
 				.hsf_ssds_list li a {display:block; height:29px; padding:12px 0 0 0; font-size:0; color:#a6a6a6;}
 					.hsf_ssds_list li a em, .hsf_ssds_list li a span, .hsf_ssds_list li a strong, .hsf_ssds_list li a i {display:inline-block; font-weight:normal; font-family:mg; font-size:12px;}
-					.hsf_ssds_list li a em {width:260px;}
+					.hsf_ssds_list li a em {width:260px;.width:250px;}
 					.hsf_ssds_list li a span {width:165px;}
 					.hsf_ssds_list li a strong {width:123px; color:#d7182a;}
 					.hsf_ssds_list li a i {width:61px; color:#d7182a;}
 				.hsf_ssds_list li a:hover {color:#333;}
 
 /* 탭메뉴 */
-.hsf_si_tab_w {position:relative; clear:both; height:44px; margin-top:15px; background:url('../images/bg_hsf_si_tab_w.gif') left bottom repeat-x;}
+.hsf_si_tab_w {z-index:3; position:relative; clear:both; height:44px;.height:45px; margin-top:15px; background:url('../images/bg_hsf_si_tab_w.gif') left bottom repeat-x;}
 	.hsf_si_tab {}
 		.hsf_si_tab li {float:left; display:inline; margin-right:1px;}
 			.hsf_si_tab li a {width:140px; height:42px; border:1px solid #ccdce8; border-bottom:0; background-image:url('../images/set_shopinfo.gif');}
@@ -61,7 +61,7 @@
 			.b_fsit_fsi {background-position:-140px -280px;}
 			.b_fsit_si {background-position:-280px -280px;}
 			.b_fsit_ii {background-position:-420px -280px;}
-		.hsf_si_tab li.this {}
+		.hsf_si_tab li.this {.position:relative; .top:1px;}
 			.hsf_si_tab li.this a {height:43px; border-color:#0057a0;}
 			.hsf_si_tab li.this .b_fsit_asf {background-position:left -330px;}
 			.hsf_si_tab li.this .b_fsit_fsi {background-position:-140px -330px;}
@@ -79,10 +79,11 @@
 			.b_hsf_mcl {width:21px; height:21px; background-position:-180px top;}
 
 /* 매장검색 */
-.hsf_si_ssrch {clear:both; margin:38px 0 0 0; text-align:center;}
+.hsf_si_ssrch {z-index:2; position:relative; clear:both; margin:38px 0 0 0;.margin-left:110px;.margin-bottom:-30px; text-align:center;}
 	.hsf_si_ssrch .jqtype3 {position:relative; display:inline-block; margin:2px -7px 0 0; vertical-align:top;}
 	.hsf_si_ssrch select {width:183px;}
 	.hsf_si_ssrch .jqtype3 .jqTransformSelectWrapper {margin-right:10px; text-align:left;}
+	.hsf_si_ssrch input {.position:relative; .top:-34px;.left:150px;}
 
 /* 매장목록 */
 .hsf_si_list {clear:both; margin-top:34px; border-bottom:1px solid #333;}
@@ -149,7 +150,7 @@
 	.hsf_sl_tb_w li {float:left; display:inline; width:365px; height:116px; font:0/0 arial;}
 	.hsf_sl_tb_w li.first {margin-right:1px;}
 	/* 매장지역선택 */
-	.hsf_sls_w {clear:both; margin:16px 0 -22px 0;}
+	.hsf_sls_w {position:relative; clear:both; margin:16px 0 -22px 0;}
 		.hsf_sls_w select {width:103px;}
 		.hsf_sls_w .jqTransformSelectWrapper {position:relative; top:4px; margin-right:7px;}
 
@@ -158,7 +159,7 @@
 	.hsf_shop_detail_w h3 {font-size:22px; color:#333; line-height:30px;}
 	.hsf_sd_cont {clear:both; float:left; width:100%; margin-top:13px;}
 		.hsf_sd_cont .col_left, .hsf_sd_cont .col_mid, .hsf_sd_cont .col_right {float:left; display:inline; font-size:12px; color:#a6a6a6; line-height:22px;}
-			.hsf_sd_cont h4 {display:block; font-weight:normal; color:#333;}
+			.hsf_sd_cont h4 {display:block; font-weight:normal; color:#333; font-size:12px;}
 		.hsf_sd_cont .col_left {width:240px;}
 			.hsf_sd_cont .col_left h4 {display:inline;}
 		.hsf_sd_cont .col_mid {width:230px;}
