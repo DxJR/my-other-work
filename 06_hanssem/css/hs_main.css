@@ -19,7 +19,9 @@
 			.hsm_evnt_w a {display:block;}
 			.hsm_evnt_w strong {display:block; font-weight:normal; color:#333;}
 /* 메인 visual */
-.hsm_visual {position:relative; left:-78px; margin-bottom:20px;}
+.hsm_visual {position:relative; left:-78px; width:930px; height:553px; margin-bottom:20px; overflow:hidden;}
+	.hsm_visual div {position:absolute; top:0; left:0; width:2790px;}
+		.hsm_visual div img {display:inline;}
 	/* 가운데 좌측 컨텐츠 */
 	.hsm_mc_mid {clear:both; float:left; width:535px;}
 		/* 가운데 숫자 메뉴 01~03 */

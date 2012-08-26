@@ -77,6 +77,8 @@ jQuery(function($){
 		});
 	};
 
+	hsstrLyr();
+	setTimeout(mainVisual, 4000);
 	// Product List
 	showItemListHover(".hs_product_b_list>li");
 	// 전시품 할인판매
@@ -178,3 +180,41 @@ function mrsHide() {
 	$("#hs_mrs_c_wrap div").css("display","none");
 	$("#hs_mrs_m li").removeClass("this");
 };
+
+// 상단 레이어
+function hsstrLyr() {
+	var timer = null;
+	$("a.b_gnb_sotry").mouseover(function() {
+		$(this).parent().addClass("this");
+		$("#m_gnb_t_lyr").show();
+		if(timer) {clearTimeout(timer);}
+	});
+	$("a.b_gnb_sotry").mouseleave(function() {
+		$(this).parent().removeClass("this");
+		timer = setTimeout(function(){$("#m_gnb_t_lyr").hide()}, 500);
+	});
+	$("#m_gnb_t_lyr").mouseenter(function() {
+		$("a.b_gnb_sotry").parent().addClass("this");
+		$("#m_gnb_t_lyr").show();
+		if(timer) {clearTimeout(timer);}
+	});
+	$("#m_gnb_t_lyr").mouseleave(function() {
+		$("a.b_gnb_sotry").parent().removeClass("this");		
+		$("#m_gnb_t_lyr").hide();
+	});
+};
+
+// 메인
+function mainVisual() {
+	$("#hsm_vsl").animate({
+		left: '-=930'
+	}, 1000, function() {  
+			if ($("#hsm_vsl").css('left')=='-1860px')
+			{
+				$("#hsm_vsl").css('left','0');
+			}
+			setTimeout(mainVisual, 4000)
+			}
+	);
+	
+}
