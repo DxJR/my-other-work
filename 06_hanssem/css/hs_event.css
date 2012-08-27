@@ -13,7 +13,7 @@
 /* 이벤트목록 */
 .hse_list {clear:both; margin-top:20px; font:0/0 arial;}
 	.hse_list li {display:inline-block; width:100%; padding:20px 0; border-top:1px solid #e6e6e6;}
-	.hse_list li.nth-2d {width:360px; margin:-215px 0 0 371px;}
+	.hse_list li.nth-2d {width:360px; margin-left:-360px; .margin:-215px 0 0 371px;}
 /* 지난이벤트 */
 .hse_list_old {margin-top:0;}
 	.hse_list_old li {border-top:0; border-bottom:1px solid #e6e6e6;}
