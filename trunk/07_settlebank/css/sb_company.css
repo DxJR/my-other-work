@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* 회사개요 */
+.sb_c_p01_w01 {margin-top:35px;}
+
+/* 회사연혁 */
+.sb_c_p02_w01 {margin-top:26px;}
+
+/* 오시는길 */
+.sb_c_p04_w01 {margin-top:11px;}
+
+
+
+
+/* [고객지원] */
+/* 게시판 리스트 */
+.sbi_brd_list {clear:both; margin-top:11px;}
+	.sbi_brd_list tr th {height:26px; font-family:ng, dotum; font-weight:bold; font-size:11px; letter-spacing:-1px; color:#912f2f; border:1px solid #e4d2d2; border-width:1px 0; background:#faf6f6;}
+	.sbi_brd_list tr td {padding:16px 0 12px 0; font-family:dotum; font-size:12px; color:#4c4c4c; text-align:center; border-bottom:1px solid #e0e0e0;}
+		.sbi_brd_list tr td a {color:#4c4c4c;}
+	.sbi_brd_list tr td.title {padding-left:7px; text-align:left;}
+/* 카테고리/검색 */
+.sbi_ct_cate_s_w {clear:both; height:30px; margin:12px 0 23px 0;}
+	/* 카테고리 */
+	.sbi_ct {float:left; margin-top:7px;}
+		.sbi_ct a {margin-right:16px;}
+	/* 검색 */
+	.sbi_sc {float:right;}
+		.sbi_sc select {width:83px;}
+		.sbi_sc .jqTransformSelectWrapper {margin:3px 5px 0 0;}
+		.sbi_sc .ipst01 {width:169px;}
+
+/* 거래내역조회 */
+.sbi_h_tlv_w {clear:both;}
+	.sbi_h_tlv_w .sbi_tbl_s tr th {width:auto;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .ipst03 {width:56px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .tx {position:relative; top:2px; color:#582525;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .hpn {width:53px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .jqTransformSelectWrapper {margin-right:4px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr.ds_tr td .ipst02 {width:76px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr.ds_tr td em {position:relative; top:2px; margin-left:10px; font-size:11px; color:#858585;}
+	/* 등록금내역 */
+	.sbi_h_tlv_w h4 {clear:both; margin-top:-14px;}
+	.sbi_tbl_us {clear:both; margin-top:10px;}
+		.sbi_tbl_us tr th, .sbi_tbl_us tr td {height:26px; padding:13px 0 0 15px; font-family:ng, dotum; font-size:12px; color:#912f2f; text-align:left; vertical-align:top; border:1px solid #e4d2d2; border-width:0 1px 1px 0; background:#fbf5f5;}
+		.sbi_tbl_us tr td {height:24px; padding:15px 0 0 20px; font-family:dotum; color:#4c4c4c; border-color:#dadada; border-width:0 0 1px 0; background:#fff;}
+		.sbi_tbl_us .tr_l_01 th {border-width:1px 1px 1px 0;}
+		.sbi_tbl_us .tr_l_01 td {border-width:1px 0;}
+	/* 전자결제내역 */
+	.sbi_tbl_us2 {clear:both; margin-top:40px; border-top:1px solid #e4d2d2;}
+		.sbi_tbl_us2 tr th, .sbi_tbl_us2 tr td {font-family:ng, dotum; font-size:11px; color:#912f2f; border:1px solid #e4d2d2; border-width:0 1px 1px 0; background:#fbf5f5;}
+		.sbi_tbl_us2 tr th {height:21px; padding:2px 0 0 0;}
+		.sbi_tbl_us2 tr td {padding:4px 0; font-family:dotum; color:#4c4c4c; line-height:15px; border-color:#dadada; text-align:center; background:#fff;}
+			.sbi_tbl_us2 tr td .lb {margin-top:9px;}
+			.sbi_tbl_us2 tr td a {color:#858585; text-decoration:underline;}
+		.sbi_tbl_us2 tr th.c_l, .sbi_tbl_us2 tr td.c_l {border-right:0;}
