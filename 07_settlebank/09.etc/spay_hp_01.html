@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_popup.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+
+<div class="pop_spay_w">
+	<h1><img src="../images/spay_p_tit2.gif" alt="S'pay" /></h1>
+	<div class="p_spay_tit_w">
+		<h2><img src="../images/spay_in_t_01.gif" alt="휴대폰결제" /></h2>
+		<p class="progress"><img src="../images/spay_prgs_h_01.gif" alt="현재단계" /></p>
+	</div>
+	<form class="jqtransform">
+		<div class="p_spay_cont_w">
+			<table cellpadding="0" cellspacing="0" class="sp_pay_tpl">
+				<colgroup>
+					<col width="78" />
+					<col width="246" />
+				</colgroup>
+				<tr>
+					<th>상품명</th>
+					<td>헤이데이 테스트 상품정보</td>
+				</tr>
+				<tr>
+					<th>금액</th>
+					<td>100,000원</td>
+				</tr>
+				<tr>
+					<th>제공기간</th>
+					<td>2012-08-01 ~ 2012-08-31</td>
+				</tr>
+			</table>
+			<!-- 결제카드선택 -->
+			<div class="p_spay_c_l2">
+				<h3 class="p_spay_l_exp">결제하실 카드를 선택해 주세요.</h3>
+				<table cellpadding="0" cellspacing="0" class="sp_pay_tpl_form">
+					<colgroup>
+						<col width="92" />
+						<col width="232" />
+					</colgroup>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t01.gif" alt="이동통신사" /></th>
+						<td>
+							<ul>
+								<li><input type="radio" name="p_frm_e" id="p_frm_e01" class="radio" checked="checked" /><label for="p_frm_e01">SKT</label></li>
+								<li><input type="radio" name="p_frm_e" id="p_frm_e02" class="radio" /><label for="p_frm_e02">KT</label></li>
+								<li><input type="radio" name="p_frm_e" id="p_frm_e03" class="radio" /><label for="p_frm_e03">LG U+</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t02.gif" alt="휴대폰번호" /></th>
+						<td><input type="text" class="ipst02" /> <em class="iexpt">'-'없이</em></td>
+					</tr>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t03.gif" alt="주민등록번호" /></th>
+						<td><input type="text" class="ipst03" /> <span class="ds">-</span> <input type="text" class="ipst03" /></td>
+					</tr>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t04.gif" alt="내용통보이메일" /></th>
+						<td><input type="text" class="ipst02" onclick="this.style.background='none';" style="background:url('../images/iptxt_b_2.gif') 4px 5px no-repeat;" /></td>
+					</tr>
+				</table>
+			</div>
+			<!-- 약관동의 -->
+			<ul class="sp_pay_policy_c">
+				<li><input type="checkbox" id="p_frm_agr01" class="check" /><label for="p_frm_agr01">이용약관에 동의합니다.</label> <a href="#"><img src="../images/b_agr.gif" alt="이용약관보기" /></a></li>
+				<li><input type="checkbox" id="p_frm_agr02" class="check" /><label for="p_frm_agr02">상기 결제 내용에 동의합니다.</label></li>
+			</ul>
+		</div>
+	</form>
+	<div class="p_spay_c_btm">
+		<!-- 주의사항 -->
+		<div class="p_spay_etc">
+			<p>입력하신 휴대폰번호로 결제 승인번호가 전송됩니다.<br />휴대폰 결제금액은 다음달 요금고지서에 소액결제 항목으로<br />청구됩니다.</p>
+		</div>
+		<!-- 하단버튼 -->
+		<div class="p_spay_btn_w">
+			<a href="#"><img src="../images/b_spay_next.gif" alt="다음단계" /></a>
+			<a href="#"><img src="../images/b_spay_cancel.gif" alt="취소" /></a>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

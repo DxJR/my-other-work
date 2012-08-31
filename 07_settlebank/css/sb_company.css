@@ -72,3 +72,32 @@
 		.s_hoc_piup p.agr {clear:both; float:left; width:100%; height:auto; margin:10px 0 0 0; padding:0; font-size:12px;}
 			form.jqtransformdone .s_hoc_piup p.agr label {float:none; margin:0 0 0 5px;}
 	.b_hoc_wr {clear:both; margin:50px 0 0 0;}
+/* 사이트맵 */
+.sbi_stm_w {margin-top:10px;}
+.sbi_stm {float:left; width:206px; height:235px; margin:30px 0 0 0; padding:0 0 0 20px; border-left:1px solid #e0e0e0;}
+.stm_l2 {height:160px;}
+.s_stm_cl {clear:both; border-left:0;}
+	.sbi_stm ul {clear:both; margin:25px 0 0 0;}
+		.sbi_stm ul li {margin:14px 0 0 0;}
+			.sbi_stm ul li a {padding:0 0 0 7px; font-size:12px; color:#4c4c4c; background:url('../images/ico_rect_01.gif') left 5px no-repeat;}
+
+
+/* 전자결제 */
+.s_ep_cw {margin-top:34px;}
+.s_ep_cw #content {margin-top:-69px;}
+.sq {margin-top:20px;}
+.nrqt {position:relative; left:-2px; margin-top:40px;}
+.sbi_eptxt_w {position:relative; clear:both; height:107px; font:0/0 arial; border-bottom:1px solid #383838; background:url('../images/bg_sbi_eptxt_w.gif') right top no-repeat;}
+	.sbi_eptxt_w img {margin:38px 0 0 0;}
+.sbi_epcnt {padding:20px 0; border-bottom:1px solid #e0e0e0;}
+.sbi_epc_img {padding-bottom:30px;}
+.sbi_epc_l {padding-bottom:0; border-bottom:0;}
+.sbi_epc_il img {position:relative; left:-7px;}
+.sbi_epcnt2 {}
+	.sbi_epcnt2 h4 {margin-top:21px;}
+	.sbi_epcnt2 table {clear:both; margin-top:18px;}
+		.sbi_epcnt2 table tr th {height:38px; font-family:ng; font-size:11px; color:#912f2f; border:1px solid #e4d2d2; border-left:0; background:#faf6f6;}
+		.sbi_epcnt2 table tr td {padding:11px 0 5px 10px; font-family:dotum; font-size:12px; color:#4c4c4c; line-height:20px; vertical-align:top; border:1px solid #e1e1e1; border-width:0 1px 1px 0;}
+			.sbi_epcnt2 table tr td span {display:block; padding-bottom:5px; color:#b68d8d;}
+		.sbi_epcnt2 table tr th.c_l, .sbi_epcnt2 table tr td.c_l {text-align:center; border-right:0;}
+		.sbi_epcnt2 table tr td.c_l img {position:relative; top:-3px;}

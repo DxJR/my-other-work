@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_popup.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+
+<div class="pop_spay_w">
+	<h1><img src="../images/spay_p_tit2.gif" alt="S'pay" /></h1>
+	<div class="p_spay_tit_w">
+		<h2><img src="../images/spay_in_t_05.gif" alt="가상계좌결제" /></h2>
+		<p class="progress"><img src="../images/spay_prgs_h_06.gif" alt="현재단계" /></p>
+	</div>
+	<form class="jqtransform">
+		<div class="p_spay_cont_w">
+			<table cellpadding="0" cellspacing="0" class="sp_pay_tpl">
+				<colgroup>
+					<col width="78" />
+					<col width="246" />
+				</colgroup>
+				<tr>
+					<th>상품명</th>
+					<td>헤이데이 테스트 상품정보</td>
+				</tr>
+				<tr>
+					<th>금액</th>
+					<td>100,000원</td>
+				</tr>
+			</table>
+			<!-- 결제카드선택 -->
+			<div class="p_spay_c_l2">
+				<h3 class="p_spay_l_exp">이체 정보를 입력해 주세요.</h3>
+				<table cellpadding="0" cellspacing="0" class="sp_pay_tpl_form">
+					<colgroup>
+						<col width="92" />
+						<col width="232" />
+					</colgroup>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t06.gif" alt="입금은행(기한)" /></th>
+						<td>
+							<div class="jqtype2">
+								<select>
+									<option>은행선택</option>
+									<option>은행선택</option>
+								</select>
+								<em class="iexpt">2012.10.23</em>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="p_spay_c_l2">
+				<h3 class="p_spay_l_exp"><input type="checkbox" id="p_spay_etc1" class="check" /><label for="p_spay_etc1">현금영수증발행</label> <em>(현금영수증 발행시 세금계산서 발행불가)</em></h3>
+				<table cellpadding="0" cellspacing="0" class="sp_pay_tpl_form">
+					<colgroup>
+						<col width="92" />
+						<col width="232" />
+					</colgroup>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t07.gif" alt="용도" /></th>
+						<td>
+							<ul>
+								<li><input type="radio" name="p_frm_e" id="p_frm_e01" class="radio" checked="checked" /><label for="p_frm_e01">소득공제용</label></li>
+								<li><input type="radio" name="p_frm_e" id="p_frm_e02" class="radio" /><label for="p_frm_e02">지출증빙용</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<div class="jqtype2">
+								<select>
+									<option>선택</option>
+									<option>선택</option>
+								</select>
+							</div>
+						</th>
+						<td><input type="text" class="ipst02" /> <em class="iexpt">'-'없이</em></td>
+					</tr>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t04.gif" alt="내용통보이메일" /></th>
+						<td><input type="text" class="ipst02" onclick="this.style.background='none';" style="background:url('../images/iptxt_b_2.gif') 4px 5px no-repeat;" /></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</form>
+	<div class="p_spay_c_btm">
+		<!-- 주의사항 -->
+		<div class="p_spay_etc">
+			<p>가상계좌 지불서비스를 중단하시려면 반드시 <em>“취소”</em>를 클릭해<br />주십시오. <em>“X”</em> 사용 시 정상적인 취소가 불가할 수 있으니<br />유의바랍니다.</p>
+			<p class="ln2">입금액이 틀린 경우나 입금기간이 경과한 후에는 입금이 불가<br />하오니 유의바랍니다.</p>
+		</div>
+		<!-- 하단버튼 -->
+		<div class="p_spay_btn_w">
+			<a href="#"><img src="../images/b_spay_next.gif" alt="다음단계" /></a>
+			<a href="#"><img src="../images/b_spay_cancel.gif" alt="취소" /></a>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
