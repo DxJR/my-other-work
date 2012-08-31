@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_company.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<h1><img src="../images/common/bi_settlebank.gif" width="187" height="70" alt="Settlebank" usemap="#settlebankBi" /></h1>
+		<map id="settlebankBi" name="settlebankBi">
+			<area shape="rect" coords="0,0,187,70" alt="Settlebank" href="#" />
+		</map>
+		<!-- 우측영역 -->
+		<div id="sbi_mt_r">
+			<!-- 최상단메뉴 -->
+			 <ul id="sbi_mt_menu">
+				<li class="first"><a href="#"><img src="../images/b_mt_company.gif" border="0" alt="회사소개" /></a></li>
+				<li><a href="#"><img src="../images/b_mt_helpdesk.gif" border="0" alt="고객지원" /></a></li>
+				<li><a href="#"><img src="../images/b_mt_sitemap.gif" border="0" alt="사이트맵" /></a></li>
+			 </ul>
+			 <!-- 로그인정보 -->
+			 <p id="sbi_t_loginfo"><strong>세틀뱅크</strong>님 안녕하세요 <a href="#" class="b_t_logout"><img src="../images/b_t_logout.gif" border="0" alt="로그아웃" /></a></p>
+		 </div>
+		 <!-- GNB -->
+		 <ul id="sbi_snb">
+			<!-- 현재선택일 때 class="this" -->
+			<li class="first this"><a href="#"><img src="../images/b_snb_ec_over.gif" border="0" alt="전자결제" /></a></li>
+			<li><a href="#"><img src="../images/b_snb_ca.gif" border="0" alt="가상계좌" /></a></li>
+			<li><a href="#"><img src="../images/b_snb_pb.gif" border="0" alt="펌뱅킹" /></a></li>
+			<li><a href="#"><img src="../images/b_snb_es.gif" border="0" alt="부가서비스" /></a></li>
+		 </ul>
+	</div>
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<!-- 서브메뉴 -->
+			<div id="sbi_submenu">
+				<h2><img src="../images/sm_t_helpdesk.gif" border="0" alt="고객지원" /></h2>
+				<ul class="sbi_sm_tpl">
+					<li class="first"><a href="#"><img src="../images/b_sbhst_01.gif" border="0" alt="공지사항" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_02.gif" border="0" alt="거래내역조회" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_03.gif" border="0" alt="FAQ" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_04.gif" border="0" alt="자료실" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_05_over.gif" border="0" alt="온라인상담" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!-- 제목/현재위치 -->
+			<div class="sbi_tit_cont">
+				<h3><img src="../images/sbtc_sth05.gif" border="0" alt="온라인상담" /></h3>
+				<p class="sbi_location"><a href="#">인트라넷</a> &gt; <a href="#">정산조회</a> &gt; <a href="#">정산입금 내역조회</a></p>
+			</div>
+			<!-- 실제컨텐츠 -->
+			<div class="sbi_cont_w">
+				<form class="jqtransform">
+				<p class="sbi_h_oc_exp">상담내용을 입력해 주시면 확인 후 답변드리겠습니다.<br />빠른 상담을 원하시면 정확한 정보를 입력해주세요.</p>
+				<div class="s_hoc_st">
+					<h4><img src="../images/tit_hoc_l.gif" border="0" alt="사업자 정보 입력" /></h4>
+					<table cellpadding="0" cellspacing="0" class="sbi_hoc_t">
+						<colgroup>
+							<col width="112" />
+							<col width="331" />
+						</colgroup>
+						<tr>
+							<th>회사명(상호)</th>
+							<td><input type="text" class="ipst02" /></td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td>
+								<select>
+									<option>02</option>
+									<option>02</option>
+								</select> <span class="ds">-</span>
+								<input type="text" class="ipst03" /> <span class="ds">-</span>
+								<input type="text" class="ipst03" />
+							</td>
+						</tr>
+						<tr>
+							<th>E-Mail</th>
+							<td><input type="text" class="ipst02" /></td>
+						</tr>
+						<tr>
+							<th>쇼핑몰주소(URL)</th>
+							<td><input type="text" class="ipst02" /></td>
+						</tr>
+					</table>
+				</div>
+				<div class="s_hoc_st shoc_r">
+					<h4><img src="../images/tit_hoc_r.gif" border="0" alt="담당자 정보 입력" /></h4>
+					<table cellpadding="0" cellspacing="0" class="sbi_hoc_t">
+						<colgroup>
+							<col width="112" />
+							<col width="331" />
+						</colgroup>
+						<tr>
+							<th>담당자명</th>
+							<td><input type="text" class="ipst02" /></td>
+						</tr>
+						<tr>
+							<th>담당자 휴대폰번호</th>
+							<td>
+								<select>
+									<option>010</option>
+									<option>010</option>
+								</select> <span class="ds">-</span>
+								<input type="text" class="ipst03" /> <span class="ds">-</span>
+								<input type="text" class="ipst03" />
+							</td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td>
+								<select>
+									<option>02</option>
+									<option>02</option>
+								</select> <span class="ds">-</span>
+								<input type="text" class="ipst03" /> <span class="ds">-</span>
+								<input type="text" class="ipst03" />
+							</td>
+						</tr>
+						<tr>
+							<th>E-Mail</th>
+							<td><input type="text" class="ipst02" /></td>
+						</tr>
+					</table>
+				</div>
+				<!-- 상세내역 -->
+				<div class="s_hoc_dtil">
+					<h4><img src="../images/tit_hoc_dtil.gif" border="0" alt="상세내역" /></h4>
+					<textarea></textarea>
+				</div>
+				<!-- 개인정보동의 -->
+				<div class="s_hoc_piup">
+					<h4><img src="../images/tit_hoc_upp.gif" border="0" alt="개인정보를 위한 이용자 동의사항" /></h4>
+					<p>자세한 내용은 “개인정보취급방침”을 확인하시기 바랍니다.</p>
+					<div class="hoc_piup_in">
+						<strong>개인정보의 수집 및 이용목적</strong><br />
+						회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br />
+						1) 서비스 신청의 경우<br />
+						서비스 신청 및 이용계약 체결에 따른 서비스 제공<br />
+						- 서비스 신청, 서비스 변경 및 해지, 서비스 관련 문의 등을 포함한 이용계약 관련 사항의 처리(금융기관 등록 등), 서비스요금 정산, 고지사항 전달, 계약서발송 등<br />
+						<br />
+						<strong>개인정보의 수집 및 이용목적</strong><br />
+						회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br />
+						1) 서비스 신청의 경우<br />
+						서비스 신청 및 이용계약 체결에 따른 서비스 제공<br />
+					</div>
+					<p class="agr"><input type="checkbox" id="s_hoc_agr" class="check" /><label for="s_hoc_agr">동의합니다.</label></p>
+				</div>
+				<div class="b_hoc_wr">
+					<a href="#"><img src="../images/b_hoc_ok.gif" border="0" alt="작성완료" /></a>
+					<a href="#"><img src="../images/b_hoc_cancel.gif" border="0" alt="취소" /></a>
+				</div>
+				</form>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<h2 class="hide">Settlebank 정보</h2>
+		<div class="f_s_cont fsc_info"><img src="../images/sb_foot_01.gif" width="258" height="38" border="0" alt="세틀뱅크(주)" /></div>
+		<div class="f_s_cont fsc_s_info"><img src="../images/sb_foot_02.gif" width="162" height="21" border="0" alt="연락처" /></div>
+		<div class="f_s_cont fsc_copy"><img src="../images/sb_foot_03.gif" width="169" height="21" border="0" alt="Copyright" /></div>
+		<ul class="fsc_menu">
+			<li class="first"><a href="#"><img src="../images/b_f_policy.gif" width="40" height="11" border="0" alt="이용약관" /></a></li>
+			<li><a href="#"><img src="../images/b_f_intranet.gif" width="40" height="11" border="0" alt="인트라넷" /></a></li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>

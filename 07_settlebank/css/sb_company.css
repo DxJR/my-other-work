@@ -54,3 +54,21 @@
 			.sbi_tbl_us2 tr td .lb {margin-top:9px;}
 			.sbi_tbl_us2 tr td a {color:#858585; text-decoration:underline;}
 		.sbi_tbl_us2 tr th.c_l, .sbi_tbl_us2 tr td.c_l {border-right:0;}
+/* 온라인상담 */
+.sbi_h_oc_exp {clear:both; margin:18px 0 26px 0; font-family:dotum; font-size:12px; color:#999; line-height:18px;}
+	.s_hoc_st {float:left; display:inline; width:443px; height:200px;}
+		.s_hoc_st h4 {}
+		.sbi_hoc_t {clear:both; margin-top:10px; border-top:1px solid #dadada;}
+			.sbi_hoc_t tr th, .sbi_hoc_t tr td {height:43px; border-bottom:1px solid #dadada;}
+			.sbi_hoc_t tr th {padding:0 0 0 10px; font-family:ng; font-size:11px; color:#912f2f; text-align:left; background:url('../images/ico_hoc_t.gif') left 19px no-repeat;}
+			.sbi_hoc_t tr td .ipst02 {width:231px;}
+			.sbi_hoc_t tr td .ipst03 {width:57px;}
+			.sbi_hoc_t tr td select {width:53px;}
+			.sbi_hoc_t tr td .jqTransformSelectWrapper {margin-right:4px;}
+	.shoc_r {margin-left:20px;}
+	.s_hoc_dtil, .s_hoc_piup {clear:both; padding:30px 0 0 0;}
+		.s_hoc_dtil textarea, .s_hoc_piup .hoc_piup_in  {clear:both; width:888px; height:194px; margin:10px 0 0 0; padding:5px 8px; font-family:dotum; font-size:12px; color:#999; line-height:22px; border:1px solid #ccc; overflow:auto; background:#fff;}
+		.s_hoc_piup p {float:right; display:inline; height:13px; margin:-13px 0 0 0; font-size:11px; color:#999;}
+		.s_hoc_piup p.agr {clear:both; float:left; width:100%; height:auto; margin:10px 0 0 0; padding:0; font-size:12px;}
+			form.jqtransformdone .s_hoc_piup p.agr label {float:none; margin:0 0 0 5px;}
+	.b_hoc_wr {clear:both; margin:50px 0 0 0;}
