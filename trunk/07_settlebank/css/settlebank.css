@@ -73,11 +73,12 @@ a.jqTransformChecked {background-position:left -20px;}
 	.jqTransformSelectWrapper ul a.selected, .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color:#333; background:#dadada;}
 
 /* Select Type2 */
-.jqtype2 .jqTransformSelectWrapper {height:21px; background:url('../images/common/bg_select.gif') left -30px no-repeat;}
-	.jqtype2 .jqTransformSelectWrapper div span {height:18px; padding:3px 0 0 6px; font-family:mgB; font-size:12px; color:#a6a6a6;}
-	.jqtype2 a.jqTransformSelectOpen {width:17px; height:21px; background:url('../images/common/bg_select.gif') right -30px no-repeat;}
+.jqtype2 .jqTransformSelectWrapper {height:23px; background:url('../images/common/bg_select.gif') left -25px no-repeat;}
+	.jqtype2 .jqTransformSelectWrapper div span {height:23px; padding:6px 0 0 6px; font-family:dotum; font-size:12px; color:#4c4c4c;}
+	.jqtype2 a.jqTransformSelectOpen {width:17px; height:23px; background:url('../images/common/bg_select.gif') right -25px no-repeat;}
 	.jqtype2 ul {top:23px;}
-	.jqtype2 ul a {height:18px; padding:6px 0 0 5px; font-family:mgB; font-size:12px; color:#333;}
+	.jqtype2 ul li {float:none !important; margin:0 !important;}
+	.jqtype2 ul a {height:18px; padding:6px 0 0 5px; font-family:dotum; font-size:12px; color:#333;}
 	.jqtype2 ul a.selected, .jqtype2 ul a:hover, .jqtype2 ul a.selected:hover {color:#333; background:#dadada;}
 
 /* Hidden - used to hide the original form elements */

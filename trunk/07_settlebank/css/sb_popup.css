@@ -89,3 +89,91 @@
 .sbi_tbl_p_s_8 {}
 	.sbi_tbl_p_s_8 tr th {width:118px;}
 	.sbi_tbl_p_s_8 tr td {width:362px;}
+
+/* S'pay */
+.popSt05 {position:relative; width:620px; padding:43px 39px 27px 39px; border:1px solid #d9d9d9;}
+.spay_p_c_w {clear:both; height:544px; margin-top:16px;}
+	.sp_pc_l {float:left; width:380px;}
+		.sp_pc_l h2 {margin:23px 0 15px 0;}
+		.sp_pay_tpl {clear:both; border-top:1px solid #dadada;}
+			.sp_pay_tpl tr th, .sp_pay_tpl tr td {height:34px; border-bottom:1px solid #dadada;}
+			.sp_pay_tpl tr th {padding-left:10px; font-family:ng; font-size:11px; color:#912f2f; letter-spacing:-1px; text-align:left; background:#faf6f6;}
+			.sp_pay_tpl tr td {padding-left:15px; font-family:dotum; font-size:12px; color:#4c4c4c;}
+				.sp_pay_tpl tr td a {font-family:arial; font-size:12px; color:#4c4c4c; text-decoration:underline;}
+	.sp_pc_r {float:left; display:inline; width:210px; margin:52px 0 0 30px;}
+		.sp_pc_r ul {border-bottom:4px solid #f5f5f5;}
+			.sp_pc_r ul li {font:0/0 arial; border:4px solid #f5f5f5; border-bottom:0;}
+.sp_pc_exp {clear:both; margin:28px 0 0 0; font-size:11px; color:#bcbbbb; line-height:15px;}
+	.sp_pc_exp li .lb {padding-left:10px;}
+.sp_pc_footer {clear:both; margin:30px 0 0 0; padding:14px 0 0 0; font:0/0 arial; border-top:4px solid #f5f5f5;}
+
+
+/* 결제하기 */
+.pop_spay_w {position:relative; width:324px; height:530px; padding:20px 15px;}
+	.pop_spay_w h1 {clear:both; margin:5px 0 0 0; padding:0 0 10px 0; font:0/0 arial; border-bottom:2px solid #eb0000;}
+	.p_spay_tit_w {clear:both; height:13px; margin:14px 0 0 0; font:0/0 arial;}
+		.p_spay_tit_w h2 {float:left;}
+		.p_spay_tit_w .progress {float:right;}
+	.p_spay_cont_w {clear:both; margin-top:21px;}
+		.p_spay_cont_w .sp_pay_tpl tr th, .p_spay_cont_w .sp_pay_tpl tr td {height:34px;}
+			.p_spay_cont_w tr.v-t th, .p_spay_cont_w tr.v-t td {height:auto; padding-top:11px; vertical-align:top;}
+			.p_spay_cont_w tr.v-t th {padding-bottom:11px;}
+				.p_spay_cont_w tr td .alrt {position:relative; top:-2px; padding-bottom:5px; color:#e04949; line-height:18px;}
+		.p_spay_c_l2 {clear:both; margin:25px 0 0 0;}
+		.p_spay_cont_w .p_spay_l_exp {margin-bottom:5px; font-family:dotum; font-weight:normal; font-size:11px; color:#b68d8d;}
+			.p_spay_cont_w .p_spay_l_exp label {float:none; margin-left:4px; font-size:11px;}
+			.p_spay_cont_w .p_spay_l_exp em {color:#bbb;}
+		.sp_pay_tpl_form {clear:both; border-top:1px solid #868686;}
+			.sp_pay_tpl_form tr th, .sp_pay_tpl_form tr td {height:34px; font-family:dotum; font-size:12px; color:#bbb; text-align:left; border-bottom:1px solid #e0e0e0;}
+				.sp_pay_tpl_form tr td ul li {float:left; display:inline; margin-right:15px; color:#4c4c4c;}
+				.sp_pay_tpl_form tr td .ipst02, .sp_pay_tpl_form tr td .ipst03 {color:#4c4c4c;}
+				.sp_pay_tpl_form tr td .ipst02 {width:152px;}
+				.sp_pay_tpl_form tr td .ipst03 {width:60px;}
+				.sp_pay_tpl_form tr th select, .sp_pay_tpl_form tr td select {width:63px;}
+					.sp_pay_tpl_form tr th .jqtype2 {font-weight:normal;}
+					.jqtype2 .iexpt {float:left; display:inline; margin:6px 0 0 5px;}
+					.sp_pay_tpl_form tr td .jqtexp .jqTransformSelectWrapper {margin-right:3px;}
+				.sp_pay_tpl_form tr td strong {position:relative; top:1px; margin-left:6px; font-weight:normal; font-family:dotum; font-size:12px; color:#e04949;}
+					.sp_pay_tpl_form tr td strong i {font-weight:bold; font-family:arial;}
+					.sp_pay_tpl_form tr td ul.crd_ul {}
+					.sp_pay_tpl_form tr td ul li.crd_li {width:80px; margin:0 0 12px 0;}
+					.sp_pay_tpl_form tr td ul li.crd_l1 {clear:both; width:70px;}
+					.sp_pay_tpl_form tr td ul li.crd_etc {width:100px}
+						.sp_pay_tpl_form tr td ul li.crd_etc .jqtype2 {position:relative; top:-4px;}
+						.sp_pay_tpl_form tr td ul li.crd_etc .jqtype2 select {width:56px;}
+					.sp_pay_tpl_form tr td .ipst_l2 {width:211px;}
+					.sp_pay_tpl_form tr td .jq_tp select {width:27px;}
+					.sp_pay_tpl_form tr td .jq_tp .jqTransformSelectWrapper {margin-right:3px;}
+					.sp_pay_tpl_form tr td .ipst_l3 {width:31px;}
+		.p_spay_c_btm {position:absolute; bottom:20px; clear:both; width:324px;}
+			.p_spay_etc {clear:both; padding:8px 0 7px 8px; font-family:dotum; font-size:11px; color:#bcbbbb; line-height:14px; background:#fafafa;}
+				.p_spay_etc .ln2 {margin-top:5px;}
+				.p_spay_etc em {color:#b68d8d;}
+			.p_spay_btn_w {clear:both; height:28px; margin:10px 0 0 0; font:0/0 arial; text-align:right;}
+				.p_spay_btn_w span {display:block; text-align:center;}
+				.p_spay_btn_w a {margin-left:3px;}
+/* 휴대폰결제 */
+.sp_pay_policy_c {clear:both; margin:7px 0 0 0; font-family:dotum; font-size:12px; color:#b68d8d;}
+	.sp_pay_policy_c li {clear:both; margin-bottom:8px;}
+		.sp_pay_policy_c li label {float:none; margin:0 0 0 5px;}
+		.sp_pay_policy_c li img {position:relative; top:4px; margin-left:4px;}
+/* 경고 */
+#spayAlert {position:absolute; top:0; left:0; clear:both; width:355px; height:570px;}
+	.spay_art_c_w {z-index:2; position:relative; top:153px; left:33px; clear:both; width:283px; height:141px; line-height:18px; text-align:center; border:2px solid #eb0000; -moz-box-shadow:2px 3px rgba(0, 0, 0, 0.2); -webkit-box-shadow:2px 3px rgba(0, 0, 0, 0.2); box-shadow:2px 3px rgba(0, 0, 0, 0.2); filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=3, Color='#20000000'); background:#fff;}
+		.spay_art_c_w p {margin-top:26px;}
+		.spay_art_c_w .btn {margin-top:11px;}
+	#spayAlert .dimd {z-index:1; position:absolute; top:0; left:0; clear:both; width:100%; height:100%; opacity:0.2; filter:alpha(opacity=20);  background:#000;}
+/* 약관동의 */
+.plc_w {width:274px;}
+	.p_spay_plc {clear:both; height:335px; font-size:12px; color:#4c4c4c; line-height:18px; overflow:auto; border-bottom:1px solid #dadada;}
+		.p_spay_plc h2 {clear:both; margin:15px 0 0 0; padding:0 0 0 0; font-size:12px; color:#e04949;}
+		.plc_w .p_spay_btn_w {margin-top:15px;}
+
+.p_spay_isp_exp {clear:both; height:238px; padding-top:29px; font-size:12px; color:#4c4c4c; line-height:18px; text-align:center; border:1px solid #dadada; border-width:1px 0;}
+	.p_spay_isp_exp	p {margin-top:18px;}
+	.p_spay_isp_exp em, .p_spay_isp_exp i {font-weight:bold; text-decoration:underline;}
+	.p_spay_isp_exp em {color:#b68d8d;}
+	.p_spay_isp_exp i {color:#e04949;}
+
+.ktars_exp {clear:both; padding:9px 0 8px 10px; color:#4c4c4c; line-height:18px; letter-spacing:-1px; border-top:1px solid #868686; border-bottom:1px solid #e0e0e0;}
+	.ktars_exp em {color:#e04949;}
