@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<style type="text/css">
+	#sbMainMenu {position:relative; font-size:0;}
+		#bar {position:absolute; display:block; width:100%; height:10px; background:red;}
+		#sbMainMenu li {position:relative; display:inline-block; width:400px; height:400px; text-align:center;}
+			#sbMainMenu li img {position:absolute; left:0; bottom:0;}
+</style>
+</head>
+
+<body>
+
+<div id="sbMainMenu">
+	<span id="bar"></span>
+	<ul>
+		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/139/15139594.jpg" id="" /></a></li>
+		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/138/15138532.jpg" id="" /></a></li>
+		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/138/15138551.jpg" id="" /></a></li>
+		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/139/15139545.jpg" id="" /></a></li>
+	</ul>
+</div>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+$("#sbMainMenu ul li img").mouseover(function(){
+	$("#sbMainMenu ul li img").animate( { width: "250px" }, { queue: false, duration: 500 })
+	$(this).animate( { width: "350px" }, { queue: false, duration: 500 })
+	$("#bar").animate( { left: ""+$(this).offset().left+"", width:"100px" }, { queue: false, duration: 500 })
+});
+
+$("#sbMainMenu ul li img").mouseleave(function(){
+	$(this).animate( { width: "250px" }, { queue: false, duration: 500 })
+});
+
+$("#sbMainMenu ul").mouseleave(function(){
+	$("#sbMainMenu ul li img").animate( { width: "300px" }, { queue: false, duration: 500 })
+	$("#bar").animate( { left: "0", width:"100%" }, { queue: false, duration: 500 })
+});
+//]]>
+</script>
+
+
+</body>
+</html>
