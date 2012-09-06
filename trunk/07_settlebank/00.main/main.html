@@ -11,12 +11,14 @@
 <!--[if IE]><link rel="stylesheet" type="text/css" href="sb_ie.css" media="all" /><![endif]-->
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/grayscale.js"></script>
 <script type="text/javascript" src="../js/settlebank_lib.js"></script>
 <style type="text/css">
-	#sbMainMenu {position:relative; font-size:0;}
-		#bar {position:absolute; display:block; width:100%; height:10px; background:red;}
-		#sbMainMenu li {position:relative; display:inline-block; width:400px; height:400px; text-align:center;}
-			#sbMainMenu li img {position:absolute; left:0; bottom:0;}
+	#sbMainMenu {position:relative; width:1106px; font-size:0; overflow:hidden;}
+		#bar {z-index:10; position:absolute; display:block; width:100%; height:2px; background:#eb0000;}
+		#sbMainMenu ul {margin:20px 0 0 0;}
+			#sbMainMenu li {position:relative; display:inline-block; width:276px; height:362px; text-align:center;}
+				#sbMainMenu li .m_obj {display:block; width:60%;}
 </style>
 </head>
 
@@ -25,10 +27,30 @@
 <div id="sbMainMenu">
 	<span id="bar"></span>
 	<ul>
-		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/139/15139594.jpg" id="" /></a></li>
-		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/138/15138532.jpg" id="" /></a></li>
-		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/138/15138551.jpg" id="" /></a></li>
-		<li><a href="#"><img src="http://musicimg.cyworld.com/ALBUM/015/139/15139545.jpg" id="" /></a></li>
+		<li class="nth1">
+			<a href="#">
+				<strong><img src="../images/main_obj_tit_01.jpg" alt="" /></strong>
+				<img src="../images/main_obj_01.jpg" class="m_obj" alt="" />
+			</a>
+		</li>
+		<li class="nth2">
+			<a href="#">
+				<strong><img src="../images/main_obj_tit_02.jpg" alt="" /></strong>
+				<img src="../images/main_obj_02.jpg" class="m_obj" />
+			</a>
+		</li>
+		<li class="nth3">
+			<a href="#">
+				<strong><img src="../images/main_obj_tit_03.jpg" alt="" /></strong>
+				<img src="../images/main_obj_03.jpg" class="m_obj" />
+			</a>
+		</li>
+		<li class="nth4">
+			<a href="#">
+				<strong><img src="../images/main_obj_tit_04.jpg" alt="" /></strong>
+				<img src="../images/main_obj_04.jpg" class="m_obj" />
+			</a>
+		</li>
 	</ul>
 </div>
 
@@ -37,19 +59,27 @@
 <script type="text/javascript">
 //<![CDATA[
 
-$("#sbMainMenu ul li img").mouseover(function(){
-	$("#sbMainMenu ul li img").animate( { width: "250px" }, { queue: false, duration: 500 })
-	$(this).animate( { width: "350px" }, { queue: false, duration: 500 })
-	$("#bar").animate( { left: ""+$(this).offset().left+"", width:"100px" }, { queue: false, duration: 500 })
+$("#sbMainMenu ul li").mouseover(function(){
+	$("#sbMainMenu ul li").animate( { width: "224px"}, { queue: false, duration: 500 });
+	grayscale($("#sbMainMenu .m_obj"));
+
+	$(this).animate( { width: "434px"}, { queue: false, duration: 500 });
+	grayscale.reset($(this).find(".m_obj"));
+
+	$("#bar").animate( { left: ""+$(this).offset().left+"", width:"450px" }, { queue: false, duration: 500 })
 });
 
-$("#sbMainMenu ul li img").mouseleave(function(){
-	$(this).animate( { width: "250px" }, { queue: false, duration: 500 })
+$("#sbMainMenu ul li").mouseout(function(){
+	$("#sbMainMenu ul li").animate( { width: "224px"}, { queue: false, duration: 500 });
+	grayscale($("#sbMainMenu .m_obj"));
 });
 
-$("#sbMainMenu ul").mouseleave(function(){
-	$("#sbMainMenu ul li img").animate( { width: "300px" }, { queue: false, duration: 500 })
-	$("#bar").animate( { left: "0", width:"100%" }, { queue: false, duration: 500 })
+$("#sbMainMenu ul").mouseout(function(){
+	$("#sbMainMenu ul li").animate( { width: "276px"}, { queue: false, duration: 500 });
+	grayscale.reset($("#sbMainMenu .m_obj"));
+
+
+	$("#bar").animate( { left: "0", width:"100%" }, { queue: false, duration: 500 });
 });
 //]]>
 </script>
