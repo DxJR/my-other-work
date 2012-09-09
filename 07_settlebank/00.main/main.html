@@ -52,25 +52,37 @@
 			<ul>
 				<li class="nth1">
 					<a href="#">
-						<strong><img src="../images/main_obj_tit_01.jpg" class="m_tit" alt="전자결제" /></strong>
+						<strong>
+							<img src="../images/main_obj_tit_01.jpg" class="m_tit" alt="전자결제" />
+							<img src="../images/main_obj_exp_01.gif" id="objExp01" class="m_exp" alt="" />
+						</strong>
 						<img src="../images/main_obj_01.jpg" class="m_obj" alt="" />
 					</a>
 				</li>
 				<li class="nth2">
 					<a href="#">
-						<strong><img src="../images/main_obj_tit_02.jpg" class="m_tit" alt="가상계좌" /></strong>
+						<strong>
+							<img src="../images/main_obj_tit_02.jpg" class="m_tit" alt="가상계좌" />
+							<img src="../images/main_obj_exp_02.gif" id="objExp02" class="m_exp" alt="" />
+						</strong>
 						<img src="../images/main_obj_02.jpg" class="m_obj" />
 					</a>
 				</li>
 				<li class="nth3">
 					<a href="#">
-						<strong><img src="../images/main_obj_tit_03.jpg" class="m_tit" alt="펌뱅킹" /></strong>
+						<strong>
+							<img src="../images/main_obj_tit_03.jpg" class="m_tit" alt="펌뱅킹" />
+							<img src="../images/main_obj_exp_03.gif" id="objExp03" class="m_exp" alt="" />
+						</strong>
 						<img src="../images/main_obj_03.jpg" class="m_obj" />
 					</a>
 				</li>
 				<li class="nth4">
 					<a href="#">
-						<strong><img src="../images/main_obj_tit_04.jpg" class="m_tit" alt="부가서비스" /></strong>
+						<strong>
+							<img src="../images/main_obj_tit_04.jpg" class="m_tit" alt="부가서비스" />
+							<img src="../images/main_obj_exp_04.gif" id="objExp04" class="m_exp" alt="" />
+						</strong>
 						<img src="../images/main_obj_04.jpg" class="m_obj" />
 					</a>
 				</li>
@@ -114,7 +126,7 @@
 
 <script type="text/javascript">
 //<![CDATA[
-var sbMainUl=$("#sbMainMenu ul");var sbMainList=$("#sbMainMenu ul li");var sbMainTitle=$("#sbMainMenu .m_tit");var sbMainObj=$("#sbMainMenu .m_obj");sbMainList.mouseover(function(){sbMainList.animate({width:"224px"},{queue:false,duration:500}).addClass("gray");sbMainObj.animate({marginTop:"110px"},{queue:false,duration:500});sbMainTitle.each(function(){$(this).attr("src",""+$(this).attr("src").replace(".jpg","_gray.gif")+"")});$(this).animate({width:"434px",height:"411px",paddingTop:"68px"},{queue:false,duration:500}).removeClass("gray");$(this).find(".m_obj").animate({marginTop:"50px"},{queue:false,duration:500});$(this).find(".m_tit").attr("src",""+$(this).find(".m_tit").attr("src").replace("_gray.gif",".jpg")+"");var a=$(this).attr("class");if(a=="nth1"){a="0"}else{if(a=="nth2"){a="220px"}else{if(a=="nth3"){a="440px"}else{if(a=="nth4"){a="656px"}}}}$("#bar").animate({left:""+a+"",width:"450px"},{queue:false,duration:500})});sbMainList.mouseout(function(){sbMainList.animate({width:"224px",height:"362px",paddingTop:"117px"},{queue:false,duration:500}).removeClass("gray");sbMainObj.animate({marginTop:"110px"},{queue:false,duration:500})});sbMainUl.mouseout(function(){sbMainList.animate({width:"276px"},{queue:false,duration:500}).removeClass("gray");sbMainObj.animate({marginTop:"50px"},{queue:false,duration:500});sbMainTitle.each(function(){$(this).attr("src",""+$(this).attr("src").replace("_gray.gif",".jpg")+"")});$("#bar").animate({left:"0",width:"100%"},{queue:false,duration:500})});
+var sbMainUl=$("#sbMainMenu ul");var sbMainList=$("#sbMainMenu ul li");var sbMainTitle=$("#sbMainMenu .m_tit");var sbMainObj=$("#sbMainMenu .m_obj");var sbMainExp=$("#sbMainMenu .m_exp");sbMainExp.animate({width:"0",marginLeft:"0"},{queue:false,duration:1});sbMainList.mouseenter(function(){sbMainList.animate({width:"224px"},{queue:false,duration:500}).addClass("gray");sbMainObj.animate({marginTop:"110px"},{queue:false,duration:500});sbMainTitle.each(function(){$(this).attr("src",""+$(this).attr("src").replace(".jpg","_gray.gif")+"")});sbMainExp.animate({width:"0",marginLeft:"0"},{queue:false,duration:1});$(this).animate({width:"434px",height:"411px",paddingTop:"68px"},{queue:false,duration:500}).removeClass("gray");$(this).find(".m_obj").animate({marginTop:"50px"},{queue:false,duration:500});$(this).find(".m_tit").attr("src",""+$(this).find(".m_tit").attr("src").replace("_gray.gif",".jpg")+"");var a=$(this).attr("class");if(a=="nth1"){a="0";$(this).find(".m_exp").animate({width:"158px",marginLeft:"23px"},{queue:false,duration:500})}else{if(a=="nth2"){a="220px";$(this).find(".m_exp").animate({width:"135px",marginLeft:"23px"},{queue:false,duration:500})}else{if(a=="nth3"){a="440px";$(this).find(".m_exp").animate({width:"141px",marginLeft:"23px"},{queue:false,duration:500})}else{if(a=="nth4"){a="656px";$(this).find(".m_exp").animate({width:"92px",marginLeft:"23px"},{queue:false,duration:500})}}}}$("#bar").animate({left:""+a+"",width:"450px"},{queue:false,duration:500})});sbMainList.mouseleave(function(){sbMainList.animate({width:"224px",height:"362px",paddingTop:"117px"},{queue:false,duration:500}).removeClass("gray");sbMainObj.animate({marginTop:"110px"},{queue:false,duration:500});sbMainExp.animate({width:"0",marginLeft:"0"},{queue:false,duration:500})});sbMainUl.mouseleave(function(){sbMainList.animate({width:"276px"},{queue:false,duration:500}).removeClass("gray");sbMainObj.animate({marginTop:"50px"},{queue:false,duration:500});sbMainTitle.each(function(){$(this).attr("src",""+$(this).attr("src").replace("_gray.gif",".jpg")+"")});sbMainExp.animate({width:"0",marginLeft:"0"},{queue:false,duration:500});$("#bar").animate({left:"0",width:"100%"},{queue:false,duration:500})});
 //]]>
 </script>
 </body>

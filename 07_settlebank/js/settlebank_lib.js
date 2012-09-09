@@ -62,6 +62,9 @@ jQuery(function($){
 	select_a.click(set_anchor).click(hide_option).focus(i_hover).hover(i_hover);
 	select_input.change(set_label).focus(set_label);
 	select_label.hover(i_hover).click(hide_option);
+
+	sbiToggle();
+
 });
 
 // show layer
@@ -74,4 +77,16 @@ function showLayer(id) {
 function closeLayer(id) {
 		var obj = document.getElementById(id);
 		obj.style.display='none';
+}
+
+function sbiToggle() {
+	console.log($(this));
+}
+
+function sbiToggle() {
+	$(".sbi_sm_tpl>li>a").attr("onclick","sbiHide(); $(this).next().addClass('m2d_this'); return false");
+}
+
+function sbiHide() {
+	$(".sbi_sm_tpl_in").removeClass("m2d_this");
 }

@@ -127,7 +127,14 @@ a.jqTransformChecked {background-position:left -20px;}
 				#sbi_submenu h2 {height:39px; margin-top:-1px; font:0/0 arial; border-bottom:1px solid #383838;}
 			.sbi_sm_tpl {}
 				.sbi_sm_tpl li {border-bottom:1px solid #e0e0e0; background:url('../images/common/bg_sbm_list.gif') left -22px no-repeat;}
+				.sbi_sm_tpl li.this {margin-top:-1px; border-top:1px solid #383838;}
 					.sbi_sm_tpl li a {display:block; height:27px; padding:13px 0 0 14px; font:0/0 arial;}
+				/* 2depth */
+				.sbi_sm_tpl_in {clear:both; display:none; margin:0 0 -1px 0; border:1px solid #383838; border-width:1px 0;}
+					.sbi_sm_tpl_in li {padding:0 0 0 10px; border-bottom:0; background:none;}
+						.sbi_sm_tpl_in li a {height:22px; padding:11px 0 0 0; border-bottom:1px solid #e0e0e0;}
+						.sbi_sm_tpl_in li.last a {border-bottom:0;}
+				.m2d_this {display:block;}
 		/* content */
 		#content {float:right; width:907px; padding:0 0 0 40px;}
 			/* 제목/현재위치 */
@@ -205,6 +212,7 @@ a.jqTransformChecked {background-position:left -20px;}
 		#bar {z-index:10; position:absolute; display:block; width:100%; height:2px; background:#eb0000;}
 	#sbMainMenu ul {margin:0 0 0 0;}
 		#sbMainMenu li {position:relative; display:inline-block; width:276px; height:362px; padding-top:117px; text-align:center; vertical-align:top; overflow:hidden;}
+			#sbMainMenu li .m_exp {vertical-align:top;}
 			#sbMainMenu li .m_obj {display:block; width:60%; margin-top:50px; margin-left:auto; margin-right:auto;}
 		#sbMainMenu li.gray .m_obj {filter:grayscale(100%);-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter: grayscale(100%);-o-filter:grayscale(100%);filter:gray;-webkit-filter:grayscale(1);}
 /* 새소식&고객센터 */
