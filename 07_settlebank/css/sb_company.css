@@ -89,6 +89,9 @@
 .nrqt {position:relative; left:-2px; margin-top:40px;}
 .sbi_eptxt_w {position:relative; clear:both; height:107px; font:0/0 arial; border-bottom:1px solid #383838; background:url('../images/bg_sbi_eptxt_w.gif') right top no-repeat;}
 	.sbi_eptxt_w img {margin:38px 0 0 0;}
+.sew_st01 {background-image:url('../images/bg_sbi_eptxt_w2.gif');}
+.sew_st02 {background-image:url('../images/bg_sbi_eptxt_w3.gif');}
+.sew_st03 {background-image:url('../images/bg_sbi_eptxt_w4.gif');}
 .sbi_epcnt {padding:20px 0; border-bottom:1px solid #e0e0e0;}
 .sbi_epc_img {padding-bottom:30px;}
 .sbi_epc_l {padding-bottom:0; border-bottom:0;}
