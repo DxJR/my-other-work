@@ -85,6 +85,10 @@ a.jqTransformChecked {background-position:left -20px;}
 .jqTransformHidden {display:none;}
 
 
+.sbi_date_w {float:left;}
+	.sbi_date_w .ipst02, .sbi_date_w .b_slt_date, .sbi_date_w .ds {float:left; margin-right:4px;}
+	.sbi_date_w .jqtype2 select {width:55px;}
+
 /* 페이징 */
 .paging_w {clear:both; margin-top:20px; font-size:0; text-align:center;}
 	.paging_w a {display:inline-block; min-width:25px; height:25px; margin-right:-1px; font-family:arial; font-size:11px; line-height:26px; color:#b68d8d; border:1px solid #e9d9d9; vertical-align:top; background:#fbf8f8;}
