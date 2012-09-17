@@ -78,7 +78,8 @@ jQuery(function($){
 	};
 
 	hsstrLyr();
-	setTimeout(mainVisual, 4000);
+	mainVisual();
+	mainVslBtn();
 	// Product List
 	showItemListHover(".hs_product_b_list>li");
 	// 전시품 할인판매
@@ -205,16 +206,26 @@ function hsstrLyr() {
 };
 
 // 메인
+
 function mainVisual() {
-	$("#hsm_vsl").animate({
+	var mvAni = $("#hsm_vsl");
+	mvAni.delay(4000).animate({
 		left: '-=930'
 	}, 1000, function() {  
-			if ($("#hsm_vsl").css('left')=='-1860px')
+			if (mvAni.css('left')=='-1860px')
 			{
-				$("#hsm_vsl").css('left','0');
+				mvAni.css('left','0');
 			}
-			setTimeout(mainVisual, 4000)
+			setTimeout(mainVisual, 4000);
 			}
-	);
-	
+	);	
+
+	$("#hsm_vslBtn a").first().mouseover( function(){
+		mvAni.stop();
+		mvAni.animate({left:'0'});
+	})
+	$("#hsm_vslBtn a").last().mouseover( function(){
+		mvAni.stop();
+		mvAni.animate({left:'-930'});
+	});
 }
