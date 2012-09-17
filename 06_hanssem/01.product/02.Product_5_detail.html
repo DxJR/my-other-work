@@ -266,9 +266,63 @@
 						</span>
 						<!-- 이메일전송/블로그스크랩  -->
 						<span class="fnc_r">
-							<button type="button" class="gbtn b_p_email"><span class="ir">이메일전송</span></button>
+							<button type="button" class="gbtn b_p_email" onclick="showLayer('hsm_email_w');"><span class="ir">이메일전송</span></button>
 							<button type="button" class="gbtn b_p_blog"><span class="ir">블로그 스크랩</span></button>
 						</span>
+						<!-- 이메일전송 레이어 -->
+						<div id="hsm_email_w">
+							<div class="hsm_es_in">
+								<div class="hsm_ex_txt">
+									<h5>이메일전송</h5>
+									<p>보내는 사람과 받는 사람의 정보를 기입 후 보내기 버튼을 누르시면 해당 이메일이 발송됩니다.</p>
+								</div>
+								<form class="jqtransform">
+								<fieldset>
+									<legend>이메일 전송</legend>
+									<div class="hsm_es hsm_sndm">
+										<h6><span class="ir">1. 보내는사람</span></h6>
+										<div class="hsm_ex_r">
+											<p class="hew_name">
+												<label for="hsm_es_name01"><span class="ir">이름</span></label><span class="hfiptxt"><input type="text" id="hsm_es_name01" size="30"></span>
+											</p>
+											<p class="hew_email">
+												<label for="hsm_es_mail01"><span class="ir">이메일</span></label>
+												<span class="hfiptxt"><input type="text" id="hsm_es_mail01" size="30"></span> <i class="at">@</i>
+												<select>
+													<option>직접입력</option>
+													<option>직접입력</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="hsm_es hsm_rcvm">
+										<h6><span class="ir">2. 받는사람</span></h6>
+										<div class="hsm_ex_r">
+											<p class="hew_name">
+												<label for="hsm_es_name02"><span class="ir">이름</span></label><span class="hfiptxt"><input type="text" id="hsm_es_name02" size="30"></span>
+											</p>
+											<p class="hew_email">
+												<label for="hsm_es_mail02"><span class="ir">이메일</span></label>
+												<span class="hfiptxt"><input type="text" id="hsm_es_mail02" size="30"></span> <i class="at">@</i>
+												<select>
+													<option>직접입력</option>
+													<option>직접입력</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="hsm_es_btn_w">
+										<button type="submit" class="gbtn b_hsm_es_s"><span class="ir">보내기</span></button>
+										<button type="reset" class="gbtn b_hsm_es_r"><span class="ir">취소</span></button>
+									</div>
+								</fieldset>
+								</form>
+								<p class="close_lyr"><button type="button" class="gbtn b_c_layer" onclick="closeLayer('hsm_email_w');" title="닫기"><span class="ir">닫기</span></button></p>
+							</div>
+							<div class="shadow"></div>
+						</div>
 					</div>
 				</div>
 				<!-- 제품상세정보 -->
