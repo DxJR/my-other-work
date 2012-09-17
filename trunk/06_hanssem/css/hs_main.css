@@ -14,6 +14,7 @@
 			.hsm_vsm_w h3 {font-weight:normal; font-size:12px; color:#333;}
 			.hsm_vsm_list {clear:both;}
 		/* 하단텍스트 이벤트 */
+		/*.hsm_evnt_w {position:absolute; top:783px; clear:both; line-height:18px;}*/
 		.hsm_evnt_w {position:absolute; top:783px; clear:both; line-height:18px;}
 			.hsm_evnt_list li {margin-bottom:36px;}
 			.hsm_evnt_w a {display:block;}
@@ -22,10 +23,17 @@
 .hsm_visual {position:relative; left:-78px; width:930px; height:553px; margin-bottom:20px; overflow:hidden;}
 	.hsm_visual div {position:absolute; top:0; left:0; width:2790px;}
 		.hsm_visual div img {display:inline;}
+	#hsm_vslBtn {position:absolute; top:auto; left:auto; bottom:18px; right:17px; clear:both; width:200px; height:30px; font-size:12px; line-height:normal;}
+		#hsm_vslBtn ul li {float:left; display:inline; margin-right:2px;}
+			#hsm_vslBtn ul li a {display:block; width:97px; height:28px; font:0/0 arial; overflow:hidden; background-image:url('../images/btn_mainVisual.gif'); background-repeat:no-repeat;}
+			#hsm_vslBtn ul li a.str1 {background-position:left -30px;}
+			#hsm_vslBtn ul li.this a.str1 {background-position:left top;}
+			#hsm_vslBtn ul li a.str2 {background-position:-100px top;}
+			#hsm_vslBtn ul li.this a.str2 {background-position:-100px -30px;}
 	/* 가운데 좌측 컨텐츠 */
 	.hsm_mc_mid {clear:both; float:left; width:535px;}
 		/* 가운데 숫자 메뉴 01~03 */
-		.hsm_mc_nm {clear:both; height:65px;}
+		.hsm_mc_nm {clear:both; height:65px; }
 			.hsm_mc_nm li {float:left; display:inline; padding:12px 0 0 0; background-position:left top; background-repeat:no-repeat;}
 				.hsm_mc_nm li a, .hsm_mc_nm li a strong {display:block; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px;}
 				.hsm_mc_nm li a strong, .hsm_mc_nm li a:hover {font-weight:normal; color:#333;}
@@ -33,7 +41,7 @@
 			.hsm_mc_nm li.nm02 {width:183px; background-image:url('../images/hsm_mc_nm02.gif');}
 			.hsm_mc_nm li.nm03 {width:165px; background-image:url('../images/hsm_mc_nm03.gif');}
 		/* Special 제품들 */
-		.hsm_mc_spi_bn {clear:both; margin-top:39px;}
+		.hsm_mc_spi_bn {clear:both; margin-top:35px;}
 			.hsm_mc_spi_bn li {float:left; display:inline; font:0/0 arial; border:1px solid #e6e6e6;}
 			.hsm_mc_spi_bn li.spi01 {width:267px; margin-right:1px; margin-bottom:20px; border:0;}
 			.hsm_mc_spi_bn li.spi02 {width:267px; margin-bottom:20px; border:0;}

@@ -8,12 +8,18 @@
 	.hcsm_event_now:hover, .hcsm_event_now strong {background-position:left -15px;}
 .hcsm_event_old, .hcsm_event_old strong {width:55px; background-position:-80px top;}
 	.hcsm_event_old:hover, .hcsm_event_old strong {background-position:-80px -15px;}
+.hcsm_event_notice, .hcsm_event_notice strong {width:62px; background-position:-135px top;}
+	.hcsm_event_notice:hover, .hcsm_event_notice strong {background-position:-135px -15px;}
+
+
 /* 메인이벤트 */
 .hs_event_main {margin-top:20px; font:0/0 arial;}
 /* 이벤트목록 */
 .hse_list {clear:both; margin-top:20px; font:0/0 arial;}
 	.hse_list li {display:inline-block; width:100%; padding:20px 0; border-top:1px solid #e6e6e6;}
+	/*.hse_list li.nth-2d {width:360px; margin:-215px 0 0 371px;}*/
 	.hse_list li.nth-2d {width:360px; margin-left:-360px; .margin:-215px 0 0 371px;}
+
 /* 지난이벤트 */
 .hse_list_old {margin-top:0;}
 	.hse_list_old li {border-top:0; border-bottom:1px solid #e6e6e6;}
@@ -54,3 +60,12 @@
 	/* 이벤트 목록 버튼 */
 	.hsev_btn_w {clear:both; margin-top:20px; text-align:center;}
 		.b_event_list {width:143px; height:41px; background-position:left -80px;}
+
+
+
+/*#current_funding_wrapper {color:rgb(215, 24, 42); font-family:mgB; font-weight:bold; position:absolute; font-size:18px; margin-left:85px; margin-top:860px;">*/
+#current_funding_flip	{position:absolute; left:176px; bottom:20px;}
+#current_funding_flip_text {position:absolute; padding:5px 5px 5px 14px; font-family:Arial; font-size:30px; font-weight:bold; color:#ffffff; letter-spacing:30px;  }
+
+/*#current_funding_img	{position:absolute;}*/
+

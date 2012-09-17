@@ -119,6 +119,7 @@
 			.b_sfisc_ec {background-position:-465px -390px;}
 		.hsf_fsisc_mn li.this .b_sfisc_sp {background-position:left -425px;}
 		.hsf_fsisc_mn li.this .b_sfisc_ms {background-position:-155px -425px;}
+		.hsf_fsisc_mn li.this .b_sfisc_cc {background-position:-310px -425px;}
 	/* 컨텐츠 */
 	.hsf_fsisc_cnt {float:left; display:inline; width:549px; padding:9px 0 0 30px;}
 		.hsf_fsin_st {margin-bottom:30px; background-image:url('../images/set_fscnt_in.gif'); background-repeat:no-repeat;}
@@ -129,9 +130,9 @@
 	/* 멤버쉽 */
 	.hsf_mbs_w {}
 		.hsf_mbs_w .hsf_fsin_st {width:549px; background-image:url('../images/set_hsf_mbs.gif'); background-repeat:no-repeat;}
-		.hsf_mbs_w .hsf_fscnt_in_01 {height:170px; background-position:left top;}
-		.hsf_mbs_w .hsf_fscnt_in_02 {height:230px; background-position:left -180px;}
-		.hsf_mbs_w .hsf_fscnt_in_03 {height:248px; background-position:left -420px;}
+		.hsf_mbs_w .hsf_fscnt_in_01 {height:238px; background-position:left top;}
+		.hsf_mbs_w .hsf_fscnt_in_02 {height:256px; background-position:left -240px;}
+		.hsf_mbs_w .hsf_fscnt_in_03 {height:274px; background-position:left -500px;}
 
 
 /* 한샘스토어 소개 */
