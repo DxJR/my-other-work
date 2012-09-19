@@ -65,6 +65,8 @@ jQuery(function($){
 
 	sbiToggle();
 
+	// empty table cell
+	$("td:empty").append("&nbsp;");
 });
 
 // show layer
