@@ -199,18 +199,17 @@ function hsstrLyr() {
 		if(timer) {clearTimeout(timer);}
 	});
 	$("#m_gnb_t_lyr").mouseleave(function() {
-		$("a.b_gnb_sotry").parent().removeClass("this");		
+		$("a.b_gnb_sotry").parent().removeClass("this");
 		$("#m_gnb_t_lyr").hide();
 	});
 };
 
 // 메인
-
 function mainVisual() {
 	var mvAni = $("#hsm_vsl");
 	mvAni.delay(4000).animate({
 		left: '-=930'
-	}, 1000, function() {  
+	}, 1000, function() {
 			if (mvAni.css('left')=='-1860px')
 			{
 				mvAni.css('left','0');
@@ -224,7 +223,7 @@ function mainVisual() {
 			}
 			setTimeout(mainVisual, 4000);
 			}
-	);	
+	);
 
 	$("#hsm_vslBtn a").first().mouseover( function(){
 		mvAni.stop();
@@ -237,5 +236,21 @@ function mainVisual() {
 		$("#hsm_vslBtn a").parent().removeClass("this");
 		$(this).parent().addClass("this");
 		mvAni.animate({left:'-930'});
+	});
+}
+
+// 거실레시피 참여 신청서
+function dRoomApply() {
+	var elementWrap = $("#hsdrFmFileUpload");
+	var btnElement = $("#hsdrFmFileAdd");
+	var insertContemt = '<li><input type="file" class="ipfile" /><span class="file"><input type="text" class="iptxt" disabled="disabled" value="" /></span></li>';
+
+	btnElement.click(function(){
+		if (elementWrap.find("li").length>=10)
+		{
+			alert("사진파일은 최대 10개까지만 첨부 가능합니다.");
+		} else {
+			elementWrap.append(insertContemt);
+		}
 	});
 }
