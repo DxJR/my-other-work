@@ -21,15 +21,17 @@
 			.hsm_evnt_w strong {display:block; font-weight:normal; color:#333;}
 /* 메인 visual */
 .hsm_visual {position:relative; left:-78px; width:930px; height:553px; margin-bottom:20px; overflow:hidden;}
-	.hsm_visual div {position:absolute; top:0; left:0; width:2790px;}
+	.hsm_visual div {position:absolute; top:0; left:0; width:3720px;}
 		.hsm_visual div img {display:inline;}
-	#hsm_vslBtn {position:absolute; top:auto; left:auto; bottom:18px; right:17px; clear:both; width:200px; height:30px; font-size:12px; line-height:normal;}
+	#hsm_vslBtn {position:absolute; top:auto; left:auto; bottom:18px; right:17px; clear:both; width:300px; height:30px; font-size:12px; line-height:normal;}
 		#hsm_vslBtn ul li {float:left; display:inline; margin-right:2px;}
 			#hsm_vslBtn ul li a {display:block; width:97px; height:28px; font:0/0 arial; overflow:hidden; background-image:url('../images/btn_mainVisual.gif'); background-repeat:no-repeat;}
 			#hsm_vslBtn ul li a.str1 {background-position:left -30px;}
 			#hsm_vslBtn ul li.this a.str1 {background-position:left top;}
 			#hsm_vslBtn ul li a.str2 {background-position:-100px top;}
 			#hsm_vslBtn ul li.this a.str2 {background-position:-100px -30px;}
+			#hsm_vslBtn ul li a.str3 {background-position:-200px top;}
+			#hsm_vslBtn ul li.this a.str3 {background-position:-200px -30px;}
 	/* 가운데 좌측 컨텐츠 */
 	.hsm_mc_mid {clear:both; float:left; width:535px;}
 		/* 가운데 숫자 메뉴 01~03 */

@@ -8,7 +8,6 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <![endif]-->
 <link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
-<link rel="stylesheet" href="../css/hs_main.css" type="text/css" />
 <!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
@@ -18,13 +17,14 @@
 	$(function() {
 		$("form.jqtransform").jqTransform();
 		snbFunc.init();
+		productListAction();
+		dRoomApply();
 	});
 //]]>
 </script>
 </head>
 
-<!-- main 일 때 class="hs_main_w" 추가  -->
-<body class="hs_main_w">
+<body>
 
 <div id="wrap">
 	<!-- header -->
@@ -47,40 +47,13 @@
 		<div id="gnb">
 			<h2 class="hide">자주쓰는메뉴</h2>
 			<ul class="m_gnb">
-				<li><a href="#" class="gbtn b_gnb_login" onclick="showLayer('hs_gnb_login'); return false;"><span class="ir">로그인</span></a></li>
-				<li>
-					<a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a>
-					<!-- 마우스오버 레이어 -->
-					<div id="m_gnb_t_lyr">
-						<ul>
-							<li><a href="#">신혼 라이프스타일 공간제안</a></li>
-							<li><a href="#">매트리스</a></li>
-							<li><a href="#">거실이야기</a></li>
-							<li><a href="#">자녀방 서재이야기</a></li>
-							<li><a href="#">이사이야기</a></li>
-						</ul>
-					</div>
-				</li>
+				<li><a href="#" class="gbtn b_gnb_logout"><span class="ir">로그아웃</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_wishlist"><span class="ir">위시리스트</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_sotry"><span class="ir">한샘인테리어 스토리</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
 				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
 				<li class="last"><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
 			</ul>
-			<!-- 로그인 레이어 -->
-			<div id="hs_gnb_login">
-				<div class="hsgl_in">
-					<h3><span class="ir">로그인</span></h3>
-					<p class="hsgl_exp"><span class="ir">한샘닷컴의 아이디와 패스워드를 입력해 주십시오.</span></p>
-					<fieldset class="hsgl_form">
-						<legend>한샘닷컴 로그인</legend>
-						<p class="hsgl_f_id"><label for="had_l_id"><span class="ir">아이디</span></label> <span class="hfiptxt"><input type="text" class="iptxt" id="had_l_id" /></span></p>
-						<p class="hsgl_f_pwd"><label for="had_l_pwd"><span class="ir">비밀번호</span></label> <span class="hfiptxt"><input type="password" class="iptxt" id="had_l_pwd" /></span></p>
-						<p class="hsc_lg_menu"><a href="#">회원가입</a> / <a href="#">아이디패스워드 찾기</a></p>
-						<input type="image" class="hsgl_b_go" src="../images/common/btn_hsgl_go.gif" width="65" height="59" alt="로그인" />
-					</fieldset>
-					<p class="close_lyr"><button type="button" class="gbtn b_c_layer" onclick="closeLayer('hs_gnb_login');" title="닫기"><span class="ir">닫기</span></button></p>
-				</div>
-				<div class="shadow_bg"></div>
-			</div>
 		</div>
 	</div>
 	<!-- container -->
@@ -155,9 +128,9 @@
 							<li class="last">
 								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
 								<!-- 3depth -->
-								<ul class="m_3d_snb">
+								<ul class="m_3d_snb" style="display:block;">
 									<li><a href="#" class="b_s3_ssofa"><i class="icn"></i><span class="ir">가죽소파</span></a></li>
-									<li><a href="#" class="b_s3_fsofa"><i class="icn"></i><span class="ir">패브릭소파</span></a></li>
+									<li class="current"><a href="#" class="b_s3_fsofa"><i class="icn"></i><span class="ir">패브릭소파</span></a></li>
 									<li><a href="#" class="b_s3_isofa"><i class="icn"></i><span class="ir">수입소파</span></a></li>
 									<li><a href="#" class="b_s3_rriner"><i class="icn"></i><span class="ir">리클라이너</span></a></li>
 									<li><a href="#" class="b_s3_dchest"><i class="icn"></i><span class="ir">거실장</span></a></li>
@@ -223,37 +196,6 @@
 					</li>
 				</ul>
 			</div>
-			<!-- 상위 텍스트 메뉴 -->
-			<div class="hsm_ltm_w">
-				<h2 class="hide">한샘인테리어 쇼핑정보</h2>
-				<!-- 메인비주얼 교체 메뉴 -->
-				<div class="hsm_vsm_w">
-					<h3>&lt;한샘인테리어 공간제안&gt;</h3>
-					<ul class="hsm_vsm_list">
-						<li><a href="#">- 신혼 라이프스타일 공간제안</a></li>
-						<li><a href="#">- 컴포트아이 7존 침대</a></li>
-						<li><a href="#">- 2012 거실개조 캠페인</a></li>
-					</ul>
-				</div>
-				<!-- 하단 텍스트 이벤트-->
-				<div class="hsm_evnt_w">
-					<h3 class="hide">한샘인테리어 이벤트안내</h3>
-					<ul class="hsm_evnt_list">
-						<li>
-							<a href="#">
-								<strong>한샘 인테리어 사이트 오픈 이벤트</strong>
-								한샘인테리어 사이트 오픈 기념으로 <span class="lb">다양한 상품을 준비했습니다.</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<strong>스마트가이드 이벤트</strong>
-								5자 정의를 내려주세요! <span class="lb">100분께 파리바게트 교환권 증정</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
 			<!-- 좌측검색 -->
 			<div id="hs_cm_search">
 				<fieldset>
@@ -265,61 +207,33 @@
 		</div>
 		<!-- content -->
 		<div id="content">
-			<!-- 메인 visual -->
-			<div class="hsm_visual">
-				<div id="hsm_vsl">
-					<img src="../images/temp/temp_015.jpg" width="930" height="553" border="0" alt="간편하게, 신혼을 위한 공간. 한샘 인테리어" /><img src="../images/temp/temp_015_2.jpg" width="930" height="553" border="0" alt="간편하게, 신혼을 위한 공간. 한샘 인테리어" /><img src="../images/temp/temp_01000.jpg" width="930" height="553" border="0" alt="간편하게, 신혼을 위한 공간. 한샘 인테리어" /><img src="../images/temp/temp_015.jpg" width="930" height="553" border="0" alt="간편하게, 신혼을 위한 공간. 한샘 인테리어" />
-				</div>
-				<div id="hsm_vslBtn">
+			<div class="cont_tit_wrap ctw_dr_sugs">
+				<h2><span class="ir">거실공간제안</span></h2>
+			</div>
+			<!-- 1차 서브메뉴 -->
+			<ul class="hs_drsg_tm_od">
+				<li><a href="#" class="hs_drsg_tmo_1"><span class="ir">우리가족을 위한 거실레시피</span></a></li>
+				<li><a href="#" class="hs_drsg_tmo_2"><span class="ir">우리집 거실 BEFORE &amp; AFTER</span></a></li>
+				<li class="last"><a href="#" class="hs_drsg_tmo_3"><span class="ir">무료 거실개조 이벤트</span></a></li>
+			</ul>
+			<!-- 컨텐츠 -->
+			<div class="hsst_w">
+				<div class="hsdr_idx_w">
+					<div class="ir">
+						<h3>우리가족을 위한 거실레시피 : Recipe for family room</h3>
+						<h4>거실, 어떻게 쓰고 계세요?</h4>
+						<p>소파에 누워 TV만 보고 있다면 커다란 러닝머신 위에 빨래만 널어 놓고 있다면 하루가 멀다하고 아이의 장난감으로 가득찬다며...</p>
+						<p>소파와 TV만 놓여진 거실이 아닌 우리 가족의 라이프스타일에 딱 맞는 거실레시피로 대화와 웃음 소리가 가득한 거실을 완성하세요</p>
+						<h4>가족의 라이프스타일에 맞는 거실레시피를 만나보세요</h4>
+					</div>
 					<ul>
-						<li class="this"><a href="#" class="str1"><span class="ir">STORY 1</span></a></li>
-						<li><a href="#" class="str2"><span class="ir">STORY 2</span></a></li>
-						<li><a href="#" class="str3"><span class="ir">STORY 3</span></a></li>
+						<li><a href="#"><span class="ir">거실레시피 01 4살 지민이를 위한 놀이 공간</span></a></li>
+						<li><a href="#"><span class="ir">거실레시피 02 9살 형준이를 위한 라이브러리 공간</span></a></li>
+						<li><a href="#"><span class="ir">거실레시피 03 가족을 위한 라운지 공간</span></a></li>
+						<li><a href="#"><span class="ir">거실레시피 04 엄마를 위한 작업 공간</span></a></li>
+						<li><a href="#"><span class="ir">거실레시피 05 아빠를 위한 휴식 공간</span></a></li>
 					</ul>
 				</div>
-			</div>
-			<!-- 가운데_좌측 컨텐츠 -->
-			<div class="hsm_mc_mid">
-				<h3 class="hide">한샘인테리어 SPECIAL</h3>
-				<!-- 가운데 숫자 메뉴 01~03 -->
-				<ul class="hsm_mc_nm">
-					<li class="nm01">
-						<a href="#">
-							<strong>신혼라이프스타일 공간제안</strong>
-							우리의 신혼은 어떤 모습일까요? <span class="lb">두사람의 신혼 공간을 제안합니다.</span>
-						</a>
-					</li>
-					<li class="nm02">
-						<a href="#">
-							<strong>컴포트아이 7존침대</strong>
-							내 몸에 맞는 스프링설계 7존침대 <span class="lb">컴포트아이를 지금 만나보세요.</span>
-						</a>
-					</li>
-					<li class="nm03">
-						<a href="#">
-							<strong>2012 거실개조 캠페인</strong>
-							한샘 거실개조 캠페인. <span class="lb">Befor&After를 지금 확인하세요.</span>
-						</a>
-					</li>
-				</ul>
-				<!-- Special 제품들 -->
-				<ul class="hsm_mc_spi_bn">
-					<li class="spi01"><a href="#"><img src="../images/temp/temp_016.jpg" width="267" height="159" border="0" alt="베네타 2000" /></a></li>
-					<li class="spi02"><a href="#"><img src="../images/temp/temp_017.jpg" width="267" height="159" border="0" alt="베네타 2000" /></a></li>
-					<li class="spi03"><a href="#"><img src="../images/temp/temp_018.jpg" width="175" height="187" border="0" alt="베네타 2000" /></a></li>
-					<li class="spi04"><a href="#"><img src="../images/temp/temp_019.jpg" width="183" height="187" border="0" alt="베네타 2000" /></a></li>
-					<li class="spi05"><a href="#"><img src="../images/temp/temp_020.jpg" width="175" height="187" border="0" alt="베네타 2000" /></a></li>
-				</ul>
-			</div>
-			<!-- 가운데_우측 컨텐츠 -->
-			<div class="hsm_mc_right">
-				<h3 class="hide">한샘 매장안내</h3>
-				<ul class="hsm_mc_si">
-					<li class="first"><a href="#"><img src="../images/hsm_si_01.jpg" width="166" height="130" border="0" alt="한샘 플래그샵 부산 센텀점 : 동북아 최고 토탈 홈인테리어 전문점" /></a></li>
-					<li><a href="#"><img src="../images/hsm_si_02.jpg" width="166" height="98" border="0" alt="한샘 스토어 : 고객에게 맞춘 공간제안이 있는 라이프스타일 스토어" /></a></li>
-					<li><a href="#"><img src="../images/hsm_si_03.jpg" width="166" height="98" border="0" alt="한샘 인테리어 : 한샘의 베스트 가구 제품들을 만날 수 있는 가구 전문매장" /></a></li>
-					<li><a href="#"><img src="../images/hsm_si_04.jpg" width="166" height="112" border="0" alt="매장찾기 : 우리집에서 가까운 한샘 매장입니다." /></a></li>
-				</ul>
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -341,7 +255,6 @@
 		</div>
 		<!-- 한샘정보 -->
 		<div class="f_hanssem">
-			<p class="f_hsm_exp"><span class="ir">본 홈페이지에 수록된 제품의 가격은 2012년 8월 기준이며 품질개선과 성능향상을 위해 일부 사양 및 가격이 변경 될 수 있고, 일부 품목은 조기품절 될 수 있습니다.</span></p>
 			<h2 class="hide">한샘정보</h2>
 			<div class="f_h_cont fhc_info">
 				<h3>(주)한샘</h3>

@@ -210,13 +210,18 @@ function mainVisual() {
 	mvAni.delay(4000).animate({
 		left: '-=930'
 	}, 1000, function() {
-			if (mvAni.css('left')=='-1860px')
+			if (mvAni.css('left')=='-2790px')
 			{
 				mvAni.css('left','0');
 				$("#hsm_vslBtn a").parent().removeClass("this");
 				$("#hsm_vslBtn a").first().parent().addClass("this");
 			}
 			if (mvAni.css('left')=='-930px')
+			{
+				$("#hsm_vslBtn a").parent().removeClass("this");
+				$("#hsm_vslBtn a").filter(".str2").parent().addClass("this");
+			}
+			if (mvAni.css('left')=='-1860px')
 			{
 				$("#hsm_vslBtn a").parent().removeClass("this");
 				$("#hsm_vslBtn a").last().parent().addClass("this");
@@ -231,12 +236,53 @@ function mainVisual() {
 		$(this).parent().addClass("this");
 		mvAni.animate({left:'0'});
 	})
-	$("#hsm_vslBtn a").last().mouseover( function(){
+	$("#hsm_vslBtn a").filter(".str2").mouseover( function(){
 		mvAni.stop();
 		$("#hsm_vslBtn a").parent().removeClass("this");
 		$(this).parent().addClass("this");
 		mvAni.animate({left:'-930'});
+	})
+	$("#hsm_vslBtn a").last().mouseover( function(){
+		mvAni.stop();
+		$("#hsm_vslBtn a").parent().removeClass("this");
+		$(this).parent().addClass("this");
+		mvAni.animate({left:'-1860'});
 	});
+}
+
+// 거실레시피 before&after
+function drBeforeAfter() {
+	var wrapElement = $(".hsdr_t2_2dm").find("a");
+	wrapElement.mouseover(function(){
+		if ($(this).attr("class")!=="this")
+		{
+			$(this).find("img").attr("src",''+$(this).find("img").attr("src").replace('2dm_','2dm_over_')+'');
+		}
+	});
+	wrapElement.mouseout(function(){
+		if ($(this).attr("class")!=="this")
+		{
+			$(this).find("img").attr("src",''+$(this).find("img").attr("src").replace('2dm_over_','2dm_')+'');
+		}
+	});
+}
+
+function drBnAani() {
+	var objElement = $(".in_mem").find("a");
+	var animateElement = $(".hsdr_t2_rl_c_in");
+
+	objElement.mouseover(function(){
+		objElement .parent().removeClass("this");
+		$(this).parent().addClass("this");
+		if ($(this).attr("class")=="before")
+		{
+			animateElement.animate({'left':'0'});
+		} else if ($(this).attr("class")=="after")
+		{
+			animateElement.animate({'left':'-731px'});
+		}
+	});
+
 }
 
 // 거실레시피 참여 신청서
