@@ -177,3 +177,15 @@
 
 .ktars_exp {clear:both; padding:9px 0 8px 10px; color:#4c4c4c; line-height:18px; letter-spacing:-1px; border-top:1px solid #868686; border-bottom:1px solid #e0e0e0;}
 	.ktars_exp em {color:#e04949;}
+
+
+/* 제휴사소개 */
+.pop_p_w {width:491px; padding:20px 15px;}
+.pop_p_tab {clear:both; .float:left; margin-top:10px; font-size:0;}
+	.pop_p_tab li {position:relative; display:inline-block;.float:left; margin-right:-1px;}
+	.pop_p_tab li.this {z-index:2;}
+.pop_p_content {clear:both; .float:left; padding-top:15px;}
+	.pop_p_content h2 {clear:both; margin-bottom:10px;}
+	.pop_p_cont04_w {clear:both; overflow:hidden;}
+		.pop_p_cont04_w ul {width:513px; font-size:0;}
+			.pop_p_cont04_w ul li {display:inline-block;.float:left; width:171px; margin-bottom:15px;}
