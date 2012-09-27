@@ -8,6 +8,8 @@
 	.hcsm_event_now:hover, .hcsm_event_now strong {background-position:left -15px;}
 .hcsm_event_old, .hcsm_event_old strong {width:55px; background-position:-80px top;}
 	.hcsm_event_old:hover, .hcsm_event_old strong {background-position:-80px -15px;}
+.hcsm_event_prc, .hcsm_event_prc strong {width:55px; background-position:-138px top;}
+	.hcsm_event_prc:hover, .hcsm_event_prc strong {background-position:-138px -15px;}
 .hcsm_event_notice, .hcsm_event_notice strong {width:62px; background-position:-135px top;}
 	.hcsm_event_notice:hover, .hcsm_event_notice strong {background-position:-135px -15px;}
 
@@ -60,7 +62,26 @@
 	/* 이벤트 목록 버튼 */
 	.hsev_btn_w {clear:both; margin-top:20px; text-align:center;}
 		.b_event_list {width:143px; height:41px; background-position:left -80px;}
-
+/* 당첨자발표 */
+.hs_event_prc {margin-top:30px;}
+	.hs_event_prc thead tr th {padding-bottom:10px; text-align:left; border-bottom:1px solid #333;}
+	.hs_event_prc thead tr th.event_subject {width:597px;}
+		.hs_event_prc thead tr th.event_subject .icn {width:41px; background-position:left -45px;}
+	.hs_event_prc thead tr th.event_term {width:134px;}
+		.hs_event_prc thead tr th.event_term .icn {width:55px; background-position:-45px -45px;}
+	.hs_event_prc tbody tr td {padding:15px 0 16px 0; font-family:mg; font-size:12px; color:#a6a6a6; letter-spacing:-1px; border-bottom:1px solid #e2e2e2;}
+		.hs_event_prc tbody tr td a {color:#a6a6a6;}
+	.hs_event_prc tbody tr.hover td, .hs_event_prc tbody tr.hover td a {color:#333;}
+	/* 팝업 */
+	.hs_event_winner {background:#fff;}
+		.hs_event_winner .hspal_pd {width:640px; margin:0 auto; padding:30px 0;}
+		.hs_p_evt_tit {width:55px; height:30px; margin-top:20px; background:url('../images/hs_p_evt_tit.gif') left top no-repeat;}
+		.hs_p_evt_info {clear:both; float:left; width:100%; margin:15px 0 0 0; padding:15px 0 16px 0; font-family:mg; font-size:12px; color:#333; letter-spacing:-1px; border:1px solid #333; border-width:1px 0;}
+			.hs_p_evt_info strong {float:left; font-weight:normal;}
+			.hs_p_evt_info em {float:right;}
+		.hs_p_evt_list_w {clear:both; padding-top:12px; font-family:mg; color:#a6a6a6;}
+			.hs_p_evt_list_w ul {font-size:0;}
+				.hs_p_evt_list_w ul li {display:inline-block; width:106px; margin-bottom:1px; font-size:12px;}
 
 
 /*#current_funding_wrapper {color:rgb(215, 24, 42); font-family:mgB; font-weight:bold; position:absolute; font-size:18px; margin-left:85px; margin-top:860px;">*/

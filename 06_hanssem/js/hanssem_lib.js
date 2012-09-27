@@ -85,6 +85,8 @@ jQuery(function($){
 	showItemListHover("#hs_show_item_list>tbody>tr");
 	// 매장찾기
 	showItemListHover(".hsf_si_list>tbody>tr");
+	// 이벤트 당첨자발표
+	showItemListHover(".hs_event_prc>tbody>tr");
 	// 우편번호 검색결과
 	showItemListHover(".zs_result_list>li");
 	$("body").addClass('load_after');
