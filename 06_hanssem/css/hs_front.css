@@ -151,7 +151,7 @@
 	.hsf_sl_tb_w li {float:left; display:inline; width:365px; height:116px; font:0/0 arial;}
 	.hsf_sl_tb_w li.first {margin-right:1px;}
 	/* 매장지역선택 */
-	.hsf_sls_w {position:relative; clear:both; margin:16px 0 -22px 0;}
+	.hsf_sls_w {z-index:2; position:relative; clear:both; margin:16px 0 -22px 0;}
 		.hsf_sls_w select {width:103px;}
 		.hsf_sls_w .jqTransformSelectWrapper {position:relative; top:4px; margin-right:7px;}
 

@@ -121,7 +121,7 @@ a.jqTransformChecked {background-position:left -20px;}
 /* layout */
 #wrap {position:relative; width:1030px; margin:0 auto;}
 	/* header */
-	#header {z-index:2; position:relative; height:81px; padding:59px 30px 0 30px; background:#fff url('../images/common/bg_side.gif') left top repeat-y;}
+	#header {z-index:4; position:relative; height:81px; padding:59px 30px 0 30px; background:#fff url('../images/common/bg_side.gif') left top repeat-y;}
 		#header h1 {float:left;}
 		/* 최상단 공통메뉴 */
 		#twrap {position:absolute; top:0; left:0; clear:both; width:100%; height:30px; background:#f5f5f5;}
@@ -504,22 +504,29 @@ a.jqTransformChecked {background-position:left -20px;}
 	/* 2차 서브 : type 1 */
 	.hsdr_t1_2dm, .hsdr_t2_2dm {clear:both; margin:40px 0 -20px 0;}
 		.hsdr_t1_2dm ul, .hsdr_t2_2dm ul {font-size:0;}
-			.hsdr_t1_2dm ul li {display:inline-block; width:145px; border-right:1px solid #e3e3e3;}
-			.hsdr_t1_2dm ul li.first, .hsdr_t1_2dm ul li.last {width:146px;}
-			.hsdr_t1_2dm ul li.last {border-right:0;}
-				.hsdr_t1_2dm ul li a {display:block; height:61px; border-bottom:1px solid #e3e3e3; background-image:url('../images/set_drsg.gif'); background-repeat:no-repeat;}
-			.hsdr_t1_2dm ul li.this {background-color:#d7182a;}
-				.hsdr_t1_2dm ul li.this a {border-bottom:1px solid #d7182a;}
+		.hsdr_t1_2dm ul {padding-left:1px; border-bottom:1px solid #ff4800;}
+			.hsdr_t1_2dm ul li {display:inline-block; width:146px;}
+				.hsdr_t1_2dm ul li a {display:block; height:72px; border-right:1px solid #e3e3e3; background-image:url('../images/set_drsg.gif'); background-repeat:no-repeat;}
+			.hsdr_t1_2dm ul li.first {width:146px;}
+			.hsdr_t1_2dm ul li.last {width:147px; border-right:0;}
+				.hsdr_t1_2dm ul li.last a {border-right:0;}
+			.hsdr_t1_2dm ul li.this {z-index:2; position:relative; margin:0 -1px -1px -1px; padding-bottom:0; background-color:none;}
+				.hsdr_t1_2dm ul li.this a {border:1px solid #ff4800; border-bottom:0; background-color:#fff;}
 				.hsdr_t1_2dm_1 {background-position:left -100px;}
-				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_1, .hsdr_t1_2dm_1:hover {background-position:left -170px;}
+				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_1 {background-position:left -180px;}
+				.hsdr_t1_2dm_1:hover {background-position:left -179px;}
 				.hsdr_t1_2dm_2 {background-position:-150px -100px;}
-				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_2, .hsdr_t1_2dm_2:hover {background-position:-150px -170px;}
+				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_2 {background-position:-150px -180px;}
+				.hsdr_t1_2dm_2:hover {background-position:-150px -179px;}
 				.hsdr_t1_2dm_3 {background-position:-300px -100px;}
-				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_3, .hsdr_t1_2dm_3:hover {background-position:-300px -170px;}
+				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_3 {background-position:-300px -180px;}
+				.hsdr_t1_2dm_3:hover {background-position:-300px -179px;}
 				.hsdr_t1_2dm_4 {background-position:-450px -100px;}
-				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_4, .hsdr_t1_2dm_4:hover {background-position:-450px -170px;}
+				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_4 {background-position:-450px -180px;}
+				.hsdr_t1_2dm_4:hover {background-position:-450px -179px;}
 				.hsdr_t1_2dm_5 {background-position:-600px -100px;}
-				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_5, .hsdr_t1_2dm_5:hover {background-position:-600px -170px;}
+				.hsdr_t1_2dm ul li.this .hsdr_t1_2dm_5 {background-position:-600px -180px;}
+				 .hsdr_t1_2dm_5:hover {background-position:-600px -179px;}
 	/* 2차서브 : type 2 */
 	.hsdr_t2_2dm {background:url('../images/bg_hsdr_t2_2dm.gif') left bottom repeat-x;}
 		.hsdr_t2_2dm li {display:inline-block; width:182px; margin-right:1px;}
@@ -531,7 +538,7 @@ a.jqTransformChecked {background-position:left -20px;}
 				.hsdr_idx_w ul li a {display:block; width:347px; height:78px;}
 	/* 컨텐츠 */
 	.hsdr_t1_c_by {clear:both;}
-	.hsdr_t1_c_foot {margin-top:20px; border-bottom:1px solid #333;}
+	.hsdr_t1_c_foot {margin-top:20px;}
 	.hsdr_t2_c_rl {position:relative; height:587px; overflow:hidden;}
 		.hsdr_t2_c_rl .in_mem {z-index:3; position:absolute; top:31px; left:30px; clear:both;}
 			.hsdr_t2_c_rl .in_mem ul {font-size:0;}
