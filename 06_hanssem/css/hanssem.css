@@ -467,9 +467,12 @@ a.jqTransformChecked {background-position:left -20px;}
 		.hs_st_lmc_w h3 {position:absolute; top:20px; left:0;}
 	.slgj_mm2 {height:68px; border-bottom:1px solid #e3e3e3;}
 	.hs_slgj_in_w {clear:both; margin-top:20px;}
-		.hs_slgj_i_s {font:0/0 arial; margin-bottom:20px;}
+		.hs_slgj_i_s {font:0/0 arial;}
 	.hs_slgj_i2 {margin-top:30px;}
-		.hs_slgj_i2 .hs_slgj_i_s {margin-bottom:30px;}
+.hs_slgj_main {position:relative; width:731px; height:930px; background:url('../images/slgj2_img01.jpg') left top no-repeat;}
+	.hs_slgj_m_swf {position:relative; top:25px; clear:both; margin:0 0 0 30px;}
+	.hs_slgj2_swf_2-1 {margin:10px 0 30px 0;}
+	.hs_slgj2_swf_2-2 {position:relative; margin-top:-30px; padding:0 0 30px 233px; border-bottom:1px solid #e3e3e3;}
 
 /* 7존 침대 컴포트파이*/
 .ctw_hs_story_7zn {}

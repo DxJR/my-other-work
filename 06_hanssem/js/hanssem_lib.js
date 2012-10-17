@@ -6,6 +6,25 @@ jQuery(function($){
 	var select_input = $('div.select>ul>li>input[type=radio]');
 	var select_label = $('div.select>ul>li>label');
 
+	// 신혼이야기 메뉴 hover
+	if ($(".slgj_mm2").length!=="0") {
+		$(".slgj_mm2").find("a").bind({
+			mouseover : function(){
+				if ($(this).attr("class")!=="this")
+				{
+					$(this).find("img").attr('src',''+$(this).find("img").attr("src").replace("slgj_m2_","slgj_over_m2_")+'');
+				}				
+			},
+			mouseout : function(){
+				if ($(this).attr("class")!=="this")
+				{
+					$(this).find("img").attr('src',''+$(this).find("img").attr("src").replace("slgj_over_m2_","slgj_m2_")+'');
+				}
+			}
+		})
+	}
+
+
 	// Radio Default Value
 	$('div.my_value').each(function(){
 		var default_value = $(this).next('.i_list').find('input[checked]').next('label').text();
