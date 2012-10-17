@@ -90,3 +90,35 @@
 
 /*#current_funding_img	{position:absolute;}*/
 
+
+/* 몰디브여행 : 2012.10.17 */
+.hse_121017_visual {position:relative; clear:both; width:729px; height:335px; margin-top:-55px; background:url('../images/event/event_121017_visual.png') left top no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/event/event_121017_visual.png',sizingMethod='crop');}
+.hse_121017_form {position:relative; clear:both; width:729px; padding:15px 0 0 0; border-top:1px solid #333;}
+	.hse_frm_st {clear:both; height:30px; margin-bottom:7px; font-family:mg; font-size:12px; color:#666;}
+		.hse_frm_st label {float:left; display:inline; width:76px; height:12px; margin-top:5px; overflow:hidden; background-image:url('../images/event/hse_frm_st_label.gif'); background-repeat:no-repeat;}
+		.hse_frm_st .hse_input {float:left; display:inline; height:19px; padding:3px 0 0 3px; font-family:mg; font-size:12px; color:#666; border:1px solid #e0e0e0; background:#fff;}
+		.hse_frm_st select {font-family:mg; font-size:12px; color:#666;}
+	.hfrm_id label {background-position:left top;}
+	.hfrm_id em {position:relative; top:3px;}
+	.hfrm_msg label {background-position:left -15px;}
+	.hfrm_msg .hse_input {width:638px;}
+	.hfrm_date label {background-position:left -30px;}
+	.hfrm_date select {width:73px;}
+	.hfrm_date .jqTransformSelectWrapper {margin-right:5px;}
+	.hfrm_zip label {background-position:left -45px;}
+	.hfrm_zip .hse_input {width:85px; margin-right:5px;}
+	.b_hsef_zip {top:-3px; left:-3px; width:98px; height:33px; background:url('../images/event/btn_hsef_zip.gif') left top no-repeat;}
+	.hfrm_addr label {background-position:left -60px;}
+	.hfrm_addr .hse_input {width:275px; margin-right:5px;}
+	.hfrm_tel label {background-position:left -75px;}
+	.hfrm_tel select {width:73px;}
+	.hfrm_tel .jqTransformSelectWrapper {margin-right:5px;}
+	.hfrm_tel .hse_input {width:85px; margin-right:5px;}
+	.hfrm_email label {background-position:left -90px;}
+	.hfrm_email .hse_input {width:139px; margin-right:2px;}
+	.hfrm_email .fbar {float:left; margin:4px 1px 0 0;}
+	.hfrm_email select {width:126px;}
+	/* 버튼 */
+	.hsef_btn_w {clear:both; float:left; width:100%; margin-top:7px; padding-top:19px; font-size:0; text-align:center; border-top:1px solid #333;}
+	.b_hsef_ok {width:118px; height:50px; margin-right:1px; background:url('../images/event/btn_hsef_ok.gif') left top no-repeat;}
+	.b_hsef_cancel {width:118px; height:50px; margin-left:1px; background:url('../images/event/btn_hsef_cancel.gif') left top no-repeat;}

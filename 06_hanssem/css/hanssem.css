@@ -96,6 +96,14 @@ a.jqTransformChecked {background-position:left -20px;}
 	.jqtype3 ul a {height:23px; padding:6px 0 0 9px; font-family:mg; font-size:14px; color:#333;}
 	.jqtype3 ul a.selected, .jqtype3 ul a:hover, .jqtype3 ul a.selected:hover {color:#333; background:#dadada;}
 
+/* Select Type3 */
+.jqtype4 .jqTransformSelectWrapper {height:24px; background:url('../images/common/bg_select.gif') left -100px no-repeat;}
+	.jqtype4 .jqTransformSelectWrapper div span {height:20px; padding:4px 0 0 6px; font-family:mg; font-size:12px; color:#666;}
+	.jqtype4 a.jqTransformSelectOpen {width:17px; height:24px; background:url('../images/common/bg_select.gif') right -100px no-repeat;}
+	.jqtype4 ul {top:26px;}
+	.jqtype4 ul a {height:20px; padding:4px 0 0 6px; font-family:mg; font-size:12px; color:#333;}
+	.jqtype4 ul a.selected, .jqtype4 ul a:hover, .jqtype4 ul a.selected:hover {color:#333; background:#dadada;}
+
 /* Hidden - used to hide the original form elements */
 .jqTransformHidden {display:none;}
 
