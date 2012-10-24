@@ -168,3 +168,15 @@
 	.hsf_sd_map {clear:both; margin-top:25px;}
 	.hsf_sd_btn_w {clear:both; margin-top:19px; text-align:center;}
 		.b_slv {width:143px; height:40px; background-position:left -265px;}
+	/* case2 */
+	.hsf_sd_cont2 .col_left {width:700px;}
+	/* case3 */
+	.hsf_sd_cont3 .col_mid {width:470px;}
+
+/* 매장사진 */
+.hsf_sd_photo_w {clear:both; height:447px; margin-top:19px; font:0/0 arial;}
+	#hsfSdPhoto {width:731px; height:401px;}
+	#hsfSdThumb {clear:both; margin-top:1px;}
+		#hsfSdThumb a {position:relative; display:block; float:left; margin-right:1px;}
+			#hsfSdThumb a img {-ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)'; filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); filter:gray; -webkit-filter: grayscale(100%); filter:alpha(opacity=30); opacity:0.3;}
+			#hsfSdThumb a:hover img, #hsfSdThumb a.this img {-webkit-filter:grayscale(0); filter:alpha(opacity=100); opacity:1;}

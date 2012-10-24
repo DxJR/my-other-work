@@ -3,7 +3,7 @@
 .hs_main_w #container {padding-bottom:50px;}
 /* 좌측영역 */
 	/* 검색 */
-	.hs_main_w #hs_cm_search {position:absolute; bottom:47px; margin:0;}
+	.hs_main_w #hs_cm_search {clear:both; position:relative; bottom:auto; margin:29px 0 0 0;;}
 		.hs_main_w #hs_cm_search input {width:130px; background:url('../images/bg_hs_cm_search_idx.gif') left top no-repeat;}
 	/* 상위 텍스트 메뉴 */
 	.hsm_ltm_w {clear:both; font-family:mg; font-size:12px; letter-spacing:-1px; color:#a6a6a6;}
@@ -20,18 +20,13 @@
 			.hsm_evnt_w a {display:block;}
 			.hsm_evnt_w strong {display:block; font-weight:normal; color:#333;}
 /* 메인 visual */
-.hsm_visual {position:relative; left:-78px; width:930px; height:553px; margin-bottom:20px; overflow:hidden;}
+.hsm_visual {position:relative; width:731px; height:463px; margin-bottom:20px; overflow:hidden;}
 	.hsm_visual div {position:absolute; top:0; left:0; width:3720px;}
 		.hsm_visual div img {display:inline;}
-	#hsm_vslBtn {position:absolute; top:auto; left:auto; bottom:18px; right:17px; clear:both; width:300px; height:30px; font-size:12px; line-height:normal;}
-		#hsm_vslBtn ul li {float:left; display:inline; margin-right:2px;}
-			#hsm_vslBtn ul li a {display:block; width:97px; height:28px; font:0/0 arial; overflow:hidden; background-image:url('../images/btn_mainVisual.gif'); background-repeat:no-repeat;}
-			#hsm_vslBtn ul li a.str1 {background-position:left -30px;}
-			#hsm_vslBtn ul li.this a.str1 {background-position:left top;}
-			#hsm_vslBtn ul li a.str2 {background-position:-100px top;}
-			#hsm_vslBtn ul li.this a.str2 {background-position:-100px -30px;}
-			#hsm_vslBtn ul li a.str3 {background-position:-200px top;}
-			#hsm_vslBtn ul li.this a.str3 {background-position:-200px -30px;}
+	#hsm_vslBtn {position:absolute; top:auto; left:auto; bottom:15px; right:13px; clear:both; width:153px; height:10px; font-size:12px; line-height:normal;}
+		#hsm_vslBtn ul li {float:left; display:inline; margin-right:1px;}
+			#hsm_vslBtn ul li a {display:block; width:50px; height:10px; font:0/0 arial; overflow:hidden; background:#e9e9e9;}
+			#hsm_vslBtn ul li.this a {background:#666;}
 	/* 가운데 좌측 컨텐츠 */
 	.hsm_mc_mid {clear:both; float:left; width:535px;}
 		/* 가운데 숫자 메뉴 01~03 */
@@ -56,3 +51,27 @@
 		.hsm_mc_si {clear:both; margin-top:15px;}
 			.hsm_mc_si li {clear:both; font:0/0 arial; border-top:1px solid #e6e6e6;}
 			.hsm_mc_si li.first {border-top:0;}
+
+/* 가운데 롤링배너(2개짜리) */
+.hsm_b_set1 {position:relative; clear:both; width:535px; height:169px; margin:28px 0 0 0; overflow:hidden;}
+	#hsmbSet1 {position:absolute; width:2675px; height:159px; overflow:hidden;}
+		#hsmbSet1 div {float:left; width:535px; height:159px; font:0/0 arial; overflow:hidden;}
+			#hsmbSet1 div a {float:left; margin-right:1px;}
+			#hsmbSet1 div a.last {margin-right:0;}
+	#hsmbSet1Menu {position:absolute; bottom:0; clear:both; width:535px;}
+		#hsmbSet1Menu ul li {float:left; margin-right:1px;}
+		#hsmbSet1Menu ul li.last {margin-right:0;}
+			#hsmbSet1Menu ul li a {display:block; width:133px; height:5px; font:0/0 arial; overflow:hidden; background:#e9e9e9;}
+			#hsmbSet1Menu ul li.this a {background:#666;}
+
+/* 가운데 하단 좌/우 캐러셀 배너 */
+.hsm_b_set2 {position:relative; clear:both; width:535px; margin:25px 0 0 0;}
+	#hsmbSet2 {position:relative; width:535px; height:187px; overflow:hidden; border:1px solid #e6e6e6; border-width:1px 0;}
+		#hsmbSet2In {position:absolute; left:0; width:1600px; height:187px; overflow:hidden;}
+			#hsmbSet2In div {float:left;}
+				#hsmbSet2In div a {float:left; border-right:1px solid #e6e6e6;}
+				#hsmbSet2In div a.last {border-right:0;}
+	#hsmbSet2Menu {clear:both;}
+		#hsmbSet2Menu a {position:absolute; top:89px; display:block; width:6px; height:11px;}
+		#hsmbSet2Menu a.b_left {left:-11px; background:url('../images/b_left.gif') left top no-repeat;}
+		#hsmbSet2Menu a.b_right {right:-11px; background:url('../images/b_right.gif') left top no-repeat;}
