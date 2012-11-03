@@ -111,6 +111,7 @@ jQuery(function($){
 	showItemListHover(".zs_result_list>li");
 	$("body").addClass('load_after');
 
+	aniCrs.init();
 	hsfSdPhoto();
 });
 
@@ -277,97 +278,107 @@ function mainVisual() {
 
 // 메인 가운데배너(2개짜리)
 function hsmbSet1() {
-	hsmbSetAnimation.init();
-	hsmbSetAnimation2.init();
-}
+	var hsmbSet1Ani = $("#hsmbSet1");
 
-var hsmbSetAnimation = ({
-	init : function() {
-		_this = this;
-		this.aniWrap = $("#hsmbSet1");
-		this.aniDiv = this.aniWrap.find("div");
-		this.aniDivFirst = this.aniDiv.first();
-		this.aniBtn = $("#hsmbSet1Menu").find("a");
+	hsmbSet1Ani.find("div").each(function(index) {
+		$(this).attr("id","hsmbSet1Inner"+index+"");
+	});
 
-		this.aniStop = false;
-
-		// 각 div에 id값 부여
-		this.aniDiv.each(function(index){
-			$(this).attr("id","str"+(index+1)+"");
-		});
-
-		// 스타일 초기값 세팅
-		this.aniDiv.css({'z-index':'1', 'display':'none'});
-		this.aniDivFirst.css({'z-index':'5', 'display':'block'}).addClass("this");
-
-		// 버튼 액션
-		this.aniBtn.each(function(index){
-			var aniBtnNum = index+1;
-
-			// 각 a에 id값 부여
-			$(this).attr("id","strBtn"+aniBtnNum+"");
-
-			$(this).bind({
-				mouseenter : function(){
-					$("#hsmbSet1Menu").find("li").removeClass("this");
-					$(this).parent().addClass("this");
-					if (aniBtnNum != parseInt($("#hsmbSet1").find("div").filter(".this").attr("id").replace("str","")))
-					{
-						hsmbSetAnimation.animation(aniBtnNum);
-					}								
-					_this.aniStop = true;
-					hsmbSetAnimation.autoAnimation(_this.aniStop);
-				},
-				mouseleave : function(){
-					_this.aniStop = false;
-					setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000);
-				}				
-			});
-		});
-
-		// 상품에 마우스 올라갔을 때
-		this.aniDiv.bind({
-			mouseenter : function() {
-				_this.aniStop = true;
-				hsmbSetAnimation.autoAnimation(_this.aniStop);
-			},
-			mouseleave : function() {
-				_this.aniStop = false;
-				setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000);
-			}
-		});
-
-		// 애니메이션 시작
-		setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000)
-	},
-	autoAnimation : function(aniStatus) {
-		_this = this;	
-
-		if (!aniStatus)
-		{
-			var thisNum = parseInt($("#hsmbSet1").find("div").filter(".this").attr("id").replace("str",""));
-			if (thisNum==4) {
-				thisNum=0;
-			}
-			var nowThisNum = thisNum+1;
-			hsmbSetAnimation.animation(nowThisNum);
-			_this.aniBtn.parent().removeClass("this");
-			$("#strBtn"+nowThisNum).parent().addClass("this");			
-			autoTimeSet = setTimeout(_this.autoAnimation, 3000);
-		} else {
-			clearTimeout(autoTimeSet);
-		}
-	},
-	animation : function(strNum) {
-		_this = this;
-		$("#str"+strNum).css("display","block");
-		_this.aniDiv.filter(".this").css("z-index","5").fadeOut("slow",function(){
-			$(this).css("z-index","1");			
-			$("#hsmbSet1").find("div").removeClass("this");
-			$("#str"+strNum).addClass("this");
-		});		
+	if (hsmbSet1Ani.find("div").filter(".this").attr("id")=="hsmbSet1Inner3")
+	{
+		hsmbSet1Ani.find("div").first().css("display","block");
+	} else {
+		hsmbSet1Ani.find("div").filter(".this").next().css("display","block");
 	}
-});
+	
+	hsmbSet1Ani.find("div").filter(".this").delay(2000).animate({
+		opacity : 0
+	}, 1000, function() {
+			var nowThis = hsmbSet1Ani.find("div").filter(".this");
+			nowThis.css("display","none");
+			hsmbSet1Ani.find("div").removeClass("this");
+			$("#hsmbSet1Menu a").parent().removeClass("this");
+
+			if (nowThis.attr("id")=="hsmbSet1Inner0")
+			{
+				nowThis.next().addClass("this");					
+				$("#hsmbSet1Menu a").filter(".str2").parent().addClass("this");
+			} else if (nowThis.attr("id")=="hsmbSet1Inner1")
+			{
+				nowThis.next().addClass("this");	
+				$("#hsmbSet1Menu a").filter(".str3").parent().addClass("this");
+
+			} else if (nowThis.attr("id")=="hsmbSet1Inner2")
+			{
+				nowThis.next().addClass("this");	
+				$("#hsmbSet1Menu a").filter(".str4").parent().addClass("this");
+			} else if (nowThis.attr("id")=="hsmbSet1Inner3")
+			{
+				hsmbSet1Ani.find("div").first().addClass("this");
+				$("#hsmbSet1Menu a").filter(".str1").parent().addClass("this");
+			}
+	
+			hsmbSet1Ani.find("div").css("opacity","100");
+			
+			setTimeout(hsmbSet1,1000);
+			}
+	);
+
+	$("#hsmbSet1Menu li").first().bind({
+		mouseenter : function(){
+			console.log("오버");
+			hsmbSet1Ani.find("div").filter(".this").stop();
+
+			$("#hsmbSet1Menu a").parent().removeClass("this");
+			$(this).addClass("this");
+		},
+		mouseleave : function(){
+			console.log("아웃");
+
+
+		}
+	});
+
+	$("#hsmbSet1Menu a").filter(".str2").mouseover( function(){
+		hsmbSet1Ani.find("div").filter(".this").stop();
+		$("#hsmbSet1Menu a").parent().removeClass("this");
+		$(this).parent().addClass("this");
+
+		hsmbSet1Ani.find("div").removeClass("uthis");
+
+		$("#hsmbSet1Inner1").css("display","block");
+		$("#hsmbSet1Inner1").addClass("uthis");
+
+		hsmbSet1Ani.find("div").filter(".this").fadeOut(500, function(){			
+		});
+	})
+	$("#hsmbSet1Menu a").filter(".str3").mouseover( function(){
+		hsmbSet1Ani.find("div").filter(".this").stop();
+		$("#hsmbSet1Menu a").parent().removeClass("this");
+		$(this).parent().addClass("this");
+
+		hsmbSet1Ani.find("div").removeClass("uthis");
+
+		$("#hsmbSet1Inner2").css("display","block");
+		$("#hsmbSet1Inner2").addClass("uthis");
+
+		hsmbSet1Ani.find("div").filter(".this").fadeOut(500, function(){			
+		});
+	})
+	$("#hsmbSet1Menu a").last().mouseover( function(){
+		hsmbSet1Ani.find("div").filter(".this").stop();
+		$("#hsmbSet1Menu a").parent().removeClass("this");
+		$(this).parent().addClass("this");
+
+		hsmbSet1Ani.find("div").removeClass("uthis");
+
+		$("#hsmbSet1Inner3").css("display","block");
+		$("#hsmbSet1Inner3").addClass("uthis");
+
+		hsmbSet1Ani.find("div").filter(".this").fadeOut(500, function(){			
+		});
+	});
+}
 
 // 거실레시피 before&after
 function drBeforeAfter() {
@@ -420,91 +431,62 @@ function dRoomApply() {
 	});
 }
 
-var hsmbSetAnimation2 = ({
+// 가운데 하단 좌/우 캐러셀 배너
+var aniCrs = ({
 	init : function() {
-		_this = this;
 		this.aniWrap = $("#hsmbSet2");
-		this.aniDiv = this.aniWrap.find("div");
-		this.aniDivFirst = this.aniDiv.first();
-		this.aniBtn = $("#hsmbSet2Menu").find("a");
+		this.aniObj = $("#hsmbSet2In");
+		this.aniObjIn = this.aniObj.find("div");
+		this.aniBtnWrap = $("#hsmbSet2Menu");
 
-		this.aniStop = false;
 
-		// 각 div에 id값 부여
-		this.aniDiv.each(function(index){
-			$(this).attr("id","str2"+(index+1)+"");
+		this.aniObj.append(this.aniObjIn.filter(":first").clone());
+		this.aniObj.css({"width":""+ parseInt(this.aniObjIn.filter(":first").css('width')) * this.aniObj.find("div").length +"", "height":""+this.aniObjIn.find("img").css('height')+""});
+
+		// 애니메이션 각 오브젝트에 class 부여
+		this.aniObj.find("div").each(function(index){
+			var index = index+1;
+			$(this).addClass("str"+index+"");
 		});
+		this.aniObj.find("div").filter(":first").addClass("eleFirst");
+		this.aniObj.find("div").filter(":last").addClass("eleLast");
 
-		// 스타일 초기값 세팅
-		this.aniDiv.css({'z-index':'1', 'display':'none'});
-		this.aniDivFirst.css({'z-index':'5', 'display':'block'}).addClass("this");
+		this.play();
+	},
 
-		// 버튼 액션
-		this.aniBtn.each(function(index){
-			var aniBtnNum = index+1;
-
-			// 각 a에 id값 부여
-			$(this).attr("id","str2Btn"+aniBtnNum+"");
-
+	play : function() {
+		_this = this;
+		_this.aniObjIn.find("a").each(function() {
 			$(this).bind({
-				mouseenter : function(){
-					$("#hsmbSet2Menu").find("li").removeClass("this");
-					$(this).parent().addClass("this");
-					if (aniBtnNum != parseInt($("#hsmbSet2").find("div").filter(".this").attr("id").replace("str2","")))
-					{
-						hsmbSetAnimation2.animation(aniBtnNum);
-					}								
-					_this.aniStop = true;
-					hsmbSetAnimation2.autoAnimation(_this.aniStop);
+				mouseenter : function() {
+					_this.aniObj.stop(true, true);
 				},
-				mouseleave : function(){
-					_this.aniStop = false;
-					setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000);
-				}				
+				mouseleave : function() {
+					setTimeout(aniCrs.play(), 2000);
+				}
 			});
 		});
-
-		// 상품에 마우스 올라갔을 때
-		this.aniDiv.bind({
-			mouseenter : function() {
-				_this.aniStop = true;
-				hsmbSetAnimation2.autoAnimation(_this.aniStop);
-			},
-			mouseleave : function() {
-				_this.aniStop = false;
-				setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000);
+		_this.aniBtnWrap.find("a").filter(".b_left").bind("click", function(){
+			_this.aniObj.stop(true, true);
+			if (parseInt(_this.aniObj.css("left"))=="0") {
+				_this.aniObj.css("left","-"+ _this.aniObjIn.width() * _this.aniObjIn.length +"px");
+				_this.aniObj.animate({"left":"+="+ _this.aniObjIn.width() +""}, 1000);
+			} else {
+				_this.aniObj.animate({"left":"+="+ parseInt(_this.aniObjIn.css('width'))+""}, 1000);
 			}
+			return false;
 		});
-
-		// 애니메이션 시작
-		setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000)
-	},
-	autoAnimation : function(aniStatus) {
-		_this = this;	
-
-		if (!aniStatus)
-		{
-			var thisNum = parseInt($("#hsmbSet2").find("div").filter(".this").attr("id").replace("str2",""));
-			if (thisNum==2) {
-				thisNum=0;
+		_this.aniBtnWrap.find("a").filter(".b_right").bind("click", function(){
+			_this.aniObj.stop(true, true);
+			if (parseInt(_this.aniObj.css("left"))=="-"+ _this.aniObjIn.width() * (_this.aniObjIn.length - 1) +"") {
+				_this.aniObj.animate({"left":"-="+ _this.aniObjIn.width() +""}, 1000, function() {
+					_this.aniObj.css("left","0");
+				});
+			} else {
+				_this.aniObj.animate({"left":"-="+ parseInt(_this.aniObjIn.css('width'))+""}, 1000);
 			}
-			var nowThisNum = thisNum+1;
-			hsmbSetAnimation2.animation(nowThisNum);
-			_this.aniBtn.parent().removeClass("this");
-			$("#str2Btn"+nowThisNum).parent().addClass("this");			
-			autoTimeSet2 = setTimeout(_this.autoAnimation, 4000);
-		} else {
-			clearTimeout(autoTimeSet2);
-		}
-	},
-	animation : function(strNum) {
-		_this = this;
-		$("#str2"+strNum).css("display","block");
-		_this.aniDiv.filter(".this").css("z-index","5").fadeOut("slow",function(){
-			$(this).css("z-index","1");			
-			$("#hsmbSet2").find("div").removeClass("this");
-			$("#str2"+strNum).addClass("this");
-		});		
+			return false;
+		});
 	}
 });
 
