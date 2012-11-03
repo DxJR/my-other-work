@@ -54,8 +54,8 @@
 
 /* 가운데 롤링배너(2개짜리) */
 .hsm_b_set1 {position:relative; clear:both; width:535px; height:169px; margin:28px 0 0 0; overflow:hidden;}
-	#hsmbSet1 {position:absolute; width:2675px; height:159px; overflow:hidden;}
-		#hsmbSet1 div {float:left; width:535px; height:159px; font:0/0 arial; overflow:hidden;}
+	#hsmbSet1 {position:relative; height:159px; overflow:hidden;}
+		#hsmbSet1 div {position:absolute; top:0; left:0; clear:both; display:none; width:535px; height:159px; font:0/0 arial; overflow:hidden;}
 			#hsmbSet1 div a {float:left; margin-right:1px;}
 			#hsmbSet1 div a.last {margin-right:0;}
 	#hsmbSet1Menu {position:absolute; bottom:0; clear:both; width:535px;}
@@ -65,13 +65,13 @@
 			#hsmbSet1Menu ul li.this a {background:#666;}
 
 /* 가운데 하단 좌/우 캐러셀 배너 */
-.hsm_b_set2 {position:relative; clear:both; width:535px; margin:25px 0 0 0;}
+.hsm_b_set2 {position:relative; clear:both; width:535px; height:199px; margin:25px 0 0 0;}
 	#hsmbSet2 {position:relative; width:535px; height:187px; overflow:hidden; border:1px solid #e6e6e6; border-width:1px 0;}
-		#hsmbSet2In {position:absolute; left:0; width:1600px; height:187px; overflow:hidden;}
-			#hsmbSet2In div {float:left;}
-				#hsmbSet2In div a {float:left; border-right:1px solid #e6e6e6;}
-				#hsmbSet2In div a.last {border-right:0;}
-	#hsmbSet2Menu {clear:both;}
-		#hsmbSet2Menu a {position:absolute; top:89px; display:block; width:6px; height:11px;}
-		#hsmbSet2Menu a.b_left {left:-11px; background:url('../images/b_left.gif') left top no-repeat;}
-		#hsmbSet2Menu a.b_right {right:-11px; background:url('../images/b_right.gif') left top no-repeat;}
+		#hsmbSet2 div {position:absolute; top:0; left:0; clear:both;}
+			#hsmbSet2 div a {float:left; border-right:1px solid #e6e6e6;}
+			#hsmbSet2 div a.last {border-right:0;}
+	#hsmbSet2Menu {position:absolute; bottom:0; clear:both; width:535px;}
+		#hsmbSet2Menu ul li {float:left; margin-right:1px;}
+		#hsmbSet2Menu ul li.last {margin-right:0;}
+			#hsmbSet2Menu ul li a {display:block; width:267px; height:5px; font:0/0 arial; overflow:hidden; background:#e9e9e9;}
+			#hsmbSet2Menu ul li.this a {background:#666;}
