@@ -97,8 +97,10 @@ jQuery(function($){
 	};
 
 	hsstrLyr();
-	mainVisual();
-	hsmbSet1();
+
+	var indexCheck = $(".hs_main_w");
+	if (indexCheck.length=="1") {mainVisual(); hsmbSet1();}
+
 	// Product List
 	showItemListHover(".hs_product_b_list>li");
 	// 전시품 할인판매
@@ -518,4 +520,42 @@ function hsfSdPhoto() {
 		$("#hsfSdPhoto").find("img").attr("src",""+ thisImgSrc +"");
 		return false;
 	});
+}
+
+// 거실수납
+function hsGssC4() {
+	$("#hsGssM").find("a").each(function(index) {
+		$(this).bind({
+			mouseover : function() {
+				if ($(this).attr("class")!="this")
+				{
+					$(this).find("img").attr("src",""+$(this).find("img").attr("src").replace("c4_","c4_over_")+"")
+				}
+			},
+			mouseout : function() {
+				if ($(this).attr("class")!="this")
+				{
+					$(this).find("img").attr("src",""+$(this).find("img").attr("src").replace("c4_over_","c4_")+"")
+				}
+			},
+			click : function() {
+				hsGssC4Reset();
+				$(this).addClass("this").find("img").attr("src",""+$(this).find("img").attr("src").replace("c4_","c4_over_")+"");
+//				$("#hsGssObj").attr("src","../images/hs_gss_c4_01-"+(index+1)+".jpg");
+				$("#hsGssM").parent().append('<img src="../images/hs_gss_c4_01-'+(index+1)+'.jpg" class="chg_img_before" alt="" />');
+				$("#hsGssObj").fadeOut("slow", function(){
+					$(".chg_img").remove();
+					$(".chg_img_before").attr("id","hsGssObj");
+					$(".chg_img_before").attr("class","chg_img");
+				});
+				return false;
+			}
+		});
+	});
+}
+function hsGssC4Reset() {
+	$("#hsGssM").find("a").removeClass("this");
+	$("#hsGssM").find("a").each(function(index) {
+		$(this).find("img").attr("src",""+$(this).find("img").attr("src").replace("c4_over_","c4_")+"")
+	})
 }
