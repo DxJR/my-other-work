@@ -651,3 +651,76 @@ a.jqTransformChecked {background-position:left -20px;}
 				.hsdr_fm_btn_w .gbtn {width:110px; height:47px; margin:0 -3px;}
 				.hsdr_fm_btn_w .b_hsdr_fm_ok {margin-right:-4px; background:url('../images/btn_hsdr_fm_ok.png') left top no-repeat;}
 				.hsdr_fm_btn_w .b_hsdr_fm_cancel {background:url('../images/btn_hsdr_fm_cancel.png') left top no-repeat;}
+
+/* 공간별 수납 제안*/
+.ctw_gss h2 {width:92px; height:14px; background-position:-145px -215px;}
+	/* 서브메뉴 */
+	.hs_gss_submenu {height:47px; margin-top:12px; border:1px solid #e2e2e2; border-width:1px 0;}
+		.hs_gss_submenu li {float:left; display:inline; border-right:1px solid #e2e2e2;}
+		.hs_gss_submenu li.last {border-right:0;}
+			.hs_gss_submenu li a {display:block; height:47px; text-align:center;}
+				.hs_gss_submenu li a span.ir {z-index:1; display:inline-block !important; height:12px; margin-top:18px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hs_gss.gif'); background-repeat:no-repeat;}
+			.hs_gss_submenu li a.gss_sm_01 {width:104px;}
+				.hs_gss_submenu li a.gss_sm_01 span.ir {width:44px; background-position:left top;}
+				.hs_gss_submenu li.this a.gss_sm_01 span.ir, .hs_gss_submenu li a.gss_sm_01:hover span.ir {background-position:left -15px;}
+			.hs_gss_submenu li a.gss_sm_02 {width:104px;}
+				.hs_gss_submenu li a.gss_sm_02 span.ir {width:44px; background-position:-45px top;}
+				.hs_gss_submenu li.this a.gss_sm_02 span.ir, .hs_gss_submenu li a.gss_sm_02:hover span.ir {background-position:-45px -15px;}
+			.hs_gss_submenu li a.gss_sm_03 {width:103px;}
+				.hs_gss_submenu li a.gss_sm_03 span.ir {width:64px; background-position:-90px top;}
+				.hs_gss_submenu li.this a.gss_sm_03 span.ir, .hs_gss_submenu li a.gss_sm_03:hover span.ir {background-position:-90px -15px;}
+			.hs_gss_submenu li a.gss_sm_04 {width:103px;}
+				.hs_gss_submenu li a.gss_sm_04 span.ir {width:44px; background-position:-155px top;}
+				.hs_gss_submenu li.this a.gss_sm_04 span.ir, .hs_gss_submenu li a.gss_sm_04:hover span.ir {background-position:-155px -15px;}
+			.hs_gss_submenu li a.gss_sm_05 {width:103px;}
+				.hs_gss_submenu li a.gss_sm_05 span.ir {width:63px; background-position:-200px top;}
+				.hs_gss_submenu li.this a.gss_sm_05 span.ir, .hs_gss_submenu li a.gss_sm_05:hover span.ir {background-position:-200px -15px;}
+			.hs_gss_submenu li a.gss_sm_06 {width:104px;}
+				.hs_gss_submenu li a.gss_sm_06 span.ir {width:54px; background-position:-265px top;}
+				.hs_gss_submenu li.this a.gss_sm_06 span.ir, .hs_gss_submenu li a.gss_sm_06:hover span.ir {background-position:-265px -15px;}
+			.hs_gss_submenu li a.gss_sm_07 {width:104px;}
+				.hs_gss_submenu li a.gss_sm_07 span.ir {width:30px; background-position:-320px top;}
+				.hs_gss_submenu li.this a.gss_sm_07 span.ir, .hs_gss_submenu li a.gss_sm_07:hover span.ir {background-position:-320px -15px;}
+	/* 컨텐츠 */
+	.hs_gss_content {position:relative; clear:both;}
+		/* 메인 */
+		.hs_gss_c_m {position:relative; clear:both; margin-top:26px; font:0/0 arial;}
+			.hs_gss_c_m p {z-index:3; position:absolute; top:0; right:0;}
+				.hs_gss_c_m p a {display:block; width:216px; height:187px; background:url('../images/no.gif') left top repeat;}
+		.hs_gss_c_b_w {clear:both;}
+			.hs_gss_c_b_w ul {height:144px; border-top:1px solid #4aaae1; border-left:1px solid #e7e7e7;}
+				.hs_gss_c_b_w ul li {float:left; font:0/0 arial; border-right:1px solid #e7e7e7;}
+			.hs_gss_c_b_w .hs_gss_pm_vis {clear:both;}
+		/* 옷장수납 서브메뉴 */
+		.hs_gss_c_sm {clear:both; margin-top:40px;}
+			.hs_gss_c_sm ul {height:43px; border-bottom:1px solid #4aaae1;}
+				.hs_gss_c_sm ul li {float:left; display:inline; margin-right:1px;}
+				.hs_gss_c_sm ul li.last {margin-right:0;}
+					.hs_gss_c_sm ul li a {display:block; width:182px; height:43px; background:#f8f8f8;}
+						.hs_gss_c_sm ul li a span.ir {z-index:1; display:inline-block !important; height:12px; margin:15px 0 0 15px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hs_gss.gif'); background-repeat:no-repeat;}
+					.hs_gss_c_sm ul li a.this {width:180px; height:43px; border:1px solid #4aaae1; border-bottom:0; background:#fff;}
+					.hs_gss_c_sm ul li.hs_gss_csm_01 a span.ir {width:73px; background-position:left -30px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_01 a.this span.ir {background-position:left -45px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_02 a span.ir {width:64px; background-position:-75px -30px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_02 a.this span.ir {background-position:-75px -45px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_03 a span.ir {width:51px; background-position:-140px -30px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_03 a.this span.ir {background-position:-140px -45px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_04 a span.ir {width:51px; background-position:-195px -30px;}
+					.hs_gss_c_sm ul li.hs_gss_csm_04 a.this span.ir {background-position:-195px -45px;}
+		/* 옷장수납 */
+		.hs_gss_p01_t {position:relative; clear:both; height:195px; margin-top:40px; font:0/0 arial; border-bottom:1px solid #e5e5e5;}
+			.hs_gss_p01_t .in_img {position:absolute; top:18px; right:0;}
+		.hs_gss_c1_c {clear:both; padding:30px 0 0 40px; font:0/0 arial; border-bottom:1px solid #e5e5e5;}
+		.hs_gss_c1_c_b {clear:both; margin-top:30px; font:0/0 arial;}
+		.hs_gss_c1_c_st_b {clear:both; margin-top:42px; font:0/0 arial;}
+		.hs_gss_c6_c1 {clear:both; margin-top:40px; padding-bottom:10px; font:0/0 arial;}
+		.hs_gss_c6_c2 {clear:both; margin-top:30px; margin-bottom:20px; padding:20px 0;font:0/0 arial; border:1px solid #e5e5e5; border-width:1px 0;}
+		/* 거실수납 */
+		.hs_gss_c4_c_t {position:relative; clear:both; height:653px; margin-top:40px;}
+			.hs_gss_c4_c_t .chg_img, .hs_gss_c4_c_t .chg_img_before {z-index:2; position:absolute; top:0; left:0;}
+			.hs_gss_c4_c_t .chg_img_before {z-index:1;}
+		.hs_gss_c4_c_2, .hs_gss_c4_c_3 {clear:both; margin-top:45px; padding-bottom:30px; border-bottom:1px solid #e2e2e2;}
+		.hs_gss_c4_c_3 {margin-top:20px; padding-bottom:20px;}
+		.hs_gss_c4_m_w {z-index:3; position:absolute; top:20px; left:169px; clear:both; width:403px; height:49px; overflow:hidden; background:url('../images/bg_hs_gss_c4_m.png') left top no-repeat;}
+			.hs_gss_c4_m_w ul {position:relative; margin:0 0 0 1px;}
+				.hs_gss_c4_m_w ul li {float:left; display:inline; margin-right:1px;}
