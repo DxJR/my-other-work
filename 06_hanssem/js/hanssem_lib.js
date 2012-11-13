@@ -13,7 +13,7 @@ jQuery(function($){
 				if ($(this).attr("class")!=="this")
 				{
 					$(this).find("img").attr('src',''+$(this).find("img").attr("src").replace("slgj_m2_","slgj_over_m2_")+'');
-				}				
+				}
 			},
 			mouseout : function(){
 				if ($(this).attr("class")!=="this")
@@ -316,14 +316,10 @@ var hsmbSetAnimation = ({
 					if (aniBtnNum != parseInt($("#hsmbSet1").find("div").filter(".this").attr("id").replace("str","")))
 					{
 						hsmbSetAnimation.animation(aniBtnNum);
-					}								
+					}
 					_this.aniStop = true;
 					hsmbSetAnimation.autoAnimation(_this.aniStop);
-				},
-				mouseleave : function(){
-					_this.aniStop = false;
-					setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000);
-				}				
+				}
 			});
 		});
 
@@ -332,18 +328,20 @@ var hsmbSetAnimation = ({
 			mouseenter : function() {
 				_this.aniStop = true;
 				hsmbSetAnimation.autoAnimation(_this.aniStop);
-			},
-			mouseleave : function() {
-				_this.aniStop = false;
-				setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000);
 			}
+		});
+
+		// 마우스 out 되면 애니메이션 다시 시작
+		$(".hsm_b_set1").bind("mouseleave", function() {
+			_this.aniStop = false;
+			setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000);
 		});
 
 		// 애니메이션 시작
 		setTimeout(function() {hsmbSetAnimation.autoAnimation(_this.aniStop)}, 3000)
 	},
 	autoAnimation : function(aniStatus) {
-		_this = this;	
+		_this = this;
 
 		if (!aniStatus)
 		{
@@ -354,7 +352,7 @@ var hsmbSetAnimation = ({
 			var nowThisNum = thisNum+1;
 			hsmbSetAnimation.animation(nowThisNum);
 			_this.aniBtn.parent().removeClass("this");
-			$("#strBtn"+nowThisNum).parent().addClass("this");			
+			$("#strBtn"+nowThisNum).parent().addClass("this");
 			autoTimeSet = setTimeout(_this.autoAnimation, 3000);
 		} else {
 			clearTimeout(autoTimeSet);
@@ -364,10 +362,10 @@ var hsmbSetAnimation = ({
 		_this = this;
 		$("#str"+strNum).css("display","block");
 		_this.aniDiv.filter(".this").css("z-index","5").fadeOut("slow",function(){
-			$(this).css("z-index","1");			
+			$(this).css("z-index","1");
 			$("#hsmbSet1").find("div").removeClass("this");
 			$("#str"+strNum).addClass("this");
-		});		
+		});
 	}
 });
 
@@ -455,14 +453,10 @@ var hsmbSetAnimation2 = ({
 					if (aniBtnNum != parseInt($("#hsmbSet2").find("div").filter(".this").attr("id").replace("str2","")))
 					{
 						hsmbSetAnimation2.animation(aniBtnNum);
-					}								
+					}
 					_this.aniStop = true;
 					hsmbSetAnimation2.autoAnimation(_this.aniStop);
-				},
-				mouseleave : function(){
-					_this.aniStop = false;
-					setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000);
-				}				
+				}
 			});
 		});
 
@@ -471,18 +465,20 @@ var hsmbSetAnimation2 = ({
 			mouseenter : function() {
 				_this.aniStop = true;
 				hsmbSetAnimation2.autoAnimation(_this.aniStop);
-			},
-			mouseleave : function() {
-				_this.aniStop = false;
-				setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000);
 			}
+		});
+
+		// 마우스 out 되면 애니메이션 다시 시작
+		$(".hsm_b_set2").bind("mouseleave", function() {
+			_this.aniStop = false;
+			setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000);
 		});
 
 		// 애니메이션 시작
 		setTimeout(function() {hsmbSetAnimation2.autoAnimation(_this.aniStop)}, 4000)
 	},
 	autoAnimation : function(aniStatus) {
-		_this = this;	
+		_this = this;
 
 		if (!aniStatus)
 		{
@@ -493,7 +489,7 @@ var hsmbSetAnimation2 = ({
 			var nowThisNum = thisNum+1;
 			hsmbSetAnimation2.animation(nowThisNum);
 			_this.aniBtn.parent().removeClass("this");
-			$("#str2Btn"+nowThisNum).parent().addClass("this");			
+			$("#str2Btn"+nowThisNum).parent().addClass("this");
 			autoTimeSet2 = setTimeout(_this.autoAnimation, 4000);
 		} else {
 			clearTimeout(autoTimeSet2);
@@ -503,10 +499,10 @@ var hsmbSetAnimation2 = ({
 		_this = this;
 		$("#str2"+strNum).css("display","block");
 		_this.aniDiv.filter(".this").css("z-index","5").fadeOut("slow",function(){
-			$(this).css("z-index","1");			
+			$(this).css("z-index","1");
 			$("#hsmbSet2").find("div").removeClass("this");
 			$("#str2"+strNum).addClass("this");
-		});		
+		});
 	}
 });
 
