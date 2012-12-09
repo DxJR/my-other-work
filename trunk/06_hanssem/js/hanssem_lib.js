@@ -543,7 +543,14 @@ function hsGssC4() {
 					$(".chg_img").remove();
 					$(".chg_img_before").attr("id","hsGssObj");
 					$(".chg_img_before").attr("class","chg_img");
+					if ($("#hsGssObj").attr("src")=="../images/hs_gss_c4_01-1.jpg")
+					{
+						$("#hsGssMline").css("display","block");
+					} else {
+						$("#hsGssMline").css("display","none");
+					};
 				});
+
 				return false;
 			}
 		});
