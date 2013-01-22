@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+html { .overflow:scroll; .overflow-x:auto; }
+html,body { margin:0; padding:0; color:#111; }
+body { color:#111; font-size:12px; font-family:'나눔고딕', NanumGothic,sans-serif; background:#fff; -webkit-text-size-adjust:none; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{ margin:0; padding:0; }
+table{ border-collapse:collapse; border-spacing:0; }
+fieldset,img{ border:0; }
+address,caption,cite,code,dfn,em,strong,th,var{ font-style:normal; font-weight:normal; }
+strong { font-weight:bold; }
+button { margin:0; padding:0; border:none; cursor:pointer; font-family:'나눔고딕', NanumGothic,sans-serif; }
+li{ list-style:none; }
+caption,th{ text-align:left; }
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal; font-family:'나눔고딕', NanumGothic,sans-serif;}
+q:before,q:after{ content:''; }
+abbr,acronym { border:0; font-variant:normal; }
+hr { display:none; }
+sup { vertical-align:text-top; }
+sub { vertical-align:text-bottom; }
+
+input[type="button"],input[type="text"],input[type="image"] {-webkit-appearance:none;-webkit-border-radius:0;}
+input[type="radio"]{ background-color:#fff; width:18px; height:18px; }
+input[type="checkbox"]{ background-color:#fff; width:16px; height:16px; }
+input:checked[type="checkbox"]{background-color:#fff;-webkit-appearance:checkbox; }
+input,textarea,select{ font-family:inherit; font-size:inherit; font-weight:inherit; }
+textarea,input { outline-color:-moz-use-text-color; outline-style:none; outline-width:medium; }
+textarea { resize:none; }
+input,textarea,select{ *font-size:100%; }
+label { cursor:pointer; }
+a, a:link {text-decoration:none; font-family:'나눔고딕', NanumGothic,sans-serif; }
+a:hover, a:active {text-decoration:none; }
+article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { display: inline; }
+
+.hide {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden;}
+.ir {z-index:-1; position:absolute; top:-9999em; left:-9999em; font-size:0; line-height:0; text-indent:-9999px; white-space:nowrap; overflow:hidden;}
+.lb {display:block;}
+.gbtn {position:relative; display:inline-block; width:auto; margin:0; padding:0; line-height:normal !important; border:0; overflow:visible; cursor:pointer; vertical-align:middle; white-space:nowrap; background-repeat:no-repeat; background-color:transparent; background-image:url('../images/set_inmoontv.png'); background-size:300px 300px;}
+.icn {position:relative; top:-1px; display:inline-block; font:0/0 arial; overflow:hidden; vertical-align:middle; background-image:url('../images/set_inmoontv.png'); background-repeat:no-repeat; background-size:300px 300px;}
+
+
+/* 도트페이징 */
+.dot_paging {clear:both; width:100%; font-size:0; text-align:center;}
+	.dot_paging a {width:7px; height:6px; margin:0 3px; background-position:-130px top;}
+	.dot_paging a.this {background-position:-120px top;}
+/* 버튼스타일 */
+.btn_st1 {display:inline-block; height:38px; font-size:14px; line-height:38px; color:#ddd; text-align:center; vertical-align:middle; border-radius:5px; background:#444;}
+
+#wrap {position:relative; padding:46px 0 25px 0;}
+/* header */
+#header {z-index:2; position:fixed; top:0; width:100%; height:46px; background:url('../images/bg_header.png') left top repeat-x; background-size:100% 100%;}
+	#header h1 {display:inline-block; width:109px; margin:14px 0 0 20px;}
+		#header h1 a {display:block; height:14px; background:url('../images/set_inmoontv.png') left top no-repeat; background-size:300px 300px;}
+	.tGlobalBtn {float:right; font-size:0;}
+		.tGlobalBtn li {display:inline-block; font-size:0; border-left:1px solid #af0b11;}
+			.tGlobalBtn li a {display:block; width:45px; height:42px;}
+			.tGlobalBtn li a.myinfo {background-position:left -15px;}
+			.tGlobalBtn li a.category {background-position:-45px -15px;}
+/* content */
+#content {z-index:1; position:relative; clear:both; margin-top:-4px;}
+	/* 메인visual */
+	.visual_wrap {position:relative; height:193px; overflow:hidden; background:#484848;}
+		.visual_in {position:absolute; top:13px; left:0; width:3000px; height:155px; font-size:0; overflow:hidden;}
+			.visual_by {display:inline-block; width:280px; height:155px; margin:0 5px;}
+				.visual_by a {position:relative; display:block; font-size:0;}
+					.visual_by a img {width:100%;}
+					.visual_by a strong {z-index:3; position:absolute; bottom:0; display:block; width:100%; height:24px; padding-top:8px; font-size:13px; font-weight:normal; color:#fff; text-align:center;}
+					.visual_by a i {z-index:2; position:absolute; bottom:0; left:0; clear:both; display:block; width:100%; height:32px; opacity:0.5; background:#ce2127;}
+	.visual_wrap .dot_paging {position:absolute; bottom:0; height:16px;}
+		.visual_wrap .dot_paging a {background-position:-110px top;}
+	/* 강의목록 */
+	.lecture_list_w {clear:both; margin-top:20px;}
+		.lecture_in {padding:0 20px;}
+			.lecture_notice {margin-bottom:5px; font-size:11px; color:#000; text-align:right;}
+				.lecture_notice strong {font-weight:normal;}
+			.lecture_list {clear:both; border-top:1px solid #ddd;}
+				.lecture_list li {border-bottom:1px solid #ddd;}
+					.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
+						.lecture_title {font-size:14px; font-weight:bold; color:#cb202d;}
+						.teacher {font-size:12px; color:#000;}
+						.lecture_list li a img {position:absolute; top:9px; left:3px;}
+						.lecture_list li a i.round {z-index:2; position:absolute; top:9px; left:3px; display:block; width:45px; height:45px; background:url('../images/set_inmoontv.png') -90px -15px no-repeat; background-size:300px 300px;}
+			.lecture_in .dot_paging {margin-top:13px;}
+	/* 하단버튼 */
+	.list_bottom_btn_w {clear:both; margin-top:40px; padding:0 20px; font-size:0;}
+		.list_bottom_btn_w li {display:inline-block; width:50%; text-align:left;}
+		.list_bottom_btn_w li:nth-child(2) {text-align:right;}
+		.list_bottom_btn_w .btn_st1 {width:99%;}
+	/* 하단 내강의 */
+	.lecture_btm_w {clear:both; margin-top:38px; padding:0 20px;}
+		.lecture_chance {font-size:14px; text-align:center;}
+			.lecture_chance a {color:#048daa;}
+				.lecture_chance a .icn {top:-2px; width:12px; height:11px; margin-right:4px; background-position:-140px top;}
+		.btm_mylecture {position:relative; clear:both; margin:19px 0 0 0; font-size:14px;}
+			.btm_mylecture h3 {display:block; height:38px; padding:0 0 0 10px; font-size:14px; color:#000; line-height:38px; text-align:left; vertical-align:middle; border-radius:5px; background:#e8e8e8;}
+				.btm_mylecture h3 em {margin-left:5px; color:#cb202d;}
+				.btm_mylecture .mypass {position:absolute; top:10px; right:10px; color:#666;}
+					.btm_mylecture .mypass em {font-weight:bold; color:#000;}
+			.mylecture_list {clear:both;}
+				.mylecture_list li {border-bottom:1px solid #ddd;}
+				.mylecture_list li:last-child {border-bottom:0;}
+					.mylecture_list li a {display:block; padding:13px 9px 14px 9px;}
+	/* 강의 없을 때 */
+	.lecture_btm_temp {}
+		.lecture_btm_temp .btm_mylecture {padding:0 90px 0 0;}
+			.btm_mylecture .btn_st1 {position:absolute; top:0; right:0; width:85px;}
+			.lecture_btm_temp {clear:both; margin:13px 0 0 0; padding:0 0 0 10px; color:#999;}
+				.lecture_btm_temp strong {font-weight:normal;}
