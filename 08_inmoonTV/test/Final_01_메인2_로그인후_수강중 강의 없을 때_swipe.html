@@ -28,24 +28,34 @@
 		<div class="visual_wrap">
 			<h2 class="hide">인기강의</h2>
 			<div id="visualSwipe" class="visual_in">
-				<div class="visual_by">
-					<a href="#">
-						<img src="images/temp/temp_001.jpg" alt="철학, 미술, 정신분석학에서 죽음을 말하다!" />
-						<strong>철학, 미술, 정신분석학에서 죽음을 말하다!</strong><i></i>
-					</a>
-				</div>
-				<div class="visual_by">
-					<a href="#">
-						<img src="images/temp/temp_001.jpg" alt="철학, 미술, 정신분석학에서 죽음을 말하다!" />
-						<strong>철학, 미술, 정신분석학에서 죽음을 말하다!</strong><i></i>
-					</a>
-				</div>
-				<div class="visual_by">
-					<a href="#">
-						<img src="images/temp/temp_001.jpg" alt="철학, 미술, 정신분석학에서 죽음을 말하다!" />
-						<strong>철학, 미술, 정신분석학에서 죽음을 말하다!</strong><i></i>
-					</a>
-				</div>
+				<ul>
+					<li>
+						<div class="visual_by">
+							<a href="#">
+								<img src="images/temp/temp_001.jpg" alt="철학, 미술, 정신분석학에서 죽음을 말하다!" />
+								<strong>철학, 미술, 정신분석학에서 죽음을 말하다!</strong><i></i>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="visual_by">
+							<a href="#">
+								<img src="images/temp/temp_001.jpg" alt="철학, 미술, 정신분석학에서 죽음을 말하다!" />
+								<strong>철학, 미술, 정신분석학에서 죽음을 말하다!</strong><i></i>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="visual_by">
+							<a href="#">
+								<img src="images/temp/temp_001.jpg" alt="철학, 미술, 정신분석학에서 죽음을 말하다!" />
+								<strong>철학, 미술, 정신분석학에서 죽음을 말하다!</strong><i></i>
+							</a>
+						</div>
+					</li>
+				</ul>
+
+
 			</div>
 			<!-- 비주얼 페이징 -->
 			<div class="dot_paging">
@@ -56,6 +66,7 @@
 				<a href="#" class="gbtn"><span class="ir">5</span></a>
 			</div>
 		</div>
+		<div id="test"></div>
 		<!-- 강의 목록 -->
 		<div class="lecture_list_w">
 			<div class="lecture_in">
@@ -172,11 +183,15 @@
 				</div>
 			</div>
 		</div>
-		<!-- 하단버튼 -->
-		<ul class="list_bottom_btn_w">
-			<li><a href="#" class="btn_st1">회원가입</a></li>
-			<li><a href="#" class="btn_st1">로그인</a></li>
-		</ul>
+		<!-- 강의없을 때 -->
+		<div class="lecture_btm_w">
+			<p class="lecture_chance"><a href="#"><i class="icn"></i>3개월 자유이용권 + 수강권 이벤트</a></p>
+			<div class="btm_mylecture">
+				<h3>내 강의 <em>0</em></h3>
+				<a href="#" class="btn_st1">프리패스 구매</a>
+				<p class="lecture_btm_temp"><strong>수강 중인 강의가 없습니다.</strong></p>
+			</div>
+		</div>
 	</div>
 </div>
 
