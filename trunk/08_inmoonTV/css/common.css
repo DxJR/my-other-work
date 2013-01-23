@@ -60,7 +60,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #content {z-index:1; position:relative; clear:both; margin-top:-4px;}
 	/* 메인visual */
 	.visual_wrap {position:relative; height:193px; overflow:hidden; background:#484848;}
-		.visual_in {position:absolute; top:13px; left:0; width:3000px; height:155px; font-size:0; overflow:hidden;}
+		.visual_in {position:absolute; top:13px; left:0; width:3000px; height:155px; font-size:0; overflow:hidden; -webkit-transition-property:-webkit-transform; -webkit-transition-duration:0.5s; -webkit-transition-timing-function:ease-out; -webkit-transform:translate3d(0px,0px,0px);}
 			.visual_by {display:inline-block; width:280px; height:155px; margin:0 5px;}
 				.visual_by a {position:relative; display:block; font-size:0;}
 					.visual_by a img {width:100%;}
