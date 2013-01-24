@@ -66,7 +66,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #content {z-index:1; position:relative; clear:both; margin-top:-4px;}
 	/* 메인visual */
 	.visual_wrap {position:relative; height:193px; overflow:hidden; background:#484848;}
-		.visual_in {position:absolute; top:13px; left:0; height:155px; font-size:0; overflow:hidden; -webkit-transition-property:-webkit-transform; -webkit-transition-duration:0.5s; -webkit-transition-timing-function:ease-out; -webkit-transform:translate3d(0px,0px,0px);}
+		.visual_in {position:absolute; top:13px; left:5px; height:155px; font-size:0; overflow:hidden; -webkit-transition-property:-webkit-transform; -webkit-transition-duration:0.5s; -webkit-transition-timing-function:ease-out; -webkit-transform:translate3d(0px,0px,0px);}
 			.visual_by {display:inline-block; width:280px; height:155px; margin:0 5px;}
 				.visual_by a {position:relative; display:block; font-size:0;}
 					.visual_by a img {width:100%;}
@@ -165,15 +165,18 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 			.ld_list_in {}
 				.ld_list_by {clear:both;}
 					.ld_list_in h5 {position:relative; padding:13px 43px 14px 49px; font-size:14px; font-weight:bold; color:#000; cursor:pointer; border-bottom:1px solid #999;}
+					.ld_list_in h5.ld_list_in_this {background:green;}
 						.ld_list_in h5 em {position:absolute; top:13px; left:0; display:block; width:42px; font-weight:bold; text-align:right;}
 						.ld_list_in h5 .icn {position:absolute; top:17px; right:20px; width:17px; height:11px; background-position:-140px -40px;}
-					.ld_list_d {clear:both;}
-						.ld_list_d_l {position:relative; border-bottom:1px solid #ddd;}
-						.ld_list_d_l:last-child {border-color:#999;}
-							.ld_list_ct {position:relative; display:block; padding:13px 40px 14px 49px;}
-								.ld_list_ct em {font-size:14px; font-weight:bold; color:#cb202d;}
-								.ld_list_ct .ct, .ld_list_ct .time {position:absolute; top:15px; left:0; display:block; font-size:11px; color:#000; text-align:right;}
-								.ld_list_ct .ct {width:42px;}
-								.ld_list_ct .time {width:36px; left:auto; right:0; text-align:left;}
-						.ld_list_fnc {clear:both; height:100px; padding:0 36px 0 41px; background:#484848;}
-							.ld_list_fnc li {float:left; width:25%;}
+					.ld_list_d_w {clear:both; height:0; overflow:hidden;}
+						.ld_list_d {clear:both;}
+							.ld_list_d_l {position:relative; border-bottom:1px solid #ddd;}
+							.ld_list_d_l:last-child {border-color:#999;}
+								.ld_list_ct {position:relative; display:block; padding:13px 40px 14px 49px; cursor:pointer;}
+								.ld_list_ct_this {background:blue;}
+									.ld_list_ct em {font-size:14px; font-weight:bold; color:#cb202d;}
+									.ld_list_ct .ct, .ld_list_ct .time {position:absolute; top:15px; left:0; display:block; font-size:11px; color:#000; text-align:right;}
+									.ld_list_ct .ct {width:42px;}
+									.ld_list_ct .time {width:36px; left:auto; right:0; text-align:left;}
+							.ld_list_fnc {clear:both; height:0; padding:0 36px 0 41px; overflow:hidden; background:#484848;}
+								.ld_list_fnc li {float:left; width:25%;}
