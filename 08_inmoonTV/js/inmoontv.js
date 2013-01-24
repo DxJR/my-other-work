@@ -1,12 +1,32 @@
+$charset="utf-8"
+
 $(window).ready(function() {
-	imTv.init();
+	imTv.init();	
+
+	if ($("#scriptScrollWrap").length!="0")
+	{
+		var screenHeight = $(window).height();
+		var scriptScrollHeight = screenHeight - (47 + 91);
+
+		if ($(".bscw_open").length!="0")
+		{
+			if ($(".bsc_only").length!="0")
+			{
+				$("#scriptScrollWrap").css("height",""+screenHeight+"px");
+			} else {
+				$("#scriptScrollWrap").css("height",""+scriptScrollHeight+"px");
+			}			
+			var myScroll = new iScroll('scriptScrollWrap');			
+		}
+	}
 });
 
 var imTv = ({
 	init : function() {
 		this.swipeInit("visualSwipe", ".visual_by", "500");
 		this.swipeInit("swipeLecture", ".lecture_list", ".lecture_swipe_w", "500");
-		this.lectureDetailView();
+		this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
+		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
 		this.lectureListDetailView();
 	},
 
@@ -44,41 +64,41 @@ var imTv = ({
 			}
 		});
 	},
-	// ���� �󼼺���
-	lectureDetailView : function() {
-		var tabMenu = $(".ld_tab");
-		var tabBorder = $(".bdb");
-		var tabContentInfo = $("#ldInfo");
-		var tabContentList = $("#ldList");
-		var tabContentToggle = function() {
-			if (tabMenu.find("li").filter(".this").index()==0) {
-				tabContentInfo.css("display","block");
-				tabContentList.css("display","none");
-			} else if (tabMenu.find("li").filter(".this").index()==1) {
-				tabContentInfo.css("display","none");
-				tabContentList.css("display","block");
-			}
-		}
+	// 탭선택
+	tabSelector : function(tabWrapper, tabContentClass) {
+		var tabWrapper = $(tabWrapper);
+		var tabMenu = tabWrapper.find(".ld_tab");
+		var tabMenuList = tabMenu.find("li");
+		var tabMenuMax = tabMenuList.length;
+		var tabMenuNowIndex = tabMenuList.filter(".this").index();
+		var tabMenuEachWidth = 100/tabMenuMax;		
+		var tabBorder = tabWrapper.find(".bdb");
 
-		tabContentToggle();
+		tabMenuList.css("width",""+tabMenuEachWidth+"%");
+		tabBorder.css("width",""+tabMenuEachWidth+"%");
+
+		tabMenuList.each(function(index) {
+			$("."+tabContentClass+"").css("display","none");
+			$("."+tabContentClass+":eq("+tabMenuNowIndex+")").css("display","block");
+			tabBorder.css("left",""+tabMenuEachWidth*tabMenuNowIndex+"%");
+		});
 
 		tabMenu.find("a").each(function(index) {
 			$(this).bind("click", function() {
+				var bindClickIndex = index;
 				if ($(this).parent().attr("class") !== "this") {
-					tabMenu.find("li").removeClass("this");
-					$(this).parent().addClass("this");
-					if (index==0) {
-						tabBorder.animate({"left" : "0"}, {duration:300, queue:true});
-					} else if (index==1) {
-						tabBorder.animate({"left" : "50%"}, {duration:300, queue:true});
-					}
+					tabMenuList.removeClass("this");
+					$(this).parent().addClass("this");	
+					tabBorder.animate({"left" : ""+tabMenuEachWidth*index+"%"}, {duration:300, queue:true, complete:function() {
+						$("."+tabContentClass+"").css("display","none");
+						$("."+tabContentClass+":eq("+index+")").css("display","block");
+					}});
 				}
-				tabContentToggle();
 				return false;
 			});
 		});
 	},
-	// �������� ��
+	// 개별강의 상세
 	lectureListDetailView : function() {
 		var lectureListWrap = $("#ldList");
 		var lectureTitle = lectureListWrap.find("h5");
@@ -92,24 +112,21 @@ var imTv = ({
 					listDetailWrap.animate({"height" : "0px"}, {duration:300, queue:true, complete:function() {
 						listDetailWrap.removeClass("ld_list_d_w_open");
 						lectureTitle.removeClass("ld_list_in_this");
+						$(".ld_list_ct_this").removeClass("ld_list_ct_this");
 					}});
 				} else {
-					$(".ld_list_d_w").each(function() {
-						$(this).css("height","0").removeClass("ld_list_d_w_open");
-					});
-					$(".ld_list_fnc").each(function() {
-						$(this).css("height","0").removeClass("ld_list_fnc_open");
-					});
-					lectureTitle.each(function() {
-						$(this).removeClass("ld_list_in_this");
-					});
+					$(".ld_list_d_w_open").css("height","0").removeClass("ld_list_d_w_open");
+					$(".ld_list_fnc_open").css("height","0").removeClass("ld_list_fnc_open");
+					$(".ld_list_in_this").removeClass("ld_list_in_this");
+					$(".ld_list_ct_this").removeClass("ld_list_ct_this");
 					listDetailWrap.animate({"height" : ""+$(".ld_list_d:eq("+index+")").height()+"px"}, {duration:300, queue:true, complete:function() {
 						listDetailWrap.addClass("ld_list_d_w_open");
 						listDetailWrap.css("height","auto");
 					}});
 					$(this).addClass("ld_list_in_this");
 				}
-			})
+				return false;
+			})	
 		});
 		lectureControlTitle.each(function(index) {
 			$(this).bind("click", function() {
@@ -121,18 +138,38 @@ var imTv = ({
 						lectureFunctionWrap.prev().removeClass("ld_list_ct_this");
 					}});
 				} else {
-					$(".ld_list_fnc").each(function() {
-						$(this).css("height","0").removeClass("ld_list_fnc_open");
-					});
-					$(".ld_list_ct").each(function() {
-						$(this).removeClass("ld_list_ct_this");
-					});
+					$(".ld_list_fnc_open").css("height","0").removeClass("ld_list_fnc_open");
+					$(".ld_list_ct_this").removeClass("ld_list_ct_this");
 					lectureFunctionWrap.animate({"height" : "100px"}, {duration:300, queue:true, complete:function() {
 						lectureFunctionWrap.addClass("ld_list_fnc_open");;
 					}});
 					lectureFunctionWrap.prev().addClass("ld_list_ct_this");
 				}
+				return false;
 			});
 		});
+		// 담기 선택일 때
+		$(".b_ldf_b").each(function(index) {
+			var lectureDownProgress = '<span id="ldProgress"><i style="width:45%;"></i></span>';
+
+			$(this).bind("click", function() {
+				if ($(this).attr("class")=="b_ld_fnc b_ldf_b")
+				{
+					$(".ld_list_fnc_open").addClass("ld_list_fnc_ing").parent().append(lectureDownProgress);
+					$(this).addClass("b_ldf_bc").removeClass("b_ldf_b").attr("id","btnDownCancel").html('<i class="icn"></i>담기취소');
+				} else {
+					$("#ldProgress").remove();
+					$(".ld_list_fnc_ing").removeClass("ld_list_fnc_ing");
+					$(this).addClass("b_ldf_b").removeClass("b_ldf_bc").removeAttr("id").html('<i class="icn"></i>담기');
+				}
+				return false;
+			});
+		});
+	},
+	// 다운완료일 때 실행
+	lectureDownComplete : function() {
+		$("#ldProgress").remove();
+		$(".ld_list_fnc_ing").removeClass("ld_list_fnc_ing");
+		$(".b_ldf_bc").addClass("b_ldf_b").removeClass("b_ldf_bc").removeAttr("id").html('<i class="icn"></i>다시담기');
 	}
 });
