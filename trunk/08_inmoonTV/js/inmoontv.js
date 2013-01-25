@@ -1,69 +1,59 @@
 $charset="utf-8"
 
 $(window).ready(function() {
-	imTv.init();	
-
-	if ($("#scriptScrollWrap").length!="0")
-	{
-		var screenHeight = $(window).height();
-		var scriptScrollHeight = screenHeight - (47 + 91);
-
-		if ($(".bscw_open").length!="0")
-		{
-			if ($(".bsc_only").length!="0")
-			{
-				$("#scriptScrollWrap").css("height",""+screenHeight+"px");
-			} else {
-				$("#scriptScrollWrap").css("height",""+scriptScrollHeight+"px");
-			}			
-			var myScroll = new iScroll('scriptScrollWrap');			
-		}
-	}
+	imTv.init();
 });
 
 var imTv = ({
 	init : function() {
-		this.swipeInit("visualSwipe", ".visual_by", "500");
-		this.swipeInit("swipeLecture", ".lecture_list", ".lecture_swipe_w", "500");
+		this.swipeSlide("visualSwipe","visualSwipeIndicator",".visual_scroll", ".visual_by");
+		this.swipeSlide("swipeLecture","swipeLectureIndicator",".lecture_scroll", ".lecture_list");
 		this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
 		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
 		this.lectureListDetailView();
+		this.scriptScroll();
 	},
 
-	swipeInit : function(obj, inElement, inElementWidthTarget, speed) {
-		var swipeObj = $("#"+obj);
-		var swipeInObj = swipeObj.find(inElement);
-		var swipeSpeed = speed;
-		var currentSwipeObj = 0;
-		var maxISwipeObj = swipeInObj.length;
-		var swipeObjWidth = swipeInObj.width() + ((parseInt(swipeInObj.css("marginLeft")) + parseInt(swipeInObj.css("marginRight"))) * maxISwipeObj) ;
-		swipeInObj.css('width',''+$(""+inElementWidthTarget+"").width()+'px');
+	scriptScroll : function() {
+		if ($("#scriptScrollWrap").length!="0")
+		{
+			var screenHeight = $(window).height();
+			var scriptScrollHeight = screenHeight - (47 + 91);
 
-		swipeObj.css("width",""+ swipeObjWidth * maxISwipeObj +"px");
-
-
-		$("#"+obj).cfTouchSwipe({
-			minSwipeLength: 50,
-			minMoveLength: 15,
-			triggerClick: true,
-			preventDefault: true,
-			swipeLeft: function() {
-				currentSwipeObj = Math.max(currentSwipeObj + 1, 0);
-				if (currentSwipeObj < maxISwipeObj) {
-					this.swipeAnimation(swipeObjWidth * currentSwipeObj, swipeSpeed);
+			if ($(".bscw_open").length!="0")
+			{
+				if ($(".bsc_only").length!="0")
+				{
+					$("#scriptScrollWrap").css("height",""+screenHeight+"px");
+				} else {
+					$("#scriptScrollWrap").css("height",""+scriptScrollHeight+"px");
 				}
-			},
-			swipeRight: function() {
-				currentSwipeObj = Math.max(currentSwipeObj - 1, 0);
-				this.swipeAnimation(swipeObjWidth * currentSwipeObj, swipeSpeed);
-			},
-			swipeAnimation : function(distance, duration) {
-				swipeObj.css("-webkit-transition-duration", (duration/1000).toFixed(1) + "s");
-				var value = (distance<0 ? "" : "-") + Math.abs(distance).toString();
-				swipeObj.css("-webkit-transform", "translate3d("+value +"px,0px,0px)");
+				var myScroll = new iScroll('scriptScrollWrap');
 			}
-		});
+		}
 	},
+
+	swipeSlide : function(wrapperID,indicatorID,scrollingElement, swipeInnerElement) {
+		var swipeInnerElement = $(swipeInnerElement);
+		var scrollerWidth = (swipeInnerElement.width() + parseInt(swipeInnerElement.css("marginLeft")) + parseInt(swipeInnerElement.css("marginRight"))) * swipeInnerElement.length;
+		console.log(swipeInnerElement.length);
+		console.log(scrollerWidth);
+		$(scrollingElement).css("width",""+scrollerWidth+"px");
+
+		var myScroll = new iScroll(""+wrapperID+"", {
+			snap: true,
+			momentum: false,
+			hScrollbar: false,
+			onScrollEnd: function () {
+				myScroll.indicatorID = indicatorID;
+				document.querySelector('#'+myScroll.indicatorID+' > a.this').className = '';
+				document.querySelector('#'+myScroll.indicatorID+' > a:nth-child(' + (this.currPageX+1) + ')').className = 'this';
+			}
+		 });
+
+	},
+
+
 	// 탭선택
 	tabSelector : function(tabWrapper, tabContentClass) {
 		var tabWrapper = $(tabWrapper);
@@ -71,7 +61,7 @@ var imTv = ({
 		var tabMenuList = tabMenu.find("li");
 		var tabMenuMax = tabMenuList.length;
 		var tabMenuNowIndex = tabMenuList.filter(".this").index();
-		var tabMenuEachWidth = 100/tabMenuMax;		
+		var tabMenuEachWidth = 100/tabMenuMax;
 		var tabBorder = tabWrapper.find(".bdb");
 
 		tabMenuList.css("width",""+tabMenuEachWidth+"%");
@@ -88,7 +78,7 @@ var imTv = ({
 				var bindClickIndex = index;
 				if ($(this).parent().attr("class") !== "this") {
 					tabMenuList.removeClass("this");
-					$(this).parent().addClass("this");	
+					$(this).parent().addClass("this");
 					tabBorder.animate({"left" : ""+tabMenuEachWidth*index+"%"}, {duration:300, queue:true, complete:function() {
 						$("."+tabContentClass+"").css("display","none");
 						$("."+tabContentClass+":eq("+index+")").css("display","block");
@@ -126,7 +116,7 @@ var imTv = ({
 					$(this).addClass("ld_list_in_this");
 				}
 				return false;
-			})	
+			})
 		});
 		lectureControlTitle.each(function(index) {
 			$(this).bind("click", function() {
