@@ -40,10 +40,6 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 .icn {position:relative; top:-1px; display:inline-block; font:0/0 arial; overflow:hidden; vertical-align:middle; background-image:url('../images/set_inmoontv.png'); background-repeat:no-repeat; background-size:300px 300px;}
 
 
-/* 도트페이징 */
-.dot_paging {clear:both; width:100%; font-size:0; text-align:center;}
-	.dot_paging a {width:7px; height:6px; margin:0 3px; background-position:-130px top;}
-	.dot_paging a.this {background-position:-120px top;}
 /* 버튼스타일 */
 .btn_st1 {display:inline-block; height:38px; font-size:14px; line-height:38px; color:#ddd; text-align:center; vertical-align:middle; border-radius:5px; background:#444;}
 
@@ -64,7 +60,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #content {z-index:1; position:relative; clear:both; margin-top:-4px;}
 	/* 메인visual */
 	.visual_wrap {position:relative; height:193px; overflow:hidden; background:#484848;}
-		.visual_in {position:absolute; top:13px; left:5px; height:155px; font-size:0; overflow:hidden; -webkit-transition-property:-webkit-transform; -webkit-transition-duration:0.5s; -webkit-transition-timing-function:ease-out; -webkit-transform:translate3d(0px,0px,0px);}
+		.visual_in {height:155px; font-size:0; overflow:hidden;}
 			.visual_by {display:inline-block; width:280px; height:155px; margin:0 5px;}
 				.visual_by a {position:relative; display:block; font-size:0;}
 					.visual_by a img {width:100%;}
@@ -78,14 +74,15 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 			.lecture_notice {margin-bottom:5px; font-size:11px; color:#000; text-align:right;}
 				.lecture_notice strong {font-weight:normal;}
 			.lecture_swipe_w {position:relative; overflow:hidden; font-size:0;}
-				.lecture_list {clear:both; display:inline-block; border-top:1px solid #ddd;}
-					.lecture_list li {border-bottom:1px solid #ddd;}
-						.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
-							.lecture_title {font-size:14px; font-weight:bold; color:#cb202d;}
-							.t_info {font-size:12px; color:#000;}
-							.l_bar {position:relative; top:-1px; margin:0 9px; font-style:normal; color:#dadada;}
-							.lecture_list li a img {position:absolute; top:9px; left:3px;}
-							.lecture_list li a i.round {z-index:2; position:absolute; top:9px; left:3px; display:block; width:45px; height:45px; background:url('../images/set_inmoontv.png') -90px -15px no-repeat; background-size:300px 300px;}
+				.lecture_scroll {font-size:0; overflow:hidden;}
+					.lecture_list {display:inline-block; border-top:1px solid #ddd;}
+						.lecture_list li {border-bottom:1px solid #ddd;}
+							.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
+								.lecture_title {font-size:14px; font-weight:bold; color:#cb202d;}
+								.t_info {font-size:12px; color:#000;}
+								.l_bar {position:relative; top:-1px; margin:0 9px; font-style:normal; color:#dadada;}
+								.lecture_list li a img {position:absolute; top:9px; left:3px;}
+								.lecture_list li a i.round {z-index:2; position:absolute; top:9px; left:3px; display:block; width:45px; height:45px; background:url('../images/set_inmoontv.png') -90px -15px no-repeat; background-size:300px 300px;}
 			.lecture_in .dot_paging {margin-top:13px;}
 	/* 하단버튼 */
 	.list_bottom_btn_w {clear:both; margin-top:40px; height:38px; padding:0 20px; font-size:0;}
@@ -263,3 +260,9 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	/* 탭메뉴 */
 	.ml_tab_w {position:relative;}
 		.ml_c_w {display:block; width:100px; height:100px; background:red;}
+
+
+/* 도트페이징 */
+.dot_paging {clear:both; width:100%; font-size:0; text-align:center;}
+	.dot_paging a {position:relative; display:inline-block; width:7px; height:6px; margin:0 3px; padding:0; vertical-align:middle; background:url('../images/set_inmoontv.png') -130px top no-repeat; background-size:300px 300px;}
+	.dot_paging a.this {background-position:-120px top;}
