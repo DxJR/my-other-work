@@ -7,8 +7,14 @@ $(window).ready(function() {
 
 var imTv = ({
 	init : function() {
-		this.swipeSlide("visualSwipe","visualHtmlHide","visualSwipeIndicator", "visual_by", "div")
-		this.swipeSlide("swipeLecture","swipeLectureHide","swipeLectureIndicator", "lecture_list", "ul")
+		if ($("#visualSwipe").length=="1")
+		{
+			this.swipeSlide("visualSwipe","visualHtmlHide","visualSwipeIndicator", "visual_by", "div")
+		}
+		if ($("#swipeLecture").length=="1")
+		{
+			this.swipeSlide("swipeLecture","swipeLectureHide","swipeLectureIndicator", "lecture_list", "ul")
+		}			
 		this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
 		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
 		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기		
