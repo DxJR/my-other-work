@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>SwipeView</title>
+	<link href="http://cubiq.org/dropbox/SwipeView/demo/inline/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript" src="js/inmoontv.js"></script>
+	<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript">
+	$(window).ready(function() {
+		function swipeTest(wrapper, elementWrap, indicator, inhtml, whtml) {
+			var carousel, el, i, page,slides = [];
+			$("#"+elementWrap+"").find(""+inhtml+"").each(function(index) {
+				$(this).attr("rel",""+index+"");
+				slides.push($(this).html());
+			});
+			carousel = new SwipeView('#'+wrapper+'', {
+				numberOfPages: slides.length,
+				hastyPageFlip: true,
+			});
+
+			// Load initial data
+			for (i=0; i<3; i++) {
+				page = i==0 ? slides.length-1 : i-1;
+				el = document.createElement(''+whtml+'');
+				el.setAttribute("rel",i);
+				el.innerHTML = slides[page];
+				carousel.masterPages[i].appendChild(el)
+			}
+
+			carousel.onFlip(function () {
+				var el, upcoming, i;
+				for (i=0; i<3; i++) {
+					upcoming = carousel.masterPages[i].dataset.upcomingPageIndex;
+					if (upcoming != carousel.masterPages[i].dataset.pageIndex) {
+						el = carousel.masterPages[i].querySelector(''+whtml+'');
+						el.innerHTML = slides[upcoming];
+					}
+				}
+				$("#"+wrapper+"-swipeview-slider>div").each(function(index) {
+					if ($(this).attr("class")=="swipeview-active")
+					{
+						nowIndex = index - 1;
+						$(""+indicator+" li").removeClass("active");
+						$(""+indicator+" li:eq("+nowIndex+")").addClass("active");
+					}
+				});
+			});
+		}
+		swipeTest("wrapper","eleWrap","#wrapIndi", "div", "div")
+		swipeTest("wrapper2","eleWrap2","#wrapIndi2", "div", "div")
+	});
+</script>
+<style type="text/css">
+
+html, body { height:100%; }
+body {
+	padding:0;
+	margin:0;
+	background:#fff;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	color:#333;
+	font-family:helvetica;
+	font-size:12px;
+	text-align:center;
+}
+
+h1 {
+	font-size:2em;
+	padding:20px 0;
+	margin:0;
+}
+
+#wrapper, #wrapper2 {
+	width:100%;
+	min-width:320px;
+	height:150px;
+	background:#ddd;
+	border-top:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+}
+
+
+#nav {
+	position:absolute;
+	z-index:100;
+	top:8px;
+	width:200px;
+	height:20px;
+	left:50%;
+	background:rgba(0,0,0,0.75);
+	padding:0;
+	margin:0 0 0 -100px;
+	-webkit-border-radius:10px;
+}
+
+#nav li {
+	display:block;
+	float:left;
+	width:14px;
+	height:14px; line-height:14px;
+	-webkit-border-radius:7px;
+	background:rgba(255,255,255,0.1);
+	overflow:hidden;
+	padding:0;
+	margin:3px 11px 0 0;
+	text-align:center;
+}
+
+#nav li#prev {
+	margin-left:5px;
+	background:transparent;
+}
+
+#nav li#next {
+	margin-right:0;
+	background:transparent;
+}
+
+#nav li.selected {
+	background:rgba(255,255,255,0.4);
+}
+
+#swipeview-slider > div {
+	position:relative;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	overflow:hidden;
+}
+
+#swipeview-slider span {
+	-webkit-box-sizing:border-box;
+	display:block;
+	text-align:center;
+	font-size:1.4em;
+	padding:0 20px;
+}
+
+p {
+	padding:20px;
+	margin:0;
+	font-size:1.4em;
+}
+Window size: x
+Viewport size: x
+
+
+
+	#wrapIndi {}
+		#wrapIndi li {display:inline-block;}
+		#wrapIndi li.active {color:red;}
+	#wrapIndi2 {}
+		#wrapIndi2 li {display:inline-block;}
+		#wrapIndi2 li.active {color:red;}
+</style>
+</head>
+
+<body>
+	<h1>Three Laws of Robotics</h1>
+	<div id="wrapper">
+	</div>
+	<div id="wrapIndi">
+		<ul>
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<div id="eleWrap" style="display:none;">
+		<div>
+						<ul class="lecture_list">
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">11111111111111111111아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+						</ul>
+		</div>
+		<div>
+						<ul class="lecture_list">
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">222222222222222222222222222아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+						</ul>
+		</div>
+		<div>
+						<ul class="lecture_list">
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">3333333333333333333333아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+						</ul>
+			</div>
+	</div>
+
+
+	<p>The Three Laws of Robotics (often shortened to The Three Laws or Three Laws) are a set of rules devised by the science fiction author Isaac Asimov and later added to. The rules are introduced in his 1942 short story "Runaround", although they were foreshadowed in a few earlier stories.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<div id="wrapper2">
+	</div>
+	<div id="wrapIndi2">
+		<ul>
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<div id="eleWrap2" style="display:none;">
+		<div>
+						<ul class="lecture_list">
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">11111111111111111111아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+						</ul>
+		</div>
+		<div>
+						<ul class="lecture_list">
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">222222222222222222222222222아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+						</ul>
+		</div>
+		<div>
+						<ul class="lecture_list">
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">3333333333333333333333아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/temp/temp_002.jpg" width="45" height="45" alt="정정훈" /><i class="round"></i>
+									<em class="lecture_title">아리스토텔레스 남긴 불멸의 명저 『오르가논』 읽기</em>
+									<span class="t_info">정정훈</span>
+								</a>
+							</li>
+						</ul>
+			</div>
+	</div>
+
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>
