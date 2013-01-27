@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>inmoonTV</title>
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/inmoontv.js"></script>
+</head>
+
+<body>
+
+
+<!-- 서브페이지일 때 class="subpage" 추가 -->
+<div id="wrap" class="subpage">
+	<!-- header -->
+	<div id="header">
+		<h1><span class="ir">inmoonTV</span></h1>
+		<h2><a href="#"><i class="icn"><span class="ir">이전</span></i></a> 탈퇴</h2>
+	</div>
+	<!-- content -->
+	<div id="content">
+		<div class="reg_set_w reg_set_out">
+			<h3>탈퇴 이유</h3>
+			<ul class="reg_set_list_w regs_lw_wob">
+				<li class="regs_chk">
+					<input type="checkbox" id="regOutReason1" class="check" />
+					<label for="regOutReason1">강의 가격이 비싸요</label>
+				</li>
+				<li class="regs_chk">
+					<input type="checkbox" id="regOutReason2" class="check" />
+					<label for="regOutReason2">듣고 싶은 강의가 없어요.</label>
+				</li>
+				<li class="regs_chk">
+					<input type="checkbox" id="regOutReason3" class="check" />
+					<label for="regOutReason3">앱이 마음에 안 들어요.</label>
+				</li>
+				<li class="regs_chk reg_out_r_etc">
+					<input type="checkbox" id="regOutReason4" class="check" />
+					<label for="regOutReason4">기타 이유</label>
+					<textarea rows="5" cols="30" class="imtv_ip"></textarea>
+				</li>
+			</ul>
+			<div class="reg_ed reg_e_ort">
+				<strong>사용 중 불편한 점이 있었다면 적어주세요.</strong>
+				<textarea rows="5" cols="30" class="imtv_ip"></textarea>
+			</div>
+			<div class="reg_ed reg_e_id">
+				<strong>아이디</strong>
+				<input type="text" size="30" maxlength="14" class="imtv_ip" />
+			</div>
+			<div class="reg_ed reg_e_pwd">
+				<strong>비밀번호</strong>
+				<input type="password" size="30" maxlength="14" class="imtv_ip" />
+			</div>
+			<div class="reg_ed reg_e_rpwd">
+				<strong>비밀번호 한 번 더</strong>
+				<input type="password" size="30" maxlength="14" class="imtv_ip" />
+			</div>
+			<div class="reg_ed reg_e_hp">
+				<strong>휴대폰 번호</strong>
+				<input type="text" size="30" class="imtv_ip" />
+				<button type="button" class="btn_st1_gray">인증번호 발송</button>
+			</div>
+			<div class="reg_ed reg_e_hp reg_eh_id">
+				<strong><em>SMS로 인증번호를 발송했습니다.<span class="lb">수신된 인증번호를 입력해 주세요.</span></em> <i>2분 22초</i></strong>
+				<input type="text" size="30" class="imtv_ip reg_ip_err" />
+				<button type="button" class="btn_st1_gray">확인</button>
+			</div>
+			<p class="reg_eh_id_msg">인증에 실패했습니다. 휴대폰 번호를 확인하시고 다시 한 번 인증번호 발송 버튼을 눌러주세요.</p>
+			<p class="reg_msg_btn">
+				<a href="#" class="btn_st1">취소</a>
+				<a href="#" class="btn_st1_gray">탈퇴</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

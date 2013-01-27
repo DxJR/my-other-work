@@ -7,6 +7,8 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 table{ border-collapse:collapse; border-spacing:0; }
 fieldset,img{ border:0; }
 address,caption,cite,code,dfn,em,strong,th,var,i { font-style:normal; font-weight:normal; }
+table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
+legend {position:absolute; top:0; left:0; display:inline;}
 strong { font-weight:bold; }
 button { margin:0; padding:0; border:none; cursor:pointer; font-family:'나눔고딕', NanumGothic,sans-serif; }
 li{ list-style:none; }
@@ -41,7 +43,9 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 
 
 /* 버튼스타일 */
-.btn_st1 {display:inline-block; height:38px; font-size:14px; line-height:38px; color:#ddd; text-align:center; vertical-align:middle; border-radius:5px; background:#444;}
+.btn_st1, .btn_st1_gray {display:inline-block; height:38px; font-size:14px; line-height:38px; color:#ddd; text-align:center; vertical-align:middle; border-radius:5px; background:#444;}
+.btn_st1_gray {color:#000; border:1px solid #bbb; background:#f1f1f1;}
+input.btn_st1, input.btn_st1_gray {border:0;}
 
 #wrap {position:relative; padding:46px 0 25px 0;}
 /* header */
@@ -60,8 +64,10 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #content {z-index:1; position:relative; clear:both; margin-top:-4px;}
 	/* 메인visual */
 	.visual_wrap {position:relative; height:193px; overflow:hidden; background:#484848;}
-		.visual_in {height:155px; font-size:0; overflow:hidden;}
-			.visual_by {display:inline-block; width:280px; height:155px; margin:0 5px;}
+		.visual_in {height:155px; margin-top:10px; font-size:0; overflow:hidden;}
+			.visual_in_swipe {width:290px; height:155px; margin:0 auto;}
+			.visual_scroll {width:5000%; height:155px;}
+			.visual_by {float:left; width:280px; height:155px; padding:0 5px;}
 				.visual_by a {position:relative; display:block; font-size:0;}
 					.visual_by a img {width:100%;}
 					.visual_by a strong {z-index:3; position:absolute; bottom:0; display:block; width:100%; height:24px; padding-top:8px; font-size:13px; font-weight:normal; color:#fff; text-align:center;}
@@ -73,8 +79,8 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 		.lecture_in {padding:0 20px;}
 			.lecture_notice {margin-bottom:5px; font-size:11px; color:#000; text-align:right;}
 				.lecture_notice strong {font-weight:normal;}
-			.lecture_swipe_w {position:relative; overflow:hidden; font-size:0;}
-				.lecture_scroll {font-size:0; overflow:hidden;}
+			.lecture_swipe_w {position:relative; width:100%; overflow:hidden; font-size:0;}
+				.lecture_scroll {width:5000%; font-size:0; overflow:hidden;}
 					.lecture_list {display:inline-block; border-top:1px solid #ddd;}
 						.lecture_list li {border-bottom:1px solid #ddd;}
 							.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
@@ -95,7 +101,8 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 			.lecture_chance a {color:#048daa;}
 				.lecture_chance a .icn {top:-2px; width:12px; height:11px; margin-right:4px; background-position:-140px top;}
 		.btm_mylecture {position:relative; clear:both; margin:19px 0 0 0; font-size:14px;}
-			.btm_mylecture h3 {display:block; height:38px; padding:0 0 0 10px; font-size:14px; color:#000; line-height:38px; text-align:left; vertical-align:middle; border-radius:5px; background:#e8e8e8;}
+			.btm_mylecture h3 {display:block; height:38px; padding:0; font-size:14px; color:#000; line-height:38px; text-align:left; vertical-align:middle; border-radius:5px; background:#e8e8e8;}
+				.btm_mylecture h3 a {display:block; height:38px; padding-left:10px; color:#000;}
 				.btm_mylecture h3 em {margin-left:5px; color:#cb202d;}
 				.btm_mylecture .mypass {position:absolute; top:10px; right:10px; color:#666;}
 					.btm_mylecture .mypass em {font-weight:bold; color:#000;}
@@ -107,8 +114,8 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.lecture_btm_temp {}
 		.lecture_btm_temp .btm_mylecture {padding:0 90px 0 0;}
 			.btm_mylecture .btn_st1 {position:absolute; top:0; right:0; width:85px;}
-			.lecture_btm_temp {clear:both; margin:13px 0 0 0; padding:0 0 0 10px; color:#999;}
-				.lecture_btm_temp strong {font-weight:normal;}
+			.lecture_btm_temp_msg {clear:both; margin:13px 0 0 0; padding:0 0 0 10px; color:#999;}
+				.lecture_btm_temp_msg strong {font-weight:normal;}
 	/* 하위카테고리 */
 	.l_category_w {}
 		.l_category_w .lecture_list {border-top:0;}
@@ -134,6 +141,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 				.b_ls_pv {top:-1px; left:0;}
 				.b_ls_fr {top:85px; left:0;}
 				.b_ls_buy {right:0; bottom:0;}
+				.lectureDimd {z-index:2; position:absolute; top:0; left:0; width:100%; height:100%;}
 	/* 강의상세 */
 	.ld_w {position:relative; clear:both; margin-top:18px;}
 		/* 탭메뉴 */
@@ -181,7 +189,8 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 									.b_ld_fnc .icn {display:block; top:0; width:43px; height:42px; margin:0 auto 5px auto;}
 								.b_ldf_v .icn {background-position:left -60px;}
 								.b_ldf_l .icn {background-position:-45px -60px;}
-								.b_ldf_ln .icn {background-position:-180px -60px;}
+								.b_ldf_ln {z-index:10; position:relative;}
+									.b_ldf_ln .icn {background-position:-180px -60px;}
 								.b_ldf_r .icn {background-position:-90px -60px;}
 								.b_ldf_b .icn {background-position:-135px -60px;}
 							/* 담기중 */
@@ -190,17 +199,17 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 								.ld_list_fnc_ing .b_ldf_v .icn {background-position:left -105px;}
 								.ld_list_fnc_ing .b_ldf_l .icn {background-position:-45px -105px;}
 								.ld_list_fnc_ing .b_ldf_r .icn {background-position:-90px -105px;}
-								.ld_list_fnc_ing .b_ldf_bc {color:#ccc;}
+								.ld_list_fnc_ing .b_ldf_bc {z-index:10; position:relative; color:#ccc;}
 									.ld_list_fnc_ing .b_ldf_bc .icn {background-position:-135px -105px;}
 								#ldProgress, #ldProgress i {position:absolute; bottom:0; left:0; display:block; width:100%; height:6px; font:0/0 arial; background:#333;}
 									#ldProgress i {position:relative; background:#3d9b9c;}
 /* 하단 스크립트/컨트롤 */
-.btm_strm_script_w {z-index:9; position:fixed; bottom:0; left:0; clear:both; width:100%; height:64; overflow:hidden;}
+.btm_strm_script_w {z-index:9; position:fixed; bottom:-70px; left:0; clear:both; width:100%; height:64px; overflow:hidden;}
 	.btm_strm_script_in {position:relative; height:64px;}
 	.b_v_script {z-index:8; position:absolute; top:0; left:50%; width:103px; height:19px; margin-left:-52px; font-size:11px; line-height:normal; color:#000; background-position:left -150px;}
 		.b_v_script .icn {top:-3px; width:9px; height:6px; margin-left:5px; background-position:-180px -40px;}
 	/* 스크립트 */
-	.script_w {z-index:1; clear:both; height:0; overflow:hidden;}
+	.script_w {z-index:1; position:relative; clear:both; height:0; overflow:hidden;}
 		.script_head {height:89px; padding:0 50px 0 20px; font-size:14px; border-bottom:2px solid #000; background:#484848;}
 			.script_head h3, .script_head h4 {width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 			.script_head h3 {padding-top:37px; color:#c4c4c4;}
@@ -258,11 +267,257 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 
 /* 내강의 */
 	/* 탭메뉴 */
-	.ml_tab_w {position:relative;}
-		.ml_c_w {display:block; width:100px; height:100px; background:red;}
-
+	.ml_tab_w {position:relative; margin-top:20px;}
+		.ml_c_w {display:none;}
+			.ml_c_w .lecture_list {border-top:0;}
+				.ml_c_w .lecture_list a {min-height:54px; padding:13px 27px 13px 71px;}
+					.ml_c_w .lecture_list a img, .ml_c_w .lecture_list a i.round {top:18px; left:20px;}
+					.ml_c_w .lecture_list .lecture_title {display:block; margin-bottom:7px;}
+					.ml_c_w .lecture_list .l_bar {margin:0 4px;}
+					.ml_c_w .lecture_list .t_info:last-child {font-weight:bold;}
+		/* 다운로드강의 */
+		.ml_down_head {position:relative; height:40px; padding:0 40px 0 0; border-bottom:1px solid #999;}
+			.ml_down_head h4 {padding:18px 0 0 20px; font-size:12px; color:#000;}
+				.ml_down_head h4 em {font-weight:bold; color:#048daa;}
+			.b_mld_del {position:absolute; top:0; right:0; width:45px; height:40px; background:#333;}
+				.b_mld_del .icn {top:0; width:14px; height:16px; background-position:-230px -40px;}
+		#mlDownloadList {border-bottom:1px solid #999;}
+			#mlDownloadList > li {border-top:1px solid #999; border-bottom:0;}
+				#mlDownloadList > li .lecture_title {font-weight:normal; color:#000;}
+				#mlDownloadList > li .t_info:last-child {font-weight:normal;}
+			#mlDownloadList > li:first-child {border-top:0;}
+				#mlDownloadList .ld_list_d_l {border-top:1px solid #ddd; border-bottom:0;}
+					#mlDownloadList .ld_list_ct {padding-left:72px; padding-right:25px}
+						#mlDownloadList .ld_list_ct .ct {width:61px;}
+						#mlDownloadList .ld_list_ct .time {position:relative; top:auto; right:auto; display:inline-block;}
+					#mlDownloadList .ld_list_fnc li {border-bottom:0;}
+						#mlDownloadList .ld_list_fnc li a {padding:0;}
+		/* 다운로드강의:삭제모드 */
+		.mld_mode_delete {}
+			.mld_mode_delete .ml_down_head {height:90px; padding-right:0;}
+			.mld_mode_delete #mlDownDeleteHead {clear:both; position:relative; margin-top:9px; font-size:0; text-align:center;}
+				.mld_mode_delete #mlDownDeleteHead strong {position:absolute; top:-23px; right:20px; font-size:12px; font-weight:normal; color:#000;}
+					.mld_mode_delete #mlDownDeleteHead strong em {font-weight:bold; color:#048daa;}
+					.mld_mode_delete #mlDownDeleteHead .btn_st1, .mld_mode_delete #mlDownDeleteHead .btn_st1_gray {width:138px; margin:0 2px;}
+			.mld_mode_delete #mlDownloadList .ld_list_d_l {padding-right:20px;}
+				.mld_mode_delete #mlDownloadList label {position:relative; display:block; overflow:hidden; background:url('../images/check.png') right 50% no-repeat; background-size:22px 22px;}
+				.mld_mode_delete #mlDownloadList .check {position:absolute; top:-9999em; left:-9999em;}
+				.mld_mode_delete #mlDownloadList .check:checked+label {background:url('../images/checked.png') right 50% no-repeat; background-size:22px 22px;}
+		/* 수강내역 */
+		#mlList .lecture_list a {padding-left:20px; padding-right:20px;}
+			#mlList .lecture_list a .ml_list_tit_w {display:block; margin-bottom:7px;}
+				#mlList .lecture_list a .ml_list_tit_w .lecture_title {display:inline;}
+				#mlList .lecture_list a .ml_list_tit_w .t_info {font-weight:normal;}
+				#mlList .lecture_list li.ml_list_fed .t_info {color:#999;}
+				#mlList .lecture_list li.ml_list_fed .ml_list_tit_w .t_info {color:#000;}
 
 /* 도트페이징 */
 .dot_paging {clear:both; width:100%; font-size:0; text-align:center;}
 	.dot_paging a {position:relative; display:inline-block; width:7px; height:6px; margin:0 3px; padding:0; vertical-align:middle; background:url('../images/set_inmoontv.png') -130px top no-repeat; background-size:300px 300px;}
 	.dot_paging a.this {background-position:-120px top;}
+
+/* 로그인 */
+#login {position:relative; border-top:5px solid #ce2127;}
+	#login h1 {position:relative; width:198px; height:10px; margin:30px auto 0 auto; overflow:hidden; background:url('../images/set_inmoontv.png') left -175px no-repeat; background-size:300px 300px;}
+	.lg_filed {position:relative; margin-top:60px; padding:0 45px; text-align:center;}
+		.ci_lg {top:0; width:202px; height:38px; background-position:left -190px;}
+		.lg_id_pwd_w {margin-top:15px; border:3px solid #a3a3a3; border-radius:6px; background:#fff;}
+			.lg_id_pwd_w p {position:relative;}
+				.lg_id_pwd_w label {position:absolute; top:19px; left:13px; font-size:14px; color:#888;}
+				.lg_id_pwd_w input {width:100%; height:53px; text-indent:12px; font-size:14px; color:#888; border:0; background:none;}
+			.lg_id {border-bottom:1px solid #a3a3a3;}
+			.lg_btn {margin-top:10px;}
+				.lg_btn input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#ce2127;}
+	.lg_btm_fnc {clear:both; width:210px; margin:60px auto 0 auto; padding-left:4px; font-size:0;}
+		.lg_btm_fnc li {display:inline-block; font-size:14px; text-align:right;}
+			.lg_btm_fnc li a {color:#cb202d;}
+		.lg_btm_fnc li:last-child {margin-left:12px; padding-left:11px; border-left:1px solid #d0d0d0;}
+/* 회원가입 */
+.reg_field_w {padding:0 20px; text-align:center;}
+	.imtv_ip {width:100%; height:38px; text-indent:8px; font-size:14px; color:#000; border:3px solid #a3a3a3; border-radius:6px !important; box-sizing:border-box;background:#fff;}
+	input.reg_ip_err {border-color:#6db0c3;}
+	.imtv_check {position:relative; overflow:hidden;}
+		.imtv_check .check {position:absolute; top:-9999em; left:-9999em;}
+		.imtv_check label {display:block; min-height:17px; padding:5px 0 0 30px; font-size:12px; color:#666; background:url('../images/imtv_check.png') left top no-repeat; background-size:22px 22px;}
+		.imtv_check .check:checked+label {background:url('../images/imtv_checked.png') left top no-repeat; background-size:22px 22px;}
+	.reg_ed {margin-top:22px; text-align:left;}
+		.reg_ed strong {display:block; margin-bottom:7px; font-size:14px; color:#000;}
+			.reg_ed strong em {position:relative; top:-1px; font-size:12px; font-weight:normal; color:#666;}
+				.reg_ed strong em i, .reg_ed .reg_ip_err {color:#048daa;}
+	.reg_eds strong {font-weight:normal;}
+	.reg_e_email p {margin-top:10px;}
+	.reg_policy_list {margin-top:25px; text-align:left; border-top:1px solid #ddd;}
+		.reg_policy_list li {padding:11px 56px 11px 0; border-bottom:1px solid #ddd;}
+			.reg_policy_list li.imtv_check label {height:20px; padding-top:2px; font-size:14px; font-weight:bold; color:#000}
+			.reg_policy_list li a {position:absolute; top:12px; right:0; font-size:14px; color:#cb202d;}
+	.reg_ed_btn {margin-top:25px; text-align:center;}
+		.reg_ed_btn input.btn_st1 {width:138px;}
+/* 가입완료 */
+.reg_msg_w {}
+	.reg_msg_w h3 {font-size:25px; font-weight:bold; color:#000;}
+	.reg_msg {font-size:14px; color:#000;}
+	.reg_msg_btn {font-size:0; text-align:center;}
+		.reg_msg_btn .btn_st1, .reg_msg_btn .btn_st1_gray {width:105px; margin:0 3px;}
+.reg_msg_complete {padding:0 30px;}
+	.reg_msg_complete h3 {margin-top:94px;}
+		.reg_msg_complete .reg_msg {margin-top:20px;}
+		.reg_msg_complete .reg_msg_btn {margin-top:50px;}
+/* 아이디/비밀번호찾기 */
+.ipf_tab_w {position:relative; margin-top:20px;}
+.ipf_c_w {padding:0 20px;}
+	.ipf_c_w .imtv_ip {border-color:#cdcdcd;}
+	.ipf_after_w {margin-top:16px;}
+		.ipf_after_w .reg_msg {margin-top:24px;}
+		.ipf_after_w .reg_msg strong {color:#048daa;}
+		.ipf_after_w .reg_msg_btn {margin-top:20px;}
+			.ipf_after_w .reg_msg_btn .btn_st1_gray {width:138px;}
+.reg_ed_code {position:relative; margin-top:10px; padding-right:66px;}
+	.reg_ed_code .btn_st1_gray {position:absolute; top:0; right:0; width:61px;}
+	.ipf_after_w .regm_code {margin-top:10px; text-align:center;}
+/* 비밀번호변경 */
+.password_chg_w {padding:0 20px;}
+	.password_chg_w h3 {margin-top:20px; font-size:14px; color:#000;}
+	.password_chg_w .imtv_ip {border-color:#cdcdcd;}
+/* 환경설정 */
+.reg_set_w {padding:0 20px}
+	.reg_set_w h3 {margin-top:30px; padding:0 0 9px 0; font-size:14px; font-weight:bold; color:#000; border-bottom:2px solid #000;}
+	.reg_set_w h3:first-child {margin-top:20px;}
+	.reg_set_list_w {}
+		.reg_set_list_w li {position:relative; padding:18px 66px 19px 0; font-size:14px; border-bottom:1px solid #ddd;}
+			.reg_set_list_w li strong {position:relative; font-weight:normal;}
+			.reg_set_list_w li .btn_st1_gray, .reg_set_list_w li .btn_st1 {position:absolute; right:0; top:7px; width:61px; font-size:12px;}
+		.reg_set_list_w li:last-child {border-bottom:0;}
+		.reg_set_list_w .regs_whref {padding-top:0; padding-bottom:0;}
+			.reg_set_list_w li.regs_whref a {display:block; padding:13px 0 14px 0; color:#ce2127;}
+				.reg_set_list_w li.regs_whref a .icn {position:absolute; top:13px; right:0; width:11px; height:17px; background-position:-245px -40px;}
+		.regs_chk {}
+			.regs_chk input {position:absolute; top:-9999em; left:-9999em;}
+			.regs_chk label {display:block; min-height:17px; margin-top:-5px; padding-top:5px; background:url('../images/imtv_check.png') right top no-repeat; background-size:22px 22px;}
+			.regs_chk .check:checked+label {background:url('../images/checked.png') right top no-repeat; background-size:22px 22px;}
+		.regs_lw_wob li {padding:13px 0 14px 0;}
+		.reg_set_list_w .regs_freepass {}
+			.reg_set_list_w .regs_freepass em {float:right; margin-top:1px; font-size:12px; color:#666;}
+	.regs_acnt {margin-top:10px; text-align:center;}
+		.regs_acnt .btn_st1_gray {width:138px;}
+	/* 기기등록 */
+	.regs_dr_msg {margin-top:20px; padding:8px 13px; font-size:12px; line-height:20px; color:#000; background:#eee;}
+		.regs_dr_msg em {color:#048daa;}
+	.regs_dr_now li strong {font-weight:bold;}
+	.regs_dr_list li {padding-right:0;}
+		.regs_dr_list li .dn_rls {float:right; margin-top:-7px; text-align:right;}
+			.regs_dr_list li .dn_rls .lb {font-size:12px;}
+		.regs_dr_list li.regs_drl_now {padding-bottom:14px;}
+			.regs_dr_list li.regs_drl_now strong {display:inline-block; margin-top:-7px; color:#048daa}
+				.regs_dr_list li.regs_drl_now strong em {display:block; color:#000;}
+	/* 계정설정 */
+	.reg_set_idmail {margin-top:14px;}
+		.reg_set_idmail li strong {margin-right:3px; font-weight:bold;}
+		.reg_set_idmail li em {color:#ce2127;}
+		.reg_set_email strong {top:5px;}
+		.reg_set_email .imtv_ip {width:77%; margin:-7px 0; vertical-align:top;}
+		.reg_set_idmail .reg_set_email .btn_st1_gray {top:11px;}
+		.btn_out {position:fixed; bottom:25px; right:20px; width:61px;}
+/* 고객센터 */
+.hpd_tab_w {margin-top:20px;}
+	.hpd_c_w {}
+	.helpdesk_list {}
+		.helpdesk_list li {position:relative; border-bottom:1px solid #ddd;}
+			.helpdesk_list li .hpdl_tit {display:block; padding:13px 55px 14px 20px; font-size:14px; color:#000;}
+				.helpdesk_list li .hpdl_tit i {margin-left:5px; font-size:12px; color:#666;}
+				.helpdesk_list li .hpdl_tit .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-140px -40px;}
+			.helpdesk_list li .hpdl_cw_anis {clear:both; height:0; overflow:hidden;}
+			.helpdesk_list li .hpdl_cont_w {position:relative; clear:both; padding:11px 20px 12px 20px; font-size:14px; line-height:20px; color:#000; border-top:1px solid #ddd; overflow:hidden; background:#e8e8e8;}
+				.helpdesk_list li .hpdl_cont_w h4 {margin:0 0 12px 0; padding-right:35px; font-weight:bold;}
+					.helpdesk_list li .hpdl_cont_w h4 i {font-size:12px; font-weight:bold; color:#666;}
+			.helpdesk_list li .hpdl_cont_w .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-160px -40px;}
+	.hpd_c_w .reg_set_list_w li {padding-left:20px; padding-right:20px;}
+	.hpd_c_w .reg_set_list_w li:last-child {border-bottom:1px solid #ddd;}
+		.hpd_c_w .reg_set_list_w li a {float:right; color:#cb202d;}
+/* 탈퇴하기 */
+.reg_msg_outm {padding:0 20px;}
+	.reg_msg_outm h3 {margin-top:30px; text-align:center;}
+	.reg_msg_outm .reg_msg {margin-top:19px; line-height:20px;}
+		.reg_msg_outm .reg_msg em {font-weight:bold; color:#048daa;}
+	.reg_msg_outm h4 {margin-top:30px; padding:0 0 9px 0; font-size:14px; color:#000; border-bottom:2px solid #000;}
+		.reg_msg_outm h4 em {font-weight:bold;}
+	.reg_outm_list {}
+		.reg_outm_list li {padding:13px 0 11px 0; font-size:14px; color:#000; border-bottom:1px solid #ddd;}
+		.reg_outm_list li:last-child {border-bottom:0;}
+	.reg_msg_outm .reg_msg_btn {margin-top:10px;}
+/* 탈퇴 폼 */
+.reg_set_out {}
+	.reg_set_out .reg_set_list_w .regs_chk {padding-bottom:11px;}
+	.reg_set_out .reg_set_list_w .regs_chk label {min-height:20px; padding-left:28px; padding-right:0; background-position:left 3px;}
+	.reg_out_r_etc textarea.imtv_ip {margin-top:10px;}
+	.reg_set_out textarea.imtv_ip {height:64px;}
+	.reg_e_hp {position:relative; padding-right:92px;}
+		.reg_e_hp .btn_st1_gray {position:absolute; bottom:0; right:0; width:87px; font-size:12px;}
+	.reg_set_out .imtv_ip {border-color:#cdcdcd;}
+	.reg_set_out .reg_ip_err {border-color:#6db0c3;}
+	.reg_eh_id {padding-right:66px;}
+		.reg_eh_id strong {}
+			.reg_eh_id strong em {font-size:14px; color:#000;}
+			.reg_eh_id strong i {position:absolute; top:5px; right:0; font-size:14px; color:#048daa;}
+		.reg_eh_id .btn_st1_gray {top:39px; width:61px;}
+	.reg_eh_id_msg {margin-top:8px; font-size:13px; line-height:18px; color:#048daa;}
+	.reg_ehidm_ok {text-align:center;}
+	.reg_set_out .reg_msg_btn {margin-top:40px;}
+		.reg_set_out .reg_msg_btn .btn_st1_gray {color:#ccc;}
+/* 탈퇴완료 */
+.reg_msg_ouc h3 {margin-top:75px; text-align:center;}
+.reg_msg_ouc .reg_msg_btn {margin-top:225px;}
+
+/* 레이어 셋 */
+.layer_wrap {z-index:999; position:absolute; top:0; left:0; display:none; width:100%; height:100%;}
+	.layer_w {z-index:998; position:absolute; overflow:hidden; opacity:0;}
+		.layer_in_w {position:relative; padding:0 20px;}
+		.layer_in {border:3px solid #333; border-radius:6px; background:#fff;}
+			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-weight:bold; color:#000; border-bottom:1px solid #000;}
+			.layer_content {}
+				.lyr_msg {font-size:14px; color:#000;}
+			.layer_btn_w {clear:both; height:45px; font-size:0; border-top:1px solid #000; background:#444;}
+				.b_lyr_g, .b_lyr_b {float:left; width:100%; height:45px; font-size:14px; border:0; border-radius:0 0 5px 5px;  text-align:center;}
+				.b_lyr_g {color:#404040; background:#f1f1f1;}
+				.b_lyr_b {color:#ddd; background:#444;}
+			.lyr_b_2ea {}
+				.lyr_b_2ea .b_lyr_g, .lyr_b_2ea .b_lyr_b {width:50%;}
+				.lyr_b_2ea button:first-child {border-right:1px solid #333; border-radius:0 0 0 5px;}
+				.lyr_b_2ea button:last-child {border-radius:0 0 5px 0;}
+	.dimd {z-index:997; clear:both; position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; background:#000;}
+/* 인문북스 사러가기 */
+.lyr_book_list {width:200px; margin:5px auto 29px auto;}
+	.lyr_book_list li {display:inline-block; width:98px;}
+		.lyr_book_list li a {display:block; width:46px; margin:25px auto 0 auto; font-size:12px; color:#000; text-align:center;}
+		.lyr_book_list li a .icn {display:block; width:46px; height:46px; margin-bottom:4px;}
+		.lyr_book_list li a.b_ridi .icn {background-position:0px -230px;}
+		.lyr_book_list li a.b_interpark .icn {background-position:-50px -230px;}
+		.lyr_book_list li a.b_aladdin .icn {background-position:-100px -230px;}
+		.lyr_book_list li a.b_kyobo .icn {background-position:-150px -230px;}
+/* 수강권선택 */
+.lyr_c_passbuy {padding:0 23px;}
+	.lyr_c_passbuy li {position:relative; padding:23px 0 25px 0; font-size:14px; border-bottom:1px solid #ddd;}
+	.lyr_c_passbuy li:last-child {border-bottom:0;}
+		.lyr_c_passbuy li .radio {position:absolute; top:-9999em; left:-9999em;}
+		.lyr_c_passbuy li label {display:block; padding:0 30px 0 0; background:url('../images/radio.png') right 13px no-repeat; background-size:24px;}
+		.lyr_c_passbuy li .radio:checked+label {background:url('../images/radio_checked.png') right 13px no-repeat; background-size:24px;}
+			.lyr_c_passbuy li label strong {display:block; margin-bottom:3px; color:#000;}
+			.lyr_c_passbuy li label em {color:#666;}
+				.lyr_c_passbuy li label em i {color:#048daa;}
+/* 다운로드실패 */
+.lyr_c_downfail {padding:38px 0; text-align:center;}
+/* 삭제얼럿 */
+.lyr_c_del {padding:42px 0; text-align:center;}
+.lyr_c_delfail {padding:27px 17px;}
+/* 기기등록해제 */
+.lyr_c_device_r {padding:40px 25px 40px 23px;}
+	.lyr_c_device_r h5 {font-size:14px; font-weight:bold; color:#000;}
+	.lyr_c_device_r .lyr_msg {margin-top:20px;}
+/* 각종얼럿 */
+.lyr_c_alert_s {padding:47px 0; text-align:center;}
+.lyr_c_alert_3, .lyr_c_alert_2 {padding:28px; text-align:left;}
+.lyr_c_alert_2 {padding-top:35px; padding-bottom:35px;}
+/* 약관/정책 */
+.lyr_c_policy {position:relative; height:340px; padding:0; overflow:hidden;}
+	.lyr_c_p_in {position:relative; padding:10px 23px; font-size:12px; color:#000; line-height:20px;}
+		.lyr_c_p_in .lyr_msg {margin-bottom:29px;}
+		.lyr_c_p_in .lyr_msg:last-child {margin-bottom:0;}
