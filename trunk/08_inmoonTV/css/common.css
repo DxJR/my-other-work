@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+@font-face{font-family:'NanumGothic'; src:url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothic.woff') format('woff'), url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothic.ttf') format('truetype');}
+@font-face{font-family:'NanumGothicBold'; src:url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothicBold.woff') format('woff'), url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothicBold.ttf') format('truetype');}
+
 html { .overflow:scroll; .overflow-x:auto; }
 html,body { margin:0; padding:0; color:#111; }
 body { color:#111; font-size:12px; font-family:'나눔고딕', NanumGothic,sans-serif; background:#fff; -webkit-text-size-adjust:none; }
@@ -9,7 +12,7 @@ fieldset,img{ border:0; }
 address,caption,cite,code,dfn,em,strong,th,var,i { font-style:normal; font-weight:normal; }
 table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
 legend {position:absolute; top:0; left:0; display:inline;}
-strong { font-weight:bold; }
+strong { font-family:'NanumGothicBold'; }
 button { margin:0; padding:0; border:none; cursor:pointer; font-family:'나눔고딕', NanumGothic,sans-serif; }
 li{ list-style:none; }
 caption,th{ text-align:left; }
@@ -84,7 +87,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 					.lecture_list {display:inline-block; border-top:1px solid #ddd;}
 						.lecture_list li {border-bottom:1px solid #ddd;}
 							.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
-								.lecture_title {font-size:14px; font-weight:bold; color:#cb202d;}
+								.lecture_title {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
 								.t_info {font-size:12px; color:#000;}
 								.l_bar {position:relative; top:-1px; margin:0 9px; font-style:normal; color:#dadada;}
 								.lecture_list li a img {position:absolute; top:9px; left:3px;}
@@ -105,7 +108,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.btm_mylecture h3 a {display:block; height:38px; padding-left:10px; color:#000;}
 				.btm_mylecture h3 em {margin-left:5px; color:#cb202d;}
 				.btm_mylecture .mypass {position:absolute; top:10px; right:10px; color:#666;}
-					.btm_mylecture .mypass em {font-weight:bold; color:#000;}
+					.btm_mylecture .mypass em {font-family:'NanumGothicBold'; color:#000;}
 			.mylecture_list {clear:both;}
 				.mylecture_list li {border-bottom:1px solid #ddd;}
 				.mylecture_list li:last-child {border-bottom:0;}
@@ -149,26 +152,26 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.ld_tab {z-index:2; position:relative; height:26px;}
 				.ld_tab li {float:left; width:50%;}
 					.ld_tab li a {display:block; height:25px; font-size:14px; color:#000; text-align:center; border-bottom:1px solid #444;}
-					.ld_tab li.this a {font-weight:bold;}
+					.ld_tab li.this a {font-family:'NanumGothicBold';}
 			i.bdb {z-index:1; position:absolute; left:0; bottom:0; display:block; width:50%; height:3px; font:0/0 arial; overflow:hidden; background:#444;}
 		/* 컨텐츠 */
 		.ld_c_w {position:relative; clear:both;}
 		/* 정보 */
 		.ld_info_w {padding:11px 20px; font-size:13px; line-height:20px; color:#010101;}
-			.ld_info_w h5 {margin-top:40px; font-size:13px; font-weight:bold;}
+			.ld_info_w h5 {margin-top:40px; font-size:13px; font-family:'NanumGothicBold';}
 			.ld_info_w ol li.oli_f {margin-bottom:20px;}
 		.ld_book_w {position:relative; clear:both; margin-top:36px; padding:0 25px 20px 25px; font-size:12px; line-height:normal; color:#666; background:#e8e8e8;}
 			.ld_book_w h5 {clear:both; margin:0 0 9px 0; padding-top:18px; color:#000;}
 			.ld_book_in {position:relative; height:81px; margin-top:14px; padding:0 0 0 64px;}
-				.ld_book_in h6 {font-size:14px; font-weight:bold; color:#cb202d;}
+				.ld_book_in h6 {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
 				.ld_book_in img {position:absolute; top:0; left:0; width:58px;}
 				.ld_book_in .btn_st1 {position:absolute; bottom:0; right:0; width:60px;}
 		/* 목록 */
 		.ld_list_w {}
 			.ld_list_in {}
 				.ld_list_by {clear:both;}
-					.ld_list_in h5 {position:relative; padding:13px 43px 14px 49px; font-size:14px; font-weight:bold; color:#000; cursor:pointer; border-bottom:1px solid #999;}
-						.ld_list_in h5 em {position:absolute; top:13px; left:0; display:block; width:42px; font-weight:bold; text-align:right;}
+					.ld_list_in h5 {position:relative; padding:13px 43px 14px 49px; font-size:14px; font-family:'NanumGothicBold'; color:#000; cursor:pointer; border-bottom:1px solid #999;}
+						.ld_list_in h5 em {position:absolute; top:13px; left:0; display:block; width:42px; font-family:'NanumGothicBold'; text-align:right;}
 						.ld_list_in h5 .icn {position:absolute; top:17px; right:20px; width:17px; height:11px; background-position:-140px -40px;}
 					/* 현재선택 */
 					.ld_list_in h5.ld_list_in_this .icn {background-position:-160px -40px;}
@@ -177,7 +180,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 							.ld_list_d_l {position:relative; border-bottom:1px solid #ddd;}
 							.ld_list_d_l:last-child {border-color:#999;}
 								.ld_list_ct {position:relative; display:block; padding:13px 40px 14px 49px; cursor:pointer;}
-									.ld_list_ct em {font-size:14px; font-weight:bold; color:#cb202d;}
+									.ld_list_ct em {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
 									.ld_list_ct .ct, .ld_list_ct .time {position:absolute; top:15px; left:0; display:block; font-size:11px; color:#000; text-align:right;}
 									.ld_list_ct .ct {width:42px;}
 									.ld_list_ct .time {width:36px; left:auto; right:0; text-align:left;}
@@ -213,7 +216,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.script_head {height:89px; padding:0 50px 0 20px; font-size:14px; border-bottom:2px solid #000; background:#484848;}
 			.script_head h3, .script_head h4 {width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 			.script_head h3 {padding-top:37px; color:#c4c4c4;}
-			.script_head h4 {padding-top:4px; font-weight:bold; color:#fff;}
+			.script_head h4 {padding-top:4px; font-family:'NanumGothicBold'; color:#fff;}
 			.b_scrt_s, .b_scrt_l, .b_scrt_close {position:absolute; right:0; clear:both; display:block; width:45px; height:44px; color:#999; line-height:44px; text-align:center; border-left:1px solid #000; border-bottom:1px solid #000; background:#333;}
 			.b_scrt_s {top:0; font-size:12px;}
 			.b_scrt_l {top:45px; top:font-size:20px;}
@@ -223,7 +226,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.script_cont_in {position:relative; padding:0; font-size:14px; color:#000;}
 				.script_cont_in ol li {position:relative; padding:11px 0 12px 38px; line-height:1.45; border-bottom:1px solid #ddd;}
 					.script_cont_in ol li em {position:absolute; top:13px; left:0; font-size:11px;}
-				.script_cont_in ol li.scrt_now {font-weight:bold; color:#079192;}
+				.script_cont_in ol li.scrt_now {font-family:'NanumGothicBold'; color:#079192;}
 					.script_cont_in ol li.scrt_now em {color:#000;}
 			/* 폰트사이즈 컨트롤 중 */
 			.scsize_c {}
@@ -274,11 +277,11 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 					.ml_c_w .lecture_list a img, .ml_c_w .lecture_list a i.round {top:18px; left:20px;}
 					.ml_c_w .lecture_list .lecture_title {display:block; margin-bottom:7px;}
 					.ml_c_w .lecture_list .l_bar {margin:0 4px;}
-					.ml_c_w .lecture_list .t_info:last-child {font-weight:bold;}
+					.ml_c_w .lecture_list .t_info:last-child {font-family:'NanumGothicBold';}
 		/* 다운로드강의 */
 		.ml_down_head {position:relative; height:40px; padding:0 40px 0 0; border-bottom:1px solid #999;}
 			.ml_down_head h4 {padding:18px 0 0 20px; font-size:12px; color:#000;}
-				.ml_down_head h4 em {font-weight:bold; color:#048daa;}
+				.ml_down_head h4 em {font-family:'NanumGothicBold'; color:#048daa;}
 			.b_mld_del {position:absolute; top:0; right:0; width:45px; height:40px; background:#333;}
 				.b_mld_del .icn {top:0; width:14px; height:16px; background-position:-230px -40px;}
 		#mlDownloadList {border-bottom:1px solid #999;}
@@ -297,7 +300,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.mld_mode_delete .ml_down_head {height:90px; padding-right:0;}
 			.mld_mode_delete #mlDownDeleteHead {clear:both; position:relative; margin-top:9px; font-size:0; text-align:center;}
 				.mld_mode_delete #mlDownDeleteHead strong {position:absolute; top:-23px; right:20px; font-size:12px; font-weight:normal; color:#000;}
-					.mld_mode_delete #mlDownDeleteHead strong em {font-weight:bold; color:#048daa;}
+					.mld_mode_delete #mlDownDeleteHead strong em {font-family:'NanumGothicBold'; color:#048daa;}
 					.mld_mode_delete #mlDownDeleteHead .btn_st1, .mld_mode_delete #mlDownDeleteHead .btn_st1_gray {width:138px; margin:0 2px;}
 			.mld_mode_delete #mlDownloadList .ld_list_d_l {padding-right:20px;}
 				.mld_mode_delete #mlDownloadList label {position:relative; display:block; overflow:hidden; background:url('../images/check.png') right 50% no-repeat; background-size:22px 22px;}
@@ -348,13 +351,13 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.reg_e_email p {margin-top:10px;}
 	.reg_policy_list {margin-top:25px; text-align:left; border-top:1px solid #ddd;}
 		.reg_policy_list li {padding:11px 56px 11px 0; border-bottom:1px solid #ddd;}
-			.reg_policy_list li.imtv_check label {height:20px; padding-top:2px; font-size:14px; font-weight:bold; color:#000}
+			.reg_policy_list li.imtv_check label {height:20px; padding-top:2px; font-size:14px; font-family:'NanumGothicBold'; color:#000}
 			.reg_policy_list li a {position:absolute; top:12px; right:0; font-size:14px; color:#cb202d;}
 	.reg_ed_btn {margin-top:25px; text-align:center;}
 		.reg_ed_btn input.btn_st1 {width:138px;}
 /* 가입완료 */
 .reg_msg_w {}
-	.reg_msg_w h3 {font-size:25px; font-weight:bold; color:#000;}
+	.reg_msg_w h3 {font-size:25px; font-family:'NanumGothicBold'; color:#000;}
 	.reg_msg {font-size:14px; color:#000;}
 	.reg_msg_btn {font-size:0; text-align:center;}
 		.reg_msg_btn .btn_st1, .reg_msg_btn .btn_st1_gray {width:105px; margin:0 3px;}
@@ -380,7 +383,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.password_chg_w .imtv_ip {border-color:#cdcdcd;}
 /* 환경설정 */
 .reg_set_w {padding:0 20px}
-	.reg_set_w h3 {margin-top:30px; padding:0 0 9px 0; font-size:14px; font-weight:bold; color:#000; border-bottom:2px solid #000;}
+	.reg_set_w h3 {margin-top:30px; padding:0 0 9px 0; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:2px solid #000;}
 	.reg_set_w h3:first-child {margin-top:20px;}
 	.reg_set_list_w {}
 		.reg_set_list_w li {position:relative; padding:18px 66px 19px 0; font-size:14px; border-bottom:1px solid #ddd;}
@@ -402,7 +405,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	/* 기기등록 */
 	.regs_dr_msg {margin-top:20px; padding:8px 13px; font-size:12px; line-height:20px; color:#000; background:#eee;}
 		.regs_dr_msg em {color:#048daa;}
-	.regs_dr_now li strong {font-weight:bold;}
+	.regs_dr_now li strong {font-family:'NanumGothicBold';}
 	.regs_dr_list li {padding-right:0;}
 		.regs_dr_list li .dn_rls {float:right; margin-top:-7px; text-align:right;}
 			.regs_dr_list li .dn_rls .lb {font-size:12px;}
@@ -411,7 +414,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.regs_dr_list li.regs_drl_now strong em {display:block; color:#000;}
 	/* 계정설정 */
 	.reg_set_idmail {margin-top:14px;}
-		.reg_set_idmail li strong {margin-right:3px; font-weight:bold;}
+		.reg_set_idmail li strong {margin-right:3px; font-family:'NanumGothicBold';}
 		.reg_set_idmail li em {color:#ce2127;}
 		.reg_set_email strong {top:5px;}
 		.reg_set_email .imtv_ip {width:77%; margin:-7px 0; vertical-align:top;}
@@ -427,8 +430,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.helpdesk_list li .hpdl_tit .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-140px -40px;}
 			.helpdesk_list li .hpdl_cw_anis {clear:both; height:0; overflow:hidden;}
 			.helpdesk_list li .hpdl_cont_w {position:relative; clear:both; padding:11px 20px 12px 20px; font-size:14px; line-height:20px; color:#000; border-top:1px solid #ddd; overflow:hidden; background:#e8e8e8;}
-				.helpdesk_list li .hpdl_cont_w h4 {margin:0 0 12px 0; padding-right:35px; font-weight:bold;}
-					.helpdesk_list li .hpdl_cont_w h4 i {font-size:12px; font-weight:bold; color:#666;}
+				.helpdesk_list li .hpdl_cont_w h4 {margin:0 0 12px 0; padding-right:35px; font-family:'NanumGothicBold';}
+					.helpdesk_list li .hpdl_cont_w h4 i {font-size:12px; font-family:'NanumGothicBold'; color:#666;}
 			.helpdesk_list li .hpdl_cont_w .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-160px -40px;}
 	.hpd_c_w .reg_set_list_w li {padding-left:20px; padding-right:20px;}
 	.hpd_c_w .reg_set_list_w li:last-child {border-bottom:1px solid #ddd;}
@@ -437,9 +440,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 .reg_msg_outm {padding:0 20px;}
 	.reg_msg_outm h3 {margin-top:30px; text-align:center;}
 	.reg_msg_outm .reg_msg {margin-top:19px; line-height:20px;}
-		.reg_msg_outm .reg_msg em {font-weight:bold; color:#048daa;}
+		.reg_msg_outm .reg_msg em {font-family:'NanumGothicBold'; color:#048daa;}
 	.reg_msg_outm h4 {margin-top:30px; padding:0 0 9px 0; font-size:14px; color:#000; border-bottom:2px solid #000;}
-		.reg_msg_outm h4 em {font-weight:bold;}
+		.reg_msg_outm h4 em {font-family:'NanumGothicBold';}
 	.reg_outm_list {}
 		.reg_outm_list li {padding:13px 0 11px 0; font-size:14px; color:#000; border-bottom:1px solid #ddd;}
 		.reg_outm_list li:last-child {border-bottom:0;}
@@ -472,7 +475,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.layer_w {z-index:998; position:absolute; overflow:hidden; opacity:0;}
 		.layer_in_w {position:relative; padding:0 20px;}
 		.layer_in {border:3px solid #333; border-radius:6px; background:#fff;}
-			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-weight:bold; color:#000; border-bottom:1px solid #000;}
+			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:1px solid #000;}
 			.layer_content {}
 				.lyr_msg {font-size:14px; color:#000;}
 			.layer_btn_w {clear:both; height:45px; font-size:0; border-top:1px solid #000; background:#444;}
@@ -510,7 +513,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 .lyr_c_delfail {padding:27px 17px;}
 /* 기기등록해제 */
 .lyr_c_device_r {padding:40px 25px 40px 23px;}
-	.lyr_c_device_r h5 {font-size:14px; font-weight:bold; color:#000;}
+	.lyr_c_device_r h5 {font-size:14px; font-family:'NanumGothicBold'; color:#000;}
 	.lyr_c_device_r .lyr_msg {margin-top:20px;}
 /* 각종얼럿 */
 .lyr_c_alert_s {padding:47px 0; text-align:center;}
