@@ -1,5 +1,3 @@
-$charset="utf-8"
-
 $(window).ready(function() {
 	imTv.init();
 	$("#visualSwipe").css("overflow","visible");
@@ -14,22 +12,22 @@ var imTv = ({
 		if ($("#swipeLecture").length=="1")
 		{
 			this.swipeSlide("swipeLecture","swipeLectureHide","swipeLectureIndicator", "lecture_list", "ul")
-		}			
+		}
 		this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
 		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
-		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기		
+		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기
 		this.tabSelector(".hpd_tab_w","hpd_c_w"); //고객센터
-		this.lectureListDetailView();		
+		this.lectureListDetailView();
 		if ($("#lyr_c_policy").length>0)
 		{
 			var policy1Scroll = new iScroll('lyrPolicy1ScrollWrap');
 			var policy2Scroll = new iScroll('lyrPolicy2ScrollWrap');
 			var policy3Scroll = new iScroll('lyrPolicy3ScrollWrap');
-		}		
+		}
 		this.lectureModeDelete();
 		this.mainLogin();
-		this.helpdeskList();		
-		this.bindDialogs();
+		this.helpdeskList();
+		this.dialogAction();
 	},
 	scriptScroll : function() {
 		if ($("#scriptScrollWrap").length!="0")
@@ -140,17 +138,17 @@ var imTv = ({
 		// 다운로드강의 일 때
 		if (lectureListWrap.attr("id")!=="ldList")
 		{
-			var lectureTitle = $("#mlDownloadList > li > a");			
+			var lectureTitle = $("#mlDownloadList > li > a");
 		}
 
 		lectureTitle.each(function(index) {
 			$(this).bind("click", function() {
 				var listDetailWrap = $(".ld_list_d_w:eq("+index+")");
 
-				if (lectureListWrap.attr("id")!=="ldList" && $("#mlDownload").attr("class")=="ml_c_w mld_mode_delete") 
+				if (lectureListWrap.attr("id")!=="ldList" && $("#mlDownload").attr("class")=="ml_c_w mld_mode_delete")
 				{
 
-				} else {		
+				} else {
 					if (listDetailWrap.attr("class")=="ld_list_d_w ld_list_d_w_open") {
 						listDetailWrap.animate({"height" : "0px"}, {duration:300, queue:true, complete:function() {
 							listDetailWrap.removeClass("ld_list_d_w_open");
@@ -206,7 +204,7 @@ var imTv = ({
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
 						$(this).append(lectureDimd);
-					});	
+					});
 					$(".ld_list_fnc_open").addClass("ld_list_fnc_ing").parent().append(lectureDownProgress);
 					$(this).addClass("b_ldf_bc").removeClass("b_ldf_b").attr("id","btnDownCancel").html('<i class="icn"></i>담기취소');
 				} else {
@@ -218,7 +216,7 @@ var imTv = ({
 				return false;
 			});
 		});
-		// 듣기 선택일 때		
+		// 듣기 선택일 때
 		var scriptWrapper = $("#scriptWrapper");
 		$(".b_ldf_l").each(function(index) {
 			$(this).bind("click", function() {
@@ -226,14 +224,14 @@ var imTv = ({
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
 						$(this).append(lectureDimd);
-					});						
+					});
 					$(this).addClass("b_ldf_ln").removeClass("b_ldf_l");
 
 					scriptWrapper.animate({"bottom" : "0"}, {duration:300, queue:true, complete:function() {
 						}
 					});
 				} else {
-					$(".lectureDimd").remove();					
+					$(".lectureDimd").remove();
 					$(this).addClass("b_ldf_l").removeClass("b_ldf_ln");
 					scriptWrapper.animate({"bottom" : "-70px"}, {duration:300, queue:true});
 				}
@@ -247,11 +245,11 @@ var imTv = ({
 		$(".b_v_script").click(function() {
 			if ($(".bscw_open").length=="0")
 			{
-				scriptWrapper.addClass("bscw_open");						
+				scriptWrapper.addClass("bscw_open");
 			} else {
-				scriptWrapper.removeClass("bscw_open");						
+				scriptWrapper.removeClass("bscw_open");
 			}
-			$(".b_scrt_s").click(function() {									
+			$(".b_scrt_s").click(function() {
 				scriptWrapper.addClass("scsize_c");
 				if ($(".scsize_l").length=="1")
 				{
@@ -263,8 +261,8 @@ var imTv = ({
 					scriptWrapper.addClass("scsize_s");
 				}
 			});
-			$(".b_scrt_l").click(function() {				
-				scriptWrapper.addClass("scsize_c");				
+			$(".b_scrt_l").click(function() {
+				scriptWrapper.addClass("scsize_c");
 				if ($(".scsize_s").length=="1")
 				{
 					scriptWrapper.removeClass("scsize_s").addClass("scsize_m");
@@ -291,14 +289,14 @@ var imTv = ({
 		var deleteElement = $(".ld_list_d_l");
 
 		// 삭제모드진입
-		$(".b_mld_del").on("click", function() {			
+		$(".b_mld_del").on("click", function() {
 			modeWrap.addClass("mld_mode_delete");
 
 			var modeDeleteHeadAppend = '<div id="mlDownDeleteHead">';
 				modeDeleteHeadAppend += '<strong>선택 <em>133</em>MB</strong>';
 				modeDeleteHeadAppend += '<button type="button" class="gbtn btn_st1_gray b_mld_cancel"><span>취소</span></button>';
 				modeDeleteHeadAppend += '<button type="button" class="gbtn btn_st1 b_mld_delete"><span>삭제 (<em>0</em>)</span></button>';
-				modeDeleteHeadAppend += '</div>';			
+				modeDeleteHeadAppend += '</div>';
 			modeHead.append(modeDeleteHeadAppend);
 
 			$(".ld_list_d_w").css("height","auto");
@@ -312,13 +310,13 @@ var imTv = ({
 				$(this).find(".ld_list_ct").remove();
 				$(this).prepend(deleteLabel);
 			});
-			$(this).css("display","none");	
+			$(this).css("display","none");
 
 			$(".check").on("click", function() {
 				$(".b_mld_delete").find("em").html(''+$("input.check:checked").length+'');
 			});
 			// 취소
-			$(".b_mld_cancel").on("click", function() {	
+			$(".b_mld_cancel").on("click", function() {
 				$("#mlDownDeleteHead").remove();
 				$(".ld_list_d_w").css("height","0");
 				modeWrap.removeClass("mld_mode_delete");
@@ -330,13 +328,13 @@ var imTv = ({
 				});
 				_this.lectureListDetailView();
 			});
-		});	
+		});
 	},
 	// 로그인
 	mainLogin : function() {
 		$(".lg_id_pwd_w").find("label").each(function() {
 			$(this).bind("click", function() {
-				$(this).next().focus();				
+				$(this).next().focus();
 			});
 		});
 		$(".lg_id_pwd_w").find("input").each(function() {
@@ -356,7 +354,7 @@ var imTv = ({
 	// 고객센터
 	helpdeskList : function() {
 		var wrapperElement = $(".helpdesk_list");
-		
+
 		$(".hpdl_tit").on("click", function() {
 			var contentObjHeight = ($(this).next().find(".hpdl_cont_w").height()) + 23;
 
@@ -396,29 +394,26 @@ var imTv = ({
 			}
 		})
 	},
-	bindDialogs : function() {
-		this.dialogAction("a");
-		this.dialogAction("button");
-		this.dialogAction("input");
-	},
-	dialogAction : function(element) {
-		$(""+element+"").each(function() {
-			$(this).click(function() {				
-				if ($(this).attr("rel"))
-				{
-					var dialogRel = $(this).attr("rel");					
-				}
+	dialogAction : function() {
+		$("a, button, input").each(function() {
+			if ($(this).attr("rel")) {
+				$(this).click(function() {
+					if ($(this).attr("rel"))
+					{
+						var dialogRel = $(this).attr("rel");
+					}
 
-				if (dialogRel=="dialog")
-				{					
-					var dialogID = $(this).attr("href").replace("#","");
-					imTv.openDialogs(dialogID)
-				} else if (dialogRel=="dialogClose")
-				{
-					imTv.dialogClose();
-				}
-				return false;
-			});
+					if (dialogRel=="dialog")
+					{
+						var dialogID = $(this).attr("href").replace("#","");
+						imTv.openDialogs(dialogID)
+					} else if (dialogRel=="dialogClose")
+					{
+						imTv.dialogClose();
+					}
+					return false;
+				});
+			}
 		});
 	},
 	dialogClose : function() {
