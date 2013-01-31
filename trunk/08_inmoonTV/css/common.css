@@ -5,18 +5,18 @@
 
 html { .overflow:scroll; .overflow-x:auto; }
 html,body { margin:0; padding:0; color:#111; }
-body { color:#111; font-size:12px; font-family:'NanumGothic', '나눔고딕', sans-serif; background:#fff; -webkit-text-size-adjust:none; }
+body { color:#111; font-size:12px; font-family:'NanumGothic'; background:#fff; -webkit-text-size-adjust:none; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{ margin:0; padding:0; }
 table{ border-collapse:collapse; border-spacing:0; }
 fieldset,img{ border:0; }
 address,caption,cite,code,dfn,em,strong,th,var,i { font-style:normal; font-family:'NanumGothic'; font-weight:normal; }
 table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
 legend {position:absolute; top:0; left:0; display:inline;}
-strong { font-family:'NanumGothicBold'; }
-button { margin:0; padding:0; border:none; cursor:pointer; font-family:'NanumGothic', '나눔고딕',sans-serif; }
+strong { font-family:'NanumGothicBold';}
+button { margin:0; padding:0; border:none; cursor:pointer; font-family:'NanumGothic';}
 li{ list-style:none; }
 caption,th{ text-align:left; }
-h1,h2,h3,h4,h5,h6{ font-size:100%; font-family:'NanumGothic'; font-weight:normal; font-family:'NanumGothic', '나눔고딕',sans-serif;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-family:'NanumGothic'; font-weight:normal;}
 q:before,q:after{ content:''; }
 abbr,acronym { border:0; font-variant:normal; }
 hr { display:none; }
@@ -33,7 +33,7 @@ textarea,input { outline-color:-moz-use-text-color; outline-style:none; outline-
 textarea { resize:none; }
 input,textarea,select{ *font-size:100%; }
 label { cursor:pointer; }
-a, a:link {text-decoration:none; font-family:'나눔고딕', 'NanumGothic' ,sans-serif; }
+a, a:link {text-decoration:none; font-family:'NanumGothic';}
 a:hover, a:active {text-decoration:none; }
 article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { display: inline; }
@@ -472,8 +472,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 .reg_msg_ouc .reg_msg_btn {margin-top:225px;}
 
 /* 레이어 셋 */
-.layer_wrap {z-index:999; position:absolute; top:0; left:0; display:none; width:100%; height:100%;}
-	.layer_w {z-index:998; position:absolute; overflow:hidden; opacity:0;}
+.layer_wrap {z-index:999; position:absolute; top:0; left:0; display:block; width:100%; height:100%;}
+	.layer_w {z-index:998; position:absolute; overflow:hidden; opacity:100;}
 		.layer_in_w {position:relative; padding:0 20px;}
 		.layer_in {border:3px solid #333; border-radius:6px; background:#fff;}
 			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:1px solid #000;}
