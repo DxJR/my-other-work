@@ -157,9 +157,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		/* 컨텐츠 */
 		.ld_c_w {position:relative; clear:both;}
 		/* 정보 */
-		.ld_info_w {padding:11px 20px; font-size:13px; line-height:20px; color:#010101;}
-			.ld_info_w h5 {margin-top:40px; font-size:13px; font-family:'NanumGothicBold';}
-			.ld_info_w ol li.oli_f {margin-bottom:20px;}
+		#ldInfo, .ld_info_w {padding:11px 20px; font-size:13px; line-height:20px; color:#010101;}
+			.ld_info_w h5, #ldInfo h5 {margin-top:40px; font-size:13px; font-family:'NanumGothicBold';}
+			.ld_info_w ol li.oli_f, #ldInfo ol li.oli_f {margin-bottom:20px;}
 		.ld_book_w {position:relative; clear:both; margin-top:36px; padding:0 25px 20px 25px; font-size:12px; line-height:normal; color:#666; background:#e8e8e8;}
 			.ld_book_w h5 {clear:both; margin:0 0 9px 0; padding-top:18px; color:#000;}
 			.ld_book_in {position:relative; height:81px; margin-top:14px; padding:0 0 0 64px;}

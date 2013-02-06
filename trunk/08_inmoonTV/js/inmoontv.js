@@ -1,6 +1,5 @@
 $(window).ready(function() {
 	imTv.init();
-	$("#visualSwipe").css("overflow","visible");
 });
 
 var imTv = ({
@@ -8,6 +7,7 @@ var imTv = ({
 		if ($("#visualSwipe").length=="1")
 		{
 			this.swipeSlide("visualSwipe","visualHtmlHide","visualSwipeIndicator", "visual_by", "div")
+			$("#visualSwipe").css("overflow","visible");
 		}
 		if ($("#swipeLecture").length=="1")
 		{
