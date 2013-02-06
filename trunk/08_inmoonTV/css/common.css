@@ -75,7 +75,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 					.visual_by a img {width:100%;}
 					.visual_by a strong {z-index:3; position:absolute; bottom:0; display:block; width:100%; height:24px; padding-top:8px; font-family:'NanumGothic'; font-size:13px; font-family:'NanumGothic'; font-weight:normal; color:#fff; text-align:center;}
 					.visual_by a i {z-index:2; position:absolute; bottom:0; left:0; clear:both; display:block; width:100%; height:32px; opacity:0.5; background:#ce2127;}
-	.visual_wrap .dot_paging {position:absolute; bottom:0; height:16px;}
+	.visual_wrap .dot_paging {position:absolute; bottom:0; height:6px;}
 		.visual_wrap .dot_paging a {background-position:-110px top;}
 	/* 강의목록 */
 	.lecture_list_w {clear:both; margin-top:20px;}
@@ -153,7 +153,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.ld_tab li {float:left; width:50%;}
 					.ld_tab li a {display:block; height:25px; font-size:14px; color:#000; text-align:center; border-bottom:1px solid #444;}
 					.ld_tab li.this a {font-family:'NanumGothicBold';}
-			i.bdb {z-index:1; position:absolute; left:0; bottom:0; display:block; width:50%; height:2px; font:0/0 arial; overflow:hidden; background:#444;}
+			i.bdb {z-index:1; position:absolute; left:0; bottom:0; display:block; width:50%; height:6px; font:0/0 arial; overflow:hidden; background:#444;}
 		/* 컨텐츠 */
 		.ld_c_w {position:relative; clear:both;}
 		/* 정보 */
@@ -170,9 +170,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.ld_list_w {}
 			.ld_list_in {}
 				.ld_list_by {clear:both;}
-					.ld_list_in h5 {position:relative; padding:13px 43px 14px 49px; font-size:14px; font-family:'NanumGothicBold'; color:#000; cursor:pointer; border-bottom:1px solid #999;}
+					.ld_list_in h5 {position:relative; padding:13px 49px 14px 49px; font-size:14px; font-family:'NanumGothicBold'; color:#000; cursor:pointer; border-bottom:1px solid #999;}
 						.ld_list_in h5 em {position:absolute; top:13px; left:0; display:block; width:42px; font-family:'NanumGothicBold'; text-align:right;}
-						.ld_list_in h5 .icn {position:absolute; top:17px; right:10px; width:17px; height:11px; background-position:-140px -40px;}
+						.ld_list_in h5 .icn {position:absolute; top:17px; right:22px; width:17px; height:11px; background-position:-140px -40px;}
 					/* 현재선택 */
 					.ld_list_in h5.ld_list_in_this .icn {background-position:-160px -40px;}
 					.ld_list_d_w {clear:both; height:0; overflow:hidden;}
@@ -183,7 +183,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 									.ld_list_ct em {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
 									.ld_list_ct .ct, .ld_list_ct .time {position:absolute; top:16px; left:0; display:block; font-size:10px; color:#444444; text-align:right;}
 									.ld_list_ct .ct {width:45px;}
-									.ld_list_ct .time {width:36px; left:auto; right:0; text-align:left;}
+									.ld_list_ct .time {width:49px; left:auto; right:0; text-align:left;}
 								/* 현재선택일 때 */
 								.ld_list_ct_this {background:#e8e8e8;}
 							.ld_list_fnc {clear:both; height:0; font-size:0; text-align:center; overflow:hidden; background:#484848 url('../images/bg_ld_list_fnc_cnr.gif') 50px top no-repeat; background-size:12px 6px;}
@@ -191,11 +191,16 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 								.b_ld_fnc {display:block; width:46px; height:60px; font-size:11px; color:#ccc; text-align:center;}
 									.b_ld_fnc .icn {display:block; top:0; width:43px; height:42px; margin:0 auto 5px auto;}
 								.b_ldf_v .icn {background-position:left -60px;}
+								.b_ldf_v_on .icn {background-position:-180px -105px;}
 								.b_ldf_l .icn {background-position:-45px -60px;}
+								.b_ldf_l_on .icn {background-position:-180px -60px;}
 								.b_ldf_ln {z-index:10; position:relative;}
 									.b_ldf_ln .icn {background-position:-180px -60px;}
 								.b_ldf_r .icn {background-position:-90px -60px;}
+								.b_ldf_r_on .icn {background-position:-225px -60px;}
 								.b_ldf_b .icn {background-position:-135px -60px;}
+								.b_ldf_b_done {color:#777;}
+								.b_ldf_b_done .icn {background-position:-225px -105px;}
 							/* 담기중 */
 							.ld_list_fnc_ing {}
 								.ld_list_fnc_ing .b_ld_fnc {color:#3d3d3d;}
@@ -301,7 +306,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.mld_mode_delete #mlDownDeleteHead {clear:both; position:relative; margin-top:9px; font-size:0; text-align:center;}
 				.mld_mode_delete #mlDownDeleteHead strong {position:absolute; top:-23px; right:20px; font-size:12px; font-family:'NanumGothic'; font-weight:normal; color:#000;}
 					.mld_mode_delete #mlDownDeleteHead strong em {font-family:'NanumGothicBold'; color:#048daa;}
+					.mld_mode_delete #mlDownDeleteHead .ui-btn {display:inline;}
 					.mld_mode_delete #mlDownDeleteHead .btn_st1, .mld_mode_delete #mlDownDeleteHead .btn_st1_gray {width:138px; margin:0 2px;}
+
 			.mld_mode_delete #mlDownloadList .ld_list_d_l {padding-right:20px;}
 				.mld_mode_delete #mlDownloadList label {position:relative; display:block; overflow:hidden; background:url('../images/check.png') right 50% no-repeat; background-size:22px 22px;}
 				.mld_mode_delete #mlDownloadList .check {position:absolute; top:-9999em; left:-9999em;}
@@ -322,9 +329,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 
 /* 로그인 */
 #login {position:relative; border-top:5px solid #ce2127;}
-	#login h1 {position:relative; width:198px; height:10px; margin:30px auto 0 auto; overflow:hidden; background:url('../images/set_inmoontv.png') left -175px no-repeat; background-size:300px 300px;}
-	.lg_filed {position:relative; margin-top:60px; padding:0 45px; text-align:center;}
-		.ci_lg {top:0; width:202px; height:38px; background-position:left -190px;}
+	#login h1 {position:relative; width:121px; height:53px; margin:55px auto 0 auto; overflow:hidden; background:url('../images/set_inmoontv.png') left -175px no-repeat; background-size:300px 300px;}
+	.lg_filed {position:relative; margin-top:45px; padding:0 45px; text-align:center;}
+		.ci_lg {display:none;}
 		.lg_id_pwd_w {margin-top:15px; border:3px solid #a3a3a3; border-radius:6px; background:#fff;}
 			.lg_id_pwd_w p {position:relative;}
 				.lg_id_pwd_w label {position:absolute; top:19px; left:13px; font-size:14px; color:#888;}
@@ -332,6 +339,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.lg_id {border-bottom:1px solid #a3a3a3;}
 			.lg_btn {margin-top:10px;}
 				.lg_btn input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#ce2127;}
+	.lg_btm_fnc_w {position:fixed; left:0; bottom:35px; clear:both; width:100%;}
 	.lg_btm_fnc {clear:both; margin:60px auto 0 auto; padding-left:4px; font-size:0; text-align:center;}
 		.lg_btm_fnc li {display:inline-block; font-size:14px; text-align:right;}
 			.lg_btm_fnc li a {color:#cb202d;}
