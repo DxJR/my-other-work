@@ -153,7 +153,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.ld_tab li {float:left; width:50%;}
 					.ld_tab li a {display:block; height:25px; font-size:14px; color:#000; text-align:center; border-bottom:1px solid #444;}
 					.ld_tab li.this a {font-family:'NanumGothicBold';}
-			i.bdb {z-index:1; position:absolute; left:0; bottom:0; display:block; width:50%; height:6px; font:0/0 arial; overflow:hidden; background:#444;}
+			i.bdb {z-index:1; position:absolute; left:0; bottom:0; display:block; width:50%; height:3px; font:0/0 arial; overflow:hidden; background:#444;}
 		/* 컨텐츠 */
 		.ld_c_w {position:relative; clear:both;}
 		/* 정보 */
@@ -481,8 +481,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 
 /* 레이어 셋 */
 .layer_wrap {z-index:999; position:absolute; top:0; left:0; /*display:none;*/ display:block; width:100%; height:100%;}
-	.layer_w {z-index:998; position:absolute; overflow:hidden; /*opacity:0;*/opacity:100;}
-		.layer_in_w {position:relative; padding:0 20px;}
+	.layer_w {z-index:998; position:absolute; left:50%; margin-left:-141px; overflow:hidden; /*opacity:0;*/opacity:100;}
+		.layer_in_w {position:relative; width:281px;}
 		.layer_in {border:3px solid #333; border-radius:6px; background:#fff;}
 			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:1px solid #000;}
 			.layer_content {}
