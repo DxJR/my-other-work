@@ -13,7 +13,13 @@ var imTv = ({
 		{
 			this.swipeSlide("swipeLecture","swipeLectureHide","swipeLectureIndicator", "lecture_list", "ul")
 		}
-		this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
+		if ($("#ldContentSwipe").length=="1")
+		{
+			this.swipeSlide("ldContentSwipe","ldContentHtml","ldContentHtmlIndicator", "ld_c_w", "div")		
+			$("#ldContentHtml").remove();
+			$(".ld_c_w:eq(2)").attr("id","ldList");
+		}
+		//this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
 		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
 		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기
 		this.tabSelector(".hpd_tab_w","hpd_c_w"); //고객센터
@@ -58,8 +64,6 @@ var imTv = ({
 			numberOfPages: slides.length,
 			hastyPageFlip: true,
 		});
-
-		// Load initial data
 		for (i=0; i<3; i++) {
 			page = i==0 ? slides.length-1 : i-1;
 			el = document.createElement(''+createHtml+'');
@@ -77,8 +81,6 @@ var imTv = ({
 					el.innerHTML = slides[upcoming];
 				}
 			}
-
-
 			$("#"+wrapper+"-swipeview-slider>div").each(function(index) {
 				if ($(this).attr("class")=="swipeview-active")
 				{
@@ -88,7 +90,18 @@ var imTv = ({
 					$("#"+wrapper+"").css("height",""+$(this).find("."+pageHtml+"").height()+"");
 				}
 			});
-		});
+			if (wrapper=='ldContentSwipe')
+			{
+				var nowSwipePagingIndex =  $("#ldContentHtmlIndicator").find("a").filter(".this").index()
+				if (nowSwipePagingIndex=="0")
+				{
+					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
+				} else if (nowSwipePagingIndex=="1")
+				{
+					$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
+				}				
+			}
+		});		
 	},
 	// 탭선택
 	tabSelector : function(tabWrapper, tabContentClass) {
@@ -143,7 +156,7 @@ var imTv = ({
 
 		lectureTitle.each(function(index) {
 			$(this).bind("click", function() {
-				var listDetailWrap = $(".ld_list_d_w:eq("+index+")");
+				var listDetailWrap = $(this).next();
 
 				if (lectureListWrap.attr("id")!=="ldList" && $("#mlDownload").attr("class")=="ml_c_w mld_mode_delete")
 				{
@@ -154,15 +167,18 @@ var imTv = ({
 							listDetailWrap.removeClass("ld_list_d_w_open");
 							lectureTitle.removeClass("ld_list_in_this");
 							$(".ld_list_ct_this").removeClass("ld_list_ct_this");
+							$("#ldContentSwipe").css("height",""+$("#ldList").height()+"px");
 						}});
 					} else {
 						$(".ld_list_d_w_open").css("height","0").removeClass("ld_list_d_w_open");
 						$(".ld_list_fnc_open").css("height","0").removeClass("ld_list_fnc_open");
 						$(".ld_list_in_this").removeClass("ld_list_in_this");
 						$(".ld_list_ct_this").removeClass("ld_list_ct_this");
+						$("#ldContentSwipe").css("height",""+$(this).height() + $(this).next().find(".ld_list_d").height()+"px");
 						listDetailWrap.animate({"height" : ""+$(".ld_list_d:eq("+index+")").height()+"px"}, {duration:300, queue:true, complete:function() {
 							listDetailWrap.addClass("ld_list_d_w_open");
 							listDetailWrap.css("height","auto");
+							$("#ldContentSwipe").css("height",""+$("#ldList").height()+"px");
 						}});
 						$(this).addClass("ld_list_in_this");
 					}
@@ -176,18 +192,21 @@ var imTv = ({
 				{
 
 				} else {
-					var lectureFunctionWrap = $(".ld_list_fnc:eq("+index+")");
+					var lectureFunctionWrap = $(this).next();
 
 					if (lectureFunctionWrap.attr("class")=="ld_list_fnc ld_list_fnc_open") {
 						lectureFunctionWrap.animate({"height" : "0px"}, {duration:300, queue:true, complete:function() {
 							lectureFunctionWrap.removeClass("ld_list_fnc_open");
 							lectureFunctionWrap.prev().removeClass("ld_list_ct_this");
+							$("#ldContentSwipe").css("height",""+$("#ldList").height()+"px");
 						}});
 					} else {
 						$(".ld_list_fnc_open").css("height","0").removeClass("ld_list_fnc_open");
 						$(".ld_list_ct_this").removeClass("ld_list_ct_this");
+						$("#ldContentSwipe").css("height",""+$("#ldContentSwipe").height() + 100 +"px");
 						lectureFunctionWrap.animate({"height" : "100px"}, {duration:300, queue:true, complete:function() {
 							lectureFunctionWrap.addClass("ld_list_fnc_open");;
+							$("#ldContentSwipe").css("height",""+$("#ldList").height()+"px");
 						}});
 						lectureFunctionWrap.prev().addClass("ld_list_ct_this");
 					}
@@ -200,7 +219,8 @@ var imTv = ({
 			var lectureDownProgress = '<span id="ldProgress"><i style="width:45%;"></i></span>';
 
 			$(this).bind("click", function() {
-				if ($(this).attr("class")=="b_ld_fnc b_ldf_b")
+				console.log("aaa");
+				if ($(this).attr("class")=="b_ld_fnc b_ldf_b ui-link" || $(this).attr("class")=="b_ld_fnc ui-link b_ldf_b")
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
 						$(this).append(lectureDimd);
@@ -220,7 +240,7 @@ var imTv = ({
 		var scriptWrapper = $("#scriptWrapper");
 		$(".b_ldf_l").each(function(index) {
 			$(this).bind("click", function() {
-				if ($(this).attr("class")=="b_ld_fnc b_ldf_l")
+				if ($(this).attr("class")=="b_ld_fnc b_ldf_l ui-link" || $(this).attr("class")=="b_ld_fnc ui-link b_ldf_l")
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
 						$(this).append(lectureDimd);
