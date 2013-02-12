@@ -655,11 +655,11 @@ a.jqTransformChecked {background-position:left -20px;}
 /* 공간별 수납 제안*/
 .ctw_gss h2 {width:92px; height:14px; background-position:-145px -215px;}
 	/* 서브메뉴 */
-	.hs_gss_submenu {height:47px; margin-top:12px; border:1px solid #e2e2e2; border-width:1px 0;}
+	.hs_gss_submenu {clear:both; height:47px; margin-top:12px; border:1px solid #e2e2e2; border-width:1px 0;}
 		.hs_gss_submenu li {float:left; display:inline; border-right:1px solid #e2e2e2;}
 		.hs_gss_submenu li.last {border-right:0;}
-			.hs_gss_submenu li a {display:block; height:47px; text-align:center;}
-				.hs_gss_submenu li a span.ir {z-index:1; display:inline-block !important; height:12px; margin-top:18px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hs_gss.gif'); background-repeat:no-repeat;}
+			.hs_gss_submenu li a {display:block; height:47px; text-align:center; overflow:hidden;}
+				.hs_gss_submenu li a span.ir {z-index:1; display:block; height:12px; margin:18px auto 0 auto; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hs_gss.gif'); background-repeat:no-repeat;}
 			.hs_gss_submenu li a.gss_sm_01 {width:104px;}
 				.hs_gss_submenu li a.gss_sm_01 span.ir {width:44px; background-position:left top;}
 				.hs_gss_submenu li.this a.gss_sm_01 span.ir, .hs_gss_submenu li a.gss_sm_01:hover span.ir {background-position:left -15px;}
@@ -696,8 +696,8 @@ a.jqTransformChecked {background-position:left -20px;}
 			.hs_gss_c_sm ul {height:43px; border-bottom:1px solid #4aaae1;}
 				.hs_gss_c_sm ul li {float:left; display:inline; margin-right:1px;}
 				.hs_gss_c_sm ul li.last {margin-right:0;}
-					.hs_gss_c_sm ul li a {display:block; width:182px; height:43px; background:#f8f8f8;}
-						.hs_gss_c_sm ul li a span.ir {z-index:1; display:inline-block !important; height:12px; margin:15px 0 0 15px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hs_gss.gif'); background-repeat:no-repeat;}
+					.hs_gss_c_sm ul li a {display:block; width:182px; height:43px; overflow:hidden; background:#f8f8f8;}
+						.hs_gss_c_sm ul li a span.ir {z-index:1; display:block; height:12px; margin:15px 0 0 15px; text-indent:-9999em; font:0/0 arial; overflow:hidden; background-image:url('../images/set_hs_gss.gif'); background-repeat:no-repeat;}
 					.hs_gss_c_sm ul li a.this {width:180px; height:43px; border:1px solid #4aaae1; border-bottom:0; background:#fff;}
 					.hs_gss_c_sm ul li.hs_gss_csm_01 a span.ir {width:73px; background-position:left -30px;}
 					.hs_gss_c_sm ul li.hs_gss_csm_01 a.this span.ir {background-position:left -45px;}
@@ -812,3 +812,5 @@ a.jqTransformChecked {background-position:left -20px;}
 			.hsct_on_04 li.hsct_04 a {background-position:-550px -70px;}
 	/* 각 탭 컨텐츠 */
 	.hs_child_in_content {clear:both; width:730px; margin-top:20px; font:0/0 arial; overflow:hidden;}
+
+.hsm_ani_sh {display:none; width:526px; height:256px;}

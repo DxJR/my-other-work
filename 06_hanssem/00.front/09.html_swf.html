@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>*한샘* 가고 싶은 곳, 머물고 싶은 곳</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_main.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+		snbFunc.init();
+	});
+//]]>
+</script>
+</head>
+
+
+<div id="hsmAniSwf" class="hsm_ani_sh">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="526" height="256">
+		<param name="movie" value="../images/swf/joy.swf" />
+		<param name="quality" value="high" />
+		<param name="AllowScriptAccess" value="never" />
+		<param name="wmode" value="transparent" />
+		<object data="../images/swf/joy.swf" width="526" height="256" wmode="transparent" type="application/x-shockwave-flash" allowscriptaccess="never"></object>
+	</object>
+</div>
+<div id="hsmAniHtml" class="hsm_ani_sh">
+	<span style="font-size:20px; font-weight:bold; color:blue;">HTML 영역</span>
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		animationCheck("hsmAniSwf","hsmAniHtml");
+	});
+//]]>
+</script>
+
+
+</body>
+</html>
