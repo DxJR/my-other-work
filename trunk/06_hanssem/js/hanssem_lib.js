@@ -562,3 +562,15 @@ function hsGssC4Reset() {
 		$(this).find("img").attr("src",""+$(this).find("img").attr("src").replace("c4_over_","c4_")+"")
 	})
 }
+
+// swf 와 html 분기처리
+function animationCheck(swf, html) {
+	var aniSwf = $("#"+swf+"");
+	var aniHtml = $("#"+html+"");
+
+	if ($.browser.msie && $.browser.version <= "8.0") {
+		aniSwf.css("display","block");
+	} else {
+		aniHtml.css("display","block");
+	}
+}
