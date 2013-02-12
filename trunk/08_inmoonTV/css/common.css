@@ -481,20 +481,20 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 
 /* 레이어 셋 */
 .layer_wrap {z-index:999; position:absolute; top:0; left:0; display:none; width:100%; height:100%;}
-	.layer_w {z-index:998; position:absolute; left:50%; margin-left:-141px; overflow:hidden; opacity:100;}
+	.layer_w {z-index:998; position:absolute; left:50%; margin-left:-141px; overflow:hidden; opacity:0;}
 		.layer_in_w {position:relative; width:281px;}
-		.layer_in {border:3px solid #333; border-radius:6px; background:#fff;}
+		.layer_in {border:3px solid #333; border-radius:4px; background:#fff;}
 			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:1px solid #000;}
 			.layer_content {}
 				.lyr_msg {font-size:14px; color:#000;}
 			.layer_btn_w {clear:both; height:45px; font-size:0; border-top:1px solid #000; background:#444;}
-				.b_lyr_g, .b_lyr_b {float:left; width:100%; height:45px; font-size:14px; border:0; border-radius:0 0 5px 5px;  text-align:center;}
+				.b_lyr_g, .b_lyr_b {float:left; width:100%; height:45px; font-size:14px; border:0; border-radius:0 0 4px 4px;  text-align:center;}
 				.b_lyr_g {color:#404040; background:#f1f1f1;}
 				.b_lyr_b {color:#ddd; background:#444;}
 			.lyr_b_2ea {}
 				.lyr_b_2ea .b_lyr_g, .lyr_b_2ea .b_lyr_b {width:50%;}
-				.lyr_b_2ea button:first-child {border-right:1px solid #333; border-radius:0 0 0 5px;}
-				.lyr_b_2ea button:last-child {border-radius:0 0 5px 0;}
+				.lyr_b_2ea button:first-child {border-right:1px solid #333; border-radius:0 0 0 4px;}
+				.lyr_b_2ea button:last-child {border-radius:0 0 4px 0;}
 	.dimd {z-index:997; clear:both; position:absolute; top:0; left:0; width:100%; height:100%; /*opacity:0;*/ opacity:100; background:#000;}
 /* 인문북스 사러가기 */
 .lyr_book_list {width:200px; margin:5px auto 29px auto;}

@@ -15,9 +15,11 @@ var imTv = ({
 		}
 		if ($("#ldContentSwipe").length=="1")
 		{
-			this.swipeSlide("ldContentSwipe","ldContentHtml","ldContentHtmlIndicator", "ld_c_w", "div")		
+			this.swipeSlide("ldContentSwipe","ldContentHtml","ldContentHtmlIndicator", "ld_c_w", "div")
 			$("#ldContentHtml").remove();
+			$(".ld_c_w:eq(1)").attr("id","ldInfo");
 			$(".ld_c_w:eq(2)").attr("id","ldList");
+			$("#ldContentSwipe").css("height",""+ (Number($("#ldContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ld_c_w").height()) + Number(30)) +"px");
 		}
 		//this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
 		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
@@ -62,7 +64,7 @@ var imTv = ({
 		});
 		carousel = new SwipeView('#'+wrapper+'', {
 			numberOfPages: slides.length,
-			hastyPageFlip: true,
+			hastyPageFlip: true
 		});
 		for (i=0; i<3; i++) {
 			page = i==0 ? slides.length-1 : i-1;
@@ -71,9 +73,9 @@ var imTv = ({
 			el.innerHTML = slides[page];
 			carousel.masterPages[i].appendChild(el)
 		}
-		$("#"+wrapper+"").css("height",""+$("#"+wrapper+"-swipeview-slider>div").filter(".swipeview-active").find("."+pageHtml+"").height()+"");
+		$("#"+wrapper+"").css("height",""+(Number($("#"+wrapper+"-swipeview-slider>div").filter(".swipeview-active").find("."+pageHtml+"").height()) + Number(30))+"px");
 		carousel.onFlip(function () {
-			var el, upcoming, i;
+			var el , upcoming, i;
 			for (i=0; i<3; i++) {
 				upcoming = carousel.masterPages[i].dataset.upcomingPageIndex;
 				if (upcoming != carousel.masterPages[i].dataset.pageIndex) {
@@ -87,7 +89,7 @@ var imTv = ({
 					nowIndex = $(this).attr("data-page-index");
 					$("#"+indicator+" a").removeClass("this");
 					$("#"+indicator+" a:eq("+nowIndex+")").addClass("this");
-					$("#"+wrapper+"").css("height",""+$(this).find("."+pageHtml+"").height()+"");
+					$("#"+wrapper+"").css("height",""+(Number($(this).find("."+pageHtml+"").height()) + Number(30))+"px");
 				}
 			});
 			if (wrapper=='ldContentSwipe')
@@ -99,9 +101,14 @@ var imTv = ({
 				} else if (nowSwipePagingIndex=="1")
 				{
 					$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
-				}				
+				}
 			}
-		});		
+		});
+		$(".ld_tab").find("a").each(function(index) {
+			$(this).bind("click", function() {
+				carousel.goToPage(index);
+			});
+		});
 	},
 	// 탭선택
 	tabSelector : function(tabWrapper, tabContentClass) {
@@ -219,7 +226,6 @@ var imTv = ({
 			var lectureDownProgress = '<span id="ldProgress"><i style="width:45%;"></i></span>';
 
 			$(this).bind("click", function() {
-				console.log("aaa");
 				if ($(this).attr("class")=="b_ld_fnc b_ldf_b ui-link" || $(this).attr("class")=="b_ld_fnc ui-link b_ldf_b")
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
@@ -410,7 +416,7 @@ var imTv = ({
 				var screenHeight = screen.height;
 				var screenWidth = $(window).width();
 				var objPosition = parseInt((screenHeight - objHeight)/2);
-				dialogObj.css({"width":""+screenWidth+"px", "top":""+objPosition+"px", "opacity":"1"}).addClass("lyrOpenThis");
+				dialogObj.css({"width":""+screenWidth+"px", "top":""+objPosition+"px", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
 			}
 		})
 	},
@@ -437,7 +443,7 @@ var imTv = ({
 		});
 	},
 	dialogClose : function() {
-		$(".lyrOpenThis").css("opacity","0");
+		$(".lyrOpenThis").css({"opacity":"0","zIndex":"995"});
 		$(".dimd").animate({"opacity" : "0"}, {duration:300, queue:true, complete:function() {
 				$(".layer_wrap").css("display","none");
 			}
