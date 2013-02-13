@@ -64,10 +64,18 @@ var imTv = ({
 			$(this).attr("rel",""+index+"");
 			slides.push($(this).html());
 		});
-		carousel = new SwipeView('#'+wrapper+'', {
-			numberOfPages: slides.length,
-			hastyPageFlip: true
-		});
+		if (wrapper="ldContentSwipe") {
+			carousel = new SwipeView('#'+wrapper+'', {
+				numberOfPages: slides.length,
+				hastyPageFlip: true,
+				loop:false
+			});
+		} else {
+			carousel = new SwipeView('#'+wrapper+'', {
+				numberOfPages: slides.length,
+				hastyPageFlip: true
+			});
+		}
 		for (i=0; i<3; i++) {
 			page = i==0 ? slides.length-1 : i-1;
 			el = document.createElement(''+createHtml+'');
