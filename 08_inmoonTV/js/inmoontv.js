@@ -64,7 +64,7 @@ var imTv = ({
 			$(this).attr("rel",""+index+"");
 			slides.push($(this).html());
 		});
-		if (wrapper="ldContentSwipe") {
+		if (wrapper=="ldContentSwipe") {
 			carousel = new SwipeView('#'+wrapper+'', {
 				numberOfPages: slides.length,
 				hastyPageFlip: true,
