@@ -183,7 +183,7 @@ var SwipeView = (function(window, document) {
       p = p < 0 ? 0 : p > this.options.numberOfPages - 1 ? this.options.numberOfPages - 1 : p;
       this.page = p;
       this.pageIndex = p;
-      this.slider.style[transitionDuration] = '0s';
+      this.slider.style[transitionDuration] = '432ms';
       this.__pos(-p * this.pageWidth);
 
       this.currentMasterPage = (this.page + 1) - Math.floor((this.page + 1) / 3) * 3;
@@ -217,6 +217,19 @@ var SwipeView = (function(window, document) {
       }
 
       this.__flip();
+
+		if ($("#ldContentSwipe").length=="1")
+		{
+			if (this.currentMasterPage=="1")
+			{
+				$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
+			} else if (this.currentMasterPage=="2")
+			{
+				$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
+			}
+			$("#ldContentSwipe").css("height",""+ (Number($("#ldContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ld_c_w").height()) + Number(30)) +"px");
+		}
+
     },
 
     next: function() {
