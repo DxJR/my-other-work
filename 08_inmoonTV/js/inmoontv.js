@@ -1,5 +1,7 @@
 $(window).ready(function() {
 	imTv.init();
+	$(".ui-link").removeClass("ui-link");
+	$(".ui-btn-hidden").removeClass("ui-btn-hidden");
 });
 
 var imTv = ({
@@ -226,7 +228,7 @@ var imTv = ({
 			var lectureDownProgress = '<span id="ldProgress"><i style="width:45%;"></i></span>';
 
 			$(this).bind("click", function() {
-				if ($(this).attr("class")=="b_ld_fnc b_ldf_b ui-link" || $(this).attr("class")=="b_ld_fnc ui-link b_ldf_b")
+				if ($(this).attr("class")=="b_ld_fnc b_ldf_b")
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
 						$(this).append(lectureDimd);
@@ -246,13 +248,12 @@ var imTv = ({
 		var scriptWrapper = $("#scriptWrapper");
 		$(".b_ldf_l").each(function(index) {
 			$(this).bind("click", function() {
-				if ($(this).attr("class")=="b_ld_fnc b_ldf_l ui-link" || $(this).attr("class")=="b_ld_fnc ui-link b_ldf_l")
+				if ($(this).attr("class")=="b_ld_fnc b_ldf_l")
 				{
 					$(".ld_list_fnc_open").find("li").each(function() {
 						$(this).append(lectureDimd);
 					});
 					$(this).addClass("b_ldf_ln").removeClass("b_ldf_l");
-
 					scriptWrapper.animate({"bottom" : "0"}, {duration:300, queue:true, complete:function() {
 						}
 					});
@@ -414,9 +415,8 @@ var imTv = ({
 				var dialogObj = $("#"+obj+"");
 				var objHeight = dialogObj.height();
 				var screenHeight = screen.height;
-				var screenWidth = $(window).width();
 				var objPosition = parseInt((screenHeight - objHeight)/2);
-				dialogObj.css({"width":""+screenWidth+"px", "top":""+objPosition+"px", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
+				dialogObj.css({"top":""+objPosition+"px", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
 			}
 		})
 	},
