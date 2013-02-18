@@ -84,7 +84,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.lecture_notice strong {font-family:'NanumGothic'; font-weight:normal;}
 			.lecture_swipe_w {position:relative; width:100%; overflow:hidden; font-size:0;}
 				.lecture_scroll {width:5000%; font-size:0; overflow:hidden;}
-					.lecture_list {display:inline-block; border-top:1px solid #ddd;}
+					.lecture_list {width:100%; display:inline-block; border-top:1px solid #ddd;}
 						.lecture_list li {border-bottom:1px solid #ddd;}
 							.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
 								.lecture_title {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
@@ -276,7 +276,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 /* 내강의 */
 	/* 탭메뉴 */
 	.ml_tab_w {position:relative; margin-top:20px;}
-		.ml_c_w {display:none;}
+		.ml_tab_w .ld_tab li, .ml_tab_w .bdb {width:33.3%;}
+		.ml_c_w {}
 			.ml_c_w .lecture_list {border-top:0;}
 				.ml_c_w .lecture_list a {min-height:54px; padding:13px 27px 13px 71px;}
 					.ml_c_w .lecture_list a img, .ml_c_w .lecture_list a i.round {top:18px; left:20px;}
@@ -339,7 +340,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.lg_id {border-bottom:1px solid #a3a3a3;}
 			.lg_btn {margin-top:10px;}
 				.lg_btn input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#ce2127;}
-	.lg_btm_fnc_w {position:fixed; left:0; bottom:35px; clear:both; width:100%;}
+	.lg_btm_fnc_w {clear:both; width:100%;}
 	.lg_btm_fnc {clear:both; margin:60px auto 0 auto; padding-left:4px; font-size:0; text-align:center;}
 		.lg_btm_fnc li {display:inline-block; font-size:14px; text-align:right;}
 			.lg_btm_fnc li a {color:#cb202d;}
