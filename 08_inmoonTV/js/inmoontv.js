@@ -2,6 +2,9 @@ $(window).ready(function() {
 	imTv.init();
 	$(".ui-link").removeClass("ui-link");
 	$(".ui-btn-hidden").removeClass("ui-btn-hidden");
+	$(document).bind( "pagebeforeload", function( event, data ){
+		data.deferred.resolve( data.absUrl, data.options, page );
+	});
 });
 
 var imTv = ({
