@@ -23,8 +23,17 @@ var imTv = ({
 			$(".ld_c_w:eq(2)").attr("id","ldList");
 			$("#ldContentSwipe").css("height",""+ (Number($("#ldContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ld_c_w").height()) + Number(30)) +"px");
 		}
+		if ($("#mlContentSwipe").length=="1")
+		{
+			this.swipeSlide("mlContentSwipe","mlContentHtml","mlContentHtmlIndicator", "ml_c_w", "div")
+			$("#mlContentHtml").remove();
+			$(".ml_c_w:eq(0)").attr("id","mlList");
+			$(".ml_c_w:eq(1)").attr("id","mlIngList");
+			$(".ml_c_w:eq(2)").attr("id","mlDownload");
+			$("#mlContentSwipe").css("height",""+ (Number($("#mlContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ml_c_w").height()) + Number(30)) +"px");
+		}
 		//this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
-		this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
+		//this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
 		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기
 		this.tabSelector(".hpd_tab_w","hpd_c_w"); //고객센터
 		this.lectureListDetailView();
@@ -64,7 +73,7 @@ var imTv = ({
 			$(this).attr("rel",""+index+"");
 			slides.push($(this).html());
 		});
-		if (wrapper=="ldContentSwipe") {
+		if (wrapper=="ldContentSwipe" ) {
 			carousel = new SwipeView('#'+wrapper+'', {
 				numberOfPages: slides.length,
 				hastyPageFlip: true,
@@ -111,6 +120,20 @@ var imTv = ({
 				} else if (nowSwipePagingIndex=="1")
 				{
 					$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
+				}
+			}
+			if (wrapper=='mlContentSwipe')
+			{
+				var nowSwipePagingIndex =  $("#mlContentHtmlIndicator").find("a").filter(".this").index()
+				if (nowSwipePagingIndex=="0")
+				{
+					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
+				} else if (nowSwipePagingIndex=="1")
+				{
+					$(".bdb").animate({"left" : "33.3%"}, {duration:300, queue:true});
+				} else if (nowSwipePagingIndex=="2")
+				{
+					$(".bdb").animate({"left" : "66.6%"}, {duration:300, queue:true});
 				}
 			}
 		});
