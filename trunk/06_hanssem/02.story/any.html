@@ -244,47 +244,72 @@
 							<button type="button" class="gbtn b_hscva_p b_arr_03" rel="b_hscva_p"><span class="ir">자세히보기</span></button>
 							<img src="../images/hscv_aw03_03.png" width="276" height="121" class="hscv_aw_i hscv_aw_i_03" alt="양방향형 손잡이" />
 						</div>
+						<!-- 인디케이터 -->
+						<ul id="hscvIndicator" class="hscvi_any">
+							<li><a href="#" class="this"><span class="ir">자녀방 1</span></a></li>
+							<li><a href="#"><span class="ir">자녀방 2</span></a></li>
+							<li><a href="#"><span class="ir">자녀방 3</span></a></li>
+						</ul>
 					</div>
 					<div class="clear"></div>
 					<!-- 비주얼 썸네일 -->
 					<img src="../images/hs_child_any_vis_s.jpg" width="369" height="112" class="hscv_s" alt="자녀방 인테리어 썸네일" usemap="#hscvs"/>
-					<map name="hscvs" id="hscvMap">
-					    <area shape="rect" coords="0,17,120,94" href="#temp" alt="" />
-					    <area shape="rect" coords="122,28,240,105" href="#temp" alt="" />
-					    <area shape="rect" coords="245,8,364,86" href="#temp" alt="" />
-					</map>
+					<!-- 이미지 버튼영역 -->
+					<ul class="hsvc_btn_list" id="hscvThumb">
+						<li class="hsvc_b_01"><a href="#"><img src="../images/dimd_hscav.png" width="114" height="74" alt="" /></a></li>
+						<li class="hsvc_b_02"><a href="#"><img src="../images/dimd_hscav.png" width="114" height="74" alt="" /></a></li>
+						<li class="hsvc_b_03"><a href="#"><img src="../images/dimd_hscav.png" width="114" height="74" alt="" /></a></li>
+					</ul>
 					<script type="text/javascript">
 						function hscVisualHover() {
 							var hscVisualWrap = $("#hsChildVisual");
 							var hscVisualObj = hscVisualWrap.find("img");
-							var hscMap = $("#hscvMap").find("area");
+							var hscMapWrap = $("#hscvThumb")
+							var hscMap = hscMapWrap.find("a");
 							var hscActionWrap = $("#hsChildVAdd");
+							var hscvIndicator = $("#hscvIndicator");
+							var hscvIndicatorBtn = hscvIndicator.find("a");
 
 							hscVisualObj.first().attr("class","this");
 							hscActionWrap.find(".hscv_aw").first().addClass("hscv_aw_this").css("display","block");
 							hscVisualActionDetail();
+							hscMap.first().find("img").css("opacity","0");
 
 							hscMap.each(function(index) {
 								$(this).bind("click", function() {
-									var mscMapAreaIndex = index+1;
-									var hscNowThis = hscVisualObj.filter(".this");
-									var hscNowThisIndex = hscNowThis.attr("id").replace("hscvObj0","");
-									if (mscMapAreaIndex!=hscNowThisIndex)
-									{
-										$("#hscvObj0"+mscMapAreaIndex+"").attr("class","before");
-										hscNowThis.after($("#hscvObj0"+mscMapAreaIndex+""));
-										hscNowThis.animate({opacity:'0'}, { duration: 300, queue: true, complete: function () {
-											hscNowThis.removeClass("this");
-											$("#hscvObj0"+mscMapAreaIndex+"").attr("class","this");
-											hscNowThis.css("opacity","100");
-											$(".hscv_aw_this").find("button").removeClass("b_hscva_m").addClass("b_hscva_p").attr("rel","b_hscva_p");
-											$(".hscv_aw_this").removeClass("hscv_aw_this").css("display","none");
-											hscActionWrap.find(".hscv_aw_0"+(index+1)+"").addClass("hscv_aw_this").css("display","block");
-											hscVisualActionDetail();
-										}});
-									}
+									hscvAction(index);
 								})
 							})
+
+							hscvIndicatorBtn.each(function(index) {
+								$(this).bind("click", function() {
+									hscvAction(index);
+								})
+							})
+
+							var hscvAction = function(index) {
+								var mscMapAreaIndex = index+1;
+								var hscNowThis = hscVisualObj.filter(".this");
+								var hscNowThisIndex = hscNowThis.attr("id").replace("hscvObj0","");
+								if (mscMapAreaIndex!=hscNowThisIndex)
+								{
+									hscvIndicator.find("a").removeClass("this");
+									hscvIndicator.find("a:eq("+index+")").addClass("this");
+									hscMap.find("img").css("opacity","100");
+									hscMapWrap.find("img:eq("+index+")").css("opacity","0");
+									$("#hscvObj0"+mscMapAreaIndex+"").attr("class","before");
+									hscNowThis.after($("#hscvObj0"+mscMapAreaIndex+""));
+									hscNowThis.animate({opacity:'0'}, { duration: 300, queue: true, complete: function () {
+										hscNowThis.removeClass("this");
+										$("#hscvObj0"+mscMapAreaIndex+"").attr("class","this");
+										hscNowThis.css("opacity","100");
+										$(".hscv_aw_this").find("button").removeClass("b_hscva_m").addClass("b_hscva_p").attr("rel","b_hscva_p");
+										$(".hscv_aw_this").removeClass("hscv_aw_this").css("display","none");
+										hscActionWrap.find(".hscv_aw_0"+(index+1)+"").addClass("hscv_aw_this").css("display","block");
+										hscVisualActionDetail();
+									}});
+								}
+							}
 						};
 						function hscVisualActionDetail() {
 							var hscvAdWrap = $(".hscv_aw_this");
