@@ -814,3 +814,16 @@ a.jqTransformChecked {background-position:left -20px;}
 	.hs_child_in_content {clear:both; width:730px; margin-top:20px; font:0/0 arial; overflow:hidden;}
 
 .hsm_ani_sh {display:none; width:526px; height:256px;}
+
+#hscvIndicator {z-index:9999; position:absolute; bottom:19px; right:27px; clear:both; font-size:0;}
+	#hscvIndicator li {display:inline-block; margin-left:1px;}
+		#hscvIndicator li a {display:block; width:50px; height:10px; font:0/0 arial; overflow:hidden;}
+
+.hscvi_any li a {background-color:#e9e9e9;}
+.hscvi_any li a.this {background-color:#ec86bd;}
+
+.hsvc_btn_list {z-index:3; position:relative; clear:both; margin:19px 0 -93px 343px; font-size:0;}
+	.hsvc_btn_list li {position:relative; display:inline-block; margin-left:9px;}
+	.hsvc_btn_list li.hsvc_b_02 {top:12px;}
+	.hsvc_btn_list li.hsvc_b_03 {top:-7px;}
+		.hsvc_btn_list li a {display:block; width:114px; height:74px; font:0/0 arial; overflow:hidden;}
