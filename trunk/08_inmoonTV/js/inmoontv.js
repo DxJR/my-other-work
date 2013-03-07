@@ -5,22 +5,23 @@ $(window).ready(function() {
 	$(document).bind( "pagebeforeload", function( event, data ){
 		data.deferred.resolve( data.absUrl, data.options, page );
 	});
+	$(".lyr_b_2ea").find("button:eq(0)").addClass("lyr_b_first");
 });
 
 var imTv = ({
 	init : function() {
 		if ($("#visualSwipe").length=="1")
 		{
-			this.swipeSlide("visualSwipe","visualHtmlHide","visualSwipeIndicator", "visual_by", "div")
+			this.swipeSlide("visualSwipe","visualHtmlHide","visualSwipeIndicator", "visual_by", "div");
 			$("#visualSwipe").css("overflow","visible");
 		}
 		if ($("#swipeLecture").length=="1")
 		{
-			this.swipeSlide("swipeLecture","swipeLectureHide","swipeLectureIndicator", "lecture_list", "ul")
+			this.swipeSlide("swipeLecture","swipeLectureHide","swipeLectureIndicator", "lecture_list", "ul");
 		}
 		if ($("#ldContentSwipe").length=="1")
 		{
-			this.swipeSlide("ldContentSwipe","ldContentHtml","ldContentHtmlIndicator", "ld_c_w", "div")
+			this.swipeSlide("ldContentSwipe","ldContentHtml","ldContentHtmlIndicator", "ld_c_w", "div");
 			$("#ldContentHtml").remove();
 			$(".ld_c_w:eq(1)").attr("id","ldInfo");
 			$(".ld_c_w:eq(2)").attr("id","ldList");
@@ -28,7 +29,7 @@ var imTv = ({
 		}
 		if ($("#mlContentSwipe").length=="1")
 		{
-			this.swipeSlide("mlContentSwipe","mlContentHtml","mlContentHtmlIndicator", "ml_c_w", "div")
+			this.swipeSlide("mlContentSwipe","mlContentHtml","mlContentHtmlIndicator", "ml_c_w", "div");
 			$("#mlContentHtml").remove();
 			$(".ml_c_w:eq(0)").attr("id","mlList");
 			$(".ml_c_w:eq(1)").attr("id","mlIngList");
@@ -93,7 +94,7 @@ var imTv = ({
 			el = document.createElement(''+createHtml+'');
 			el.setAttribute('class',pageHtml);
 			el.innerHTML = slides[page];
-			carousel.masterPages[i].appendChild(el)
+			carousel.masterPages[i].appendChild(el);
 		}
 		$("#"+wrapper+"").css("height",""+(Number($("#"+wrapper+"-swipeview-slider>div").filter(".swipeview-active").find("."+pageHtml+"").height()) + Number(30))+"px");
 		carousel.onFlip(function () {
@@ -116,7 +117,7 @@ var imTv = ({
 			});
 			if (wrapper=='ldContentSwipe')
 			{
-				var nowSwipePagingIndex =  $("#ldContentHtmlIndicator").find("a").filter(".this").index()
+				var nowSwipePagingIndex =  $("#ldContentHtmlIndicator").find("a").filter(".this").index();
 				if (nowSwipePagingIndex=="0")
 				{
 					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
@@ -127,7 +128,7 @@ var imTv = ({
 			}
 			if (wrapper=='mlContentSwipe')
 			{
-				var nowSwipePagingIndex =  $("#mlContentHtmlIndicator").find("a").filter(".this").index()
+				var nowSwipePagingIndex =  $("#mlContentHtmlIndicator").find("a").filter(".this").index();
 				if (nowSwipePagingIndex=="0")
 				{
 					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
@@ -227,7 +228,7 @@ var imTv = ({
 					}
 					return false;
 				}
-			})
+			});
 		});
 		lectureControlTitle.each(function(index) {
 			$(this).bind("click", function() {
@@ -280,25 +281,25 @@ var imTv = ({
 		});
 		// 듣기 선택일 때
 		var scriptWrapper = $("#scriptWrapper");
-		$(".b_ldf_l").each(function(index) {
-			$(this).bind("click", function() {
-				if ($(this).attr("class")=="b_ld_fnc b_ldf_l")
-				{
-					$(".ld_list_fnc_open").find("li").each(function() {
-						$(this).append(lectureDimd);
-					});
-					$(this).addClass("b_ldf_ln").removeClass("b_ldf_l");
-					scriptWrapper.animate({"bottom" : "0"}, {duration:300, queue:true, complete:function() {
-						}
-					});
-				} else {
-					$(".lectureDimd").remove();
-					$(this).addClass("b_ldf_l").removeClass("b_ldf_ln");
-					scriptWrapper.animate({"bottom" : "-70px"}, {duration:300, queue:true});
-				}
-				return false;
-			});
-		});
+//		$(".b_ldf_l").each(function(index) {
+//			$(this).bind("click", function() {
+//				if ($(this).attr("class")=="b_ld_fnc b_ldf_l")
+//				{
+//					$(".ld_list_fnc_open").find("li").each(function() {
+//						$(this).append(lectureDimd);
+//					});
+//					$(this).addClass("b_ldf_ln").removeClass("b_ldf_l");
+//					scriptWrapper.animate({"bottom" : "0"}, {duration:300, queue:true, complete:function() {
+//						}
+//					});
+//				} else {
+//					$(".lectureDimd").remove();
+//					$(this).addClass("b_ldf_l").removeClass("b_ldf_ln");
+//					scriptWrapper.animate({"bottom" : "-70px"}, {duration:300, queue:true});
+//				}
+//				return false;
+//			});
+//		});
 		// 스크립트 컨트롤
 		$(".b_s_close").click(function() {
 			scriptWrapper.animate({"bottom" : "-70px"}, {duration:300, queue:true});
@@ -448,11 +449,11 @@ var imTv = ({
 		$(".dimd").animate({"opacity" : "0.6"}, {duration:300, queue:true, complete:function() {
 				var dialogObj = $("#"+obj+"");
 				var objHeight = dialogObj.height();
-				var screenHeight = screen.height;
-				var objPosition = parseInt((screenHeight - objHeight)/2);
+				var docHeight = $(window).height();	//$(document).height();	//screen.height;
+				var objPosition = parseInt((docHeight - objHeight)/2);
 				dialogObj.css({"top":""+objPosition+"px", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
 			}
-		})
+		});
 	},
 	dialogAction : function() {
 		$("a, button, input").each(function() {
@@ -466,7 +467,7 @@ var imTv = ({
 					if (dialogRel=="dialog")
 					{
 						var dialogID = $(this).attr("href").replace("#","");
-						imTv.openDialogs(dialogID)
+						imTv.openDialogs(dialogID);
 					} else if (dialogRel=="dialogClose")
 					{
 						imTv.dialogClose();
@@ -482,5 +483,72 @@ var imTv = ({
 				$(".layer_wrap").css("display","none");
 			}
 		});
-	}
+	},
+	/** 은진추가 **/
+	getContentsUrl :function(isMovie, lecture_code, class_seq, section_seq) {
+		var target_url = 'http://vod-inmoontv.vod.cdn.cloudn.co.kr/';
+		
+		//강의별 folder 구하기
+		target_url += lecture_code.substr(0,4) + '/';
+		target_url += lecture_code + '/' + lecture_code + '_';
+		//class_seq -> 01 formatting
+		var temp = '00'.concat(class_seq);
+		temp = temp.substr(temp.length-2);
+		target_url += temp;
+		
+		//section_seq -> 01 formatting
+		temp = '00'.concat(section_seq);
+		temp = temp.substr(temp.length-2);
+		target_url += temp;
+		
+		//파일 확장자 처리
+		target_url += (isMovie) ? '.im4' : '.imi';
+
+		return target_url;
+	},
+	/**
+	 * File download
+	 * @param member_code
+	 * @param lecture_code
+	 * @param class_seq
+	 * @param section_seq
+	 */
+	goDownload : function(member_code, lecture_code, class_seq, section_seq) {
+		var urlMovie = null;
+		var urlScript = null;
+		
+		urlMovie = this.getContentsUrl(true, lecture_code, class_seq, section_seq);
+		urlScript = this.getContentsUrl(false, lecture_code, class_seq, section_seq);
+		
+		// android에 Play 명령(download로그는 아래에서 남기기~)
+		window.Android.startDownload(urlMovie, urlScript);
+	},
+	/**
+	 * Player 구동
+	 * 
+	 * play_type : 플레이어 구분   
+	 *             "Video" = 보기, "Audio" = 듣기, "Text" = 보기, "Trailer" = 1교시무료 또는 예고편(자막null처리)
+	 * filename  : 컨텐츠파일이름           
+	 */
+	goPlay : function(play_type, member_code, lecture_code, class_seq, section_seq) {
+		var urlMovie = null;
+		var urlScript = null;
+		
+		urlMovie = this.getContentsUrl(true, lecture_code, class_seq, section_seq);
+		urlScript = this.getContentsUrl(false, lecture_code, class_seq, section_seq);
+		
+		// android에 Play 명령(play로그는 아래에서 남기기~)
+		window.Android.startPlayer(play_type, urlMovie, urlScript);
+	},
+	isPC : function() {
+		var filter = "win16|win32|win64|mac";
+		if( navigator.platform )
+		{
+			if( filter.indexOf(navigator.platform.toLowerCase(), 0)<0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}	
 });
