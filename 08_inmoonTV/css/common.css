@@ -1,22 +1,21 @@
 @charset "utf-8";
 
-@font-face{font-family:'NanumGothic'; src:url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothic.woff') format('woff'), url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothic.ttf') format('truetype');}
-@font-face{font-family:'NanumGothicBold'; src:url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothicBold.woff') format('woff'), url('http://inmoontv.iptime.org:8080/inmoonTV_20130127/font/NanumGothicBold.ttf') format('truetype');}
+@import "webfont.css";
 
 html { .overflow:scroll; .overflow-x:auto; }
 html,body { margin:0; padding:0; color:#111; }
-body { color:#111; font-size:12px; font-family:'NanumGothic'; background:#fff; -webkit-text-size-adjust:none; }
+body { color:#111; font-size:12px; font-family:'Nanum Gothic', sans-serif; background:#fff; -webkit-text-size-adjust:none; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{ margin:0; padding:0; }
 table{ border-collapse:collapse; border-spacing:0; }
 fieldset,img{ border:0; }
-address,caption,cite,code,dfn,em,strong,th,var,i { font-style:normal; font-family:'NanumGothic'; font-weight:normal; }
+address,caption,cite,code,dfn,em,strong,th,var,i { font-style:normal; font-family:'Nanum Gothic', sans-serif; font-weight:normal; }
 table caption, legend {width:0; height:0; text-indent:-9999em; font:0/0 arial; overflow:hidden; visibility:hidden;}
 legend {position:absolute; top:0; left:0; display:inline;}
-strong { font-family:'NanumGothicBold';}
-button { margin:0; padding:0; border:none; cursor:pointer; font-family:'NanumGothic';}
+strong { font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
+button { margin:0; padding:0; border:none; cursor:pointer; font-family:'Nanum Gothic', sans-serif;}
 li{ list-style:none; }
 caption,th{ text-align:left; }
-h1,h2,h3,h4,h5,h6{ font-size:100%; font-family:'NanumGothic'; font-weight:normal;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
 q:before,q:after{ content:''; }
 abbr,acronym { border:0; font-variant:normal; }
 hr { display:none; }
@@ -33,7 +32,7 @@ textarea,input { outline-color:-moz-use-text-color; outline-style:none; outline-
 textarea { resize:none; }
 input,textarea,select{ *font-size:100%; }
 label { cursor:pointer; }
-a, a:link {text-decoration:none; font-family:'NanumGothic';}
+a, a:link {text-decoration:none; font-family:'Nanum Gothic', sans-serif;}
 a:hover, a:active {text-decoration:none; }
 article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { display: inline; }
@@ -72,8 +71,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.visual_scroll {width:5000%; height:155px;}
 			.visual_by {float:left; width:280px; height:155px; padding:0 5px;}
 				.visual_by a {position:relative; display:block; font-size:0;}
-					.visual_by a img {width:100%;}
-					.visual_by a strong {z-index:3; position:absolute; bottom:0; display:block; width:100%; height:24px; padding-top:8px; font-family:'NanumGothic'; font-size:13px; font-family:'NanumGothic'; font-weight:normal; color:#fff; text-align:center;}
+					.visual_by a img {width:100%; height:100%}
+					.visual_by a strong {z-index:3; position:absolute; bottom:0; display:block; width:100%; height:24px; padding-top:8px; font-family:'Nanum Gothic', sans-serif; font-size:13px; font-weight:bold; color:#fff; text-align:center;}
 					.visual_by a i {z-index:2; position:absolute; bottom:0; left:0; clear:both; display:block; width:100%; height:32px; opacity:0.5; background:#ce2127;}
 	.visual_wrap .dot_paging {position:absolute; bottom:3px; height:6px;}
 		.visual_wrap .dot_paging a {background-position:-110px top;}
@@ -81,13 +80,13 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.lecture_list_w {clear:both; margin-top:20px;}
 		.lecture_in {padding:0 20px;}
 			.lecture_notice {margin-bottom:5px; font-size:11px; color:#000; text-align:right;}
-				.lecture_notice strong {font-family:'NanumGothic'; font-weight:normal;}
+				.lecture_notice strong {font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
 			.lecture_swipe_w {position:relative; width:100%; overflow:hidden; font-size:0;}
 				.lecture_scroll {width:5000%; font-size:0; overflow:hidden;}
 					.lecture_list {width:100%; display:inline-block; border-top:1px solid #ddd;}
 						.lecture_list li {border-bottom:1px solid #ddd;}
 							.lecture_list li a {position:relative; display:block; min-height:33px; padding:15px 27px 15px 59px;}
-								.lecture_title {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
+								.lecture_title {font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#cb202d;}
 								.t_info {font-size:12px; color:#000;}
 								.l_bar {position:relative; top:-1px; margin:0 9px; font-style:normal; color:#dadada;}
 								.lecture_list li a img {position:absolute; top:9px; left:3px;}
@@ -108,8 +107,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.btm_mylecture h3 a {display:block; height:38px; padding-left:10px; color:#000;}
 				.btm_mylecture h3 em {margin-left:5px; color:#cb202d;}
 				.btm_mylecture .mypass {position:absolute; top:10px; right:10px; color:#666;}
-					.btm_mylecture .mypass em {font-family:'NanumGothicBold'; color:#000;}
-			.mylecture_list {clear:both;}
+					.btm_mylecture .mypass em {font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000;}
+			.mylecture_list {clear:both; width:100%;}
 				.mylecture_list li {border-bottom:1px solid #ddd;}
 				.mylecture_list li:last-child {border-bottom:0;}
 					.mylecture_list li a {display:block; padding:13px 9px 14px 9px;}
@@ -118,7 +117,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.lecture_btm_temp .btm_mylecture {padding:0 90px 0 0;}
 			.btm_mylecture .btn_st1 {position:absolute; top:0; right:0; width:85px;}
 			.lecture_btm_temp_msg {clear:both; margin:13px 0 0 0; padding:0 0 0 10px; color:#999;}
-				.lecture_btm_temp_msg strong {font-family:'NanumGothic'; font-weight:normal;}
+				.lecture_btm_temp_msg strong {font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 	/* 하위카테고리 */
 	.l_category_w {}
 		.l_category_w .lecture_list {border-top:0;}
@@ -128,12 +127,12 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.l_category_w .lecture_list .l_bar {margin:0 7px;}
 	/* 강의요약 */
 	.ls_w {position:relative;}
-		.ls_info {display:block; height:70px; padding:15px 105px 0 20px; background:#e8e8e8;}
+		.ls_info {display:block; padding:15px 105px 20px 20px; background:#e8e8e8; min-height:50px;}
 				.ls_info .lecture_title {display:block; margin-bottom:7px;}
 				.ls_info .l_bar {margin:0 4px;}
 		.ls_w img {width:100%;}
 		/* 강의관련버튼 */
-		.ls_btn_w {position:absolute; bottom:84px; right:0; width:90px;}
+		.ls_btn_w {position:absolute; bottom:85px; right:0; width:90px;}
 			.ls_btn_in {position:relative;}
 				.b_ls_play, .b_ls_buy {position:absolute; display:block; width:90px; height:85px;}
 				.b_ls_play {position:relative; margin-bottom:1px;}
@@ -152,26 +151,26 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.ld_tab {z-index:2; position:relative; height:26px;}
 				.ld_tab li {float:left; width:50%;}
 					.ld_tab li a {display:block; height:25px; font-size:14px; color:#000; text-align:center; border-bottom:1px solid #444;}
-					.ld_tab li.this a {font-family:'NanumGothicBold';}
+					.ld_tab li.this a {font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 			i.bdb {z-index:1; position:absolute; left:0; bottom:0; display:block; width:50%; height:3px; font:0/0 arial; overflow:hidden; background:#444;}
 		/* 컨텐츠 */
 		.ld_c_w {position:relative; clear:both;}
 		/* 정보 */
 		#ldInfo, .ld_info_w {padding:11px 20px; font-size:13px; line-height:20px; color:#010101;}
-			.ld_info_w h5, #ldInfo h5 {margin-top:40px; font-size:13px; font-family:'NanumGothicBold';}
+			.ld_info_w h5, #ldInfo h5 {margin-top:40px; font-size:13px; font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 			.ld_info_w ol li.oli_f, #ldInfo ol li.oli_f {margin-bottom:20px;}
 		.ld_book_w {position:relative; clear:both; margin-top:36px; padding:0 25px 20px 25px; font-size:12px; line-height:normal; color:#666; background:#e8e8e8;}
 			.ld_book_w h5 {clear:both; margin:0 0 9px 0; padding-top:18px; color:#000;}
 			.ld_book_in {position:relative; height:81px; margin-top:14px; padding:0 0 0 64px;}
-				.ld_book_in h6 {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
+				.ld_book_in h6 {font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#cb202d;}
 				.ld_book_in img {position:absolute; top:0; left:0; width:58px;}
 				.ld_book_in .btn_st1 {position:absolute; bottom:0; right:0; width:60px;}
 		/* 목록 */
 		.ld_list_w {}
 			.ld_list_in {}
 				.ld_list_by {clear:both;}
-					.ld_list_in h5 {position:relative; padding:13px 49px 14px 49px; font-size:14px; font-family:'NanumGothicBold'; color:#000; cursor:pointer; border-bottom:1px solid #999;}
-						.ld_list_in h5 em {position:absolute; top:13px; left:0; display:block; width:42px; font-family:'NanumGothicBold'; text-align:right;}
+					.ld_list_in h5 {position:relative; padding:13px 49px 14px 49px; font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000; cursor:pointer; border-bottom:1px solid #999;}
+						.ld_list_in h5 em {position:absolute; top:13px; left:0; display:block; width:42px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; text-align:right;}
 						.ld_list_in h5 .icn {position:absolute; top:17px; right:22px; width:17px; height:11px; background-position:-140px -40px;}
 					/* 현재선택 */
 					.ld_list_in h5.ld_list_in_this .icn {background-position:-160px -40px;}
@@ -180,7 +179,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 							.ld_list_d_l {position:relative; border-bottom:1px solid #ddd;}
 							.ld_list_d_l:last-child {border-color:#999;}
 								.ld_list_ct {position:relative; display:block; padding:13px 50px 14px 49px; cursor:pointer;}
-									.ld_list_ct em {font-size:14px; font-family:'NanumGothicBold'; color:#cb202d;}
+									.ld_list_ct em {font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#cb202d;}
 									.ld_list_ct .ct, .ld_list_ct .time {position:absolute; top:16px; left:0; display:block; font-size:10px; color:#444444; text-align:right;}
 									.ld_list_ct .ct {width:45px;}
 									.ld_list_ct .time {width:49px; left:auto; right:0; text-align:left;}
@@ -221,7 +220,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.script_head {height:89px; padding:0 50px 0 20px; font-size:14px; border-bottom:2px solid #000; background:#484848;}
 			.script_head h3, .script_head h4 {width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 			.script_head h3 {padding-top:37px; color:#c4c4c4;}
-			.script_head h4 {padding-top:4px; font-family:'NanumGothicBold'; color:#fff;}
+			.script_head h4 {padding-top:4px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#fff;}
 			.b_scrt_s, .b_scrt_l, .b_scrt_close {position:absolute; right:0; clear:both; display:block; width:45px; height:44px; color:#999; line-height:44px; text-align:center; border-left:1px solid #000; border-bottom:1px solid #000; background:#333;}
 			.b_scrt_s {top:0; font-size:12px;}
 			.b_scrt_l {top:45px; top:font-size:20px;}
@@ -231,7 +230,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.script_cont_in {position:relative; padding:0; font-size:14px; color:#000;}
 				.script_cont_in ol li {position:relative; padding:11px 0 12px 38px; line-height:1.45; border-bottom:1px solid #ddd;}
 					.script_cont_in ol li em {position:absolute; top:13px; left:0; font-size:11px;}
-				.script_cont_in ol li.scrt_now {font-family:'NanumGothicBold'; color:#079192;}
+				.script_cont_in ol li.scrt_now {font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#079192;}
 					.script_cont_in ol li.scrt_now em {color:#000;}
 			/* 폰트사이즈 컨트롤 중 */
 			.scsize_c {}
@@ -283,17 +282,17 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 					.ml_c_w .lecture_list a img, .ml_c_w .lecture_list a i.round {top:18px; left:20px;}
 					.ml_c_w .lecture_list .lecture_title {display:block; margin-bottom:7px;}
 					.ml_c_w .lecture_list .l_bar {margin:0 4px;}
-					.ml_c_w .lecture_list .t_info:last-child {font-family:'NanumGothicBold';}
+					.ml_c_w .lecture_list .t_info:last-child {font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 		/* 다운로드강의 */
 		.ml_down_head {position:relative; height:40px; padding:0 40px 0 0; border-bottom:1px solid #999;}
 			.ml_down_head h4 {padding:18px 0 0 20px; font-size:12px; color:#000;}
-				.ml_down_head h4 em {font-family:'NanumGothicBold'; color:#048daa;}
+				.ml_down_head h4 em {font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#048daa;}
 			.b_mld_del {position:absolute; top:0; right:0; width:45px; height:40px; background:#333;}
 				.b_mld_del .icn {top:0; width:14px; height:16px; background-position:-230px -40px;}
 		#mlDownloadList {border-bottom:1px solid #999;}
 			#mlDownloadList > li {border-top:1px solid #999; border-bottom:0;}
-				#mlDownloadList > li .lecture_title {font-family:'NanumGothic'; font-weight:normal; color:#000;}
-				#mlDownloadList > li .t_info:last-child {font-family:'NanumGothic'; font-weight:normal;}
+				#mlDownloadList > li .lecture_title {font-family:'Nanum Gothic', sans-serif; font-weight:normal; color:#000;}
+				#mlDownloadList > li .t_info:last-child {font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
 			#mlDownloadList > li:first-child {border-top:0;}
 				#mlDownloadList .ld_list_d_l {border-top:1px solid #ddd; border-bottom:0;}
 					#mlDownloadList .ld_list_ct {padding-left:72px; padding-right:25px}
@@ -305,8 +304,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.mld_mode_delete {}
 			.mld_mode_delete .ml_down_head {height:90px; padding-right:0;}
 			.mld_mode_delete #mlDownDeleteHead {clear:both; position:relative; margin-top:9px; font-size:0; text-align:center;}
-				.mld_mode_delete #mlDownDeleteHead strong {position:absolute; top:-23px; right:20px; font-size:12px; font-family:'NanumGothic'; font-weight:normal; color:#000;}
-					.mld_mode_delete #mlDownDeleteHead strong em {font-family:'NanumGothicBold'; color:#048daa;}
+				.mld_mode_delete #mlDownDeleteHead strong {position:absolute; top:-23px; right:20px; font-size:12px; font-family:'Nanum Gothic', sans-serif; font-weight:normal; color:#000;}
+					.mld_mode_delete #mlDownDeleteHead strong em {font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#048daa;}
 					.mld_mode_delete #mlDownDeleteHead .ui-btn {display:inline;}
 					.mld_mode_delete #mlDownDeleteHead .btn_st1, .mld_mode_delete #mlDownDeleteHead .btn_st1_gray {width:138px; margin:0 2px;}
 
@@ -318,8 +317,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		#mlList .lecture_list a {padding-left:20px; padding-right:20px;}
 			#mlList .lecture_list a .ml_list_tit_w {display:block; margin-bottom:7px;}
 				#mlList .lecture_list a .ml_list_tit_w .lecture_title {display:inline;}
-				#mlList .lecture_list a .ml_list_tit_w .t_info {font-family:'NanumGothic'; font-weight:normal;}
-				#mlList .lecture_list li.ml_list_fed .lecture_title {font-family:'NanumGothic'; font-weight:normal;}
+				#mlList .lecture_list a .ml_list_tit_w .t_info {font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
+				#mlList .lecture_list li.ml_list_fed .lecture_title {font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
 				#mlList .lecture_list li.ml_list_fed .t_info {color:#999;}
 				#mlList .lecture_list li.ml_list_fed .ml_list_tit_w .t_info {color:#000;}
 
@@ -355,19 +354,19 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.imtv_check .check:checked+label {background:url('../images/imtv_checked.png') left top no-repeat; background-size:22px 22px;}
 	.reg_ed {margin-top:22px; text-align:left;}
 		.reg_ed strong {display:block; margin-bottom:7px; font-size:14px; color:#000;}
-			.reg_ed strong em {position:relative; top:-1px; font-size:12px; font-family:'NanumGothic'; font-weight:normal; color:#666;}
+			.reg_ed strong em {position:relative; top:-1px; font-size:12px; font-family:'Nanum Gothic', sans-serif; font-weight:normal; color:#666;}
 				.reg_ed strong em i, .reg_ed .reg_ip_err {color:#048daa;}
-	.reg_eds strong {font-family:'NanumGothic'; font-weight:normal;}
+	.reg_eds strong {font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
 	.reg_e_email p {margin-top:10px;}
 	.reg_policy_list {margin-top:25px; text-align:left; border-top:1px solid #ddd;}
 		.reg_policy_list li {padding:11px 56px 11px 0; border-bottom:1px solid #ddd;}
-			.reg_policy_list li.imtv_check label {height:20px; padding-top:2px; font-size:14px; font-family:'NanumGothicBold'; color:#000}
+			.reg_policy_list li.imtv_check label {height:20px; padding-top:2px; font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000}
 			.reg_policy_list li a {position:absolute; top:12px; right:0; font-size:14px; color:#cb202d;}
 	.reg_ed_btn {margin-top:25px; text-align:center;}
 		.reg_ed_btn input.btn_st1 {width:138px;}
 /* 가입완료 */
 .reg_msg_w {}
-	.reg_msg_w h3 {font-size:25px; font-family:'NanumGothicBold'; color:#000;}
+	.reg_msg_w h3 {font-size:25px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000;}
 	.reg_msg {font-size:14px; color:#000;}
 	.reg_msg_btn {font-size:0; text-align:center;}
 		.reg_msg_btn .btn_st1, .reg_msg_btn .btn_st1_gray {width:105px; margin:0 3px;}
@@ -393,11 +392,11 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.password_chg_w .imtv_ip {border-color:#cdcdcd;}
 /* 환경설정 */
 .reg_set_w {padding:0 20px}
-	.reg_set_w h3 {margin-top:30px; padding:0 0 9px 0; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:2px solid #000;}
+	.reg_set_w h3 {margin-top:30px; padding:0 0 9px 0; font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000; border-bottom:2px solid #000;}
 	.reg_set_w h3:first-child {margin-top:20px;}
 	.reg_set_list_w {}
 		.reg_set_list_w li {position:relative; padding:18px 66px 19px 0; font-size:14px; border-bottom:1px solid #ddd;}
-			.reg_set_list_w li strong {position:relative; font-family:'NanumGothic'; font-weight:normal;}
+			.reg_set_list_w li strong {position:relative; font-family:'Nanum Gothic', sans-serif; font-weight:normal;}
 			.reg_set_list_w li .btn_st1_gray, .reg_set_list_w li .btn_st1 {position:absolute; right:0; top:7px; width:61px; font-size:12px;}
 		.reg_set_list_w li:last-child {border-bottom:0;}
 		.reg_set_list_w .regs_whref {padding-top:0; padding-bottom:0;}
@@ -415,7 +414,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	/* 기기등록 */
 	.regs_dr_msg {margin-top:20px; padding:8px 13px; font-size:12px; line-height:20px; color:#000; background:#eee;}
 		.regs_dr_msg em {color:#048daa;}
-	.regs_dr_now li strong {font-family:'NanumGothicBold';}
+	.regs_dr_now li strong {font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 	.regs_dr_list li {padding-right:0;}
 		.regs_dr_list li .dn_rls {float:right; margin-top:-7px; text-align:right;}
 			.regs_dr_list li .dn_rls .lb {font-size:12px;}
@@ -424,7 +423,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.regs_dr_list li.regs_drl_now strong em {display:block; color:#000;}
 	/* 계정설정 */
 	.reg_set_idmail {margin-top:14px;}
-		.reg_set_idmail li strong {margin-right:3px; font-family:'NanumGothicBold';}
+		.reg_set_idmail li strong {margin-right:3px; font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 		.reg_set_idmail li em {color:#ce2127;}
 		.reg_set_email strong {top:5px;}
 		.reg_set_email .imtv_ip {width:77%; margin:-7px 0; vertical-align:top;}
@@ -440,8 +439,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.helpdesk_list li .hpdl_tit .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-140px -40px;}
 			.helpdesk_list li .hpdl_cw_anis {clear:both; height:0; overflow:hidden;}
 			.helpdesk_list li .hpdl_cont_w {position:relative; clear:both; padding:11px 20px 12px 20px; font-size:14px; line-height:20px; color:#000; border-top:1px solid #ddd; overflow:hidden; background:#e8e8e8;}
-				.helpdesk_list li .hpdl_cont_w h4 {margin:0 0 12px 0; padding-right:35px; font-family:'NanumGothicBold';}
-					.helpdesk_list li .hpdl_cont_w h4 i {font-size:12px; font-family:'NanumGothicBold'; color:#666;}
+				.helpdesk_list li .hpdl_cont_w h4 {margin:0 0 12px 0; padding-right:35px; font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
+					.helpdesk_list li .hpdl_cont_w h4 i {font-size:12px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#666;}
 			.helpdesk_list li .hpdl_cont_w .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-160px -40px;}
 	.hpd_c_w .reg_set_list_w li {padding-left:20px; padding-right:20px;}
 	.hpd_c_w .reg_set_list_w li:last-child {border-bottom:1px solid #ddd;}
@@ -450,9 +449,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 .reg_msg_outm {padding:0 20px;}
 	.reg_msg_outm h3 {margin-top:30px; text-align:center;}
 	.reg_msg_outm .reg_msg {margin-top:19px; line-height:20px;}
-		.reg_msg_outm .reg_msg em {font-family:'NanumGothicBold'; color:#048daa;}
+		.reg_msg_outm .reg_msg em {font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#048daa;}
 	.reg_msg_outm h4 {margin-top:30px; padding:0 0 9px 0; font-size:14px; color:#000; border-bottom:2px solid #000;}
-		.reg_msg_outm h4 em {font-family:'NanumGothicBold';}
+		.reg_msg_outm h4 em {font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
 	.reg_outm_list {}
 		.reg_outm_list li {padding:13px 0 11px 0; font-size:14px; color:#000; border-bottom:1px solid #ddd;}
 		.reg_outm_list li:last-child {border-bottom:0;}
@@ -485,7 +484,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.layer_w {z-index:998; position:absolute; left:50%; margin-left:-141px; overflow:hidden; opacity:0;}
 		.layer_in_w {position:relative; width:281px;}
 		.layer_in {border:3px solid #333; border-radius:4px; background:#fff;}
-			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-family:'NanumGothicBold'; color:#000; border-bottom:1px solid #000;}
+			.layer_in h4 {padding:15px 0 14px 22px; font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000; border-bottom:1px solid #000;}
 			.layer_content {}
 				.lyr_msg {font-size:14px; color:#000;}
 			.layer_btn_w {clear:both; height:45px; font-size:0; border-top:1px solid #000; background:#444;}
@@ -494,7 +493,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.b_lyr_b {color:#ddd; background:#444;}
 			.lyr_b_2ea {}
 				.lyr_b_2ea .b_lyr_g, .lyr_b_2ea .b_lyr_b {width:50%;}
-				.lyr_b_2ea button:first-child {border-right:1px solid #333; border-radius:0 0 0 4px;}
+				.lyr_b_2ea button:first-child, .lyr_b_2ea button.lyr_b_first {border-right:1px solid #333; border-radius:0 0 0 4px !important;}
 				.lyr_b_2ea button:last-child {border-radius:0 0 4px 0;}
 	.dimd {z-index:997; clear:both; position:absolute; top:0; left:0; width:100%; height:100%; /*opacity:0;*/ opacity:100; background:#000;}
 /* 인문북스 사러가기 */
@@ -523,7 +522,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 .lyr_c_delfail {padding:27px 17px;}
 /* 기기등록해제 */
 .lyr_c_device_r {padding:40px 25px 40px 23px;}
-	.lyr_c_device_r h5 {font-size:14px; font-family:'NanumGothicBold'; color:#000;}
+	.lyr_c_device_r h5 {font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000;}
 	.lyr_c_device_r .lyr_msg {margin-top:20px;}
 /* 각종얼럿 */
 .lyr_c_alert_s {padding:47px 0; text-align:center;}
@@ -534,3 +533,16 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.lyr_c_p_in {position:relative; padding:10px 23px; font-size:12px; color:#000; line-height:20px;}
 		.lyr_c_p_in .lyr_msg {margin-bottom:29px;}
 		.lyr_c_p_in .lyr_msg:last-child {margin-bottom:0;}
+/* 2013.03.07 추가 */
+.lyc_cp_stp_lt {position:relative; padding:21px 23px 22px 75px; background:#e8e8e8;}
+	.lyc_cp_stp_lt .lyr_cpstp_p {margin-top:7px;}
+	.lyc_cp_stp_lt .l_bar {top:0;}
+	.lyc_cp_stp_lt img {position:absolute; top:23px; left:23px;}
+	.lyc_cp_stp_lt i.round {z-index:2; position:absolute; top:23px; left:23px; display:block; width:45px; height:45px; background:url('../images/lecture_list_round_gray.png') left top no-repeat; background-size:45px 45px;}
+.lyc_cp_stp_lti {padding:23px 23px 42px 23px; font-size:17px;}
+	.lyc_cp_stp_lti em {color:#048daa}
+	.lyc_cp_stp_lti p {margin-top:20px;}
+		.lyc_cp_stp_lti p strong {color:#cb202d;}
+.lyr_cpstp_fp {padding:77px 15px 22px 15px; background:#e8e8e8 url('../images/img_frps.png') 50% 17px no-repeat; background-size:75px 48px;}
+	.lyr_cpstp_fp em {color:#cb202d;}
+.lyr_c_passbuy_stp2 .lyc_cp_stp_lti {padding-top:0px; padding-bottom:23px;}
