@@ -487,7 +487,7 @@ var imTv = ({
 	/** 은진추가 **/
 	getContentsUrl :function(isMovie, lecture_code, class_seq, section_seq) {
 		var target_url = 'http://vod-inmoontv.vod.cdn.cloudn.co.kr/';
-		
+
 		//강의별 folder 구하기
 		target_url += lecture_code.substr(0,4) + '/';
 		target_url += lecture_code + '/' + lecture_code + '_';
@@ -495,12 +495,12 @@ var imTv = ({
 		var temp = '00'.concat(class_seq);
 		temp = temp.substr(temp.length-2);
 		target_url += temp;
-		
+
 		//section_seq -> 01 formatting
 		temp = '00'.concat(section_seq);
 		temp = temp.substr(temp.length-2);
 		target_url += temp;
-		
+
 		//파일 확장자 처리
 		target_url += (isMovie) ? '.im4' : '.imi';
 
@@ -516,27 +516,27 @@ var imTv = ({
 	goDownload : function(member_code, lecture_code, class_seq, section_seq) {
 		var urlMovie = null;
 		var urlScript = null;
-		
+
 		urlMovie = this.getContentsUrl(true, lecture_code, class_seq, section_seq);
 		urlScript = this.getContentsUrl(false, lecture_code, class_seq, section_seq);
-		
+
 		// android에 Play 명령(download로그는 아래에서 남기기~)
 		window.Android.startDownload(urlMovie, urlScript);
 	},
 	/**
 	 * Player 구동
-	 * 
-	 * play_type : 플레이어 구분   
+	 *
+	 * play_type : 플레이어 구분
 	 *             "Video" = 보기, "Audio" = 듣기, "Text" = 보기, "Trailer" = 1교시무료 또는 예고편(자막null처리)
-	 * filename  : 컨텐츠파일이름           
+	 * filename  : 컨텐츠파일이름
 	 */
 	goPlay : function(play_type, member_code, lecture_code, class_seq, section_seq) {
 		var urlMovie = null;
 		var urlScript = null;
-		
+
 		urlMovie = this.getContentsUrl(true, lecture_code, class_seq, section_seq);
 		urlScript = this.getContentsUrl(false, lecture_code, class_seq, section_seq);
-		
+
 		// android에 Play 명령(play로그는 아래에서 남기기~)
 		window.Android.startPlayer(play_type, urlMovie, urlScript);
 	},
@@ -550,5 +550,5 @@ var imTv = ({
 			}
 		}
 		return true;
-	}	
+	}
 });
