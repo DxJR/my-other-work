@@ -304,8 +304,10 @@
 										$("#hscvObj0"+mscMapAreaIndex+"").attr("class","this");
 										hscNowThis.css("opacity","100");
 										$(".hscv_aw_this").find("button").removeClass("b_hscva_m").addClass("b_hscva_p").attr("rel","b_hscva_p");
-										$(".hscv_aw_this").removeClass("hscv_aw_this").css("display","none");
-										hscActionWrap.find(".hscv_aw_0"+(index+1)+"").addClass("hscv_aw_this").css("display","block");
+										$(".hscv_aw_this").removeClass("hscv_aw_this").animate({'opacity':'0'},{duration:300, queue:true, complete:function() {
+											$(this).css("display","none");
+										}});
+										hscActionWrap.find(".hscv_aw_0"+(index+1)+"").addClass("hscv_aw_this").css({'display':'block'}).animate({'opacity':'100'},{duration:300, queue:true});
 										hscVisualActionDetail();
 									}});
 								}
