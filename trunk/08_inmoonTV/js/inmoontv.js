@@ -41,7 +41,7 @@ var imTv = ({
 		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기
 		this.tabSelector(".hpd_tab_w","hpd_c_w"); //고객센터
 		this.lectureListDetailView();
-		if ($("#lyr_c_policy").length>0)
+		if ($(".lyr_c_policy").length>0)
 		{
 			var policy1Scroll = new iScroll('lyrPolicy1ScrollWrap');
 			var policy2Scroll = new iScroll('lyrPolicy2ScrollWrap');
@@ -447,7 +447,7 @@ var imTv = ({
 	},
 	// Dialogs
 	openDialogs : function(obj) {
-		$(".layer_wrap").css("display","block");
+		$(".layer_wrap").css({"position":"fixed", "top":"0", "left":"0"});
 		$(".dimd").animate({"opacity" : "0.6"}, {duration:300, queue:true, complete:function() {
 				var dialogObj = $("#"+obj+"");
 				var objHeight = dialogObj.height();
@@ -480,9 +480,9 @@ var imTv = ({
 		});
 	},
 	dialogClose : function() {
-		$(".lyrOpenThis").css({"opacity":"0","zIndex":"995"});
+		$(".lyrOpenThis").css({"opacity":"0","zIndex":"-1"});
 		$(".dimd").animate({"opacity" : "0"}, {duration:300, queue:true, complete:function() {
-				$(".layer_wrap").css("display","none");
+				$(".layer_wrap").css({'position':'absolute', 'top':'-9999999em', 'left':'-9999999em'});
 			}
 		});
 	},
