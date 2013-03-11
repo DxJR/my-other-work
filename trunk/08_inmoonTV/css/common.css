@@ -404,8 +404,9 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.reg_set_list_w li.regs_whref a .icn {position:absolute; top:13px; right:0; width:11px; height:17px; background-position:-245px -40px;}
 		.regs_chk {}
 			.regs_chk input {position:absolute; top:-9999em; left:-9999em;}
-			.regs_chk label {display:block; min-height:17px; margin-top:-5px; padding-top:5px; background:url('../images/imtv_check.png') right top no-repeat; background-size:22px 22px;}
+			.regs_chk label {display:block; min-height:17px; margin-top:-5px; padding-top:5px; background:url('../images/check.png') right top no-repeat; background-size:22px 22px;}
 			.regs_chk .check:checked+label {background:url('../images/checked.png') right top no-repeat; background-size:22px 22px;}
+			.regs_chk .check:disabled+label {background:url('../images/imtv_check.png') right top no-repeat; background-size:22px 22px;}
 		.regs_lw_wob li {padding:13px 0 14px 0;}
 		.reg_set_list_w .regs_freepass {}
 			.reg_set_list_w .regs_freepass em {float:right; margin-top:1px; font-size:12px; color:#666;}
@@ -423,7 +424,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.regs_dr_list li.regs_drl_now strong em {display:block; color:#000;}
 	/* 계정설정 */
 	.reg_set_idmail {margin-top:14px;}
-		.reg_set_idmail li strong {margin-right:3px; font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
+		.reg_set_idmail li strong, .reg_set_idmail li.regs_chk label {margin-right:3px; font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
+		.reg_set_idmail li.regs_chk {padding-right:0;}
 		.reg_set_idmail li em {color:#ce2127;}
 		.reg_set_email strong {top:5px;}
 		.reg_set_email .imtv_ip {width:77%; margin:-7px 0; vertical-align:top;}
@@ -437,6 +439,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.helpdesk_list li .hpdl_tit {display:block; padding:13px 55px 14px 20px; font-size:14px; color:#000;}
 				.helpdesk_list li .hpdl_tit i {margin-left:5px; font-size:12px; color:#666;}
 				.helpdesk_list li .hpdl_tit .icn {position:absolute; top:16px; right:20px; width:17px; height:11px; margin-left:0; background-position:-140px -40px;}
+				.helpdesk_list li .hpdl_tit_on {font-weight:bold;}
+				.helpdesk_list li .hpdl_tit_on .icn {background-position:-160px -40px;}
 			.helpdesk_list li .hpdl_cw_anis {clear:both; height:0; overflow:hidden;}
 			.helpdesk_list li .hpdl_cont_w {position:relative; clear:both; padding:11px 20px 12px 20px; font-size:14px; line-height:20px; color:#000; border-top:1px solid #ddd; overflow:hidden; background:#e8e8e8;}
 				.helpdesk_list li .hpdl_cont_w h4 {margin:0 0 12px 0; padding-right:35px; font-family:'Nanum Gothic', sans-serif; font-weight:bold;}
@@ -505,6 +509,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 		.lyr_book_list li a.b_interpark .icn {background-position:-50px -230px;}
 		.lyr_book_list li a.b_aladdin .icn {background-position:-100px -230px;}
 		.lyr_book_list li a.b_kyobo .icn {background-position:-150px -230px;}
+.lyr_bl_alone {text-align:center;}
 /* 수강권선택 */
 .lyr_c_passbuy {padding:0 23px;}
 	.lyr_c_passbuy li {position:relative; padding:23px 0 25px 0; font-size:14px; border-bottom:1px solid #ddd;}
