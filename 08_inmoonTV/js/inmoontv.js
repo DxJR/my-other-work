@@ -418,6 +418,7 @@ var imTv = ({
 		var wrapperElement = $(".helpdesk_list");
 
 		$(".hpdl_tit").on("click", function() {
+			$(this).removeClass("hpdl_tit_on");
 			var contentObjHeight = ($(this).next().find(".hpdl_cont_w").height()) + 23;
 
 			if ($(this).next().attr("class")=="hpdl_cw_anis hpdl_cw_anis_open")
@@ -427,6 +428,7 @@ var imTv = ({
 					}
 				});
 			} else {
+				$(this).addClass("hpdl_tit_on");
 				$(".hpdl_cw_anis_open").css("height","0").removeClass("hpdl_cw_anis_open");;
 				$(this).next().animate({"height" : ""+contentObjHeight+"px"}, {duration:300, queue:true, complete:function() {
 					$(this).addClass("hpdl_cw_anis_open");
