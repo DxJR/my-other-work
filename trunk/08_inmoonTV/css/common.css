@@ -329,8 +329,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 
 /* 로그인 */
 #login {position:relative; border-top:5px solid #ce2127;}
-	#login h1 {position:relative; width:121px; height:53px; margin:55px auto 0 auto; overflow:hidden; background:url('../images/set_inmoontv.png') left -175px no-repeat; background-size:300px 300px;}
-	.lg_filed {position:relative; margin-top:45px; padding:0 45px; text-align:center;}
+	#login h1 {position:relative; width:132px; height:63px; margin:63px auto 0 auto; overflow:hidden; background:url('../images/imtv_bi.png') left top no-repeat; background-size:132px 63px;}
+	.lg_filed {position:relative; margin-top:32px; padding:0 45px; text-align:center;}
 		.ci_lg {display:none;}
 		.lg_id_pwd_w {margin-top:15px; border:3px solid #a3a3a3; border-radius:6px; background:#fff;}
 			.lg_id_pwd_w p {position:relative;}
@@ -338,7 +338,8 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.lg_id_pwd_w input {width:100%; height:53px; text-indent:12px; font-size:14px; color:#888; border:0; background:none;}
 			.lg_id {border-bottom:1px solid #a3a3a3;}
 			.lg_btn {margin-top:10px;}
-				.lg_btn input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#ce2127;}
+				.lg_btn input, .lgb_b input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#ce2127;}
+				.lgb_b input {background:#444;}
 	.lg_btm_fnc_w {clear:both; width:100%;}
 	.lg_btm_fnc {clear:both; margin:60px auto 0 auto; padding-left:4px; font-size:0; text-align:center;}
 		.lg_btm_fnc li {display:inline-block; font-size:14px; text-align:right;}
@@ -551,3 +552,43 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 .lyr_cpstp_fp {padding:77px 15px 22px 15px; background:#e8e8e8 url('../images/img_frps.png') 50% 17px no-repeat; background-size:75px 48px;}
 	.lyr_cpstp_fp em {color:#cb202d;}
 .lyr_c_passbuy_stp2 .lyc_cp_stp_lti {padding-top:0px; padding-bottom:23px;}
+
+/* 강의없음 */
+.ml_none_w {position:relative; clear:both; margin-top:50px; padding:0 20px;}
+	.mln_fp {position:relative; height:68px; padding:17px 0 0 76px; ; background:#e8e8e8;}
+		.mln_fp div {position:absolute; top:20px; left:20px; width:46px; height:46px; font:0/0 arial; overflow:hidden;}
+			.mln_fp div img {width:100%;}
+		.mln_fp p {padding:0 0 0 23px; font-size:14px; color:#000; line-height:17px; background:url('../images/bg_mln_fp_t.png') left top no-repeat; background-size:15px 8px;}
+		.mln_fp02 {padding-left:93px;}
+			.mln_fp02 div {left:35px;}
+			.mln_fp02 p {margin-top:9px; padding:0 0 0 23px;}
+		.mln_fp03 {padding-left:93px;}
+			.mln_fp03 div {left:35px;}
+			.mln_fp03 p {margin-top:17px; padding:0 0 0 23px;}
+		.mln_fp04 {padding-left:93px;}
+			.mln_fp04 div {left:35px;}
+			.mln_fp04 p {margin-top:9px; padding:0 0 0 23px;}
+		.mln_fp05 p {margin-top:12px; padding:10px 0 0 0;}
+	.mln_txt {clear:both; margin-top:23px; padding:0 10px; font-size:14px; color:#000; line-height:17px;}
+
+/* 리스트 강의없음 */
+.lctg_none {padding-top:60px; text-align:center;}
+	.lctg_none h3 {font-size:20px; font-weight:bold; color:#000;}
+	.lctg_none p {margin-top:45px; font-size:14px; color:#000; line-height:18px;}
+
+/* 네트워크오류 */
+.connect_error_w {margin-top:48px; padding:28px 32px 0 32px; background:url('../images/cnt_er.png') 50% top no-repeat; background-size:22px 18px;}
+	.connect_error_w p {margin-top:16px; font-size:14px; color:#000; line-height:18px;}
+	.b_as_w {position:fixed; left:50%; bottom:40px; margin-left:-94px; text-align:center;}
+		.b_as_w a {display:inline-block; width:188px; height:28px; padding:10px 0 0 0; font-size:14px; color:#fff; border-radius:5px; background:#444;}
+
+/* 수강권구매 */
+.lyr_to_pg_w {margin-top:-14px; padding:0 20px;}
+	.lyr_to_pg_w h1 {font-size:14px; font-weight:bold; color:#000;}
+	.lyr_to_pg_w .lyc_cp_stp_lt, .lyr_to_pg_w .lyr_cpstp_fp {margin-top:10px; border:3px solid #333; border-radius:5px;}
+	.lyr_to_pg_w .lyr_cpstp_fp {margin-bottom:25px;}
+		.lyr_to_pg_w .lyr_cpstp_fp {background-image:url('../images/img_frps2.png'); background-size:68px 45px;}
+	.ltp_btn_w {position:fixed; bottom:40px; left:0; width:100%;}
+		.lyr_to_pg_w .list_bottom_btn_w {padding:0 30px; text-align:center;}
+			.lyr_to_pg_w .list_bottom_btn_w .btn_st1_gray {width:99%; box-sizing:border-box;}
+			.lyr_to_pg_w .lbbw_al li {float:none; display:inline-block;}
