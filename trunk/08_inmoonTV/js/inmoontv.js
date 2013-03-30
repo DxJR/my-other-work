@@ -51,6 +51,8 @@ var imTv = ({
 		this.mainLogin();
 		this.helpdeskList();
 		this.dialogAction();
+
+		this.swipeTransition();
 	},
 	scriptScroll : function() {
 		if ($("#scriptScrollWrap").length!="0")
@@ -69,6 +71,28 @@ var imTv = ({
 				var scriptScroll = new iScroll('scriptScrollWrap');
 			}
 		}
+	},
+	// Transition slide NEW
+	swipeTransition : function() {
+		$("a, button, input").each(function() {
+			if ($(this).attr("rel")) {
+				$(this).click(function() {
+					if ($(this).attr("rel"))
+					{
+						var dialogRel = $(this).attr("rel");
+					}
+
+					if (dialogRel=="nSlide")
+					{
+						var thisHref = $(this).attr("href")
+						$("#content").css({position:'absolute', top:'0'}).animate({left:'-'+$("#content").width()+'px'},{duration:300, queue:true, complete:function() {
+							$(location).attr("href",thisHref);
+						}});
+					}
+					return false;
+				});
+			}
+		});
 	},
 	// 첫화면 캐러셀
 	swipeSlide : function(wrapper, elementWrap, indicator, pageHtml, createHtml) {
@@ -453,7 +477,7 @@ var imTv = ({
 				var objHeight = dialogObj.height();
 				var docHeight = $(window).height();	//$(document).height();	//screen.height;
 				var objPosition = parseInt((docHeight - objHeight)/2);
-				dialogObj.css({"top":""+objPosition+"px", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
+				dialogObj.css({"top":""+objPosition+"px", left:"50%", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
 			}
 		});
 	},
