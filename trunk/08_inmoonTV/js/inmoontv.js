@@ -412,6 +412,7 @@ var imTv = ({
 					$(this).parent().prepend(inLabelHtml);
 					$(this).remove();
 				});
+				$(".b_mld_del").css("display","block");
 				_this.lectureListDetailView();
 			});
 		});
@@ -473,10 +474,12 @@ var imTv = ({
 	openDialogs : function(obj) {
 		$(".layer_wrap").css({"position":"fixed", "top":"0", "left":"0"});
 		$(".dimd").animate({"opacity" : "0.6"}, {duration:300, queue:true, complete:function() {
+				console.log(obj);
 				var dialogObj = $("#"+obj+"");
 				var objHeight = dialogObj.height();
 				var docHeight = $(window).height();	//$(document).height();	//screen.height;
 				var objPosition = parseInt((docHeight - objHeight)/2);
+				console.log(dialogObj.attr("class"));
 				dialogObj.css({"top":""+objPosition+"px", left:"50%", "opacity":"1", "zIndex":"998"}).addClass("lyrOpenThis");
 			}
 		});
@@ -493,6 +496,7 @@ var imTv = ({
 					if (dialogRel=="dialog")
 					{
 						var dialogID = $(this).attr("href").replace("#","");
+						console.log(dialogID);
 						imTv.openDialogs(dialogID);
 					} else if (dialogRel=="dialogClose")
 					{

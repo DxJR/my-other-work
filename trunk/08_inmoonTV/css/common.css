@@ -129,18 +129,19 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.l_category_w .lecture_list .l_bar {margin:0 7px;}
 	/* 강의요약 */
 	.ls_w {position:relative;}
-		.ls_info {display:block; padding:15px 105px 20px 20px; background:#e8e8e8; min-height:50px;}
+		.ls_info {display:block; height:70px; padding:15px 105px 0 20px; background:#e8e8e8; min-height:50px;}
 				.ls_info .lecture_title {display:block; margin-bottom:7px;}
 				.ls_info .l_bar {margin:0 4px;}
 		.ls_w img {width:100%;}
 		/* 강의관련버튼 */
-		.ls_btn_w {position:absolute; bottom:85px; right:0; width:90px;}
+		.ls_btn_w {position:absolute; bottom:84px; right:0; width:90px;}
 			.ls_btn_in {position:relative;}
 				.b_ls_play, .b_ls_buy, .b_ls_nowthis {position:absolute; display:block; width:90px; height:85px;}
 				.b_ls_play {position:relative; margin-bottom:1px;}
 					.b_ls_play .b_ls_in, .b_ls_buy .b_ls_in, .b_ls_nowthis .b_ls_in {z-index:2; position:relative; display:block; height:69px; padding-top:16px; font-size:12px; color:#fff; text-align:center; opacity:0.72;}
 					.b_ls_buy .b_ls_in, .b_ls_nowthis .b_ls_in {opacity:100;}
 						.b_ls_play .b_ls_in .icn, .b_ls_buy .b_ls_in .icn, .b_ls_nowthis .b_ls_in .icn {display:block; top:0; width:40px; height:40px; margin:0 auto 6px auto; background-position:-180px top;}
+						.b_ls_play:active .b_ls_in .icn {background-position:-270px -105px;}
 						.b_ls_buy .b_ls_in .icn {background-position:-125px -175px;}
 						.b_ls_buy:active .b_ls_in .icn {background-position:-170px -175px;}
 					.b_ls_play .bg, .b_ls_buy .bg, .b_ls_nowthis .bg {z-index:1; position:absolute; top:0; left:0; clear:both; display:block; width:100%; height:85px; opacity:0.5; background:#000;}
@@ -149,7 +150,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 					.b_ls_nowthis .b_ls_in {color:#5c5c5c;}
 					.b_ls_nowthis .b_ls_in .icn {background-position:-210px -175px;}
 					.b_ls_nowthis .bg {background-color:#333; opacity:100;}
-				.b_ls_buy, .b_ls_nowthis {right:0; bottom:0;}
+					.b_ls_play, .b_ls_buy, .b_ls_nowthis {right:0; bottom:0;}
 				.lectureDimd {z-index:2; position:absolute; top:0; left:0; width:100%; height:100%;}
 	/* 강의상세 */
 	.ld_w {position:relative; clear:both; margin-top:18px;}
@@ -198,16 +199,13 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 								.b_ld_fnc {display:block; width:46px; height:60px; font-size:11px; color:#ccc; text-align:center;}
 									.b_ld_fnc .icn {display:block; top:0; width:43px; height:42px; margin:0 auto 5px auto;}
 								.b_ldf_v .icn {background-position:left -60px;}
-								.b_ldf_v:active .icn {background-position:-290px top;}
-								.b_ldf_v_on .icn {background-position:-180px -105px;}
+								.b_ldf_v:active .icn, .b_ldf_v_on .icn {background-position:-290px top;}
 								.b_ldf_l .icn {background-position:-45px -60px;}
-								.b_ldf_l:active .icn {background-position:-335px top;}
-								.b_ldf_l_on .icn {background-position:-180px -60px;}
+								.b_ldf_l:active .icn, .b_ldf_l_on .icn {background-position:-335px top;}
 								.b_ldf_ln {z-index:10; position:relative;}
 									.b_ldf_ln .icn {background-position:-180px -60px;}
 								.b_ldf_r .icn {background-position:-90px -60px;}
-								.b_ldf_r:active .icn {background-position:-290px -45px;}
-								.b_ldf_r_on .icn {background-position:-225px -60px;}
+								.b_ldf_r:active .icn, .b_ldf_r_on .icn {background-position:-290px -45px;}
 								.b_ldf_b .icn {background-position:-135px -60px;}
 								.b_ldf_b:active .icn {background-position:-335px -45px;}
 								.b_ldf_b_done {color:#333;}
@@ -342,7 +340,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 	.dot_paging a.this {background-position:-120px top;}
 
 /* 로그인 */
-#login {position:relative; border-top:5px solid #ce2127;}
+#login {position:relative;}
 	#login h1 {position:relative; width:132px; height:63px; margin:63px auto 0 auto; overflow:hidden; background:url('../images/imtv_bi.png') left top no-repeat; background-size:132px 63px;}
 	.lg_filed {position:relative; margin-top:32px; padding:0 45px; text-align:center;}
 		.ci_lg {display:none;}
@@ -352,13 +350,13 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 				.lg_id_pwd_w input {width:100%; height:53px; text-indent:12px; font-size:14px; color:#888; border:0; background:none;}
 			.lg_id {border-bottom:1px solid #a3a3a3;}
 			.lg_btn {margin-top:10px;}
-				.lg_btn input, .lgb_b input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#ce2127;}
-				.lg_btn input[type=submit]:active {background:#444;}
+				.lg_btn input, .lgb_b input {width:90px; height:90px; border:0; font-size:14px; color:#fff; border:1px solid transparent; border-radius:45px; background:#444;}
+				.lg_btn input[type=submit]:active {background:#ce2127;}
 	.lg_btm_fnc_w {clear:both; width:100%;}
-	.lg_btm_fnc {clear:both; margin:60px auto 0 auto; padding-left:4px; font-size:0; text-align:center;}
+	.lg_btm_fnc {clear:both; margin:40px auto 0 auto; padding-left:4px; font-size:0; text-align:center;}
 		.lg_btm_fnc li {display:inline-block; font-size:14px; text-align:right;}
 			.lg_btm_fnc li a {color:#cb202d;}
-		.lg_btm_fnc li:last-child {margin-left:12px; padding-left:11px; border-left:1px solid #d0d0d0;}
+		.lg_btm_fnc li:last-child {margin-left:12px; padding-left:11px; background:url('../images/bar_lg_btm_fnc.gif') left 50% no-repeat;}
 /* 회원가입 */
 .reg_field_w {padding:0 20px; text-align:center;}
 	.imtv_ip {width:100%; height:38px; text-indent:8px; font-size:14px; color:#000; border:2px solid #cdcdcd; border-radius:6px !important; box-sizing:border-box; background:#fff;}
@@ -378,7 +376,7 @@ input.btn_st1, input.btn_st1_gray {border:0;}
 			.reg_policy_list li.imtv_check label {height:20px; padding-top:2px; font-size:14px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000}
 			.reg_policy_list li a {position:absolute; top:12px; right:0; font-size:14px; color:#cb202d;}
 	.reg_ed_btn {margin-top:25px; text-align:center;}
-		.reg_ed_btn input[type=submit].btn_st1 {width:138px; border-radius:5px !important;}
+		.reg_ed_btn input.btn_st1 {width:138px; border-radius:5px !important;}
 /* 가입완료 */
 .reg_msg_w {}
 	.reg_msg_w h3 {font-size:25px; font-family:'Nanum Gothic', sans-serif; font-weight:bold; color:#000;}
