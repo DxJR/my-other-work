@@ -36,10 +36,27 @@ var imTv = ({
 			$(".ml_c_w:eq(2)").attr("id","mlDownload");
 			$("#mlContentSwipe").css("height",""+ (Number($("#mlContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ml_c_w").height()) + Number(30)) +"px");
 		}
+		if ($("#HpdContentSwipe").length=="1")
+		{
+			this.swipeSlide("HpdContentSwipe","HpdContentHtml","HpdContentHtmlIndicator", "hpd_c_w", "div");
+			$("#HpdContentHtml").remove();
+			$(".hpd_c_w:eq(0)").attr("id","hpdNotice");
+			$(".hpd_c_w:eq(1)").attr("id","hpdFAQ");
+			$(".hpd_c_w:eq(2)").attr("id","hpdPolicy");
+			$("#HpdContentSwipe").css("height",""+ (Number($("#HpdContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".hpd_c_w").height()) + Number(30)) +"px");
+		}
+		if ($("#IpfContentSwipe").length=="1")
+		{
+			this.swipeSlide("IpfContentSwipe","IpfContentHtml","IpfContentHtmlIndicator", "ipf_c_w", "div");
+			$("#IpfContentHtml").remove();
+			$(".ipf_c_w:eq(1)").attr("id","ipfID");
+			$(".ipf_c_w:eq(2)").attr("id","ipfPassword");
+			$("#IpfContentSwipe").css("height",""+ (Number($("#IpfContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ipf_c_w").height()) + Number(30)) +"px");
+		}
 		//this.tabSelector(".ld_tab_w","ld_c_w"); //강의상세보기
 		//this.tabSelector(".ml_tab_w","ml_c_w"); //내강의
-		this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기
-		this.tabSelector(".hpd_tab_w","hpd_c_w"); //고객센터
+		//this.tabSelector(".ipf_tab_w","ipf_c_w"); //아이디/비밀번호찾기
+		//this.tabSelector(".hpd_tab_w","hpd_c_w"); //고객센터
 		this.lectureListDetailView();
 		if ($(".lyr_c_policy").length>0)
 		{
@@ -101,7 +118,7 @@ var imTv = ({
 			$(this).attr("rel",""+index+"");
 			slides.push($(this).html());
 		});
-		if (wrapper=="ldContentSwipe" ) {
+		if (wrapper=="ldContentSwipe" || wrapper=="ldContentSwipe" || wrapper=="IpfContentSwipe") {
 			carousel = new SwipeView('#'+wrapper+'', {
 				numberOfPages: slides.length,
 				hastyPageFlip: true,
@@ -142,26 +159,65 @@ var imTv = ({
 			if (wrapper=='ldContentSwipe')
 			{
 				var nowSwipePagingIndex =  $("#ldContentHtmlIndicator").find("a").filter(".this").index();
+				$(".ld_tab_w .ld_tab li").removeClass("this");
 				if (nowSwipePagingIndex=="0")
 				{
+					$(".ld_tab_w .ld_tab li:eq(0)").addClass("this");
 					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
 				} else if (nowSwipePagingIndex=="1")
 				{
+					$(".ld_tab_w .ld_tab li:eq(1)").addClass("this");
 					$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
 				}
 			}
 			if (wrapper=='mlContentSwipe')
 			{
 				var nowSwipePagingIndex =  $("#mlContentHtmlIndicator").find("a").filter(".this").index();
+				$(".ml_tab_w .ld_tab li").removeClass("this");
 				if (nowSwipePagingIndex=="0")
 				{
+					$(".ml_tab_w .ld_tab li:eq(0)").addClass("this");
 					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
 				} else if (nowSwipePagingIndex=="1")
 				{
+					$(".ml_tab_w .ld_tab li:eq(1)").addClass("this");
 					$(".bdb").animate({"left" : "33.3%"}, {duration:300, queue:true});
 				} else if (nowSwipePagingIndex=="2")
 				{
+					$(".ml_tab_w .ld_tab li:eq(2)").addClass("this");
 					$(".bdb").animate({"left" : "66.6%"}, {duration:300, queue:true});
+				}
+			}
+			if (wrapper=='HpdContentSwipe')
+			{
+				var nowSwipePagingIndex =  $("#HpdContentHtmlIndicator").find("a").filter(".this").index();
+				$(".hpd_tab_w .ld_tab li").removeClass("this");
+				if (nowSwipePagingIndex=="0")
+				{
+					$(".hpd_tab_w .ld_tab li:eq(0)").addClass("this");
+					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
+				} else if (nowSwipePagingIndex=="1")
+				{
+					$(".hpd_tab_w .ld_tab li:eq(1)").addClass("this");
+					$(".bdb").animate({"left" : "33.3%"}, {duration:300, queue:true});
+				} else if (nowSwipePagingIndex=="2")
+				{
+					$(".hpd_tab_w .ld_tab li:eq(2)").addClass("this");
+					$(".bdb").animate({"left" : "66.6%"}, {duration:300, queue:true});
+				}
+			}
+			if (wrapper=='IpfContentSwipe')
+			{
+				var nowSwipePagingIndex =  $("#IpfContentHtmlIndicator").find("a").filter(".this").index();
+				$(".ipf_tab_w .ld_tab li").removeClass("this");
+				if (nowSwipePagingIndex=="0")
+				{
+					$(".ipf_tab_w .ld_tab li:eq(0)").addClass("this");
+					$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
+				} else if (nowSwipePagingIndex=="1")
+				{
+					$(".ipf_tab_w .ld_tab li:eq(1)").addClass("this");
+					$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
 				}
 			}
 		});
@@ -432,7 +488,7 @@ var imTv = ({
 				"focusout" : function() {
 					if ($(this).val()=="")
 					{
-						$(this).prev().css({"left":"19px", "top":"13px"});
+						$(this).prev().css({"left":"13px", "top":"19px"});
 					}
 				}
 			});
@@ -443,6 +499,7 @@ var imTv = ({
 		var wrapperElement = $(".helpdesk_list");
 
 		$(".hpdl_tit").on("click", function() {
+			$(".hpdl_tit_on").removeClass("hpdl_tit_on");
 			$(this).removeClass("hpdl_tit_on");
 			var contentObjHeight = ($(this).next().find(".hpdl_cont_w").height()) + 23;
 

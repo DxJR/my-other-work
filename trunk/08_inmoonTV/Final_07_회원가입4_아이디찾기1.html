@@ -11,6 +11,7 @@
 <script type="text/javascript" src="js/jquery.mobile.js"></script>
 <script type="text/javascript" src="js/iscroll.js"></script>
 <script type="text/javascript" src="js/inmoontv.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
 </head>
 
 <body>
@@ -33,46 +34,54 @@
 			</ul>
 			<i class="bdb"></i>
 		</div>
-		<!-- 아이디 찾기 -->
-		<div id="ipfID" class="ipf_c_w">
-			<h3 class="hide">아이디 찾기</h3>
-			<fieldset class="ipf_field">
-				<legend>아이디찾기</legend>
-				<div class="reg_ed reg_eds reg_ed_ipf">
-					<strong>가입 시 등록한 이메일 주소를 적어주세요.</strong>
-					<input type="text" size="30" class="imtv_ip" />
+		<div id="IpfContentSwipe"></div>
+		<div id="IpfContentHtml" style="display:none;">
+			<!-- 아이디 찾기 -->
+			<div id="ipfID" class="ipf_c_w">
+				<h3 class="hide">아이디 찾기</h3>
+				<fieldset class="ipf_field">
+					<legend>아이디찾기</legend>
+					<div class="reg_ed reg_eds reg_ed_ipf">
+						<strong>가입 시 등록한 이메일 주소를 적어주세요.</strong>
+						<input type="text" size="30" class="imtv_ip" />
+					</div>
+					<p class="reg_ed_btn"><input type="submit" class="btn_st1" value="확인" data-role="none" /></p>
+				</fieldset>
+				<div class="ipf_after_w">
+					<p class="reg_msg">아이디는 <strong>ha******76</strong> 입니다.</p>
+					<p class="reg_msg">그래도 아리송하세요? 등록하신 이메일 주소로 정확한 아이디를 발송해 드렸으니 <span class="lb">메일을 확인해 주세요!</span></p>
+					<p class="reg_msg_btn"><a href="#" class="btn_st1_gray" data-role="none">로그인</a></p>
 				</div>
-				<p class="reg_ed_btn"><input type="submit" class="btn_st1" value="확인" /></p>
-			</fieldset>
-			<div class="ipf_after_w">
-				<p class="reg_msg">아이디는 <strong>ha******76</strong> 입니다.</p>
-				<p class="reg_msg">그래도 아리송하세요? 등록하신 이메일 주소로 정확한 아이디를 발송해 드렸으니 <span class="lb">메일을 확인해 주세요!</span></p>
-				<p class="reg_msg_btn"><a href="#" class="btn_st1_gray">로그인</a></p>
+			</div>
+			<!-- 비밀번호 찾기 -->
+			<div id="ipfPassword" class="ipf_c_w">
+				<h3 class="hide">비밀번호 찾기</h3>
+				<fieldset class="ipf_field">
+					<legend>비밀번호 찾기</legend>
+					<div class="reg_ed reg_eds reg_ed_ipf">
+						<strong>아이디</strong>
+						<input type="text" size="30" maxlength="14" class="imtv_ip" />
+					</div>
+					<div class="reg_ed reg_eds reg_ed_ipf">
+						<strong>가입 시 등록한 이메일 주소를 적어주세요.</strong>
+						<input type="text" size="30" class="imtv_ip" />
+					</div>
+					<p class="reg_ed_btn"><input type="submit" class="btn_st1" value="확인" data-role="none" /></p>
+				</fieldset>
+				<div class="ipf_after_w">
+					<p class="reg_msg">인증메일이 발송되었습니다. <span class="lb">메일로 받으신 인증번호를 입력해 주세요.</span></p>
+					<div class="reg_ed reg_eds reg_ed_code">
+						<input type="text" size="30" class="imtv_ip" />
+						<button type="button" class="btn_st1_gray" data-role="none">확인</button>
+					</div>
+					<p class="reg_msg regm_code"><strong>본인인증 되었습니다!</strong></p>
+				</div>
 			</div>
 		</div>
-		<!-- 비밀번호 찾기 -->
-		<div id="ipfPassword" class="ipf_c_w">
-			<h3 class="hide">비밀번호 찾기</h3>
-			<fieldset class="ipf_field">
-				<legend>비밀번호 찾기</legend>
-				<div class="reg_ed reg_eds reg_ed_ipf">
-					<strong>아이디</strong>
-					<input type="text" size="30" maxlength="14" class="imtv_ip" />
-				</div>
-				<div class="reg_ed reg_eds reg_ed_ipf">
-					<strong>가입 시 등록한 이메일 주소를 적어주세요.</strong>
-					<input type="text" size="30" class="imtv_ip" />
-				</div>
-				<p class="reg_ed_btn"><input type="submit" class="btn_st1" value="확인" /></p>
-			</fieldset>
-			<div class="ipf_after_w">
-				<p class="reg_msg">인증메일이 발송되었습니다. <span class="lb">메일로 받으신 인증번호를 입력해 주세요.</span></p>
-				<div class="reg_ed reg_eds reg_ed_code">
-					<input type="text" size="30" class="imtv_ip" />
-					<button type="button" class="btn_st1_gray">확인</button>
-				</div>
-				<p class="reg_msg regm_code"><strong>본인인증 되었습니다!</strong></p>
-			</div>
+		<!-- 비주얼 페이징 -->
+		<div id="IpfContentHtmlIndicator" class="dot_paging" style="display:none;">
+			<a href="#" class="this"><span class="ir">1</span></a>
+			<a href="#"><span class="ir">2</span></a>
 		</div>
 	</div>
 </div>
