@@ -222,9 +222,11 @@ var SwipeView = (function(window, document) {
 		{
 			if (this.currentMasterPage=="1")
 			{
+				$(".ld_tab_w .ld_tab li:eq(0)").addClass("this");
 				$(".bdb").animate({"left" : "0%"}, {duration:300, queue:true});
 			} else if (this.currentMasterPage=="2")
 			{
+				$(".ld_tab_w .ld_tab li:eq(0)").addClass("this");
 				$(".bdb").animate({"left" : "50%"}, {duration:300, queue:true});
 			}
 			$("#ldContentSwipe").css("height",""+ (Number($("#ldContentSwipe-swipeview-slider>div").filter(".swipeview-active").find(".ld_c_w").height()) + Number(30)) +"px");
