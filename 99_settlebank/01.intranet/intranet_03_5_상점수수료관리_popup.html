@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_popup.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="pop_wrap" class="popSt04">
+	<h1><img src="../images/pop_tit_06.gif" alt="상점 수수료관리 편집/등록" /></h1>
+	<form class="jqtransform">
+		<table cellpadding="0" cellspacing="0" class="sbi_tbl_s sbi_tbl_p_s sbi_tbl_p_s_6">
+			<tr class="s_tbl_r01">
+				<th>선택</th>
+				<td colspan="3">
+					<ul class="sbi_tbr_w">
+						<li><input type="radio" id="sbi_tbr_p_01" name="sbi_tbr_p" class="radio" checked="checked" /><label for="sbi_tbr_p_01">단일</label></li>
+						<li><input type="radio" id="sbi_tbr_p_02" name="sbi_tbr_p" class="radio" /><label for="sbi_tbr_p_02">일괄(가상계좌만)</label></li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="s_tbl_r02">
+				<th>상점아이디</th>
+				<td colspan="3">
+					<input type="text" class="ipst01" value="myshopid1102" />
+					<a href="#" class="b_src_shop"><img src="../images/b_src_shop.gif" border="0" alt="상점검색" /></a>
+				</td>
+			</tr>
+			<tr class="s_tbl_r03">
+				<th>서비스코드</th>
+				<td>
+					<select>
+						<option>서비스코드</option>
+						<option>서비스코드</option>
+					</select>
+				</td>
+				<th class="s_tbl_c03">금융사코드</th>
+				<td class="s_tbl_c04">
+					서비스코드를 선택하세요.
+				</td>
+			</tr>
+			<tr class="s_tbl_r04">
+				<th>가맹점번호</th>
+				<td colspan="3">
+					<input type="text" class="ipst02" />
+				</td>
+			</tr>
+			<tr class="s_tbl_r05">
+				<th>수수료구분</th>
+				<td>
+					<select>
+						<option>수수료구분</option>
+						<option>수수료구분</option>
+					</select>
+				</td>
+				<th class="s_tbl_c03">수수료형태</th>
+				<td class="s_tbl_c04">
+					<select>
+						<option>서비스형태</option>
+						<option>서비스형태</option>
+					</select>
+				</td>
+			</tr>
+			<tr class="s_tbl_r06">
+				<th>금융사수수료</th>
+				<td>
+					0
+				</td>
+				<th class="s_tbl_c03">ST수수료</th>
+				<td class="s_tbl_c04">
+					0
+				</td>
+			</tr>
+			<tr class="s_tbl_r07">
+				<th>최저수수료</th>
+				<td>
+					<input type="text" class="ipst02" />
+				</td>
+				<th class="s_tbl_c03">총수수료</th>
+				<td class="s_tbl_c04">
+					<input type="text" class="ipst02" />
+				</td>
+			</tr>
+			<tr class="s_tbl_r08">
+				<th>계약적용일</th>
+				<td>
+					<input type="text" class="ipst02" />
+					<a href="#" class="b_slt_date"><img src="../images/b_slt_date.gif" border="0" alt="날짜선택" /></a>
+				</td>
+				<th class="s_tbl_c03">등록상태</th>
+				<td class="s_tbl_c04">
+					<select>
+						<option>등록상태</option>
+						<option>등록상태</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<div class="btn_p_wrap">
+			<a href="#"><img src="../images/btn_ok.gif" alt="확인" /></a>
+			<a href="#"><img src="../images/btn_cancel.gif" alt="취소" /></a>
+		</div>
+	</form>
+
+</div>
+
+
+</body>
+</html>

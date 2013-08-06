@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>한샘인테리어 ADMIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_admin.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="had_wrap">
+	<!-- header -->
+	<div id="had_header">
+		<h1><a href="#"><img src="../images/admin/bi_hsadmin.gif" width="248" height="17" alt="한샘인테리어 ADMIN" /></a></h1>
+		<div class="had_h_r">
+			<em><span>관리자</span>님 안녕하세요.</em>
+			<a href="#" class="b_st_adm">로그아웃</a>
+			<a href="#" class="b_st_adm">본 사이트 보기</a>
+		</div>
+		<ul class="had_gnb">
+			<li><a href="#">메인화면</a></li>
+			<li><a href="#">제품관리</a></li>
+			<li><a href="#">게시판관리</a></li>
+			<!-- 현재선택일 때 class="this" 추가 -->
+			<li class="this"><a href="#">이벤트</a></li>
+			<li><a href="#">매장관리</a></li>
+			<li><a href="#">기타</a></li>
+		</ul>
+	</div>
+	<!-- container -->
+	<div id="had_container">
+		<!-- sidebar -->
+		<div id="had_sidebar">
+			<h2>이벤트</h2>
+			<ul class="had_snb">
+				<li><a href="#">현재 이벤트 메인 배너</a></li>
+				<li><a href="#">이벤트 등록</a></li>
+				<!-- 현재선택일 때 class="this" 추가 -->
+				<li class="this"><a href="#">현재 이벤트</a></li>
+				<li><a href="#">지난 이벤트</a></li>
+			</ul>
+		</div>
+		<!-- content -->
+		<div id="had_content">
+			<h3>현재 이벤트 리스트</h3>
+			<!-- 목록 -->
+			<table cellpadding="0" cellspacing="0" class="had_tbl_set had_tbl_ddc had_tbl_event">
+				<thead>
+					<tr>
+						<th class="chk">선택</th>
+						<th class="num">번호</th>
+						<th class="item">이벤트 이름 / 기간</th>
+						<th class="on_off1">on/off</th>
+						<th class="on_off2">on/off</th>
+						<th class="modify">수정</th>
+						<th class="cell_last delete">삭제</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 첫번째일 때 class="first" 추가 -->
+					<tr class="first">
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em class="c_pnt_r">ON</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">OFF</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em>OFF</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">ON</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em class="c_pnt_r">ON</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">OFF</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em>OFF</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">ON</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em class="c_pnt_r">ON</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">OFF</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em>OFF</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">OFF</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em class="c_pnt_r">ON</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">ON</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em>OFF</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">ON</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em class="c_pnt_r">ON</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">ON</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="ta_c"><input type="checkbox" class="check" /></td>
+						<td class="ta_c">148</td>
+						<td class="tbl_e_i">한샘플래그샵 / 신혼,싱글가구패키지 통째로 증정 이벤트 <br /> 2012.07.13 -2012.08.13</td>
+						<td class="ta_c"><em>OFF</em></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">OFF</a></td>
+						<td class="ta_c va_m"><a href="#" class="b_st_adm">수정</a></td>
+						<td class="cell_last ta_c va_m"><a href="#" class="b_st_adm">삭제</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 페이징 / 버튼 -->
+			<div class="pag_btn_w pbw_brd">
+				<!-- 페이징 -->
+				<div class="had_paging">
+					<a href="#" class="p_fnc pfn_l">&lt;&lt;</a>
+					<a href="#" class="p_fnc pfn_l">&lt;</a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<!-- 현재선택일 때 strong 추가 -->
+					<a href="#"><strong>3</strong></a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="p_fnc pfn_r">&gt;</a>
+					<a href="#" class="p_fnc pfn_r">&gt;&gt;</a>
+				</div>
+				<div class="had_b_r">
+					<a href="#" class="b_st_adm2 b_c_black">선택항목 삭제</a>
+					<a href="#" class="b_st_adm2 b_st_evnt b_c_red">선택항목 지난이벤트로 이동</a>
+					<p class="had_evt_btn">
+						<a href="#" class="b_st_adm2 b_c_black">선택항목 ON</a>
+						<a href="#" class="b_st_adm2 b_c_black">선택항목 OFF</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="had_footer">
+		<h3 class="hide">사이트정보</h3>
+		<h4>한샘인테리어 웹사이트 관리자</h4>
+		<p>Copyright 2012 Hanssem Interior. <span class="lb">all rights reserved.</span></p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>한샘인테리어 ADMIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_admin.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="had_wrap">
+	<!-- header -->
+	<div id="had_header">
+		<h1><a href="#"><img src="../images/admin/bi_hsadmin.gif" width="248" height="17" alt="한샘인테리어 ADMIN" /></a></h1>
+		<div class="had_h_r">
+			<em><span>관리자</span>님 안녕하세요.</em>
+			<a href="#" class="b_st_adm">로그아웃</a>
+			<a href="#" class="b_st_adm">본 사이트 보기</a>
+		</div>
+		<ul class="had_gnb">
+			<li><a href="#">메인화면</a></li>
+			<li><a href="#">제품관리</a></li>
+			<li><a href="#">게시판관리</a></li>
+			<li><a href="#">이벤트</a></li>
+			<!-- 현재선택일 때 class="this" 추가 -->
+			<li class="this"><a href="#">매장관리</a></li>
+			<li><a href="#">기타</a></li>
+		</ul>
+	</div>
+	<!-- container -->
+	<div id="had_container">
+		<!-- sidebar -->
+		<div id="had_sidebar">
+			<h2 class="had_stit_alone">매장 관리</h2>
+		</div>
+		<!-- content -->
+		<div id="had_content">
+			<h3>매장 등록</h3>
+			<form class="jqtransform">
+			<table cellpadding="0" cellspacing="0" class="had_evnt_regi had_shop_regi">
+				<!-- 매장 -->
+				<tr class="hadsr_name">
+					<th>매장명</th>
+					<td><span class="hfiptxt"><input type="text" class="iptxt" value="한샘플래그샵 + 부산센텀점" /></span></td>
+				</tr>
+				<!-- 구분 -->
+				<tr class="hadsr_term">
+					<th>구분</th>
+					<td>
+						<select>
+							<option>매장구분</option>
+							<option>매장구분</option>
+							<option>매장구분</option>
+						</select>
+						<select>
+							<option>지역구분</option>
+							<option>지역구분</option>
+							<option>지역구분</option>
+						</select>
+					</td>
+				</tr>
+				<!-- 전화번호 -->
+				<tr class="hadsr_tel">
+					<th>전화번호</th>
+					<td><span class="hfiptxt"><input type="text" class="iptxt" value="010-7777-8645" /></span></td>
+				</tr>
+				<!-- 주소 -->
+				<tr class="hadsr_address">
+					<th>주소</th>
+					<td><span class="hfiptxt"><input type="text" class="iptxt" value="서울시 마포구 상수동" /></span></td>
+				</tr>
+				<!-- 영업시간 -->
+				<tr class="hadsr_time">
+					<th>영업시간</th>
+					<td><span class="hfiptxt"><input type="text" class="iptxt" value="오전10시 30분 - 오후 8시" /></span></td>
+				</tr>
+				<!-- 휴무안내 -->
+				<tr class="hadsr_close">
+					<th>휴무안내</th>
+					<td><span class="hfiptxt"><input type="text" class="iptxt" value="일요일과 공휴일 영업 + 매월 셋째주 월요일 정기 휴무" /></span></td>
+				</tr>
+				<!-- 오시는길/층별안내-->
+				<tr class="hader_mnf">
+					<td colspan="2">
+						<div class="had_shop_reg_ln2">
+							<div class="had_srl2_l">
+								<h4>오시는길</h4>
+								<div class="hftxtarea">
+									<textarea rows="5" cols="30">부산 2호선 센텀시티역 11번 출구에서
+올림픽공원 방면 도보 약 200m</textarea>
+									<i class="lt"></i><i class="rt"></i><i class="lb"></i><i class="rb"></i>
+								</div>
+							</div>
+							<div class="had_srl2_r">
+								<h4>층별안내</h4>
+								<div class="hftxtarea">
+									<textarea rows="5" cols="30">4F 생활용품관(부엌용품, 데코&리빙, 패브릭, 조명)
+3F 서재관, 자녀방관, 의자존, 놀이공간
+2F 거실/식당관, 침실관, 수면존, 수납시스템존
+1F 거실관, 침실관
+B1 부엌관, 수입명품관, 맞춤패브릭관</textarea>
+									<i class="lt"></i><i class="rt"></i><i class="lb"></i><i class="rb"></i>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			</form>
+			<!-- 페이징 / 버튼 -->
+			<div class="pag_btn_w pbw_brd">
+				<div class="had_b_l">
+					<a href="#" class="b_st_adm2 b_c_black">취소</a>
+				</div>
+				<div class="had_b_r">
+					<a href="#" class="b_st_adm2 b_c_black">미리보기</a>
+					<a href="#" class="b_st_adm2 b_c_red">등록</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="had_footer">
+		<h3 class="hide">사이트정보</h3>
+		<h4>한샘인테리어 웹사이트 관리자</h4>
+		<p>Copyright 2012 Hanssem Interior. <span class="lb">all rights reserved.</span></p>
+	</div>
+</div>
+
+</body>
+</html>

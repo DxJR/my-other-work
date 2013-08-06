@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_company.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<h1><img src="../images/common/bi_settlebank.gif" width="187" height="70" alt="Settlebank" usemap="#settlebankBi" /></h1>
+		<map id="settlebankBi" name="settlebankBi">
+			<area shape="rect" coords="0,0,187,70" alt="Settlebank" href="#" />
+		</map>
+		<!-- 우측영역 -->
+		<div id="sbi_mt_r">
+			<!-- 최상단메뉴 -->
+			 <ul id="sbi_mt_menu">
+				<li class="first"><a href="#"><img src="../images/b_mt_company.gif" border="0" alt="회사소개" /></a></li>
+				<li><a href="#"><img src="../images/b_mt_helpdesk.gif" border="0" alt="고객지원" /></a></li>
+				<li><a href="#"><img src="../images/b_mt_sitemap.gif" border="0" alt="사이트맵" /></a></li>
+			 </ul>
+			 <!-- 로그인정보 -->
+			 <p id="sbi_t_loginfo"><strong>세틀뱅크</strong>님 안녕하세요 <a href="#" class="b_t_logout"><img src="../images/b_t_logout.gif" border="0" alt="로그아웃" /></a></p>
+		 </div>
+		 <!-- GNB -->
+		 <ul id="sbi_snb">
+			<!-- 현재선택일 때 class="this" -->
+			<li class="first this"><a href="#"><img src="../images/b_snb_ec_over.gif" border="0" alt="전자결제" /></a></li>
+			<li><a href="#"><img src="../images/b_snb_ca.gif" border="0" alt="가상계좌" /></a></li>
+			<li><a href="#"><img src="../images/b_snb_pb.gif" border="0" alt="펌뱅킹" /></a></li>
+			<li><a href="#"><img src="../images/b_snb_es.gif" border="0" alt="부가서비스" /></a></li>
+		 </ul>
+	</div>
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<!-- 서브메뉴 -->
+			<div id="sbi_submenu">
+				<h2><img src="../images/sm_t_helpdesk.gif" border="0" alt="고객지원" /></h2>
+				<ul class="sbi_sm_tpl">
+					<li class="first"><a href="#"><img src="../images/b_sbhst_01.gif" border="0" alt="공지사항" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_02_over.gif" border="0" alt="거래내역조회" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_03.gif" border="0" alt="FAQ" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_04.gif" border="0" alt="자료실" /></a></li>
+					<li><a href="#"><img src="../images/b_sbhst_05.gif" border="0" alt="온라인상담" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!-- 제목/현재위치 -->
+			<div class="sbi_tit_cont">
+				<h3><img src="../images/sbtc_sth02.gif" border="0" alt="거래내역조회" /></h3>
+				<p class="sbi_location"><a href="#">인트라넷</a> &gt; <a href="#">정산조회</a> &gt; <a href="#">정산입금 내역조회</a></p>
+			</div>
+			<!-- 실제컨텐츠 -->
+			<div class="sbi_cont_w">
+				<!-- 카테고리 / 검색 -->
+				<div class="sbi_ct_cate_s_w">
+					<!-- 카테고리 -->
+					<div class="sbi_ct">
+						<a href="#"><img src="../images/sbi_ct_s_01.gif" alt="등록금 납부내역" /></a>
+						<a href="#"><img src="../images/sbi_ct_s_02_over.gif" alt="전자결제내역" /></a>
+					</div>
+				</div>
+				<div class="sbi_h_tlv_w">
+					<form class="jqtransform">
+						<table cellpadding="0" cellspacing="0" class="sbi_tbl_s">
+							<colgroup>
+								<col width="108" />
+								<col width="799" />
+							</colgroup>
+							<tr>
+								<th>구분</th>
+								<td>
+									<ul class="sbi_tbr_w">
+										<li><input type="radio" id="sbi_tbr_01" name="sbi_tbr" class="radio" checked="checked" /><label for="sbi_tbr_01">신용카드</label></li>
+										<li><input type="radio" id="sbi_tbr_02" name="sbi_tbr" class="radio" /><label for="sbi_tbr_02">계좌이체</label></li>
+										<li><input type="radio" id="sbi_tbr_03" name="sbi_tbr" class="radio" /><label for="sbi_tbr_03">가상계좌(무통장)</label></li>
+										<li><input type="radio" id="sbi_tbr_04" name="sbi_tbr" class="radio" /><label for="sbi_tbr_04">휴대폰결제</label></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>카드번호</th>
+								<td>
+									<input type="text" class="ipst03" /> <span class="ds">-</span>
+									<input type="text" class="ipst03" /> <span class="ds">-</span>
+									<input type="text" class="ipst03" /> <span class="ds">-</span>
+									<input type="text" class="ipst03" />
+								</td>
+							</tr>
+							<tr>
+								<th>승인번호</th>
+								<td>
+									<input type="text" class="ipst02" />
+								</td>
+							</tr>
+							<tr>
+								<th>결제금액</th>
+								<td>
+									<input type="text" class="ipst02" /> <span class="tx">원</span>
+								</td>
+							</tr>
+							<tr class="ds_tr">
+								<th>거래일자</th>
+								<td>
+									<input type="text" class="ipst02" value="2012.02.19" />
+									<a href="#" class="b_slt_date"><img src="../images/b_slt_date.gif" border="0" alt="날짜선택" /></a>
+									<span class="ds">-</span>
+									<input type="text" class="ipst02" value="2012.02.19" />
+									<a href="#" class="b_slt_date"><img src="../images/b_slt_date.gif" border="0" alt="날짜선택" /></a>
+									<em>조회기간은 한달을 초과할 수 없습니다.</em>
+								</td>
+							</tr>
+						</table>
+						<p class="btn_mid_c"><a href="#" class="b_srt"><img src="../images/b_srt.gif" border="0" alt="조회" /></a></p>
+						<table cellpadding="0" cellspacing="0" class="sbi_tbl_us2">
+							<colgroup>
+								<col width="42" />
+								<col width="113" />
+								<col width="161" />
+								<col width="175" />
+								<col width="102" />
+								<col width="156" />
+								<col width="157" />
+							</colgroup>
+							<tr>
+								<th rowspan="2">순번</th>
+								<th>상호</th>
+								<th>승인(취소)일자</th>
+								<th>구매자</th>
+								<th>거래금액</th>
+								<th>카드계열</th>
+								<th class="c_l">카드번호</th>
+							</tr>
+							<tr>
+								<th>연락처</th>
+								<th>TID</th>
+								<th>상품명</th>
+								<th>할부구분</th>
+								<th>승인번호</th>
+								<th class="c_l">거래상태</th>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>
+									세틀뱅크
+									<span class="lb">02-245-3450</span>
+								</td>
+								<td>
+									20120345 00:00:00
+									<span class="lb">SBank_CARDmin_test100<br />
+									201201193938484848</span>
+								</td>
+								<td>
+									가상쇼핑몰
+									<span class="lb">세틀뱅크 테스트 상품정보</span>
+								</td>
+								<td>
+									1,000
+									<span class="lb">0</span>
+								</td>
+								<td>
+									신한JCB카드
+									<span class="lb">303938383 <a href="#">영수증출력</a></span>
+								</td>
+								<td class="c_l">
+									1212-1212-****-1212
+									<span class="lb">승인완료</span>
+								</td>
+							</tr>
+						</table>
+						<!-- 페이징 -->
+						<div class="paging_w">
+							<a href="#" class="fnc">&lt;&lt;</a>
+							<a href="#" class="fnc">&lt;</a>
+							<!-- 현재페이지 class="this" -->
+							<a href="#" class="this">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<a href="#" class="fnc">&gt;</a>
+							<a href="#" class="fnc">&gt;&gt;</a>
+							<span class="move_to">
+								<input type="text" value="9" />
+								<a href="#">page로 이동</a>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<h2 class="hide">Settlebank 정보</h2>
+		<div class="f_s_cont fsc_info"><img src="../images/sb_foot_01.gif" width="258" height="38" border="0" alt="세틀뱅크(주)" /></div>
+		<div class="f_s_cont fsc_s_info"><img src="../images/sb_foot_02.gif" width="162" height="21" border="0" alt="연락처" /></div>
+		<div class="f_s_cont fsc_copy"><img src="../images/sb_foot_03.gif" width="169" height="21" border="0" alt="Copyright" /></div>
+		<ul class="fsc_menu">
+			<li class="first"><a href="#"><img src="../images/b_f_policy.gif" width="40" height="11" border="0" alt="이용약관" /></a></li>
+			<li><a href="#"><img src="../images/b_f_intranet.gif" width="40" height="11" border="0" alt="인트라넷" /></a></li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>

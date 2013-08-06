@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>*한샘* 가고 싶은 곳, 머물고 싶은 곳</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+		snbFunc.init();
+		productListAction();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<h1><img src="../images/common/bi_hanssem.gif" width="188" height="17" alt="한샘인테리어" usemap="#hanssemBi" /></h1>
+		<map id="hanssemBi" name="hanssemBi">
+			<area shape="rect" coords="0,0,188,17" alt="한샘인테리어" href="#" />
+		</map>
+		<!-- 최상단 공통메뉴 -->
+		<div id="twrap">
+			<h2 class="hide">한샘 주요 사이트</h2>
+			<p class="hstw_af"><button type="button" class="gbtn b_add_f"><span class="ir">한샘 인테리어 즐겨찾기</span></button></p>
+			<ul class="hstw_fs">
+				<li><a href="#" class="gbtn b_fs_hcom"><span class="ir">한샘닷컴</span></a></li>
+				<li><a href="#" class="gbtn b_fs_hmall"><span class="ir">한샘몰</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_fs_hkitchen"><span class="ir">한샘부엌</span></a></li>
+			</ul>
+		</div>
+		<!-- GNB -->
+		<div id="gnb">
+			<h2 class="hide">자주쓰는메뉴</h2>
+			<ul class="m_gnb">
+				<li><a href="#" class="gbtn b_gnb_logout"><span class="ir">로그아웃</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_wishlist"><span class="ir">위시리스트</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_shop"><span class="ir">매장안내</span></a></li>
+				<li><a href="#" class="gbtn b_gnb_event"><span class="ir">이벤트</span></a></li>
+				<li class="last"><a href="#" class="gbtn b_gnb_sale"><span class="ir">전시품 할인판매</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- container -->
+	<div id="container">
+		<!-- sidebar -->
+		<div id="sidebar">
+			<div id="snb">
+				<h2 class="hide">카테고리메뉴</h2>
+				<ul class="m_snb">
+					<!-- 침실 -->
+					<li>
+						<a href="#" class="b_snb_bed"><i class="icn"></i><span class="ir">침실</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb">
+									<li><a href="#" class="b_s3_bed"><i class="icn"></i><span class="ir">침대</span></a></li>
+									<li><a href="#" class="b_s3_chest"><i class="icn"></i><span class="ir">옷장</span></a></li>
+									<li><a href="#" class="b_s3_bichest"><i class="icn"></i><span class="ir">붙박이장</span></a></li>
+									<li><a href="#" class="b_s3_btable"><i class="icn"></i><span class="ir">협탁</span></a></li>
+									<li><a href="#" class="b_s3_dtable"><i class="icn"></i><span class="ir">서랍화장대</span></a></li>
+									<li class="last"><a href="#" class="b_s3_mirror"><i class="icn"></i><span class="ir">거울</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 메트리스 -->
+					<li>
+						<a href="#" class="b_snb_mattress"><i class="icn"></i><span class="ir">메트리스</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb">
+									<li><a href="#" class="b_s3_ceye"><i class="icn"></i><span class="ir">컴포트아이</span></a></li>
+									<li><a href="#" class="b_s3_snight"><i class="icn"></i><span class="ir">사일런나잇</span></a></li>
+									<li class="last"><a href="#" class="b_s3_nratex"><i class="icn"></i><span class="ir">노뜨라텍스</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 드레스룸 -->
+					<li>
+						<a href="#" class="b_snb_dress"><i class="icn"></i><span class="ir">드레스룸</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb">
+									<li class="last"><a href="#" class="b_s3_alto"><i class="icn"></i><span class="ir">알토</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 거실 -->
+					<li class="this">
+						<a href="#" class="b_snb_living"><i class="icn"></i><span class="ir">거실</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last now">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb" style="display:block;">
+									<li><a href="#" class="b_s3_ssofa"><i class="icn"></i><span class="ir">가죽소파</span></a></li>
+									<li class="current"><a href="#" class="b_s3_fsofa"><i class="icn"></i><span class="ir">패브릭소파</span></a></li>
+									<li><a href="#" class="b_s3_isofa"><i class="icn"></i><span class="ir">수입소파</span></a></li>
+									<li><a href="#" class="b_s3_rriner"><i class="icn"></i><span class="ir">리클라이너</span></a></li>
+									<li><a href="#" class="b_s3_dchest"><i class="icn"></i><span class="ir">거실장</span></a></li>
+									<li class="last"><a href="#" class="b_s3_ditable"><i class="icn"></i><span class="ir">거실테이블</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 다이닝룸 -->
+					<li>
+						<a href="#" class="b_snb_dining"><i class="icn"></i><span class="ir">다이닝룸</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb">
+									<li><a href="#" class="b_s3_ftable"><i class="icn"></i><span class="ir">식탁</span></a></li>
+									<li class="last"><a href="#" class="b_s3_chair"><i class="icn"></i><span class="ir">의자</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 키즈자녀방 -->
+					<li>
+						<a href="#" class="b_snb_kids"><i class="icn"></i><span class="ir">키즈.자녀방</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb">
+									<li><a href="#" class="b_s3_desk"><i class="icn"></i><span class="ir">책상</span></a></li>
+									<li><a href="#" class="b_s3_dschest"><i class="icn"></i><span class="ir">책상서랍</span></a></li>
+									<li><a href="#" class="b_s3_bcase"><i class="icn"></i><span class="ir">책장</span></a></li>
+									<li><a href="#" class="b_s3_cschest"><i class="icn"></i><span class="ir">옷장,서랍장</span></a></li>
+									<li class="last"><a href="#" class="b_s3_bed"><i class="icn"></i><span class="ir">침대</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- 서재,홈오피스 -->
+					<li>
+						<a href="#" class="b_snb_office"><i class="icn"></i><span class="ir">서재.홈오피스</span></a>
+						<!-- 2depth -->
+						<ul class="m_2d_snb">
+							<li><a href="#" class="b_s2_ins"><i class="icn"></i><span class="ir">IDEA &amp; SOLUTION</span></a></li>
+							<li><a href="#" class="b_s2_guide"><i class="icn"></i><span class="ir">BUYING GUIDE</span></a></li>
+							<li class="last">
+								<a href="#" class="b_s2_product"><i class="icn"></i><span class="ir">PRODUCT</span></a>
+								<!-- 3depth -->
+								<ul class="m_3d_snb">
+									<li><a href="#" class="b_s3_desk"><i class="icn"></i><span class="ir">책상</span></a></li>
+									<li><a href="#" class="b_s3_dschest"><i class="icn"></i><span class="ir">책상서랍</span></a></li>
+									<li class="last"><a href="#" class="b_s3_bcase"><i class="icn"></i><span class="ir">책장</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- 좌측검색 -->
+			<div id="hs_cm_search">
+				<fieldset>
+					<legend>한샘인테리어 검색</legend>
+					<input type="text" id="hscms_ipt" class="iptxt" value="제품 검색" />
+					<button type="submit" class="gbtn b_hscms_go"><span class="ir">검색</span></button>
+				</fieldset>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="cont_tit_wrap ctw_hs_story">
+				<h2><span class="ir">한샘인테리어 스토리</span></h2>
+			</div>
+			<!-- 서브메뉴 -->
+			<ul class="hs_cont_sub_menu hs_story_sm">
+				<!-- 현재 활성화일 때 strong 추가 -->
+				<li><a href="#" class="gbtn hsst_01"><strong><span class="ir">이사 이야기</span></strong></a></li>
+				<li><a href="#" class="gbtn hsst_02"><span class="ir">자녀방, 서재 이야기</span></a></li>
+				<li><a href="#" class="gbtn hsst_03"><span class="ir">침대 이야기</span></a></li>
+				<!-- 마지막 li에 class="last" 추가 -->
+				<li class="last"><a href="#" class="gbtn hsst_04"><span class="ir">거실 이야기</span></a></li>
+			</ul>
+			<!-- 컨텐츠 -->
+			<div class="hsst_w">
+				<!-- 이사이야기 서브메뉴 -->
+				<div class="rmv_str_w rmv_b_str_w">
+					<h3><span class="ir">01. 침실 스타일 스토리</span></h3>
+					<ul>
+						<li><a href="#" class="gbtn rmv_b_01"><span class="ir">패리스 수납실험 카메라</span></a></li>
+						<!-- 현재선택일 때 li class="this" 추가 -->
+						<li class="this"><a href="#" class="gbtn rmv_b_02"><span class="ir">Mrs.패리스 스타일</span></a></li>
+						<li><a href="#" class="gbtn rmv_b_03"><span class="ir">우리부부 수납체험기</span></a></li>
+					</ul>
+				</div>
+				<div class="rmv_str_w rmv_d_str_w">
+					<h3><span class="ir">02. 거실의 7가지 라이프스타일 제안</span></h3>
+					<ul>
+						<li><a href="#" class="gbtn rmv_d_01"><span class="ir">열린 거실전</span></a></li>
+						<li><a href="#" class="gbtn rmv_d_02"><span class="ir">열린 거실전 가상체험</span></a></li>
+					</ul>
+				</div>
+				<!-- Mrs.패리스 스타일 -->
+				<div class="hs_mrs_w">
+					<!-- 상단메뉴 -->
+					<div class="hs_mrs_menu">
+						<h4><span class="ir">Everybody loves PARIS</span></h4>
+						<ul>
+							<li><a href="#" class="gbtn b_mrs_01"><span class="ir">우아한 그녀의 패리스는?</span></a></li>
+							<li><a href="#" class="gbtn b_mrs_02"><strong><span class="ir">모던한 그녀의 패리스는?</span></strong></a></li>
+							<li><a href="#" class="gbtn b_mrs_03"><span class="ir">로맨틱한 그녀의 패리스는?</span></a></li>
+						</ul>
+					</div>
+					<!-- 각 컨텐츠 -->
+					<div class="hs_mrs_cont_w">
+						<div class="hs_mrs_cont_p hs_mrs_cm_p2">
+							<p><img src="../images/hs_mrs_p2.jpg" width="160" height="226" alt="김수경(38) : 모던하고 시크한 그녀. 심플하고 편한 침실을 원하다" /></p>
+							<ul id="hs_mrs_m">
+								<li class="this"><a href="#" class="gbtn b_mrs_si" onclick="mrsHide(); document.getElementById('hs_mrs_c01').style.display='block'; this.parentNode.className='this'; return false;"><span class="ir">She is</span></a></li>
+								<li><a href="#" class="gbtn b_mrs_hc" onclick="mrsHide(); document.getElementById('hs_mrs_c02').style.display='block'; this.parentNode.className='this'; return false;"><span class="ir">Her Choice</span></a></li>
+								<li><a href="#" class="gbtn b_mrs_hb" onclick="mrsHide(); document.getElementById('hs_mrs_c03').style.display='block'; this.parentNode.className='this'; return false;"><span class="ir">Her Bedroom</span></a></li>
+								<li><a href="#" class="gbtn b_mrs_hw" onclick="mrsHide(); document.getElementById('hs_mrs_c04').style.display='block'; this.parentNode.className='this'; return false;"><span class="ir">Her Wardrobe</span></a></li>
+							</ul>
+						</div>
+						<!-- 주 컨텐츠 -->
+						<div id="hs_mrs_c_wrap" class="hs_mrs_cont">
+							<div id="hs_mrs_c01" style="display:block;"><img src="../images/hs_mrs_p2_c1.jpg" width="550" height="596" alt="가구 설명" /></div>
+							<div id="hs_mrs_c02"><img src="../images/hs_mrs_p2_c2.jpg" width="550" height="596" alt="가구 설명" /></div>
+							<div id="hs_mrs_c03"><img src="../images/hs_mrs_p2_c3.jpg" width="550" height="596" alt="가구 설명" /></div>
+							<div id="hs_mrs_c04"><img src="../images/hs_mrs_p2_c4.jpg" width="550" height="596" alt="가구 설명" /></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<!-- familysite -->
+		<div class="f_familysite">
+			<h2 class="hide">한샘 패밀리사이트</h2>
+			<form class="jqtransform">
+				<select>
+					<option>Family Site</option>
+					<option>패밀리사이트</option>
+					<option>패밀리사이트</option>
+					<option>패밀리사이트</option>
+					<option>패밀리사이트</option>
+				</select>
+			</form>
+		</div>
+		<!-- 한샘정보 -->
+		<div class="f_hanssem">
+			<h2 class="hide">한샘정보</h2>
+			<div class="f_h_cont fhc_info">
+				<h3>(주)한샘</h3>
+				<p>/ 대표 최양하 <address class="lb">주소: 425-110 경기도 안산시 성곡동 665</address> A/S센터 1588 0900, 080-022-0901</p>
+			</div>
+			<div class="f_h_cont fhc_s_info">
+				<h3>한샘플래그샵</h3>
+				<p>방배점 02 591 2300 / 논현점 02 542 8558 / <span class="lb">분당점 031 719 3100 / 잠실점 02 3430 6900 /</span> 부산센텀점 051 790 8500</p>
+			</div>
+			<div class="f_h_cont fhc_copy">
+				<h3>Copyright</h3>
+				<p>(c) 2012 <span class="lb">HANSSEM Co., Ltd. All rights reserved.</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

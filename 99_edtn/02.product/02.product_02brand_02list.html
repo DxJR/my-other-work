@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>edtn:</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/edtn_common.css" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_product.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/edtn_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		// select / input
+		$("form.jqtransform").jqTransform();
+		// toggle Brand
+		var brandTimer = null;
+		$("#sorting_brand").mouseover(function(){
+			$(this).addClass('lyr_open');
+			if (brandTimer) {
+				clearTimeout(brandTimer);
+			}
+			$('#lyr_head_brand').slideDown(250);
+		});
+		$("#sorting_brand").mouseout(function(){
+			$(this).removeClass('lyr_open');
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
+		});
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- logo -->
+		<h1>
+			<img src="../images/common/bi_objectheydey.gif" width="176" height="39" alt="Object Heydey : Heydey Private Collection" usemap="#heydeyBi" />
+			<map id="heydeyBi" name="heydeyBi">
+				<area shape="rect" coords="0,0,176,39" alt="OBJECT HEYDEY" href="#" />
+			</map>
+		</h1>
+		<!-- GNB -->
+		<div id="gnb">
+			<!-- login area -->
+			<div class="gnb_login">
+				<!-- my favorite brand -->
+				<div id="select_favorite">
+					<form class="jqtransform">
+						<select title="my favorite brand">
+							<option>my favorite brand</option>
+							<option>www.byheydey.com</option>
+							<option>www.studioheydey.com</option>
+						</select>
+					</form>
+				</div>
+				<ul class="gnb_btn">
+					<li><a href="#" class="gbtn gb_logout"><span class="ir">로그아웃</span></a></li>
+					<li><a href="#" class="gbtn gb_mypage"><span class="ir">마이페이지</span></a></li>
+				</ul>
+			</div>
+			<ul class="gnb_btn">
+				<li><a href="#" class="gbtn gb_basket"><span class="ir">장바구니</span></a></li>
+				<li><a href="#" class="gbtn gb_press"><span class="ir">보도자료</span></a></li>
+				<li><a href="#" class="gbtn gb_order"><span class="ir">주문 내역</span></a></li>
+				<li><a href="#" class="gbtn gb_review"><span class="ir">제품리뷰</span></a></li>
+				<li><a href="#" class="gbtn gb_faq"><span class="ir">자주묻는 질문</span></a></li>
+				<li><a href="#" class="gbtn gb_event"><span class="ir">진행중인 이벤트</span></a></li>
+				<li><a href="#" class="gbtn gb_question"><span class="ir">1:1 문의</span></a></li>
+			</ul>
+		</div>
+		<!-- HEAD SNB -->
+		<div id="h_snb">
+			<ul class="snb_btn">
+				<li><a href="#" class="gbtn sb_furniture"><span class="ir">Furniture</span></a></li>
+				<li><a href="#" class="gbtn sb_tableware"><span class="ir">Tableware</span></a></li>
+				<li><a href="#" class="gbtn sb_stationary"><span class="ir">Stationary</span></a></li>
+				<li><a href="#" class="gbtn sb_fabric"><span class="ir">Fabric</span></a></li>
+				<li><a href="#" class="gbtn sb_lighting"><span class="ir">Lighting</span></a></li>
+			</ul>
+			<!-- sorting brand -->
+			<div id="sorting_brand">
+				<a href="#" class="gbtn sb_brand"><span class="ir">Sorting Brand</span></a>
+				<!-- sorting brand layer -->
+				<div id="lyr_head_brand" class="lyr_brand">
+					<ul>
+						<li><a href="#" class="gbtn lb_almedhals"><span class="ir"><strong>Almedhals</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_anneblack"><span class="ir"><strong>Anne Black</strong> : tableware, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_byheydey"><span class="ir"><strong>Byheydey</strong> : furniture, Korea</span></a></li>
+						<li><a href="#" class="gbtn lb_danskvintage"><span class="ir"><strong>Dansk Vintage</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_guss"><span class="ir"><strong>Guss</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_montana"><span class="ir"><strong>Montana</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_saitowood"><span class="ir"><strong>Saito Wood</strong> : stationary, Japan</span></a></li>
+						<li class="last"><a href="#" class="gbtn lb_sceltevie"><span class="ir"><strong>Sceltevie</strong> : stationary, Japan</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- contentwrap -->
+	<div id="contentwrap">
+		<!-- snb -->
+		<div id="snb">
+			<!-- 브랜드페이지일 때 class="brand" // mypage 또는 help desk 처럼 한글일 때 class="snb_k" -->
+			<div class="snb_in brand">
+				<p class="b_tit"><a href="#"><img src="../images/temp/temp_brand.gif" width="184" height="94" alt="Montana" /></a></p>
+				<h2><a href="#">브랜드 소개</a></h2>
+				<ul>
+					<!-- 현재 선택일 때 a class="this" -->
+					<li class="first"><a href="#" class="this">All Products</a></li>
+					<li><a href="#">Beds & Mattresses</a></li>
+					<li><a href="#">Chairs & Sofas</a></li>
+					<li><a href="#">Chest</a></li>
+					<li><a href="#">Tables</a></li>
+					<li><a href="#">Desks & Worktops</a></li>
+					<li><a href="#">Shelving & Storage</a></li>
+					<li><a href="#">Stools & Benches</a></li>
+					<li><a href="#">Mirrors</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<!--  제품목록 -->
+			<div class="d_prod_list">
+				<h3 class="hide">Chest</h3>
+				<div class="p_to_up">
+					<p>
+						<span id="location">
+							<a href="#">Brand</a>&gt;<a href="#">Montana</a>&gt;<a href="#">Bed</a>&gt;<span>Chest</span>
+						</span>
+					</p>
+				</div>
+				<div class="prod_list">
+					<ul>
+						<!-- loop -->
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<!-- 세일일 때 class="p_sale" -->
+								<p class="p_price p_sale"><span><i class="won">W</i> 570,000</span><strong><i class="won">W</i> 274,000 SALE</strong></p>
+							</div>
+						</li>
+						<!-- 4의배수일 때 class="lb" -->
+						<li class="lb">
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<!-- 4의배수일 때 class="lb" -->
+						<li class="lb">
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<!-- 4의배수일 때 class="lb" -->
+						<li class="lb">
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<li>
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+						<!-- 4의배수일 때 class="lb" -->
+						<li class="lb">
+							<p class="p_photo"><a href="#"><img src="../images/temp/prod_01.jpg" width="190" height="190" alt="About a Chair / Swivel Base"></a></p>
+							<div class="p_desc">
+								<p class="p_tit"><a href="#">About a Chair / Swivel Base</a></p>
+								<p class="p_txt"><a href="#">Hayt</a></p>
+								<p class="p_price"><span><i class="won">W</i> 643,000</span></p>
+							</div>
+						</li>
+					</ul>
+					<!-- 더보기 버튼 -->
+					<p class="prod_b_more"><a href="#" class="b_s_b4d"><img src="../images/common/ico_arw_5x3_999.gif" width="5" height="3" alt="arrow" /> 제품 더 보기</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="f_heydey_link">
+			<h2 class="hide">Heydey 소개 및 약관</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_company"><span class="ir">회사소개</span></a></li>
+				<li><a href="#" class="gbtn fb_job"><span class="ir">채용정보</span></a></li>
+				<li><a href="#" class="gbtn fb_policy"><span class="ir">이용약관</span></a></li>
+				<li><a href="#" class="gbtn fb_personalinfo"><span class="ir">개인정보취급방침</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate"><span class="ir">업무제휴</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate_info"><span class="ir">협력업체정보시스템</span></a></li>
+			</ul>
+		</div>
+		<div class="f_settlement">
+			<h2 class="hide">안전결제정보</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_sgic"><span class="ir">서울보증보험</span></a></li>
+				<li><a href="#" class="gbtn fb_kcp"><span class="ir">한국사이버결제</span></a></li>
+			</ul>
+		</div>
+
+		<div class="f_devide">
+			<div class="address">
+				<h2 class="hide">Heydey 사이트정보</h2>
+				<p class="f_addr"><span class="ir">(주)스튜디오헤이데이. 서울특별시 마포구 상수동 324-12 고객센터 1599 7193 팩스 02 334 5517 이메일</span> <a href="mailto:info@objectheydey.com"><span class="ir">info@objectheydey.com</span></a></p>
+				<p class="f_si"><span class="ir">사업자등록번호 105-87-18086 통신판매업신고 마포 1249호 개인정보취급책임자 오명아 대표 노환탁</span></p>
+				<p class="f_copy"><span class="ir">copyright 2012 studio heydey, inc. all rights reserved.</span></p>
+			</div>
+			<div class="familysite">
+				<form class="jqtransform">
+					<select title="family site">
+						<option>family site</option>
+						<option>www.byheydey.com</option>
+						<option>www.studioheydey.com</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

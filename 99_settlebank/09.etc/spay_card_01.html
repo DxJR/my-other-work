@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_popup.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+
+<div class="pop_spay_w">
+	<h1><img src="../images/spay_p_tit2.gif" alt="S'pay" /></h1>
+	<div class="p_spay_tit_w">
+		<h2><img src="../images/spay_in_t_08.gif" alt="신용카드결제" /></h2>
+		<p class="progress"><img src="../images/spay_prgs_h_14.gif" alt="현재단계" /></p>
+	</div>
+	<form class="jqtransform">
+		<div class="p_spay_cont_w">
+			<table cellpadding="0" cellspacing="0" class="sp_pay_tpl">
+				<colgroup>
+					<col width="78" />
+					<col width="246" />
+				</colgroup>
+				<tr>
+					<th>상품명</th>
+					<td>헤이데이 테스트 상품정보</td>
+				</tr>
+				<tr>
+					<th>금액</th>
+					<td>100,000원</td>
+				</tr>
+			</table>
+			<!-- 결제카드선택 -->
+			<div class="p_spay_c_l2">
+				<h3 class="p_spay_l_exp">결제하실 카드를 선택해 주세요.</h3>
+				<table cellpadding="0" cellspacing="0" class="sp_pay_tpl_form">
+					<colgroup>
+						<col width="92" />
+						<col width="232" />
+					</colgroup>
+					<tr class="v-t">
+						<th><img src="../images/sp_pay_frm_t08.gif" alt="안전결제(ISP)" /></th>
+						<td>
+							<ul class="crd_ul">
+								<li class="crd_li crd_l1"><input type="radio" name="p_frm_i_e" id="p_frm_i_e01" class="radio" checked="checked" /><label for="p_frm_i_e01">국민</label></li>
+								<li class="crd_li"><input type="radio" name="p_frm_i_e" id="p_frm_i_e02" class="radio" /><label for="p_frm_i_e02">비씨</label></li>
+								<li class="crd_li"><input type="radio" name="p_frm_i_e" id="p_frm_i_e03" class="radio" /><label for="p_frm_i_e03">우리</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="v-t">
+						<th><img src="../images/sp_pay_frm_t09.gif" alt="안심클릭(기타카드)" /></th>
+						<td>
+							<ul class="crd_ul">
+								<li class="crd_li crd_l1"><input type="radio" name="p_frm_a_e" id="p_frm_a_e01" class="radio" checked="checked" /><label for="p_frm_a_e01">삼성</label></li>
+								<li class="crd_li"><input type="radio" name="p_frm_a_e" id="p_frm_a_e02" class="radio" /><label for="p_frm_a_e02">신한</label></li>
+								<li class="crd_li"><input type="radio" name="p_frm_a_e" id="p_frm_a_e03" class="radio" /><label for="p_frm_a_e03">롯데</label></li>
+								<li class="crd_li crd_l1"><input type="radio" name="p_frm_a_e" id="p_frm_a_e04" class="radio" /><label for="p_frm_a_e04">현대</label></li>
+								<li class="crd_li"><input type="radio" name="p_frm_a_e" id="p_frm_a_e05" class="radio" /><label for="p_frm_a_e05">NH채움</label></li>
+								<li class="crd_li"><input type="radio" name="p_frm_a_e" id="p_frm_a_e06" class="radio" /><label for="p_frm_a_e06">하나SK</label></li>
+								<li class="crd_li crd_l1"><input type="radio" name="p_frm_a_e" id="p_frm_a_e07" class="radio" /><label for="p_frm_a_e07">외환</label></li>
+								<li class="crd_li crd_etc">
+									<input type="radio" name="p_frm_a_e" id="p_frm_a_e08" class="radio" />
+									<div class="jqtype2">
+										<select>
+											<option>기타카드</option>
+											<option>기타카드</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t10.gif" alt="할부기간" /></th>
+						<td>
+							<div class="jqtype2">
+								<select>
+									<option>일시불</option>
+									<option>일시불</option>
+								</select>
+								<em class="iexpt">일반/무이자</em>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><img src="../images/sp_pay_frm_t11.gif" alt="내역통보 email" /></th>
+						<td><input type="text" class="ipst02 ipst_l2" onclick="this.style.background='none';" style="background:url('../images/iptxt_b_2.gif') 4px 5px no-repeat;" /></td>
+					</tr>
+					<tr class="v-t">
+						<th><img src="../images/sp_pay_frm_t12.gif" alt="무이자 할부카드 안내" /></th>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</form>
+	<div class="p_spay_c_btm">
+		<!-- 주의사항 -->
+		<div class="p_spay_etc">
+			<p>카드명세서에는 <em>세틀뱅크(주)</em> 또는 상점명이 표기됩니다.<br />신용카드 30만원 이상 결제 시 공인인증서 의무적용.</p>
+		</div>
+		<!-- 하단버튼 -->
+		<div class="p_spay_btn_w">
+			<a href="#"><img src="../images/b_spay_next.gif" alt="다음단계" /></a>
+			<a href="#"><img src="../images/b_spay_cancel.gif" alt="취소" /></a>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
