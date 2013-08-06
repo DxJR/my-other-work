@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>한샘인테리어 ADMIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_admin.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="had_wrap">
+	<!-- header -->
+	<div id="had_header">
+		<h1><a href="#"><img src="../images/admin/bi_hsadmin.gif" width="248" height="17" alt="한샘인테리어 ADMIN" /></a></h1>
+		<div class="had_h_r">
+			<em><span>관리자</span>님 안녕하세요.</em>
+			<a href="#" class="b_st_adm">로그아웃</a>
+			<a href="#" class="b_st_adm">본 사이트 보기</a>
+		</div>
+		<ul class="had_gnb">
+			<li><a href="#">메인화면</a></li>
+			<!-- 현재선택일 때 class="this" 추가 -->
+			<li class="this"><a href="#">제품관리</a></li>
+			<li><a href="#">게시판관리</a></li>
+			<li><a href="#">이벤트</a></li>
+			<li><a href="#">매장관리</a></li>
+			<li><a href="#">기타</a></li>
+		</ul>
+	</div>
+	<!-- container -->
+	<div id="had_container">
+		<!-- sidebar -->
+		<div id="had_sidebar">
+			<h2>제품 관리</h2>
+			<ul class="had_snb">
+				<li><a href="#">아이콘 등록</a></li>
+				<!-- 현재선택일 때 class="this" 추가 -->
+				<li class="this"><a href="#">옵션 등록 및 수정</a></li>
+				<li><a href="#">옵션 변동사항 입력</a></li>
+				<li><a href="#">제품 등록</a></li>
+				<li><a href="#">제품 수정 및 삭제</a></li>
+				<li><a href="#">위시리스트 확인</a></li>
+			</ul>
+		</div>
+		<!-- content -->
+		<div id="had_content">
+			<h3>옵션 등록 및 수정</h3>
+			<!-- 2차제목 -->
+			<h4 class="had_tit_lv4">제품 목록</h4>
+			<!-- 카테고리검색 -->
+			<fieldset class="had_category">
+				<legend>카테고리 검색</legend>
+				<strong>카테고리</strong>
+				<form class="jqtransform">
+					<select>
+						<option>분류1</option>
+						<option>분류1</option>
+						<option>분류1</option>
+					</select>
+					<select class="had_c_g2">
+						<option>분류2</option>
+						<option>분류2</option>
+						<option>분류2</option>
+					</select>
+					<input type="image" src="../images/admin/btn_category_search.gif" width="41" height="25" class="ip_img" alt="검색" />
+				</form>
+			</fieldset>
+			<!-- 목록 -->
+			<table cellpadding="0" cellspacing="0" class="had_tbl_set had_tbl_ilist">
+				<thead>
+					<tr>
+						<th class="grp1">분류1</th>
+						<th class="grp2">분류2</th>
+						<th class="iname2">상품명</th>
+						<th class="option">옵션</th>
+						<th class="cell_last rnm">등록 및 수정</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 첫번째일 때 class="first" 추가 -->
+					<tr class="first">
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option">없음</td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+					<tr>
+						<td>서재.홈오피스</td>
+						<td>리클라이너</td>
+						<td>&lt;위더스2 5000 데코&gt; 3인용</td>
+						<td class="option"><em>있음</em></td>
+						<td class="cell_last rnm"><a href="#" class="b_st_adm">옵션등록/수정</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 페이징 / 버튼 -->
+			<div class="pag_btn_w">
+				<!-- 페이징 -->
+				<div class="had_paging">
+					<a href="#" class="p_fnc pfn_l">&lt;&lt;</a>
+					<a href="#" class="p_fnc pfn_l">&lt;</a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<!-- 현재선택일 때 strong 추가 -->
+					<a href="#"><strong>3</strong></a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="p_fnc pfn_r">&gt;</a>
+					<a href="#" class="p_fnc pfn_r">&gt;&gt;</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="had_footer">
+		<h3 class="hide">사이트정보</h3>
+		<h4>한샘인테리어 웹사이트 관리자</h4>
+		<p>Copyright 2012 Hanssem Interior. <span class="lb">all rights reserved.</span></p>
+	</div>
+</div>
+
+</body>
+</html>

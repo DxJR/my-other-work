@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* 우리 서버에 있는 font 이용시 
+/*	
+@font-face{font-family:'Nanum Gothic';
+			font-weight: normal; 
+			font-style: normal; 
+			src:local('나눔고딕')
+		      , url('file:///mnt/sdcard/Android/data/com.inmoontv/files/NanumGothic.ttf')
+		      , url('file:///android_asset/fonts/NanumGothic.ttf')
+		      , url('../../font/NanumGothic_small.eot?#iefix') format('eot')
+		      , url('../../font/font/NanumGothic.woff') format('woff') 
+			  , url('../../font/font/NanumGothic.ttf') format('truetype') 
+			  ;}
+@font-face{font-family:'Nanum Gothic';
+			font-weight: bold; 
+			font-style: normal; 
+			src:local('나눔고딕')
+			  , url('file:///mnt/sdcard/Android/data/com.inmoontv/files/NanumGothicBold.ttf')  
+			  , url('file:///android_asset/fonts/NanumGothicBold.ttf')
+			  , url('../../font/NanumGothicBold.eot?#iefix') format('eot')
+		      , url('../../font/NanumGothicBold.woff') format('woff')
+			  , url('../../font/NanumGothicBold.ttf') format('truetype') 
+		      ;}
+*/
+
+/* Google에서 제공하는 web font
+ * http://www.google.com/webfonts/earlyaccess
+ * example 
+ * font-family: 'Nanum Gothic', sans-serif;
+ */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);

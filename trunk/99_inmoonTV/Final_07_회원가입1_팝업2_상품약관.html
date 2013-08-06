@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>inmoonTV</title>
+<link type="text/css" rel="stylesheet" href="css/jmstyle.css" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/inmoontv.js"></script>
+</head>
+
+<body>
+
+
+<!-- 서브페이지일 때 class="subpage" 추가 -->
+<div id="wrap" class="subpage">
+	<!-- header -->
+	<div id="header">
+		<h1><span class="ir">inmoonTV</span></h1>
+		<h2><a href="#" data-transition="fade"><i class="icn"><span class="ir">이전</span></i></a> 회원가입</h2>
+	</div>
+	<!-- content -->
+	<div id="content">
+		<fieldset class="reg_field_w">
+			<legend>회원가입</legend>
+			<div class="reg_ed reg_e_email">
+				<strong>이메일 <em>실제 사용하시는 주소를 적어주세요.</em></strong>
+				<input type="text" size="30" class="imtv_ip" />
+				<p class="imtv_check"><input type="checkbox" id="emailAgree" class="check" checked="checked" /><label for="emailAgree">강의정보 이메일 수신에 동의합니다.</label></p>
+			</div>
+			<div class="reg_ed reg_e_id">
+				<strong>아이디 <em><i>5 ~ 14자</i> 영문과 숫자로 만들어 주세요.</em></strong>
+				<input type="text" size="30" maxlength="14" class="imtv_ip" />
+			</div>
+			<div class="reg_ed reg_e_pwd">
+				<strong>비밀번호 <em><i>5 ~ 14자</i> 영문과 숫자로 만들어 주세요.</em></strong>
+				<input type="password" size="30" maxlength="14" class="imtv_ip" />
+			</div>
+			<div class="reg_ed reg_e_rpwd">
+				<strong>비밀번호 한 번 더</strong>
+				<input type="password" size="30" maxlength="14" class="imtv_ip" />
+			</div>
+			<ul class="reg_policy_list">
+				<li class="imtv_check">
+					<input type="checkbox" id="reg_pl01" class="check" checked="checked" /><label for="reg_pl01">이용약관에 동의</label>
+					<a href="#">내용보기</a>
+				</li>
+				<li class="imtv_check">
+					<input type="checkbox" id="reg_pl02" class="check" checked="checked" /><label for="reg_pl02">상품약관에 동의</label>
+					<a href="#">내용보기</a>
+				</li>
+				<li class="imtv_check">
+					<input type="checkbox" id="reg_pl03" class="check" checked="checked" /><label for="reg_pl03">개인정보 취급방침에 동의</label>
+					<a href="#">내용보기</a>
+				</li>
+			</ul>
+			<div class="reg_ed_btn">
+				<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" aria-disabled="false">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">가입하기</span>
+					</span>
+					<input type="button" class="btn_st1" value="가입하기" onclick="doSubmit();" aria-disabled="false">
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	<!-- layer -->
+	<div class="layer_wrap">
+		<div class="layer_w">
+			<div class="layer_in_w">
+			<div class="layer_in">
+				<div class="layer_content lyr_c_alert_s">
+					<p class="lyr_msg">상품약관에 동의해주세요.</p>
+				</div>
+				<div class="layer_btn_w">
+					<button type="button" class="b_lyr_b">확인</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="dimd"></div>
+	</div>
+</div>
+
+
+</body>
+</html>

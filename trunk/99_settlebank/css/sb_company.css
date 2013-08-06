@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* 회사개요 */
+.sb_c_p01_w01 {margin-top:35px;}
+
+/* 회사연혁 */
+.sb_c_p02_w01 {margin-top:26px;}
+
+/* 오시는길 */
+.sb_c_p04_w01 {margin-top:11px;}
+
+
+
+
+/* [고객지원] */
+/* 게시판 리스트 */
+.sbi_brd_list {clear:both; margin-top:11px;}
+	.sbi_brd_list tr th {height:26px; font-family:ng, dotum; font-weight:bold; font-size:11px; letter-spacing:-1px; color:#912f2f; border:1px solid #e4d2d2; border-width:1px 0; background:#faf6f6;}
+	.sbi_brd_list tr td {padding:16px 0 12px 0; font-family:dotum; font-size:12px; color:#4c4c4c; text-align:center; border-bottom:1px solid #e0e0e0;}
+		.sbi_brd_list tr td a {color:#4c4c4c;}
+	.sbi_brd_list tr td.title {padding-left:7px; text-align:left;}
+/* 카테고리/검색 */
+.sbi_ct_cate_s_w {clear:both; height:30px; margin:12px 0 23px 0;}
+	/* 카테고리 */
+	.sbi_ct {float:left; margin-top:7px;}
+		.sbi_ct a {margin-right:16px;}
+	/* 검색 */
+	.sbi_sc {float:right;}
+		.sbi_sc select {width:83px;}
+		.sbi_sc .jqTransformSelectWrapper {margin:3px 5px 0 0;}
+		.sbi_sc .ipst01 {width:169px;}
+
+/* 거래내역조회 */
+.sbi_h_tlv_w {clear:both;}
+	.sbi_h_tlv_w .sbi_tbl_s tr th {width:auto;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .ipst03 {width:56px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .tx {position:relative; top:2px; color:#582525;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .hpn {width:53px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr td .jqTransformSelectWrapper {margin-right:4px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr.ds_tr td .ipst02 {width:76px;}
+	.sbi_h_tlv_w .sbi_tbl_s tr.ds_tr td em {position:relative; top:2px; margin-left:10px; font-size:11px; color:#858585;}
+	/* 등록금내역 */
+	.sbi_h_tlv_w h4 {clear:both; margin-top:-14px;}
+	.sbi_tbl_us {clear:both; margin-top:10px;}
+		.sbi_tbl_us tr th, .sbi_tbl_us tr td {height:26px; padding:13px 0 0 15px; font-family:ng, dotum; font-size:12px; color:#912f2f; text-align:left; vertical-align:top; border:1px solid #e4d2d2; border-width:0 1px 1px 0; background:#fbf5f5;}
+		.sbi_tbl_us tr td {height:24px; padding:15px 0 0 20px; font-family:dotum; color:#4c4c4c; border-color:#dadada; border-width:0 0 1px 0; background:#fff;}
+		.sbi_tbl_us .tr_l_01 th {border-width:1px 1px 1px 0;}
+		.sbi_tbl_us .tr_l_01 td {border-width:1px 0;}
+	/* 전자결제내역 */
+	.sbi_tbl_us2 {clear:both; margin-top:40px; border-top:1px solid #e4d2d2;}
+		.sbi_tbl_us2 tr th, .sbi_tbl_us2 tr td {font-family:ng, dotum; font-size:11px; color:#912f2f; border:1px solid #e4d2d2; border-width:0 1px 1px 0; background:#fbf5f5;}
+		.sbi_tbl_us2 tr th {height:21px; padding:2px 0 0 0;}
+		.sbi_tbl_us2 tr td {padding:4px 0; font-family:dotum; color:#4c4c4c; line-height:15px; border-color:#dadada; text-align:center; background:#fff;}
+			.sbi_tbl_us2 tr td .lb {margin-top:9px;}
+			.sbi_tbl_us2 tr td a {color:#858585; text-decoration:underline;}
+		.sbi_tbl_us2 tr th.c_l, .sbi_tbl_us2 tr td.c_l {border-right:0;}
+/* 온라인상담 */
+.sbi_h_oc_exp {clear:both; margin:18px 0 26px 0; font-family:dotum; font-size:12px; color:#999; line-height:18px;}
+	.s_hoc_st {float:left; display:inline; width:443px; height:200px;}
+		.s_hoc_st h4 {}
+		.sbi_hoc_t {clear:both; margin-top:10px; border-top:1px solid #dadada;}
+			.sbi_hoc_t tr th, .sbi_hoc_t tr td {height:43px; border-bottom:1px solid #dadada;}
+			.sbi_hoc_t tr th {padding:0 0 0 10px; font-family:ng; font-size:11px; color:#912f2f; text-align:left; background:url('../images/ico_hoc_t.gif') left 19px no-repeat;}
+			.sbi_hoc_t tr td .ipst02 {width:231px;}
+			.sbi_hoc_t tr td .ipst03 {width:57px;}
+			.sbi_hoc_t tr td select {width:53px;}
+			.sbi_hoc_t tr td .jqTransformSelectWrapper {margin-right:4px;}
+	.shoc_r {margin-left:20px;}
+	.s_hoc_dtil, .s_hoc_piup {clear:both; padding:30px 0 0 0;}
+		.s_hoc_dtil textarea, .s_hoc_piup .hoc_piup_in  {clear:both; width:888px; height:194px; margin:10px 0 0 0; padding:5px 8px; font-family:dotum; font-size:12px; color:#999; line-height:22px; border:1px solid #ccc; overflow:auto; background:#fff;}
+		.s_hoc_piup p {float:right; display:inline; height:13px; margin:-13px 0 0 0; font-size:11px; color:#999;}
+		.s_hoc_piup p.agr {clear:both; float:left; width:100%; height:auto; margin:10px 0 0 0; padding:0; font-size:12px;}
+			form.jqtransformdone .s_hoc_piup p.agr label {float:none; margin:0 0 0 5px;}
+	.b_hoc_wr {clear:both; margin:50px 0 0 0;}
+/* 사이트맵 */
+.sbi_stm_w {margin-top:10px;}
+.sbi_stm {float:left; width:206px; height:235px; margin:30px 0 0 0; padding:0 0 0 20px; border-left:1px solid #e0e0e0;}
+.stm_l2 {height:160px;}
+.s_stm_cl {clear:both; border-left:0;}
+	.sbi_stm ul {clear:both; margin:25px 0 0 0;}
+		.sbi_stm ul li {margin:14px 0 0 0;}
+			.sbi_stm ul li a {padding:0 0 0 7px; font-size:12px; color:#4c4c4c; background:url('../images/ico_rect_01.gif') left 5px no-repeat;}
+
+
+/* 전자결제 */
+.s_ep_cw {margin-top:34px;}
+.s_ep_cw #content {margin-top:-69px;}
+.sq {margin-top:20px;}
+.nrqt {position:relative; left:-2px; margin-top:40px;}
+.sbi_eptxt_w {position:relative; clear:both; height:107px; font:0/0 arial; border-bottom:1px solid #383838; background:url('../images/bg_sbi_eptxt_w.gif') right top no-repeat;}
+	.sbi_eptxt_w img {margin:38px 0 0 0;}
+.sew_st01 {background-image:url('../images/bg_sbi_eptxt_w2.gif');}
+.sew_st02 {background-image:url('../images/bg_sbi_eptxt_w3.gif');}
+.sew_st03 {background-image:url('../images/bg_sbi_eptxt_w4.gif');}
+.sbi_epcnt {padding:20px 0; border-bottom:1px solid #e0e0e0;}
+.sbi_epc_img {padding-bottom:30px;}
+.sbi_epc_l {padding-bottom:0; border-bottom:0;}
+.sbi_epc_il img {position:relative; left:-7px;}
+.sbi_epcnt2 {}
+	.sbi_epcnt2 h4 {margin-top:21px;}
+	.sbi_epcnt2 table {clear:both; margin-top:18px;}
+		.sbi_epcnt2 table tr th {height:38px; font-family:ng; font-size:11px; color:#912f2f; border:1px solid #e4d2d2; border-left:0; background:#faf6f6;}
+		.sbi_epcnt2 table tr td {padding:11px 0 5px 10px; font-family:dotum; font-size:12px; color:#4c4c4c; line-height:20px; vertical-align:top; border:1px solid #e1e1e1; border-width:0 1px 1px 0;}
+			.sbi_epcnt2 table tr td span {display:block; padding-bottom:5px; color:#b68d8d;}
+		.sbi_epcnt2 table tr th.c_l, .sbi_epcnt2 table tr td.c_l {text-align:center; border-right:0;}
+		.sbi_epcnt2 table tr td.c_l img {position:relative; top:-3px;}
+.sbi_epc_map {padding:42px 0 0 152px;}

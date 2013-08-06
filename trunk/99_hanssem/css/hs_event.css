@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* 제목 */
+.ctw_event h2 {width:36px; background-position:left -50px;}
+.ctw_event .ctw_exp {width:264px; height:30px; background-position:left -70px;}
+/* 하위메뉴 */
+.hcsm_event_now, .hcsm_event_now strong {width:77px; background-position:left top;}
+	.hcsm_event_now:hover, .hcsm_event_now strong {background-position:left -15px;}
+.hcsm_event_old, .hcsm_event_old strong {width:55px; background-position:-80px top;}
+	.hcsm_event_old:hover, .hcsm_event_old strong {background-position:-80px -15px;}
+.hcsm_event_prc, .hcsm_event_prc strong {width:55px; background-position:-138px top;}
+	.hcsm_event_prc:hover, .hcsm_event_prc strong {background-position:-138px -15px;}
+.hcsm_event_notice, .hcsm_event_notice strong {width:62px; background-position:-135px top;}
+	.hcsm_event_notice:hover, .hcsm_event_notice strong {background-position:-135px -15px;}
+
+
+/* 메인이벤트 */
+.hs_event_main {margin-top:20px; font:0/0 arial;}
+/* 이벤트목록 */
+.hse_list {clear:both; margin-top:20px; font:0/0 arial;}
+	.hse_list li {display:inline-block; width:100%; padding:20px 0; border-top:1px solid #e6e6e6;}
+	/*.hse_list li.nth-2d {width:360px; margin:-215px 0 0 371px;}*/
+	.hse_list li.nth-2d {width:360px; margin-left:-360px; .margin:-215px 0 0 371px;}
+
+/* 지난이벤트 */
+.hse_list_old {margin-top:0;}
+	.hse_list_old li {border-top:0; border-bottom:1px solid #e6e6e6;}
+/* 이벤트 자세히보기 */
+.hse_view_w {position:relative; clear:both;}
+	/* 이벤트 소개 이미지 */
+	.hsev_visual {position:relative; left:-58px; clear:both; margin:12px 0 0 0;}
+	/* 댓글목록 */
+	.hsev_replay_w {clear:both; margin-top:17px;}
+		.hsev_replay_w h4 {font-family:mg; font-weight:normal; font-size:12px; color:#333;}
+		.hs_reply_list {clear:both; margin-top:8px; border-top:1px solid #e2e2e2;}
+			.hs_reply_list li {position:relative; padding:12px 0 12px 0; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px; border-bottom:1px solid #e2e2e2;}
+				.hs_reply_list li .content {padding-right:120px;}
+				.hs_reply_list li .function {position:absolute; top:13px; right:0; font-size:0;}
+				.hs_reply_list li .function .b_r_write {margin-left:25px;}
+		/* 재댓글 */
+		.hsrl_2d {margin-top:12px; margin-bottom:-12px; border-top:0;}
+			.hsrl_2d li {padding-left:40px; border-top:1px solid #e2e2e2; border-bottom:0; background:url('../images/ico_hsrl_2d.gif') 10px 11px no-repeat;}
+		/* 재댓글작성 */
+		.hsev_ir_write {position:relative; margin-top:12px; padding:15px 0 0 40px; font-size:0; border-top:1px solid #e2e2e2; border-bottom:0; background:url('../images/ico_hsrl_2d.gif') 10px 11px no-repeat;}
+			.hsev_ir_write .hfiptxt {top:-2px;}
+				.hsev_ir_write .hfiptxt input {width:556px; color:#4c4c4c;}
+			.b_hsrm_ok {width:63px; height:33px; margin-left:7px; background-position:-150px -80px;}
+			.b_hsrm_cancel {width:60px; height:33px; background-position:-213px -80px;}
+		/* 댓글수정 */
+		.hs_reply_list li.hsev_r_modify {}
+			.hs_reply_list li.hsev_r_modify .content, .hs_reply_list li.hsev_r_modify .writer, .hs_reply_list li.hsev_r_modify .function {display:none;}
+			.hs_reply_list li.hsev_r_modify .hsev_ir_write {margin:3px 0 0 0; padding:0; border-top:0; border-bottom:0; background:none;}
+				.hs_reply_list li.hsev_r_modify .hsev_ir_write .hfiptxt input {width:596px;}
+		/* 내용없음 */
+		.hs_list_temp {height:42px; margin:8px 0 0 0; border-color:#e2e2e2;}
+			.hs_list_temp strong {line-height:42px;}
+	/* 한줄 댓글 쓰기 */
+	.hsev_write {position:relative; margin-top:50px; padding:20px 0 25px 30px; border:1px solid #ccdce8; border-width:1px 0 1px 0; background:url('../images/bg_b_s_grd.gif') left top repeat;}
+		.hsev_write p {width:131px; height:13px; margin-bottom:3px; overflow:hidden; background:url('../images/hsev_write_tit.gif') left top no-repeat;}
+		.hsev_write .hfiptxt input {width:601px;}
+		.b_hsevw_ok {top:2px; width:63px; height:33px; margin-left:4px; background:url('../images/btn_hsev_r_write.png') left top no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/btn_hsev_r_write.png',sizingMethod='crop');}
+	/* 이벤트 목록 버튼 */
+	.hsev_btn_w {clear:both; margin-top:20px; text-align:center;}
+		.b_event_list {width:143px; height:41px; background-position:left -80px;}
+/* 당첨자발표 */
+.hs_event_prc {margin-top:30px;}
+	.hs_event_prc thead tr th {padding-bottom:10px; text-align:left; border-bottom:1px solid #333;}
+	.hs_event_prc thead tr th.event_subject {width:597px;}
+		.hs_event_prc thead tr th.event_subject .icn {width:41px; background-position:left -45px;}
+	.hs_event_prc thead tr th.event_term {width:134px;}
+		.hs_event_prc thead tr th.event_term .icn {width:55px; background-position:-45px -45px;}
+	.hs_event_prc tbody tr td {padding:15px 0 16px 0; font-family:mg; font-size:12px; color:#a6a6a6; letter-spacing:-1px; border-bottom:1px solid #e2e2e2;}
+		.hs_event_prc tbody tr td a {color:#a6a6a6;}
+	.hs_event_prc tbody tr.hover td, .hs_event_prc tbody tr.hover td a {color:#333;}
+	/* 팝업 */
+	.hs_event_winner {background:#fff;}
+		.hs_event_winner .hspal_pd {width:640px; margin:0 auto; padding:30px 0;}
+		.hs_p_evt_tit {width:55px; height:30px; margin-top:20px; background:url('../images/hs_p_evt_tit.gif') left top no-repeat;}
+		.hs_p_evt_info {clear:both; float:left; width:100%; margin:15px 0 0 0; padding:15px 0 16px 0; font-family:mg; font-size:12px; color:#333; letter-spacing:-1px; border:1px solid #333; border-width:1px 0;}
+			.hs_p_evt_info strong {float:left; font-weight:normal;}
+			.hs_p_evt_info em {float:right;}
+		.hs_p_evt_list_w {clear:both; padding-top:12px; font-family:mg; color:#a6a6a6;}
+			.hs_p_evt_list_w ul {font-size:0;}
+				.hs_p_evt_list_w ul li {display:inline-block; width:106px; margin-bottom:1px; font-size:12px;}
+
+
+/*#current_funding_wrapper {color:rgb(215, 24, 42); font-family:mgB; font-weight:bold; position:absolute; font-size:18px; margin-left:85px; margin-top:860px;">*/
+#current_funding_flip	{position:absolute; left:176px; bottom:20px;}
+#current_funding_flip_text {position:absolute; padding:5px 5px 5px 14px; font-family:Arial; font-size:30px; font-weight:bold; color:#ffffff; letter-spacing:30px;  }
+
+/*#current_funding_img	{position:absolute;}*/
+
+
+/* 몰디브여행 : 2012.10.17 */
+.hse_121017_visual {position:relative; clear:both; width:729px; height:335px; margin-top:-55px; background:url('../images/event/event_121017_visual.png') left top no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/event/event_121017_visual.png',sizingMethod='crop');}
+.hse_121017_form {position:relative; clear:both; width:729px; padding:15px 0 0 0; border-top:1px solid #333;}
+	.hse_frm_st {clear:both; height:30px; margin-bottom:7px; font-family:mg; font-size:12px; color:#666;}
+		.hse_frm_st label {float:left; display:inline; width:76px; height:12px; margin-top:5px; overflow:hidden; background-image:url('../images/event/hse_frm_st_label.gif'); background-repeat:no-repeat;}
+		.hse_frm_st .hse_input {float:left; display:inline; height:19px; padding:3px 0 0 3px; font-family:mg; font-size:12px; color:#666; border:1px solid #e0e0e0; background:#fff;}
+		.hse_frm_st select {font-family:mg; font-size:12px; color:#666;}
+	.hfrm_id label {background-position:left top;}
+	.hfrm_id em {position:relative; top:3px;}
+	.hfrm_msg label {background-position:left -15px;}
+	.hfrm_msg .hse_input {width:638px;}
+	.hfrm_date label {background-position:left -30px;}
+	.hfrm_date select {width:73px;}
+	.hfrm_date .jqTransformSelectWrapper {margin-right:5px;}
+	.hfrm_zip label {background-position:left -45px;}
+	.hfrm_zip .hse_input {width:85px; margin-right:5px;}
+	.b_hsef_zip {top:-3px; left:-3px; width:98px; height:33px; background:url('../images/event/btn_hsef_zip.gif') left top no-repeat;}
+	.hfrm_addr label {background-position:left -60px;}
+	.hfrm_addr .hse_input {width:275px; margin-right:5px;}
+	.hfrm_tel label {background-position:left -75px;}
+	.hfrm_tel select {width:73px;}
+	.hfrm_tel .jqTransformSelectWrapper {margin-right:5px;}
+	.hfrm_tel .hse_input {width:85px; margin-right:5px;}
+	.hfrm_email label {background-position:left -90px;}
+	.hfrm_email .hse_input {width:139px; margin-right:2px;}
+	.hfrm_email .fbar {float:left; margin:4px 1px 0 0;}
+	.hfrm_email select {width:126px;}
+	/* 버튼 */
+	.hsef_btn_w {clear:both; float:left; width:100%; margin-top:7px; padding-top:19px; font-size:0; text-align:center; border-top:1px solid #333;}
+	.b_hsef_ok {width:118px; height:50px; margin-right:1px; background:url('../images/event/btn_hsef_ok.gif') left top no-repeat;}
+	.b_hsef_cancel {width:118px; height:50px; margin-left:1px; background:url('../images/event/btn_hsef_cancel.gif') left top no-repeat;}

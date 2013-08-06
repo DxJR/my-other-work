@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>한샘인테리어 ADMIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/hanssem.css" type="text/css" />
+<link rel="stylesheet" href="../css/hs_admin.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="hs_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/hanssem_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="had_wrap">
+	<!-- header -->
+	<div id="had_header">
+		<h1><a href="#"><img src="../images/admin/bi_hsadmin.gif" width="248" height="17" alt="한샘인테리어 ADMIN" /></a></h1>
+		<div class="had_h_r">
+			<em><span>관리자</span>님 안녕하세요.</em>
+			<a href="#" class="b_st_adm">로그아웃</a>
+			<a href="#" class="b_st_adm">본 사이트 보기</a>
+		</div>
+		<ul class="had_gnb">
+			<li><a href="#">메인화면</a></li>
+			<li><a href="#">제품관리</a></li>
+			<!-- 현재선택일 때 class="this" 추가 -->
+			<li class="this"><a href="#">게시판관리</a></li>
+			<li><a href="#">이벤트</a></li>
+			<li><a href="#">매장관리</a></li>
+			<li><a href="#">기타</a></li>
+		</ul>
+	</div>
+	<!-- container -->
+	<div id="had_container">
+		<!-- sidebar -->
+		<div id="had_sidebar">
+			<h2>게시판 관리</h2>
+			<ul class="had_snb">
+				<li><a href="#">전시품 할인판매 게시판</a></li>
+				<!-- 현재선택일 때 class="this" 추가 -->
+				<li class="this"><a href="#">전시품 할인판매 신청</a></li>
+				<li><a href="#">전시품 할인판매 신청 대기</a></li>
+			</ul>
+		</div>
+		<!-- content -->
+		<div id="had_content">
+			<h3>전시품 할인판매 신청</h3>
+			<form class="jqtransform">
+			<table cellpadding="0" cellspacing="0" class="brd_item_regi">
+				<tr>
+					<th class="cl1">상품명</th>
+					<td class="cl1 iname"><span class="hfiptxt"><input type="text" class="iptxt" value="카렌3000 4인 식탁" /></span></td>
+					<th class="cl2">매장명</th>
+					<td class="cl2 iplace"><span class="hfiptxt"><input type="text" class="iptxt" value="한샘인테리어 광명점" /></span></td>
+				</tr>
+				<tr>
+					<th class="cl1">분류</th>
+					<td class="cl1 icate">
+						<select>
+							<option>거실</option>
+							<option>분류1</option>
+							<option>분류1</option>
+						</select>
+						<select>
+							<option>가죽소파</option>
+							<option>분류2</option>
+							<option>분류2</option>
+						</select>
+					</td>
+					<th class="cl2">전화번호</th>
+					<td class="cl2 itel">
+						<span class="hfiptxt"><input type="text" class="iptxt" value="02" /></span>-
+						<span class="hfiptxt"><input type="text" class="iptxt" value="1242" /></span>-
+						<span class="hfiptxt"><input type="text" class="iptxt" value="1230" /></span>
+					</td>
+				</tr>
+				<tr>
+					<th class="cl1">할인율</th>
+					<td class="cl1 idcgrd"><span class="hfiptxt"><input type="text" class="iptxt" value="20.00" /></span> %</td>
+					<th class="cl2">판매여부</th>
+					<td class="cl2 icnow">
+						-
+					</td>
+				</tr>
+				<tr>
+					<th class="cl1">등급</th>
+					<td class="cl1 igrd">
+						<select>
+							<option>A</option>
+							<option>선택</option>
+							<option>선택</option>
+						</select>
+					</td>
+					<th class="cl2">등록일</th>
+					<td class="cl2 idate">
+						<select>
+							<option>2012</option>
+							<option>분류1</option>
+							<option>분류1</option>
+						</select>
+						<select>
+							<option>02</option>
+							<option>분류1</option>
+							<option>분류1</option>
+						</select>
+						<select>
+							<option>20</option>
+							<option>분류1</option>
+							<option>분류1</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" id="cl_a_w" class="cl_a">
+						<strong>웹사이트 노출 여부</strong>
+						<select>
+							<option>ON</option>
+							<option>OFF</option>
+						</select>
+					</th>
+				</tr>
+			</table>
+			</form>
+			<!-- 제품상세설명/기타설명 -->
+			<div class="had_shop_reg_ln2">
+				<div class="had_srl2_l">
+					<h4>제품 상세설명</h4>
+					<div class="hftxtarea">
+						<textarea rows="5" cols="30">빅터2 셔링브라운 4인식탁세트(가로 : 1300mm)
+잔기스 없는 깨끗한 상품입니다.
+빅터2 셔링브라운 4인식탁세트(가로 : 1300mm)
+잔기스 없는 깨끗한 상품입니다.
+
+배송은 서울내에서만 가능하니 참고해주세요^^
+자세한 문의는 전화로 연락주세요^^
+						</textarea>
+						<i class="lt"></i><i class="rt"></i><i class="lb"></i><i class="rb"></i>
+					</div>
+				</div>
+				<div class="had_srl2_r">
+					<h4>기타 설명 (소비자가, 전시상품가, 담당자 연락처 등)</h4>
+					<div class="hftxtarea">
+						<textarea rows="5" cols="30">판 매 가 : \1,154,000원
+전시품가 :\923,000원
+한샘인테리어 이승명팀장 010-8905-7083
+						</textarea>
+						<i class="lt"></i><i class="rt"></i><i class="lb"></i><i class="rb"></i>
+					</div>
+				</div>
+			</div>
+			<!-- 사진등록 -->
+			<div class="had_shop_photo_add">
+				<!-- 사진등록 개별 #1 -->
+				<div class="had_spa_by">
+					<div class="had_spa_img"><img src="../images/temp/temp_010.jpg" width="368" height="291" alt="" /></div>
+					<div class="had_spa_file">
+						<!-- 하단에 input type="file"은 opacity:0; 으로 되어 있습니다. type="file"에 입력된 파일명을 type="text"에 그대로 삽입해 주면 됩니다. -->
+						<div class="ip_file_w">
+							<span class="hfiptxt"><input type="text" class="iptxt" /></span>
+							<input type="file" class="ipfile" />
+						</div>
+						<em class="ip_file_exp">가로 731px</em>
+						<p>abcd_photo.jpg</p>
+					</div>
+				</div>
+				<!-- 사진등록 개별 #2 -->
+				<div class="had_spa_by">
+					<div class="had_spa_img"><img src="../images/temp/temp_010.jpg" width="368" height="291" alt="" /></div>
+					<div class="had_spa_file">
+						<!-- 하단에 input type="file"은 opacity:0; 으로 되어 있습니다. type="file"에 입력된 파일명을 type="text"에 그대로 삽입해 주면 됩니다. -->
+						<div class="ip_file_w">
+							<span class="hfiptxt"><input type="text" class="iptxt" /></span>
+							<input type="file" class="ipfile" />
+						</div>
+						<em class="ip_file_exp">가로 731px</em>
+						<p>abcd_photo.jpg</p>
+					</div>
+				</div>
+				<!-- 사진등록 개별 #3 -->
+				<div class="had_spa_by">
+					<div class="had_spa_img"><img src="../images/temp/temp_010.jpg" width="368" height="291" alt="" /></div>
+					<div class="had_spa_file">
+						<!-- 하단에 input type="file"은 opacity:0; 으로 되어 있습니다. type="file"에 입력된 파일명을 type="text"에 그대로 삽입해 주면 됩니다. -->
+						<div class="ip_file_w">
+							<span class="hfiptxt"><input type="text" class="iptxt" /></span>
+							<input type="file" class="ipfile" />
+						</div>
+						<em class="ip_file_exp">가로 731px</em>
+						<p>abcd_photo.jpg</p>
+					</div>
+				</div>
+				<!-- 이미지추가/삭제 버튼 -->
+				<div class="had_spa_btn_w">
+					<a href="#" class="b_st_adm2 b_c_black">이미지 추가</a>
+					<a href="#" class="b_st_adm2 b_c_black">이미지 삭제</a>
+				</div>
+			</div>
+			<!-- 페이징 / 버튼 -->
+			<div class="pag_btn_w pbw_opt_w">
+				<div class="had_b_l">
+					<a href="#" class="b_st_adm2 b_c_black">취소</a>
+				</div>
+				<div class="had_b_r">
+					<a href="#" class="b_st_adm2 b_c_black">미리보기</a>
+					<a href="#" class="b_st_adm2 b_c_red">등록</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- footer -->
+	<div id="had_footer">
+		<h3 class="hide">사이트정보</h3>
+		<h4>한샘인테리어 웹사이트 관리자</h4>
+		<p>Copyright 2012 Hanssem Interior. <span class="lb">all rights reserved.</span></p>
+	</div>
+</div>
+
+
+</body>
+</html>

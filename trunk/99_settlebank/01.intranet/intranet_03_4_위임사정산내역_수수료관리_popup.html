@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Settlebank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/settlebank.css" type="text/css" />
+<link rel="stylesheet" href="../css/sb_popup.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="../css/sb_ie.css" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/settlebank_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		$("form.jqtransform").jqTransform();
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="pop_wrap" class="popSt02">
+	<h1><img src="../images/pop_tit_05.gif" alt="위임사수수료 관리 편집/등록" /></h1>
+	<form class="jqtransform">
+		<table cellpadding="0" cellspacing="0" class="sbi_tbl_s sbi_tbl_p_s sbi_tbl_p_s_5">
+			<tr class="s_tbl_r01">
+				<th>위임사아이디</th>
+				<td>
+					<select>
+						<option>위임사아이디를 선택하십시오.</option>
+						<option>위임사아이디를 선택하십시오.</option>
+					</select>
+				</td>
+			</tr>
+			<tr class="s_tbl_r02">
+				<th>상점아이디</th>
+				<td>
+					<input type="text" class="ipst01" value="myshopid1102" />
+					<a href="#" class="b_src_shop"><img src="../images/b_src_shop.gif" border="0" alt="상점검색" /></a>
+				</td>
+			</tr>
+			<tr class="s_tbl_r03">
+				<th>서비스코드</th>
+				<td>
+					<select>
+						<option>서비스코드</option>
+						<option>서비스코드</option>
+					</select>
+				</td>
+			</tr>
+			<tr class="s_tbl_r04">
+				<th>수수료구분</th>
+				<td>
+					<select>
+						<option>수수료구분</option>
+						<option>수수료구분</option>
+					</select>
+				</td>
+			</tr>
+			<tr class="s_tbl_r05">
+				<th>위임사수수료</th>
+				<td>
+					<input type="text" class="ipst01" />
+				</td>
+			</tr>
+			<tr class="s_tbl_r06">
+				<th>상점수수료</th>
+				<td>
+					<input type="text" class="ipst01" />
+				</td>
+			</tr>
+		</table>
+		<div class="btn_p_wrap">
+			<a href="#"><img src="../images/btn_ok.gif" alt="확인" /></a>
+			<a href="#"><img src="../images/btn_cancel.gif" alt="취소" /></a>
+		</div>
+	</form>
+
+</div>
+
+
+</body>
+</html>

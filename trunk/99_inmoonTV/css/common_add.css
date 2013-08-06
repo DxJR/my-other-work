@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+
+#wrap {position:relative; padding:0px 0px 0px 0px;}
+#header {display:none;}
+#content {z-index:1; position:relative; clear:both; margin-top:0px;}

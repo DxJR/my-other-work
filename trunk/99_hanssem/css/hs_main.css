@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+.hs_main_w #container {padding-bottom:50px;}
+/* 좌측영역 */
+	/* 검색 */
+	.hs_main_w #hs_cm_search {clear:both; position:relative; bottom:auto; margin:29px 0 0 0;;}
+		.hs_main_w #hs_cm_search input {width:130px; background:url('../images/bg_hs_cm_search_idx.gif') left top no-repeat;}
+	/* 상위 텍스트 메뉴 */
+	.hsm_ltm_w {clear:both; font-family:mg; font-size:12px; letter-spacing:-1px; color:#a6a6a6;}
+		.hsm_ltm_w a {color:#a6a6a6;}
+		.hsm_ltm_w a:hover {color:#333;}
+		/* 메인비주얼 교체메뉴 */
+		.hsm_vsm_w {clear:both; margin-top:100px; line-height:20px;}
+			.hsm_vsm_w h3 {font-weight:normal; font-size:12px; color:#333;}
+			.hsm_vsm_list {clear:both;}
+		/* 하단텍스트 이벤트 */
+		/*.hsm_evnt_w {position:absolute; top:783px; clear:both; line-height:18px;}*/
+		.hsm_evnt_w {position:absolute; top:783px; clear:both; line-height:18px;}
+			.hsm_evnt_list li {margin-bottom:36px;}
+			.hsm_evnt_w a {display:block;}
+			.hsm_evnt_w strong {display:block; font-weight:normal; color:#333;}
+/* 메인 visual */
+.hsm_visual {position:relative; width:731px; height:463px; margin-bottom:20px; overflow:hidden;}
+	.hsm_visual div {position:absolute; top:0; left:0; width:3720px;}
+		.hsm_visual div img {display:inline;}
+	#hsm_vslBtn {position:absolute; top:auto; left:auto; bottom:15px; right:13px; clear:both; width:153px; height:10px; font-size:12px; line-height:normal;}
+		#hsm_vslBtn ul li {float:left; display:inline; margin-right:1px;}
+			#hsm_vslBtn ul li a {display:block; width:50px; height:10px; font:0/0 arial; overflow:hidden; background:#e9e9e9;}
+			#hsm_vslBtn ul li.this a {background:#666;}
+	/* 가운데 좌측 컨텐츠 */
+	.hsm_mc_mid {clear:both; float:left; width:535px;}
+		/* 가운데 숫자 메뉴 01~03 */
+		.hsm_mc_nm {clear:both; height:65px; }
+			.hsm_mc_nm li {float:left; display:inline; padding:12px 0 0 0; background-position:left top; background-repeat:no-repeat;}
+				.hsm_mc_nm li a, .hsm_mc_nm li a strong {display:block; font-family:mg; font-size:12px; color:#a6a6a6; line-height:18px; letter-spacing:-1px;}
+				.hsm_mc_nm li a strong, .hsm_mc_nm li a:hover {font-weight:normal; color:#333;}
+			.hsm_mc_nm li.nm01 {width:187px; background-image:url('../images/hsm_mc_nm01.gif');}
+			.hsm_mc_nm li.nm02 {width:183px; background-image:url('../images/hsm_mc_nm02.gif');}
+			.hsm_mc_nm li.nm03 {width:165px; background-image:url('../images/hsm_mc_nm03.gif');}
+		/* Special 제품들 */
+		.hsm_mc_spi_bn {clear:both; margin-top:35px;}
+			.hsm_mc_spi_bn li {float:left; display:inline; font:0/0 arial; border:1px solid #e6e6e6;}
+			.hsm_mc_spi_bn li.spi01 {width:267px; margin-right:1px; margin-bottom:20px; border:0;}
+			.hsm_mc_spi_bn li.spi02 {width:267px; margin-bottom:20px; border:0;}
+			.hsm_mc_spi_bn li.spi03 {clear:both; width:175px; border-width:1px 0;}
+			.hsm_mc_spi_bn li.spi04 {width:183px;}
+			.hsm_mc_spi_bn li.spi05 {width:175px; border-width:1px 0;}
+	/* 가운데 우측 컨텐츠 */
+	.hsm_mc_right {float:left; width:166px; padding:0 0 0 30px;}
+		/* 한샘 매장안내 */
+		.hsm_mc_si {clear:both; margin-top:15px;}
+			.hsm_mc_si li {clear:both; font:0/0 arial; border-top:1px solid #e6e6e6;}
+			.hsm_mc_si li.first {border-top:0;}
+
+/* 가운데 롤링배너(2개짜리) */
+.hsm_b_set1 {position:relative; clear:both; width:535px; height:169px; margin:28px 0 0 0; overflow:hidden;}
+	#hsmbSet1 {position:relative; height:159px; overflow:hidden;}
+		#hsmbSet1 div {position:absolute; top:0; left:0; clear:both; display:none; width:535px; height:159px; font:0/0 arial; overflow:hidden;}
+			#hsmbSet1 div a {float:left; margin-right:1px;}
+			#hsmbSet1 div a.last {margin-right:0;}
+	#hsmbSet1Menu {position:absolute; bottom:0; clear:both; width:535px;}
+		#hsmbSet1Menu ul li {float:left; margin-right:1px;}
+		#hsmbSet1Menu ul li.last {margin-right:0;}
+			#hsmbSet1Menu ul li a {display:block; width:133px; height:5px; font:0/0 arial; overflow:hidden; background:#e9e9e9;}
+			#hsmbSet1Menu ul li.this a {background:#666;}
+
+/* 가운데 하단 좌/우 캐러셀 배너 */
+.hsm_b_set2 {position:relative; clear:both; width:535px; height:199px; margin:25px 0 0 0;}
+	#hsmbSet2 {position:relative; width:535px; height:187px; overflow:hidden; border:1px solid #e6e6e6; border-width:1px 0;}
+		#hsmbSet2 div {position:absolute; top:0; left:0; clear:both;}
+			#hsmbSet2 div a {float:left; border-right:1px solid #e6e6e6;}
+			#hsmbSet2 div a.last {border-right:0;}
+	#hsmbSet2Menu {position:absolute; bottom:0; clear:both; width:535px;}
+		#hsmbSet2Menu ul li {float:left; margin-right:1px;}
+		#hsmbSet2Menu ul li.last {margin-right:0;}
+			#hsmbSet2Menu ul li a {display:block; width:267px; height:5px; font:0/0 arial; overflow:hidden; background:#e9e9e9;}
+			#hsmbSet2Menu ul li.this a {background:#666;}

@@ -1,0 +1,593 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>edtn:</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/edtn_common.css" type="text/css" />
+<link rel="stylesheet" href="../css/edtn_product.css" type="text/css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="" media="all" /><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="../js/edtn_lib.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		// select / input
+		$("form.jqtransform").jqTransform();
+		// toggle Brand
+		var brandTimer = null;
+		$("#sorting_brand").mouseover(function(){
+			$(this).addClass('lyr_open');
+			if (brandTimer) {
+				clearTimeout(brandTimer);
+			}
+			$('#lyr_head_brand').slideDown(250);
+		});
+		$("#sorting_brand").mouseout(function(){
+			$(this).removeClass('lyr_open');
+			brandTimer=setTimeout("$('#lyr_head_brand').slideUp(250)", 100);
+		});
+	});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- logo -->
+		<h1>
+			<img src="../images/common/bi_objectheydey.gif" width="176" height="39" alt="Object Heydey : Heydey Private Collection" usemap="#heydeyBi" />
+			<map id="heydeyBi" name="heydeyBi">
+				<area shape="rect" coords="0,0,176,39" alt="OBJECT HEYDEY" href="#" />
+			</map>
+		</h1>
+		<!-- GNB -->
+		<div id="gnb">
+			<!-- login area -->
+			<div class="gnb_login">
+				<!-- my favorite brand -->
+				<div id="select_favorite">
+					<form class="jqtransform">
+						<select title="my favorite brand">
+							<option>my favorite brand</option>
+							<option>www.byheydey.com</option>
+							<option>www.studioheydey.com</option>
+						</select>
+					</form>
+				</div>
+				<ul class="gnb_btn">
+					<li><a href="#" class="gbtn gb_logout"><span class="ir">로그아웃</span></a></li>
+					<li><a href="#" class="gbtn gb_mypage"><span class="ir">마이페이지</span></a></li>
+				</ul>
+			</div>
+			<ul class="gnb_btn">
+				<li><a href="#" class="gbtn gb_basket"><span class="ir">장바구니</span></a></li>
+				<li><a href="#" class="gbtn gb_press"><span class="ir">보도자료</span></a></li>
+				<li><a href="#" class="gbtn gb_order"><span class="ir">주문 내역</span></a></li>
+				<li><a href="#" class="gbtn gb_review"><span class="ir">제품리뷰</span></a></li>
+				<li><a href="#" class="gbtn gb_faq"><span class="ir">자주묻는 질문</span></a></li>
+				<li><a href="#" class="gbtn gb_event"><span class="ir">진행중인 이벤트</span></a></li>
+				<li><a href="#" class="gbtn gb_question"><span class="ir">1:1 문의</span></a></li>
+			</ul>
+		</div>
+		<!-- HEAD SNB -->
+		<div id="h_snb">
+			<ul class="snb_btn">
+				<li><a href="#" class="gbtn sb_furniture"><span class="ir">Furniture</span></a></li>
+				<li><a href="#" class="gbtn sb_tableware"><span class="ir">Tableware</span></a></li>
+				<li><a href="#" class="gbtn sb_stationary"><span class="ir">Stationary</span></a></li>
+				<li><a href="#" class="gbtn sb_fabric"><span class="ir">Fabric</span></a></li>
+				<li><a href="#" class="gbtn sb_lighting"><span class="ir">Lighting</span></a></li>
+			</ul>
+			<!-- sorting brand -->
+			<div id="sorting_brand">
+				<a href="#" class="gbtn sb_brand"><span class="ir">Sorting Brand</span></a>
+				<!-- sorting brand layer -->
+				<div id="lyr_head_brand" class="lyr_brand">
+					<ul>
+						<li><a href="#" class="gbtn lb_almedhals"><span class="ir"><strong>Almedhals</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_anneblack"><span class="ir"><strong>Anne Black</strong> : tableware, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_byheydey"><span class="ir"><strong>Byheydey</strong> : furniture, Korea</span></a></li>
+						<li><a href="#" class="gbtn lb_danskvintage"><span class="ir"><strong>Dansk Vintage</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_guss"><span class="ir"><strong>Guss</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_montana"><span class="ir"><strong>Montana</strong> : furniture, Denmark</span></a></li>
+						<li><a href="#" class="gbtn lb_saitowood"><span class="ir"><strong>Saito Wood</strong> : stationary, Japan</span></a></li>
+						<li class="last"><a href="#" class="gbtn lb_sceltevie"><span class="ir"><strong>Sceltevie</strong> : stationary, Japan</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- contentwrap -->
+	<div id="contentwrap">
+		<!-- snb -->
+		<div id="snb">
+			<!-- 브랜드페이지일 때 class="brand" // mypage 또는 help desk 처럼 한글일 때 class="snb_k" -->
+			<div class="snb_in">
+				<h2 class="this">Furniture</h2>
+				<ul>
+					<!-- 현재 선택일 때 a class="this" -->
+					<li class="first"><a href="#" class="this">All Products</a></li>
+					<li><a href="#">Beds & Mattresses</a></li>
+					<li><a href="#">Chairs & Sofas</a></li>
+					<li><a href="#">Chest</a></li>
+					<li><a href="#">Tables</a></li>
+					<li><a href="#">Desks & Worktops</a></li>
+					<li><a href="#">Shelving & Storage</a></li>
+					<li><a href="#">Stools & Benches</a></li>
+					<li><a href="#">Mirrors</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="d_cate_black">
+				<h3 class="hide">Chest</h3>
+				<div class="p_to_up">
+					<p>
+						<span id="location">
+							<a href="#">Furniture</a>&gt;<span>Chest</span>
+						</span>
+					</p>
+				</div>
+				<!-- top_product_orderinfo -->
+				<div class="d_prod_view_top f_clear">
+					<div class="p_photo">
+						<a href="#"><img src="../images/temp/prod_02.jpg" width="300" height="300" alt="상품이미지"></a>
+					</div>
+					<div class="p_desc">
+						<h4 class="p_exs p_tit"><strong>About a Chair / Swivel Base</strong></h4>
+						<div class="p_exs p_brand">
+							<em>Hay</em>
+							<a href="#" class="gbtn b_gobrandshop"><span class="ir">브랜드 샵 바로가기</span></a>
+							<i class="from">from Denmark</i>
+						</div>
+						<p class="p_exs p_price"><i class="won">W</i> 645,000</p>
+						<div class="p_descript">
+							<p class="desc">
+								W 3200mm / D 400mm / H 4500mm<br />
+								Seat: Polypropylene in black/white<br />
+								Frame: Polished aluminium, powder coated<br />
+								aluminium in black/white<br />
+								Designer: Hee Wheeling
+							</p>
+							<div class="sns">
+								Be the first of your friends to like this.
+								<a href="#" class="gbtn b_facebook"><span class="ir">Like(facebook)</span></a>
+							</div>
+						</div>
+						<div class="p_btn">
+							<a href="#" class="b_buy">Buy</a>
+							<span class="pb_r">
+								<a href="#" class="b_s_cw b_cart">Cart</a>
+								<a href="#" class="b_s_cw b_wish">Wish</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- bottom_product_info -->
+			<div class="d_prod_con">
+				<!-- 제품정보 -->
+				<div class="d_prod_con_inner">
+					<h5 class="hide">제품상세</h5>
+					<img src="../images/temp/prod_03.jpg" width="766" alt="상품이미지" />
+					<div class="t_con">
+						rabbit skin과 fox scrap으로 이루어진 rabbit knitting 후드베스트 입니다.<br>
+						레빗 스킨을 가늘게 슬라이스하여 스킬 자수처럼 니팅한 상품입니다.<br>
+						전체 니팅 공저을 핸드메이드로 작업하여 시간과 정성이 깃든 상품입니다.<br>
+						앞단과 포켓 입구, 후두 주위는 폭스 스크랩으로 마무리하여 단조로움을 잘 풀어습니다.<br>
+						아웃포켓으로 좀 더 활동적이고 캐주얼한 느낌을 제시 합니다.
+						<br><br>
+						<strong>&lt;size&gt;</strong><br>
+						총기장:79cm / 가슴둘레:99cm / 허리둘레:99cm<br>
+						사이즈는 재는 부분이나 방법에 따라 약간의 차이가 있을 수 있습니다.
+						<br><br>
+						<strong>&lt;보관 및 관리 방법&gt;</strong><br>
+						1. 드라이크리닝은 구입 후 3~4년에 한번 정도가 적당하며 부분적인 오염제거는 모피전용 크리너를
+						이용하여 제거해주세요.
+						2. 착용 시 빗물이 모피에 스며들지 않도록 주의해 주세요.<br>
+						3. 보관 시 항상 습도에 주의해 주세요. (습도가 높은곳은 피하는 것이 좋습니다.)<br>
+						4. 장마철에는 에어컨이나 선풍기 바람에 습기를 제거해 주세요.<br>
+						5. 보관시 잘 맞는 옷걸이에 걸어서 형태가 변하거나 다른옷들과 일정한 간격을 두고 걸어서 모피의
+						털이 눌리지 않도록 주의해 주세요. 털이 눌렸을 경우 모피전용 브러쉬로 털 방향으로 빗어주세요.<br>
+						6. 난방기구 등 열에 가까이 두지 마세요.
+					</div>
+				</div>
+				<!-- 배송정보 및 교환/반품정보 -->
+				<div class="d_prod_deliv">
+					<h5 class="hide">배송정보 및 교환/반품정보</h5>
+					<img src="../images/prod_deliv_info.gif" width="766" alt="배송정보 및 교환/반품정보" />
+				</div>
+				<!-- 상품평 -->
+				<div class="d_prod_review">
+					<h5>상품평</h5>
+					<!-- board_list -->
+					<div class="board_list">
+						<table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>제목</th>
+									<th>별점</th>
+									<th>작성자</th>
+									<th>작성일</th>
+								</tr>
+							</thead>
+							<tbody id="id_review_qna">
+								<!-- loop -->
+								<tr class="ques" id="id_ques01" onclick="review('1'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans01">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<!-- //loop -->
+								<tr class="ques" id="id_ques02" onclick="review('2'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans02">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques03" onclick="review('3'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans03">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques04" onclick="review('4'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans04">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques05" onclick="review('5'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans05">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques06" onclick="review('6'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans06">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques07" onclick="review('7'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans07">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques08" onclick="review('8'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans08">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques09" onclick="review('9'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans09">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+								<tr class="ques" id="id_ques010" onclick="review('10'); this.scrollIntoView(); return false;">
+									<td class="cell_no">5</td>
+									<td class="cell_tit"><a href="#">이 모피에 스며들지 않도록 주의해 주세요.</a></td>
+									<td class="cell_star">★★★★★</td>
+									<td class="cell_name">노동균</td>
+									<td class="cell_date">2009.05.05</td>
+								</tr>
+								<tr class="ans_none" id="id_ans010">
+									<td colspan="5" class="ans_td">
+										<p class="p_txt">
+											받은지는 꽤 되었는데 저번 주말에야 설치했습니다.<br />
+											거실과 식당 사이 구분이 필요해서 책장겸 분리장 겸 해서 구입했는데<br />
+											양면으로 꽂으니 책이 정말 많이 들어가는데요?^^''<br />
+											색상재질 사진 보는 그대로이고<br />
+											저는 많이 만족합니다.<br />
+											설치전에 바닥에 쿠션스티커라하나? 그거 붙이고 설치했더니 잘 고정되고 이동도 쉬워요. 참고하시길~^^<br />
+										</p>
+										<div class="p_img"><img src="../images/temp/prod_04.jpg" /></div>
+										<div class="t_blue"><a href="#">글 수정</a> / <a href="#">글 삭제</a></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- paginate -->
+						<div class="paginate">
+							<span class="btn_page">
+								<a href="#"><img src="../images/common/btn_page_prev.gif" alt="Previous"></a>
+							</span>
+							<a href="#">1</a>
+							<strong>2</strong>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<span class="btn_page">
+								<a href="#"><img src="../images/common/btn_page_next.gif" alt="Next"></a>
+							</span>
+							<!-- btn -->
+							<div class="btnr">
+								<a href="#" onclick="review_toggle('id_write_view'); return false;" class="b_w_review">상품평 쓰기</a>
+							</div>
+						</div>
+					</div>
+					<!-- 상품평 작성 -->
+					<div class="clear"></div>
+					<div class="write_review" id="id_write_view">
+						<h6 class="hide">상품평 쓰기</h6>
+						<div class="box_lgray">
+							<dl>
+								<dt>이름</dt>
+								<dd class="name"><p class="dd_txt">공혜리</p></dd>
+								<dt class="grade">평점</dt>
+								<dd class="grade">
+									<form class="jqtransform">
+										<div class="jqtype2">
+											<select title="">
+												<option>★★★★★</option>
+												<option>★★★★</option>
+												<option>★★★</option>
+												<option>★★</option>
+												<option>★</option>
+											</select>
+										</div>
+									</form>
+								</dd>
+								<dt>제목</dt>
+								<dd class="input"><input type="text" style="width:330px;" title="제목"></dd>
+								<dt class="content">내용</dt>
+								<dd class="content"><textarea></textarea></dd>
+							</dl>
+							<!-- btn -->
+							<div class="btn">
+								<a href="#" class="b_s_b4d b_wr_ok">상품평 쓰기 완료</a>
+								<a href="#" class="b_s_cw b_wr_cancel">상품평 쓰기 취소</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="f_heydey_link">
+			<h2 class="hide">Heydey 소개 및 약관</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_company"><span class="ir">회사소개</span></a></li>
+				<li><a href="#" class="gbtn fb_job"><span class="ir">채용정보</span></a></li>
+				<li><a href="#" class="gbtn fb_policy"><span class="ir">이용약관</span></a></li>
+				<li><a href="#" class="gbtn fb_personalinfo"><span class="ir">개인정보취급방침</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate"><span class="ir">업무제휴</span></a></li>
+				<li><a href="#" class="gbtn fb_cooperate_info"><span class="ir">협력업체정보시스템</span></a></li>
+			</ul>
+		</div>
+		<div class="f_settlement">
+			<h2 class="hide">안전결제정보</h2>
+			<ul>
+				<li class="first"><a href="#" class="gbtn fb_sgic"><span class="ir">서울보증보험</span></a></li>
+				<li><a href="#" class="gbtn fb_kcp"><span class="ir">한국사이버결제</span></a></li>
+			</ul>
+		</div>
+
+		<div class="f_devide">
+			<div class="address">
+				<h2 class="hide">Heydey 사이트정보</h2>
+				<p class="f_addr"><span class="ir">(주)스튜디오헤이데이. 서울특별시 마포구 상수동 324-12 고객센터 1599 7193 팩스 02 334 5517 이메일</span> <a href="mailto:info@objectheydey.com"><span class="ir">info@objectheydey.com</span></a></p>
+				<p class="f_si"><span class="ir">사업자등록번호 105-87-18086 통신판매업신고 마포 1249호 개인정보취급책임자 오명아 대표 노환탁</span></p>
+				<p class="f_copy"><span class="ir">copyright 2012 studio heydey, inc. all rights reserved.</span></p>
+			</div>
+			<div class="familysite">
+				<form class="jqtransform">
+					<select title="family site">
+						<option>family site</option>
+						<option>www.byheydey.com</option>
+						<option>www.studioheydey.com</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	var cnt = (document.getElementById("id_review_qna").getElementsByTagName("tr").length)/2;
+	function review(id_name) {
+		for(i=1; i<=cnt ; i++) {
+			document.getElementById("id_ans0" + i).className = "ans_none";
+			document.getElementById("id_ques0" + i).className = "ques";
+		}
+		if (document.getElementById("id_ans0" + id_name).className == "ans_none") {
+			if (id_name!=1)
+			{
+				document.getElementById("id_ques0" + Number(id_name-1)).className = "ques ques_bfr";
+			}
+			document.getElementById("id_ans0" + id_name).className = "ans";
+			document.getElementById("id_ques0" + id_name).className = "ques_none";
+		} else {
+			document.getElementById("id_ans0" + id_name).className = "ans_none";
+			document.getElementById("id_ques0" + id_name).className = "ques";
+		}
+	}
+	function close_layer(id_name) {
+		var obj = document.getElementById(id_name);
+		if (obj.style.display!='inline')
+		{
+			obj.style.display='inline';
+		} else
+		{
+			obj.style.display='none';
+		}
+	}
+	function review_toggle(id_name) {
+		var obj = document.getElementById(id_name);
+		if (obj.style.visibility!='visible')
+		{
+			obj.style.visibility='visible';
+			obj.style.height='390px';
+		} else
+		{
+			obj.style.visibility='hidden';
+			obj.style.height='0';
+		}
+	}
+</script>
+
+
+
+</body>
+</html>
