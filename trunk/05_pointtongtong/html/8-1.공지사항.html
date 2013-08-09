@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>포인트통통</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<header>
+	<h1 class="hide">포인트몰</h1>
+	<nav>
+		<a href="#" class="gbtn h_home"><span class="ir">처음화면</span></a>
+		<a href="#" class="h_nav hn_this"><i class="icn i_help"></i>이용안내</a>
+		<a href="#" class="h_nav"><i class="icn i_basket"></i>보관함</a>
+	</nav>
+</header>
+
+
+<section>
+	<div class="ptc_in_head">
+		<h2 class="ptc_in_tit">공지사항</h2>
+		<a href="#" class="ptc_in_nav"><span>뒤로</span></a>
+	</div>
+	<!-- 공지사항 -->
+	<ul id="ptcBoradList" class="ptc_brd_list">
+		<li>
+			<a href="#"><span class="pbl_in"><strong>시스템 임시점검 안내</strong> <em class="pbl_date">13.08.15</em></span></a>
+			<div class="pbl_cnt_w">
+				<div class="pbl_cnt_in">
+					콘텐츠몰 오픈 기념 이벤트 시행합니다.<br />
+					다양한 경품을 준비했으니, 많은 응모 바랍니다.<br />
+					<br />
+					* 응모방법<br />
+					  - 컨텐츠를 다운받으시는 모든 고객에게 자동응모<br />
+					<br />
+					* 경품내용<br />
+					  - 1등 : 갤럭시S 4 LTE-A (1명)<br />
+					  - 2등 : CGV영화예매권 주말 2인 기프티콘 (10명)<br />
+					  - 3등 : 으라차차! 핫식스 기프티콘 (50명)<br />
+			    </div>
+			</div>
+		</li>
+		<!-- 열렸을 때 class="pbl_open" 추가 -->
+		<li class="pbl_open">
+			<a href="#"><span class="pbl_in"><strong>콘텐트몰 오픈 기념 이벤트 안내 (8월 31일까지)</strong> <em class="pbl_date">13.08.15</em></span></a>
+			<div class="pbl_cnt_w">
+				<div class="pbl_cnt_in">
+					콘텐츠몰 오픈 기념 이벤트 시행합니다.<br />
+					다양한 경품을 준비했으니, 많은 응모 바랍니다.<br />
+					<br />
+					* 응모방법<br />
+					  - 컨텐츠를 다운받으시는 모든 고객에게 자동응모<br />
+					<br />
+					* 경품내용<br />
+					  - 1등 : 갤럭시S 4 LTE-A (1명)<br />
+					  - 2등 : CGV영화예매권 주말 2인 기프티콘 (10명)<br />
+					  - 3등 : 으라차차! 핫식스 기프티콘 (50명)<br />
+			    </div>
+			</div>
+		</li>
+		<li>
+			<a href="#"><span class="pbl_in"><strong>시스템 임시점검 안내</strong> <em class="pbl_date">13.08.15</em></span></a>
+			<div class="pbl_cnt_w">
+				<div class="pbl_cnt_in">
+					콘텐츠몰 오픈 기념 이벤트 시행합니다.<br />
+					다양한 경품을 준비했으니, 많은 응모 바랍니다.<br />
+					<br />
+					* 응모방법<br />
+					  - 컨텐츠를 다운받으시는 모든 고객에게 자동응모<br />
+					<br />
+					* 경품내용<br />
+					  - 1등 : 갤럭시S 4 LTE-A (1명)<br />
+					  - 2등 : CGV영화예매권 주말 2인 기프티콘 (10명)<br />
+					  - 3등 : 으라차차! 핫식스 기프티콘 (50명)<br />
+			    </div>
+			</div>
+		</li>
+		<li>
+			<a href="#"><span class="pbl_in"><strong>콘텐트몰 오픈 기념 이벤트 안내 (8월 31일까지)</strong> <em class="pbl_date">13.08.15</em></span></a>
+			<div class="pbl_cnt_w">
+				<div class="pbl_cnt_in">
+					콘텐츠몰 오픈 기념 이벤트 시행합니다.<br />
+					다양한 경품을 준비했으니, 많은 응모 바랍니다.<br />
+					<br />
+					* 응모방법<br />
+					  - 컨텐츠를 다운받으시는 모든 고객에게 자동응모<br />
+					<br />
+					* 경품내용<br />
+					  - 1등 : 갤럭시S 4 LTE-A (1명)<br />
+					  - 2등 : CGV영화예매권 주말 2인 기프티콘 (10명)<br />
+					  - 3등 : 으라차차! 핫식스 기프티콘 (50명)<br />
+			    </div>
+			</div>
+		</li>
+	</ul>
+</section>
+<script type="text/javascript">
+//<![CDATA[
+	// 공지사항 스크립트
+	$(window).load(function() {
+		var boardList = $("#ptcBoradList").find("li");
+		var boardListButton = boardList.find("a");
+
+		boardListButton.bind("click", function() {
+			if ($(this).parent().hasClass("pbl_open"))
+			{
+				$(this).parent().removeClass("pbl_open");
+			} else {
+				boardList.each(function() {
+					$(this).removeClass("pbl_open");
+				});
+				$(this).parent().addClass("pbl_open");
+			}
+		});
+	});
+//]]>
+</script>
+
+
+</body>
+</html>
