@@ -43,7 +43,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 
 /* header */
 header {height:35px; padding:0 0 0 12px; font-size:0; border-top:2px solid #dfe0dc; background:#e6e6e6;}
-	.h_nav {display:inline-block; width:68px; height:20px; margin:8px 0 0 0; padding-top:2px; font-size:12px; color:#323232; border-bottom:5px solid #e6e6e6;}
+	.h_nav {display:inline-block; min-width:68px; height:20px; margin:8px 0 0 0; padding-top:2px; font-size:12px; color:#323232; border-bottom:5px solid #e6e6e6; white-space:nowrap;}
 		.i_help, .i_basket {top:-2px; margin-right:3px;}
 		.i_help {width:16px; height:16px; margin-left:3px; background-position:left top;}
 		.i_basket {width:16px; height:17px; margin-left:8px; background-position:-20px top;}
@@ -103,8 +103,8 @@ header {height:35px; padding:0 0 0 12px; font-size:0; border-top:2px solid #dfe0
 	.ptc_in_head h2 {height:32px; padding:12px 0 0 10px; font-size:18px; font-weight:normal; color:#fff; text-align:center; text-shadow:-1px -1px 1px rgba(0, 0, 0, 0.3);}
 	.ptc_in_nav {position:absolute; top:8px; left:7px; display:inline-block; padding:0 0 0 13px; background:url('../img/ptc_in_nav.png') left top no-repeat; background-size:13px 34px;}
 		.ptc_in_nav span {display:block; height:31px; padding:6px 9px 0 3px; font-size:14px; color:#fff; text-shadow:-1px -1px 1px rgba(0, 0, 0, 0.3); background:url('../img/ptc_in_nav_r.png') right top no-repeat; background-size:100px 30px;}
-.ptc_select {position:absolute; top:7px; right:3px; font:0/0 arial; background:url('../img/ptc_select_l.gif') left top no-repeat; background-size:100px 31px;}
-	.ptc_select select {height:31px; margin-right:-1px; padding:0 39px 0 12px; font-size:12px; color:#fff; border:0; background:url('../img/ptc_select_r.gif') right top no-repeat; background-size:27px 31px;}
+.ptc_select {position:absolute; top:7px; right:3px; min-width:80px; font:0/0 arial; background:url('../img/ptc_select_l.gif') left top no-repeat; background-size:100px 31px;}
+	.ptc_select select {min-width:100%; height:31px; margin-right:-1px; padding:0 39px 0 0; text-indent:12px; font-size:12px; box-sizing:border-box; color:#fff; border:0; background:url('../img/ptc_select_r.gif') right top no-repeat; background-size:27px 31px;}
 
 
 /* 보관함 */
@@ -220,8 +220,8 @@ header {height:35px; padding:0 0 0 12px; font-size:0; border-top:2px solid #dfe0
 	.ptc_c_w {background-image:url('../img/bg_ptc_c_w_2.png');}
 	.ptc_bi_in .ptc_fsipt li .ptcfs_ipradio {background-image:url('../img/radio_off_2.png');}
 	.ptc_bi_in .ptc_fsipt li input[type="radio"]:checked+label {background-image:url('../img/radio_on_2.png');}
-	.ptc_select {background-image:url('../img/ptc_select_l_2.gif');}
-		.ptc_select select {background-image:url('../img/ptc_select_r_2.gif');}
+	.ptc_select {background-image:url('../img/ptc_select_l_2.png');}
+		.ptc_select select {background-image:url('../img/ptc_select_r_2.png');}
 	.b_tpl_del {background-image:url('../img/ptl_del_2.png');}
 	.ptc_brd_list li a {background-image:url('../img/ico_pbrl_2.png');}
 	.ptc_brd_list li.pbl_open a {background-image:url('../img/ico_pbrl_open_2.png');}
