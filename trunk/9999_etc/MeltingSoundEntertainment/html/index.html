@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>Melting Sound Entertainment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+<link rel="stylesheet" href="../css/mse_common.css" type="text/css" />
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="content_w">
+		<!-- head -->
+		<div class="head_w">
+			<h1><span class="ir">MELTING SOUND ENTERTAINMENT</span></h1>
+		</div>
+		<!-- 컨텐츠 영역 -->
+		<div id="mseRollingWrapper" class="mse_rc_w">
+			<div id="mseRollInner">
+				<div id="mseRc01" class="mse_rc_in">
+					<h2 class="hide">MELTING SOUND</h2>
+					<img src="../img/img_mserc01.png" width="945" height="359" class="mseRcImg" alt="MELTING SOUND" />
+				</div>
+				<div id="mseRc02" class="mse_rc_in mse_rc_this">
+					<h2 class="hide">THE CELLOS</h2>
+					<img src="../img/img_mserc02.png" width="945" height="359" class="mseRcImg" alt="THE CELLOS" />
+					<ul class="mse_rc_link">
+						<li class="ga"><a href="#" title="GALLERY"><span class="ir">GALLERY</span></a></li>
+						<li class="mv"><a href="#" title="MOVIE"><span class="ir">MOVIE</span></a></li>
+					</ul>
+				</div>
+				<div id="mseRc03" class="mse_rc_in">
+					<h2 class="hide">ANDYOU</h2>
+					<img src="../img/img_mserc03.png" width="945" height="359" class="mseRcImg" alt="ANDYOU" />
+					<ul class="mse_rc_link">
+						<li class="ga"><a href="#" title="GALLERY"><span class="ir">GALLERY</span></a></li>
+						<li class="mv"><a href="#" title="MOVIE"><span class="ir">MOVIE</span></a></li>
+					</ul>
+				</div>
+				<div id="mseRc04" class="mse_rc_in">
+					<h2 class="hide">AARON</h2>
+					<img src="../img/img_mserc04.png" width="945" height="359" class="mseRcImg" alt="AARON" />
+					<ul class="mse_rc_link">
+						<li class="ga"><a href="#" title="GALLERY"><span class="ir">GALLERY</span></a></li>
+						<li class="mv"><a href="#" title="MOVIE"><span class="ir">MOVIE</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 하단 메뉴 -->
+		<div id="mseRollingMenu" class="mse_rm_w">
+			<ul>
+				<li>
+					<h3>THE CELLOS</h3>
+					<a href="#" title="THE CELLOS">
+						<img src="../img/mse_rmi_thecellos.jpg" width="275" height="117" alt="THE CELLOS" />
+						<span>첼로 하나로 하모니를 구성하는, 첼로만으로 구성된 3인조 <span class="lb">Symphony Rock Band.첼로계의 고유명사 The Cellos</span></span>
+					</a>
+				</li>
+				<li>
+					<h3>ANDYOU</h3>
+					<a href="#" title="ANDYOU">
+						<img src="../img/mse_rmi_andyou.jpg" width="275" height="117" alt="ANDYOU" />
+						<span>대중음악 작곡가와 원조 아이돌 보컬리스트의 발라드 콜라보레<span class="lb">이션.잔잔하게 마음을 울리게 하는 감성발라드 듀오,ANDYOU</span></span>
+					</a>
+				</li>
+				<li class="last">
+					<h3>AARON</h3>
+					<a href="#" title="AARON">
+						<img src="../img/mse_rmi_aaron.jpg" width="275" height="117" alt="AARON" />
+						<span>18살의 신예 Singer-Songwriter. R&B음악을 바탕으로 <span class="lb">여러가지 장르의 음악을 시도하는 뮤지션. Aaron!</span></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--  footer -->
+		<div class="mse_ft_w">
+			<div class="mse_ft_in">
+				<p>77, Cheongpa-dong 2-ga, Yongsan-gu, Seoul, Korea</p>
+				<p>Phone : 070 - 4225 - 2969</p>
+				<p>E-mail : <a href="mailto:mts@meltingsound.co.kr" class="mse_ft_mail" title="메일보내기">mts@meltingsound.co.kr</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="idx_bg_w"><img src="../img/bg_index.jpg" width="100%" height="100%" alt="Background" title="" /></div>
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(window).load(function() {
+		var contentView = $("#mseRollInner");
+		var rollingMenuWrapper = $("#mseRollingMenu").find("li");
+		var rollingMenu = $("#mseRollingMenu").find("a");
+
+		rollingMenu.each(function(index) {
+
+			$(this).bind("click", function() {
+				rollingMenuWrapper.each(function() {
+					$(this).removeClass("this");
+				});
+				contentView.animate({left:"-"+((index+1) * 945)+"px"}, {duration:300, queue:true});
+				$(this).parent().addClass("this");
+			});
+		});
+	});
+//]]>
+</script>
+
+</body>
+</html>
