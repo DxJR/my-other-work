@@ -51,10 +51,10 @@ header {height:35px; padding:0 0 0 12px; font-size:0; border-top:2px solid #dfe0
 		.hn_this .i_help {background-position:left -40px;}
 		.hn_this .i_basket {background-position:-20px -40px;}
 	.h_home {position:absolute; top:4px; right:9px; width:28px; height:29px; background-position:-40px top;}
-	.pt_t_search {position:absolute; top:5px; right:42px;}
+	.pt_t_search {z-index:3; position:absolute; top:5px; right:42px;}
 		.pt_ipt_w {padding:0 0 0 2px; background:url('../img/pt_ipt_l.gif') left top no-repeat;}
 			.pt_ipt_w span {display:block; padding:0 2px 0 0; background:url('../img/pt_ipt_r.gif') right top no-repeat;}
-				.pt_ipt_w span input {width:115px; height:28px; background:url('../img/pt_ipt.gif') left top repeat-x;}
+				.pt_ipt_w span input {width:115px; height:28px; font-size:14px; line-height:28px; color:#787878; background:url('../img/pt_ipt.gif') left top repeat-x;}
 
 /* 카테고리메뉴 */
 .pt_category {height:49px; border-bottom:1px solid #cc5d18;}
