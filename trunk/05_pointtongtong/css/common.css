@@ -42,12 +42,14 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 
 
 /* header */
-header {height:35px; padding:0 0 0 12px; font-size:0; border-top:2px solid #dfe0dc; background:#e6e6e6;}
-	.h_nav {display:inline-block; min-width:68px; height:20px; margin:8px 0 0 0; padding-top:2px; font-size:12px; color:#323232; border-bottom:5px solid #e6e6e6; white-space:nowrap;}
+header {height:35px; padding:0 0 0 10px; font-size:0; border-top:2px solid #dfe0dc; background:#e6e6e6;}
+	.h_nav {display:inline-block; min-width:68px; height:25px; padding:10px 2px 0 2px; font-size:12px; color:#323232; white-space:nowrap;}
+		.h_nav span {display:block; height:20px; border-bottom:5px solid #e6e6e6;}
 		.i_help, .i_basket {top:-2px; margin-right:3px;}
 		.i_help {width:16px; height:16px; margin-left:3px; background-position:left top;}
 		.i_basket {width:16px; height:17px; margin-left:8px; background-position:-20px top;}
-	.hn_this {color:#e9691b; border-bottom:5px solid #ed8749;}
+	.hn_this {color:#e9691b;}
+		.hn_this span {border-bottom:5px solid #ed8749;}
 		.hn_this .i_help {background-position:left -40px;}
 		.hn_this .i_basket {background-position:-20px -40px;}
 	.h_home {position:absolute; top:4px; right:9px; width:28px; height:29px; background-position:-40px top;}
