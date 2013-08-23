@@ -61,16 +61,18 @@ header {height:35px; padding:0 0 0 10px; font-size:0; border-top:2px solid #dfe0
 /* 카테고리메뉴 */
 .pt_category {height:49px; border-bottom:1px solid #cc5d18;}
 	.pt_category ul {width:100%;}
-		.pt_category ul li {float:left; width:33%; height:48px; border-top:1px solid #ed8749;}
+		.pt_category ul li {float:left; width:50%; height:48px; border-top:1px solid #ed8749; box-sizing:border-box;}
 			.pt_category ul li a {display:block; height:47px; font-size:12px; color:#fff; text-align:center; border-top:1px solid #e9691b; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4); background-color:#e9691b;}
 				.pt_category ul li a .icn {display:block; margin:0 auto 2px auto; overflow:hidden;}
 				.i_fs {width:27px; height:18px; margin-top:10px !important; background-position:-80px top;}
 				.i_comic {width:21px; height:21px; margin-top:8px !important; background-position:-110px top;}
 				.i_ebook {width:23px; height:18px; margin-top:10px !important; background-position:-140px top;}
-		.pt_category ul li.this {width:34%; border-top:1px solid #ce7e24;}
+		.pt_category ul li.this {border-top:1px solid #ce7e24;}
 			.pt_category ul li.this a {border-top:1px solid #ed9d33; background:#fcac3a;}
+/*
 .pt_category ul.ptc_on_fs li:nth-child(1) {border-right:1px solid #ed9d33;}
 .pt_category ul.ptc_on_cm li:nth-child(2) {border-left:1px solid #ed9d33; border-right:1px solid #ed9d33;}
+*/
 
 
 /* 목록 */
