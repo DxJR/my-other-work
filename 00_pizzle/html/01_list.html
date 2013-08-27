@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>Pizle</title>
-<link rel="stylesheet" href="css/pizle.css" media="all">
-<script src="js/jquery.js"></script>
-<script src="js/pizle_ui.js"></script>
+<link rel="stylesheet" href="../css/pizle.css" media="all">
+<script src="../js/jquery.js"></script>
+<script src="../js/pizle_ui.js"></script>
 </head>
 
 
@@ -15,26 +15,27 @@
 	<h1>Pizle</h1>
 </header>
 
-<section>
+<section class="pzl_sct_list">
 	<!-- 상단 sort 옵션 -->
-	<div class="">
-		<ul>
-			<li>
-				지역
-				<select title="">
+	<div class="pzl_search_w">
+		<ul class="pzl_search">
+			<li class="psl_where">
+				<label for="pslfWhere" class="psl_tit">지역</label>
+				<select id="pslfWhere" class="pzl_select">
 					<option>선택</option>
 					<option>서울</option>
 					<option>인천</option>
-					<option>대전</option>
 					<option>부산</option>
 					<option>대구</option>
+					<option>대전</option>
 					<option>광주</option>
 					<option>울산</option>
 				</select>
 			</li>
-			<li>
-				클럽이름
-				<select title="">
+			<li class="psl_name">
+				<label for="pslfName" class="psl_tit">클럽이름</label>
+				<input type="checkbox" id="pslfNameAll" class="check" /><label for="pslfNameAll">전체</label>
+				<select id="pslfName" class="pzl_select">
 					<option>아라비안나이트</option>
 					<option>백악관</option>
 					<option>아라비안나이트</option>
@@ -49,12 +50,13 @@
 					<option>백악관</option>
 				</select>
 			</li>
-			<li>
-				<label for="" class="waHide">날짜</label><input type="text" size="" class="iptxt" id="" title="" value="오늘" />
+			<li class="psl_date">
+				<label for="pslfDate" class="psl_tit">날짜</label><input type="text" size="" class="iptxt" id="pslfDate" title="" value="오늘" />
 			</li>
-			<li>
-				연령
-				<select title="">
+			<li class="psl_age">
+				<label for="pslfAge" class="psl_tit">연령</label>
+				<input type="checkbox" id="pslfAgeAll" class="check" /><label for="pslfAgeAll">전체</label>
+				<select id="pslfAge" class="pzl_select">
 					<option>선택</option>
 					<option>20</option>
 					<option>21</option>
@@ -65,7 +67,7 @@
 					<option>26</option>
 					<option>27</option>
 				</select> 부터
-				<select title="">
+				<select id="pslfAgeEnd" class="pzl_select">
 					<option>선택</option>
 					<option>20</option>
 					<option>21</option>
@@ -77,114 +79,71 @@
 					<option>27</option>
 				</select> 까지
 			</li>
-			<li>
-				모집인원
-				<select title="">
+			<li class="psl_person">
+				<label for="pslfPerson" class="psl_tit">모집인원</label>
+				<input type="checkbox" id="pslfPersonAll" class="check" /><label for="pslfPersonAll">전체</label>
+				<select id="pslfPerson" class="pzl_select">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
 					<option>4</option>
 					<option>5</option>
 					<option>6</option>
-				</select>
+				</select>명
 			</li>
-			<li>
-				<label for="" class="waHide">예상금액</label><input type="text" size="" class="iptxt" id="" title="" />원
+			<li class="psl_price">
+				<label for="pslfPrice" class="psl_tit">예상금액</label>
+				<input type="checkbox" id="pslfPriceAll" class="check" /><label for="pslfPriceAll">전체</label>
+				<input type="text" size="" class="iptxt" id="pslfPrice" />원
 				1인 약 <em>30292</em>원
 			</li>
 		</ul>
 	</div>
 	<!-- 목록 -->
-	<ul>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<h4>아라비안 오늘 4명 구합니다</h4>
-				아라비안 나이트<br />
-				오늘<br />
-				인천 계양구<br />
-				20세~25세<br />
-				3명<br />
-				20,000원
-			</a>
-		</li>
-	</ul>
+	<div class="pzl_list_w">
+		<ul class="pzl_list">
+			<li>
+				<a href="#">
+					<h4 class="le_tit">[<em>인천</em>] 아라비안 오늘 4명 구합니다</h4>
+					<p class="lep_where"><span class="le_spot">아라비안 나이트 </span> <span class="bar">|</span> <span class="le_where">인천 계양구</span></p>
+					<p class="lep_detail"><span class="le_when">오늘</span> <span class="bar">|</span> <span class="le_age">20세~25세</span> <span class="bar">|</span> <span class="le_person">3명</span> <span class="bar">|</span> <span class="le_price">20,000원</span></p>
+					<p class="lep_write"><span class="le_name">명품도시인천</span> <span class="bar">|</span> <span class="le_time">19:30</span> <span class="bar">|</span> <span class="le_time">조회 15</span></p>
+					<span class="le_cmt">23</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h4 class="le_tit">[<em>인천</em>] 아라비안 오늘 4명 구합니다</h4>
+					<p class="lep_where"><span class="le_spot">아라비안 나이트 </span> <span class="bar">|</span> <span class="le_where">인천 계양구</span></p>
+					<p class="lep_detail"><span class="le_when">오늘</span> <span class="bar">|</span> <span class="le_age">20세~25세</span> <span class="bar">|</span> <span class="le_person">3명</span> <span class="bar">|</span> <span class="le_price">20,000원</span></p>
+					<p class="lep_write"><span class="le_name">명품도시인천</span> <span class="bar">|</span> <span class="le_time">19:30</span> <span class="bar">|</span> <span class="le_time">조회 15</span></p>
+					<span class="le_cmt">23</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h4 class="le_tit">[<em>인천</em>] 아라비안 오늘 4명 구합니다</h4>
+					<p class="lep_where"><span class="le_spot">아라비안 나이트 </span> <span class="bar">|</span> <span class="le_where">인천 계양구</span></p>
+					<p class="lep_detail"><span class="le_when">오늘</span> <span class="bar">|</span> <span class="le_age">20세~25세</span> <span class="bar">|</span> <span class="le_person">3명</span> <span class="bar">|</span> <span class="le_price">20,000원</span></p>
+					<p class="lep_write"><span class="le_name">명품도시인천</span> <span class="bar">|</span> <span class="le_time">19:30</span> <span class="bar">|</span> <span class="le_time">조회 15</span></p>
+					<span class="le_cmt">23</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<h4 class="le_tit">[<em>인천</em>] 아라비안 오늘 4명 구합니다</h4>
+					<p class="lep_where"><span class="le_spot">아라비안 나이트 </span> <span class="bar">|</span> <span class="le_where">인천 계양구</span></p>
+					<p class="lep_detail"><span class="le_when">오늘</span> <span class="bar">|</span> <span class="le_age">20세~25세</span> <span class="bar">|</span> <span class="le_person">3명</span> <span class="bar">|</span> <span class="le_price">20,000원</span></p>
+					<p class="lep_write"><span class="le_name">명품도시인천</span> <span class="bar">|</span> <span class="le_time">19:30</span> <span class="bar">|</span> <span class="le_time">조회 15</span></p>
+					<span class="le_cmt">23</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 하단버튼 -->
+	<div class="pzl_bottom_fnc">
+		<a href="#" class="b_pzl_fnc"><span>글쓰기</span></a>
+	</div>
 </section>
 
 </body>

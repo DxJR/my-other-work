@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Pizle</title>
+<link rel="stylesheet" href="../css/pizle.css" media="all">
+<script src="../js/jquery.js"></script>
+<script src="../js/pizle_ui.js"></script>
+</head>
+
+
+<body>
+
+<header>
+	<h1>Pizle</h1>
+</header>
+
+<section class="pzl_sct_write">
+	<fieldset class="pzl_write_w">
+		<legend>글쓰기</legend>
+		<!-- 상단 sort 옵션 -->
+		<div class="pzl_search_w">
+			<ul class="pzl_search">
+				<li class="psl_where">
+					<label for="pslfWhere" class="psl_tit">지역</label>
+					<select id="pslfWhere" class="pzl_select">
+						<option>선택</option>
+						<option>서울</option>
+						<option>인천</option>
+						<option>부산</option>
+						<option>대구</option>
+						<option>대전</option>
+						<option>광주</option>
+						<option>울산</option>
+					</select>
+				</li>
+				<li class="psl_name">
+					<label for="pslfName" class="psl_tit">클럽이름</label>
+					<input type="checkbox" id="pslfNameAll" class="check" /><label for="pslfNameAll">전체</label>
+					<select id="pslfName" class="pzl_select">
+						<option>아라비안나이트</option>
+						<option>백악관</option>
+						<option>아라비안나이트</option>
+						<option>백악관</option>
+						<option>아라비안나이트</option>
+						<option>백악관</option>
+						<option>아라비안나이트</option>
+						<option>백악관</option>
+						<option>아라비안나이트</option>
+						<option>백악관</option>
+						<option>아라비안나이트</option>
+						<option>백악관</option>
+					</select>
+				</li>
+				<li class="psl_date">
+					<label for="pslfDate" class="psl_tit">날짜</label><input type="text" size="" class="iptxt" id="pslfDate" title="" value="오늘" />
+				</li>
+				<li class="psl_age">
+					<label for="pslfAge" class="psl_tit">연령</label>
+					<input type="checkbox" id="pslfAgeAll" class="check" /><label for="pslfAgeAll">전체</label>
+					<select id="pslfAge" class="pzl_select">
+						<option>선택</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+						<option>26</option>
+						<option>27</option>
+					</select> 부터
+					<select id="pslfAgeEnd" class="pzl_select">
+						<option>선택</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+						<option>26</option>
+						<option>27</option>
+					</select> 까지
+				</li>
+				<li class="psl_person">
+					<label for="pslfPerson" class="psl_tit">모집인원</label>
+					<input type="checkbox" id="pslfPersonAll" class="check" /><label for="pslfPersonAll">전체</label>
+					<select id="pslfPerson" class="pzl_select">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>명
+				</li>
+				<li class="psl_price">
+					<label for="pslfPrice" class="psl_tit">예상금액</label>
+					<input type="checkbox" id="pslfPriceAll" class="check" /><label for="pslfPriceAll">전체</label>
+					<input type="text" size="" class="iptxt" id="pslfPrice" />원
+					1인 약 <em>30292</em>원
+				</li>
+			</ul>
+		</div>
+		<p class="pzlw_st pzlw_tit">
+			<label for="">제목을 입력하세요</label><span class="fip_w"><input type="text" size="20" class="iptxt" id="" /></span>
+		</p>
+		<p class="pzlw_st pzlw_content">
+			<label for="" class="waHide">내용</label><span class="fip_w"><textarea id="" rows="10" cols="30" ></textarea></span>
+		</p>
+	</fieldset>
+	<!-- 하단버튼 -->
+	<div class="pzl_bottom_fnc">
+		<a href="#" class="b_pzl_fnc b_pzlf_cancel"><span>취소</span></a>
+		<a href="#" class="b_pzl_fnc"><span>저장</span></a>
+	</div>
+</section>
+
+</body>
+
+
+</html>
