@@ -3,7 +3,7 @@
 html { .overflow:scroll; .overflow-x:auto; }
 html,body { margin:0; padding:0; color:#333; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td, span { margin:0; padding:0; }
-body { color:#333; font-size:15px; font-family:"Malgun Gothic", Dotum, Gulim, Apple-Gothic, sans-serif; letter-spacing:-1px; line-height:1em; background-color:#F3F3F3; -webkit-text-size-adjust:none; word-wrap:break-word; word-break:break-all; }
+body { color:#333; font-size:12px; font-family:"Malgun Gothic", Dotum, Gulim, Apple-Gothic, sans-serif; letter-spacing:0; line-height:normal; background-color:#fff; -webkit-text-size-adjust:none; word-wrap:break-word; word-break:break-all; }
 table { border-collapse:collapse; border-spacing:0; }
 a, a:link { color:#333; text-decoration:none; font-family:"Malgun Gothic", Dotum, Gulim, Apple-Gothic, sans-serif; }
 fieldset,img { border:0; }
@@ -16,8 +16,9 @@ h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
 q:before,q:after { content:''; }
 abbr,acronym { border:0; font-variant:normal; }
 hr { display:none; }
+.waHide, legend {position:absolute; top:-999999px; left:-999999px; display:inline-block; width:1px; height:1px; font-size:1px; line-height:1px;}
 textarea { -webkit-appearance:none; -webkit-border-radius:0; }
-input[type="checkbox"] { background-color:#fff; width:16px; height:16px; }
+input[type="checkbox"] {position:relative; width:16px; height:16px; vertical-align:middle; background-color:#fff;}
 input:checked[type="checkbox"] { background-color:#fff; -webkit-appearance:checkbox; }
 input[type="button"], input[type="text"], input[type="image"] {-webkit-appearance:none;-webkit-border-radius:0;}
 
@@ -32,197 +33,99 @@ input,textarea,select { *font-size:100%; }
 
 /* because legend doesn't inherit in IE */
 legend { color:#000; }
-label { cursor:pointer; }
-
-#wrapper { background-color:#FFFFFF; }
-.dimmed_wrap { position:absolute; top:34px; left:0; width:100%; height:100%; z-index:99; }
-	.dimmed { position:relative; width:100%; height:100%; background-color:#000; filter:alpha(opacity=80); opacity:0.80; -moz-opacity:0.80; z-index:999; }
-	.dimmed p { padding-top:40px; font-size:15px; color:#fff; text-align:center; line-height:1.5em; }
-
-/****** HEADER ******/
-#header { position:relative; width:100%; height:34px; background-color:#FFFFFF; }
-#header .gnb { height:34px; padding:0 10px 0 10px; z-index:1; }
-#header .service { position:absolute; top:0; left:0; z-index:9; }
-#header h1 { float:left; display:inline; width:90px; height:23px; margin:6px 3px 0 10px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/cyworld1.png') 0 0 no-repeat; -webkit-background-size:90px 23px; }
-#header h1 a { display:block; width:90px; height:23px; text-indent:-3000em; }
-#header h2 { float:left; width:0; visibility:hidden; background:url('http://c1img.cyworld.co.kr/img/mobileweb/set_gnb.png') 0 -35px no-repeat; -webkit-background-size:100px 53px; } 	/*** 0801 sync ***/
-@media screen and (-webkit-min-device-pixel-ratio:1.5){ #header h1 {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/cyworld1.5.png');}}
-@media screen and (-webkit-min-device-pixel-ratio:2){ #header h1 {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/cyworld2.png');}}
-#header legend { display:none; }
-#header .search { position:relative; padding:6px 46px 1px 30px; }
-#header .search .inputBox { display:block; height:20px; border:2px solid #f11a18; background:#FFFFFF; overflow:hidden; }
-#header .search .inputBox input.text { width:100%; border:0; font-size:14px; font-family:"Malgun Gothic", 돋움, Dotum, 굴림, Gulim, Apple-Gothic, sans-serif; }
-#header .search input.img {float:right; display:inline; width:37px; height:24px; margin:-24px -36px 0 0; border:0; white-space:nowrap; text-indent:-1000px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_srch.png') 0 0 no-repeat; -webkit-background-size:37px 24px; -webkit-appearance:none;-webkit-border-radius:0; }
-@media screen and (-webkit-min-device-pixel-ratio:1.5){#header .search input.img {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_srch1.5.png');}}
-@media screen and (-webkit-min-device-pixel-ratio:2){#header .search input.img {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_srch2.png');}}
+label { cursor:pointer;}
 
 
-/* 싸이월드메인 오픈 BI : 2013.03.12 이현국 */
-#header h1 {background:url('http://c1img.cyworld.co.kr/img/mobileweb/bi_cyworld_pr_1.jpg') 0 0 no-repeat; -webkit-background-size:90px 23px;}
-@media screen and (-webkit-min-device-pixel-ratio:1.5){ #header h1 {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/bi_cyworld_pr_1.5.jpg');}}
-@media screen and (-webkit-min-device-pixel-ratio:2){ #header h1 {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/bi_cyworld_pr_2.jpg');}}
+/* header */
+header {display:none;}
+
+/* 목록 */
+.pzl_sct_list {padding:0 0 20px 0;}
+	/* sort */
+	.pzl_search_w {padding:10px; font-size:13px; border:1px solid #e6e7e8; border-width:1px 0; background:#f8f9fa;}
+		.pzl_search {}
+			.pzl_select {position:relative; font-size:13px; vertical-align:middle;}
+			.psl_tit {display:inline-block; width:60px; font-weight:bold; color:#333;}
+	/* LIST */
+	.pzl_list_w {clear:both; margin-top:20px;}
+		.pzl_list {border-top:1px solid #dfdfdf;}
+			.pzl_list li {position:relative; clear:both; border-bottom:1px solid #dfdfdf;}
+				.pzl_list li a {position:relative; display:block; padding:10px;}
+					.le_tit {display:block; font-size:15px; color:#000;}
+					.le_spot {font-size:13px;}
+					.le_where {}
+					.le_when {}
+					.le_age {}
+					.le_person {}
+					.le_price {}
+					.le_cmt {position:absolute; top:0; bottom:0; right:10px; height:34px; margin:auto; padding:0 10px; line-height:34px; text-align:center; background:rgba(255, 186, 0, 0.2);}
+
+/* 글쓰기 */
+.pzl_sct_write {}
+	.pzl_write_w {}
+		.pzlw_st {position:relative; padding:0 10px;}
+			.fip_w {display:block; padding:5px; border:1px solid #a0a0a0;}
+			.pzlw_st .iptxt, .pzlw_st textarea {width:100%; height:17px; padding:0; font-size:14px; color:#929292; border:0; background:#fff;}
+		.pzlw_tit {margin:10px 0;}
+			.pzlw_tit label {position:absolute; top:5px; left:15px; display:block; font-size:14px; color:#888; white-space:nowrap;}
+		.pzlw_content {margin:10px 0 0 0;}
+			.pzlw_st textarea {height:300px;}
+
+/* 보기 */
+.pzl_sct_view {padding:0 0 20px 0;}
+	/* 제목 */
+	.pzv_tit_w {margin-top:5px; padding-bottom:10px; border-bottom:1px solid #c3c3c3; background-color:#fff; background:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f9f9f9),color-stop(80%,#fff));}
+		.pzv_tit {font-size:23px;}
+		.pzv_article_info {margin-top:5px; font-size:12px; color:#929292;}
+			.bar {color:#e9e9e9;}
+			.pzv_ai_date {}
+			.pzv_ai_count {}
+	/* 모집정보 */
+	.pzv_head_info {}
+		/* 작성자 모집정보 */
+		.pzv_uw_pzinfo {margin-top:10px; padding:10px; background:#f3f3f3;}
+			.pzv_uw_pzinfo ul {}
+				.pzv_uw_pzinfo ul li {padding:3px 0;}
+					.pzv_i_tit {display:inline-block; width:55px; font-weight:bold;}
+		/* 작성자 글 */
+		.pzv_uw_detail {clear:both; padding:10px; font-size:14px;}
+			/* 작성자 글 본문 */
+			.pzv_uw_article {clear:both; margin-top:10px; font-size:14px; line-height:20px;}
+			/* 작성자 정보 */
+			.pzv_uw_info {clear:both; margin-top:10px; text-align:right;}
+		/* 나이트정보 */
+		.pzv_spot_info {clear:both; margin-top:20px; padding:10px; background:#f8f9fa;}
+			.pzv_spot_info h3 {font-size:17px; font-weight:bold;}
+			.pzv_spot_info ul {margin-top:10px;}
+				.pzv_spot_info ul li {padding:3px 0;}
+					.pzvl_ni_price {}
+						.pzvl_ni_price .pzv_i_tit {vertical-align:top;}
+						.pzvl_ni_price ul {display:inline-block; margin-top:0; vertical-align:top;}
+			/*  추천웨이터 */
+			.pzv_spot_rw {clear:both; margin-top:20px; padding:10px; border:1px solid #c2d2e1; background:#fff;}
+				.pzv_spot_rw h4 {font-size:13px; font-weight:bold;}
+				.pzv_spot_rw p {position:relative; min-height:90px; margin-top:10px; padding:0 0 0 100px;}
+					.pzv_spot_rw p img {position:absolute; top:0; left:0;}
+					.pzv_spot_rw p strong {display:block; padding:0; font-size:15px;}
+					.pzv_spot_rw p span {display:block; padding:5px 0; font-size:13px;}
+		/* 댓글 */
+		.pzv_reply_w {clear:both; margin-top:20px; background:#f3f3f3;}
+			.pzv_reply_w ul {border-top:1px solid #dbdbdb;}
+				.pzv_reply_w ul li {padding:10px; border-bottom:1px solid #dbdbdb;}
+					.pzv_r_name {font-size:12px; color:#111;}
+					.pzv_r_time {font-size:11px; color:#999;}
+					.pzv_reply_w ul li p {margin-top:5px; font-size:14px; line-height:1.5; color:#666;}
+		/* 이전글/다음글 */
+		.pzv_pn_list {clear:both; margin-top:20px;}
+			.pzv_pn_list ol {border-top:1px solid #ebebeb;}
+				.pzv_pn_list ol li {border-bottom:1px solid #ebebeb;}
+					.pzv_pn_list ol li a {display:block; padding:13px 10px; font-size:13px; color:#303030;}
+						.pzv_pn_list ol li a em {margin-right:5px;}
+						.rcn {color:#ed1b23;}
 
 
-/* 검색창개선(클럽과 함께 오픈 예정) : 2012.01.27 이현국
-.head-function { position:relative; display:block; padding-top:4px; height:29px; overflow:hidden; white-space:nowrap;  text-align:right; }
-	.head-function legend { display:none; }
-	.head-function .field-wrap { padding-right:34px; overflow:hidden; }
-	.head-function input.text { width:40%; height:20px; border:2px solid #ff2100; border-right:0; font-size:14px; font-family:"Malgun Gothic", 돋움, Dotum, 굴림, Gulim, Apple-Gothic, sans-serif; transition:width 0.5s ease-in-out; -webkit-transition:width 0.5s ease-in-out; -o-transition:width 0.5s ease-out;}
-	.head-function input.img { position:absolute; top:4px; right:0; width:37px; height:24px; }
-	.head-function input.img { position:absolute; top:4px; right:0; width:37px; height:24px; border:0; white-space:nowrap; text-indent:-1000px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_srch.png') 0 0 no-repeat; -webkit-background-size:37px 24px; -webkit-appearance:none;-webkit-border-radius:0; }
-	@media screen and (-webkit-min-device-pixel-ratio:1.5){ .head-function input.img {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_srch1.5.png');}}
-	@media screen and (-webkit-min-device-pixel-ratio:2){ .head-function input.img {background-image:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_srch2.png');}}
-	.head-function.on { z-index:10; }
-	.head-function.on input.text { width:100%; z-index:99; }
-*/
-
-/****** FOOTER ******/
-#footer { width:100%; border-top:1px solid #bfbfbf; background-color:#f3f3f3; text-align:center; font-size:15px; }
-#footer .foot_wrap { padding:0 0 20px 0; border-top:1px solid #e2e2e2; }
-#footer ul { margin:17px 0 15px; }
-#footer ul li { display:inline-block; padding:0 7px 0 4px; margin:0; background:url('http://c1img.cyworld.co.kr/img/mobileweb/bg_bar.gif') no-repeat right 50%; text-align:center; letter-spacing:-1px; }
-#footer ul li a { color:#666;  text-decoration:none; font-size:15px; }
-/* #footer ul li { display:inline-block; height:16px; margin:0; text-align:left; letter-spacing:-1px; } 0801 sync */
-/* #footer ul li a { height:16px; padding:0 8px 0 7px; font-size:15px; color:#555; background:url('http://nimg.nate.com/etc/ui/images/mnews/bg_bar.gif') no-repeat right 50%; }  0801 sync */
-#footer ul li.end, #footer ul li.end a { background:none; }
-#footer p.privacy { width:100%; margin:12px 0 0 0; height:10px; font-size:12px; letter-spacing:-1px; }
-#footer p.privacy a { color:#787878; }
-#footer p.privacy span.bar { padding:0 8px 0 7px; font-size:11px; color:#d1d1d1; }
-#footer p.copyright { width:100%; height:8px; margin-top:17px; font-size:9px; letter-spacing:0; }
-/* #footer button {
-	height:26px; padding:1px 8px 0 8px; border:1px solid #aaaaaa; font-size:90%; color:#222; letter-spacing:-1px; text-align:center; white-space:nowrap;
-	box-shadow:0 1px 0 rgba(0,0,0, .1); -webkit-box-shadow:0 1px 1px rgba(0,0,0, .15); -moz-box-shadow:0 1px 0 rgba(0,0,0, .1);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #ebebeb));
-	background: -webkit-linear-gradient(top, #fff, #ebebeb);
-	background: -moz-linear-gradient(top, #fff, #ebebeb);
-}	0801 sync */
-#footer button { height:26px; padding:1px 8px 0 8px; border:1px solid #aaaaaa; background:url('http://c1img.cyworld.co.kr/img/mobileweb/bg_btn.gif') repeat-x left bottom; font-size:13px; letter-spacing:-1px; text-align:center; white-space:nowrap; box-shadow:1px 1px 0 #d3d3d3; -moz-box-shadow:1px 1px 0 #d3d3d; -webkit-box-shadow:1px 1px 0 #d3d3d3; }
-#footer button span { line-height:22px; }
-
-/* WEB */
-* html #footer ul li { display:inline; }
-*:first-child+html #footer ul li { display:inline; }
-* html #footer button { margin:0 1px; padding:0; }
-*:first-child+html #footer button { margin:0 1px; padding:0; }
-
-/* Module Style */
-.paging { padding-bottom:30px; text-align:center; }
-.paging button { background:url('http://c1img.cyworld.co.kr/img/mobileweb/btn_paging02.gif') no-repeat scroll 0 0 transparent; height:25px; vertical-align:middle; width:35px; }
-.paging .btnPrev { background-position:0 0; margin-right:10px; }
-.paging .btnNext { background-position:0 -25px; margin-left:12px; }
-.paging .btnFirst { width:37px; background-position:0 -50px; margin-right:1px; }
-.paging .btnLast { width:37px; background-position:0 -75px; margin-left:1px; }
-.paging em { color:#5A8DAF; }
-.paging button span { display:none; }
-
-.btn_type_a { background:url('http://c1img.cyworld.co.kr/img/mobileweb/bg_btn.gif') repeat-x left bottom; border:1px solid #aaa; height:26px; padding:5px 6px; }
-.btn_type_a span { outline:none; }
-.btn_type_b { background:url('http://c1img.cyworld.co.kr/img/mobileweb/bg_btn_l.gif') repeat-x left bottom; border:1px solid #aaa; height:26px; padding:5px 8px; }
-.btn_type_c { border:1px solid #C6C6C6; color:#333333; letter-spacing:-1px; padding:4px 5px; font-size:12px; }
-.btn_type_c span.reply { color:#fd6c0a; }
-	.btn_type_c img { margin-top:-1px; }
-	.btn_wide { padding:0 10px; text-align:center; }
-	.arrow { padding:0 16px 0 0; background:url('http://c1img.cyworld.co.kr/img/mobileweb/set_arrow.gif') no-repeat right 5px; }
-	.cfm { padding:0 0 0 16px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/set_arrow.gif') no-repeat 1px -30px; }
-	.delete { padding:5px 8px 3px 16px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/set_arrow.gif') no-repeat 5px -55px; }
-	.type1 { display:block; text-align:center; }
-	.type2 { display:block; padding:8px 0 2px 0; height:20px; text-align:center; }
-	.type3 { padding:3px 0; width:140px; height:30px; text-align:center; letter-spacing:-1px; }
-	.type4 { border-left:0; padding:3px 0; width:150px; height:30px; text-align:center; letter-spacing:-1px; }
-
-.snb_wrap { padding:20px 0; background:#FFF; text-align:center; }
-.snb_wrap a { padding:0 13px; }
-.snb_wrap span { color:#c9cbca; margin-top:-2px; }
-
-.set_permission { padding:10px 0; color:#999; font-size:11px; }
-.set_permission p { padding:0 0 10px 0; }
-.set_permission a { color:#999; text-decoration:none; }
-.set_permission ul { background:#f7f7f7; padding:8px; }
-.set_permission ul li span.bar { color:#CFCFCF; padding:0 7px; }
-
-.permission_mh { padding:0 10px 10px 10px; }
-
-/* Utility */
-.utility { clear:both; padding:35px 0 18px 0; text-align:center; }
-.utility li { display:inline; padding:0 7px 0 3px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/bg_bar.gif') no-repeat right 45%;}
-.utility li a { color:#333; }
-.utility li a img {margin:-6px 0 0 0; vertical-align:middle;}
-.utility li img.beta {margin:-1px 0 0 2px; vertical-align:top;}
-.utility li.last { background:none; }
-
-/* Blind */
-#blind { height:68px; padding-top:175px; border-top:1px solid #8eb9e6; background:#ffffff url('http://c1img.cyworld.co.kr/img/mobileweb/bg_blind.gif') no-repeat center 72px; color:#999999; font-size:12px; line-height:16px; text-align:center; }
-#blind span { display:block; margin-bottom:20px; color:#80b1d7; font-size:16px; }
-#blind dl { width:206px; margin:0 auto; text-align:left; }
-    #blind dl dt { float:left; width:62px; height:18px; }
-    #blind dl dd { float:left; width:144px; height:18px; color:#333333; }
-
-/* event banner */
-.event_baner { padding:20px 0 10px 0; }
-	.banner_wrap { position:relative; width:300px; height:103px; margin:0 auto; }
-	a.button_close { position:absolute; top:0; right:0; width:34px; height:34px; text-indent:-9999px; overflow:hidden; }
-	a.link_area { display:block; width:300px; height:103px; text-indent:-9999px; overflow:hidden; }
-
-.event_wrap { padding:0; text-align:center; background:url('http://c1img.cyworld.co.kr/img/mobileweb/event_bg_sky.gif') left top; }
-.event_wrap .img_wrap { position:relative;  margin:0 auto; width:318px; height:685px; background:url('http://c1img.cyworld.co.kr/img/mobileweb/event_img3.gif') no-repeat left top; }
-	a.click_area { position:absolute; top:240px; left:16px; width:99px; height:33px; text-indent:-9999px; overflow:hidden; }
-
-.event_txt_wrap { padding:10px 20px 0 20px; }
-.event_txt_wrap h2 { padding:0 0 10px 0; font-weight:bold; color:#327a93; }
-.event_txt_wrap ul { margin:0 0 0 20px; }
-.event_txt_wrap ul li { list-style:square; padding:0 0 0 0; line-height:1.4; color:#666; }
-.event_txt_wrap ul li p { color:#333; }
-
-/* .main_banner { width:100%; height:100px; border-top:1px solid #dbdbdb; overflow:hidden; text-align:center; }
-.main_banner a { display:block; width:100%; height:100px; } */
-
-/* 페이징 */
-/* page navigation - type1 */
-.pageNav{ clear:both; margin:10px auto 20px; text-align:center; font-size:14px; letter-spacing:-1px; line-height:normal; white-space:nowrap; padding:10px 0;}
-	.pageNav .current, .pageNav a{ display:inline-block; color:#656565; text-decoration:none; width:23px; height:23px; vertical-align:middle; text-align:center; line-height:24px; margin:0 5px 0 0; color:#888; border:1px solid #ddd; font-family:arial; }
-	.pageNav .current { border:1px solid #e61f1b; color:#e61f1b; }
-	.pageNav .ciphers { display:inline; }
-		.pageNav .ciphers.three a, .pageNav .ciphers.three .current { width:35px; }
-		.pageNav .ciphers.four a, .pageNav .ciphers.four .current { width:45px; }
-		.pageNav .ciphers.five a, .pageNav .ciphers.five .current { width:55px; }
-		.pageNav .ciphers.six a, .pageNav .ciphers.six .current { width:65px; }
-	.pageNav a.arrow1 { border:1px solid #bebebe; box-shadow:0 1px 0 rgba(0,0,0, .1); -webkit-box-shadow:0 1px 1px rgba(0,0,0, .15); -moz-box-shadow:0 1px 0 rgba(0,0,0, .1);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #ebebeb)); /*Safari*/
-		background: -webkit-linear-gradient(top, #fff, #ebebeb); /*WebKit nightly*/
-		background: -moz-linear-gradient(top, #fff, #ebebeb); /* Modzilla Firefox */ }
-	.pageNav a.arrow1 em { display:block; width:7px; height:9px; margin:7px 0 0 8px; text-indent:-9999em; background:url('http://c1img.cyworld.co.kr/img/mobileweb/minihp/ico_pagenav.gif') 0 0 no-repeat; }
-		.pageNav a.arrow1.prev_page em { background-position:0 -19px; }
-		.pageNav a.arrow1.last_page em { background-position:0 -38px; }
-		.pageNav a.arrow1.next_page em { background-position:0 -56px; }
-	.pageNav .disabled{ display:none; }/*disabled prev_page*/
-
-.main_banner { width:100%; height:48px; border-top:1px solid #dbdbdb; overflow:hidden; text-align:center; }
-.main_banner a { display:block; width:100%; height:48px; }
-
-/* 태그 */
-.b_tags{padding:20px 0 0;font-size:13px;}
-.b_tags i.icn{display:inline-block;margin:0 9px 2px 0;vertical-align:middle;width:11px;height:12px;background:url(../img/icon_tags.png) no-repeat;}
-.b_tags i.icn.people{background-position:0 0;}
-.b_tags i.icn.map{background-position:-12px 0;}
-.b_tags i.icn.music{background-position:-24px 0;}
-.b_tags i.icn.feel{background-position:-36px 0;width:13px;margin-right:6px;}
-.b_tags .ln_tags{color:#999;display:inline-block;line-height:22px;}
-.b_tags .ln_tags strong, .b_tags .ln_tags em{color:#7aa9bb;font-style:normal;font-weight:bold;}
-.b_tags .r_info{padding:0 0 20px 20px;overflow:hidden;}
-.b_tags .r_info.map, .b_tags .r_info.music,  .b_tags .r_info.feel{padding-top:10px;}
-.b_tags .r_info.map img{border:1px solid #d2d4d0;}
-.b_tags .r_info img{display:inline;margin:0;}
-.b_tags .r_info .thumb{display:inline-block;width:40px;padding-top:10px;text-align:center;color:#000;margin-right:6px;vertical-align:top;}
-.b_tags .map_txt{display:block;font-size:15px;padding-top:10px;}
-.b_tags .map_txt em{font-size:13px;font-weight:bold;}
-.b_tags .img_album, .b_tags .img_feel{padding-right:10px;vertical-align:middle;float:left;}
-.b_tags .s_txt{font-size:15px;display:table-cell;height:80px;vertical-align:middle;line-height:18px;}
-.b_tags .s_txt em{font-size:13px;font-weight:bold;display:block;}
-
-/* 액티콘 모듈 추가 */
-.acticon-top {position:relative;}
-.acticon-link {position:relative; top:-3px; display:inline-block; width:25px; height:25px; margin-left:9px; overflow:hidden; vertical-align:middle; background-image:url('../img/acticon_b_s.png'); background-repeat:no-repeat; background-size:75px 25px;}
-	.acticon-link em {position:absolute; top:-999999px; left:-999999px; font-size:1px; line-height:1px; font-family:arial;}
-.acticon-b-more {background-position:left top;}
-.acticon-b-event {background-position:-25px top;}
-#wrapper a:hover {text-decoration:none;}
+/* 하단버튼 */
+.pzl_bottom_fnc {clear:both; margin-top:10px; padding:0 10px; text-align:right;}
+	.b_pzl_fnc {display:inline-block; height:29px; padding:1px; color:#000; font-size:14px; text-align:left; border-radius:2px; background-color:#bdbcbc; background:-webkit-gradient(linear,0 0,0 100%,from(#bdbcbc),to(#989797));}
+		.b_pzl_fnc span {display:block; height:29px; padding:0 10px; line-height:29px; background-color:#fff; background:-webkit-gradient(linear,0 0,0 100%,from(#fefefe),to(#f6f6f6));}
+	.b_pzlf_cancel {float:left;}
