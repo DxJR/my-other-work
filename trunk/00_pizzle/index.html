@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Pizle</title>
+<link rel="stylesheet" href="css/pizle.css" media="all">
+<style type="text/css">
+body {background:#fff;}
+#main {width:80%; height:82%; padding:10%; border:1px solid #000; background:#ccc;}
+</style>
+<script src="js/jquery.js"></script>
+<script src="js/pizle_ui.js"></script>
+<script src="js/mustache.js"></script>
+<script>
+    var storedTemplate = null;
+    
+    function renderOurTemplate(view) {
+        function doRender(template, view) {
+            console.log("rendering now");
+            console.log(Mustache.to_html(template, view));
+        }
+        
+        if (storedTemplate) {
+            console.log("template is stored - we can render immediately")
+            doRender(storedTemplate, view);
+        } else {
+            console.log("template isn't stored - need to request it");
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200 || this.status == 0) {
+                        storedTemplate = this.responseText;
+                        doRender(storedTemplate, view);
+                    } else {
+                        console.log("something went wrong");
+                    }
+                }
+            }
+            
+            req.open("GET", "food_detail.mustache", true);
+            req.send();
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var foodList = document.getElementById("foodList");
+        var foodField = document.getElementById("foodName");
+        
+        document.getElementById("foodForm").addEventListener("submit", function(e) [
+            e.preventDefault();
+            var newFood = foodField.value;
+            var newFoodItem = document.createElement("li");
+            newFoodItem.innerHTML = newFood;
+            foodList.appendChild(newFoodItem);
+            foodField.value="";
+            return false;
+        }, false);
+        
+    }, false);
+    
+    var aFoodDetail = {
+        foodName : "cereal",
+        timeOfDay : function() {
+            return this.foodName.length > 7 ? "evening" : "morning";
+        }
+    }
+</script>
+</head>
+
+
+<body>
+
+<div id="main">
+    <h1>List Some Food</h1>
+    <form id="foodForm">
+        <input type="text" id="foodName" placeholder="A name of a food" />
+        <button id="submitFood">Tell Us!</button>
+        
+        <ul id="foodList">
+        </ul>
+    </form>
+</div>
+
+</body>
+
+
+</html>
