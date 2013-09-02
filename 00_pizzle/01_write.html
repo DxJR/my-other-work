@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Pizle</title>
-<link rel="stylesheet" href="../css/pizle.css" media="all">
-<script src="../js/jquery.js"></script>
-<script src="../js/pizle_ui.js"></script>
+<link rel="stylesheet" href="css/jqm.css" media="all" />
+<link rel="stylesheet" href="css/pizle.css" media="all" />
+<script src="js/jquery.js"></script>
+<script src="js/pizle_ui.js"></script>
+<script src="js/jqm.js"></script>
 </head>
 
 
@@ -16,7 +18,7 @@
 </header>
 
 <section class="pzl_sct_write">
-	<fieldset class="pzl_write_w">
+	<fieldset class="pzl_write_w" data-enhance="false">
 		<legend>글쓰기</legend>
 		<!-- 상단 sort 옵션 -->
 		<div class="pzl_search_w">
@@ -110,8 +112,9 @@
 	</fieldset>
 	<!-- 하단버튼 -->
 	<div class="pzl_bottom_fnc">
-		<a href="#" class="b_pzl_fnc b_pzlf_cancel"><span>취소</span></a>
-		<a href="#" class="b_pzl_fnc"><span>저장</span></a>
+		<a href="#temp" class="b_pzl_fnc b_pzlf_cancel" data-rel="back"><span>취소</span></a>
+		<a href="#popMsgSaveComplete" class="b_pzl_fnc" data-transition="pop" data-rel="popup" data-position-to="window"><span>저장</span></a>
+		<div id="popMsgSaveComplete" data-role="popup">저장완료</div>
 	</div>
 </section>
 
