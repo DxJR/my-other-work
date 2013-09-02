@@ -17,3 +17,9 @@ var switchMetaContent = function() {
     //meta.content = content;
 };
 switchMetaContent();
+
+
+$(document).ready(function() {
+	$.mobile.defaultPageTransition='slide';
+	$.mobile.ignoreContentEnabled=true;
+});

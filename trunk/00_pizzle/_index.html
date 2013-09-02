@@ -4,9 +4,18 @@
 <meta charset="utf-8">
 <title>Pizle</title>
 <link rel="stylesheet" href="css/pizle.css" media="all">
-<style type="text/css">
-body {background:#fff;}
-#main {width:80%; height:82%; padding:10%; border:1px solid #000; background:#ccc;}
+<style>
+	body {
+	  background: white;
+	}
+	div#main {
+	  background: #ccc;
+	  border: black 1px solid;
+	  height: 82%;
+	  padding: 10%;
+	  width: 80%;
+	  -webkit-border-radius: 8px;
+	}
 </style>
 <script src="js/jquery.js"></script>
 <script src="js/pizle_ui.js"></script>
@@ -143,14 +152,17 @@ body {background:#fff;}
 <body>
 
 <div id="main">
-    <h1>List Some Food</h1>
-    <form id="foodForm">
-        <input type="text" id="foodName" placeholder="A name of a food" />
-        <button id="submitFood">Tell Us!</button>
+	<h1>List Some Food</h1>
+	<form id="foodForm">
+	  <input type="text" id="foodName"
+		placeholder="A name of a food" />
+	  <button id="submitFood">Tell Us!</button><br>
+	</form>
 
-        <ul id="foodList">
-        </ul>
-    </form>
+	<div id="foodDescription">
+	</div>
+	<ul id="foodList">
+	</ul>
 </div>
 
 </body>
