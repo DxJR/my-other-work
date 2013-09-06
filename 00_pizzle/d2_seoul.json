@@ -1,0 +1,34 @@
+{
+	"seoul" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	],
+	 "incheon" : [
+		{"S2_value":"1", "S2_text": "수박"},
+		{"S2_value":"2", "S2_text": "사과"}
+	],
+	"daejeon" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	],
+	"daegu" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	],
+	"ulsan" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	],
+	"busan" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	],
+	"gwangju" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	],
+	"gyeonggi" : [
+		{"S1_value":"1", "S1_text": "강아지"},
+		{"S1_value":"2", "S1_text": "고양이"}
+	]
+}
