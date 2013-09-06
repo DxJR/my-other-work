@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Pizle</title>
+<script src="js/jquery.js"></script>
+</head>
+
+
+<body>
+<input type="text" size="30" class="iptxt" id="test" value="인천광역시 계양구 작전동" />
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		var addr = $("#test").val();
+
+		var addrNew = addr.split(" ");
+
+		console.log(addrNew[0]);
+		console.log(addrNew[1]);
+	});
+//]]>
+</script>
+
+
+
+</body>
+
+
+</html>
