@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<h2 class="hide">푸시알림설정</h2>
+	<ul id="gsPushSetting" class="gs_push_set">
+		<li>
+			<input type="checkbox" id="gsPushNew" checked="checked" />
+			<label for="gsPushNew">
+				<i class="icn i_pushset"></i><strong>새 사전등록 게임 푸시 알림</strong><i class="icn i_radio"></i>
+			</label>
+		</li>
+		<li>
+			<input type="checkbox" id="gsPushPublish" checked="checked" />
+			<label for="gsPushPublish">
+				<i class="icn i_pushset"></i><strong>사전등록 게임 출시 푸시 알림</strong><i class="icn i_radio"></i>
+			</label>
+		</li>
+		<li>
+			<input type="checkbox" id="gsPushEnd" checked="checked" />
+			<label for="gsPushEnd">
+				<i class="icn i_pushset"></i><strong>사전등록 마감 푸시 알림</strong><i class="icn i_radio"></i>
+			</label>
+		</li>
+		<li>
+			<input type="checkbox" id="gsPushEvent" checked="checked" />
+			<label for="gsPushEvent">
+				<i class="icn i_pushset"></i><strong>공지사항 및 이벤트 푸시 알림</strong><i class="icn i_radio"></i>
+			</label>
+		</li>
+	</ul>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		// 체크박스/라디오버튼 스타일
+		function CheckboxRadio(wrap, eletype, parentEle) {
+			var crWrapper = $(""+ wrap +"");
+			var crElement = crWrapper.find("input[type="+ eletype +"]");
+			var crParentElement = crWrapper.find(""+ parentEle +"");
+
+			// 체크박스
+			crElement.each(function() {
+				if ($(this).is(":checked")) {
+					$(this).parent().addClass("cr_element_on");
+				};
+				$(this).bind('click', function() {
+					if ($(this).is(":checked")) {
+						if (eletype=="radio") {
+							resetCrElement();
+						}
+						$(this).parent().addClass("cr_element_on");
+					} else if ($(this).is(":not(:checked)")) {
+						$(this).parent().removeClass("cr_element_on");
+					}
+				});
+			});
+			var resetCrElement = function() {
+				crParentElement.each(function() {
+					$(this).removeClass("cr_element_on");
+				});
+			};
+		};
+		CheckboxRadio("#gsPushSetting","checkbox","li");
+	});
+//]]>
+</script>
+
+</body>
+
+</html>

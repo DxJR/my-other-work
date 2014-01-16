@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<h2 class="hide">공지사항</h2>
+	<ul id="gsNotice" class="gs_notice">
+		<li>
+			<h3 class="gsnt_tit">
+				<i class="icn i_arw"></i> <strong>시스템 임시점검 안내</strong> <i class="icn i_new">(NEW)</i>
+				<span class="date">13.12.25</span>
+			</h3>
+			<div class="gsnt_desc">
+				<p>사전등록앱 런칭을 기념하여 가입이벤트를 진행합니다.</p>
+				<p>&nbsp;</p>
+				<p>* 응모방법</p>
+				<p>- 까페(<a href="http://cafe.naver.com/prereg" target="_blank">http://cafe.naver.com/prereg</a>)에서</p>
+				<p>이벤트 글을 참고해주세요.</p>
+				<p>* 경품</p>
+				<p>- 1등 : 아이패드 에어 (1명)</p>
+				<p>- 2등 : CGV 영화예매권 주말2인 기프티콘(10명)</p>
+				<p>- 3등 : 문화상품권 5천원권(100명)</p>
+			</div>
+		</li>
+		<!-- 현재오픈일 때 gsnt_current 추가 -->
+		<li class="gsnt_current">
+			<h3 class="gsnt_tit">
+				<i class="icn i_arw"></i> <strong>겜셔틀 오픈 기념 가입 이벤트 안내 (~2월 15일까지)</strong> <i class="icn i_new">(NEW)</i>
+				<span class="date">13.12.25</span>
+			</h3>
+			<div class="gsnt_desc">
+				<p>사전등록앱 런칭을 기념하여 가입이벤트를 진행합니다.</p>
+				<p>&nbsp;</p>
+				<p>* 응모방법</p>
+				<p>- 까페(<a href="http://cafe.naver.com/prereg" target="_blank">http://cafe.naver.com/prereg</a>)에서 이벤트 글을 참고해주세요.</p>
+				<p>* 경품</p>
+				<p>- 1등 : 아이패드 에어 (1명)</p>
+				<p>- 2등 : CGV 영화예매권 주말2인 기프티콘(10명)</p>
+				<p>- 3등 : 문화상품권 5천원권(100명)</p>
+			</div>
+		</li>
+		<li>
+			<h3 class="gsnt_tit">
+				<i class="icn i_arw"></i> <strong>게임사전등록을 다 알아서 해주는 사전등록앱 ‘겜셔틀’ </strong>
+				<span class="date">13.12.25</span>
+			</h3>
+			<div class="gsnt_desc">
+				<p>사전등록앱 런칭을 기념하여 가입이벤트를 진행합니다.</p>
+				<p>&nbsp;</p>
+				<p>* 응모방법</p>
+				<p>- 까페(<a href="http://cafe.naver.com/prereg" target="_blank">http://cafe.naver.com/prereg</a>)에서</p>
+				<p>이벤트 글을 참고해주세요.</p>
+				<p>* 경품</p>
+				<p>- 1등 : 아이패드 에어 (1명)</p>
+				<p>- 2등 : CGV 영화예매권 주말2인 기프티콘(10명)</p>
+				<p>- 3등 : 문화상품권 5천원권(100명)</p>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$(function() {
+			var gsNoticeWrap = $("#gsNotice");
+			var gsNoticeList = gsNoticeWrap.find("li");
+			var gsNoticeTitle = gsNoticeWrap.find(".gsnt_tit");
+
+			gsNoticeTitle.each(function() {
+				$(this).bind("click", function() {
+					if ($(this).parent().hasClass("gsnt_current")) {
+						$(this).parent().removeClass("gsnt_current");
+					} else {
+						gsNoticeList.removeClass("gsnt_current");
+						$(this).parent().addClass("gsnt_current");
+					}
+				});
+			});
+		}());
+	});
+//]]>
+</script>
+
+</body>
+
+</html>

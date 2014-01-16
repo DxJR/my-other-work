@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<h2 class="hide">빵포인트</h2>
+	<!-- 나의 빵 포인트 -->
+	<div class="gs_mypoint">
+		<div class="gsmp_inner">
+			<h3><i class="icn i_mypoint_b"></i><span>나의 빵 포인트</span></h3>
+			<strong>20,000개</strong>
+		</div>
+	</div>
+	<!-- 탭메뉴 -->
+	<nav class="gs_tab_w">
+		<ul id="gsListTab" class="gs_tab gst_n2">
+			<li><a href="#" rel="gsPointSave">적립내역</a></li>
+			<!-- 현재선택 일 때 class="this" 추가 -->
+			<li class="this"><a href="#" rel="gsPointUse">사용내역</a></li>
+		</ul>
+	</nav>
+	<!-- 적립내역 -->
+	<table id="gsPointSave" class="gs_point_table" cellpadding="0" cellspacing="0" summary="빵 포인트 적립내역 상세">
+		<caption>나의 빵 포인트 적립내역</caption>
+		<thead>
+			<tr>
+				<th class="gspt_date" scope="col">날짜</th>
+				<th class="gspt_desc" scope="col">적립내용</th>
+				<th class="gspt_point" scope="col">빵</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>14.01.02</td>
+				<td>닉네임추천</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>닉네임추천</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>닉네임추천</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>닉네임추천</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>닉네임추천</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>닉네임추천</td>
+				<td>20개</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- 사용내역 -->
+	<table id="gsPointUse" class="gs_point_table gspt_show" cellpadding="0" cellspacing="0" summary="빵 포인트 사용내역 상세">
+		<caption>나의 빵 포인트 사용내역</caption>
+		<thead>
+			<tr>
+				<th class="gspt_date" scope="col">날짜</th>
+				<th class="gspt_desc" scope="col">사용내용</th>
+				<th class="gspt_point" scope="col">빵</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>14.01.02</td>
+				<td>문상교환</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>기프티콘교환</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>문상교환</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>기프티콘교환</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>문상교환</td>
+				<td>20개</td>
+			</tr>
+			<tr>
+				<td>14.01.02</td>
+				<td>기프티콘교환</td>
+				<td>20개</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$("#gsListTab").find("a").each(function() {
+			$(this).bind("click", function() {
+				$(this).parent().parent().find("li").removeClass("this");
+				$(".gspt_show").removeClass("gspt_show");
+				$("#"+$(this).attr("rel")+"").addClass("gspt_show");
+				$(this).parent().addClass("this");
+			});
+		});
+	});
+//]]>
+</script>
+
+</section>
+
+</body>
+
+</html>

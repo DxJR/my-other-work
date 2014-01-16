@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<h2 class="hide">소식검색</h2>
+	<fieldset class="gsn_search_w">
+		<legend>소식검색</legend>
+		<div id="gsnSearchInputWrap" class="gsn_search_iptxt_w">
+			<i id="gsnSearchIcon" class="icn i_search"></i>
+			<label id="gsnSearchLabel" for="gsnSearch"><span>검색어</span>를 입력해주세요.</label>
+			<input type="text" id="gsnSearch" />
+			<button type="button" id="gsnSearchDelete" class="gbtn b_search_del"><span class="ir">검색어삭제</span></button>
+		</div>
+		<button type="submit" class="gbtn b_search">검색</button>
+	</fieldset>
+	<!-- 모든소식 -->
+	<div class="gs_news_w">
+		<h3 class="gs_tit gsn_tit"><i class="icn i_news"></i><strong>'검색어'</strong>의 검색결과</h3>
+		<!-- 목록 -->
+		<ul class="gs_list_t1 gs_news_list">
+			<!-- 뉴스 : gsn_news / 이벤트 : gsn_event / 공략 : gsn_fight -->
+			<li class="gsn_news">
+				<a href="#" class="gsn_by_w">
+					<h4>소식제목 소식제목소식제목소식제목소식제목소식제목</h4>
+					<img src="../images/temp/temp_005.jpg" width="65" height="65" alt="소식제목" />
+					<p>
+						<em class="gsn_catogory">뉴스</em>
+						<span class="gsn_subinfo">
+							<span class="gsn_from">출처출처출처</span>
+							<span class="bar">|</span>
+							<span class="gsn_date">2013.01.02</span>
+						</span>
+					</p>
+				</a>
+			</li>
+			<li class="gsn_event">
+				<a href="#" class="gsn_by_w">
+					<h4>소식제목</h4>
+					<img src="../images/temp/temp_005.jpg" width="65" height="65" alt="소식제목" />
+					<p>
+						<em class="gsn_catogory">이벤트</em>
+						<span class="gsn_subinfo">
+							<span class="gsn_from">출처출처출처</span>
+							<span class="bar">|</span>
+							<span class="gsn_date">2013.01.02</span>
+						</span>
+					</p>
+				</a>
+			</li>
+			<li class="gsn_fight">
+				<a href="#" class="gsn_by_w">
+					<h4>소식제목 소식제목소식제목소식제목소식제목소식제목</h4>
+					<img src="../images/temp/temp_005.jpg" width="65" height="65" alt="소식제목" />
+					<p>
+						<em class="gsn_catogory">공략</em>
+						<span class="gsn_subinfo">
+							<span class="gsn_from">출처출처출처</span>
+							<span class="bar">|</span>
+							<span class="gsn_date">2013.01.02</span>
+						</span>
+					</p>
+				</a>
+			</li>
+		</ul>
+		<!-- 더보기 버튼 -->
+		<p class="gsl_more_w"><button type="button" class="gbtn b_gsl_more"><i class="icn i_more">+</i>더보기</button></p>
+	</div>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$("#gsnSearchIcon").bind({
+			'click' : function() {
+				$("#gsnSearch").focus();
+			}
+		});
+		$("#gsnSearch").bind({
+			'focus' : function() {
+				$("#gsnSearchLabel").css({top:'-9999px', left:'-9999px'});
+			},
+			'blur' : function() {
+				if ($(this).val()==='') {
+					$("#gsnSearchLabel").css({top:'10px', left:'35px'});
+				}
+			},
+		});
+		$("#gsnSearchDelete").bind('click', function() {
+			$("#gsnSearch").val("").focus();
+		});
+	});
+//]]>
+</script>
+</body>
+
+</html>
