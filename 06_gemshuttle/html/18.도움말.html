@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<h2 class="hide">도움말</h2>
+	<ul id="gsHelpdesk" class="gs_notice">
+		<li>
+			<h3 class="gsnt_tit">
+				<i class="icn i_arw"></i> <strong>사전등록을 하면 혜택이 있나요?</strong> <i class="icn i_new">(NEW)</i>
+				<span class="date">13.12.25</span>
+			</h3>
+			<div class="gsnt_desc">
+				<p>사전등록을 하면 게임 처음 시작할때 각종 아이템과 혜택이 제공되는거 아시죠?</p>
+				<p>&nbsp;</p>
+				<p>겜셔틀은 모든 게임의 사전등록을 자동으로 대행해 주는 앱입니다.</p>
+				<p>&nbsp;</p>
+				<p>이제 몰라서 사전등록 못하거나, 여기 저기 찾아다니지 않아도 처음부터 혜택받으면서 게임을 시작할 수 있다는 점.</p>
+				<p>&nbsp;</p>
+				<p>그것이 사전등록앱의 매력!</p>
+			</div>
+		</li>
+		<!-- 현재오픈일 때 gsnt_current 추가 -->
+		<li class="gsnt_current">
+			<h3 class="gsnt_tit">
+				<i class="icn i_arw"></i> <strong>겜셔틀 오픈 기념 가입 이벤트 안내 (~2월 15일까지)</strong> <i class="icn i_new">(NEW)</i>
+				<span class="date">13.12.25</span>
+			</h3>
+			<div class="gsnt_desc">
+				<p>사전등록을 하면 게임 처음 시작할때 각종 아이템과 혜택이 제공되는거 아시죠?</p>
+				<p>&nbsp;</p>
+				<p>겜셔틀은 모든 게임의 사전등록을 자동으로 대행해 주는 앱입니다.</p>
+				<p>&nbsp;</p>
+				<p>이제 몰라서 사전등록 못하거나, 여기 저기 찾아다니지 않아도 처음부터 혜택받으면서 게임을 시작할 수 있다는 점.</p>
+				<p>&nbsp;</p>
+				<p>그것이 사전등록앱의 매력!</p>
+			</div>
+		</li>
+		<li>
+			<h3 class="gsnt_tit">
+				<i class="icn i_arw"></i> <strong>게임사전등록을 다 알아서 해주는 사전등록앱 ‘겜셔틀’ </strong>
+				<span class="date">13.12.25</span>
+			</h3>
+			<div class="gsnt_desc">
+				<p>사전등록을 하면 게임 처음 시작할때 각종 아이템과 혜택이 제공되는거 아시죠?</p>
+				<p>&nbsp;</p>
+				<p>겜셔틀은 모든 게임의 사전등록을 자동으로 대행해 주는 앱입니다.</p>
+				<p>&nbsp;</p>
+				<p>이제 몰라서 사전등록 못하거나, 여기 저기 찾아다니지 않아도 처음부터 혜택받으면서 게임을 시작할 수 있다는 점.</p>
+				<p>&nbsp;</p>
+				<p>그것이 사전등록앱의 매력!</p>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$(function() {
+			var gsNoticeWrap = $("#gsHelpdesk");
+			var gsNoticeList = gsNoticeWrap.find("li");
+			var gsNoticeTitle = gsNoticeWrap.find(".gsnt_tit");
+
+			gsNoticeTitle.each(function() {
+				$(this).bind("click", function() {
+					if ($(this).parent().hasClass("gsnt_current")) {
+						$(this).parent().removeClass("gsnt_current");
+					} else {
+						gsNoticeList.removeClass("gsnt_current");
+						$(this).parent().addClass("gsnt_current");
+					}
+				});
+			});
+		}());
+	});
+//]]>
+</script>
+
+</body>
+
+</html>

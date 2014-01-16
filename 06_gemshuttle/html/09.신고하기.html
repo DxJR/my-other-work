@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<!-- 본문컨텐츠 -->
+	<div class="gs_content_w">
+		<div class="gs_report_w">
+			<h2 class="hide">신고하기</h2>
+			<p class="gscw_user"><strong>닉네임</strong> <span>2013.12.25</span></p>
+			<table cellpadding="0" cellspacing="0" class="gsr_table" summary="댓글신고하기">
+				<caption>댓글신고하기 상세 내용</caption>
+				<colgroup>
+					<col width="98" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>
+							<div>댓글닉네임</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">댓글내용</th>
+						<td>
+							<div>댓글내용댓글내용댓글내용댓글내용 최대2줄</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">신고사유</th>
+						<td>
+							<ul id="gsrRadio" class="gsr_list">
+								<li class="cr_element_on"><input type="radio" name="gsReport" id="gsrSpam" checked="checked" /><label for="gsrSpam">스팸성 홍보게시물</label></li>
+								<li><input type="radio" name="gsReport" id="gsrImmoral" /><label for="gsrImmoral">음란물 및 성인 컨텐츠</label></li>
+								<li><input type="radio" name="gsReport" id="gsrCurse" /><label for="gsrCurse">특정인 대상 비방/욕설</label></li>
+								<li><input type="radio" name="gsReport" id="gsrEtc" /><label for="gsrEtc">기타</label></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="gscw_exp">적절하지 않은 신고의 경우, 주인님에게 불이익이 있을 수 있습니다.</p>
+			<p class="gscw_submit_w"><button type="submit" class="gbtn b_submit"><i class="icn i_gscw"></i>신고하기</button></p>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		// 체크박스/라디오버튼 스타일
+		function CheckboxRadio(wrap, eletype, parentEle) {
+			var crWrapper = $(""+ wrap +"");
+			var crElement = crWrapper.find("input[type="+ eletype +"]");
+			var crParentElement = crWrapper.find(""+ parentEle +"");
+
+			// 체크박스
+			crElement.each(function() {
+				if ($(this).is(":checked")) {
+					$(this).parent().addClass("cr_element_on");
+				};
+				$(this).bind('click', function() {
+					if ($(this).is(":checked")) {
+						if (eletype=="radio") {
+							resetCrElement();
+						}
+						$(this).parent().addClass("cr_element_on");
+					} else if ($(this).is(":not(:checked)")) {
+						$(this).parent().removeClass("cr_element_on");
+					}
+				});
+			});
+			var resetCrElement = function() {
+				crParentElement.each(function() {
+					$(this).removeClass("cr_element_on");
+				});
+			};
+		};
+		CheckboxRadio("#gsrRadio","radio","li");
+	});
+//]]>
+</script>
+
+</body>
+
+</html>
