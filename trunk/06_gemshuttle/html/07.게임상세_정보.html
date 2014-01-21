@@ -30,9 +30,11 @@
 			</div>
 			<!-- 사전등록코드보기 -->
 			<div class="gs_code_w">
-				<button type="button" id="bCodeView" class="gbtn b_code_view" rel="gsCodeView"><span class="gscd_tit"><i class="icn i_code_b"></i>사전등록 코드 보기</span> <em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span> <i class="icn i_arw_r">→</i></em></button>
-				<div id="gsCodeView" class="b_code_view gscd_view">
-					<span class="gscd_tit"><i class="icn i_code_b"></i>594o0RwMyiBs</span> <em class="gs_ae"><span class="gsae_tit">기한</span> <span class="gsae_num">2013.12.25</span></em>
+				<div class="gs_code_inner">
+					<button type="button" id="bCodeView" class="gbtn b_code_view" rel="gsCodeView"><span class="gscd_tit"><i class="icn i_code_b"></i>사전등록 코드 보기</span> <em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span> <i class="icn i_arw_r">→</i></em></button>
+					<div id="gsCodeView" class="b_code_view gscd_view">
+						<span class="gscd_tit"><i class="icn i_code_b"></i>594o0RwMyiBs</span> <em class="gs_ae"><span class="gsae_tit">기한</span> <span class="gsae_num">2013.12.25</span></em>
+					</div>
 				</div>
 			</div>
 			<!-- 하단버튼 -->
@@ -120,7 +122,7 @@
 //<![CDATA[
 	$(document).ready(function() {
 		$("#bCodeView").bind("click", function() {
-			$(this).parent().addClass("gscd_open");
+			$(this).parent().parent().addClass("gscd_open");
 		});
 
 		$("#gsGameInfoTab").find("a").each(function() {
