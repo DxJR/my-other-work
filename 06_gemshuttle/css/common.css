@@ -46,7 +46,8 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 /* section */
 .gs_section {position:relative; height:100%;}
 	/* 메인비주얼 */
-	.gs_visual_w {height:120px; font:0/0 arial; text-align:center;}
+	.gs_visual_w {font:0/0 arial; text-align:center;}
+		.gs_visual_w img {width:100%;}
 	/* 본문컨텐츠 */
 	.gs_content_w {}
 		/* 탭메뉴 */
@@ -75,7 +76,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 							.gsl_by_w img {position:absolute; top:10px; left:9px;}
 							.gsl_by_w p {margin-bottom:6px; font-size:12px; color:#787878;}
 							.gs_ae {color:#787878;}
-								.gs_ae .gsae_tit {position:relative; display:inline-block; height:16px; padding:0 2px; font-size:10px; line-height:16px; border:1px solid #787878; border-radius:3px; text-decoration:none;}
+								.gs_ae .gsae_tit {position:relative; display:inline-block; height:16px; padding:0 2px; font-size:10px; line-height:18px; border:1px solid #787878; border-radius:3px; text-decoration:none;}
 								.gs_ae .gsae_num {font-size:12px; text-decoration:none;}
 							.bar {font-size:10px; color:#dededf;}
 							.gsae_r {display:inline-block; width:102px; color:#ff3535; text-align:right;}
@@ -97,17 +98,18 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gs_gameinfo_w {}
 		.gs_gameinfo_w .gsl_by_w {border:0; box-shadow:none; background:none;}
 		/* 사전등록코드보기 */
-		.gs_code_w {position:relative; margin-top:3px; padding:0 10px; overflow:hidden;}
-			.b_code_view {width:100%; height:41px; color:#fff; text-align:left; line-height:37px; background:#ffd02c;}
-				.gscd_tit {display:inline-block; margin:1px 0 0 13px; font-size:15px;}
-				.i_code_b {top:-2px; width:16px; height:15px; margin-right:0; background-position:-22px top;}
-				.b_code_view .gs_ae {float:right; margin:4px 12px 0 0; color:#fff;}
-					.b_code_view .gsae_tit {top:-2px; border-color:#fff;}
-					.i_arw_r {top:-2px; width:12px; height:8px; background-position:-60px top;}
-			.gscd_view, .gscd_open .b_code_view {position:absolute; top:-99999px; left:-99999px;}
-			.gscd_open .gscd_view {position:relative; top:0; left:0; background:#505050;}
-				.gscd_view .gscd_tit {margin-top:4px;}
-				.gscd_view .i_code_b {margin-right:6px; background-position:-40px top;}
+		.gs_code_w {position:relative; height:41px; margin-top:3px; padding:0 10px; overflow:hidden; -webkit-perspective:1000;}
+			.gs_code_inner {position:relative; height:41px; -webkit-transition:0.6s; -webkit-transform-style:preserve-3d;}
+				.b_code_view {z-index:10; position:absolute; top:0; left:0; width:100%; height:41px; color:#fff; text-align:left; line-height:37px; -webkit-backface-visibility:hidden; -webkit-transform:rotateY(0deg); background:#ffd02c;}
+					.gscd_tit {display:inline-block; margin:1px 0 0 13px; font-size:15px;}
+					.i_code_b {top:-2px; width:16px; height:15px; margin-right:0; background-position:-22px top;}
+					.b_code_view .gs_ae {float:right; margin:2px 12px 0 0; color:#fff;}
+						.b_code_view .gsae_tit {top:0px; border-color:#fff;}
+						.i_arw_r {top:-2px; width:12px; height:8px; background-position:-60px top;}
+				.gscd_open .gs_code_inner {-webkit-transform:rotateY(180deg);}
+				.gscd_view {z-index:1; -webkit-transform:rotateY(180deg); background:#505050;}
+					.gscd_view .gscd_tit {margin-top:2px;}
+					.gscd_view .i_code_b {margin-right:6px; background-position:-40px top;}
 		/* 하단버튼 */
 		.gsgi_fnc {clear:both; height:37px; margin:6px 0 15px 0; padding:0 10px;}
 			.gsgi_fnc li {float:left; width:33%; height:37px; padding-right:10px; box-sizing:border-box;}
@@ -129,7 +131,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 						.gst_cmt .gs_tab li a {font-size:13px; color:#444341 !important;}
 						.gst_cmt .gs_tab li:last-child a {background:#fff4cc;}
 							.i_cmt_list, .i_cmt_write {width:12px; margin-right:3px;}
-							.i_cmt_list {height:11px; background-position:-140px top;}
+							.i_cmt_list {top:-2px; height:11px; background-position:-140px top;}
 							.i_cmt_write {height:12px; background-position:-160px top;}
 				/* 댓글목록 */
 				.gs_comment {clear:both;}
@@ -285,6 +287,9 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gs_set_user, .gs_adver_c {background-image:url('../images/bg_user_set@1.5.png');}
 	.gsmp_inner {background-image:url('../images/bg_mypoint_mid@1.5.png');}
 	.gs_adver_f a {background-image:url('../images/arw_gsad_f@1.5.png');}
+	.b_gsl_more, .b_code_view {background-image:none;}
+
+	.gs_ae .gsae_tit {}
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:2){
@@ -294,4 +299,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gs_set_user, .gs_adver_c {background-image:url('../images/bg_user_set@2.png');}
 	.gsmp_inner {background-image:url('../images/bg_mypoint_mid@2.png');}
 	.gs_adver_f a {background-image:url('../images/arw_gsad_f@2.png');}
+	.b_gsl_more, .b_code_view {background-image:none;}
+
+	.i_code_b {background-position:-20px top;}
 }
