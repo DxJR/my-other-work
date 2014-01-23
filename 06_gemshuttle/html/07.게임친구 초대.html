@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<h2 class="hide">게임친구 초대</h2>
+	<div class="gs_recode_w">
+		<div class="gs_recode">
+			<p>주인님, 친구분에게 000000<span class="lb">게임을 추천하시겠어요?</span></p>
+			<fieldset id="gsRecmdCodeWrapper">
+				<legend>추천코드입력</legend>
+				<label for="gsRecmdCode" id="gsRecmdCodeLabel">추천코드를 입력해주세요</label><input type="text" id="gsRecmdCode" />
+			</fieldset>
+			<button type="submit" class="gbtn b_submit b_recmd"><i class="icn i_gscw"></i>추천하기</button>
+		</div>
+		<!-- 카카오톡 예시 -->
+		<div class="gs_rec_msg">
+			<h3>카카오톡 발송예시</h3>
+			<img src="../images/ico_kakaotalk.png" width="42" height="42" alt="겜셔틀 아이콘" />
+			<div class="gs_kkt">
+				<i class="cnr"></i>
+				<p>
+					<strong>[사전등록 겜셔틀]</strong>
+					00000님이 당신을<span class="lb">00000게임에 초대했습니다.</span> 아래 추천인 코드/닉네임을 <span class="lb">입력하면, 게임내 혜택이 있습니다.</span>
+					<strong class="code">*추천인 코드/닉네임 <em>: 0000000000</em></strong>
+				</p>
+				<a href="#"><span>앱으로 연결</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$("#gsRecmdCodeWrapper").bind({
+			'click' : function() {
+				$("#gsRecmdCode").focus();
+			}
+		});
+		$("#gsRecmdCode").bind({
+			'focus' : function() {
+				$("#gsRecmdCodeLabel").css({top:'-9999px', left:'-9999px'});
+			},
+			'blur' : function() {
+				if ($(this).val()==='') {
+					$("#gsRecmdCodeLabel").css({top:'6px', left:'9px'});
+				}
+			},
+		});
+	});
+//]]>
+</script>
+
+</body>
+
+</html>

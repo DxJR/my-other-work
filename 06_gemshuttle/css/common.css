@@ -269,7 +269,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 			.gs_policy_inner p {}
 	/* 광고문의 */
 	.gs_adver_w {position:relative; display:table; width:100%; height:100%;}
-		.gs_adver_c {position:relative; display:table-cell; text-align:center; background:#fff url('../images/bg_user_set.png') 88% 83% no-repeat; background-size:64px 35px;}
+		.gs_adver_c {position:relative; display:table-cell; text-align:center; background:#fff url('../images/bg_user_set.png') bottom 65px right 25px no-repeat; background-size:64px 35px;}
 			.gs_adver_c h3 {margin-top:60px; font-size:14px; color:#505050;}
 				.gs_adver_c h3 strong {display:block; margin:-5px 0 10px 0; font-size:30px; color:#1e1e1e; font-weight:normal;}
 			.gs_adver_c p {margin-top:6px; font-size:13px; color:#505050;}
@@ -279,6 +279,28 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 			.gs_adver_f a {display:block; height:51px; padding-top:9px; font-size:14px; color:#1e1e1e; text-align:center; background:url('../images/arw_gsad_f.png') 94% 50% no-repeat; background-size:15px 11px;}
 				.i_email {top:-2px; width:17px; height:13px; margin-right:-1px; background-position:-200px -20px;}
 				.gs_adver_f a em {display:block;}
+	/* 추천코드 */
+	.gs_recode_w {position:relative; height:100%; background:#bed1dd;}
+		.gs_recode {position:relative; padding:0 30px 19px 30px; font-size:17px; text-align:center; background:#fff;}
+			.gs_recode p {padding:10px 0 0 0; color:#1e1e1e; text-align:center;}
+			.gs_recode fieldset {position:relative; height:34px; margin-top:14px; padding:0 10px; text-align:left; overflow:hidden; background:#f2f1ed;}
+				.gs_recode label {position:absolute; top:6px; left:9px; color:#c8c8c8;}
+				.gs_recode input {width:100%; height:34px; font-size:17px; color:#1e1e1e; line-height:34px; background:#f2f1ed;}
+			.gs_recode .b_recmd, .gs_recode .b_share {margin-top:18px; background-image:none;}
+				.gs_recode .b_recmd .i_gscw {top:0; width:13px; height:13px; margin-right:4px; background-position:-180px -50px;}
+				.gs_recode .b_share .i_gscw {top:-1px; width:12px; height:13px; margin-right:6px; background-position:-200px -50px;}
+		.gsrcd_exp {font-size:13px;}
+		.gs_rec_msg {position:relative; padding:12px 40px 0 55px;}
+			.gs_rec_msg h3 {padding:3px 0 0 3px; font-size:13px; color:#1e1e1e;}
+			.gs_rec_msg img {position:absolute; top:16px; left:10px;}
+			.gs_kkt {position:relative; left:7px; margin-top:3px; padding:7px 10px 10px 10px; font-size:12px; color:#1e1e1e; line-height:18px; border:1px solid #a8bdca; border-radius:13px; box-shadow:1px 1px 1px #e5e9ec inset, -1px -1px 1px #e5e9ec inset; background:#fefefe;}
+			.gs_kkt:before {content:" "; position:absolute; top:7px; left:-5px; width:9px; height:9px; border:1px solid #a8bdca; border-width:1px 0 0 1px; border-radius:0 0 0 0px; -webkit-transform: rotate(-35deg); box-shadow:1px 1px 1px #e5e9ec inset; background:#fff;}
+				.gs_kkt strong {display:block; font-weight:normal;}
+				.gs_kkt .code {margin-top:12px;}
+					.gs_kkt .code em {display:block;}
+				.gs_kkt a {display:block; margin-top:5px; height:40px; font-size:13px; color:#141414; line-height:40px; border:1px solid #efefef; border-radius:10px; background-image:linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 55%)}
+					.gs_kkt a span {display:block; height:40px; padding:0 0 0 36px; background-image:url('../images/kakao_link.png'), url('../images/kakao_arw.png'); background-position:8px 50%, right 7px top 50%; background-repeat:no-repeat; background-size:23px 23px, 7px 11px;}
+
 
 @media screen and (-webkit-min-device-pixel-ratio:1.5){
 	.gbtn, .icn {background-image:url('../images/set_gs@1.5.png');}
@@ -288,8 +310,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gsmp_inner {background-image:url('../images/bg_mypoint_mid@1.5.png');}
 	.gs_adver_f a {background-image:url('../images/arw_gsad_f@1.5.png');}
 	.b_gsl_more, .b_code_view {background-image:none;}
-
-	.gs_ae .gsae_tit {}
+	.gs_kkt a span {background-image:url('../images/kakao_link@1.5.png'), url('../images/kakao_arw@1.5.png');}
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:2){
@@ -300,6 +321,7 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gsmp_inner {background-image:url('../images/bg_mypoint_mid@2.png');}
 	.gs_adver_f a {background-image:url('../images/arw_gsad_f@2.png');}
 	.b_gsl_more, .b_code_view {background-image:none;}
+	.gs_kkt a span {background-image:url('../images/kakao_link@2.png'), url('../images/kakao_arw@2.png');}
 
 	.i_code_b {background-position:-20px top;}
 }
