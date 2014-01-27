@@ -281,15 +281,16 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 				.gs_adver_f a em {display:block;}
 	/* 추천코드 */
 	.gs_recode_w {position:relative; height:100%; background:#bed1dd;}
-		.gs_recode {position:relative; padding:0 30px 19px 30px; font-size:17px; text-align:center; background:#fff;}
-			.gs_recode p {padding:10px 0 0 0; color:#1e1e1e; text-align:center;}
-			.gs_recode fieldset {position:relative; height:34px; margin-top:14px; padding:0 10px; text-align:left; overflow:hidden; background:#f2f1ed;}
-				.gs_recode label {position:absolute; top:6px; left:9px; color:#c8c8c8;}
-				.gs_recode input {width:100%; height:34px; font-size:17px; color:#1e1e1e; line-height:34px; background:#f2f1ed;}
-			.gs_recode .b_recmd, .gs_recode .b_share {margin-top:18px; background-image:none;}
+		.gs_recode {position:relative; padding:0 23px 19px 23px; font-size:13px; text-align:center; background:#fafafa;}
+			.gs_recode p {padding:18px 0 0 0; color:#1e1e1e; text-align:center; line-height:16px;}
+			.gs_recode fieldset {position:relative; height:32px; margin-top:14px; padding:0 10px; text-align:left; overflow:hidden; border:1px solid #ffd02c; background:#fff;}
+				.gs_recode label {position:absolute; top:8px; left:9px; color:#c8c8c8;}
+				.gs_recode input {width:100%; height:34px; font-size:13px; color:#1e1e1e; line-height:34px; background:#fff;}
+			.gs_recode .b_recmd, .gs_recode .b_share {margin-top:19px; background-image:none;}
 				.gs_recode .b_recmd .i_gscw {top:0; width:13px; height:13px; margin-right:4px; background-position:-180px -50px;}
 				.gs_recode .b_share .i_gscw {top:-1px; width:12px; height:13px; margin-right:6px; background-position:-200px -50px;}
-		.gsrcd_exp {font-size:13px;}
+		.gs_recode .gsrcd_exp {font-size:12px; color:#646464; text-align:left; letter-spacing:-1px;}
+			.gsrcd_exp .lb {margin-left:6px;}
 		.gs_rec_msg {position:relative; padding:12px 40px 0 55px;}
 			.gs_rec_msg h3 {padding:3px 0 0 3px; font-size:13px; color:#1e1e1e;}
 			.gs_rec_msg img {position:absolute; top:16px; left:10px;}
