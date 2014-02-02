@@ -21,7 +21,12 @@ var hsRehouse = ({
 			slideMargin:0,
 			mode: 'horizontal',
 			pager : true,
-			infiniteLoop: true
+			infiniteLoop: true,
+			onSliderLoad : function(id) {
+				if ($.browser.msie) {
+					$(".hr_main_visual").css({marginLeft:'-1px'});
+				}
+			}
 		});
 		// section module rolling
 		var mainModuleRolling = function(id) {
@@ -54,12 +59,12 @@ var hsRehouse = ({
 	},
 	// subpage UI
 	hrSubPage : function() {
-		var hrSelectDefault = function(id) {
+		var hrSelectDefault = function(id, top) {
 			$(""+id+"").selectbox({
 				onOpen: function () {
 					var thisOption = $(this).parent().find(".sbOptions");
 					$(this).next().addClass("sbOpen");
-					thisOption.css("top","32px");
+					thisOption.css("top",""+top+"px");
 					thisOption.find("li:first").addClass("first");
 					thisOption.find("li:last").addClass("last");
 				},
@@ -68,8 +73,59 @@ var hsRehouse = ({
 				},
 			});
 		};
-		hrSelectDefault("#hrpSortSelect");
-		hrSelectDefault("#hrpSubMenuSelect");
+		hrSelectDefault("#hrpSortSelect","32");
+		hrSelectDefault("#hrpSubMenuSelect","32");
+		hrSelectDefault("#hrpFaqSearchSelect","26");
+	},
+	// 상품소개 slide
+	hrProductPhotoSlide : function(id) {
+		$("#"+id+"").bxSlider({
+			auto: true,
+			pause: 5000,
+			speed: 500,
+			slideMargin:0,
+			mode: 'horizontal',
+			pager : true,
+			infiniteLoop: true,
+			onSliderLoad : function(id) {
+				if ($.browser.msie) {
+					$(".hrppd_photo_list").css({marginLeft:'-1px'});
+				}
+			}
+		});
+	},
+	// 자주묻는질문
+	hrFaq : function() {
+		// 가장자주묻는질문Top5
+		var hrFaqTop5 = (function() {
+			var hrpeFaqListTop = $("#hrpeFaqListTop");
+			var hrpeFLTtitle = hrpeFaqListTop.find("h4");
+
+			hrpeFLTtitle.each(function(index) {
+				$(this).bind("click", function() {
+					hrpeFaqListTop.find("li").removeClass("selected");
+					$(this).parent().addClass("selected");
+				});
+			});
+		})();
+		// FAQ리스트
+		var hrFaqList = (function() {
+			var hrpeFaqList = $("#hrpeFaqList");
+			var hrpeFaqListHref = hrpeFaqList.find(".subject").find("a");
+
+			hrpeFaqListHref.each(function(index) {
+				$(this).bind("click", function(e) {
+					if ($(this).parent().parent().hasClass("selected")) {
+						$(this).parent().parent().removeClass("selected").next().removeClass("asSelected");
+					} else {
+						hrpeFaqList.find("tr").removeClass("selected");
+						hrpeFaqList.find("tr").removeClass("asSelected");
+						$(this).parent().parent().addClass("selected").next().addClass("asSelected");
+					}
+					e.preventDefault();
+				});
+			});
+		})();
 	},
 	// 공지사항 rolling
 	hrHeadNoticeRolling : function() {
@@ -93,7 +149,7 @@ var hsRehouse = ({
 		var snb2depth = $(".hrsnb_2d");
 
 		/* tab키로 이동 : 접근성 */
-		var hrSnbWa = function() {
+		var hrSnbWa = (function() {
 			snbButton.each(function() {
 				$(this).bind('focus', function() {
 					snb2depth.css({top:'-9999px', left:'-9999px'});
@@ -111,11 +167,10 @@ var hsRehouse = ({
 			$("#hrSearchInput").bind("focus", function() {
 				snb2depth.css({top:'-9999px', left:'-9999px'});
 			});
-		};
-		hrSnbWa();
+		})();
 
 		// SNB mouseover
-		var hrSnbMouseAction = function() {
+		var hrSnbMouseAction = (function() {
 			snbList.each(function() {
 				$(this).bind({
 					'mouseenter' : function() {
@@ -126,8 +181,7 @@ var hsRehouse = ({
 					},
 				});
 			});
-		};
-		hrSnbMouseAction();
+		})();
 	},
 	// footer selectbox
 	hrFooterSelectBox : function() {
