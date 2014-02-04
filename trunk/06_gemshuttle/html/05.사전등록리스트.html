@@ -15,9 +15,96 @@
 
 <section class="gs_section">
 	<!-- 메인비쥬얼 -->
-	<div class="gs_visual_w">
-		<a href="#"><img src="../images/temp/temp_001.jpg" alt="난폭동화 사전예약 이벤트" /></a>
+	<div id="gsVisualWrapper" class="gs_visual_w">
+		<div class="gsv_inner">
+			<ul id="gsVisualList" class="gsv_list">
+				<li><a href="#"><img src="../images/temp/temp_001.jpg" alt="난폭동화 사전예약 이벤트" /></a></li>
+				<li><a href="#"><img src="../images/temp/temp_001-2.jpg" alt="난폭동화 사전예약 이벤트" /></a></li>
+				<li><a href="#"><img src="../images/temp/temp_001-3.jpg" alt="난폭동화 사전예약 이벤트" /></a></li>
+			</ul>
+			<div class="gsv_paging">
+				<a href="#" id="gsvPrev">이전</a>
+				<a href="#" id="gsvNext">다음</a>
+			</div>
+			<div id="gsvIndicator">
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+		// 메인비주얼
+		$(window).load(function() {
+				var gsVisualSlideInit = (function() {
+					var gsVisualWrapper = $("#gsVisualWrapper");
+					var gsVisualListWrap = $("#gsVisualList");
+					var gsVisualList = gsVisualListWrap.find("li");
+					var gsvSpeed = 5000;  // 속도조절(5000 = 5초)
+
+					var gsvPrev = $("#gsvPrev");
+					var gsvNext = $("#gsvNext");
+					var gsvIndicator = $("#gsvIndicator");
+					var animationTimer;
+					var noVisualIndex = 1;
+					var noVisualStart = 0;
+					var slideNum;
+
+					gsVisualListWrap.css({width:''+(gsVisualWrapper.width() * gsVisualList.length)+'px'});
+					gsVisualList.css({width:''+gsVisualWrapper.width()+'px'});
+					gsVisualList.each(function(index) {
+						var gsvIndiHref = "<a href=\"#\" rel=\""+(index+1)+"\">"+(index+1)+"</a>";
+						gsvIndicator.append(gsvIndiHref);
+					});
+					gsvIndicator.css("marginLeft" , "-"+parseInt(gsvIndicator.width()/2)+"px");
+					gsvIndicator.find("a:first").addClass("this");
+
+
+					var gsVARun = function(noVisualIndex) {
+						gsvIndicator.find("a").removeClass("this");
+						gsvIndicator.find("a:eq("+(noVisualIndex-1)+")").addClass("this");
+
+						gsVisualListWrap.css({transition:'1s', transition:'1s', transform:'translate3d(-'+((noVisualIndex-1) * gsVisualWrapper.width())+'px, 0, 0)'}).animate({duration:300, queue:true, complete:function() {
+							$(this).css({transition:'0s', transition:'0s'});
+						}});
+					};
+
+					var nobtPagingControl = function(noVisualIndex) {
+						gsvPrev.unbind();
+						gsvNext.unbind();
+
+						gsvPrev.click("click", function(){
+							if (noVisualIndex != 1) {
+								clearTimeout(animationTimer);
+								AniTimeout(parseInt(noVisualIndex-1));
+							}
+						});
+						gsvNext.click("click", function(){
+							if (noVisualIndex != gsVisualList.length) {
+								clearTimeout(animationTimer);
+								AniTimeout(parseInt(noVisualIndex+1));
+							}
+						});
+					};
+
+					var AniTimeout = function(noVisualIndex) {
+						gsVARun(noVisualIndex);
+						nobtPagingControl(noVisualIndex);
+
+						if (noVisualIndex === gsVisualList.length) {
+							noVisualIndex = 1;
+						} else {
+							noVisualIndex++;
+						}
+
+						animationTimer = setTimeout(function() {
+							AniTimeout(noVisualIndex)
+						}, gsvSpeed);
+					};
+
+					AniTimeout(1);
+			})();
+		});
+	//]]>
+	</script>
 	<!-- 본문컨텐츠 -->
 	<div class="gs_content_w">
 		<!-- 탭메뉴 -->
