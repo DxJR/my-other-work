@@ -108,16 +108,16 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gs_gameinfo_w {}
 		.gs_gameinfo_w .gsl_by_w {border:0; box-shadow:none; background:none;}
 		/* 사전등록코드보기 */
-		.gs_code_w {position:relative; height:41px; margin-top:3px; padding:0 10px; overflow:hidden; -webkit-perspective:1000;}
-			.gs_code_inner {position:relative; height:41px; -webkit-transition:0.6s; -webkit-transform-style:preserve-3d;}
-				.b_code_view {z-index:10; position:absolute; top:0; left:0; width:100%; height:41px; color:#fff; text-align:left; line-height:37px; -webkit-backface-visibility:hidden; -webkit-transform:rotateY(0deg); background:#ffd02c;}
+		.gs_code_w {position:relative; height:41px; margin-top:3px; padding:0 10px; overflow:hidden; -webkit-perspective:1000; perspective:1000;}
+			.gs_code_inner {position:relative; height:41px; -webkit-transition:0.6s; transition:0.6s; -webkit-transform-style:preserve-3d; transform-style:preserve-3d;}
+				.b_code_view {z-index:10; position:absolute; top:0; left:0; width:100%; height:41px; color:#fff; text-align:left; line-height:37px; -webkit-backface-visibility:hidden; backface-visibility:hidden; -webkit-transform:rotateY(0deg); transform:rotateY(0deg); background:#ffd02c;}
 					.gscd_tit {display:inline-block; margin:1px 0 0 13px; font-size:15px;}
 					.i_code_b {top:-2px; width:16px; height:15px; margin-right:0; background-position:-22px top;}
 					.b_code_view .gs_ae {float:right; margin:2px 12px 0 0; color:#fff;}
 						.b_code_view .gsae_tit {top:0px; border-color:#fff;}
 						.i_arw_r {top:-2px; width:12px; height:8px; background-position:-60px top;}
-				.gscd_open .gs_code_inner {-webkit-transform:rotateY(180deg);}
-				.gscd_view {z-index:1; -webkit-transform:rotateY(180deg); background:#505050;}
+				.gscd_open .gs_code_inner {-webkit-transform:rotateY(180deg); transform:rotateY(180deg);}
+				.gscd_view {z-index:1; -webkit-transform:rotateY(180deg); transform:rotateY(180deg); background:#505050;}
 					.gscd_view .gscd_tit {margin-top:2px;}
 					.gscd_view .i_code_b {margin-right:6px; background-position:-40px top;}
 		/* 하단버튼 */
@@ -164,6 +164,11 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 					.gscw_submit_w {clear:both; margin-top:3px; text-align:right;}
 						.b_submit {width:112px; height:34px; font-size:12px; color:#fff; line-height:34px; text-align:center; background:#fd5253;}
 							.i_gscw {top:-1px; width:12px; height:12px; margin-right:10px; background-position:-180px top;}
+				/* 댓글없음 */
+				.gs_cmt_temp {clear:both; padding:38px 0 0 0; text-align:center;}
+					.gs_cmt_temp p {display:inline-block; font-size:12px; color:#969696; letter-spacing:-1px;}
+						.i_cmt_temp {width:72px; height:40px; margin-left:20px; background-position:-220px -40px;}
+						.gs_cmt_temp p em {display:block; margin-top:5px;}
 			.gsgi_show {position:relative; top:0; left:0;}
 	/* 신고하기 */
 	.gs_report_w {clear:both; padding:10px; font-size:13px; color:#afafaf;}
