@@ -47,7 +47,17 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 .gs_section {position:relative; height:100%;}
 	/* 메인비주얼 */
 	.gs_visual_w {font:0/0 arial; text-align:center;}
-		.gs_visual_w img {width:100%;}
+		.gsv_inner {position:relative; width:100%; height:100%; overflow:hidden;}
+			.gsv_list {height:100%; overflow:hidden;}
+				.gsv_list li {display:inline-block}
+					.gsv_list li img {width:100%;}
+		.gsv_paging {top:0; left:0; clear:both; width:0; height:0;}
+			.gsv_paging a {position:absolute; top:50%; display:inline-block; width:20px; height:30px; background:red;}
+			a#gsvPrev {left:10px;}
+			a#gsvNext {right:10px;}
+		#gsvIndicator {position:absolute; left:50%; bottom:10px; display:inline-block;}
+			#gsvIndicator a {display:inline-block; width:15px; height:15px; margin:0 5px; border-radius:15px; background:blue;}
+			#gsvIndicator a.this {background:red;}
 	/* 본문컨텐츠 */
 	.gs_content_w {}
 		/* 탭메뉴 */
