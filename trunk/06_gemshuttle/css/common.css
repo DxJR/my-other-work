@@ -46,12 +46,13 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 /* section */
 .gs_section {position:relative; height:100%;}
 	/* 메인비주얼 */
-	.gs_visual_w {font:0/0 arial; text-align:center;}
-		.gsv_inner {position:relative; width:100%; height:100%; overflow:hidden;}
-			.gsv_list {height:100%; overflow:hidden;}
-				.gsv_list li {display:inline-block}
-					.gsv_list li img {width:100%;}
-		.gsv_paging {top:0; left:0; clear:both; width:0; height:0;}
+	.gs_visual_w {font:0/0 arial;}
+		.gsv_inner {position:relative; overflow:hidden;}
+			.gsv_list {overflow:hidden;}
+				.gsv_list li {float:left; width:100%;}
+					.gsv_list li a {display:block;}
+						.gsv_list li a img {width:100%;}
+		.gsv_paging {z-index:9; top:0; left:0; clear:both; width:0; height:0;}
 			.gsv_paging a {position:absolute; top:50%; display:inline-block; width:20px; height:30px; background:red;}
 			a#gsvPrev {left:10px;}
 			a#gsvNext {right:10px;}
