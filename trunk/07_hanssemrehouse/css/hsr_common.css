@@ -175,7 +175,7 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 			.hrh_search .hr_input_w {margin-top:12px; margin-left:7px;}
 				.hrh_search .hr_input {width:234px;}
 	/* content */
-	#hrContent {position:relative; clear:both; overflow:hidden;}
+	#hrContent {position:relative; clear:both;}
 	/* footer */
 	#footer {position:relative; clear:both; height:115px; padding:18px 0 100px 0; margin-top:100px; border-top:1px solid #eaeaea;}
 		.hrf_dl_w {float:left; width:700px; padding-top:1px; font-size:11px; color:#999;}
