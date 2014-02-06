@@ -241,4 +241,32 @@ var hsRehouse = ({
 			});
 		});
 	},
+	// 체크박스/라디오버튼 스타일
+	CheckboxRadio : function(wrap, eletype, parentEle) {
+		var crWrapper = $(""+ wrap +"");
+		var crElement = crWrapper.find("input[type="+ eletype +"]");
+		var crParentElement = crWrapper.find(""+ parentEle +"");
+
+		// 체크박스
+		crElement.each(function() {
+			if ($(this).is(":checked")) {
+				$(this).parent().addClass("cr_element_on");
+			};
+			$(this).bind('click', function(e) {
+				if ($(this).is(":checked")) {
+					if (eletype=="radio") {
+						resetCrElement();
+					}
+					$(this).parent().addClass("cr_element_on");
+				} else if ($(this).is(":not(:checked)")) {
+					$(this).parent().removeClass("cr_element_on");
+				}
+			});
+		});
+		var resetCrElement = function() {
+			crParentElement.each(function() {
+				$(this).removeClass("cr_element_on");
+			});
+		};
+	}
 });
