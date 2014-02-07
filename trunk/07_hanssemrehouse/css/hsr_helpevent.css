@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-.hr_hpevent_w {position:relative; clear:both;}
+.hr_hpevent_w {position:relative; clear:both; top:-32px; margin-bottom:-32px;}
 	/* 고객센터 탭메뉴 */
-	.hrpe_itab {margin-top:-32px;}
+	.hrpe_itab {}
 		.hrpe_itab li a span {height:13px;}
 		.hrpe_itab li .hrppd_it_hpdesk span {width:48px; background-position:-210px -347px;}
 		.hrpe_itab li.selected .hrppd_it_hpdesk span {background-position:-325px -347px;}
@@ -162,10 +162,10 @@
 .hrpe_itab li.selected .hrppd_it_rmex span {background-position:-280px -495px;}
 	/* 조건검색 */
 	.hrme_search_w {z-index:3; position:relative; clear:both; margin-top:15px; text-align:right;}
-		.b_rmex_search {width:137px; height:44px; text-align:left; background-color:#d7182a; background-image:url('../images/bg_b_rmex_search_o.gif'); background-position:106px 50%;}
+		.b_rmex_search {z-index:2; width:137px; height:44px; text-align:left; background-color:#d7182a; background-image:url('../images/bg_b_rmex_search_o.gif'); background-position:106px 50%;}
 			.b_rmex_search span {display:inline-block; width:52px; height:15px; margin:0 0 0 20px; background:url('../images/hsr_set.png') -380px -495px no-repeat;}
 		/* 검색레이어 */
-		.hrme_sw_ino {position:absolute; top:-999999px; left:-999999px; clear:both; width:1008px; padding:2px 0 0 0; background:url('../images/bg_hrme_sw_ino.png') left top no-repeat;}
+		.hrme_sw_ino {z-index:3; position:absolute; top:-999999px; left:-999999px; clear:both; width:1008px; padding:2px 0 0 0; background:url('../images/bg_hrme_sw_ino.png') left top no-repeat;}
 			.hrme_sw_inr {clear:both; padding:0 0 6px 0; background:url('../images/bg_hrme_sw_inr.png') left bottom no-repeat;}
 				.hrme_sw_inb {clear:both; padding:0 4px; background:url('../images/bg_hrme_search_fs.png') left top repeat-y;}
 					.hrme_sw_inbi {position:relative; padding:0 30px; text-align:left; border:1px solid #d50030; background:#fff;}
@@ -239,3 +239,97 @@
 							.hrme_brls_ss li .gbtn {width:44px; height:44px;}
 							.b_hrme_s_t {margin-right:1px; background-position:left -530px;}
 							.b_hrme_s_f {background-position:-45px -530px;}
+	/* 검색결과 */
+	.hrme_sr_w {z-index:1; position:relative; clear:both; margin-top:-35px; text-align:left;}
+		.hrme_sr {float:none; display:inline; color:#d7182a; letter-spacing:0;}
+		.hrme_sr_smr {font-size:17px; color:#000; letter-spacing:-1px;}
+		.hrme_sr_l {margin-top:20px; font-size:13px; color:#000; line-height:26px; letter-spacing:-1px;}
+			.hrme_sr_l li {}
+				.hrme_sr_t {color:#a6a6a6;}
+		.hrme_sr_vla {text-align:right;}
+			.b_hrme_sr_la {width:93px; height:12px; background-position:-240px -530px;}
+	/* 이전/목록/다음 */
+	.hrmed_paging_w {clear:both; margin-top:22px; text-align:right;}
+		.b_brd_prev, .b_brd_list, .b_brd_next {width:42px; height:12px;}
+		.b_brd_prev {background-position:-90px -545px;}
+		.b_brd_list {width:24px; background-position:-135px -545px;}
+		.b_brd_next {background-position:-160px -545px;}
+		.bar {margin:0 15px; color:#d9d9d9;}
+	/* 컨텐츠 */
+	.hrmed_content_w {position:relative; clear:both; margin-top:31px; padding-bottom:116px; font-size:13px; color:#000;}
+		.brd_mi_w {position:relative; clear:both; float:left; display:inline; width:610px;}
+			.brd_no {font-family:arial; font-size:12px; color:#000;}
+			.brd_tit {margin-top:8px; font-size:28px; letter-spacing:-1px;}
+			.brd_si {margin-top:8px; color:#999;}
+			.brd_desc {margin-top:32px; line-height:24px; letter-spacing:-1px;}
+				.brd_desc em {display:block; color:#999; letter-spacing:0;}
+		.brd_mi_rw {position:relative; float:left; display:inline; width:360px; padding:123px 0 0 30px;}
+			.brd_sil {position:relative; font-size:12px; border:1px solid #818181; border-width:0 1px; overflow:hidden;}
+				.brd_sil li {clear:both; float:left; display:inline; width:159px; padding:0 0 7px 19px;}
+					.brd_sil li span {color:#a6a6a6;}
+				.brd_sil li.brd_si_c2 {clear:none; border-left:1px solid #818181;}
+				.brd_sil li.last {line-height:23px;}
+			.brd_fnc {position:absolute; top:32px; left:30px; clear:both; overflow:hidden;}
+				.brd_fnc li {float:left; display:inline; margin-right:10px;}
+					.b_brd_est {width:112px; height:68px; background-position:left -575px;}
+					.b_brd_prt, .b_brd_rcm {width:71px; height:71px;}
+					.b_brd_prt {background-position:-115px -575px;}
+					.b_brd_rcm {background-position:-190px -575px;}
+				.brd_fnc li.est {margin-right:67px;}
+		.brd_uw_w {position:relative; clear:both; padding-top:48px;}
+			.brd_uw_by {position:relative; clear:both; margin-top:17px; overflow:hidden;}
+				.brduw_photo {font-size:0;}
+					.brduw_photo img {margin-top:1px;}
+				.brduw_desc {position:relative; clear:both; overflow:hidden; padding:36px 0 0 0;}
+					.brduw_d_l {float:left; display:inline; width:610px; letter-spacing:-1px;}
+						.brduw_dl_tit {font-size:21px; color:#010101;}
+						.brduw_dl_desc {margin-top:8px; font-size:13px; color:#1a1a1a; line-height:24px;}
+					.brduw_d_r {position:relative; float:left; display:inline; width:360px; padding:27px 0 0 30px;}
+						.brduw_dr_tit, .brduw_dr_desc {margin-top:-2px; padding-left:18px; font-size:12px; color:#a6a6a6; letter-spacing:-1px; border-left:1px solid #bdbdbd;}
+						.brduw_dr_desc {height:64px; padding-top:7px;}
+						.brduw_d_r .brd_fnc {position:relative; top:auto; left:auto; right:auto; float:right; margin-top:19px;}
+							.brduw_d_r .brd_fnc li {margin:0 0 0 11px;}
+			.brd_uwb_last {}
+				.brd_uwb_last .brduw_desc {padding-top:24px;}
+					.brduw_d_l {margin-top:6px}
+					.brd_uwb_last .brduw_d_r {padding-top:0;}
+						.brd_uwb_last .brduw_d_r .brd_fnc {margin-top:0;}
+		/* 소감 */
+		.brd_thnk {position:relative; clear:both; height:236px; margin-top:89px; padding:34px 0 0 40px; border:1px solid #e0e0e0;}
+			.brd_thnk_tit {width:262px; height:47px; background:url('../images/hsr_set.png') left -650px no-repeat;}
+			.brd_thnk_img {position:absolute; bottom:0; right:0; display:block; margin-right:33px;}
+			.brd_thnk_desc {clear:both; margin-top:21px; line-height:24px; width:560px;}
+		/* 더 많은 시공사례 */
+		.brd_mex_w {position:relative; clear:both; margin:50px 0 0 0;}
+			.brd_mex_head {overflow:hidden;}
+				.brd_mex_tit {float:left; width:115px; height:15px; background:url('../images/hsr_set.png') -335px -530px no-repeat;}
+				.b_hrms_more {float:left; display:inline;}
+					.b_hrms_more {display:inline; width:40px; height:7px; margin:3px 0 0 11px; background-position:-230px -65px;}
+					.b_hrms_more .ir {text-indent:-99999px;}
+				.brd_mex_list {clear:both; overflow:hidden; margin-top:15px;}
+					.brd_mexl_li {position:relative; float:left; display:inline; width:330px; height:300px; margin-right:5px;}
+						.hrms_module h5 {clear:both; margin-top:237px; font-size:13px; font-weight:bold; color:#000;}
+							.hrms_module h5 a {color:#000;}
+							.brd_mexl_best {z-index:3; position:absolute; top:16px; left:16px; display:block; width:59px; height:72px; background:url('../images/hsr_set.png') -265px -575px no-repeat;}
+						.hrms_md_img {position:absolute; top:0; left:0; clear:both;}
+						.hrms_md_detail {clear:both; font-size:0;}
+							.hrms_md_detail li {font-size:13px; color:#666;}
+							.hrms_md_detail li.date, .hrms_md_detail li.hit {display:inline; padding-left:8px;}
+							.hrms_md_detail li.date {padding-left:0; padding-right:15px; background:url('../images/bar_hrms_slash.gif') right 3px no-repeat;}
+						.hrms_md_exp {margin-top:1px; padding-right:40px; font-size:13px; color:#666; line-height:21px; letter-spacing:-1px;}
+					.brd_mex_list .last {margin-right:0;}
+	/* 리모델링시공사례 목록 */
+	.hrrm_exl_w {position:relative; clear:both; margin-top:11px; overflow:hidden;}
+		.hrme_ex_list {clear:both; margin-top:-1px; margin-bottom:33px; overflow:hidden;}
+			.hrme_exl_li {position:relative; float:left; display:inline; width:490px; height:602px; padding-right:20px; border-top:1px solid #080705;}
+				.hrme_exl_no {padding-top:17px; font-family:arial; color:#1a1a1a;}
+				.hrme_exl_img {margin-top:16px;}
+				.hrme_exl_tit {margin-top:12px; font-size:16px;}
+					.hrme_exl_tit a {color:#1a1a1a;}
+				.hrme_exl_desc {margin-top:7px; font-size:13px;}
+					.hrme_exl_desc a {color:#737373;}
+				.hrme_exl_opt {margin-top:9px; font-size:13px; color:#1a1a1a; border-bottom:1px solid #e8e8e8;}
+					.hrme_exl_opt li {padding:11px 0 10px 0; border-top:1px solid #e8e8e8;}
+						.hrme_exl_opt li .slash {margin:0 5px;}
+				.hrme_exl_li .hrme_brls_ai {margin-top:12px;}
+			.exli_even {padding-right:0;}

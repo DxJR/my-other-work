@@ -197,7 +197,7 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 			.hrf_dr_w p {margin-top:14px; margin-bottom:-5px; line-height:18px;}
 
 /* 현재위치 */
-.hr_nowpage {clear:both; position:relative; margin-top:38px; font-size:11px; color:#999; text-align:right; overflow:hidden;}
+.hr_nowpage {z-index:5; position:relative; clear:both; float:right; margin-top:38px; font-size:11px; color:#999; text-align:right; overflow:hidden;}
 	.hr_nowpage a {color:#999;}
 	.hr_nowpage a:hover {color:#333;}
 
