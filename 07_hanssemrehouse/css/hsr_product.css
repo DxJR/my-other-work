@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.hr_product_w {clear:both; position:relative; margin-top:20px; overflow:hidden;}
+.hr_product_w {clear:both; position:relative; padding-top:20px; overflow:hidden;}
 /* 상품소개메인 */
 .hrpm_module {position:relative; clear:both; margin-top:30px; font-size:0;}
 	.hrpm_module h3 {position:absolute; top:15px;}
