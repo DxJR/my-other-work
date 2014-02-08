@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+.hr_shop_w {position:relative; clear:both; top:-32px; margin-bottom:-32px;}
+	/* 탭메뉴 */
+	.shop_itab {}
+		.shop_itab li a span {height:14px;}
+		.shop_itab li .hrso_it_ps span {width:91px; background-position:0px -700px;}
+		.shop_itab li.selected .hrso_it_ps span {background-position:0px -715px;}
+		.shop_itab li .hrso_it_bs span {width:91px; background-position:-95px -700px;}
+		.shop_itab li.selected .hrso_it_bs span {background-position:-95px -715px;}
+		.shop_itab li .hrso_it_rs span {width:102px; background-position:-190px -700px;}
+		.shop_itab li.selected .hrso_it_rs span {background-position:-190px -715px;}
+		.shop_itab li .hrso_it_fs span {width:47px; background-position:-295px -700px;}
+		.shop_itab li.selected .hrso_it_fs span {background-position:-295px -715px;}
+
+
+
+.hrso_content_w {position:relative; clear:both;}
+	/* 메인화면 */
+	.hrsm_idx {top:0; margin-bottom:0; padding-top:13px; font-size:0; overflow:hidden;}
+		.hrsm_idx_l {float:left; width:669px;}
+			.hrsm_idx_i_bl, .hrsm_idx_i_br {float:left; display:inline; margin-top:30px;}
+			.hrsm_idx_i_br {margin-left:1px;}
+		.hrsm_idx_r {float:right; display:inline; width:301px;}
+			.hrsm_idx_b_ms, .hrsm_idx_b_mbs {border-bottom:1px solid #e4e4e4;}
+	/* 한샘ik 전문쇼룸 */
+	.hrsps_mv_w {clear:both; margin-top:26px;}
+	.hrsps_module_w {position:relative; clear:both; margin-top:50px; padding-top:36px; border-top:1px solid #e5e5e5;}
+		.hrsps_hm_w {position:relative;}
+			.hrsps_hm_w h3, .hrsps_hm_w .hsdesc, .hrsps_hm_w .hdesc {position:relative; display:block; overflow:hidden; white-space:nowrap; background-image:url('../images/hsr_shop.png'); background-repeat:no-repeat;}
+			.hrsps_hm_w h3 {height:16px;}
+			.hrsps_hm_w .hsdesc {margin-top:20px;}
+			.hrsps_hm_w .hdesc {margin-top:22px;}
+	/* 한샘전문쇼룸 */
+	.hrspsm_ps {margin-top:0; padding-top:21px; border-top:0;}
+		.hrspsm_ps .hrsps_hm_w {}
+			.hrspsm_ps .hrsps_hm_w h3 {width:269px; background-position:left top;}
+			.hrspsm_ps .hrsps_hm_w .hsdesc {width:192px; height:29px; background-position:-290px top;}
+			.hrspsm_ps .hrsps_hm_w .hdesc {width:723px; height:67px; background-position:left -495px;}
+		.hrsps_hm_fnc {position:absolute; top:8px; right:2px; font-size:0;}
+			.hrsps_hm_fnc a span {margin-top:20px;}
+			.b_hm_fs, .b_hm_so {width:85px; height:83px; margin-left:12px;}
+			.b_hm_fs {background-position:-330px -560px;}
+			.b_hm_so {background-position:-350px -680px;}
+		/* 쇼룸둘러보기 */
+		.hrsps_sr_w {clear:both; margin-top:55px; padding:22px 0 0 0; border-top:1px solid #e5e5e5;}
+			.hrsps_sr_w h4 {width:139px; height:16px; overflow:hidden; background:url('../images/hsr_shop.png') left -20px no-repeat;}
+			.hrsps_sr_in {clear:both; margin-top:18px;}
+				/* 썸네일 */
+				.hrsps_sr_tb {}
+					.hrsps_sr_tb li {position:relative; float:left; display:inline; margin-right:1px;}
+						.hrsps_sr_tb li a {position:relative; display:block;}
+						.hrsps_sr_tb li span {z-index:2; position:absolute; top:0; left:0; display:none; width:162px; height:111px; border:2px solid #d50030;}
+					.hrsps_sr_tb li.selected span {display:block;}
+					.hrsps_sr_tb li.last {margin-right:0;}
+						.hrsps_sr_tb li.last a img {width:165px}
+						.hrsps_sr_tb li.last span {width:161px;}
+				/* 크게보기 */
+				.hrsps_sr_vb_w {clear:both; padding-top:15px;}
+					.hrsps_sr_vb_w p {padding-bottom:16px; font-size:14px; color:#1a1a1a; letter-spacing:-1px;}
+					.hrsps_sr_vb {position:relative; clear:both; width:1000px; height:565px; font-size:0;}
+	/* 전문쇼룸특징 */
+	.hrspsm_pss {}
+		.hrspsm_pss .hrsps_hm_w {}
+			.hrspsm_pss .hrsps_hm_w h3 {width:140px; background-position:-140px -20px;}
+			.hrspsm_pss .hrsps_hm_w .hsdesc {width:442px; height:56px; background-position:0px -40px;}
+			.hrsps_pss_list {clear:both; margin-top:30px;}
+				.hrsps_pss_list li {position:relative; float:left; display:inline; width:499px; height:169px; margin-right:1px; padding-top:297px;}
+					.hrsps_pss_list li h4, .hrsps_pss_list li .desc {position:relative; display:block; overflow:hidden; white-space:nowrap; background-image:url('../images/hsr_shop.png'); background-repeat:no-repeat;}
+					.hrsps_pss_list li h4 {height:21px; margin-top:22px;}
+					.hrsps_pss_list li .thb {position:absolute; top:0; left:0;}
+					.hrsps_pss_list li .desc {margin-top:19px;}
+				.hrsps_pss_list li.pl_s01 {}
+					.hrsps_pss_list li.pl_s01 h4 {width:68px; background-position:left -100px;}
+					.hrsps_pss_list li.pl_s01 .desc {width:372px; height:57px; background-position:left -125px;}
+				.hrsps_pss_list li.pl_s02 {}
+					.hrsps_pss_list li.pl_s02 h4 {width:283px; background-position:-75px -100px;}
+					.hrsps_pss_list li.pl_s02 .desc {width:347px; height:56px; background-position:-380px -125px;}
+				.hrsps_pss_list li.pl_s03 {clear:both;}
+					.hrsps_pss_list li.pl_s03 h4 {width:75px; background-position:-360px -100px;}
+					.hrsps_pss_list li.pl_s03 .desc {width:391px; height:56px; background-position:left -190px;}
+				.hrsps_pss_list li.pl_s04 {}
+					.hrsps_pss_list li.pl_s04 h4 {width:89px; background-position:-435px -100px;}
+					.hrsps_pss_list li.pl_s04 .desc {width:360px; height:34px; background-position:-400px -190px;}
+				.hrsps_pss_list li.pl_s02, .hrsps_pss_list li.pl_s04 {margin-right:0;}
+				.hrsps_pss_list li.pl_s03, .hrsps_pss_list li.pl_s04 {padding-top:311px;}
+	/* 원스톱 리모델링 솔루션 */
+	.hrspsm_ors {}
+		.hrspsm_ors .hrsps_hm_w {}
+			.hrspsm_ors .hrsps_hm_w h3 {width:145px; background-position:-490px top;}
+			.hrspsm_ors .hrsps_hm_w .hsdesc {width:401px; height:90px; background-position:left -250px;}
+		.hrsm_ors_list_w {clear:both; float:right; display:inline; width:689px; height:153px; margin:32px 39px 0 0; background:url('../images/hsr_shop.png') left -340px no-repeat;}
+	/* 부천전시장 */
+	.hrsps_sd_w {position:relative; clear:both; padding-top:92px;}
+		.hrsps_sd_img {}
+		.hrsps_sd_inner {clear:both; padding:38px 64px 0 52px; border:1px solid #f4f0d8; border-top:0;}
+			.hrsps_sim_w {}
+				.hrsps_sim_desc {float:left; display:inline; width:342px; height:207px; background:url('../images/hsr_shop.png') -780px top no-repeat;}
+				.hrsps_sim_map {float:right; display:inline; margin:2px 0 0 0;}
+			/* 입점업체목록 */
+			.hrsps_rs_list_w {clear:both; padding:33px 0 50px 0;}
+				.hrsps_rs_tit {width:331px; height:75px; background:url('../images/hsr_shop.png') -780px -210px no-repeat;}
+				.hrsps_rs_s_tit {margin:25px 0 0 0; padding:15px 0; border-top:1px solid #efe8c8; overflow:hidden;}
+					.hrsps_rs_s_tit strong {float:left; width:65px; height:13px; margin:0 0 0 2px; overflow:hidden; background:url('../images/hsr_shop.png') -490px -20px no-repeat;}
+					.hrsps_rs_s_tit em {float:right; padding:0 3px 0 0; font-family:dotum; font-size:12px; color:#9d851f; letter-spacing:-1px;}
+				.hrsps_rs_list {clear:both; overflow:hidden;}
+					.hrsps_rs_list li {float:left; display:inline; width:432px; height:124px; padding:18px 12px 0 3px; font-size:13px; letter-spacing:-1px; border-top:1px solid #efe8c8;}
+						.hrsps_rs_t {color:#000;}
+							.hrsps_rs_t strong {font-weight:normal}
+						.hrsps_rs_a {margin:2px 0 4px 0; color:#808080; letter-spacing:0;}
+							.hrsps_rs_a span {margin-top:2px; letter-spacing:-1px;}
+						.hrsps_rs_m {}
+							.hrsps_rs_m a {font-family:arial; color:#cf0022; letter-spacing:0;}
+					.hrsps_rs_list li.nth2 {padding-right:0;}
+
+/* 매장찾기 */
+.b_hrs_bsf span {width:73px; background-position:left -730px;}
+.b_hrs_bsf:hover span {background-position:left -745px;}
+.selected .b_hrs_bsf span {background-position:-160px -730px;}
+.b_hrs_rsf span {width:85px; background-position:-75px -730px;}
+.b_hrs_rsf:hover span {background-position:-75px -745px;}
+.selected .b_hrs_rsf span {background-position:-235px -730px;}
+	/* 좌측영역 */
+	.hrs_sf_cw {position:relative; clear:both; float:left; width:670px; margin-top:30px; padding-bottom:30px;}
+		/* 부천전시장 */
+		.hrs_sf_w {}
+			.hrs_sf_by {position:relative; padding:500px 0 35px 0;}
+				.hrs_sf_by h3 {width:80px; height:17px; margin-top:23px; overflow:hidden; background:url('../images/hsr_set.png') -265px -650px no-repeat;}
+				.hrs_sf_si {margin-top:11px; font-size:13px; color:#808080; line-height:22px;}
+				.hrs_sf_img {position:absolute; top:0; left:0; clear:both; width:670px; height:500px;}
+					.hrs_sf_img_in {position:relative; padding:415px 0 0 0;}
+						.hrs_sfi_t {clear:both; margin-top:1px;}
+							.hrs_sfi_t li {float:left; display:inline; width:111px; margin-right:1px;}
+							.hrs_sfi_t li.last {width:110px; margin-right:0;}
+								.hrs_sfi_t li.last img {width:110px;}
+						.hrs_sfi_v {position:absolute; top:0; left:0; clear:both; width:680px; height:415px;}
+							.hrs_sfi_v_in {position:relative;}
+		/* 모듈 */
+		.hrs_sf_module {position:relative; clear:both; padding:24px 0 0 0; border-top:1px solid #e5e5e5;}
+			.hrs_sf_module h4 {height:12px; overflow:hidden; background-image:url('../images/hsr_set.png'); background-repeat:no-repeat;}
+		/* 오시는길 */
+		.hrs_sf_map {}
+			.hrs_sf_map h4 {width:49px; background-position:-345px -650px;}
+			.hrs_sfm_i {margin-top:13px; font-size:13px; color:#808080; line-height:22px;}
+			.hrs_sfm_v {position:relative; margin-top:17px;}
+		/* 리모델링 사례 */
+		.hrs_sf_re {margin-top:11px; padding-bottom:20px; border-top:0; overflow:hidden;}
+			.hrs_sf_re h4 {width:70px; background-position:-265px -670px;}
+			.hrs_sf_re_i {position:relative; margin-top:14px;}
+				.hrs_sfre_l {position:relative; float:left; display:inline; width:334px; margin-right:1px; overflow:hidden;}
+					.hrs_sfre_l .brd_mexl_best {z-index:3; position:absolute; top:10px; left:14px; display:block; width:59px; height:72px; background:url('../images/hsr_set.png') -265px -575px no-repeat;}
+					.hrs_sfre_sl {position:relative; width:1500px;}
+						.hrs_sfre_sl li {float:left; width:334px;}
+					.hrs_sfre_l .bx-controls {z-index:4; position:absolute; bottom:15px; right:10px;}
+						.hrs_sfre_l .bx-pager-item {float:left; display:ionline; margin-right:10px;}
+							.hrs_sfre_l .bx-pager-item a {float:left; display:inline; width:13px; height:13px; text-indent:-9999px; overflow:hidden; background:url('../images/hsr_set.png') -360px -465px no-repeat;}
+							.hrs_sfre_l .bx-pager-item a.active {background:url('../images/hsr_set.png') -375px -465px no-repeat;}
+						.hrs_sfre_l .bx-controls-direction {display:none;}
+				.hrs_sf_re_i li.last {margin-right:0;}
+		/* 진행중인 이벤트 */
+		.hrs_sf_ne {padding:31px 0 58px 0;}
+			.hrs_sf_ne h4 {width:84px; background-position:-345px -665px;}
+			.hrs_sfne_list {clear:both; margin-top:13px; overflow:hidden;}
+				.hrs_sfne_list li {float:left; display:inline; margin-right:1px; font-family:mgb;}
+					.hrsfl_t {margin-top:11px;}
+						.hrsfl_t a {font-size:13px; color:#333;}
+					.hrsfl_d {margin-top:1px; font-family:arial; font-weight:bold; color:#d7182a; letter-spacing:0;}
+				.hrs_sfne_list li.last {margin-right:0;}
+		/* 입점제휴점 안내 */
+		.hrs_sf_rsi {position:relative; clear:both; border-top:1px solid #e5e5e5;}
+			.hrs_sf_rsi_h {width:487px; height:57px; margin:27px 0 0 0; overflow:hidden; background:url('../images/hsr_shop.png') -690px -290px no-repeat;}
+			.hrsfr_list {clear:both; margin-top:28px; overflow:hidden; border-left:1px solid #e8e8e8; border-top:1px solid #e8e8e8;}
+				.hrsfr_list li {float:left; display:inline; width:166px; height:55px; border:1px solid #e8e8e8; border-width:0 1px 1px 0;}
+					.hrsfr_list li a {display:block; height:55px; font-size:13px; color:#000; line-height:55px; text-align:center; letter-spacing:-1px;}
+	/* 전시장목록 */
+	.hrs_sf_by_list {position:relative; float:right; width:300px; margin-top:30px; overflow:hidden;}
+		.hrs_sf_byl_h {position:relative; height:50px; border:1px solid #030303; border-width:1px 0;}
+			.hrs_sf_byl_i {float:left; margin-top:17px; font-size:13px; color:#000; letter-spacing:-1px;}
+				.hrs_sf_byl_i em {color:#d50030;}
+			.hrs_sf_byl_h .hrp_sort_w {margin:14px 0 0 0;}
+				.hrs_sf_byl_h .hrp_sort_w .sbToggle {width:26px; height:25px; background:url('../images/hsr_set.png') -405px -80px no-repeat;}
+				.hrs_sf_byl_h .hrp_sort_w .sbToggleOpen {background-position:-405px -105px;}
+				.hrs_sf_byl_h .hrp_sort_w .sbSelector {width:115px; height:25px; line-height:25px;}
+						.hrs_sf_byl_h .hrp_sort_w .sbOptions li a {height:25px; line-height:25px;}
+		.hrs_sf_byl_w {clear:both; padding-bottom:3px; overflow:hidden; border-bottom:1px solid #030303;}
+			.hrs_sf_byl {margin-top:-1px;}
+				.hrs_sf_byl li {padding:25px 0 20px 0; font-size:13px; line-height:22px; border-top:1px solid #e5e5e5;}
+					.hrsps_rs_t {color:#262626;}
+					.hrsps_rs_a {color:#808080;}
+					.hrsps_rs_m {margin-top:11px; overflow:hidden;}
+						.hrsps_rs_m a {float:left; display:inline; width:40px; height:7px; overflow:hidden; background:url('../images/hsr_set.png') -230px -65px no-repeat;}
+		.hrs_sf_by_list .hr_paging_w {margin-top:28px;}
+	/* 대형매장찾기 */
+	.hrs_sfbm_w {position:relative; float:left; width:669px; height:628px; margin-top:30px; overflow:hidden;}
