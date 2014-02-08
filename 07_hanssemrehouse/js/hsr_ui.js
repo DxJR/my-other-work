@@ -24,7 +24,7 @@ var hsRehouse = ({
 			infiniteLoop: true,
 			onSliderLoad : function(id) {
 				if ($.browser.msie) {
-					$(".hr_main_visual").css({marginLeft:'-1px'});
+					//$(".hr_main_visual").css({marginLeft:'-1px'});
 				}
 			}
 		});
@@ -40,10 +40,8 @@ var hsRehouse = ({
 				infiniteLoop: true
 			});
 		};
-		mainModuleRolling('#hrModuleThumbBestr');
 		mainModuleRolling('#hrModuleThumbExamr');
 		setTimeout(function() {
-			mainModuleRolling('#hrModuleThumbBestp');
 			mainModuleRolling('#hrModuleThumbRecmp');
 		}, 1000);
 		// section banner
@@ -76,6 +74,7 @@ var hsRehouse = ({
 		hrSelectDefault("#hrpSortSelect","32");
 		hrSelectDefault("#hrpSubMenuSelect","32");
 		hrSelectDefault("#hrpFaqSearchSelect","26");
+		hrSelectDefault("#hrpSortShopSelect","27");
 	},
 	// 상품소개 slide
 	hrProductPhotoSlide : function(id) {
@@ -89,7 +88,7 @@ var hsRehouse = ({
 			infiniteLoop: true,
 			onSliderLoad : function(id) {
 				if ($.browser.msie) {
-					$(".hrppd_photo_list").css({marginLeft:'-1px'});
+					//$(".hrppd_photo_list").css({marginLeft:'-1px'});
 				}
 			}
 		});
