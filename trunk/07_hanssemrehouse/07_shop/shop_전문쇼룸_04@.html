@@ -160,7 +160,7 @@
 						<h4><span class="ir">한샘ik 쇼룸 둘러보기</span></h4>
 						<div class="hrsps_sr_in">
 							<!-- 썸네일 -->
-							<ul class="hrsps_sr_tb">
+							<ul id="hrspsShowRoomThumbNail" class="hrsps_sr_tb">
 								<li class="selected"><a href="#"><img src="../images/temp/temp_028.jpg" width="166" height="115" alt="쇼룸사진" /></a><span></span></li>
 								<li><a href="#"><img src="../images/temp/temp_028.jpg" width="166" height="115" alt="쇼룸사진" /></a><span></span></li>
 								<li><a href="#"><img src="../images/temp/temp_028.jpg" width="166" height="115" alt="쇼룸사진" /></a><span></span></li>
@@ -169,10 +169,49 @@
 								<li class="last"><a href="#"><img src="../images/temp/temp_028.jpg" width="166" height="115" alt="쇼룸사진" /></a><span></span></li>
 							</ul>
 							<!-- 크게보기 -->
-							<div class="hrsps_sr_vb_w">
-								<p>30평형 시크 모던 스타일게 만들어 줍니다.</p>
-								<div class="hrsps_sr_vb"><img src="../images/temp/temp_029.jpg" width="1000" height="565" alt="쇼룸사진" /></div>
+							<div id="hrspsShowRoomLarge" class="hrsps_sr_vb_w">
+								<div class="hrsps_sr_vb_in selected">
+									<p>30평형 시크 모던 스타일게 만들어 줍니다.</p>
+									<div class="hrsps_sr_vb">
+										<img src="../images/temp/temp_029.jpg" width="1000" height="565" alt="쇼룸사진" />
+									</div>
+								</div>
+								<div class="hrsps_sr_vb_in">
+									<p>222222222222222222평형 시크 모던 스타일게 만들어 줍니다.</p>
+									<div class="hrsps_sr_vb">
+										<img src="../images/temp/temp_029-2.jpg" width="1000" height="565" alt="쇼룸사진" />
+									</div>
+								</div>
+								<div class="hrsps_sr_vb_in">
+									<p>333333333333333333333333평형 시크 모던 스타일게 만들어 줍니다.</p>
+									<div class="hrsps_sr_vb">
+										<img src="../images/temp/temp_029-3.jpg" width="1000" height="565" alt="쇼룸사진" />
+									</div>
+								</div>
+								<div class="hrsps_sr_vb_in">
+									<p>444444444444444평형 시크 모던 스타일게 만들어 줍니다.</p>
+									<div class="hrsps_sr_vb">
+										<img src="../images/temp/temp_029-4.jpg" width="1000" height="565" alt="쇼룸사진" />
+									</div>
+								</div>
+								<div class="hrsps_sr_vb_in">
+									<p>555555555555555555평형 시크 모던 스타일게 만들어 줍니다.</p>
+									<div class="hrsps_sr_vb">
+										<img src="../images/temp/temp_029-5.jpg" width="1000" height="565" alt="쇼룸사진" />
+									</div>
+								</div>
+								<div class="hrsps_sr_vb_in">
+									<p>6666666666666평형 시크 모던 스타일게 만들어 줍니다.</p>
+									<div class="hrsps_sr_vb">
+										<img src="../images/temp/temp_029-6.jpg" width="1000" height="565" alt="쇼룸사진" />
+									</div>
+								</div>
 							</div>
+							<script type="text/javascript">
+							//<![CDATA[
+								hsRehouse.hrViewToBig("#hrspsShowRoomThumbNail","#hrspsShowRoomLarge",".hrsps_sr_vb_in", "click");
+							//]]>
+							</script>
 						</div>
 					</div>
 				</div>
