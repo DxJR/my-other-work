@@ -186,6 +186,22 @@ var hsRehouse = ({
 	hrFooterSelectBox : function() {
 		$("#hrFamilySite").selectbox({});
 	},
+	hrViewToBig : function(thumbnail, viewer, vSelector, eventMode) {
+		var hsrThumbnail = $(""+thumbnail+"");
+		var hsrThumbnailList = hsrThumbnail.find("a");
+		var hsrViewer = $(""+viewer+"");
+		var hsrViewerImg = hsrViewer.find(""+vSelector+"");
+
+		hsrThumbnailList.each(function(index) {
+			$(this).bind(""+eventMode+"", function(e) {
+				e.preventDefault();
+				hsrThumbnailList.parent().removeClass("selected");
+				hsrViewerImg.removeClass("selected");
+				$(this).parent().addClass("selected");
+				hsrViewer.find(""+vSelector+":eq("+index+")").addClass("selected");
+			});
+		});
+	},
 	// href 가 # 일 때 prevent
 	hrHrefPrevent : function() {
 		$(".hrefTemp").each(function() {

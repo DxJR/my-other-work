@@ -162,8 +162,8 @@
 							<!-- 이미지 -->
 							<div class="hrs_sf_img">
 								<div class="hrs_sf_img_in">
-									<ul class="hrs_sfi_t">
-										<li><a href="#"><img src="../images/temp/temp_030.jpg" width="111" height="83" alt="전시장사진" /></a></li>
+									<ul id="hrsSfThumbNail" class="hrs_sfi_t">
+										<li class="selected"><a href="#"><img src="../images/temp/temp_030.jpg" width="111" height="83" alt="전시장사진" /></a></li>
 										<li><a href="#"><img src="../images/temp/temp_030.jpg" width="111" height="83" alt="전시장사진" /></a></li>
 										<li><a href="#"><img src="../images/temp/temp_030.jpg" width="111" height="83" alt="전시장사진" /></a></li>
 										<li><a href="#"><img src="../images/temp/temp_030.jpg" width="111" height="83" alt="전시장사진" /></a></li>
@@ -171,11 +171,21 @@
 										<li class="last"><a href="#"><img src="../images/temp/temp_030.jpg" width="111" height="83" alt="전시장사진" /></a></li>
 									</ul>
 									<div class="hrs_sfi_v">
-										<div class="hrs_sfi_v_in">
-											<img src="../images/temp/temp_031.jpg" width="670" height="415" alt="전시장사진" />
+										<div id="hrsSfLarge" class="hrs_sfi_v_in">
+											<img src="../images/temp/temp_031.jpg" width="670" height="415" alt="전시장사진" class="selected" />
+											<img src="../images/temp/temp_031-2.jpg" width="670" height="415" alt="전시장사진" />
+											<img src="../images/temp/temp_031-3.jpg" width="670" height="415" alt="전시장사진" />
+											<img src="../images/temp/temp_031-4.jpg" width="670" height="415" alt="전시장사진" />
+											<img src="../images/temp/temp_031-5.jpg" width="670" height="415" alt="전시장사진" />
+											<img src="../images/temp/temp_031-6.jpg" width="670" height="415" alt="전시장사진" />
 										</div>
 									</div>
 								</div>
+								<script type="text/javascript">
+								//<![CDATA[
+									hsRehouse.hrViewToBig("#hrsSfThumbNail","#hrsSfLarge","img", "click");
+								//]]>
+								</script>
 							</div>
 						</div>
 						<!-- 오시는 길 -->
