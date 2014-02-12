@@ -10,6 +10,7 @@ var hsRehouse = ({
 		this.hrLabelControl();
 		this.hrFooterSelectBox();
 		this.hrSnbAction();
+		this.hrGnbLogin();
 	},
 	// front UI
 	hrForntPage : function() {
@@ -283,5 +284,22 @@ var hsRehouse = ({
 				$(this).removeClass("cr_element_on");
 			});
 		};
+	},
+	// GNB 로그인 레이어
+	hrGnbLogin : function() {
+		var hrGnbLogin = $("#hrGnbLoginLayer");
+		var hrBtnGnbLogin = $("#hrBtnGnbLogin");
+		var hrBtnGnbLoginClose = $("#hrglCloseLayer");
+
+		hrBtnGnbLogin.bind("click", function() {
+			if (hrGnbLogin.hasClass("hrglLayerShow")) {
+				hrGnbLogin.removeClass("hrglLayerShow");
+			} else {
+				hrGnbLogin.addClass("hrglLayerShow");
+			}
+		});
+		hrBtnGnbLoginClose.bind("click", function() {
+			hrGnbLogin.removeClass("hrglLayerShow");
+		});
 	}
 });

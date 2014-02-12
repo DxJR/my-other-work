@@ -76,7 +76,7 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 		.hr_gnb_w {float:right;}
 			/* GNB */
 			.hr_gnb {width:243px; font-size:0;}
-				.hr_gnb li {.float:left; display:inline-block; .display:inline; margin-right:4px;}
+				.hr_gnb li {position:relative; .float:left; display:inline-block; .display:inline; margin-right:4px;}
 					.hr_gnb li a {display:block; height:19px; padding-top:8px; border-bottom:1px solid #e0e0e0; background-image:none;}
 						.hr_gnb li a span {position:relative; display:block; height:11px; overflow:hidden; background-image:url('../images/hsr_set.png'); background-repeat:no-repeat;}
 					.b_gnb_login,.b_gnb_member, .b_gnb_join, .b_gnb_helpdesk {width:77px;}
@@ -294,3 +294,29 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 	/* 이벤트목록 */
 	.hrpe_evnt_list_w {clear:both; margin-top:43px; text-align:center;}
 		.b_hrpe_evnt_list {width:137px; height:44px; background-position:-280px -420px;}
+
+/* GNB 로그인 */
+.hr_gnb_login_w {z-index:3; position:absolute; top:-9999px; left:-9999px; clear:both; width:427px; height:267px; padding:2px 0 0 4px; background:url('../images/bg_hrgl.png') left top no-repeat;}
+.hrglLayerShow {top:5px; left:-438px;}
+	.hr_gnb_login_in {position:relative; width:363px; height:259px; padding:0 29px; border:1px solid #d50030; background:#fff;}
+		.hr_gnb_login {}
+			.hr_gnb_login legend {position:absolute; top:29px; left:29px; display:block; width:41px; height:15px; visibility:visible; background:url('../images/hsr_set.png') left -760px no-repeat}
+			.hrgl_desc {width:224px; height:11px; margin-top:57px; background:url('../images/hsr_set.png') -45px -760px no-repeat;}
+			.hrgl_form_w {position:relative; margin:20px 0 0 0; padding:10px 0 25px 19px; border:1px solid #e0e0e0; border-width:1px 0;}
+				.hrgl_form_w p {clear:both; margin-top:15px; overflow:hidden;}
+					.hrgl_form_w p label {float:left; height:12px; margin-top:4px; overflow:hidden; background-image:url('../images/hsr_set.png'); background-repeat:no-repeat;}
+					.hrgl_form_w p .hr_input_w {float:left; height:21px; background:url('../images/hrgl_form_l.gif') left top no-repeat;}
+						.hrgl_form_w p .hr_input_w .hr_input {width:155px; height:21px; line-height:21px; background:url('../images/hrgl_form_r.gif') right top no-repeat;}
+				.hrgl_form_w p.hrgl_f_id label {width:31px; margin-right:41px; background-position:-160px -745px;}
+				.hrgl_form_w p.hrgl_f_pwd label {width:43px; margin-right:29px; background-position:-195px -745px;}
+				.b_hrgl_login {position:absolute; top:25px; right:20px; width:77px; height:56px; line-height:56px; background:#d50030;}
+					.b_hrgl_login span {display:block; width:37px; height:13px; margin:0 auto; overflow:hidden; background:url('../images/hsr_set.png') left -775px no-repeat;}
+			.hrgl_fnc {clear:both; margin:15px 0 0 0; overflow:hidden;}
+				.hrgl_fnc li {float:left; display:inline; margin:0 10px 0 0; padding:0 0 0 11px; background:url('../images/bg_hrgl_fnc_li.gif') left 1px no-repeat;}
+					.hr_gnb li .hrgl_fnc li a {height:12px; padding-top:0; border-bottom:0; background-image:url('../images/hsr_set.png');}
+					.hr_gnb li .hrgl_fnc li .b_hrgl_join {width:41px; background-position:-240px -745px;}
+					.hr_gnb li .hrgl_fnc li .b_hrgl_f_id {width:55px; background-position:-285px -745px;}
+					.hr_gnb li .hrgl_fnc li .b_hrgl_f_pwd {width:64px; background-position:-270px -760px;}
+				.hrgl_fnc li.first {padding-left:0; background:none;}
+			.hrgl_close {position:absolute; top:29px; right:29px; clear:both;}
+				.b_lyr_close {width:21px; height:21px; background-position:-420px -560px;}
