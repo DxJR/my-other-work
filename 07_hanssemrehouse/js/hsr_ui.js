@@ -62,6 +62,7 @@ var hsRehouse = ({
 			$(""+id+"").selectbox({
 				onOpen: function () {
 					var thisOption = $(this).parent().find(".sbOptions");
+					$(this).parent().css("zIndex","99");
 					$(this).next().addClass("sbOpen");
 					thisOption.css("top",""+top+"px");
 					thisOption.find("li:first").addClass("first");
@@ -69,13 +70,15 @@ var hsRehouse = ({
 				},
 				onClose: function () {
 					$(this).next().removeClass("sbOpen");
+					$(this).parent().css("zIndex","10");
 				},
 			});
 		};
 		hrSelectDefault("#hrpSortSelect","32");
 		hrSelectDefault("#hrpSubMenuSelect","32");
 		hrSelectDefault("#hrpFaqSearchSelect","26");
-		hrSelectDefault("#hrpSortShopSelect","27");
+		hrSelectDefault("#hrpSortShopType","32");
+		hrSelectDefault("#hrpSortShopWhere","32");
 	},
 	// 상품소개 slide
 	hrProductPhotoSlide : function(id) {
