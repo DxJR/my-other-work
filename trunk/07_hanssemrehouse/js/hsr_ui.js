@@ -304,5 +304,24 @@ var hsRehouse = ({
 		hrBtnGnbLoginClose.bind("click", function() {
 			hrGnbLogin.removeClass("hrglLayerShow");
 		});
+	},
+	// 마이페이지 레이어
+	hrMyPageLayer : function() {
+		var mypageLink = $(".tit_re_w>a");
+		var mypageClose = $(".hrmpl_close>button");
+
+		mypageLink.each(function(index) {
+			$(this).bind("click", function(e) {
+				$(".hrmpLayerOpen").removeClass("hrmpLayerOpen");
+				$(this).parent().hasClass("hrmpLayerOpen") ? $(this).parent().removeClass("hrmpLayerOpen") : $(this).parent().addClass("hrmpLayerOpen");
+				e.preventDefault();
+			});
+		});
+
+		mypageClose.each(function() {
+			$(this).bind("click", function() {
+				$(".hrmpLayerOpen").removeClass("hrmpLayerOpen");
+			});
+		});
 	}
 });

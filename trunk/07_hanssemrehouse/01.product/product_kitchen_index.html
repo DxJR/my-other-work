@@ -35,7 +35,35 @@
 		<div class="hr_gnb_w">
 			<!-- GNB -->
 			<ul class="hr_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span><i class="ir">로그인</i></span></a></li>
+				<li>
+					<a href="#hrGnbLoginLayer" id="hrBtnGnbLogin" class="gbtn b_gnb_login hrefTemp"><span><i class="ir">로그인</i></span></a>
+					<!-- 로그인레이어 -->
+					<div id="hrGnbLoginLayer" class="hr_gnb_login_w hrglLayerShow">
+						<div class="hr_gnb_login_in">
+							<fieldset class="hr_gnb_login">
+								<legend><span class="ir">로그인</span></legend>
+								<p class="hrgl_desc"><span class="ir">한샘닷컴의 아이디와 비밀번호를 입력해 주십시오.</span></p>
+								<div class="hrgl_form_w">
+									<p class="hrgl_f_id">
+										<label for="hrGnbLoginId"><span class="ir">아이디</span></label>
+										<span class="hr_input_w"><input type="text" id="hrGnbLoginId" class="hr_input" /></span>
+									</p>
+									<p class="hrgl_f_pwd">
+										<label for="hrGnbLoginPassword"><span class="ir">비밀번호</span></label>
+										<span class="hr_input_w"><input type="password" id="hrGnbLoginPassword" class="hr_input" /></span>
+									</p>
+									<button type="submit" class="gbtn b_hrgl_login"><span><i class="ir">로그인</i></span></button>
+								</div>
+								<ul class="hrgl_fnc">
+									<li class="first"><a href="#" class="gbtn b_hrgl_join"><span class="ir">회원가입</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_id"><span class="ir">아이디 찾기</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_pwd"><span class="ir">비밀번호 찾기</span></a></li>
+								</ul>
+							</fieldset>
+							<p class="hrgl_close"><button type="button" id="hrglCloseLayer" class="gbtn b_lyr_close"><span class="ir">닫기</span></button>
+						</div>
+					</div>
+				</li>
 				<li><a href="#" class="gbtn b_gnb_member"><span><i class="ir">멤버십</i></span></a></li>
 				<li class="nth3"><a href="#" class="gbtn b_gnb_favorite"><span><i class="ir">즐겨찾기추가</i></span></a></li>
 				<li><a href="#" class="gbtn b_gnb_join"><span><i class="ir">회원가입</i></span></a></li>
@@ -148,19 +176,19 @@
 			<div class="hrp_2d_detail_w">
 				<!-- 부엌상품 -->
 				<div class="hrp_2d_detail hrp2dd_kc">
+					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_kc.jpg" width="741" height="324" alt="부엌상품" /></a></p>
 					<div class="hrp2dd_head">
 						<h3><span class="ir">부엌상품</span></h3>
 						<em>(14)</em>
 					</div>
-					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_kc.jpg" width="668" height="373" alt="부엌상품" /></a></p>
 				</div>
 				<!-- 상판 -->
 				<div class="hrp_2d_detail hrp2dd_tb">
+					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_tb.jpg" width="228" height="324" alt="상판" /></a></p>
 					<div class="hrp2dd_head">
 						<h3><span class="ir">상판</span></h3>
 						<em>(20)</em>
 					</div>
-					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_tb.jpg" width="301" height="373" alt="상판" /></a></p>
 				</div>
 				<!-- 상품기기&악세사리 -->
 				<div class="hrp_2d_detail hrp2dd_ac">
@@ -169,12 +197,12 @@
 						<em>(30)</em>
 					</div>
 					<ul class="hrp2dd_sth">
-						<li class="hrp2dd_sth_hd"><a href="#"><img src="../images/hrp2dd_sth_hd.jpg" width="332" height="331" alt="후드" /> <strong>후드 <em>(21)</em></strong></a></li>
-						<li class="hrp2dd_sth_ct"><a href="#"><img src="../images/hrp2dd_sth_ct.jpg" width="332" height="331" alt="쿡탑" /> <strong>쿡탑 <em>(21)</em></strong></a></li>
-						<li class="hrp2dd_sth_sk"><a href="#"><img src="../images/hrp2dd_sth_sk.jpg" width="334" height="331" alt="싱크" /> <strong>싱크 <em>(21)</em></strong></a></li>
-						<li class="hrp2dd_sth_bt"><a href="#"><img src="../images/hrp2dd_sth_bt.jpg" width="332" height="331" alt="수전" /> <strong>수전 <em>(21)</em></strong></a></li>
-						<li class="hrp2dd_sth_op"><a href="#"><img src="../images/hrp2dd_sth_op.jpg" width="332" height="331" alt="옵션기기" /> <strong>옵션기기  <em>(21)</em></strong></a></li>
-						<li class="hrp2dd_sth_ac"><a href="#"><img src="../images/hrp2dd_sth_ac.jpg" width="334" height="331" alt="액세서리" /> <strong>액세서리  <em>(21)</em></strong></a></li>
+						<li class="hrp2dd_sth_hd"><a href="#"><img src="../images/hrp2dd_sth_hd.jpg" width="226" height="213" alt="후드" /> <strong>후드 <em>(21)</em></strong></a></li>
+						<li class="hrp2dd_sth_ct"><a href="#"><img src="../images/hrp2dd_sth_ct.jpg" width="227" height="213" alt="쿡탑" /> <strong>쿡탑 <em>(21)</em></strong></a></li>
+						<li class="hrp2dd_sth_sk"><a href="#"><img src="../images/hrp2dd_sth_sk.jpg" width="226" height="213" alt="싱크" /> <strong>싱크 <em>(21)</em></strong></a></li>
+						<li class="hrp2dd_sth_bt"><a href="#"><img src="../images/hrp2dd_sth_bt.jpg" width="227" height="213" alt="수전" /> <strong>수전 <em>(21)</em></strong></a></li>
+						<li class="hrp2dd_sth_op"><a href="#"><img src="../images/hrp2dd_sth_op.jpg" width="226" height="213" alt="옵션기기" /> <strong>옵션기기  <em>(21)</em></strong></a></li>
+						<li class="hrp2dd_sth_ac"><a href="#"><img src="../images/hrp2dd_sth_ac.jpg" width="227" height="213" alt="액세서리" /> <strong>액세서리  <em>(21)</em></strong></a></li>
 					</ul>
 				</div>
 			</div>

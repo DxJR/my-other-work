@@ -35,7 +35,35 @@
 		<div class="hr_gnb_w">
 			<!-- GNB -->
 			<ul class="hr_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span><i class="ir">로그인</i></span></a></li>
+				<li>
+					<a href="#hrGnbLoginLayer" id="hrBtnGnbLogin" class="gbtn b_gnb_login hrefTemp"><span><i class="ir">로그인</i></span></a>
+					<!-- 로그인레이어 -->
+					<div id="hrGnbLoginLayer" class="hr_gnb_login_w hrglLayerShow">
+						<div class="hr_gnb_login_in">
+							<fieldset class="hr_gnb_login">
+								<legend><span class="ir">로그인</span></legend>
+								<p class="hrgl_desc"><span class="ir">한샘닷컴의 아이디와 비밀번호를 입력해 주십시오.</span></p>
+								<div class="hrgl_form_w">
+									<p class="hrgl_f_id">
+										<label for="hrGnbLoginId"><span class="ir">아이디</span></label>
+										<span class="hr_input_w"><input type="text" id="hrGnbLoginId" class="hr_input" /></span>
+									</p>
+									<p class="hrgl_f_pwd">
+										<label for="hrGnbLoginPassword"><span class="ir">비밀번호</span></label>
+										<span class="hr_input_w"><input type="password" id="hrGnbLoginPassword" class="hr_input" /></span>
+									</p>
+									<button type="submit" class="gbtn b_hrgl_login"><span><i class="ir">로그인</i></span></button>
+								</div>
+								<ul class="hrgl_fnc">
+									<li class="first"><a href="#" class="gbtn b_hrgl_join"><span class="ir">회원가입</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_id"><span class="ir">아이디 찾기</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_pwd"><span class="ir">비밀번호 찾기</span></a></li>
+								</ul>
+							</fieldset>
+							<p class="hrgl_close"><button type="button" id="hrglCloseLayer" class="gbtn b_lyr_close"><span class="ir">닫기</span></button>
+						</div>
+					</div>
+				</li>
 				<li><a href="#" class="gbtn b_gnb_member"><span><i class="ir">멤버십</i></span></a></li>
 				<li class="nth3"><a href="#" class="gbtn b_gnb_favorite"><span><i class="ir">즐겨찾기추가</i></span></a></li>
 				<li><a href="#" class="gbtn b_gnb_join"><span><i class="ir">회원가입</i></span></a></li>
@@ -150,7 +178,7 @@
 				<div class="hrp_cateogry_sort_w">
 					<!-- 카테고리 -->
 					<ul class="hrp_cateogry">
-						<li class="first selected"><a href="#" class="gbtn b_hrpc_kc"><span><i class="ir">부엌상품보기</i></span><em>(60)</em></a></li>
+						<li class="first selected"><a href="#" class="gbtn b_hrpc_kc"><span><i class="ir">부엌</i></span><em>(60)</em></a></li>
 						<li><a href="#" class="gbtn b_hrpc_pa"><span><i class="ir">상품보기&amp;악세사리</i></span><em>(60)</em></a></li>
 						<li><a href="#" class="gbtn b_hrpc_tb"><span><i class="ir">상판</i></span><em>(60)</em></a></li>
 					</ul>
@@ -159,18 +187,39 @@
 				<div class="hrp_product_detail_w">
 					<!-- 제목/제품페이징 -->
 					<div class="hrppd_head">
-						<strong class="hrppdh_tit">한샘 하이드 빌트인 후드트</strong>
-						<div class="hrppdh_pg_w">
-							<a href="#" class="gbtn b_hrppdh_pg_prev"><span class="ir">이전</span></a>
-							<a href="#" class="gbtn b_hrppdh_pg_list"><span class="ir">목록보기</span></a>
-							<a href="#" class="gbtn b_hrppdh_pg_next"><span class="ir">다음</span></a>
+						<div class="hrmed_paging_w">
+							<a href="#" class="gbtn b_brd_prev"><span class="ir">이전</span></a>
+							<span class="bar">|</span>
+							<a href="#" class="gbtn b_brd_list"><span class="ir">목록</span></a>
+							<span class="bar">|</span>
+							<a href="#" class="gbtn b_brd_next"><span class="ir">다음</span></a>
 						</div>
 					</div>
 					<!-- 제품기본정보 -->
 					<div class="hrppd_def_info_w">
 						<!-- 제품사진 -->
 						<div class="hrppd_di_photo">
-							<a href="#"><img src="../images/temp/temp_021.jpg" width="490" height="490" alt="한샘 하이드 빌트인 후드" /></a>
+							<div class="hrppd_di_photo_in">
+								<div id="hrspsShowRoomLarge" class="hrppd_dp_v">
+									<img src="../images/temp/temp_021.jpg" width="480" height="480" alt="한샘 하이드 빌트인 후드" class="selected" />
+									<img src="../images/temp/temp_021-2.jpg" width="480" height="480" alt="한샘 하이드 빌트인 후드" />
+									<img src="../images/temp/temp_021-3.jpg" width="480" height="480" alt="한샘 하이드 빌트인 후드" />
+									<img src="../images/temp/temp_021-4.jpg" width="480" height="480" alt="한샘 하이드 빌트인 후드" />
+									<img src="../images/temp/temp_021-5.jpg" width="480" height="480" alt="한샘 하이드 빌트인 후드" />
+								</div>
+								<ul id="hrspsShowRoomThumbNail" class="hrppd_dp_t">
+									<li class="selected"><a href="#"><img src="../images/temp/temp_035.jpg" width="95" height="96" alt="한샘 하이드 빌트인 후드" /></a><span></span></li>
+									<li><a href="#"><img src="../images/temp/temp_035.jpg" width="95" height="96" alt="한샘 하이드 빌트인 후드" /></a><span></span></li>
+									<li><a href="#"><img src="../images/temp/temp_035.jpg" width="95" height="96" alt="한샘 하이드 빌트인 후드" /></a><span></span></li>
+									<li><a href="#"><img src="../images/temp/temp_035.jpg" width="95" height="96" alt="한샘 하이드 빌트인 후드" /></a><span></span></li>
+									<li class="last"><a href="#"><img src="../images/temp/temp_035.jpg" width="95" height="96" alt="한샘 하이드 빌트인 후드" /></a><span></span></li>
+								</ul>
+								<script type="text/javascript">
+								//<![CDATA[
+									hsRehouse.hrViewToBig("#hrspsShowRoomThumbNail","#hrspsShowRoomLarge","img", "click");
+								//]]>
+								</script>
+							</div>
 							<!-- 트위터/페이스북 -->
 							<div class="hrppd_p_sms">
 								<a href="#" class="gbtn b_psms_t"><span class="ir">트위터 공유</span></a>
@@ -191,42 +240,6 @@
 								<li><em>무게</em> 12kg</li>
 								<li><em>소재</em> 스테인레스 스틸</li>
 								<li><em>설치방식</em> 벽고정 방식</li>
-							</ul>
-							<ul class="hrppdt_fnc">
-								<li><a href="#" class="gbtn b_hrppdt_wl"><span class="ir">위시리스트</span></a></li>
-								<li><a href="#" class="gbtn b_hrppdt_gj"><span class="ir">견적문의</span></a></li>
-							</ul>
-						</div>
-						<!-- 상품특징 -->
-						<div class="hrppd_di_spc">
-							<h4 class="hrppd_di_stit"><span><i class="ir">상품특징</i></span></h4>
-							<ul class="hrppd_di_sdesc">
-								<li>1. 소재의 고급화: 주방과의 조화를 위한 고급  화이트 분체도장마감</li>
-								<li>2. 심플하면서 세련된 디자인 / 후드전면의 부드러운 곡선이 공간의 포인트 역할</li>
-								<li>3. 강력한 흡입력 / 저 소음 및 흡입력 극대화를 위한 고 풍량모터를 채택</li>
-								<li>4. 저소음 설계 / 유체 역학의 원리에 따른 저 소음팬 채택으로 조용하고 쾌적한 주방 분위기를 연출</li>
-								<li>5. 반영구적 필터 사용 청소가 간편하고 가벼운 알루미늄 금속 필터를 사용하여 반영구적 사용이 가능</li>
-							</ul>
-						</div>
-						<!-- 주요기능 -->
-						<div class="hrppd_di_sfnc">
-							<h4 class="hrppd_di_stit"><span><i class="ir">주요기능</i></span></h4>
-							<ul class="hrppd_di_swdesc">
-								<li>안전장치: 전류휴즈</li>
-								<li>풍량: 1단 310㎥/h, 2단 454㎥/h, 3단 610㎥/h</li>
-								<li>소음: 1단 41dB(A), 2단 48dB(A), 3단 55dB(A)</li>
-								<li>배기호스: 내경 100Φ 알루미늄 후렉시블 호스</li>
-								<li>필터: 알루미늄 금속 필터</li>
-								<li>스위치: 3단 Push스위치</li>
-							</ul>
-						</div>
-						<!-- 주의사항 -->
-						<div class="hrppd_di_wrn">
-							<h4 class="hrppd_di_stit"><span><i class="ir">주의사항</i></span></h4>
-							<ul class="hrppd_di_swdesc">
-								<li>알루미늄필터의 세척시 날카로우니 손이 다치지 않게 주의해 주세요.</li>
-								<li>주기적으로 세척시 수명이 더욱 오래갑니다.</li>
-								<li>※ 금속필터는 3개월에 한번 중성세제를 풀은 더운물에 세척하십시오.</li>
 							</ul>
 						</div>
 					</div>
@@ -282,23 +295,17 @@
 						</ul>
 						<h4 class="hide">상세정보</h4>
 						<div class="hrppd_pd_in">
-							<div class="hrppd_pd_head">
-								<h5 class="hrppd_pd_tit">편리한 조리공간 아일랜드 카운터 플랜</h5>
-								<!-- 트위터/페이스북 -->
-								<div class="hrppd_p_sms">
-									<a href="#" class="gbtn b_psms_t"><span class="ir">트위터 공유</span></a>
-									<a href="#" class="gbtn b_psms_f"><span class="ir">페이스북 공유</span></a>
-								</div>
-							</div>
 							<div class="hrppd_pd_desc_w">
+								<p class="hpd_desc_i">
+									<img src="../images/temp/temp_014.jpg" width="1000" alt="제품사진" />
+								</p>
+								<h5 class="hrppd_pd_tit">편리한 조리공간 아일랜드 카운터 플랜</h5>
 								<p class="hpd_desc_t">
 									아일랜드 카운터 플랜은 조리가 편리할 뿐만 아니라 가족과 함께 하는 시간을 길게 만들어 줍니다.<br />
 									예쁜 그릇을 장식할 수 있는 선반과 라틴바구니로 구성된 오픈장입니다. 라인이 아름다운 데코 마감과 아치형<br />
 									클래식 프레임에서 여성스러움이 느껴지며, 자연소재의 라틴바구니에서 프로방스 인테리어를 느낄 수 있습니다.
 								</p>
-								<p>&nbsp;</p>
 								<p class="hpd_desc_i">
-									<img src="../images/temp/temp_014.jpg" width="1000" alt="제품사진" />
 									<img src="../images/temp/temp_014.jpg" width="1000" alt="제품사진" />
 								</p>
 								<p class="hpd_desc_t">
@@ -307,12 +314,10 @@
 								<p class="hpd_desc_i">
 									<img src="../images/temp/temp_014.jpg" width="1000" alt="제품사진" />
 								</p>
-								<!-- 사진과 텍스트 한줄에 있을 때 hrpd_sf / 사진 오른쪽이면 hrpdsf_r / 사진 왼쪽이면 hrpdsf_l -->
-								<p class="hrpd_sf hrpdsf_r">
-									<img src="../images/temp/temp_014.jpg" width="490" height="600" alt="제품사진" />
-									아일린드 카운터 플랜은 조리가 편리할 뿐만 아니라 가족과 함께 하는 시간을<br />
-									길게 만들어 줍니다. 크리스탈 블랙에 천연석인 칸스톤 상판, 한샘독점  G-TOP싱크볼을<br />
-									매치하면 세련된 상품구성으로 명품의 가치를 높일 수 있습니다.
+								<p class="hpd_desc_t">
+									아일랜드 카운터 플랜은 조리가 편리할 뿐만 아니라 가족과 함께 하는 시간을 길게 만들어 줍니다.<br />
+									예쁜 그릇을 장식할 수 있는 선반과 라틴바구니로 구성된 오픈장입니다. 라인이 아름다운 데코 마감과 아치형<br />
+									클래식 프레임에서 여성스러움이 느껴지며, 자연소재의 라틴바구니에서 프로방스 인테리어를 느낄 수 있습니다.
 								</p>
 							</div>
 						</div>
@@ -324,6 +329,55 @@
 							<li><em class="hrp_pdpg_dn">다음</em> <a href="#">[ ik 5 리갈 실버펄 ] 귀족을 닮은 클래식 부엌으로 우아함을 뽐내다.</a></li>
 						</ol>
 						<p class="hrppd_list_w"><a href="#" class="gbtn b_hrppd_list"><span class="ir">목록보기</span></a></p>
+					</div>
+					<!-- 연관 리모델링 사례 -->
+					<div class="brd_mex_w hrp_rer_ex">
+						<div class="brd_mex_head">
+							<h4 class="brd_mex_tit"><span class="ir">연관 리모델링 보기</span></h4>
+							<p class="brd_mex_btn"><a href="#" class="gbtn b_hrms_more"><span class="ir">MORE</span></a></p>
+						</div>
+						<ul class="brd_mex_list">
+							<li class="brd_mexl_li">
+								<div class="hrms_module">
+									<h5><a href="#">미소인테리어 <em class="brd_mexl_best"><span class="ir">[BEST]</span></em></a></h5>
+									<div class="hrms_md_img">
+										<a href="#"><img src="../images/temp/temp_006.jpg" width="330" height="225" alt="미소인테리어"></a>
+									</div>
+									<ul class="hrms_md_detail">
+										<li>인천 계양구 작전동 코오롱아파트</li>
+										<li class="date">2013.12.30</li>
+										<li class="hit">조회 114회</li>
+									</ul>
+								</div>
+							</li>
+							<li class="brd_mexl_li">
+								<div class="hrms_module">
+									<h5><a href="#">미소인테리어</a></h5>
+									<div class="hrms_md_img">
+										<a href="#"><img src="../images/temp/temp_006.jpg" width="330" height="225" alt="미소인테리어"></a>
+									</div>
+									<ul class="hrms_md_detail">
+										<li>인천 계양구 작전동 코오롱아파트</li>
+										<li class="date">2013.12.30</li>
+										<li class="hit">조회 114회</li>
+									</ul>
+								</div>
+							</li>
+							<!-- 마지막일 때 last 추가 -->
+							<li class="brd_mexl_li last">
+								<div class="hrms_module">
+									<h5><a href="#">미소인테리어</a></h5>
+									<div class="hrms_md_img">
+										<a href="#"><img src="../images/temp/temp_006.jpg" width="330" height="225" alt="미소인테리어"></a>
+									</div>
+									<ul class="hrms_md_detail">
+										<li>인천 계양구 작전동 코오롱아파트</li>
+										<li class="date">2013.12.30</li>
+										<li class="hit">조회 114회</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

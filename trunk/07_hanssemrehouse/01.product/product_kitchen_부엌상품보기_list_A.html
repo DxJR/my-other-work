@@ -35,7 +35,35 @@
 		<div class="hr_gnb_w">
 			<!-- GNB -->
 			<ul class="hr_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span><i class="ir">로그인</i></span></a></li>
+				<li>
+					<a href="#hrGnbLoginLayer" id="hrBtnGnbLogin" class="gbtn b_gnb_login hrefTemp"><span><i class="ir">로그인</i></span></a>
+					<!-- 로그인레이어 -->
+					<div id="hrGnbLoginLayer" class="hr_gnb_login_w hrglLayerShow">
+						<div class="hr_gnb_login_in">
+							<fieldset class="hr_gnb_login">
+								<legend><span class="ir">로그인</span></legend>
+								<p class="hrgl_desc"><span class="ir">한샘닷컴의 아이디와 비밀번호를 입력해 주십시오.</span></p>
+								<div class="hrgl_form_w">
+									<p class="hrgl_f_id">
+										<label for="hrGnbLoginId"><span class="ir">아이디</span></label>
+										<span class="hr_input_w"><input type="text" id="hrGnbLoginId" class="hr_input" /></span>
+									</p>
+									<p class="hrgl_f_pwd">
+										<label for="hrGnbLoginPassword"><span class="ir">비밀번호</span></label>
+										<span class="hr_input_w"><input type="password" id="hrGnbLoginPassword" class="hr_input" /></span>
+									</p>
+									<button type="submit" class="gbtn b_hrgl_login"><span><i class="ir">로그인</i></span></button>
+								</div>
+								<ul class="hrgl_fnc">
+									<li class="first"><a href="#" class="gbtn b_hrgl_join"><span class="ir">회원가입</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_id"><span class="ir">아이디 찾기</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_pwd"><span class="ir">비밀번호 찾기</span></a></li>
+								</ul>
+							</fieldset>
+							<p class="hrgl_close"><button type="button" id="hrglCloseLayer" class="gbtn b_lyr_close"><span class="ir">닫기</span></button>
+						</div>
+					</div>
+				</li>
 				<li><a href="#" class="gbtn b_gnb_member"><span><i class="ir">멤버십</i></span></a></li>
 				<li class="nth3"><a href="#" class="gbtn b_gnb_favorite"><span><i class="ir">즐겨찾기추가</i></span></a></li>
 				<li><a href="#" class="gbtn b_gnb_join"><span><i class="ir">회원가입</i></span></a></li>
@@ -165,19 +193,18 @@
 						</div>
 					</div>
 				</div>
-				<!-- 4depth 탭메뉴 -->
-				<div class="hrp4d_w">
-					<ul class="hrp4d">
-						<li><a href="#" class="gbtn b_hrp4d_all"><span><i class="ir">All</i></span></a></li>
-						<li class="selected"><a href="#" class="gbtn b_hrp4d_super"><span><i class="ir">Super</i></span></a></li>
-						<li><a href="#" class="gbtn b_hrp4d_superplus"><span><i class="ir">Super plus</i></span></a></li>
-					</ul>
-				</div>
+				<!-- 4depth -->
+				<ul class="hrpk_4dm">
+					<li><a href="#" class="gbtn b_hrpk4_all"><span class="ir">All</span></a></li>
+					<li class="selected"><a href="#" class="gbtn b_hrpk4_super"><span class="ir">Super</span></a></li>
+					<li class="last"><a href="#" class="gbtn b_hrpk4_superplus"><span class="ir">Super plus</span></a></li>
+				</ul>
 				<!-- 상품목록 -->
 				<ul class="hrp_list_type_w">
 					<li>
 						<a href="#">
 							<img src="../images/temp/temp_012.jpg" width="490" height="330" alt="Aik5 크리스탈 화이트" />
+							<span class="i_w"><em class="icn i_l_new">[NEW]</em><em class="icn i_l_best">[BEST]</em></span>
 							<strong class="hrp_tit">Aik5 크리스탈 화이트</strong>
 							<span class="hrp_exp">고급스러운 알루미늄 프레임 마감에 변함없이 빛나는 강화유리를 더해 품격있는 공간을 연출해 드립니다.</span>
 						</a>
@@ -186,6 +213,7 @@
 					<li class="even">
 						<a href="#">
 							<img src="../images/temp/temp_012.jpg" width="490" height="330" alt="Aik5 크리스탈 화이트" />
+							<span class="i_w"><em class="icn i_l_new">[NEW]</em></span>
 							<strong class="hrp_tit">Aik5 크리스탈 화이트</strong>
 							<span class="hrp_exp">고급스러운 알루미늄 프레임 마감에 변함없이 빛나는 강화유리를 더해 품격있는 공간을 연출해 드립니다.</span>
 						</a>
@@ -193,6 +221,7 @@
 					<li>
 						<a href="#">
 							<img src="../images/temp/temp_012.jpg" width="490" height="330" alt="Aik5 크리스탈 화이트" />
+							<span class="i_w"><em class="icn i_l_best">[BEST]</em></span>
 							<strong class="hrp_tit">Aik5 크리스탈 화이트</strong>
 							<span class="hrp_exp">고급스러운 알루미늄 프레임 마감에 변함없이 빛나는 강화유리를 더해 품격있는 공간을 연출해 드립니다.</span>
 						</a>
