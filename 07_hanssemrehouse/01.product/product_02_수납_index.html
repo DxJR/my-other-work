@@ -35,7 +35,35 @@
 		<div class="hr_gnb_w">
 			<!-- GNB -->
 			<ul class="hr_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span><i class="ir">로그인</i></span></a></li>
+				<li>
+					<a href="#hrGnbLoginLayer" id="hrBtnGnbLogin" class="gbtn b_gnb_login hrefTemp"><span><i class="ir">로그인</i></span></a>
+					<!-- 로그인레이어 -->
+					<div id="hrGnbLoginLayer" class="hr_gnb_login_w hrglLayerShow">
+						<div class="hr_gnb_login_in">
+							<fieldset class="hr_gnb_login">
+								<legend><span class="ir">로그인</span></legend>
+								<p class="hrgl_desc"><span class="ir">한샘닷컴의 아이디와 비밀번호를 입력해 주십시오.</span></p>
+								<div class="hrgl_form_w">
+									<p class="hrgl_f_id">
+										<label for="hrGnbLoginId"><span class="ir">아이디</span></label>
+										<span class="hr_input_w"><input type="text" id="hrGnbLoginId" class="hr_input" /></span>
+									</p>
+									<p class="hrgl_f_pwd">
+										<label for="hrGnbLoginPassword"><span class="ir">비밀번호</span></label>
+										<span class="hr_input_w"><input type="password" id="hrGnbLoginPassword" class="hr_input" /></span>
+									</p>
+									<button type="submit" class="gbtn b_hrgl_login"><span><i class="ir">로그인</i></span></button>
+								</div>
+								<ul class="hrgl_fnc">
+									<li class="first"><a href="#" class="gbtn b_hrgl_join"><span class="ir">회원가입</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_id"><span class="ir">아이디 찾기</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_pwd"><span class="ir">비밀번호 찾기</span></a></li>
+								</ul>
+							</fieldset>
+							<p class="hrgl_close"><button type="button" id="hrglCloseLayer" class="gbtn b_lyr_close"><span class="ir">닫기</span></button>
+						</div>
+					</div>
+				</li>
 				<li><a href="#" class="gbtn b_gnb_member"><span><i class="ir">멤버십</i></span></a></li>
 				<li class="nth3"><a href="#" class="gbtn b_gnb_favorite"><span><i class="ir">즐겨찾기추가</i></span></a></li>
 				<li><a href="#" class="gbtn b_gnb_join"><span><i class="ir">회원가입</i></span></a></li>
@@ -148,37 +176,46 @@
 			<div class="hrp_2d_detail_w">
 				<!-- 붙박이장 -->
 				<div class="hrp_2d_detail hrp2dd_bti">
+					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_bti.jpg" width="485" height="324" alt="붙박이장" /></a></p>
 					<div class="hrp2dd_head">
 						<h3><span class="ir">붙박이장</span></h3>
 						<em>(14)</em>
 					</div>
-					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_bti.jpg" width="485" height="324" alt="붙박이장" /></a></p>
 				</div>
-				<!-- 드레스룸 -->
-				<div class="hrp_2d_detail hrp2dd_dsr">
+				<!-- 현관장 -->
+				<div class="hrp_2d_detail hrp2dd_fdf">
+					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_fdf.jpg" width="485" height="324" alt="현관장" /></a></p>
 					<div class="hrp2dd_head">
-						<h3><span class="ir">드레스룸</span></h3>
+						<h3><span class="ir">현관장</span></h3>
 						<em>(20)</em>
 					</div>
-					<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_dsr.jpg" width="485" height="324" alt="드레스룸" /><strong>천장고정형 <span class="sls">/</span> 이동형</strong></a></p>
 				</div>
 				<!-- 빌트인수납/현관장 -->
 				<div class="hrp_2d_detail hrp2dd_bisfdf">
+					<!-- 드레스룸 -->
+					<div class="hrp_2d_detail hrp2dd_dsr">
+						<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_dsr.jpg" width="485" height="324" alt="드레스룸" /></a></p>
+						<div class="hrp2dd_head">
+							<h3><span class="ir">드레스룸</span></h3>
+							<em>(20)</em>
+							<ul class="hrp2dd_h_r">
+								<li><a href="#">천장고정형</a></li>
+								<li class="last"><a href="#">이동형</a></li>
+							</ul>
+						</div>
+					</div>
 					<!-- 빌트인수납 -->
 					<div class="hrp_2d_detail hrp2dd_btis">
+						<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_btis.jpg" width="485" height="324" alt="빌트인수납" /></a></p>
 						<div class="hrp2dd_head">
 							<h3><span class="ir">빌트인 수납</span></h3>
 							<em>(14)</em>
+							<ul class="hrp2dd_h_r">
+								<li><a href="#">거실</a></li>
+								<li><a href="#">서재</a></li>
+								<li class="last"><a href="#">다이닝</a></li>
+							</ul>
 						</div>
-						<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_btis.jpg" width="485" height="324" alt="빌트인수납" /><strong>거실 <span class="sls">/</span> 서재 <span class="sls">/</span> 다이닝</strong></a></p>
-					</div>
-					<!-- 현관장 -->
-					<div class="hrp_2d_detail hrp2dd_fdf">
-						<div class="hrp2dd_head">
-							<h3><span class="ir">현관장</span></h3>
-							<em>(20)</em>
-						</div>
-						<p class="hrp2dd_img"><a href="#"><img src="../images/hrp2dd_fdf.jpg" width="485" height="324" alt="현관장" /></a></p>
 					</div>
 				</div>
 			</div>

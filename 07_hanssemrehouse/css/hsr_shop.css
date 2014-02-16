@@ -51,22 +51,6 @@
 		/* 쇼룸둘러보기 */
 		.hrsps_sr_w {clear:both; margin-top:55px; padding:22px 0 0 0; border-top:1px solid #e5e5e5;}
 			.hrsps_sr_w h4 {width:139px; height:16px; overflow:hidden; background:url('../images/hsr_shop.png') left -20px no-repeat;}
-			.hrsps_sr_in {position:relative; clear:both; margin-top:3px;}
-				/* 크게보기 */
-				.hrsps_sr_vb_w {position:relative; clear:both; padding-bottom:16px; height:600px;}
-					.hrsps_sr_vb_in {z-index:1; position:absolute; top:-9999px; left:-9999px;}
-					.hrsps_sr_vb_in.selected {z-index:2; top:15px; left:0;}
-						.hrsps_sr_vb {position:relative; clear:both; width:1000px; height:565px; font-size:0; overflow:hidden;}
-						.hrsps_sr_vb_in p {margin-top:16px; font-size:14px; color:#1a1a1a; letter-spacing:-1px;}
-				/* 썸네일 */
-				.hrsps_sr_tb {clear:both; margin-top:20px; overflow:hidden;}
-					.hrsps_sr_tb li {position:relative; float:left; display:inline; margin-right:1px;}
-						.hrsps_sr_tb li a {position:relative; display:block;}
-						.hrsps_sr_tb li span {z-index:2; position:absolute; top:0; left:0; display:none; width:162px; height:111px; border:2px solid #d50030;}
-					.hrsps_sr_tb li.selected span {display:block;}
-					.hrsps_sr_tb li.last {margin-right:0;}
-						.hrsps_sr_tb li.last a img {width:165px}
-						.hrsps_sr_tb li.last span {width:161px;}
 	/* 전문쇼룸특징 */
 	.hrspsm_pss {}
 		.hrspsm_pss .hrsps_hm_w {}

@@ -35,7 +35,35 @@
 		<div class="hr_gnb_w">
 			<!-- GNB -->
 			<ul class="hr_gnb">
-				<li><a href="#" class="gbtn b_gnb_login"><span><i class="ir">로그인</i></span></a></li>
+				<li>
+					<a href="#hrGnbLoginLayer" id="hrBtnGnbLogin" class="gbtn b_gnb_login hrefTemp"><span><i class="ir">로그인</i></span></a>
+					<!-- 로그인레이어 -->
+					<div id="hrGnbLoginLayer" class="hr_gnb_login_w hrglLayerShow">
+						<div class="hr_gnb_login_in">
+							<fieldset class="hr_gnb_login">
+								<legend><span class="ir">로그인</span></legend>
+								<p class="hrgl_desc"><span class="ir">한샘닷컴의 아이디와 비밀번호를 입력해 주십시오.</span></p>
+								<div class="hrgl_form_w">
+									<p class="hrgl_f_id">
+										<label for="hrGnbLoginId"><span class="ir">아이디</span></label>
+										<span class="hr_input_w"><input type="text" id="hrGnbLoginId" class="hr_input" /></span>
+									</p>
+									<p class="hrgl_f_pwd">
+										<label for="hrGnbLoginPassword"><span class="ir">비밀번호</span></label>
+										<span class="hr_input_w"><input type="password" id="hrGnbLoginPassword" class="hr_input" /></span>
+									</p>
+									<button type="submit" class="gbtn b_hrgl_login"><span><i class="ir">로그인</i></span></button>
+								</div>
+								<ul class="hrgl_fnc">
+									<li class="first"><a href="#" class="gbtn b_hrgl_join"><span class="ir">회원가입</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_id"><span class="ir">아이디 찾기</span></a></li>
+									<li><a href="#" class="gbtn b_hrgl_f_pwd"><span class="ir">비밀번호 찾기</span></a></li>
+								</ul>
+							</fieldset>
+							<p class="hrgl_close"><button type="button" id="hrglCloseLayer" class="gbtn b_lyr_close"><span class="ir">닫기</span></button>
+						</div>
+					</div>
+				</li>
 				<li><a href="#" class="gbtn b_gnb_member"><span><i class="ir">멤버십</i></span></a></li>
 				<li class="nth3"><a href="#" class="gbtn b_gnb_favorite"><span><i class="ir">즐겨찾기추가</i></span></a></li>
 				<li><a href="#" class="gbtn b_gnb_join"><span><i class="ir">회원가입</i></span></a></li>
@@ -136,13 +164,15 @@
 			<!-- 탭메뉴 -->
 			<ul class="hrppd_itab hrpe_itab">
 				<li class="selected"><a href="#" class="hrppd_it_hpdesk"><span><i class="ir">고객센터</i></span></a></li>
+				<li><a href="#" class="hrppd_it_notice"><span><i class="ir">공지사항</i></span></a></li>
 				<li><a href="#" class="hrppd_it_member"><span><i class="ir">멤버십안내</i></span></a></li>
 			</ul>
 			<!-- 하위 탭메뉴 -->
 			<div class="hrp4d_w hrpe_ntfaq_tw">
 				<ul class="hrp4d">
-					<li><a href="#" class="gbtn b_hrp4d_notice"><span><i class="ir">한샘ik 알림</i></span></a></li>
-					<li class="selected"><a href="#" class="gbtn b_hrp4d_faq"><span><i class="ir">자주묻는 질문</i></span></a></li>
+					<li class="selected"><a href="#" class="gbtn b_hrp4d_faq"><span><i class="ir">자주하는 질문</i></span></a></li>
+					<li><a href="#" class="gbtn b_hrp4d_qa"><span><i class="ir">Q&amp;A</i></span></a></li>
+					<li><a href="#" class="gbtn b_hrp4d_as"><span><i class="ir">A/S 안내</i></span></a></li>
 				</ul>
 			</div>
 			<!-- 가장자주묻는질문 -->
