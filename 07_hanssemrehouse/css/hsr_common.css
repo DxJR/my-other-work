@@ -57,7 +57,7 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 
 #wrapper {position:relative; width:1000px; margin:0 auto;}
 	/* header */
-	#header {z-index:3; position:relative; clear:both; padding:12px 0 0 0;}
+	#header {z-index:10; position:relative; clear:both; padding:12px 0 0 0;}
 		#header h1 {position:absolute; top:66px; width:58px; height:21px; overflow:hidden; background:url('../images/hsr_set.png') left top no-repeat;}
 			#header h1 a {display:block; height:21px;}
 		/* 패밀리사이트 */
@@ -447,3 +447,13 @@ input.radio, input.check {top:-1px;.top:0;position:relative; width:13px; height:
 		.hrmp_md_sc .hrmp_md_tit {width:68px; background-position:-330px top;}
 		.hrmp_md_sc .hrmp_md_desc {width:235px; background-position:left -80px;}
 		.b_hrmp_sd {background-position:-300px -95px;}
+
+/* 상단 2depth 메뉴 */
+.hrp_2dm_w {clear:both; font-size:0; height:90px;}
+	.hrp_2dm_w li {position:relative; float:left;}
+		.hrp_2dm_w li a {position:relative; display:block; width:199px; height:88px; border:1px solid #e0e0e0; border-right:0; overflow:hidden; background-image:url('../images/hrp2dm.gif'); background-repeat:no-repeat;}
+			.hrp_2dm_w li a em {position:absolute; top:19px; left:21px; display:block; width:25px; height:14px; text-indent:-99999px; overflow:hidden; background-repeat:no-repeat;}
+			.hrp_2dm_w li a:hover em {background-image:url('../images/hrp2dm.gif');}
+			.hrp_2dm_w li.selected a:hover em {background:none;}
+	.hrp_2dm_w li.selected {z-index:2; margin-right:-1px;}
+		.hrp_2dm_w li.selected a {border:1px solid #d50030; background-color:#d50030;}

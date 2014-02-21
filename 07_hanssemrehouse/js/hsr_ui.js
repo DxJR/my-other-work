@@ -79,6 +79,7 @@ var hsRehouse = ({
 		hrSelectDefault("#hrpFaqSearchSelect","26");
 		hrSelectDefault("#hrpSortShopType","32");
 		hrSelectDefault("#hrpSortShopWhere","32");
+		hrSelectDefault(".hseSelect","29");
 	},
 	// 상품소개 slide
 	hrProductPhotoSlide : function(id) {
