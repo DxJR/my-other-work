@@ -12,30 +12,22 @@
 .hrpm_cr_dn {clear:both; margin-top:30px;}
 
 /* 부엌 */
-.hrp_2dm_w {clear:both; font-size:0; height:90px;}
-	.hrp_2dm_w li {position:relative; float:left;}
-		.hrp_2dm_w li a {position:relative; display:block; width:199px; height:88px; border:1px solid #e0e0e0; border-right:0; overflow:hidden; background-image:url('../images/hrp2dm.gif'); background-repeat:no-repeat;}
-			.hrp_2dm_w li a em {position:absolute; top:19px; left:21px; display:block; width:25px; height:14px; text-indent:-99999px; overflow:hidden; background-repeat:no-repeat;}
-			.hrp_2dm_w li a:hover em {background-image:url('../images/hrp2dm.gif');}
-			.hrp_2dm_w li.selected a:hover em {background:none;}
-		.hrp_2dm_w li a.hrp2d_kc {width:198px; background-position:left top;}
-		.hrp_2dm_w li a.hrp2d_kc:hover em {left:19px; background-position:left -180px;}
-		.hrp_2dm_w li a.hrp2d_sr {background-position:-200px top;}
-		.hrp_2dm_w li a.hrp2d_sr:hover em {background-position:-25px -180px;}
-		.hrp_2dm_w li a.hrp2d_bt {background-position:-400px top;}
-		.hrp_2dm_w li a.hrp2d_bt:hover em {background-position:-50px -180px;}
-		.hrp_2dm_w li a.hrp2d_fr {background-position:-600px top;}
-		.hrp_2dm_w li a.hrp2d_fr:hover em {background-position:-75px -180px;}
-		.hrp_2dm_w li a.hrp2d_wd {border-right:1px solid #e0e0e0; background-position:-800px top;}
-		.hrp_2dm_w li a.hrp2d_wd:hover em {left:20px; background-position:-100px -180px;}
-		/* selected */
-		.hrp_2dm_w li.selected {z-index:2; margin-right:-1px;}
-		.hrp_2dm_w li.selected a {border:1px solid #d50030; background-color:#d50030;}
-		.hrp_2dm_w li.selected a.hrp2d_kc {background-position:left -90px;}
-		.hrp_2dm_w li.selected a.hrp2d_sr {background-position:-200px -90px;}
-		.hrp_2dm_w li.selected a.hrp2d_bt {background-position:-400px -90px;}
-		.hrp_2dm_w li.selected a.hrp2d_fr {background-position:-600px -90px;}
-		.hrp_2dm_w li.selected a.hrp2d_wd {background-position:-800px -90px;}
+.hrp_2dm_w li a.hrp2d_kc {width:198px; background-position:left top;}
+.hrp_2dm_w li a.hrp2d_kc:hover em {left:19px; background-position:left -180px;}
+.hrp_2dm_w li a.hrp2d_sr {background-position:-200px top;}
+.hrp_2dm_w li a.hrp2d_sr:hover em {background-position:-25px -180px;}
+.hrp_2dm_w li a.hrp2d_bt {background-position:-400px top;}
+.hrp_2dm_w li a.hrp2d_bt:hover em {background-position:-50px -180px;}
+.hrp_2dm_w li a.hrp2d_fr {background-position:-600px top;}
+.hrp_2dm_w li a.hrp2d_fr:hover em {background-position:-75px -180px;}
+.hrp_2dm_w li a.hrp2d_wd {border-right:1px solid #e0e0e0; background-position:-800px top;}
+.hrp_2dm_w li a.hrp2d_wd:hover em {left:20px; background-position:-100px -180px;}
+/* selected */
+.hrp_2dm_w li.selected a.hrp2d_kc {background-position:left -90px;}
+.hrp_2dm_w li.selected a.hrp2d_sr {background-position:-200px -90px;}
+.hrp_2dm_w li.selected a.hrp2d_bt {background-position:-400px -90px;}
+.hrp_2dm_w li.selected a.hrp2d_fr {background-position:-600px -90px;}
+.hrp_2dm_w li.selected a.hrp2d_wd {background-position:-800px -90px;}
 /* 상품상세 */
 .hrp_2d_detail_w {position:relative; clear:both; padding-top:5px; overflow:hidden;}
 	.hrp_2d_detail {position:relative; float:left; display:inline; margin-top:35px;}
