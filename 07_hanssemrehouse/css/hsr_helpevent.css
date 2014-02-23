@@ -201,7 +201,7 @@
 									.hrme_search_list li.hrme_sl_lb {clear:both;}
 									.hrme_search_list li.hrme_sl_last {width:106px;}
 								.hrme_search_detail dd label {position:relative; display:block; padding-left:24px; font-size:13px; color:#000; overflow:hidden; cursor:pointer; background-image:url('../images/hsr_check.png'); background-position:left 1px; background-repeat:no-repeat;}
-								.hrme_search_detail dd .cr_element_on label {background-position:left -29px;}
+								.hrme_search_detail dd .cr_element_on label {background-position:left -99px;}
 								.hrme_search_detail dd .check {position:absolute; top:-9999px; left:-9999px;}
 						/* 검색버튼 */
 						.hrme_sd_b_w {position:absolute; top:21px; right:30px; clear:both; font-size:0;}
