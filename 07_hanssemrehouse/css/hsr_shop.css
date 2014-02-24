@@ -719,3 +719,101 @@
 				.hsec_wd_st4 .hrm_05 .hrm_in_dl li.hswd_lf {padding-top:14px; border-top:1px solid #ccc;}
 					.hsec_wd_st4 .hrm_05 .hrm_in_dl li.hswd_lf em {top:14px;}
 				.hsec_wd_st4 .hrm_05 .hrm_in_dl li.last {margin-right:0;}
+
+/* 상세견적문의 */
+.hrs_detail_w {}
+	/* 상단 */
+	.hrsd_head_w {height:254px; background-image:url('../images/hrsd_head_w.gif');}
+	/* 사용자입력영역 */
+	.hrsd_uf_w {position:relative; clear:both;}
+		/* 모듈 */
+		.hsuf_md {position:relative; clear:both; margin-top:79px; padding:0 0 0 211px; border-top:1px solid #222; overflow:hidden;}
+			.hsuf_tit, .hsuf_inset dt strong, .huis_det li label span, .hsuf_desc, .b_hsuf_confirm {overflow:hidden; background-image:url('../images/set_hrsd.png'); background-repeat:no-repeat;}
+			.hsuf_tit {position:absolute; top:20px; left:0; width:95px; height:36px;}
+			.hsuf_inset {position:relative; clear:both; overflow:hidden; margin-top:-1px; border-bottom:1px solid #e8e8e8;}
+				.hsuf_inset dt {clear:both; float:left; display:inline; width:144px; min-height:32px; padding-top:18px; border-top:1px solid #e8e8e8;}
+					.hi_name {width:25px; background-position:0 -40px;}
+					.hi_code {width:48px; background-position:-25px -40px;}
+					.hi_tel {width:48px; background-position:-75px -40px;}
+					.hi_email {width:36px; background-position:-125px -40px;}
+					.hi_addr {width:25px; background-position:-165px -40px;}
+					.hi_htime {width:76px; background-position:-190px -40px;}
+					.hi_htype {width:47px; background-position:-270px -40px;}
+					.hi_hsize {width:35px; background-position:-320px -40px;}
+					.hi_family {width:63px; background-position:-355px -40px;}
+					.hi_age {width:35px; background-position:-420px -40px;}
+					.hi_wrmd {width:75px; background-position:0px -55px;}
+					.hi_rmterm {width:98px; background-position:-75px -55px;}
+					.hi_bugt {width:25px; background-position:-175px -55px;}
+					.hi_style {width:36px; background-position:-200px -55px;}
+					.hi_rtype {width:74px; background-position:-240px -55px;}
+					.hi_cname {width:47px; background-position:-315px -55px;}
+					.hi_ccode {width:64px; background-position:-365px -55px;}
+				.hsuf_inset dt.hit_2nd {clear:none; width:122px;}
+					.hsuf_inset dt strong {display:block; height:14px;}
+				.hsuf_inset dd {float:left; display:inline; width:645px; min-height:34px; padding-top:16px; font-size:13px; color:#262626; letter-spacing:-1px; border-top:1px solid #e8e8e8;}
+					.hsuf_is_md {overflow:hidden;}
+						.hsuf_is_md li {float:left; display:inline; width:100px;}
+							.hsuf_is_md li .radio {top:0; margin-right:9px;}
+					.hptxt_w {top:-3px; position:relative; padding:0 0 0 6px; background:url('../images/bg_hptxt_w_l.gif') left top no-repeat;}
+						.hptxt_w label {position:absolute; top:4px; left:5px; color:#8c8c8c; letter-spacing:-1px;}
+						.hptxt_w .text {width:617px; height:26px; font-family:mg; font-size:13px; color:#8c8c8c; line-height:26px; letter-spacing:-1px; border:0; background:url('../images/bg_hptxt_w.gif') right top no-repeat;}
+				.hsuf_inset dd.hlf {width:266px;}
+				.hsuf_inset dd.last {width:257px;}
+		/* step1 */
+		.hsuf_st1 {margin-top:54px;}
+			.hsuf_st1 .hsuf_tit {background-position:left top;}
+			.hsuf_desc {clear:both; width:396px; height:14px; margin-top:17px; background-position:left -130px;}
+		/* step2 */
+		.hsuf_is_addr {clear:both; float:right; margin:50px 0 11px 0; overflow:hidden;}
+			.hsuf_is_addr li {float:left; display:inline; margin-left:30px; font-size:13px; color:#000; letter-spacing:-1px;}
+				.hsuf_is_addr li .radio {top:1px; margin-right:9px;}
+		.hsuf_st2 {margin-bottom:-49px; padding-bottom:50px;}
+			.hsuf_st2 .hsuf_tit {background-position:-100px top;}
+		/* step3 */
+		.hsuf_st3 {}
+			.hsuf_st3 .hsuf_tit {background-position:-200px top;}
+			.hptw_wretc {margin-top:19px; margin-bottom:20px;}
+		/* step4 */
+		.hsuf_st4 {}
+			.hsuf_st4 .hsuf_tit {width:61px; background-position:-300px top;}
+			.hurts_txt {float:left; display:inline; margin:0 12px 0 3px;}
+			.hurts_txt.first {margin-left:0;}
+			.huis_st4t .hptxt_w {float:left; display:inline;}
+				.huis_st4t .hptxt_w label {top:-9999px; left:-9999px;}
+				.huis_st4t .hptxt_w .text {width:30px;}
+			.huis_st4t .sp {top:-2px; position:relative; float:left; margin:0 10px 0 0; font-size:14px; color:#c4c4c4;}
+			.hsuf_st4 .hsuf_is_md li {width:154px;}
+			.hsuf_st4 .himd_bgt {margin-bottom:-5px}
+				.hsuf_st4 .himd_bgt li {margin-bottom:22px}
+			.huis_det {clear:both;}
+				.huis_det li {position:relative; clear:both; height:50px; padding:0 0 0 17px; border-bottom:1px solid #e5e5e5; overflow:hidden; background:#fbfbfb;}
+					.huis_det li label {float:left; display:inline; width:102px; height:14px; margin:17px 0 0 0; padding:1px 0 0 26px; background:url('../images/hsr_check.png') left top no-repeat;}
+					.huis_det li.cr_element_on label {background-position:left bottom;}
+						.huis_det li label span {display:block; height:13px;}
+							.hdet_01 {width:21px; background-position:0 -70px;}
+							.hdet_02 {width:89px; background-position:-25px -70px;}
+							.hdet_03 {width:21px; background-position:-115px -70px;}
+							.hdet_04 {width:22px; background-position:-140px -70px;}
+							.hdet_05 {width:21px; background-position:-165px -70px;}
+							.hdet_06 {width:99px; background-position:-190px -70px;}
+							.hdet_07 {width:22px; background-position:-290px -70px;}
+							.hdet_08 {width:21px; background-position:-315px -70px;}
+							.hdet_09 {width:89px; background-position:-340px -70px;}
+							.hdet_10 {width:32px; background-position:-430px -70px;}
+							.hdet_11 {width:21px; background-position:0px -85px;}
+							.hdet_12 {width:21px; background-position:-25px -85px;}
+							.hdet_13 {width:22px; background-position:-50px -85px;}
+							.huis_det li .check {position:absolute; top:-15px; left:-15px;}
+					.huis_det li .hptxt_w {top:0; float:left; display:inline; margin:12px 0 0 0;}
+						.huis_det li .hptxt_w label {position:absolute; top:-9999px; left:-9999px; float:none; width:auto; background:none;}
+						.huis_det li .hptxt_w .text {width:613px;}
+		/* step5 */
+		.hsuf_st5 {}
+			.hsuf_st5 .hsuf_tit {width:97px; height:38px; background-position:-365px top;}
+			.hsuf_st5 .hptxt_w {top:0; margin-top:18px; padding-left:8px; background:url('../images/bg_aqtext_l.gif') left top no-repeat;}
+				.hsuf_st5 .hptxt_w label {left:7px; font-size:13px; color:#262626;}
+				.hsuf_st5 .hptxt_w .text {width:781px; height:200px; padding:4px 0 0 0; color:#262626; line-height:normal; background:url('../images/bg_aqtext.gif') right top no-repeat;}
+		/* 하단버튼 */
+		.hsuf_btn_w {clear:both; margin-top:90px; padding-top:30px; border-top:1px solid #e8e8e8;}
+			.b_hsuf_confirm {display:block; width:157px; height:44px; margin:0 auto; background-position:-75px -85px}
