@@ -11,6 +11,7 @@ var hsRehouse = ({
 		this.hrFooterSelectBox();
 		this.hrSnbAction();
 		this.hrGnbLogin();
+		this.hrDrsLayer();
 	},
 	// front UI
 	hrForntPage : function() {
@@ -41,20 +42,43 @@ var hsRehouse = ({
 				infiniteLoop: true
 			});
 		};
-		mainModuleRolling('#hrModuleThumbExamr');
+		var mainModuleRolling2 = function(id) {
+			$(''+id+'').bxSlider({
+				auto: true,
+				pause: 3800,
+				speed: 500,
+				slideMargin:0,
+				mode: 'horizontal',
+				pager : false,
+				infiniteLoop: true,
+				onSlideAfter: function($slideElement, oldIndex, newIndex) {
+					$('#rm_href').html('<a href="../remodeling/ik_bestphoto_detail.do?idx=' + $slideElement.attr('link2') + '">' + $slideElement.attr('title') + '</a>');
+					$('#rm_hit').html('조회 ' + $slideElement.attr('hit') + '회');
+					$('#rm_dt').html($slideElement.attr('dt'));
+					$('#rm_addr').html($slideElement.attr('addr'));
+				}
+			});
+		};
+		if (1 < $('#hrModuleThumbExamr').children('li').size()) {
+			mainModuleRolling2('#hrModuleThumbExamr');
+		}
+
 		setTimeout(function() {
 			mainModuleRolling('#hrModuleThumbRecmp');
 		}, 1000);
-		// section banner
-		$('#hrMainSectionBanner').bxSlider({
-			auto: true,
-			pause: 4000,
-			speed: 500,
-			slideMargin:0,
-			mode: 'vertical',
-			pager : false,
-			infiniteLoop: true
-		});
+
+		if (1 < parseInt($('#hrMainSectionBanner').attr('bcount'))) {
+			// section banner
+			$('#hrMainSectionBanner').bxSlider({
+				auto: true,
+				pause: 4000,
+				speed: 500,
+				slideMargin:0,
+				mode: 'vertical',
+				pager : false,
+				infiniteLoop: true
+			});
+		}
 	},
 	// subpage UI
 	hrSubPage : function() {
@@ -113,8 +137,8 @@ var hsRehouse = ({
 			});
 		})();
 		// FAQ리스트
-		var hrFaqList = (function() {
-			var hrpeFaqList = $("#hrpeFaqList");
+		var hrFaqList = function(obj) {
+			var hrpeFaqList = $(""+obj+"");
 			var hrpeFaqListHref = hrpeFaqList.find(".subject").find("a");
 
 			hrpeFaqListHref.each(function(index) {
@@ -129,7 +153,9 @@ var hsRehouse = ({
 					e.preventDefault();
 				});
 			});
-		})();
+		};
+		hrFaqList("#hrpeFaqList");
+		hrFaqList(".hrmp_tbl");
 	},
 	// 공지사항 rolling
 	hrHeadNoticeRolling : function() {
@@ -322,6 +348,22 @@ var hsRehouse = ({
 		mypageClose.each(function() {
 			$(this).bind("click", function() {
 				$(".hrmpLayerOpen").removeClass("hrmpLayerOpen");
+			});
+		});
+	},
+	// 드레스룸 상세보기 레이어
+	hrDrsLayer : function() {
+		var drsWrapBtn = $(".hrsps_lyr_w").find("a");
+
+		drsWrapBtn.each(function() {
+			$(this).on("click", function(e) {
+				var prentEle = $(this).parent();
+				if (prentEle.hasClass("drs_in_open")) {
+					prentEle.removeClass("drs_in_open");
+				} else {
+					prentEle.addClass("drs_in_open");
+				}
+				e.preventDefault();
 			});
 		});
 	}
