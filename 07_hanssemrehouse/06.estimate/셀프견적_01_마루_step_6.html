@@ -214,10 +214,24 @@
 						<div class="hrmtp_w">
 							<p class="hrmtp"><em>VAT 및 시공가격 포함</em> <strong>1,500,000원</strong></p>
 							<p class="hsetc_csp hrmtp_desc"><span class="ir">셀프견적은 고객용 간편견적으로 기타비용이 추가 또는 차감될 수 있으며 실제 상품가와는 다를 수 있습니다. 자세한 견적을 원하시면 견적문의를 이용해주세요.</span></p>
+							<script type="text/javascript">
+							//<![CDATA[
+								function do_print() {
+									var appendBi = '<p id="printBi"><img src="../images/hsrh_bi_prnt.jpg" alt="한샘ik" /></p>';
+									var printCss = '<style type="text/css" media="print">.ir{z-index:1;display:block;color:#000;white-space:normal;text-align:left}#header,.hr_nowpage,.hrp_2dm_w,.hsest_setp_w,.hsetc_footer_w,.hrmtp_fnc,#footer{display:none}.hr_sest_w{padding-top:0}.hsest_in_w{margin-top:0}#printBi{display:block;margin-top:10px;padding-bottom:20px;border-bottom:1px solid #000}.hsest_cont_w{width:100%;border-top:0}.hsetc_tit,.hsetc_csp,.hsetc_tit_desc,.hrmtp_desc{width:100% !important;height:auto !important;overflow:visible !important}.hsetc_csp .ir{font-size:13px;color:#252525}.hrmtp_desc .ir{font-size:12px;color:gray}.hsetc_tit .ir{font-size:13px;color:#d50030}.hsetc_tit_desc{margin-top:0}.hsetc_tit_desc .ir{font-size:21px;color:#252525}</style>'
+
+									if ($("#printBi").length===0) {
+										$("head").append(printCss);
+										$(".hsest_cont_w").prepend(appendBi);
+									}
+									window.print();
+								}
+							//]]>
+							</script>
 							<ul class="hrmtp_fnc">
 								<li><a href="#" class="gbtn b_hsetc_g b_hsetc_mps"><span><i class="ir">마이페이지 저장</i></span></a></li>
 								<li><a href="#" class="gbtn b_hsetc_g b_hsetc_ems"><span><i class="ir">E-mail 송부</i></span></a></li>
-								<li><a href="#" class="gbtn b_hsetc_g b_hsetc_ep"><span><i class="ir">견적내용 출력</i></span></a></li>
+								<li><a href="#" onclick="do_print();" class="gbtn b_hsetc_g b_hsetc_ep"><span><i class="ir">견적내용 출력</i></span></a></li>
 							</ul>
 						</div>
 					</div>

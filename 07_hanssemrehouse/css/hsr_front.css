@@ -23,7 +23,7 @@
 						.brd_mexl_best {z-index:3; position:absolute; top:16px; left:16px; display:block; width:59px; height:72px; background:url('../images/hsr_set.png') -265px -575px no-repeat;}
 					.hrms_md_img {position:absolute; top:0; left:0; clear:both; width:333px; height:225px; overflow:hidden;}
 					.hrms_md_detail {clear:both; font-size:0;}
-						.hrms_md_detail li {font-size:13px; color:#666;}
+						.hrms_md_detail li {font-size:13px; color:#666; line-height:20px;}
 						.hrms_md_detail li.date, .hrms_md_detail li.hit {display:inline; padding-left:8px;}
 						.hrms_md_detail li.date {padding-left:0; padding-right:15px; background:url('../images/bar_hrms_slash.gif') right 3px no-repeat;}
 					.hrms_md_exp {margin-top:1px; padding-right:40px; font-size:13px; color:#666; line-height:21px; letter-spacing:-1px;}

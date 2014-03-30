@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* main visual */
+.hr_main_visual_w {position:relative; width:1000px; height:565px; margin-top:20px; font-size:0; overflow:hidden;}
+	.hr_main_visual_w .bx-controls {position:absolute; bottom:28px; right:30px;}
+		.hr_main_visual_w .bx-pager-item {float:left; display:inline; margin-left:9px;}
+			.hr_main_visual_w a.bx-pager-link {display:block; width:21px; height:21px; text-indent:-9999px; background-image:url('../images/hsr_set.png'); background-position:-270px top;}
+			.hr_main_visual_w a.active {background-position:-295px top;}
+	.hr_main_visual {clear:both; width:1000px; height:565px;}
+/* 가운데영역 */
+.hrm_section {clear:both; float:left; width:670px; margin-top:25px; font-size:0;}
+	.hrms_md_w {overflow:hidden;}
+		.hrms_module {position:relative; float:left; display:inline; width:670px;}
+			.hrms_md_head {overflow:hidden;}
+				.hrms_module h3, .hrma_selfest_w h3, .hrma_styles_w h3 {float:left; height:15px; overflow:hidden; background-image:url('../images/hsr_set.png'); background-repeat:no-repeat;}
+				.b_hrms_more {float:left; display:inline; width:40px; height:7px; margin:6px 0 0 11px; background-position:-230px -65px;}
+					.b_hrms_more .ir {text-indent:-99999px;}
+			.hrmsm_list {clear:both; margin-top:14px;}
+				.hrmsm_li {position:relative; float:left; display:inline; width:333px; height:99px; margin-right:4px; padding-top:225px;}
+				.hrmsm_list li.last {margin-right:0;}
+					.hrms_module h4 {margin-top:13px; font-size:13px; font-weight:bold; color:#000;}
+						.hrms_module h4 a {color:#000;}
+						.brd_mexl_best {z-index:3; position:absolute; top:16px; left:16px; display:block; width:59px; height:72px; background:url('../images/hsr_set.png') -265px -575px no-repeat;}
+					.hrms_md_img {position:absolute; top:0; left:0; clear:both; width:333px; height:225px; overflow:hidden;}
+					.hrms_md_detail {clear:both; font-size:0;}
+						.hrms_md_detail li {font-size:13px; color:#666;}
+						.hrms_md_detail li.date, .hrms_md_detail li.hit {display:inline; padding-left:8px;}
+						.hrms_md_detail li.date {padding-left:0; padding-right:15px; background:url('../images/bar_hrms_slash.gif') right 3px no-repeat;}
+					.hrms_md_exp {margin-top:1px; padding-right:40px; font-size:13px; color:#666; line-height:21px; letter-spacing:-1px;}
+		/* 리모델링 사례 */
+		.hrmsm_examr {border-bottom:1px solid #dcdcdc;}
+			.hrmsm_examr h3 {width:84px; background-position:-145px -65px;}
+			.hrmsm_examr .hrms_md_img {border-top:1px solid #000;}
+		/* 베스트 상품 */
+		.hrmsm_bestp {margin-top:30px;}
+			.hrmsm_bestp h3 {width:71px; background-position:-270px -65px;}
+	/* 하단배너 */
+	.hrms_banner {position:relative; clear:both; width:670px; height:345px; margin-top:20px; font-size:0; overflow:hidden;}
+/* 우측영역 */
+.hrm_aside {float:left; display:inline; margin-left:30px; width:300px; margin-top:25px;}
+	/* 셀프견적 */
+	.hrma_selfest_w {position:relative; clear:both;}
+		.hrma_selfest_w h3 {width:54px; background-position:left -80px;}
+		.hrma_selfest {clear:both; margin-top:14px; font-size:0; border-top:1px solid #000;}
+	 		.hrma_selfest li.last {border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9;}
+	/* 스타일제안 */
+	.hrma_styles_w {position:relative; clear:both; margin-top:30px;}
+		.hrma_styles_w h3 {width:73px; background-position:-55px -80px;}
+		.hrma_styles {clear:both; margin-top:14px; font-size:0;}
+	/* 제휴점/멤버십 */
+	.hrma_ptmb_w {clear:both; margin-top:59px; font-size:0;}
+		.hrma_ptmb_w li {margin-top:5px;}
