@@ -162,9 +162,8 @@
 		.hrpe_sas_head .hrp_sort_w {}
 	.hrpe_sas_list {}
 		.hrpe_sas_list thead tr th.num {width:79px;}
-		.hrpe_sas_list thead tr th.product {width:197px;}
-		.hrpe_sas_list thead tr th.category {width:112px;}
-		.hrpe_sas_list thead tr th.subject {width:552px; padding-left:60px; text-align:left;}
+		.hrpe_sas_list thead tr th.category {width:204px;}
+		.hrpe_sas_list thead tr th.subject {width:657px; padding-left:60px; text-align:left;}
 		.hrpe_sas_list tbody tr td.subject a img {position:relative; top:-1px; margin-left:5px; vertical-align:middle;}
 	.hrpe_sas_list_w .hr_paging_w {margin-top:40px;}
 	.hrsas_exp_desc {clear:both; margin-top:70px; padding:30px 0 28px 32px; overflow:hidden; background:#fbfbfb;}
@@ -437,3 +436,8 @@
 	.brduw_d_r {width:241px;}
 		.brduw_desc .brd_fnc {margin-right:29px;}
 		.hrme_brls_di li span.opt_title {margin-left:0; color:#a6a6a6;}
+
+
+.hrpe_re_view {clear:both; margin-top:54px; font-size:13px; color:#262626; line-height:22px;}
+.hrpe_re_list_w {clear:both; margin-top:60px; padding-top:23px; text-align:center; border-top:1px solid #e8e8e8;}
+	.b_re_list {width:137px; height:44px; background-position:-395px -1375px;}

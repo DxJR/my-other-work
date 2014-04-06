@@ -23,6 +23,7 @@ var hsRehouse = ({
 			slideMargin:0,
 			mode: 'horizontal',
 			pager : true,
+			autoHover : true,
 			infiniteLoop: true,
 			onSliderLoad : function(id) {
 				if ($.browser.msie) {
@@ -365,6 +366,19 @@ var hsRehouse = ({
 				}
 				e.preventDefault();
 			});
+		});
+	},
+	// 우측 TOP 버튼
+	hrGoTop : function() {
+		var topObj = $("#goTop");
+		var currentPosition = parseInt(topObj.css("top"));
+		$(window).scroll(function() {
+			var position = $(window).scrollTop();
+			if(position>600) {
+				topObj.stop().animate({"top":position+currentPosition+"px"},300);
+			} else {
+				topObj.attr('style','');
+			}
 		});
 	}
 });
