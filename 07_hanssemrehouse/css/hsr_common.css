@@ -536,16 +536,17 @@ input.radio, input.check {top:-1px;.top:0; position:relative; width:13px; height
 			.hrmp_b_w .b_hrmp_da {width:95px; height:37px; background-position:-150px -170px;}
 	.hrwl_list_w {z-index:1; position:relative; clear:both; margin:-1px 0 50px 0; overflow:hidden; border-bottom:1px solid #222;}
 		.hrwl_list_w li {position:relative; float:left; display:inline; width:500px; height:434px; padding:16px 0 0 0; border:1px solid #e8e8e8; border-width:1px 1px 0 0;}
-			.hwl_tit {padding:0 80px 0 0; font-size:13px; color:#262626; line-height:20px;}
+			.hwl_tit {padding:0 120px 0 0; font-size:13px; color:#262626; line-height:20px;}
 				.hwl_tit label {position:absolute; top:19px; left:0; display:block; width:15px; height:15px; overflow:hidden; background:url('../images/set_mypage.png') -320px -15px no-repeat;}
 					.hwl_tit label input {position:absolute; top:-20px; left:-20px;}
 				.hwl_tit label.cr_element_on {background:url('../images/set_mypage.png') -335px -15px no-repeat;}
 				.hwl_tit span {display:block; margin-left:28px; font-size:11px; font-family:arial; color:#808080;}
 				.hwl_tit strong {display:block; margin-top:2px; font-weight:normal;}
 			.hwl_fnc {position:absolute; top:40px; right:30px; overflow:hidden;}
-				.b_hwl_del, .b_hwl_esti {background-image:url('../images/set_mypage.png');}
-				.b_hwl_del {width:51px; height:34px; background-position:left -185px;}
+				.b_hwl_del, .b_hwl_esti, .b_hwl_est {background-image:url('../images/set_mypage.png');}
+				.b_hwl_del {width:69px; height:34px; background-position:left -185px;}
 				.b_hwl_esti {width:95px; height:34px; background-position:-400px -15px;}
+				.b_hwl_est {width:69px; height:34px; background-position:-70px -185px;}
 				.hwl_fnc .gbtn {float:left; margin-left:2px;}
 			.hrwl_list_w li img {margin-top:11px;}
 		.hrwl_list_w li.last {width:469px; padding-left:30px; border-width:1px 0 0 0;}
@@ -561,7 +562,10 @@ input.radio, input.check {top:-1px;.top:0; position:relative; width:13px; height
 			.hrmp_b_w .b_hrms_ae {width:121px; height:37px; background-position:left -235px;}
 			.hrmp_b_w .b_hrms_se {width:123px; height:37px; background-position:-125px -235px;}
 			.hrmp_b_w .b_hrms_da {width:105px; height:37px; background-position:-250px -235px;}
-.hrms_list li .hwl_tit strong .lb {color:#8c8c8c;}
+.hrms_list li .hwl_tit {padding-right:200px;}
+	.hrms_list li .hwl_tit strong, .hrms_list li .hwl_tit em.lb {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+	.hrms_list li .hwl_tit em.lb {color:#8c8c8c;}
+
 
 
 /* 검색결과 */
@@ -599,3 +603,6 @@ input.radio, input.check {top:-1px;.top:0; position:relative; width:13px; height
 
 .rs_clear	{width:1000px; height:50px;}
 #printBi {display:none;}
+
+
+#goTop {z-index:10; position:absolute; right:-54px; top:623px; clear:both;}

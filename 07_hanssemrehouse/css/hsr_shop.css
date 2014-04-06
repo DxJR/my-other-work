@@ -212,11 +212,11 @@
 				.hrs_sf_byl_h .hrp_sort_w .sbToggleOpen {background-position:-405px -105px;}
 				.hrs_sf_byl_h .hrp_sort_w .sbSelector {width:115px; height:25px; line-height:25px;}
 						.hrs_sf_byl_h .hrp_sort_w .sbOptions li a {height:25px; line-height:25px;}
-		.hrs_sf_byl_w {clear:both; padding-bottom:3px; overflow:hidden; border-bottom:1px solid #030303;}
+		.hrs_sf_byl_w {clear:both; padding-bottom:1px; overflow:hidden; border-bottom:1px solid #030303;}
 			.hrs_sf_byl {margin-top:-1px;}
-				.hrs_sf_byl li {padding:25px 0 20px 0; font-size:13px; line-height:22px; border-top:1px solid #e5e5e5;}
+				.hrs_sf_byl li {padding:15px 0 16px 0; font-size:13px; line-height:22px; border-top:1px solid #e5e5e5;}
 					.hrsps_rs_t {color:#262626;}
-					.hrsps_rs_a {color:#808080;}
+					.hrsps_rs_a {margin-top:1px; color:#808080; line-height:20px;}
 					.hrs_sf_byl .hrsps_rs_m {margin-top:11px; overflow:hidden;}
 						.hrs_sf_byl .hrsps_rs_m a {float:left; display:inline; width:40px; height:7px; overflow:hidden; background:url('../images/hsr_set.png') -230px -65px no-repeat;}
 		.hrs_sf_by_list .hr_paging_w {margin-top:28px;}
@@ -849,6 +849,8 @@
 					.hi_rtype {width:74px; background-position:-240px -55px;}
 					.hi_cname {width:47px; background-position:-315px -55px;}
 					.hi_ccode {width:64px; background-position:-365px -55px;}
+					.hi_id {width:39px; background-position:-100px -170px;}
+					.hi_addr2 {width:76px; background-position:-150px -170px;}
 				.hsuf_inset dt.hit_2nd {clear:none; width:122px;}
 					.hsuf_inset dt strong {display:block; height:14px;}
 				.hsuf_inset dd {float:left; display:inline; width:645px; min-height:34px; padding-top:16px; font-size:13px; color:#262626; letter-spacing:-1px; border-top:1px solid #e8e8e8;}
@@ -866,7 +868,8 @@
 					.seib	{display:inline-block;}
 					#hEmail	{width:200px;}
 					#hAddress	{width:300px;}
-					#hTime	{width:300px;}
+					#hUname, #hTel {width:210px;}
+					#hEmail {width:229px;}
 				.hsuf_inset dd.last {width:257px;}
 		    .hsuf_st00 {margin-top: 32px; width:555px; background-position:0px -680px;}
 
@@ -875,9 +878,12 @@
 
 
 		/* step1 */
-		.hsuf_st1 {margin-top:12px;}
+		.hsuf_st1, .hsuf_st1-1 {margin-top:12px;}
 			.hsuf_st1 .hsuf_tit {background-position:left top;}
 			.hsuf_desc {clear:both; width:396px; height:14px; margin-top:17px; background-position:left -130px;}
+		/* step1-1 */
+		.hsuf_st1-1 .hsuf_tit {background-position:left -150px;}
+		.hsuf_desc2 {width:290px; background-position:-100px -150px;}
 		/* step2 */
 		.hsuf_is_addr {clear:both; float:right; margin:50px 0 11px 0; overflow:hidden;}
 			.hsuf_is_addr li {float:left; display:inline; margin-left:30px; font-size:13px; color:#000; letter-spacing:-1px;}
@@ -981,5 +987,14 @@
 
 
 /* 견적문의 임시 2014.03.09 */
-
 .detReqtemp	{width:1000px; height:556px;}
+.hrsps_rs_d {clear:both; margin-top:7px; overflow:hidden;}
+	.hrsps_rs_d a {float:left; display:inline; width:81px; height:30px; overflow:hidden; background:url('../images/hsr_set.png') -310px -1375px no-repeat;}
+.hrsps_brs_l_w {clear:both; width:882px; margin-top:56px;}
+	.hrsps_brs_l_w h5 {width:226px; height:20px; background:url('../images/tit_brs.gif') left top no-repeat;}
+	.hrsps_brs_l_w .hrsps_rs_s_tit {border-bottom:1px solid #d1e6fa;}
+		.hrsps_brs_l_w .hrsps_rs_s_tit strong {width:76px; height:13px; background:url('../images/tit_brs_s.gif') left top no-repeat;}
+	.hrsps_brs_l_w ul {clear:both; margin-top:16px; overflow:hidden;}
+		.hrsps_brs_l_w ul li {float:left; width:50%;}
+			.hrsps_brs_l_w ul li a {display:block; font-size:13px; color:#808080; line-height:21px;}
+				.hrsps_brs_l_w ul li a strong {display:block; font-weight:normal; color:#000;}
