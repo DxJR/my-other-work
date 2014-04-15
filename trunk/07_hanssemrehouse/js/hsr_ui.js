@@ -140,16 +140,30 @@ var hsRehouse = ({
 		// FAQ리스트
 		var hrFaqList = function(obj) {
 			var hrpeFaqList = $(""+obj+"");
-			var hrpeFaqListHref = hrpeFaqList.find(".subject").find("a");
+			if (obj==="#hrpeFaqList") {
+				var hrpeFaqListHref = hrpeFaqList.find(".subject").find("a");
+			} else {
+				var hrpeFaqListHref = hrpeFaqList.find("td").not(".checkbox");
+			}
 
 			hrpeFaqListHref.each(function(index) {
 				$(this).bind("click", function(e) {
-					if ($(this).parent().parent().hasClass("selected")) {
-						$(this).parent().parent().removeClass("selected").next().removeClass("asSelected");
+					if (obj==="#hrpeFaqList") {
+						if ($(this).parent().parent().hasClass("selected")) {
+							$(this).parent().parent().removeClass("selected").next().removeClass("asSelected");
+						} else {
+							hrpeFaqList.find("tr").removeClass("selected");
+							hrpeFaqList.find("tr").removeClass("asSelected");
+							$(this).parent().parent().addClass("selected").next().addClass("asSelected");
+						}
 					} else {
-						hrpeFaqList.find("tr").removeClass("selected");
-						hrpeFaqList.find("tr").removeClass("asSelected");
-						$(this).parent().parent().addClass("selected").next().addClass("asSelected");
+						if ($(this).parent().hasClass("selected")) {
+							$(this).parent().removeClass("selected").next().removeClass("asSelected");
+						} else {
+							hrpeFaqList.find("tr").removeClass("selected");
+							hrpeFaqList.find("tr").removeClass("asSelected");
+							$(this).parent().addClass("selected").next().addClass("asSelected");
+						}
 					}
 					e.preventDefault();
 				});
@@ -380,5 +394,23 @@ var hsRehouse = ({
 				topObj.attr('style','');
 			}
 		});
-	}
+	},
+	// shop 리모델링 사례
+	hrShopRemodeling : function(id) {
+		var hrmsmWrap = $(".hrs_sf_re");
+
+		$("#"+id+"").bxSlider({
+			auto: false,
+			speed: 300,
+			slideMargin:0,
+			mode: 'horizontal',
+			pager : true,
+			infiniteLoop: true,
+			onSliderLoad : function(id) {
+				hrmsmWrap.find(".bx-controls").addClass("hr_paging_w");
+				hrmsmWrap.find(".bx-prev").addClass("hrpg_f").css("left","-"+($(".bx-pager").width()+28)+"px").html("&lt;");
+				hrmsmWrap.find(".bx-next").addClass("hrpg_f").html("&gt;");
+			}
+		});
+	},
 });

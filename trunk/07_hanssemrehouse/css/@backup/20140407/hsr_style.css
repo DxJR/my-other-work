@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+
+.style_index	{width:1000px; height:853px; margin-top:-20px;}
+
+.style_index_tit	{width:1000px; height:288px; background-image:url('../images/index_tit_bg.jpg');}
+.style_index_tit	h3	{padding-top:30px; margin-left:45px;}
+.style_index_tit	h1	{margin-top:37px; margin-left:45px;}
+.style_index_tit	p	{margin-top:24px; margin-left:45px;}
+
+
+.style_archi	{width:1000px;}
+.style_archi	.title	{height:57px;/* background-color:#fff600; */ margin-top:65px;}
+.style_archi	.title	ul  {}
+.style_archi	.title	ul 	li {float:left; margin-right:70px;}
+.style_archi	.title	ul 	li.nlast {float:right; margin-right:0px;}
+
+.style_archi .intr_area	{width:1000px; height:305px; margin-top:30px; background-image:url('../images/style_intr_bg.jpg'); clear:both;}
+.style_archi .intr_area	ul	li	{float:left; margin-right:4px; visibility:hidden;}
+.style_archi .intr_area ul	li.select	{visibility:visible;}
+.style_archi .intr_area	ul	li.last	{margin-right:0px;}
+
+.style_archi .desc	{clear:both; width:1000px; height:1450px; }
+.style_archi .desc .style_desc_text	{width:998px; height:620px; border-left:solid 1px #e0e0e0; border-right:solid 1px #e0e0e0; border-bottom:solid 1px #e0e0e0;}
+.style_archi .desc .style_desc_text ul	{padding:40px;}
+.style_archi .desc .style_desc_text ul	li {float:left; margin-right:18px;}
+.style_archi .desc .style_desc_text ul	li h3 {font-size:13px; font-weight:bold; color:#000; width:352px; height:29px; border-bottom:solid 1px #e0e0e0;}
+.style_archi .desc .style_desc_text ul	li  p {font-size:13px; color:#808080; line-height:24px; margin-top:10px; letter-spacing:-1px;}
+
+.style_archi .desc .style_desc_text ul.desc_second	{margin-top:0px; width:920px; height:400px; clear:both;}
+.style_archi .desc .style_desc_text ul.desc_second	li.ds {margin-right:20px; margin-top:50px;}
+.style_archi .desc .style_desc_text ul.desc_second	li.ds  h3  {width:164px;}
+.style_archi .desc .style_desc_text ul.desc_second	li.ds  h4  {margin-top:6px;}
+.style_archi .desc .style_desc_text ul.desc_second	li.ds {float:left; width:164px;}
+
+.intr_btns	ul	li	{float:left; margin-right:4px; margin-top:4px; }
+.intr_btns	ul	li.last	{margin-right:0px; }
+
+
+
+.style_intr_2_index	{margin-top:20px;}
+.recommend_item	{margin-top:100px;}
+
+
+.style_archi .hrsps_sr_tb {border-right:solid 1px #e0e0e0;}
