@@ -12,16 +12,14 @@
 .hrpm_cr_dn {clear:both; margin-top:30px;}
 
 /* 부엌 */
-.hrp_2dm_w {height:70px;}
-.hrp_2dm_w li a {height:68px;}
 .hrp_2dm_w li a.hrp2d_kc {width:198px; background-position:left top;}
 .hrp_2dm_w li a.hrp2d_kc:hover em {left:19px; background-position:left -180px;}
 .hrp_2dm_w li a.hrp2d_sr {background-position:-200px top;}
-.hrp_2dm_w li a.hrp2d_sr:hover em {left:20px; background-position:-26px -180px;}
+.hrp_2dm_w li a.hrp2d_sr:hover em {background-position:-27px -180px;}
 .hrp_2dm_w li a.hrp2d_bt {background-position:-400px top;}
-.hrp_2dm_w li a.hrp2d_bt:hover em {left:20px; background-position:-53px -180px;}
-.hrp_2dm_w li a.hrp2d_fr {background-position:-600px top;}
-.hrp_2dm_w li a.hrp2d_fr:hover em {left:20px; background-position:-80px -180px;}
+.hrp_2dm_w li a.hrp2d_bt:hover em {background-position:-54px -180px;}
+.hrp_2dm_w li a.hrp2d_fr {background-position:-599px top;}
+.hrp_2dm_w li a.hrp2d_fr:hover em {width:25px; background-position:-80px -180px;}
 .hrp_2dm_w li a.hrp2d_wd {border-right:1px solid #e0e0e0; background-position:-800px top;}
 .hrp_2dm_w li a.hrp2d_wd:hover em {left:20px; background-position:-107px -180px;}
 /* selected */
@@ -102,6 +100,11 @@
 					.hrp_sort_w .sbOptions li a:hover {color:#d50030;}
 				.hrp_sort_w .sbOptions li.first {padding-top:5px;}
 				.hrp_sort_w .sbOptions li.last {padding-bottom:18px;}
+
+
+
+
+
 	/* 4depth 탭메뉴 */
 	.b_hrp4d_all span {width:17px; background-position:left -210px;}
 	.b_hrp4d_all:hover span {background-position:-285px -210px;}
@@ -361,6 +364,8 @@
 				.hrppd_rplist li a {display:block; font-size:0;}
 					.hrppd_rplist li a span {display:block; margin-top:6px; font-size:13px; color:#262626; letter-spacing:-1px;}
 			.hrppd_rplist li.nth-4 {margin-right:0;}
+
+
 	/* 상세정보 */
 	.hrppd_pd_w {clear:both; margin-top:14px; overflow:hidden;}
 		.hrppd_pd_in {position:relative; clear:both; padding-top:25px; overflow:hidden; font-size:13px; color:#1a1a1a; line-height:24px; letter-spacing:-1px;}
@@ -466,5 +471,3 @@
 .hrppd_head p{position:absolute;top:19px;}
 
 
-.prd_index {clear:both; margin:25px 0 0 0; padding-bottom:20px; font-size:0;}
-.prdi_btmb {padding:0 0 30px 0; border-bottom:1px solid #e8e8e8;}
