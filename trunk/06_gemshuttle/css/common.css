@@ -405,6 +405,11 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 				.b_atc_del {width:25px; height:25px; background-position:-70px top;}
 				.gsfb_atc_img li .b_atc_del {z-index:2; position:absolute; top:1px; right:1px;}
 		.gsfb_desc {clear:both; margin-top:9px; font-size:12px; color:#969696; letter-spacing:-1px;}
+.gsae_rn {width:auto; text-align:left; vertical-align:top;}
+	.gsae_rn .gsae_tit {color:#787878; border-color:#787878;}
+.gsae_lnw {display:inline-block; margin-left:4px; vertical-align:middle;overflow:hidden;}
+	.gsae_lnw i {float:left; width:8px; height:8px; margin-right:2px; border:1px solid #fec500; background:#ffd02c;}
+.glnw_0 i, .glnw_1 i:nth-child(2), .glnw_1 i:nth-child(3), .glnw_1 i:nth-child(4), .glnw_1 i:nth-child(5), .glnw_2 i:nth-child(3), .glnw_2 i:nth-child(4), .glnw_2 i:nth-child(5), .glnw_3 i:nth-child(4), .glnw_3 i:nth-child(5), .glnw_4 i:nth-child(5) {background:none;}
 
 @media screen and (-webkit-min-device-pixel-ratio:1.5){
 	.gbtn, .icn {background-image:url('../images/set_gs@1.5.png');}
