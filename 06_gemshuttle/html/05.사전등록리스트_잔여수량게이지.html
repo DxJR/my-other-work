@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<!-- 메인비쥬얼 -->
+	<div id="gsVisualWrapper" class="gs_visual_w">
+		<div class="gsv_inner">
+			<ul id="gsVisualList" class="gsv_list">
+				<li><a href="#"><img src="../images/temp/temp_001.jpg" alt="난폭동화 사전예약 이벤트" /></a></li>
+				<li><a href="#"><img src="../images/temp/temp_001-2.jpg" alt="난폭동화 사전예약 이벤트" /></a></li>
+				<li><a href="#"><img src="../images/temp/temp_001-3.jpg" alt="난폭동화 사전예약 이벤트" /></a></li>
+			</ul>
+			<div class="gsv_paging">
+				<a href="#" id="gsvPrev">이전</a>
+				<a href="#" id="gsvNext">다음</a>
+			</div>
+			<div id="gsvIndicator">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+		// 메인비주얼
+		$(window).load(function() {
+				var gsVisualSlideInit = (function() {
+					var gsVisualWrapper = $("#gsVisualWrapper");
+					var gsVisualListWrap = $("#gsVisualList");
+					var gsVisualList = gsVisualListWrap.find("li");
+					var gsvSpeed = 5000;  // 속도조절(5000 = 5초)
+
+					var gsvPrev = $("#gsvPrev");
+					var gsvNext = $("#gsvNext");
+					var gsvIndicator = $("#gsvIndicator");
+					var animationTimer;
+					var noVisualIndex = 1;
+					var noVisualStart = 0;
+					var slideNum;
+
+					gsVisualListWrap.css({width:''+(gsVisualWrapper.width() * gsVisualList.length)+'px'});
+					gsVisualList.css({width:''+gsVisualWrapper.width()+'px'});
+					gsVisualList.each(function(index) {
+						var gsvIndiHref = "<a href=\"#\" rel=\""+(index+1)+"\">"+(index+1)+"</a>";
+						gsvIndicator.append(gsvIndiHref);
+					});
+					gsvIndicator.css("marginLeft" , "-"+parseInt(gsvIndicator.width()/2)+"px");
+					gsvIndicator.find("a:first").addClass("this");
+
+
+					var gsVARun = function(noVisualIndex) {
+						gsvIndicator.find("a").removeClass("this");
+						gsvIndicator.find("a:eq("+(noVisualIndex-1)+")").addClass("this");
+
+						gsVisualListWrap.css({transition:'1s', transition:'1s', transform:'translate3d(-'+((noVisualIndex-1) * gsVisualWrapper.width())+'px, 0, 0)'}).animate({duration:300, queue:true, complete:function() {
+							$(this).css({transition:'0s', transition:'0s'});
+						}});
+					};
+
+					var nobtPagingControl = function(noVisualIndex) {
+						gsvPrev.unbind();
+						gsvNext.unbind();
+
+						gsvPrev.click("click", function(){
+							if (noVisualIndex != 1) {
+								clearTimeout(animationTimer);
+								AniTimeout(parseInt(noVisualIndex-1));
+							}
+						});
+						gsvNext.click("click", function(){
+							if (noVisualIndex != gsVisualList.length) {
+								clearTimeout(animationTimer);
+								AniTimeout(parseInt(noVisualIndex+1));
+							}
+						});
+					};
+
+					var AniTimeout = function(noVisualIndex) {
+						gsVARun(noVisualIndex);
+						nobtPagingControl(noVisualIndex);
+
+						if (noVisualIndex === gsVisualList.length) {
+							noVisualIndex = 1;
+						} else {
+							noVisualIndex++;
+						}
+
+						animationTimer = setTimeout(function() {
+							AniTimeout(noVisualIndex)
+						}, gsvSpeed);
+					};
+
+					AniTimeout(1);
+			})();
+		});
+	//]]>
+	</script>
+	<!-- 본문컨텐츠 -->
+	<div class="gs_content_w">
+		<!-- 탭메뉴 -->
+		<nav class="gs_tab_w">
+			<ul id="gsListTab" class="gs_tab gst_n2">
+				<!-- 현재선택 일 때 class="this" 추가 -->
+				<li class="this"><a href="#" rel="gsListPre">사전등록게임</a></li>
+				<li><a href="#" rel="gsListNow">출시 게임</a></li>
+			</ul>
+		</nav>
+		<!-- 목록 : 사전등록게임 -->
+		<div id="gsListPre" class="gs_list_w gslw_pre gslw_show">
+			<h2 class="hide">사전등록 게임</h2>
+			<!-- 프리미엄 사전등록 -->
+			<div class="gsl_w gsl_premium_w">
+				<h3 class="gs_tit">프리미엄 사전등록</h3>
+				<ul class="gs_list_t1">
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<span class="gsae_lnw glnw_4"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 사전등록 리스트 -->
+			<div class="gsl_w">
+				<h3 class="gs_tit">사전등록 리스트</h3>
+				<ul class="gs_list_t1">
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<strong>수량소진</strong>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<!-- 잔여 수량에 따라 뒤에 숫자로 조절 -->
+								<span class="gsae_lnw glnw_5"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<span class="gsae_lnw glnw_4"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<span class="gsae_lnw glnw_3"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<span class="gsae_lnw glnw_2"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<span class="gsae_lnw glnw_1"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae"><span class="gsae_tit">마감</span> <span class="gsae_num">2013.12.25</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae gsae_r gsae_rn">
+								<span class="gsae_tit">잔여수량</span>
+								<span class="gsae_lnw glnw_0"><i></i><i></i><i></i><i></i><i></i></span>
+							</em>
+						</a>
+					</li>
+				</ul>
+				<!-- 더보기 버튼 -->
+				<p class="gsl_more_w"><button type="button" class="gbtn b_gsl_more"><i class="icn i_more">+</i>더보기</button></p>
+			</div>
+		</div>
+		<!-- 목록 : 출시게임 -->
+		<div id="gsListNow" class="gs_list_w">
+			<h2 class="hide">출시게임</h2>
+			<div class="gsl_w">
+				<ul class="gs_list_t1">
+					<!-- 수량소진일 때 class="gsl_soldout" 추가 -->
+					<li class="gsl_soldout">
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<strong>수량소진</strong>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae gsae_r"><span class="gsae_tit">잔여수량</span> <span class="gsae_num">0개</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae"><span class="gsae_tit">출시</span> <span class="gsae_num">미정</span></em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae gsae_r"><span class="gsae_tit">잔여수량</span> <span class="gsae_num">500개</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae"><span class="gsae_tit">출시</span> <span class="gsae_num">2013.12.25</span></em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae gsae_r"><span class="gsae_tit">잔여수량</span> <span class="gsae_num">500개</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae"><span class="gsae_tit">출시</span> <span class="gsae_num">2013.12.25</span></em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae gsae_r"><span class="gsae_tit">잔여수량</span> <span class="gsae_num">500개</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae"><span class="gsae_tit">출시</span> <span class="gsae_num">2013.12.25</span></em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae gsae_r"><span class="gsae_tit">잔여수량</span> <span class="gsae_num">500개</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae"><span class="gsae_tit">출시</span> <span class="gsae_num">2013.12.25</span></em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="gsl_by_w">
+							<h4>몬스터 길들이기</h4>
+							<img src="../images/temp/temp_002.gif" width="65" height="64" alt="몬스터 길들이기" />
+							<p>호쾌한 타격감의 판타지 액션 RPG</p>
+							<em class="gs_ae gsae_r"><span class="gsae_tit">잔여수량</span> <span class="gsae_num">500개</span></em>
+							<span class="bar">|</span>
+							<em class="gs_ae"><span class="gsae_tit">출시</span> <span class="gsae_num">2013.12.25</span></em>
+						</a>
+					</li>
+				</ul>
+				<!-- 더보기 버튼 -->
+				<p class="gsl_more_w"><button type="button" class="gbtn b_gsl_more"><i class="icn i_more">+</i>더보기</button></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+		$("#gsListTab").find("a").each(function() {
+			$(this).bind("click", function() {
+				$(this).parent().parent().find("li").removeClass("this");
+				$(".gslw_show").removeClass("gslw_show");
+				$("#"+$(this).attr("rel")+"").addClass("gslw_show");
+				$(this).parent().addClass("this");
+			});
+		});
+	});
+//]]>
+</script>
+
+</body>
+
+</html>
