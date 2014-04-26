@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<title>Gem Shuttle</title>
+<link type="text/css" rel="stylesheet" href="../css/common.css" media="all">
+<script type="text/javascript" src="../css/jquery.js"></script>
+</head>
+
+<body>
+
+<h1 class="hide">Gem Shuttle</h1>
+
+<section class="gs_section">
+	<!-- 본문컨텐츠 -->
+	<div class="gs_content_w">
+		<h2 class="hide">글 쓰기</h2>
+		<fieldset class="gs_cmt_write">
+			<legend>글 쓰기</legend>
+			<p class="gscw_user"><strong>닉네임</strong> <span>2013.12.25</span></p>
+			<div class="gscw_tit_w">
+				<label for="gsFbWriteTitle">제목 (30자 이내)</label><input type="text" id="gsFbWriteTitle" class="text" />
+			</div>
+			<label for="gsFbWriteContent" class="hide">글 입력</label>
+			<div class="gscw_textarea_w">
+				<textarea id="gsFbWriteContent" cols="50" rows="10">주인님인 인덕이 충만하신 분들이셔서, 스팸, 욕설이나 비방하는 글은 안 남기시겠죠?</textarea>
+			</div>
+			<div class="gsfb_w_fnc">
+				<div class="gsfb_b_w">
+					<button type="submit" class="gbtn b_submit b_atchimg"><i class="icn b_nset i_atcimg"></i>사진첨부</button>
+					<button type="submit" class="gbtn b_submit"><i class="icn i_gscw"></i>글 등록</button>
+				</div>
+				<ul class="gsfb_atc_img">
+					<li>
+						<img src="../images/temp/temp_005.jpg" width="66" height="66" alt="사용자 첨부이미지" />
+						<button type="button" class="gbtn b_nset b_atc_del"><span class="ir">삭제</span></button>
+					</li>
+					<li>
+						<img src="../images/temp/temp_005.jpg" width="66" height="66" alt="사용자 첨부이미지" />
+						<button type="button" class="gbtn b_nset b_atc_del"><span class="ir">삭제</span></button>
+					</li>
+				</ul>
+				<ul class="gsfb_desc">
+					<li>* 사진 첨부는 최대 3장까지 가능합니다.</li>
+					<li>* 첨부된 이미지는 내용의 가장 상단에 위치합니다.</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+			//<![CDATA[
+				(function() {
+					var labelElements = document.getElementsByTagName("label");
+
+					for (var i=0, lbleng=labelElements.length; lbleng > i; i+=1) {
+						(function(ii) {
+							var labelThis = labelElements[ii];
+							var labelThisFor = labelThis.getAttribute("for");
+							var labelThisTop = labelThis.offsetTop;
+							var labelThisLeft = labelThis.offsetLeft;
+							var inputElement = document.getElementById(labelThisFor);
+
+							if (inputElement.getAttribute("type")==="text" || inputElement.nodeName==="TEXTAREA") {
+								if (inputElement) {
+									inputElement.onfocus = function() {
+										labelThis.style.top = "-99999px";
+										labelThis.style.left = "-99999px";
+									};
+									inputElement.onblur = function() {
+										if (this.value==="") {
+											labelThis.style.top = labelThisTop+"px";
+											labelThis.style.left = labelThisLeft+"px";
+										};
+									};
+								}
+							}
+						})(i)
+					}
+				})();
+			//]]>
+			</script>
+		</fieldset>
+	</div>
+</section>
+
+</body>
+
+</html>
