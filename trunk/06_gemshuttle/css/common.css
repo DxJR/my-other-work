@@ -318,6 +318,93 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 				.gs_kkt a {display:block; margin-top:5px; height:40px; font-size:13px; color:#141414; line-height:40px; border:1px solid #efefef; border-radius:10px; background-image:linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 55%)}
 					.gs_kkt a span {display:block; height:40px; padding:0 0 0 36px; background-image:url('../images/kakao_link.png'), url('../images/kakao_arw.png'); background-position:8px 50%, right 7px top 50%; background-repeat:no-repeat; background-size:23px 23px, 7px 11px;}
 
+/* 2014.04.26 추가 */
+.b_nset {background-image:url('../images/set_gs_add.png'); background-repeat:no-repeat; -webkit-background-size:100px 100px; background-size:100px 30px;}
+.gscw_secret {position:relative; clear:both; float:left; margin:11px 0 0 0; overflow:hidden;}
+	.gs_chk {position:absolute; top:-30px; left:-30px;}
+	.gs_chk+label {display:inline-block; height:19px; padding:1px 0 0 25px; font-size:13px; color:#1e1e1e; letter-spacing:-1px; background-image:url('../images/check.gif'); background-repeat:no-repeat; background-position:left top; -webkit-background-size:20px 70px; background-size:20px 70px;}
+	.gs_chk:checked+label {background-position:left bottom;}
+	.gscw_secret+.gscw_submit_w {clear:none; float:right; margin-top:-3px;}
+.gnb_premium .gsn_by_w {background-color:#fff9e5;}
+	/* 페이징 */
+	.gs_paging_w {clear:both; margin-top:7px; font-size:0; text-align:center;}
+		.gs_paging_w a {position:relative; display:inline-block; width:28px; height:28px; margin:0 0 0 -1px; font-size:12px; color:#1e1e1e; line-height:28px; vertical-align:top; border:1px solid #c8c8c8; box-shadow:0 1px 1px #fff inset; background:#f4f4f4;}
+		.gs_paging_w a.selected {color:#fd5253;}
+		.gs_paging_w a.gp_fnc {font-size:16px; line-height:24px; color:#d8d8d8;}
+	/* 자유게시판 */
+	.gs_list_t2 {clear:both; margin-bottom:18px;}
+		.gs_list_t2 li {clear:both; border-bottom:1px solid #d3d3d3; box-shadow:0 1px 1px #fff inset;}
+			.gsn_fb_by {position:relative; display:block; padding:10px 10px 12px 10px;}
+				.gsn_fb_by h4, .gsc_main .gs_list_t2 .tit {font-size:13px; color:#1e1e1e;}
+					.gsn_best {display:inline-block; height:14px; margin-right:5px; padding:0 7px; font-size:11px; line-height:16px; color:#fd5253; text-align:center; border-style:solid; border-width:1px; border-radius:2px;}
+					.gsn_fb_by h4 img, .gsc_main .gs_list_t2 img {position:relative; top:-1px; margin-left:3px; vertical-align:middle;}
+					.gsn_fb_by h4 .i_new {margin-left:3px;}
+				.gsn_fb_by p {clear:both; margin-top:3px; overflow:hidden;}
+					.gsn_fb_ui, .gsn_fb_date {font-size:12px; color:#787878;}
+						.gsn_num {color:#ff3535;}
+					.gsn_fb_by p .bar {position:relative; top:-1px;}
+					.gsn_fb_date {float:right;}
+		.gs_list_t2+.gsl_more_w{margin-top:-18px;}
+		/* 하단버튼 */
+		.gs_fb_btm {clear:both; height:34px; margin-top:27px; padding:0 10px;}
+			.b_search_go, .b_write {width:90px; line-height:34px !important;}
+			.b_search_go {float:left; background-color:#c8c8c8;nz}
+				.i_gssrc {width:13px; height:13px; background-position:left top;}
+				.b_search_go .i_gssrc {margin:1px 8px 0 0;}
+			.b_write {float:right;}
+	/* 게시물상세 */
+	.gsfb_article_info_w {position:relative; clear:both; margin-top:6px; min-height:32px; padding:0 0 5px 42px; overflow:hidden;}
+		.gsfb_article_info_w .thumb {top:0; left:0; width:30px; height:30px;}
+		.gsfb_article_info_w p {margin-bottom:1px;}
+		.gsfb_ai {font-size:12px; letter-spacing:-1px; color:#787878;}
+		.gsfb_del {color:#fd5253;}
+		.b_myp {position:absolute; top:1px; right:0; width:80px; height:30px; line-height:30px !important;}
+			.i_gsmp {width:15px; height:14px; background-position:-16px top;}
+			.b_myp .i_gsmp {margin-right:4px;}
+	.i_sec {top:0; width:9px; height:11px; background-position:-38px top;}
+	/* 재댓글 */
+	.gs_cmt_2d {margin:10px 0 -6px -60px;}
+		.gs_cmt_2d li {width:100%; padding-left:15px; padding-right:0; background-color:#ebebeb; background-image:url('../images/gs_cmt_2d.png'); background-position:10px 4px; background-repeat:no-repeat; -webkit-background-size:8px 8px; background-size:8px 8px;}
+		.gs_cmt_2d li:first-child {border-top:1px solid #d2d2d2; box-shadow:0 -1px 1px #f0f0f0 inset, 0 1px 1px #fff inset, 0 -1px 1px #f0f0f0}
+		.gs_cmt_2d li:last-child {border-bottom:0;}
+			.gs_cmt_2d li .thumb {left:22px; top:5px;}
+			.gs_cmt_2d li strong {margin-left:53px;}
+			.gs_cmt_2d li .gscmt_fnc {margin-right:15px;}
+			.gs_cmt_2d li .gscmt_content {padding-left:53px; padding-right:15px;}
+	/* 커뮤니티메인 */
+	.gsc_main {}
+		.gsc_main .gsn_tit {border-top:0;}
+		.gsc_main .gs_list_t2 {margin-bottom:0;}
+			.gsc_main .gs_list_t2 li {}
+				.gsc_main .gs_list_t2 .tit {display:inline-block; max-width:75%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:middle;}
+				.gfcm_count {margin-left:5px; font-size:14px; color:#fd5253;}
+		.gs_list_t3 {clear:both; width:93%; margin:2px auto 17px auto; overflow:hidden;}
+			.gs_list_t3 li {float:left; width:33%; margin-top:14px; text-align:center;}
+				.gs_list_t3 li a {display:inline-block; width:73%; font-size:14px; color:#1e1e1e;}
+					.gs_list_t3 li a img {width:100%; border:1px solid #c8c8c8; -webkit-box-sizing:border-box;box-sizing:border-box;}
+					.gs_list_t3 li a strong {display:block; margin-top:-2px; font-weight:normal; letter-spacing:-1px; line-height:18px;}
+		.gs_list_t3+.gsn_tit {border-top:1px solid #c8c8c8;}
+		.gscm_g_list {clear:both; padding:16px 11px 30px 11px; overflow:hidden; border-top:1px solid #c8c8c8;}
+			.gscm_g_list li {float:left; width:25%; margin-bottom:-1px; margin-right:-1px;}
+				.gscm_g_list li a {display:block; height:34px; font-size:14px; line-height:34px; color:#1e1e1e; text-align:center; border:1px solid #c8c8c8; box-shadow:0 1px 1px #fff inset; background:#f4f4f4;}
+	/* 글쓰기 */
+	.gscw_tit_w {position:relative; clear:both; margin-top:8px; padding:0 7px; overflow:hidden; border:1px solid #ffd02c; border-radius:1px; background:#fff;}
+		.gscw_tit_w label {position:absolute; top:6px; left:7px;}
+		.gscw_tit_w input {width:100%; height:30px; font-size:13px; color:#9d9d9d; line-height:19px; border:0;}
+	#gsFbWriteContent {height:218px;}
+	.gsfb_w_fnc {clear:both; margin-top:16px; overflow:hidden;}
+		.gsfb_b_w {clear:both; overflow:hidden;}
+			.gsfb_w_fnc .b_submit {float:right;}
+			.b_atchimg {background-color:#c8c8c8;}
+			.gsfb_w_fnc .b_atchimg {float:left;}
+			.i_atcimg {width:15px; height:15px; background-position:-50px top;}
+				.b_atchimg .i_atcimg {margin-right:11px;}
+		.gsfb_atc_img {clear:both; margin-top:12px; overflow:hidden;}
+			.gsfb_atc_img li {position:relative; float:left; margin-right:14px;}
+				.gsfb_atc_img li img {width:66px; height:66px; border:1px solid #c8c8c8;}
+				.b_atc_del {width:25px; height:25px; background-position:-70px top;}
+				.gsfb_atc_img li .b_atc_del {z-index:2; position:absolute; top:1px; right:1px;}
+		.gsfb_desc {clear:both; margin-top:9px; font-size:12px; color:#969696; letter-spacing:-1px;}
 
 @media screen and (-webkit-min-device-pixel-ratio:1.5){
 	.gbtn, .icn {background-image:url('../images/set_gs@1.5.png');}
@@ -328,6 +415,10 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gs_adver_f a {background-image:url('../images/arw_gsad_f@1.5.png');}
 	.b_gsl_more, .b_code_view {background-image:none;}
 	.gs_kkt a span {background-image:url('../images/kakao_link@1.5.png'), url('../images/kakao_arw@1.5.png');}
+
+	/* 2014.04.26 추가 */
+	.b_nset {background-image:url('../images/set_gs_add@1.5.png');}
+	.gs_chk+label {background-image:url('../images/check@1.5.gif');}
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:2){
@@ -341,4 +432,8 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 	.gs_kkt a span {background-image:url('../images/kakao_link@2.png'), url('../images/kakao_arw@2.png');}
 
 	.i_code_b {background-position:-20px top;}
+
+	/* 2014.04.26 추가 */
+	.b_nset {background-image:url('../images/set_gs_add@2.png');}
+	.gs_chk+label {background-image:url('../images/check@2.gif');}
 }
