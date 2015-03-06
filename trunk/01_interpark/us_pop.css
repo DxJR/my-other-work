@@ -1,0 +1,212 @@
+@charset "euc-kr";
+@import "us_common.css";
+#POP {clear:both; color:#777;}
+#POP .font_1	{color:#de4d52;}
+#POP .font_1	a{color:#de4d52;}
+#POP .font_2	{color:#0099ff;}
+#POP .font_2	a{color:#0099ff;}
+#POP .font_3	{color:#557cbe;}
+#POP .font_3	a{color:#557cbe;}
+#POP .Farrow	{background:url(http://gimage.interpark.com/renewPark/us_img/pop/arrow_gray.gif) no-repeat left 2px; padding-left:6px;}
+#POP .Fdot	{background:url(http://gimage.interpark.com/renewPark/us_img/pop/ico_dot.gif) no-repeat left 4px; padding-left:6px;}
+
+#POP .lognWrap	h1	{height:61px; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_login.gif) no-repeat left top; font-size:0;}
+#POP .mybookWrap	h1	{height:61px; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_mybook.gif) no-repeat left top; font-size:0;}
+#POP .mybookWrap	{width:654px; clear:both; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_mybook.gif) no-repeat left bottom;}
+#POP .mybookWrap	.conWrap	{width:568px; margin:0 auto; padding:20px 0 40px 0;}
+
+#POP .addWrap	h1	{height:61px; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_add.gif) no-repeat left top; font-size:0;}
+#POP .addWrap	{width:513px; clear:both; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_add.gif) no-repeat left bottom;}
+#POP .addWrap	.conWrap	{width:415px; margin:0 auto; padding:20px 0 40px 0;}
+
+.add_ul	{border-top:1px solid #bababa; overflow:hidden; width:100%;}
+.add_ul	li	{border-bottom:1px solid #dedede; padding:10px 50px 7px 10px; position:relative;}
+.add_ul	li	.btn	{position:absolute; right:9px; top:7px;}
+
+
+
+#POP h1	.tit	{position:absolute; left:28px; top:24px;}
+#POP h1	.btn	{position:absolute; right:27px; top:24px;}
+#POP h2	{background:url(http://gimage.interpark.com/renewPark/us_img/mybook/arrow_gray.gif) no-repeat left 2px; padding:0 0 5px 6px;}
+#POP h3	{font-weight:normal; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/arrow_gray.gif) no-repeat left 2px; padding:0 0 5px 6px;}
+.lognWrap	{width:404px; clear:both; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_login.gif) no-repeat left bottom;}
+.lognWrap	.conWrap	{width:318px; margin:0 auto; padding:20px 0 40px 0;}
+.login_con	{width:318px; overflow:hidden; margin:0 auto;}
+.login_con	input	{margin-bottom:4px;}
+.login_con	.fl	{width:220px; overflow:hidden;}
+.login_con	.fr	{width:93px; overflow:hidden;}
+.login_con	p	{clear:both; color:#999; font-size:11px; padding-top:5px;}
+.login_con	p	input	{vertical-align:-2px;}
+.login_con	ul	{padding-top:15px; margin-top:5px; border-top:1px solid #ccc;}
+.login_con	ul	li	{display:inline; float:right; padding:0 10px 0 6px; font-size:11px; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/arrow_gray.gif) no-repeat left 2px;}
+.login_on	{color:#333; font-weight:bold; font-size:14px; width:210px; background:#fff; padding:7px 0 0 8px; border:1px solid #c70000; vertical-align:1px; height:21px;}
+.login_out	{color:#333; font-weight:bold; font-size:14px; width:210px; background:#fff; padding:7px 0 0 8px; border:1px solid #ccc; vertical-align:1px; height:21px;}
+.login_off	{color:#aaaaaa; font-size:11px; width:210px; background:#fbfbfb; padding:9px 0 0 8px; border:1px solid #eaeaea; vertical-align:1px; height:19px;}
+.btn_b	{text-align:center; padding-top:20px;}
+.line	{height:1px; clear:both; overflow:hidden; font-size:0; line-height:0; border-top:1px solid #ccc;}
+.id_findT	{width:100%;}
+.id_findT	th	{width:100px; text-align:left; color:#666; vertical-align:top; padding:8px 0 0 0;}
+.id_findT	td	{vertical-align:top; padding:0 0 8px 0;}
+.id_find_qaT	{width:100%; margin-top:10px;}
+.id_find_qaT	th	{width:80px; text-align:left; color:#666; vertical-align:top; padding:5px 0 5px 20px;}
+.id_find_qaT	td	{padding:3px 0 3px 0;}
+.txt_radio		{padding:5px 0 0 5px;}
+.txt_radio	.radio	{vertical-align:-1px;}
+.box_gray	{padding:15px 15px 13px 15px; line-height:16px; background:#f7f7f7; overflow:hidden;}
+.txt_info	{font-size:11px; padding:15px;}
+
+.searchBox01 {text-align:left;}
+.searchBox01 .boxCon {position:relative; background:#f7f7f7; padding:10px}
+.searchBox01 .boxCon	ul.ul_1	{padding-top:9px; color:#666; font-size:11px;}
+.searchBox01 .boxCon	ul.ul_1	li	{display:block; padding:0 0 5px 13px; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/ico_dotted_2.gif) no-repeat 7px 3px;}
+.searchT01	th	{width:90px;  text-align:left; font-weight:normal; font-size:11px; padding:7px 10px 5px 20px; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/bg_th.gif) no-repeat right 8px;}
+.searchT01	td	{padding:5px 10px 5px 20px;}
+.searchT01	td	img	{vertical-align:middle;}
+.searchT01	td	.input01	{vertical-align:-1px;}
+.searchT01	td	.radio	{vertical-align:-1px; margin-top:-2px;}
+.searchT01	td span.bar	{padding:0 5px; color:#999;}
+.searchT01	td	.inc_input	{border:1px solid #cccccc; padding:5px 0 0 5px; height:16px; vertical-align:middle;}
+.searchT01	th	h2	{font-size:12px; font-weight:normal;}
+
+.gray_box {background:#f7f7f7; padding:20px; line-height:20px;}
+.gray_box .font_1	{color:#c80303;}
+
+.input01{border:1px solid #cacaca; height:13px; padding:3px 0 0 3px; font-size:11px; color:#666;}
+
+.calendarLayer	{width:186px; position:absolute; overflow:hidden; margin:5px 0 0 -90px; z-index:99;}
+.calendarLayer	div.con	{width:186px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/layer_calendar_bg.gif) repeat-y left top; text-align:center;}
+.calendarLayer	div.title	{margin:0 auto; line-height:14px; padding-bottom:5px; width:174px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/layer_calendar_topBg.gif) no-repeat left top;}
+.calendarLayer	div.title	p	{color:#fff; padding:2px 0 0 0;}
+.calendarTWrap	{width:168px; margin:6px auto 0 auto; overflow:hidden; clear:both;}
+.calendarTWrap	table.calendarT	{width:100%; border-top:2px solid #dec9cb;}
+.calendarTWrap	table.calendarT		th	{background-color:#f1f1f1; font-size:11px; text-align:center; padding:4px 0 2px 0;}
+.calendarTWrap	table.calendarT		td	{border:1px solid #dcdcdc; font-size:11px; text-align:center; padding:4px 0 2px 0;}
+.calendarTWrap	table.calendarT		td.sun	{border-left:0; color:#f08a53;}
+.calendarTWrap	table.calendarT		td.sat	{border-right:0; color:#00a99d;}
+.calendarTWrap	table.calendarT		td.on	{color:#fff; background-color:#da6464; font-weight:bold; letter-spacing:-2px;}
+.calendarTWrap	table.calendarT		td.on	a	{color:#fff;}
+.calendarTWrap	table.bottomT	{width:100%; clear:both; margin:5px 0 2px 0;}
+
+.mybookT	{width:100%; font-size:11px; border-top:1px solid #bababa; border-left:0px; border-right:0px;}
+.mybookT	th	{padding:10px 0 8px 0; font-weight:normal; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/bg_th.gif) no-repeat left 10px #f9f9f9; text-align:center; border-bottom:1px solid #bababa;}
+.mybookT	th.none	{background:none #f9f9f9;}
+.mybookT	td	{text-align:center; border:1px solid #dedede; color:#696969; padding:10px 7px 7px 7px; line-height:16px;}
+.mybookT	td.tl	{text-align:left; font-size:12px; padding-left:10px;}
+.mybookT	td.bl0	{border-left:0px;}
+.mybookT	td.br0	{border-right:0px;}
+.mybookT	td .radio	{vertical-align:-1px;}
+
+
+.incT	{width:100%; font-size:11px; border-top:2px solid #bababa; border-left:0px; border-right:0px;}
+.incT	th	{text-align:center; border-bottom:1px solid #dedede; color:#696969; padding:10px 7px 7px 7px; line-height:16px;}
+.incT	td	{text-align:left; font-size:12px; border-bottom:1px solid #dedede; color:#696969; padding:10px 7px 7px 7px;}
+.incT	td .radio	{vertical-align:-1px;}
+.incT	td	p.F11	{padding-top:3px; color:#888;}
+
+.pageNavi {padding:10px 0; text-align:center; overflow:hidden; clear:both; vertical-align:top; cursor:default;}
+.pageNavi a,
+.pageNavi strong {font-weight:bold; color:#3a3a3a; vertical-align:top; display:inline-block; text-decoration:none; padding:4px 8px 2px 8px; border:1px solid #ebebeb; margin:0 -1px; position:relative;}
+.pageNavi strong {border:1px solid #de4d52; color:#de4d52;}
+.pageNavi a:hover,
+.pageNavi a:active,
+.pageNavi a:focus {border:1px solid #de4d52; color:#de4d52; text-decoration:none;}
+.pageNavi span.blank {padding:0 4px; height:0; font-size:0; line-height:0; vertical-align:top;}
+.pageNavi span.arrow	img	{margin:3px 0 0 0; vertical-align:-4px;}
+.pageNavi span.arrow a,
+.pageNavi span.arrow a:hover,
+.pageNavi span.arrow a:active,
+.pageNavi span.arrow a:visited,
+.pageNavi span.arrow a:focus {padding:0; margin:0; border:0;}
+.pageNavi span.totalTxt {color:#777; font-size:11px; margin:5px 7px 0 0; display:inline-block;}
+
+
+
+#POP .reviewWrap {width:547px; height:573px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_review_bottom.gif) repeat-x left bottom;}
+#POP .reviewWrap h1	{height:36px; margin-bottom:8px; font-weight:normal; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_logo_review.gif) repeat-x left top;}
+#POP .reviewWrap h1	span	{display:block; padding:14px 0 0 258px; background:url(http://gimage.interpark.com/renewPark/us_img/pop/logo_review.gif) no-repeat 12px 4px;}
+#POP .reviewWrap h1	b	{color:#0099ff;}
+#POP .reviewWrap .con	{padding:30px 20px; overflow:hidden; line-height:20px;}
+#POP .reviewWrap h2	{color:#262626; margin:20px 10px 5px 15px; font-size:14px; clear:both; padding:0 0 10px 10px;font-weight:bold; background:url(http://gimage.interpark.com/renewPark/us_img/pop/ico_review.gif) no-repeat left top;}
+#POP .reviewWrap a.fl {margin:10px;}
+#POP .reviewWrap a.fl img.bd {border:1px solid #bdbdbd; width:80px;}
+#POP .reviewWrap ul.fl	{padding:0 0 0 15px; margin-top:17px; width:200px; background:url(http://gimage.interpark.com/renewPark/us_img/pop/dot_left.gif) repeat-y right top; line-height:16px;}
+#POP .reviewWrap ul.fl	li	{padding:0 0 0 8px; background:url(http://gimage.interpark.com/renewPark/us_img/pop/dot_review.gif) no-repeat 1px 4px;}
+#POP .reviewWrap ul.fl	li.tit	{background:#none; padding:0 0 12px 0; font-weight:bold; font-size:14px; color:#222;}
+#POP .reviewWrap ul.fl	li.tit	a{color:#222;}
+#POP .reviewWrap ul.fl	li	span	{color:#555;}
+#POP .reviewWrap 	.box_out	{width:508px; margin:0 auto; margin-top:2px; clear:both; border:1px solid #e6e6e6; overflow:hidden;}
+#POP .reviewWrap	.box_in	{width:506px; font-size:11px; border:1px solid #fff; overflow:hidden; background:#f7f7f7;}
+#POP .reviewWrap .ratingWrap	{float:right; width:180px; padding-top:20px; overflow:hidden;}
+#POP .reviewWrap .ratingWrap	.box	{width:150px; border:1px solid #fff; overflow:hidden; background:#f7f7f7;}
+#POP .reviewWrap .ratingWrap	.num	{font-size:0; float:left; line-height:0; padding:8px 0 0 14px;}
+#POP .reviewWrap .ratingWrap	.rating	{float:left; padding:17px 0 0 17px; line-height:20px;}
+#POP .reviewWrap .rating	{font-size:11px; padding:0 15px;}
+#POP .reviewWrap .rating	.star	{font-size:0; line-height:0;}
+#POP .reviewWrap .rating	.bar	{color:#bfbebe; padding:0 10px 0 7px;}
+#POP .reviewWrap .ratingWrap	.rating	.star	{display:block;}
+#POP .reviewWrap .ratingWrap	.btn	{text-align:center; padding-top:20px; clear:both;}
+
+
+
+
+#POP .reviewWrap	.scroll	 {
+	height:474px; margin:0 auto;
+	overflow-y:scroll;
+	scrollbar-3dlight-color:#f6f6f6;
+	scrollbar-arrow-color:#cccccc;
+	scrollbar-base-color:#f6f6f6;
+	scrollbar-darkshadow-color:#f6f6f6;
+	scrollbar-face-color:#fff;
+	scrollbar-highlight-color:#cccccc;
+	scrollbar-shadow-color:#cccccc;
+	scrollbar-track-color:#f6f6f6;
+}
+
+#POP .reviewWrap	.btn_bt	{text-align:center; font-size:0; line-height:0; padding:23px 0;}
+
+
+#receipt {width:760px; margin:0 auto; padding:30px 0 25px 0; clear:both; overflow:hidden;}
+#receipt .content	{border:2px solid #555555; overflow:hidden; padding:20px 10px;}
+#receipt .content	h1	{font-size:25px; padding-bottom:20px; letter-spacing:2px; line-height:35px; color:#000; font-weight:bold; text-align:center;}
+#receipt .content	h1	span	{border-bottom:2px solid #000;}
+#receipt .table_1	{width:100%; clear:both;}
+#receipt .table_1	th	{padding:6px 10px 4px 10px; background:#f4f4f4; border:1px solid #888888; font-weight:bold; color:#555555;}
+#receipt .table_1	th.th_1	{background:#fff; text-align:left;}
+#receipt .table_1	th.tl	{text-align:left;}
+#receipt .table_1	td	{padding:6px 10px 4px 10px; border:1px solid #888888;  color:#555555;}
+#receipt .table_2	{width:100%; clear:both;}
+#receipt .table_2	td	{padding:6px 10px 4px 10px; border:2px solid #888888;  color:#555555;}
+#receipt .table_3	{width:100%; clear:both;}
+#receipt .table_3	th	{padding:6px 10px 4px 10px; height:40px; background:#f4f4f4; border:2px solid #888888;  color:#555555;}
+#receipt .table_3	td	{padding:6px 10px 4px 10px; border:2px solid #888888;  color:#555555;}
+#receipt .trBtn	{text-align:right; padding-bottom:4px;}
+
+
+
+
+#popWrap	{padding:7px; color:#676767; line-height:17px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_pop.gif) repeat;}
+#popWrap	h1	{padding:0 0 5px 24px; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/pop/h1.gif) no-repeat left 3px; border-bottom:1px solid #949494;}
+#popWrap	h1	.btn	{position:absolute; right:10px; top:0;}
+#popWrap	#con	{border:1px solid #444; overflow:hidden; background:#fff;}
+#popWrap	.conWrap	{border:1px solid #d6d6d6; overflow:hidden; padding:15px 20px;}
+#popWrap	.font_1	{color:#d66c6c;}
+#popWrap	.font_1	a{color:#d66c6c;}
+#popWrap	.line_1	{height:15px; border-top:1px solid #dfdfdf;}
+
+
+
+#pop_ly	{padding:7px; color:#676767; line-height:17px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/pop/bg_pop_ly.gif) repeat;}
+#pop_ly	h1	{padding:10px 0 0 0; position:relative; border-bottom:1px solid #949494;}
+#pop_ly	h1	.logo	{position:absolute; right:10px; bottom:10px;}
+#pop_ly	#con	{border:1px solid #999; overflow:hidden; background:#fff; position:relative; }
+#pop_ly	#con	.close	{position:absolute; right:10px; top:10px;}
+#pop_ly	.conWrap	{overflow:hidden; padding:25px 45px;}
+#pop_ly	.scroll	{border:1px solid #ccc; height:288px; overflow:hidden; padding:10px;}
+#pop_ly	.scroll	iframe	{width:100%; height:286px;}
+
+
+
+
+
+
+

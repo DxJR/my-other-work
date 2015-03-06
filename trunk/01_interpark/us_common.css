@@ -1,0 +1,234 @@
+@charset "euc-kr";
+html, body    {margin:0px; padding:0px; height:100%; color:#666;}
+body	{font-size:12px; line-height:14px; font-family:dotum,Arial,verdana;}
+body, div, td, th, input  {margin:0; padding:0;}
+a:link,
+a:visited,
+a:active	{color:#555; text-decoration:none;}
+a:hover		{color:#000; text-decoration:underline;}
+hr      {display:none;}
+h1, h2, h3, h4, h5  {margin:0; font-size:100%; line-height:14px;}
+img	{border-width:0;}
+p,form	{margin:0; padding:0;}
+select    {font-size:100%; padding:1px; vertical-align:middle; color:#666; font-family:dotum;}
+table    {border-collapse:collapse;}
+.cb	{clear:both;}
+.u	{text-decoration:underline;}
+a.u	{text-decoration:underline;}
+ul, ol, dl, dd, dt  {list-style:none; margin:0; padding:0;}
+.vat	{vertical-align:top;}
+.vam	{vertical-align:middle;}
+.vab	{vertical-align:bottom;}
+.tl	{text-align:left;}
+.tc	{text-align:center;}
+.tr	{text-align:right;}
+.fl	{float:left;}
+.fr	{float:right;}
+.fix	{display:inline-block;}
+.nob	{font-weight:normal;}
+.lt_1	{letter-spacing:-1px;}
+.b	{font-weight:bold;}
+.Fpoint	{color:#33baea;}
+input	{font-size:12px; margin:0; font-family:dotum,arial; color:#4d4d4d;}
+button	{overflow:hidden; cursor:pointer; border:0; padding:0; margin:0;}
+legend	{display:none;}
+fieldset	{padding:0; margin:0; border:0;}
+.space10{height:10px; overflow:hidden; clear:both;}.space15{height:15px; overflow:hidden; clear:both;}.space20{height:20px; overflow:hidden; clear:both;}.space30{height:30px; overflow:hidden; clear:both;}.checkbox{}.select{}.radio{}
+.input{border:1px solid #cacaca; height:14px; padding:3px 0 0 3px;}
+textarea	{color:#666; overflow:auto; padding:3px 0 0 3px; border:1px solid #ccc; font-family:dotum;}
+.F0{font-size:0; line-height:0;}.F11{font-size:11px;}.F12{font-size:12px;}.F14{font-size:14px;}.F16{font-size:16px;}
+
+
+/*띠배너*/
+#banner_1206 {margin:-2px auto 0 auto; z-index:101; clear:both; text-align:left; width:960px; height:53px; background:url(http://gimage.interpark.com/renewPark/welcome/bg_banner_1206.gif) no-repeat left top; position:relative;}
+#banner_1206 .img {position:absolute; left:1px; top:1px; z-index:2;}
+#banner_1206 .close {position:absolute; right:5px; top:5px; z-index:4;}
+#banner_1206 .big {position:absolute; left:0; top:0; z-index:3; display:none;}
+#banner_1206 .big img {width:958px; border:1px solid #474747;}
+
+.autoBox {position:absolute; color:#777; width:490px; z-index:10000; padding-bottom:5px; border:1px solid #cfcfcf; background-color:#f4f4f4;}
+.autoBox .auto_tit	{width:100%; height:28px; position:relative;}
+.autoBox .auto_tit	.a_tit	{position:absolute; color:#555; left:12px; top:9px; font-weight:bold;}
+.autoBox .auto_tit	.a_check	{position:absolute; left:260px; bottom:5px; color:#888; font-size:11px; letter-spacing:-1px;}
+.autoBox .auto_tit	.a_check	input	{vertical-align:-2px;}
+.autoBox .auto_tit	.a_close	{position:absolute; right:6px; top:7px; cursor:pointer;}
+.autoBox .conWrap	{background:#fff; border:1px solid #a6a3a3; width:460px; padding:10px; overflow:hidden; margin:0 auto;}
+.autoBox .conWrap	.left_list	{width:217px; float:left; overflow:hidden;}
+.autoBox .conWrap	.left_list	ul	li	{line-height:16px; padding:3px 0 0 5px; cursor:pointer;}
+.autoBox .conWrap	.left_list	ul	li	span	{color:#eb5858;}
+.autoBox .conWrap	.left_list	ul	li.over	{ background:#f6f6f6;}
+.autoBox .conWrap	.right_list	{padding-left:10px; line-height:17px; border-left:1px solid #ddd; width:220px; float:right; overflow:hidden;}
+.autoBox .conWrap	.right_list	.img	{width:90px; padding-bottom:5px; float:left;}
+.autoBox .conWrap	.right_list	.img	img	{width:70px; border:2px solid #cfcfcf;}
+.autoBox .conWrap	.right_list	.txt	{width:120px; float:left;}
+.autoBox .conWrap	.right_list	.txt	.tit	{font-weight:bold;}
+.autoBox .conWrap	.right_list	.txt	.writer	{font-size:11px; padding-top:5px;}
+.autoBox .conWrap	.right_list	.info	{clear:both; background:#f4f4f4; padding:10px 0; width:100%; text-align:center;}
+.autoBox .conWrap	.right_list	.info	.btn	{padding-top:7px;}
+.autoBox .conWrap	.right_list	.info	.price	{color:#dd5656;}
+.autoBox .conWrap	.txt_off	{line-height:17px; text-align:center; padding:50px 0 30px 0; background:url(http://gimage.interpark.com/renewPark/us_img/search/ico_autoSearch01.gif) no-repeat 60px 30px;}
+.autoBox .conWrap	.txt_off	p	{padding-bottom:20px; font-size:11px;}
+.autoBox .conWrap	.txt_off	b	{color:#eb5858; font-size:12px;}
+.autoBox .conWrap	.txt_off	input	{vertical-align:-2px;}
+
+#header {color:#333333; width:100%; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_top2.gif) no-repeat center bottom;}
+#header .gnbWrap	{position:relative; z-index:10000; height:120px; width:960px; margin:0 auto;}
+#header .gnbWrap	h1	{position:absolute; left:0; top:35px;}
+#header .gnbWrap	.txt_interpark	{position:absolute; left:10px; top:87px;}
+
+#header .gnbWrap	ul.global	{position:absolute; left:-7px; top:8px;}
+#header .gnbWrap	ul.global	li	{display:inline; letter-spacing:-1px; float:left; font-size:11px; padding:0 10px 0 7px; background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bar_gnb_3.gif) no-repeat right 1px;}
+#header .gnbWrap	ul.global	li.none	{background:none; padding-right:0;}
+#header .gnbWrap	.btn_ap	{cursor:pointer;}
+#header .gnbWrap	.ly_ap	{position:absolute; display:block; left:110px; top:20px; z-index:10000;}
+#header .gnbWrap	.btn_pc_view	{cursor:pointer;} /*2012-11-20 Add*/
+#header .gnbWrap	.ly_pcview	{position:absolute; display:block; left:170px; top:20px; z-index:10000;} /*2012-11-20 Add*/
+#header .gnbWrap	ul.global_1	{position:absolute; right:0px; top:8px;}
+#header .gnbWrap	ul.global_1	li	{display:inline; letter-spacing:-1px; float:left; font-size:11px; padding:0 6px 0 5px; background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bar_gnb_3.gif) no-repeat right 1px;}
+#header .gnbWrap	ul.global_1	li.none	{background:none; padding-right:0;}
+#header .gnbWrap	ul.global_2	{position:absolute; right:226px; top:92px;}
+#header .gnbWrap	ul.global_2	li	{display:inline;}
+#header .gnbWrap	.right_banner	{position:absolute; right:16px; bottom:2px; font-size:0; line-height:0; white-space:nowrap;}
+#header .gnbWrap	.right_banner	img	{height:36px;}
+#header .gnbWrap	ul.gnb_menu	{position:absolute; left:18px; top:92px;} /* 20130206 GNB   left:208px; -> 18px 변경*/
+#header .gnbWrap	ul.gnb_menu	li	{display:inline;}
+#header .gnbWrap	ul.gnb_menu	li.none	{background:none; padding-left:0;}
+#header .gnbWrap	ul.gnb_menu	li span.ebook	{position:absolute; left:88px; top:-20px;} /*GNB ico추가*/
+#header .gnbWrap	fieldset	{position:absolute; left:256px; top:35px;}
+#header .gnbWrap	fieldset	span.searchBox	{position:relative; width:327px; height:32px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_search_red.gif) no-repeat left top; display:inline-block;}
+#header .gnbWrap	fieldset	img.arrow	{position:absolute; top:13px; right:14px;}
+#header .gnbWrap	.input_search	{width:273px; background:#fff; height:18px; padding:2px 0 0 0; margin:7px 0 0 15px;	border:0 none; font-weight:bold; font-size:14px;}
+#header .autoBox {position:absolute; left:256px; top:67px;}
+
+/* 20130408 GNB 변경 */
+#header1304 {color:#333333; width:100%; background:url(http://gimage.interpark.com/renewPark/us_img/main1304/bg_top.gif) no-repeat center bottom;}
+#header1304 .gnbWrap	{position:relative; z-index:10000; height:120px; width:960px; margin:0 auto;}
+#header1304 .gnbWrap	h1	{position:absolute; left:0; top:35px;}
+#header1304 .gnbWrap	.txt_interpark	{position:absolute; left:10px; top:87px;}
+
+#header1304 .gnbWrap	ul.global	{position:absolute; left:-7px; top:8px;}
+#header1304 .gnbWrap	ul.global	li	{display:inline; letter-spacing:-1px; float:left; font-size:11px; padding:0 10px 0 7px; background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bar_gnb_3.gif) no-repeat right 5px;}
+#header1304 .gnbWrap	ul.global	li.none	{background:none; padding-right:0;}
+#header1304 .gnbWrap	.btn_ap	{cursor:pointer;}
+#header1304 .gnbWrap	.ly_ap	{position:absolute; display:block; left:110px; top:25px; z-index:10000;}
+#header1304 .gnbWrap	.btn_pc_view	{cursor:pointer;} /*2012-11-20 Add*/
+#header1304 .gnbWrap	.ly_pcview	{position:absolute; display:block; left:170px; top:25px; z-index:10000;} /*2012-11-20 Add*/
+#header1304 .gnbWrap	ul.global_1	{position:absolute; right:0px; top:8px;}
+#header1304 .gnbWrap	ul.global_1	li	{display:inline; letter-spacing:-1px; float:left; font-size:11px; padding:0 6px 0 5px; background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bar_gnb_3.gif) no-repeat right 1px;}
+#header1304 .gnbWrap	ul.global_1	li.none	{background:none; padding-right:0;}
+#header1304 .gnbWrap	ul.global_2	{position:absolute; right:226px; top:92px;}
+#header1304 .gnbWrap	ul.global_2	li	{display:inline;}
+#header1304 .gnbWrap	.rightRbox	{position:absolute; right:16px; top:87px; font-size:0; line-height:0; white-space:nowrap;}
+#header1304 .gnbWrap	.rightRbox	.rightRanking{position:absolute; right:0;width:180px;z-index:7;height:23px;overflow:hidden;}
+#header1304 .gnbWrap	.rightRbox	.ranklist ol{float:left;clear:both;width:170px;font-size:11px;z-index:4;}
+#header1304 .gnbWrap	.rightRbox	.ranklist a{display:block;color:#fff;cursor: hand;}
+#header1304 .gnbWrap	.rightRbox	.ranklist a:hover{color:#fff;text-decoration:none}
+#header1304 .gnbWrap	.rightRbox	.ranklist li {width:180px;line-height:18px;height:20px;overflow:hidden;font-size:11px;vertical-align:middle;}
+#header1304 .gnbWrap	.rightRbox	.ranklist li .num{float:left;width:20px;padding-top:5px;padding-left:5px;z-index:4;;}
+#header1304 .gnbWrap	.rightRbox	.ranklist li .num img{display:inline-block;z-index:4;}
+#header1304 .gnbWrap	.rightRbox	.ranklist li .subject{float:left;width:150px;padding-top:5px;padding-left:5px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;z-index:4;}
+#header1304 .gnbWrap	.rightRbox	.ranklist li .count{float:left;right:0px;padding-top:4px;text-align:right;width:40px;font-family:tahoma,sans-serif;color:#cccaca;letter-spacing:0; }
+#header1304 .gnbWrap	.rightRbox	.ranklist li .count b{font-weight:normal;}
+
+#header1304 .gnbWrap	ul.gnb_menu	{position:absolute; left:18px; top:92px;} /* 20130206 GNB   left:208px; -> 18px 변경*/
+#header1304 .gnbWrap	ul.gnb_menu	li	{display:inline;}
+#header1304 .gnbWrap	ul.gnb_menu	li.none	{background:none; padding-left:0;}
+#header1304 .gnbWrap	ul.gnb_menu	li span.ebook	{position:absolute; left:88px; top:-20px;} /*GNB ico추가*/
+#header1304 .gnbWrap	fieldset	{position:absolute; left:256px; top:35px;}
+#header1304 .gnbWrap	fieldset	span.searchBox	{position:relative; width:327px; height:32px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_search_red.gif) no-repeat left top; display:inline-block;}
+#header1304 .gnbWrap	fieldset	img.arrow	{position:absolute; top:13px; right:14px;}
+#header1304 .gnbWrap	.input_search	{width:273px; background:#fff; height:18px; padding:2px 0 0 0; margin:7px 0 0 15px;	border:0 none; font-weight:bold; font-size:14px;}
+#header1304 .autoBox {position:absolute; left:256px; top:67px;}
+/* /20130408 GNB 변경 */
+
+#CENTER	{color:#4d4d4d; width:100%; overflow:hidden; padding-top:13px;}
+#CENTER	#Container	{width:960px; overflow:hidden; margin:0 auto;}
+#LEFT {width:180px; float:left;}
+#CONTENT {width:765px; overflow:hidden; float:right;}
+#BOTTOM	{color:#858586; overflow:hidden; width:100%; padding-top:30px; padding-bottom:50px; background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bg_bottom.gif) repeat-x left 30px;}
+#BOTTOM .copyright	{width:960px; position:relative; font-size:11px; margin:0 auto;  background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bg_copy.gif) repeat-x left top;}
+#BOTTOM .copyright	ul	{padding-top:15px;}
+#BOTTOM .copyright	ul	li	{display:inline; font-weight:bold; background:url(http://gimage.interpark.com/renewPark/us_img/gnb/bar_gnb_1.gif) no-repeat left top; padding:0 8px 0 12px;}
+#BOTTOM .copyright	ul	li.none	{background:none; padding-left:0;}
+#BOTTOM .copyright	p	{padding-top:10px;}
+#BOTTOM .copyright	p	span	{color:#da6464;}
+#BOTTOM .copyright	.banner{position:absolute; right:0; top:13px;}
+.pl5{padding-left:5px;}.pl10{padding-left:10px;}.pl20{padding-left:20px;}
+.pt5{padding-top:5px;}.pt10{padding-top:10px;}.pt20{padding-top:20px;}.pt30{padding-top:30px;}
+.pb5{padding-bottom:5px;}.pb10{padding-bottom:10px;}.pb20{padding-bottom:20px;}
+.ml5{margin-left:5px;}.ml10{margin-left:10px;}.ml20{margin-left:20px;}
+.mt5{margin-top:5px;}.mt10{margin-top:10px;}.mt20{margin-top:20px;}
+.mr5{margin-right:5px;}.mr10{margin-right:10px;}.mr17{margin-right:17px;}
+.pr10{margin-right:10px;}
+.vat_1{vertical-align:-1px;}.vat_2{vertical-align:-2px;}.vat_3{vertical-align:-3px;}
+.ico_help	{cursor:pointer;}
+.helpLayer {z-index:10; line-height:17px; position:absolute; color:#999; font-size:11px; width:400px; text-align:left; padding:0 2px 2px 0; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/bg_ly.gif) no-repeat 2px 2px;}
+.helpLayer .help_wrap	{background:#fff; padding:15px; overflow:hidden; border:1px solid #888d95;}
+.helpLayer .help_title	{font-weight:bold; font-size:12px; color:#2f3743; position:relative;}
+.helpLayer .help_title	span	{font-weight:normal; font-size:11px; color:#999;}
+.helpLayer .help_title	.close	{position:absolute; right:0; top:-5px;}
+.helpLayer .help_line	{height:9px; font-size:0; line-height:0; background:url(http://gimage.interpark.com/renewPark/us_img/mybook/dotted_ly.gif) repeat-x left top; margin-top:5px;}
+.helpLayer .Fly01	{background:url(http://gimage.interpark.com/renewPark/us_img/mybook/ico_ly01.gif) no-repeat left 5px; padding:0 0 0 7px;}
+.helpLayer .Fly02	{background:url(http://gimage.interpark.com/renewPark/us_img/mybook/ico_ly02.gif) no-repeat left 3px; padding:0 0 0 7px;}
+.helpLayer .font01	{color:#2ba5e4 !important;}
+.helpLayer .cardUL	li	{padding:2px 0;}
+.helpLayer .cardUL	li	img	{vertical-align:-5px;}
+.helpLayer .helpT01	{width:100%; font-size:11px;}
+.helpLayer .helpT01	th	{border:1px solid #dedede; text-align:center; font-weight:bold; color:#696969; padding:7px 7px 5px 7px;}
+.helpLayer .helpT01	td	{border:1px solid #dedede; text-align:center; color:#696969; padding:7px 7px 7px 7px;}
+.helpLayer .hfont01	{color:#de4d52;}
+
+
+.tac_info	{color:#696969;}
+.tac_info	.table_1	{width:100%; margin-bottom:4px;}
+.tac_info	.table_1	th	{padding-right:3px; vertical-align:top; white-space:nowrap; text-align:left; font-weight:normal; color:#527bc3;}
+.tac_info	.table_1	td	{vertical-align:top;}
+.tac_info	.table_2	{text-align:center; width:100%; margin:0 0 10px 0;}
+.tac_info	.table_2	th	{padding:5px 0 3px 0; font-weight:normal; background:#e9e9e9; border:1px solid #b6b6b6;}
+.tac_info	.table_2	td	{padding:5px 0 3px 0; font-weight:normal; border:1px solid #b6b6b6;}
+.tac_info	.table_2	td.tl	{padding:5px 10px 3px 10px; width:150px; text-align:left;}
+.tac_info	b	{color:#666; font-size:12px;}
+.tac_info	span	{color:#527bc3;}
+.tac_info	p	{padding:3px 0 7px 0;}
+.tac_info	.font_1	{padding:10px 0 0 0; color:#f67036;}
+.tac_info	.font_2	{padding:10px 0 0 0; color:#da6464;}
+.tac_info	.font_2	b	{color:#da6464;}
+
+#topGo	{width:100%; border-bottom:1px solid #7f8bcb; overflow:hidden; border-top:0 solid #7f8bcb; background:#e6eaff;}
+#topGo	.wrap{position:relative; height:25px; width:960px; overflow:hidden; margin:0 auto;}
+#topGo	.txt{color:#4f5ca0; font-size:11px; padding:7px 0 0 0;}
+#topGo	.btn{position:absolute; right:0; top:3px; font-size:0;}
+
+#aside	{width:960px; margin:0 auto; position:relative;}
+
+#sky_right	{width:78px; font-size:11px; position:absolute; right:-88px; top:0;}
+#sky_right .today	{width:100%; margin-bottom:10px; text-align:center; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_today.gif) no-repeat left bottom;}
+#sky_right .today	.num {padding-top:26px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tit_today.gif) no-repeat left top;}
+#sky_right .today	ul	li	{padding-top:5px;}
+#sky_right .today	ul	li	img	{border:1px solid #ccc; width:54px;}
+#sky_right .today	ol{padding:3px 0 5px 0;}
+#sky_right .today	ol	li{display:inline; padding:0 4px;}
+
+#sky_right .finder	{width:100%; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_finder.gif) no-repeat left bottom;}
+#sky_right .finder	.arrow {padding-top:42px; text-align:right; padding-right:6px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tit_finder.gif) no-repeat left top;}
+#sky_right .finder	ul	{width:64px; margin:0 auto;}
+#sky_right .finder	ul	li	{padding:5px 0 5px 0; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot_sky.gif) repeat-x left bottom;}
+#sky_right .finder	.search	{text-align:right; padding:10px 6px 7px 0;}
+#sky_right .finder	.search	input	{width:62px; border:1px solid #ccc;}
+#sky_right .finder	.search	a	{padding-top:3px; display:inline-block;}
+#sky_right .face_fan{margin-top:5px;}/*2012-10-25 facebook fanpage Add*/
+
+/* 2012-10-23 Welcome Left SkyBanner Add */
+#sky_left	{position:absolute; width:90px; left:-95px;top:0;}
+#sky_left .sbannerBox {width:100%;text-align:center;margin:0;padding:0;line-height:0px;font-size:0px;}
+#sky_left .sbannerBox .leftskyb{padding:0;margin:0;}
+#sky_left .sbannerBox ul.leftskyb li{width:90px;top:0;margin:0;padding:0;}
+#sky_left .sbannerBox ul.leftskyb li img{margin:0;padding:0;border:0px;}
+
+#sky_left ul.leftBbox {width:100%;text-align:center;margin:0;padding:0;line-height:0px;font-size:0px;}
+#sky_left ul.leftBbox li{margin-bottom:5px;}
+#sky_left ul.leftBbox li img{width:90px;}
+/* //2012-10-23 Welcome Left SkyBanner Add */
+
+
+

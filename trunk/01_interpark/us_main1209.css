@@ -1,0 +1,334 @@
+@charset "euc-kr";
+@import 'us_common.css';
+img.bd{border:1px solid #bfbfbf}
+a:hover	img.bd{border:1px solid #777}
+.Fprice{color:#da6464}
+.Fprice span{color:#0c90cf}
+.Fprice a{color:#da6464}
+.Fpub{font-size:11px;color:#888}
+.Fpub a{font-size:11px;color:#888}
+.Fipoint{padding-left:14px;background:url(http://gimage.interpark.com/renewPark/us_img/main/ico_ipoint.gif) no-repeat left top;font-size:12px;color:#33baea}
+.Fsale{color:#0c90cf}
+
+/*.mainWrap_1 {width:960px; margin-bottom:20px; z-index:100; position:relative; height:530px; clear:both; background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_main_2.gif) no-repeat 199px top;}*/
+.mainWrap_1 {width:960px; margin-bottom:20px; z-index:100; position:relative; height:530px; clear:both; background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_main.gif) no-repeat 199px top;}
+.mainWrap_1	#cnb_main	{width:189px; float:left; position:relative; z-index:100; height:529px; border-bottom:1px solid #ccc;}
+.mainWrap_1	#cnb_main	a	{text-decoration:none;}
+.mainWrap_1	#cnb_main	h2	{cursor:pointer; width:189px; clear:both; display:block; overflow:hidden; }
+.mainWrap_1	#cnb_main	ul	{width:160px; margin:0 auto; padding-top:7px;}
+.mainWrap_1	#cnb_main	ul	li	{width:80px; white-space:nowrap; display:block; height:20px; float:left;}
+.mainWrap_1	#cnb_main	ul	li	span	{display:none; padding:6px 0 7px 0; line-height:18px; background:#fff; border:1px solid #333; position:absolute; z-index:2;}
+.mainWrap_1	#cnb_main	ul	li	span	a	{display:block; padding:0 10px;}
+.mainWrap_1	#cnb_main	ul	li	span	a:hover	{background:#eee;}
+.mainWrap_1	#cnb_main	ul	li.line	{clear:both; width:166px; height:7px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot_cnb.gif) repeat-x left top;}
+.mainWrap_1	#cnb_main	.banner	{position:absolute; left:14px; bottom:10px; z-index:1;}
+.mainWrap_1	.book	#book div{display:block; position:relative; height:476px; border-left:1px solid #ccc; border-right:1px solid #ccc;}
+.mainWrap_1	.ebook	#book div {display:none;}
+.mainWrap_1	.book	#ebook div {display:none;}
+.mainWrap_1	.ebook	#ebook div {display:block; position:relative; height:477px; border-left:1px solid #ccc; border-right:1px solid #ccc;}
+.mainWrap_1	.book	#book h2	{height:27px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tab_cnb_1on.gif) no-repeat left top;}
+.mainWrap_1	.ebook	#book h2	{height:27px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tab_cnb_1off.gif) no-repeat left top;}
+.mainWrap_1	.book	#ebook h2	{height:26px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tab_cnb_2off.gif) no-repeat left top;}
+.mainWrap_1	.ebook	#ebook h2	{height:26px; background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tab_cnb_2on.gif) no-repeat left top;}
+
+/*---20120903 CNB CD카테고리 추가--- */
+.mainWrap_1	#cnb_main	ul	li.onemenu{display:block;float:left;clear:both;width:166px;height:20px;background:none;white-space:nowrap}
+
+.mainWrap_1	.book	#book div{display:block;position:relative;height:450px;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #e0e0e0}
+.mainWrap_1	.ebook	#book div{display:none}
+.mainWrap_1	.cd	#book div{display:none}
+.mainWrap_1	.book	#ebook div{display:none}
+.mainWrap_1	.ebook	#ebook div{display:block;position:relative;height:450px;border-left:1px solid #ccc;border-right:1px solid #ccc}
+.mainWrap_1	.cd	#ebook div{display:none}
+.mainWrap_1	.book	#cd div{display:none}
+.mainWrap_1	.ebook	#cd div{display:none}
+.mainWrap_1	.cd	#cd div{display:block;position:relative;height:450px;border-left:1px solid #ccc;border-right:1px solid #ccc}
+/*---//20120903 CNB CD카테고리 추가---  */
+.mainWrap_1	.book	#book h2{height:27px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_1on.gif) no-repeat left top}
+.mainWrap_1	.ebook	#book h2{height:27px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_1off.gif) no-repeat left top}
+.mainWrap_1	.cd	#book h2{height:27px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_1off.gif) no-repeat left top}
+.mainWrap_1	.book	#ebook h2{height:25px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_2off.gif) no-repeat left top}
+.mainWrap_1	.ebook	#ebook h2{height:26px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_2on.gif) no-repeat left top}
+.mainWrap_1	.cd	#ebook h2{height:25px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_2off.gif) no-repeat left top}
+/*---20120903 CNB CD카테고리 추가---  */
+.mainWrap_1	.book	#cd h2{height:26px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_3off.gif) no-repeat left top}
+.mainWrap_1	.ebook	#cd h2{height:26px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_3off.gif) no-repeat left top}
+.mainWrap_1	.cd	#cd h2{height:27px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/cnb/tab_cnb_3on.gif) no-repeat left top}
+/* ---//20120903 CNB CD카테고리 추가--- */
+
+.mainWrap_1	.interpark_vote{position:absolute;top:0;left:199px;width:560px}
+.mainWrap_1	.interpark_vote	h2{height:35px;padding-left:10px}
+.mainWrap_1	.interpark_vote	dl{float:left;width:360px}
+.mainWrap_1	.interpark_vote	dl dt{float:left;width:177px}
+.mainWrap_1	.interpark_vote	dl dt span{display:block;position:relative;width:173px;height:225px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_shadow.gif) no-repeat left bottom}
+.mainWrap_1	.interpark_vote	dl dt span	img{position:absolute;left:10px;bottom:6px;width:151px;height:211px;border:1px solid #000}
+.mainWrap_1	.interpark_vote	dd{float:left;width:150px}
+.mainWrap_1	.interpark_vote	dd p{padding-top:5px}
+.mainWrap_1	.interpark_vote	dd p.tit{padding:10px 0 5px}
+.mainWrap_1	.interpark_vote	dd p.txt{padding-top:10px;line-height:19px}
+.mainWrap_1	.interpark_vote	ul{float:left;width:190px;padding-top:42px}
+.mainWrap_1	.interpark_vote	ul li{float:left;width:50%;text-align:center}
+.mainWrap_1	.interpark_vote	ul li p{width:70px;margin:0 auto;padding-top:3px;font-size:11px;text-align:left}
+.mainWrap_1	.interpark_vote	ul li img{width:70px;height:104px;border:1px solid #ccc}
+.mainWrap_1	#bestTab{position:absolute;top:0;right:0;width:200px}
+.mainWrap_1	#bestTab h2{font-size:0;line-height:0;cursor:pointer}
+.mainWrap_1	#bestTab .more{padding-right:5px;font-size:0;line-height:0;text-align:right}
+.mainWrap_1	#bestTab ol{padding-left:11px}
+.mainWrap_1	#bestTab ol li{line-height:21px}
+.mainWrap_1	#bestTab ol li	img{margin-top:-3px;vertical-align:middle}
+
+.mainWrap_1	.best_book,.mainWrap_1	.best_ebook{display:none}
+.mainWrap_1	.tab1 .best_book{display:block}
+.mainWrap_1	.tab2 .best_ebook{display:block}
+
+
+/* -------------------- 2012-10-15 추가*/
+/* 2012-09-25 eBook/CD추가 */
+.mainWrap_1-1{position:absolute;overflow:hidden;width:758px;top:280px; left:200px;margin-bottom:15px;}
+.mainWrap_1-1	#ebookTab{float:left;width:551px}
+.mainWrap_1-1 	#ebookTab .tabtit{width:551px;height:21px;padding-top:4px;cursor:pointer}
+.mainWrap_1-1 	#ebookTab .tabimg{float:left}
+.mainWrap_1-1 	#ebookTab .moreico{float:right;margin:0;padding-right:3px}
+.mainWrap_1-1 	#ebookTab .con1{width:551px;height:227px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_ebook01.gif) no-repeat left top}
+.mainWrap_1-1 	#ebookTab .con2{width:551px;height:227px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_ebook022.gif) no-repeat left top}
+.mainWrap_1-1 	#ebookTab .con3{width:551px;height:227px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_ebook033.gif) no-repeat left top}
+.mainWrap_1-1 	#ebookTab .con1 ul{padding:20px 0 0 8px}
+.mainWrap_1-1 	#ebookTab .con2 ul{padding:20px 0 0 8px}
+.mainWrap_1-1 	#ebookTab .con3 ul{padding:48px 0 0 8px}
+.mainWrap_1-1 	#ebookTab li{overflow:hidden;float:left;position:relative;width:107px;text-align:center}
+.mainWrap_1-1 	#ebookTab .con1 li img{width:85px;height:126px;border:1px solid #ccc}
+.mainWrap_1-1 	#ebookTab .con1 li .ico{display:block;position:absolute;top:90px;right:11px;width:42px;height:37px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_ebook.png) no-repeat left top}
+.mainWrap_1-1   #ebookTab .con2 li img{width:85px;height:126px;border:1px solid #ccc}
+.mainWrap_1-1 	#ebookTab .con2 li .ico{display:block;position:absolute;top:90px;right:11px;width:42px;height:37px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_ebook.png) no-repeat left top}
+.mainWrap_1-1 	#ebookTab .con3 li img{width:85px;height:85px;border:1px solid #ccc}
+.mainWrap_1-1 	#ebookTab .con3 li .ico{display:block;position:absolute;top:49px;right:11px;width:42px;height:37px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_ebook.png) no-repeat left top}
+.mainWrap_1-1 	#ebookTab li p{width:88px;margin:0 auto;line-height:15px;text-align:left}
+.mainWrap_1-1 	#ebookTab li .price{padding-top:2px}
+
+.mainWrap_1-1 	.ebook_menu,	.cd_menu{display:none}
+.mainWrap_1-1 	.tab1 .ebook_menu{display:block}
+.mainWrap_1-1 	.tab2 .cd_menu{display:block}
+/* //2012-09-25 eBook/CD추가 */
+.mainWrap_1-1	.clickevent{position:absolute;right:0px;margin-left:10px;width:200px;}
+.mainWrap_1-1	.clickevent h2{overflow:hidden;position:relative;height:27px;color:#666}
+
+.mainWrap_1-1 	.clickevent p{font-size:0;line-height:0;border-top:1px solid #807e7e}
+.mainWrap_1-1 	.clickevent p img{float:left;width:197px;height:223px; border:0px;}
+
+.mainWrap_1-1 	.clickevent ul{position:absolute;;right:5px;bottom:5px}
+.mainWrap_1-1 	.clickevent ul li{float:left;padding-left:2px;font-size:0;line-height:0}
+
+
+.mainWrap_2-1{position:relative;overflow:hidden;width:758px;margin-bottom:15px;}
+.mainWrap_2-1 .key{position:relative;float:left;width:352px;}
+.mainWrap_2-1 .key h2{position:relative;height:31px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_key2.gif) repeat-x left top;color:#fff568}
+.mainWrap_2-1 .key h2 a{color:#fff568}
+.mainWrap_2-1 .key h2 a.tit{position:absolute;top:10px;left:63px;font-weight:bold}
+.mainWrap_2-1 .key h2 .more{position:absolute;top:10px;right:7px}
+
+.mainWrap_2-1 .key ul{padding-bottom:3px;border:1px solid #ccc}
+
+:root .mainWrap_2-1  .key ul li.btn{overflow:hidden;position:relative;height:30px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_key_dotline.gif) repeat-x left top;}
+.mainWrap_2-1 .key ul li.btn{overflow:hidden;position:relative;height:25px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_key_dotline.gif) repeat-x left top;}
+.mainWrap_2-1 .key ul li.btn a{display:block;padding:10px 0 7px 10px;font-weight:bold}
+
+:root .mainWrap_2-1  .key ul li.btnF{overflow:hidden;position:relative;height:30px;}
+.mainWrap_2-1 .key ul li.btnF{overflow:hidden;position:relative;height:25px;}
+.mainWrap_2-1 .key ul li.btnF a{display:block;padding:10px 0 7px 10px;font-weight:bold}
+
+.mainWrap_2-1 .key ul li p.price{position:absolute;top:10px;right:10px}
+.mainWrap_2-1 .key ul li.ly{display:none}
+.mainWrap_2-1 .key dl{display:block;height:96px}
+.mainWrap_2-1 .key a{text-decoration:none}
+
+.mainWrap_2-1  dl dt{float:left;width:74px;padding-left:10px}
+.mainWrap_2-1  dl dt img{width:62px;height:84px;border:1px solid #ccc}
+.mainWrap_2-1  dl dd{float:left;width:240px;padding-top:3px}
+.mainWrap_2-1  dl dd p.txt{padding:10px 0 0;line-height:19px}
+
+
+.mainWrap_2-1  .just{float:left;position:relative;width:190px;margin-left:10px;}
+.mainWrap_2-1  .just h2{overflow:hidden;vertical-align:bottom;position:relative;height:30px;color:#666;}
+.mainWrap_2-1  .just h2 img {}
+.mainWrap_2-1  .just h2 span{position:absolute;right:5px;bottom:5px;font-weight:normal}
+.mainWrap_2-1  .just h2 span	img{margin-top:-3px;vertical-align:middle}
+.mainWrap_2-1  .just h2 .more{position:absolute;top:12px;right:3px;font-weight:normal}
+.mainWrap_2-1  .just h2 .more	img{margin-top:-3px;vertical-align:middle}
+
+.mainWrap_2-1  .just ul{border-top:1px solid #807e7e;width:185px}
+.mainWrap_2-1  .just ul li{float:left;width:73px;padding-left:13px;padding-top:15px;}
+.mainWrap_2-1  .just ul li img{width:71px;height:106px;margin-bottom:2px;border:1px solid #ccc}
+.mainWrap_2-1  .just ul li span{display:block;padding-top:3px}
+
+.mainWrap_2-1 .sale{float:right;position:relative;width:200px;}
+.mainWrap_2-1 .sale h3{overflow:hidden;position:relative;height:27px;color:#666}
+.mainWrap_2-1 .sale h3 span{position:absolute;right:0;bottom:5px;font-weight:normal}
+.mainWrap_2-1 .sale h3 span	img{margin-top:-3px;vertical-align:middle}
+.mainWrap_2-1 .sale .con{border-top:1px solid #807e7e;margin-top:3px;}
+.mainWrap_2-1 .sale dl{overflow:hidden;clear:both;width:100%;height:95px;padding:15px 0 10px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot.gif) repeat-x left bottom}
+.mainWrap_2-1 .sale dl.last{background:none}
+.mainWrap_2-1 .sale dt{float:left;position:relative;width:90px;text-align:right}
+.mainWrap_2-1 .sale dt img{width:60px;height:87px;border:1px solid #ccc}
+.mainWrap_2-1 .sale dt span{display:block;position:absolute;left:3px;bottom:0;width:48px;height:48px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_sale.png) no-repeat left top}
+.mainWrap_2-1 .sale dt span	b{display:block;padding:18px 0 0;font-size:14px;color:#fff200;letter-spacing:-2px;text-align:center}
+.mainWrap_2-1 .sale dd{float:left;width:90px;padding-left:10px;text-align:left}
+.mainWrap_2-1 .sale dd .tit{padding:2px 0}
+.mainWrap_2-1 .sale dd .Fpub{padding-bottom:5px}
+.mainWrap_2-1 .sale dd .Fprice{padding-bottom:2px}
+.mainWrap_2-1 .sale dd .Fpoint{padding-bottom:2px}
+/* //2012-10-15 추가 --------------------  */
+
+.mainWrap_2{overflow:hidden;clear:both;width:960px;margin-bottom:15px}
+.mainWrap_2 .newBook{float:left;width:189px;margin-right:10px}
+.mainWrap_2 .newBook h3{overflow:hidden;height:20px;padding-top:7px}
+.mainWrap_2 .newBook .con{border-top:1px solid #807e7e}
+.mainWrap_2 .newBook .tit{position:relative;width:174px;margin:0 auto;padding:10px 0 5px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot.gif) repeat-x left bottom;color:#7d7d7d}
+.mainWrap_2 .newBook .tit b{color:#1ea2a1}
+.mainWrap_2 .newBook .tit span{position:absolute;top:10px;right:0;font-size:11px}
+.mainWrap_2 .newBook .tit span	b{color:#db2828}
+.mainWrap_2 .newBook ul{padding-top:10px}
+.mainWrap_2 .newBook li{float:left;width:94px;text-align:center}
+.mainWrap_2 .newBook li img{width:76px;height:106px;border:1px solid #ccc}
+.mainWrap_2 .newBook li p{padding:3px 1px 0 10px;text-align:left}
+
+
+
+/* --------------------  삭제 예정 */
+.mainWrap_1	.key{position:absolute;top:275px;left:199px;width:352px}
+.mainWrap_1	.key h2{position:relative;height:31px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_key.gif) repeat-x left top;color:#fff568}
+.mainWrap_1	.key h2 a{color:#fff568}
+.mainWrap_1	.key h2 a.tit{position:absolute;top:10px;left:63px;font-weight:bold}
+.mainWrap_1	.key h2 .more{position:absolute;top:10px;right:7px}
+.mainWrap_1	.key ul{padding-bottom:3px;border-bottom:1px solid #e6e6e6}
+:root .mainWrap_1	.key ul li.btn{overflow:hidden;position:relative;height:30px;border-top:1px solid #e6e6e6}
+.mainWrap_1	.key ul li.btn{overflow:hidden;position:relative;height:25px;border-top:1px solid #e6e6e6}
+.mainWrap_1	.key ul li.btn a{display:block;padding:10px 0 7px 10px;font-weight:bold}
+.mainWrap_1	.key ul li p.price{position:absolute;top:10px;right:10px}
+.mainWrap_1	.key ul li.ly{display:none}
+.mainWrap_1	.key dl{display:block;height:96px}
+.mainWrap_1	.key a{text-decoration:none}
+
+.mainWrap_1	dl dt{float:left;width:74px;padding-left:10px}
+.mainWrap_1	dl dt img{width:62px;height:84px;border:1px solid #ccc}
+.mainWrap_1	dl dd{float:left;width:240px;padding-top:3px}
+.mainWrap_1	dl dd p.txt{padding:10px 0 0;line-height:19px}
+
+.mainWrap_1	.event{position:absolute;top:275px;left:551px;width:199px}
+.mainWrap_1	.event h2{font-size:0;line-height:0}
+.mainWrap_1	.event p{font-size:0;line-height:0}
+.mainWrap_1	.event p img{float:left;width:197px;height:223px;border:1px solid #ccc}
+
+.mainWrap_1	.event ul{position:absolute;right:5px;bottom:5px}
+.mainWrap_1	.event ul li{float:left;padding-left:2px;font-size:0;line-height:0}
+.mainWrap_1	.just{position:absolute;top:275px;right:0;width:210px}
+.mainWrap_1	.just h2{position:relative;height:42px;border-top:2px solid #4a4949}
+.mainWrap_1	.just h2 .tit{position:absolute;top:11px;left:21px}
+.mainWrap_1	.just h2 .more{position:absolute;top:12px;right:3px;font-weight:normal}
+.mainWrap_1	.just h2 .more	img{margin-top:-3px;vertical-align:middle}
+
+.mainWrap_1	.just ul{width:200px}
+.mainWrap_1	.just ul li{float:left;width:73px;padding-left:25px}
+.mainWrap_1	.just ul li img{width:71px;height:106px;margin-bottom:2px;border:1px solid #ccc}
+.mainWrap_1	.just ul li span{display:block;padding-top:3px}
+
+/* 2012-09-25 eBook/CD추가 */
+.mainWrap_2	#ebookTab{float:left;width:551px}
+.mainWrap_2	#ebookTab .tabtit{width:551px;height:21px;padding-top:4px;cursor:pointer}
+.mainWrap_2	#ebookTab .tabimg{float:left}
+.mainWrap_2	#ebookTab .moreico{float:right;margin:0;padding-right:3px}
+.mainWrap_2	#ebookTab .con1{width:551px;height:227px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_ebook01.gif) no-repeat left top}
+.mainWrap_2	#ebookTab .con2{width:551px;height:227px;background:url(http://gimage.interpark.com/renewPark/us_img/main1209/bg_ebook02.gif) no-repeat left top}
+.mainWrap_2	#ebookTab .con1 ul{padding:20px 0 0 8px}
+.mainWrap_2	#ebookTab .con2 ul{padding:48px 0 0 8px}
+.mainWrap_2	#ebookTab li{overflow:hidden;float:left;position:relative;width:107px;text-align:center}
+.mainWrap_2	#ebookTab .con1 li img{width:85px;height:126px;border:1px solid #ccc}
+.mainWrap_2	#ebookTab .con1 li .ico{display:block;position:absolute;top:90px;right:11px;width:42px;height:37px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_ebook.png) no-repeat left top}
+.mainWrap_2	#ebookTab .con2 li img{width:85px;height:85px;border:1px solid #ccc}
+.mainWrap_2	#ebookTab .con2 li .ico{display:block;position:absolute;top:49px;right:11px;width:42px;height:37px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_ebook.png) no-repeat left top}
+.mainWrap_2	#ebookTab li p{width:88px;margin:0 auto;line-height:15px;text-align:left}
+.mainWrap_2	#ebookTab li .price{padding-top:2px}
+
+.mainWrap_2	.ebook_menu,.mainWrap_2	.cd_menu{display:none}
+.mainWrap_2	.tab1 .ebook_menu{display:block}
+.mainWrap_2	.tab2 .cd_menu{display:block}
+/* /2012-09-25 eBook/CD추가 */
+
+.mainWrap_2 .sale{float:right;width:200px;}
+.mainWrap_2 .sale h3{overflow:hidden;position:relative;height:27px;color:#666}
+.mainWrap_2 .sale h3 span{position:absolute;right:0;bottom:5px;font-weight:normal}
+.mainWrap_2 .sale h3 span	img{margin-top:-3px;vertical-align:middle}
+.mainWrap_2 .sale .con{border-top:1px solid #807e7e}
+.mainWrap_2 .sale dl{overflow:hidden;clear:both;width:100%;height:95px;padding:15px 0 10px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot.gif) repeat-x left bottom}
+.mainWrap_2 .sale dl.last{background:none}
+.mainWrap_2 .sale dt{float:left;position:relative;width:90px;text-align:right}
+.mainWrap_2 .sale dt img{width:60px;height:87px;border:1px solid #ccc}
+.mainWrap_2 .sale dt span{display:block;position:absolute;left:3px;bottom:0;width:48px;height:48px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_sale.png) no-repeat left top}
+.mainWrap_2 .sale dt span	b{display:block;padding:18px 0 0;font-size:14px;color:#fff200;letter-spacing:-2px;text-align:center}
+.mainWrap_2 .sale dd{float:left;width:90px;padding-left:10px;text-align:left}
+.mainWrap_2 .sale dd .tit{padding:2px 0}
+.mainWrap_2 .sale dd .Fpub{padding-bottom:5px}
+.mainWrap_2 .sale dd .Fprice{padding-bottom:2px}
+.mainWrap_2 .sale dd .Fpoint{padding-bottom:2px}
+/*  삭제 예정 -------------------- */
+
+.mainWrap_3{overflow:hidden;clear:both;width:960px;height:265px}
+.mainWrap_3 .openBook{float:left;width:189px;margin-right:10px}
+.mainWrap_3 .openBook h4{overflow:hidden;position:relative;height:20px;padding-top:5px}
+.mainWrap_3 .openBook h4 span{position:absolute;right:0;bottom:5px;font-weight:normal}
+.mainWrap_3 .openBook h4 span	img{margin-top:-3px;vertical-align:middle}
+
+.mainWrap_3 .openBook .con{border-top:1px solid #807e7e}
+.mainWrap_3 .openBook dl{width:138px;margin:0 auto;padding-top:15px}
+.mainWrap_3 .openBook dt img{width:135px;height:109px;border:1px solid #ccc}
+.mainWrap_3 .openBook dd{padding-top:7px}
+.mainWrap_3 .openBook dd .vote	img{margin-top:-3px;vertical-align:middle}
+.mainWrap_3 .openBook dd .tit{padding:10px 0 5px;font-weight:bold;line-height:15px}
+.mainWrap_3 .openBook dd .price{}
+
+.mainWrap_3 .korea{float:left;width:551px}
+.mainWrap_3 .korea h4{overflow:hidden;height:20px;padding-top:5px}
+.mainWrap_3 .korea .con{overflow:hidden;width:551px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_main_3.gif) repeat-x left top}
+.mainWrap_3 .korea ul{padding:15px 0 0 8px}
+.mainWrap_3 .korea li{float:left;width:107px;text-align:center}
+.mainWrap_3 .korea li img{width:85px;height:126px;border:1px solid #ccc}
+.mainWrap_3 .korea li .ico{display:block;position:absolute;left:3px;bottom:0;width:42px;height:37px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_ebook.png) no-repeat left top}
+.mainWrap_3 .korea li p{width:88px;margin:0 auto;line-height:15px;text-align:left}
+.mainWrap_3 .korea li .price{padding-top:2px}
+
+.mainWrap_3 .issue{float:right;width:200px}
+.mainWrap_3 .issue h4{overflow:hidden;position:relative;height:21px;padding-top:5px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_tab.gif) repeat-x left bottom}
+.mainWrap_3 .issue h4 .tab{position:absolute;top:0;right:0;text-align:center}
+.mainWrap_3 .issue h4 .on{display:block;float:left;width:63px;height:26px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tab_bg_on.gif) no-repeat left bottom;color:#189fe1}
+.mainWrap_3 .issue h4 b{display:block;padding-top:7px}
+.mainWrap_3 .issue h4 .on a{color:#189fe1}
+.mainWrap_3 .issue h4 .off a{color:#888}
+.mainWrap_3 .issue h4 .off{display:block;float:left;width:63px;height:26px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/tab_bg_off.gif) no-repeat left bottom;color:#888}
+.mainWrap_3 .issue .con	dl{width:100%;padding:15px 0 0}
+.mainWrap_3 .issue .con	dt{float:left;width:102px;text-align:center}
+.mainWrap_3 .issue .con	dt img{width:80px;height:100px;border:1px solid #ccc}
+.mainWrap_3 .issue .con	dd{float:left;width:94px;line-height:17px;color:#888}
+.mainWrap_3 .issue .con	dd p{padding:3px 0 5px;color:#333}
+.mainWrap_3 .issue .con	ul{clear:both;padding:10px}
+.mainWrap_3 .issue .con	li{position:relative;padding:0 0 3px 8px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/ico_dot.gif) no-repeat left 3px}
+.mainWrap_3 .issue .con	li .Fprice{position:absolute;top:0;right:0}
+.mainWrap_3 .issue .con	.hot{width:194px;height:21px;padding:10px 0 0 10px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/bg_hot.gif) no-repeat left top}
+.mainWrap_3 .issue .con	.hot span{padding:0 2px 0 0;color:#ccc}
+.mainWrap_3 .issue .con	.hot img{margin:-3px 3px 0 0;vertical-align:middle}
+
+.mainWrap_3 .issue .iss	dt{padding:14px 0 10px 26px}
+.mainWrap_3 .issue .iss	dt img{width:148px;height:97px;border:1px solid #b5b4b4}
+.mainWrap_3 .issue .iss	dd{padding:0 0 0 17px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot_off.gif) no-repeat 10px 5px;line-height:18px}
+.mainWrap_3 .issue .iss	dd.on{background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot_arrow.gif) no-repeat 10px 4px;color:#0c90cf}
+.mainWrap_3 .issue .iss	dd.on a{color:#0c90cf}
+.mainWrap_3 .issue .iss	dd a{text-decoration:none}
+.mainWrap_4{clear:both;position:relative;border-top:2px solid #808080}
+.mainWrap_4	h5{padding:13px 0 10px;font-size:0;line-height:0}
+.mainWrap_4	.leftWrap{overflow:hidden;float:left;width:330px;padding:0 0 0 10px}
+.mainWrap_4	.leftWrap	ul{font-size:11px}
+.mainWrap_4	.leftWrap	ul	li{position:relative;padding:0 15px 0 8px;background:url(http://gimage.interpark.com/renewPark/us_img/main/ico_dot_gray.gif) no-repeat 1px 4px;line-height:18px}
+.mainWrap_4	.leftWrap	p{width:295px;padding:9px 0 0 7px;background:url(http://gimage.interpark.com/renewPark/us_img/main1112/dot111.gif) repeat-x left top;font-size:11px;color:#da6464;letter-spacing:-1px}
+.mainWrap_4	.centerWrap{overflow:hidden;float:left;width:430px}
+.mainWrap_4	.centerWrap	table{font-size:0;line-height:0}
+.mainWrap_4	.centerWrap	table	td{padding:0 2px 2px 0;vertical-align:top}
+.mainWrap_4	.rightWrap{overflow:hidden;float:right;width:164px}
+.mainWrap_4	.rightWrap p a{display:inline-block;padding:4px 0 0}
