@@ -1,0 +1,168 @@
+@charset "euc-kr";
+@import "us_common.css";
+img.bd	{border:1px solid #bfbfbf;}
+a:hover	img.bd	{border:1px solid #777;}
+.Fprice {color:#da6464; font-size:11px;}
+.Fprice a{color:#da6464; font-size:11px;}
+.Fwriter {color:#888888; font-size:11px;}
+.Fwriter a{color:#888888; font-size:11px;}
+.Fpub {color:#888; font-size:11px;}
+.Fpub a{color:#888; font-size:11px;}
+.mainWrap_1 {width:960px; overflow:hidden; clear:both;}
+.mainWrap_1 .leftWrap {float:left; width:765px; height:283px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/main/main_top.gif) no-repeat left top;}
+.mainWrap_1 .leftWrap  h2 {font-size:14px; padding:16px 15px; font-weight:bold; color:#000;}
+.mainWrap_1 .leftWrap  h2	span	{color:#d22728;}
+.mainWrap_1 .leftWrap .mainBnner {width:755px; padding-left:10px; overflow:hidden; margin:0 auto; clear:both;}
+.mainWrap_1 .leftWrap .mainBnner .list {width:186px; float:left; text-align:center;}
+.mainWrap_1 .leftWrap .mainBnner .list .img {height:260px; margin:0 auto; width:166px; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/main/bg_shadow.gif) no-repeat left bottom;}
+.mainWrap_1 .leftWrap .mainBnner .list .img img.bd	{position:absolute; width:156px; bottom:4px; left:4px;}
+.mainWrap_1 .leftWrap .mainBnner .list .img	a	span	{display:none; position:absolute; background:url(http://gimage.interpark.com/renewPark/us_img/main/black.png) repeat; color:#e1e1e1; font-size:11px; bottom:4px; text-align:center; left:4px; width:118px; padding:10px 20px 0 20px;}
+.mainWrap_1 .leftWrap .mainBnner .list .img	a	span	p	{padding-bottom:7px;}
+.mainWrap_1 .leftWrap .mainBnner .list .img	a	span	b	{color:#fff;}
+.mainWrap_1 .leftWrap .mainBnner .list .img	a:hover	span	{display:block;}
+.mainWrap_1 .leftWrap .mainBnner .list .img a:hover	img.bd	{border:1px solid #000;}
+
+.mainWrap_1 .rightWrap {width:190px; height:283px; position:relative; float:right;}
+.mainWrap_1 .rightWrap	ul	{position:absolute; right:10px; bottom:6px;}
+.mainWrap_1 .rightWrap	ul	li	{float:left; padding-left:3px;}
+.mainWrap_1 .rightWrap	a img.bd	{border:1px solid #bfbfbf;}
+
+.mainWrap_2	{width:960px; clear:both; overflow:hidden; padding-bottom:10px; margin-top:10px; position:relative;}
+
+.mainWrap_2	table.tab	{width:100%;}
+.mainWrap_2	table.tab	td	{width:50%; padding:4px 0 3px 0; text-align:center; color:#484948; border:1px solid #cccccc; border-bottom:0; background:#e6e6e6; font-size:13px;}
+.mainWrap_2	table.tab	td	a{color:#484948;}
+.mainWrap_2	table.tab	td.on	{width:50%; background:#555554; border:1px solid #555554; border-bottom:0; color:#fff;}
+.mainWrap_2	table.tab	td.on	a{color:#fff;}
+
+.mainWrap_2	.leftWrap	{width:130px; overflow:hidden; float:left; }
+.mainWrap_2	.leftWrap	h3	{color:#fff; padding:5px 0 15px 0;}
+.mainWrap_2	.leftWrap	ul	{padding:10px 0 9px 15px; height:467px; border:2px solid #555554; background:#f7f7f7;}
+.mainWrap_2	.leftWrap	ul	li	{line-height:18px; font-size:11px;}
+.mainWrap_2	.leftWrap	ul	li	a {color:#363636;}
+.mainWrap_2	.centerWrap	{width:630px; margin-left:5px; float:left;}
+.mainWrap_2	.centerWrap	h3	{color:#fff;}
+.mainWrap_2	.centerWrap	h3	span	{color:#ffffcc;}
+.mainWrap_2	.centerWrap	.bar_top	{position:relative; clear:both; width:630px; height:29px; background:url(http://gimage.interpark.com/renewPark/us_img/main/bar_h3_1.gif) no-repeat left top;}
+.mainWrap_2	.centerWrap	.bar_top	h3	{padding:8px 0 0 51px;}
+.mainWrap_2	.centerWrap	.bar_top	.ico	{position:absolute; left:0; top:-2px;}
+.mainWrap_2	.centerWrap	.bar_bottom	{width:630px; clear:both; height:27px; background:url(http://gimage.interpark.com/renewPark/us_img/main/bar_h3_2.gif) no-repeat left top;}
+.mainWrap_2	.centerWrap	.bar_bottom h3	{padding:8px 0 0 35px;}
+.mainWrap_2	.centerWrap	.listWrap	{clear:both; overflow:hidden; padding-top:45px; width:630px; height:137px; background:url(http://gimage.interpark.com/renewPark/us_img/main/bg_main_sale.gif) no-repeat left top;}
+.mainWrap_2	.centerWrap	.listWrap	.list	{width:180px; padding-left:20px; height:139px; float:left;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.img	{float:left; width:88px; height:139px; position:relative;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.img	.bd	{width:75px; height:108px;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.img	.ico	{left:65px; top:-10px; letter-spacing:0; width:125px; height:36px; position:absolute; color:#fff; background:url(http://gimage.interpark.com/renewPark/us_img/main/bg_s_sale.gif) no-repeat left top;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.img	.ico	p	{font-size:14px; padding:7px 0 0 3px; text-align:center;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.img	.ico	p	span	{color:#fff200; font-size:12px;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.txt	{float:left; width:92px; line-height:16px;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.txt	.tit	{padding-top:20px;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.txt	.Fwriter	{padding:5px 0 1px 0; letter-spacing:-1px; font-size:11px;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.txt	.Fprice	{padding-top:8px;}
+.mainWrap_2	.centerWrap	.listWrap	.list	.txt	.Fpoint	{padding-left:14px; font-size:11px; color:#33baea; line-height:15px; background:url(http://gimage.interpark.com/renewPark/us_img/main/ico_ipoint.gif) no-repeat left 1px;}
+.mainWrap_2	.tit_fast{padding-bottom:0; font-size:0; line-height:0;}
+
+.mainWrap_2	.centerWrap	.listT	{width:630px; border-collapse:collapse; border:1px solid #e6e6e6;}
+.mainWrap_2	.centerWrap	.listT	td {height:27px; border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6;}
+:root	.mainWrap_2	.centerWrap	.listT	td {height:27px}
+.mainWrap_2	.centerWrap	.listT	td.ico	{text-align:center;}
+.mainWrap_2	.centerWrap	.listT	td .img	{font-size:0; line-height:0;}
+.mainWrap_2	.centerWrap	.listT	td .img	.bd	{width:29px; height:39px;}
+.mainWrap_2	.centerWrap	.listT	td  a	{color:#333; text-decoration:none;}
+.mainWrap_2	.centerWrap	.listT	td .bd	{border:1px solid #424353;}
+.mainWrap_2	.centerWrap	.listT	tr.out	{background:url(http://gimage.interpark.com/renewPark/us_img/main/td_off.gif) no-repeat left top; #background:none #f7f7f7;}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	{}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	.tit	{}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	.img	{display:none;}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	.Fprice	{font-size:12px; text-align:right; padding-right:15px;}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	.Fwriter a {color:#7d7d7d;}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	span.ico	{display:block;}
+.mainWrap_2	.centerWrap	.listT	tr.out	td	span.img	{display:none;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	span.ico	{display:none;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	span.img	{display:block;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td .titWrap	{position:relative; width:100%; height:41px; overflow:hidden;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	{height:49px; background:none #e3e4eb;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	.tit	{font-weight:bold; letter-spacing:-1px;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	.img	{display:block;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	.Fprice	{color:#bd0000; font-size:12px; text-align:right; padding-right:15px;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	.Fwriter a {color:#333;}
+.mainWrap_2	.centerWrap	.listT	tr.over	td	.Fpub a	{color:#333;}	
+
+.mainWrap_2	.rightWrap {width:190px; position:absolute; right:0; top:0;}
+.mainWrap_2	.rightWrap p.chan	{border:1px solid #252526; margin-bottom:10px;  background:#555554; clear:both; color:#fff; font-size:11px; padding:7px 0 4px 4px;}
+.mainWrap_2	.rightWrap p.chan	b	{letter-spacing:-1px;}
+.mainWrap_2	.rightWrap p.chan	span	{color:#ebebeb;}
+.mainWrap_2	.rightWrap p.chan	.font_1	{color:#fff200;}
+.mainWrap_2	.rightWrap .best	{width:173px; padding:0 0 8px 15px; clear:both; border:1px solid #cccccc;}
+.mainWrap_2	.rightWrap .best	ul	{line-height:13px; padding-top:8px;}
+.mainWrap_2	.rightWrap .best	ul	li	{font-size:11px; padding:2px 0 7px 0;}
+.mainWrap_2	.rightWrap .best	ul	li	img	{vertical-align:-3px;}
+.mainWrap_2	.rightWrap .best	ul	li	img.ico	{vertical-align:-2px;}
+.mainWrap_2	.rightWrap h3	{padding:17px 0 7px 0; position:relative;}
+.mainWrap_2	.rightWrap h3	b	{padding-left:7px;}
+.mainWrap_2	.rightWrap h3 .more	{position:absolute; right:10px; top:18px;}
+
+.mainWrap_2	.rightWrap .ebook	{width:190px; height:178px; background:url(http://gimage.interpark.com/renewPark/us_img/main/bg_main_right.gif) no-repeat left top;}
+.mainWrap_2	.rightWrap .ebook	ul	{padding-top:16px;}
+.mainWrap_2	.rightWrap .ebook	ul	li	{float:left; padding-left:20px; font-size:11px; width:65px; overflow:hidden;}
+.mainWrap_2	.rightWrap .ebook	ul	li img	{border:1px solid #d1d1d1; width:63px; height:88px; margin-bottom:2px;}
+.mainWrap_2	.rightWrap .ebook	ul	li a	{text-decoration:none;}
+.mainWrap_2	.rightWrap .ebook	ul	li a:hover	img	{border:1px solid #777;}
+
+
+.mainWrap_3	{overflow:hidden; padding-bottom:15px; border:1px solid #e0e0e0; border-top:2px solid #808080; clear:both; margin-top:10px; position:relative;}
+.mainWrap_3	h4	{color:#363636; padding:0 0 8px 0;}
+.mainWrap_3	h4	a{color:#363636;}
+.mainWrap_3	.leftWrap	{margin:16px 0 0 15px; width:357px; border-right:0 solid #f0f0f0;}
+.mainWrap_3	h4	span	{padding-right:8px; background:url(http://gimage.interpark.com/renewPark/us_img/main/arrow_red.gif) no-repeat right 2px;}
+.mainWrap_3	.leftWrap	ul	{font-size:11px;}
+.mainWrap_3	.leftWrap	ul	li	{line-height:15px; position:relative; padding:0 15px 1px 8px; background:url(http://gimage.interpark.com/renewPark/us_img/main/ico_dot_gray.gif) no-repeat left 4px;}
+.mainWrap_3	.leftWrap	ul	li.bg	{margin:7px 13px 0 0; background:none #f0f0f0; padding:7px 15px 4px 8px;}
+.mainWrap_3	.centerWrap	{height:120px; position:absolute; left:386px; top:16px; width:356px; border-right:0 solid #f0f0f0;}
+
+.mainWrap_3	.centerWrap	ul	li{float:left; display:inline; font-size:0; line-height:0; padding:0 2px 2px 0;}
+.mainWrap_3	.rightWrap {position:absolute; width:148px; right:20px; top:16px;}
+.mainWrap_3	.rightWrap ul	{width:155px; padding-top:0;}
+.mainWrap_3	.rightWrap ul	li	{float:left; font-size:0; line-height:0;}
+.mainWrap_3	.rightWrap_2 {height:120px; position:absolute; width:191px; padding-left:10px; right:12px; top:14px;}
+
+.Fipoint	{padding-left:14px; font-size:11px; color:#33baea; background:url(http://gimage.interpark.com/renewPark/us_img/main/ico_ipoint.gif) no-repeat left top;}
+
+
+
+
+.nowKorea	{width:958px; padding-bottom:12px; border:1px solid #cccccc; border-top:1px solid #808080; overflow:hidden; clear:both;}
+.nowKorea	.tit	{border:1px solid #fff; background:#f7f7f7; padding:9px 8px 6px 8px;}
+.nowKorea	.fl	{width:520px; overflow:hidden; padding:0; margin:10px 0 0 0; background:url(http://gimage.interpark.com/renewPark/us_img/main/dot_now.gif) repeat-y right top;}
+.nowKorea	.fr	{width:404px; padding-top:10px;}
+.nowKorea	.s_tit	{font-weight:bold; color:#363636;}
+.nowKorea	.s_tit	span	{font-weight:bold; color:#3181ed;}
+.nowKorea	.tab	{width:459px; margin:0 auto; height:36px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/main/tab_focus_bg.gif) repeat-x left top;}
+.nowKorea	.tab	.s_tit	{float:left; width:118px; padding:7px 0 0 0;}
+.nowKorea	.tab	ul,
+.nowKorea	.tab	ul	li	{float:left;}
+.nowKorea	.fl	dl	{float:left; width:89px; padding-left:33px; font-size:11px;}
+.nowKorea	.fl	dl.last	{width:87px;}
+.nowKorea	.fl	dl	dt	img	{width:85px; border:1px solid #ccc;}
+.nowKorea	.fl	dl	dd	{width:87px;}
+.nowKorea	.fl	dl	dd.tt	{font-size:12px; padding-bottom:5px;}
+.nowKorea	.fl	dl	dd.la	{color:#f35e2a;}
+.nowKorea	.fl	dl	dd.korea	{color:#33baea;}
+
+.nowKorea	.fr	dl	{width:100%; clear:both;}
+.nowKorea	.fr	dl	dt	img	{width:63px; border:1px solid #ccc;}
+.nowKorea	.fr	dl	dt	{float:left; width:77px; padding-bottom:10px;}
+.nowKorea	.fr	dl	dd	{width:310px; float:left;}
+
+.nowKorea	.fr	dl.last	dd	{width:270px;}
+.nowKorea	.fr	dl.last	dt	{width:120px;}
+.nowKorea	.fr	dl.last	dt	img	{width:108px; border:1px solid #ccc;}
+
+.nowKorea	.fr	dl	dd.tt	{padding-bottom:7px;}
+.nowKorea	.fr	dl	dd.txt	{font-size:11px; padding-bottom:7px; color:#7d7d7d;}
+.nowKorea	.fr	dl	dd.dot	{padding:0 0 4px 7px; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/main/dot_1005.gif) no-repeat left 3px;}
+.nowKorea	.fr	dl	dd.dot	span.Fprice	{padding-left:10px;}
+
+.nowKorea	.fr	.s_tit	{padding:7px 0 6px 0;}
+
+

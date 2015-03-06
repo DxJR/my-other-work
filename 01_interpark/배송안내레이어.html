@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title></title>
+<!-- http://book.interpark.com/renewPark/css/ -->
+<link rel="stylesheet" href="us_common.css" type="text/css" media="all">
+<script language="javascript" src="http://book.interpark.com/static/js/jquery-1.5.min.js"></script> 
+</head>
+<body>
+
+
+<script type="text/javascript">
+$('.ico_tac').mouseover(function(e){
+	var divTop = e.pageY; //screenY,clientX
+	var divLeft = e.pageX+10; 
+	$('#tac').css({"top": divTop,"left": divLeft, "position": "absolute"}).show();
+});
+$('.ico_tac').mouseout(function(e){
+	$('#tac').css({"display": "none"}).hidden();
+});
+</script>
+
+<div class="helpLayer" style="width:520px; display:block;" id="tac">
+	<div class="help_wrap">
+		<p class="help_title">인터파크 글로벌 배송안내 <a href="#" class="close"><img src="http://gimage.interpark.com/renewPark/us_img/pop/btn_xx.gif" alt=""></a></p>
+		<div class="help_line"></div>		
+		
+		<!--tac_info -->
+		<div class="tac_info">
+			<p>배송상품은 <span>LA배송과, 한국배송</span>이 있으며, <span>배송비</span>는 LA/한국 구분 없이 현지 배송비만 부과됩니다.</p>			
+			<table class="table_1">				
+				<tr>
+					<th>- LA배송 :</th>
+					<td>LA물류센터에서 즉시 출고 가능한 상품으로 2-3이내(최대 1주 이내) 배송</td>
+				</tr>
+				<tr>
+					<th>- 한국배송상품 :</th>
+					<td>한국에서 발송되는 상품으로 주문 후 10일이내(최대 2주 이내) 배송</td>
+				</tr>
+			</table>
+	
+	
+			<p> - LA배송/한국배송 상품을 동시 구매 시 <span>한국배송상품 기준</span>으로 배송됩니다.</p>
+			
+
+			<p class="font_1">미국 배송비 : <u style="font-weight:bold">$6.15</u> 기본 배송비는 동일하며, State에 따른 권당 배송비만 다르게 부과됩니다.</p>
+			
+			<table class="table_2">
+				<colgroup>
+					<col width="380">
+					<col width="*">
+				</colgroup>
+				<tr>
+					<th>State</th>
+					<th>권당 배송비</th>
+				</tr>
+				<tr>
+					<td class="tl">NV</td>
+					<td>$ 0.40</td>
+				</tr>
+				<tr>
+					<td class="tl">AZ,CA,UT</td>
+					<td>$ 0.50</td>
+				</tr>
+				<tr>
+					<td class="tl">CO,ID,MT,NM,OR,SD,WA,WY</td>
+					<td>$ 0.65</td>
+				</tr>
+				<tr>
+					<td class="tl">KS,NE,OK,TX</td>
+					<td>$ 0.70</td>
+				</tr>
+				<tr>
+					<td class="tl">AL,AR,IA,IL,LA,MN,MO,MS,ND,TN,WI</td>
+					<td>$ 0.80</td>
+				</tr>
+				<tr>
+					<td class="tl">AK,AS,CT,DC,DE,FL,GA,GU,HI,IN,KY,MA,MC,MD,ME,MI,MI,NC,NH,<br>NJNM,NY,OH,PA,PL,PR,RI,SC,VA,VI,VT,WV</td>
+					<td>$ 0.85</td>
+				</tr>
+			</table>			
+
+			
+			<p class="font_1">캐나다 배송비 : <u style="font-weight:bold">$7.00</u> 기본 배송비, 동일하며, Province별 권당 배송비가 동일합니다.</p>
+
+			<table class="table_2">
+				<colgroup>
+					<col width="380">
+					<col width="*">
+				</colgroup>
+				<tr>
+					<th>State</th>
+					<th>권당 배송비</th>
+				</tr>
+				<tr>
+					<td class="tl">AB,BC,MB,NB,NL,NT,NS,NU,ON,PE,QC,SK,YT</td>
+					<td>$ 2.99</td>
+				</tr>
+			</table>
+			
+			<p><span>시리즈나 세트 등 특정상품에</span> 한하여 <span>추가수량에 따른 비용이 추가</span>됩니다.<br>
+			예시) 세트상품 1개의 구성상품이 10개이면, 권당 배송비는 10개를 기준으로 부과됩니다.</p>
+			
+
+		</div>
+		<!--//tac_info -->
+		
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

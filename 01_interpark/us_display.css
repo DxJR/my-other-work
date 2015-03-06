@@ -1,0 +1,294 @@
+@charset "euc-kr";
+@import "us_common.css";
+.naviSelect	a:link,
+.naviSelect		a:visited,
+.naviSelect		a:active 			{color:#7f7f7f; text-decoration:none;}
+.naviSelect		a:hover 			{color:#000; text-decoration:none;}
+.naviSelect	{text-align:left; clear:both; height:26px; margin:3px auto 10px auto;}
+.naviSelect	.naviWrap	{clear:both; line-height:14px; position:absolute; z-index:2; padding-left:9px; background:url(http://gimage.interpark.com/renewPark/us_img/last/dotted_navi.gif) no-repeat left 9px; font-size:11px; }
+.naviSelect	.home_navi	{float:left; padding:3px 1px 0 0;}
+.naviSelect	.selectWrap	{float:left; padding:0 0 0 14px;  white-space:nowrap; z-index:1; background:url(http://gimage.interpark.com/renewPark/us_img/last/arrow_navi.gif) no-repeat 5px 7px;}
+.naviSelect	.selectOff	{cursor:pointer; color:#7f7f7f; float:left; white-space:nowrap; background:url(http://gimage.interpark.com/renewPark/us_img/last/btn_select_layer.gif) no-repeat right 3px #fff;}
+.naviSelect	.selectOff	ul	{display:none;}
+.naviSelect	.selectOn	{cursor:pointer; color:#7f7f7f; float:left; white-space:nowrap; background:url(http://gimage.interpark.com/renewPark/us_img/last/btn_select_layer.gif) no-repeat right 3px #fff;}
+.naviSelect	.selectOn	ul	{display:block; padding:8px 8px 4px 8px; background:#fff; border:1px solid #ccc; border-top:0;}
+.naviSelect	.selectOn	ul	li	{padding-bottom:2px;}
+.naviSelect	.tit	{border:1px solid #ccc; padding:3px 7px 1px 8px;}
+.naviSelect	.tit	span	{padding-right:16px;}
+.naviSelect	.selectWrap .select	{padding-top:4px;}
+
+.naviSelect	.selectOff	.boxWrap	{display:none;}
+.naviSelect	.boxWrap	ul	li.line	{font-size:0; width:80px; line-height:0; padding:0 0 6px 0; height:1px; background:url(http://gimage.interpark.com/renewPark/us_img/last/dot_line.gif) repeat-x left top;}
+.naviSelect	.boxWrap	{display:block; border:1px solid #ccc; background:#fff; border-top:0; float:left; overflow:hidden; clear:both;}
+.naviSelect	.boxWrap	ul	{float:left; border:0;}
+.naviSelect	.boxWrap	ul	b {text-decoration:underline;}
+.naviSelect	.boxWrap	a:hover ul	li{background:#ccc;}
+
+#CNB {width:178px; border:1px solid #bfbfbf;}
+#CNB .on	{color:#fff; border-top:1px solid #e0e0e0; cursor:pointer; width:178px; height:22px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/display/cnb_on.gif) no-repeat left bottom;}
+#CNB .on	a{color:#fff;}
+#CNB .off {color:#252525; border-top:1px solid #e0e0e0; cursor:pointer; width:178px; height:22px; overflow:hidden; background:url(http://gimage.interpark.com/renewPark/us_img/display/cnb_off.gif) no-repeat left bottom;}
+#CNB .off a{color:#252525;}
+#CNB #bar_cnb1	{border-top:0 solid #bfbfbf;}
+#CNB .con	{width:178px; overflow:hidden; padding:7px 0 8px 0;}
+#CNB .con	ul	{padding:3px 16px 0 16px;}
+#CNB .con .menuT td	a:link,
+#CNB .con .menuT td	a:visited,
+#CNB .con .menuT td	a:active {color:#333; text-decoration:none;}
+#CNB .con .menuT td	a:hover {color:#999; text-decoration:none;}
+#CNB .con .menuT td	{width:50%; font-size:11px; line-height:17px; white-space:nowrap; padding:0 0 0 10px;}
+#CNB .con .menuT td	.banner	{padding-top:5px;}
+#CNB .con .menuT td	.banner	img	{width:142px; height:28px;}
+#CNB .con .menuT {font-size:11px; white-space:nowrap; letter-spacing:-1px; width:157px; text-align:left; margin:0 auto;}
+#CNB .con .menuT .eng_font{font-size:11px; white-space:nowrap; letter-spacing:0px; width:157px; text-align:left; margin:0 auto;}/*20120903 CD CN2012-09-03 Ãß°¡*/
+#CNB .con .menuT td	{padding:4px 0 0 0;}
+#CNB .con .menuT td	span	{display:inline-block; width:100%;}
+#CNB .con .menuT td	span.over	div.ly{display:block;}
+#CNB .con .menuT td	span.out	div.ly{display:none;}
+#CNB .con .menuT td	span {white-space:nowrap; padding-right:1px;}
+#CNB .con .menuT td	span div.ly		{position:absolute; padding:5px 15px 5px 10px; overflow:hidden; z-index:1; background:#fff; border:1px solid #111;}
+#CNB .con .menuT td	span div.ly	ul	{padding:0;}
+#CNB .con .menuT td	span div.ly	ul	li	{white-space:nowrap; padding:1px 0 0 4px; background:url(http://gimage.interpark.com/renewPark/us_img/display/best_cnb_dot.gif) no-repeat left 8px;}
+#CNB .con .menuT td.line	{border-bottom:1px solid #f0f0f0; height:3px; font-size:0; line-height:0; padding:0;}
+#CNB .con	ul	li{line-height:19px;}
+#CNB .con	ul	li a {color:#363636;}
+#CNB .on	p,
+#CNB .off	p	{font-weight:bold; padding:5px 0 0 16px;}
+.top_tap {height:28px; overflow:hidden; width:100%; clear:both; margin:15px 0; background:url(http://gimage.interpark.com/renewPark/us_img/display/bg_tab.gif) repeat-x left bottom;}
+.top_tap ul li	{display:inline; font-size:0; line-height:0; float:left; padding-right:1px;}
+.h3Wrap	{height:27px; position:relative; overflow:hidden; width:100%; clear:both;}
+.h3Wrap	h3{position:absolute; left:0; bottom:0; line-height:17px; background-position:left 5px;}
+.h3Wrap	.select_btn	{position:absolute; right:0; bottom:5px; font-size:11px; color:#777;}
+.h3Wrap	.select_btn img {vertical-align:-7px;}
+.h3Wrap	.select_btn input {vertical-align:middle;}
+.h3Wrap	.select_btn	.bar	{color:#ccc; padding:0 7px 0 7px;}
+h3	{background:url(http://gimage.interpark.com/renewPark/us_img/display/h3_dot.gif) no-repeat left 3px; font-size:14px; color:#363636; padding: 0 0 5px 10px;}
+h3	span	{color:#666; font-size:11px; letter-spacing:-1px; font-weight:normal;}
+.h3_bestWrap	{height:25px; border-bottom:1px solid #dedee0; position:relative; overflow:hidden; width:100%; clear:both;}
+.h3_bestWrap	h3{position:absolute; left:0; bottom:0;}
+.h3_bestWrap	h3.blue	{color:#466fb7}
+.h3_bestWrap	h3.blue	.font_1	{font-size:14px; color:#466fb7}
+.h3_bestWrap	.select_btn	{position:absolute; right:0; bottom:5px; font-size:11px; color:#777;}
+.h3_bestWrap	.select_btn img {vertical-align:-6px;}
+.h3_bestWrap	.select_btn	.bar	{color:#ccc; padding:0 7px 0 7px;}
+.font_1	{color:#3492df;}
+.font_1	a{color:#3492df;}
+.font_2	{color:#dd5656;}
+.font_2	a{color:#dd5656;}
+.font_3	{color:#be1b28;}
+.font_3	a{color:#be1b28;}
+.categoryWrap	{width:761px; border:2px solid #7b83ac; overflow:hidden;}
+.categoryWrap	.con	{border:1px solid #fff; background:#f7f7f7; overflow:hidden; padding:9px 0 6px 0; position:relative;}
+.categoryWrap	table	thead	{display:block;}
+.categoryWrap	table	tbody	{display:block;}
+.categoryWrap	table	td	{width:177px; line-height:22px; white-space:nowrap; letter-spacing:-1px;}
+.categoryWrap	table	td	b	{margin-left:30px; padding-left:9px; background:url(http://gimage.interpark.com/renewPark/us_img/display/dot_cate.gif) no-repeat left 4px;}
+.categoryWrap	table	td	b	span	{font-weight:normal; letter-spacing:0;}
+.categoryWrap	.btn	{position:absolute; bottom:10px; right:13px;}	
+.categoryWrap	table	td	b.on	a	{color:#dd5656;}
+.categoryWrap	table	td	b.on	span	{font-weight:bold; letter-spacing:0;}
+.cate_how	{padding:20px 0 5px 0; clear:both; border-bottom:1px solid #545352;}
+.sbt	{border-top:2px solid #c1c1c1;}
+.sortingWrap	{background:url(http://gimage.interpark.com/renewPark/us_img/display/line_dot.gif) repeat-x left bottom #f9f9f9; overflow:hidden; position:relative; clear:both; width:100%; color:#777; font-size:11px;}
+.sortingWrap	.sort	{padding:9px;}
+.sortingWrap	.sort	span.off	a	{color:#777;}
+.sortingWrap	.sort	span.on	{padding-left:7px; background:url(http://gimage.interpark.com/renewPark/us_img/display/arrow_red.gif) no-repeat left 2px;}
+.sortingWrap	.sort	span.on	a	{color:#252525;}
+.sortingWrap	.check	{position:absolute; right:90px; bottom:7px;}
+.sortingWrap	.check	input	{vertical-align:-2px;}
+.sortingWrap	.select	{position:absolute; right:10px; bottom:7px;}
+.sortingWrap	.bar	{color:#ccc; padding:0 4px 0 4px;}
+.sortingWrap	.btn	{font-size:3px; margin-left:-2px;}
+.sortingWrap	.btn	img	{vertical-align:-2px;}
+.sortingWrap	.search	{position:absolute; right:5px; bottom:5px;}
+.sortingWrap	.search	input	{vertical-align:middle; width:100px;}
+.sortingWrap	.search	img	{vertical-align:middle; margin-top:2px;}
+
+.naviBox	{position:relative; height:43px; border-bottom:1px solid #e6e6e6; width:100%;}
+.naviBox	.check	{position:absolute; left:8px; top:15px; font-size:11px;}
+.naviBox	.check	input	{vertical-align:-2px;}
+.naviBox	.check	img	{vertical-align:-3px;}
+.naviBox	.pageNavi{position:absolute; right:0; top:0;}
+.naviBox	.bar	{color:#ccc; padding:0 4px 0 4px;}
+.pageNavi {padding:10px 0; text-align:center; overflow:hidden; clear:both; vertical-align:top; cursor:default;}
+.pageNavi a,
+.pageNavi strong {font-weight:bold; color:#3a3a3a; vertical-align:top; display:inline-block; text-decoration:none; padding:4px 8px 2px 8px; border:1px solid #ebebeb; margin:0 -1px; position:relative;}
+.pageNavi strong {border:1px solid #de4d52; color:#de4d52;}
+.pageNavi a:hover,
+.pageNavi a:active,
+.pageNavi a:focus {border:1px solid #de4d52; color:#de4d52; text-decoration:none;}
+.pageNavi span.blank {padding:0 4px; height:0; font-size:0; line-height:0; vertical-align:top;}
+.pageNavi span.arrow	img	{margin:5px 0 0 0; vertical-align:-4px;}
+.pageNavi span.arrow a,
+.pageNavi span.arrow a:hover,
+.pageNavi span.arrow a:active,
+.pageNavi span.arrow a:visited,
+.pageNavi span.arrow a:focus {padding:0; margin:0; border:0;}
+.pageNavi span.totalTxt {color:#777; font-size:11px; margin:5px 7px 0 0; display:inline-block;}
+
+.displayWrap	{width:100%; margin-top:20px; padding-bottom:10px; overflow:hidden; clear:both; z-index:1; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/display/line_dot.gif) repeat-x left bottom;}
+.displayWrap	.checkWrap	{position:absolute; z-index:1; left:0; top:0; width:30px; overflow:hidden; text-align:center;}
+.displayWrap	.checkWrap	.num	{font-weight:bold; padding:3px 0 0 0; font-size:14px; color:#333;}
+.displayWrap	.checkWrap	.up	span{color:#d22728; padding:3px 0 0 6px;  background:url(http://gimage.interpark.com/renewPark/us_img/display/ico_up.gif) no-repeat left 5px;}
+.displayWrap	.checkWrap	.down	span{color:#54a9ef; padding:3px 0 0 6px;  background:url(http://gimage.interpark.com/renewPark/us_img/display/ico_down.gif) no-repeat left 6px;}
+.displayWrap	.imgWrap	{padding-left:30px; float:left; width:72px; text-align:center;}
+.displayWrap	.imgWrap	.img	img	{width:70px; border:1px solid #b9b8b8;}
+.displayWrap	.imgWrap	.btn	{padding-top:7px;}
+.displayWrap	.infoWrap	{width:330px; line-height:20px; float:left; margin-left:15px;}
+.displayWrap	.infoWrap	.inc_ico	{padding-bottom:2px;}
+.displayWrap	.infoWrap	.inc_tit	{padding-bottom:2px;}
+.displayWrap	.infoWrap	.inc_series	{padding-bottom:2px;}
+.displayWrap	.infoWrap	.inc_write	{padding-bottom:2px; line-height:17px; color:#999999;}
+.displayWrap	.infoWrap	.inc_write	span	{color:#666;}
+
+.displayWrap	.infoWrap	.inc_tac	{font-size:11px; color:#999;}
+.displayWrap	.infoWrap	.inc_tac	.rating	{font-size:0; letter-spacing:-1px; padding-right:5px;}
+.displayWrap	.infoWrap	.inc_tac	b	{color:#666;}
+.displayWrap	.infoWrap	.inc_tac	b.font_1	{color:#33baea;}
+.displayWrap	.infoWrap	.inc_tac	b.font_2	{color:#f35e2a;}
+.displayWrap	.infoWrap	.inc_tac	b.review{font-weight:normal;}
+.displayWrap	.infoWrap	.inc_tac	b.review span	{color:#999999;}
+
+.displayWrap	.priceWrap	{width:130px; text-align:center; position:absolute; right:105px; top:0;}
+
+
+.displayWrap	.priceWrap	.through{text-decoration:line-through; font-size:14px; color:#dd5656; padding-bottom:5px;}
+.displayWrap	.priceWrap	.price_1{font-size:14px; color:#dd5656; padding-bottom:5px; line-height:17px;}
+.displayWrap	.priceWrap	.price_2{padding-bottom:5px;}
+.displayWrap	.priceWrap	.price_3{font-size:11px; font-size:11px;}
+.displayWrap	.priceWrap	.price_3 a	{text-decoration:none;}
+.displayWrap	.priceWrap	.price_3 span {padding:0 7px 0 6px; background:url(http://gimage.interpark.com/renewPark/us_img/display/arrow_blue.gif) no-repeat right 3px;}
+.displayWrap	.priceWrap	.Fpoint	{padding-top:7px;}
+.displayWrap	.priceWrap	.Fpoint	span	{padding-left:14px; background:url(http://gimage.interpark.com/renewPark/us_img/display/ico_ipoint.gif) no-repeat left top;}
+
+
+.displayWrap	.priceWrap	.coupon_1	{padding:5px 0 2px 0;}
+.displayWrap	.priceWrap	.coupon_1	span	{padding:2px 0 0 14px; color:#707070; background:url(http://gimage.interpark.com/renewPark/us_img/display/ico_coupon.gif) no-repeat left top;}
+.displayWrap	.priceWrap	.coupon_1	b	{font-size:14px; color:#239fd2;}
+.displayWrap	.priceWrap	.coupon_1	a	{color:#f35e2a;}
+
+
+.displayWrap	.priceWrap	.price	{padding:5px 0 2px 0;}
+.displayWrap	.priceWrap	.price	span	{padding:2px 0 0 0; color:#707070;}
+.displayWrap	.priceWrap	.price	b	{font-size:14px; color:#239fd2;}
+.displayWrap	.priceWrap	.price	a	{color:#f35e2a;}
+
+.displayWrap	.priceWrap	.coupon_2	{margin:5px 0; cursor:pointer;}
+.displayWrap	.priceWrap	.coupon_2	span	{display:inline-block; height:18px;  padding:0 0 0 29px; background:url(http://gimage.interpark.com/renewPark/us_img/display/coupon_1.gif) no-repeat left top;}
+.displayWrap	.priceWrap	.coupon_2	b	{display:inline-block; height:18px; color:#de4368; padding:3px 14px 0 0 ;background:url(http://gimage.interpark.com/renewPark/us_img/display/coupon_2.gif) no-repeat right top;}
+.displayWrap	.priceWrap	.coupon_2	a	{color:#de4368;}
+.displayWrap	.btnWrap	{position:absolute; z-index:-1; right:0; top:0; width:80px; text-align:right;}
+.displayWrap	.btnWrap	ul	li		{padding-bottom:5px; font-size:0; line-height:0;}
+
+.displayWrap	.txtWrap	{font-size:11px; width:700px; line-height:17px; padding:10px 0 10px 30px; color:#777; float:left;}
+
+
+.bob_listWrap	{width:100%; margin-top:30px; overflow:hidden; clear:both; background:url(http://gimage.interpark.com/renewPark/us_img/display/line_dot.gif) repeat-x left bottom;}
+.bob_listWrap	.list {width:153px; height:210px; overflow:hidden; float:left; text-align:center; position:relative;}
+.bob_listWrap	.list .checkbox{position:absolute; left:15px; top:17px;}
+.bob_listWrap	.list .best{padding-bottom:2px;}
+.bob_listWrap	.list .best	b{color:#1781bb;}
+.bob_listWrap	.list .img	{width:91px; font-size:0; line-height:0; margin:0 auto; overflow:hidden;}
+.bob_listWrap	.list .img	img	{width:85px; height:120px; padding:2px; border:1px solid #dadada;}
+.bob_listWrap	.list .img a:hover	img	{width:85px; height:120px; padding:1px; border:2px solid #dd5555;}
+.bob_listWrap	.list .tit{padding:5px 25px 3px 25px; font-size:11px;}
+.bob_listWrap	.list .price{color:#dd5555; font-size:11px;}
+
+.event_listWrap	{width:958px; overflow:hidden; border:1px solid #cdcdcd;}
+.event_listWrap	.wrap	{width:100%; padding-left:10px; margin-top:20px; padding-bottom:20px; overflow:hidden; clear:both;}
+.event_listWrap	.wrap .list {width:191px; overflow:hidden; float:left; text-align:left; position:relative; background:url(http://gimage.interpark.com/renewPark/us_img/display/dotted_right.gif) repeat-y right top;}
+.event_listWrap	.wrap .list .checkbox{position:absolute; left:7px; top:3px;}
+.event_listWrap	.wrap .list .img	{width:135px; font-size:0; line-height:0; margin:0 auto; overflow:hidden;}
+.event_listWrap	.wrap .list .img	img	{width:126px; padding:3px; border:1px solid #dadada;}
+.event_listWrap	.wrap .list .img a:hover	img	{width:126px; padding:2px; border:2px solid #dd5555;}
+.event_listWrap	.wrap .list .tit{padding:5px 25px 3px 28px; font-weight:bold;}
+.event_listWrap	.wrap .list .txt{padding:5px 25px 3px 28px; font-size:11px; letter-spacing:-1px; color:#777;}
+.event_listWrap	.wrap .list .price{padding:1px 25px 0 28px; color:#dd5555; font-size:11px;}
+.event_listWrap	.wrap .list .coupon{padding:0 25px 3px 28px; color:#dd5555; font-size:11px;}
+.event_listWrap	.wrap .list .coupon	img	{vertical-align:-3px;}
+.event_listWrap	.line	{border-top:1px solid #eee; height:10px; overflow:hidden; clear:both; width:920px; margin:0 auto;}
+.top_eventPlan	{margin-bottom:20px; overflow:hidden; position:relative;}
+.top_eventPlan	.pos{position:absolute; left:47px; top:47px; width:640px; color:#777; line-height:18px;}
+.tit_eventPlan	{padding:15px 0 6px 0;}
+.tit_eventPlan	img	{vertical-align:-4px;}
+
+
+
+
+
+.coupon_layer	{line-height:17px; z-index:5; color:#666666; line-height:14px; width:520px; font-size:11px; text-align:left; padding:0; border:2px solid #666666; background-color:#fff; clear:both; position:absolute;}
+.coupon_layer	.coupon_wrap01	{padding:0; border:1px solid #4d4d4d;}
+.coupon_layer	.coupon_wrap02	{padding:0; border:1px solid #ededed;}
+.coupon_layer	.coupon_title	{background:#f8f8f8; position:relative; padding:10px 0 6px 20px; border-bottom:1px solid #ededed;}
+.coupon_layer	.closeBtn	{position:absolute; right:12px; top:12px;}
+.coupon_layer	.coupon_scroll	{
+	margin-top:3px;
+	width:490px;
+	overflow-y:scroll;
+	height:134px;
+	border-bottom:1px solid #e2e2e2;
+	scrollbar-3dlight-color:#f6f6f6;
+	scrollbar-arrow-color:#cccccc;
+	scrollbar-base-color:#f6f6f6;
+	scrollbar-darkshadow-color:#f6f6f6;
+	scrollbar-face-color:#fff;
+	scrollbar-highlight-color:#cccccc;
+	scrollbar-shadow-color:#cccccc;
+	scrollbar-track-color:#f6f6f6;
+}
+.coupon_layer	.font01	{color:#2ba5e4 !important;}
+.coupon_layer	.coupon_content	{padding:10px; overflow:hidden; clear:both; white-space:nowrap;}
+.coupon_layer	.Fly01	{background:url(http://gimage.interpark.com/renewPark/us_img/last/ico_ly01.gif) no-repeat left 10px; color:#999; padding:5px 10px 5px 7px;}
+.coupon_layer	.Fly01	img	{vertical-align:-5px;}
+.coupon_layer	.Fly01	a.btn	{margin-left:90px;}
+.coupon_layer	.couponT	{font-size:11px; width:467px;}
+.coupon_layer	.couponT	th	{text-align:center; white-space:nowrap; padding:5px 10px 3px 10px; font-weight:bold; color:#363636;}
+.coupon_layer	.couponT	td.line	{background:url(http://gimage.interpark.com/renewPark/product/last/dotted_zip.gif) repeat-x left top; font-size:0; line-height:0;}
+.coupon_layer	.couponT	th.first	{width:70px; background:url(http://gimage.interpark.com/renewPark/product/last/bar_zip_th.gif) no-repeat right 7px;}
+.coupon_layer	.couponT	td	{padding:5px 10px 0 10px; text-align:center; vertical-align:top;}
+.coupon_layer	.couponT	td.first	{width:70px; text-align:center;}
+.coupon_layer	.couponT	td.tr	{width:70px; padding-right:5px;}
+.coupon_layer	.couponT	td.tl	{text-align:left; padding:5px 10px 0 10px;}
+.coupon_layer	.couponT	td	img	{margin-top:-2px;}
+
+.banner_ebookchoice	{padding:0 0 15px 0; font-size:0; line-height:0;}
+
+
+
+.box_ebookchoice	{border:1px solid #d7d7d7; overflow:hidden; clear:both;}
+.box_ebookchoice	ul	{padding:15px 15px 12px 17px;}
+.box_ebookchoice	ul	li	{padding:0 0 0 8px; line-height:19px; background:url(http://gimage.interpark.com/renewPark/us_img/display/arrow.gif) no-repeat left 4px;}
+
+
+.list_ebookchoice	{width:100%; margin-top:23px; padding-bottom:20px; overflow:hidden; clear:both; z-index:1; background:url(http://gimage.interpark.com/renewPark/us_img/display/line_dot.gif) repeat-x left bottom;}
+.list_ebookchoice	.list	{width:255px; float:left;}
+.list_ebookchoice	span.img	{width:120px; float:left;}
+.list_ebookchoice	span.img	img	{width:108px; border:1px solid #aaa;}
+.list_ebookchoice	ul	{position:relative; height:163px; width:120px; float:left; font-size:11px;}
+.list_ebookchoice	ul	li.tit	{padding-top:5px;}
+.list_ebookchoice	ul	li.tit	a	{color:#3a3a3a;}
+.list_ebookchoice	ul	li.writer	{padding:8px 0 0 0; color:#999;}
+.list_ebookchoice	ul	li.writer	span	{color:#666;}
+.list_ebookchoice	ul	li.price	{padding:8px 0 0 0;}
+.list_ebookchoice	ul	li.price	span	{color:#dd5656;}
+.list_ebookchoice	ul	li.btn	{position:absolute; left:0; bottom:0;}
+
+#book_master	{border:1px solid #7b83ac; clear:both; margin-top:10px; overflow:hidden; padding:10px 0;}
+#book_master	p.tit	{padding:7px 0 12px 25px; font-weight:bold; clear:both; color:#333; background:url(http://gimage.interpark.com/renewPark/us_img/display/arrow_red2.gif) no-repeat 17px 9px;}
+#book_master	p.tit	span	{color:#d22728;}
+
+#book_master	dl	{float:left; width:151px; padding-bottom:10px; text-align:center;}
+#book_master	dl	dt	{width:97px; margin:0 auto;}
+#book_master	dl	dt	img	{width:95px; border:1px solid #ccc;}
+#book_master	dl	dd	{width:97px; margin:0 auto; text-align:left;}
+#book_master	dl	dd.tt	{padding:5px 0;}
+
+.Fla	{color:#f35e2a; font-size:11px;}
+.Fkorea	{color:#33baea; font-size:11px;}
+.Fprice	{color:#da6464;}
+
+
+
+
+
+

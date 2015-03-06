@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title></title>
+<!-- http://book.interpark.com/renewPark/css/ -->
+<link rel="stylesheet" href="us_search.css" type="text/css" media="all">
+</head>
+<body>
+<div id="TOP">
+	<div class="gnbWrap">
+		<h1><a href="#" title="INTERPARK Global"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/logo.gif" alt="INTERPARK Global"></a></h1>		
+		<span class="txt_interpark"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/txt_interpark.gif" alt="고객만족 1위 인터넷서점"></span>
+		<ul class="gnb_menu">
+			<li class="none"><a href="#" title="BOOKs"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/btn_gnb_1on.gif" alt="BOOKs"></a></li>
+			<li><a href="#" title="eBOOKs"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/btn_gnb_2.gif" alt="eBOOKs"></a></li>
+		</ul>
+		<ul class="global_1">
+			<li><a href="#" title="Login">로그인</a></li>
+			<li><a href="#" title="Join">회원가입</a></li>
+			<li><a href="#" title="MyPage">북카트</a></li>
+			<li><a href="#" title="Cart">마이페이지</a></li>
+			<li class="none"><a href="#" title="Help">고객센터</a></li>
+		</ul>
+		<ul class="global_2">
+			<li><a href="#" title="베스트셀러"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/btn_gnb_3on.gif" alt="베스트셀러"></a></li>
+			<li><a href="#" title="새로나온책"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/btn_gnb_4off.gif" alt="새로나온책"></a></li>
+			<li><a href="#" title="스테디셀러"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/btn_gnb_5off.gif" alt="스테디셀러"></a></li>
+		</ul>		
+		<span class="right_banner"><a href="#"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/banner_gnb_right.gif" alt=""></a></span>
+		<fieldset>
+			<legend>검색</legend>
+			<span class="searchBox">
+				<input class="input_search" onFocus="autoSearchLayer()" on title="검색어 입력" tabindex="1" type="text">
+				<img onClick="autoSearchLayer()" src="http://gimage.interpark.com/renewPark/us_img/gnb/arrow_search_on.gif" alt="" class="arrow">
+			</span><a href="#" title="Search"><img src="http://gimage.interpark.com/renewPark/us_img/gnb/btn_gnb_search.gif" alt="Search" class="vat"></a>
+		</fieldset>	
+		
+		<!-- 자동완성 레이어 -->
+		<script type="text/javascript">
+		function autoSearchLayer(){
+			if(document.getElementById('autoSearchLayer').style.display=='block'){
+				document.getElementById('autoSearchLayer').style.display="none"
+			}else{
+				document.getElementById('autoSearchLayer').style.display="block"
+			}
+		}
+		</script>
+		
+		<div class="autoBox" style="display:none;" id="autoSearchLayer">	
+			<div class="auto_tit">
+				<p class="a_tit">검색 자동완성 기능</p>
+				<p class="a_check"><input type="checkbox" class="checkbox" > 검색어 자동완성 기능 끄기</p>
+				<p class="a_close"><a href="javascript:autoSearchLayer()"><img src="http://gimage.interpark.com/renewPark/us_img/search/btn_autoSearchClose.gif" alt=""></a></p>
+			</div>			
+			<!-- 자동완성없을시 -->
+			<div class="conWrap" style="display:none;">
+				<div class="txt_off">
+					<p>검색어 자동완성 기능을 사용하시면, <br>
+					보다 편리하고 신속하게 상품을 찾을 수 있습니다.</p>
+					<p><b><input type="checkbox" class="checkbox"> 검색어 자동완성 기능 켜기</b></p>
+				</div>
+			</div>
+			<!--// 자동완성없을시 -->			
+			<!-- 자동완성있을시 -->
+			<div class="conWrap" style="display:;">
+				<div class="left_list">
+					<ul>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+						<li class="out" onMouseOver="this.className='over';" onMouseOut="this.className='out';"><span>해리포터</span>와 죽음의 성물세트성...</li>
+					</ul>
+				</div>
+				<div class="right_list">
+					<div class="img"><a href="#"><img src="http://gimage.interpark.com/renewPark/us_img/search/test_autoSearchImg.gif" alt=""></a></div>					
+					<div class="txt">
+						<p class="tit"><a href="#">해리포터와 죽음의 성물세트</a></p>
+						<p class="writer"><a href="#">조앤 K.롤링</a>/<a href="#">문학수첩</a></p>
+					</div>
+					<div class="info">
+						<p>\35,000 → \25,000</p>
+						<p>$39.99→ <b class="price">$39.99</b></p>
+						<p class="btn">
+							<a href="#" title="상세보기"><img src="http://gimage.interpark.com/renewPark/us_img/search/btn_autoSearch01.gif" alt="상세보기"></a>
+							<a href="#" title="북카트"><img src="http://gimage.interpark.com/renewPark/us_img/search/btn_autoSearch02.gif" alt="북카트"></a>
+						</p>
+					</div>
+				</div>				
+			</div>
+			<!-- 자동완성있을시 -->			
+		</div>
+		<!--// 자동완성 레이어 -->
+			
+	</div>
+</div>
+<div id="CENTER">
+	<div id="Container">
+		<!-- content -->				
+		
+		<!-- 결과없음 -->
+		<!-- 상단페이지네비 -->
+		<div class="naviSelect">
+			<div class="naviWrap">		
+				<div class="home_navi"><a href="#">홈</a></div>			
+				<div class="selectWrap">
+					<div class="selectOff" onMouseOver="this.className='selectOn';" onMouseOut="this.className='selectOff';">
+						<div class="tit"><span><a href="#">검색</a></span></div>
+						<ul>
+							<li><a href="#">메뉴1</a></li>
+							<li><a href="#">메뉴2</a></li>
+							<li><a href="#">메뉴3</a></li>
+							<li><a href="#">메뉴4</a></li>
+						</ul>
+					</div>
+				</div>					
+				<div class="selectWrap">
+					<div class="selectOff" onMouseOver="this.className='selectOn';" onMouseOut="this.className='selectOff';">
+						<div class="tit"><span><a href="#">상세검색</a></span></div>
+						<ul>
+							<li><a href="#">메뉴1</a></li>
+							<li><a href="#">메뉴2</a></li>
+							<li><a href="#">메뉴3</a></li>
+							<li><a href="#">메뉴4</a></li>
+						</ul>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<!--// 상단페이지네비 -->
+		
+		<div class="result_no">
+			<p class="txt_1">입력하신 "<b>뽀롱뽀롱 뽀로로 잘먹고 잘살기</b>" 에 대한 검색결과가 없습니다.	</p>
+			<p class="txt_2">"<b>뽀롱뽀롱</b>" "<b>뽀로로</b>" 등 1~2 단어의 키워드로  검색하시면,  더 많은 상품을 찾으실 수 있습니다.</p>
+			
+			<!--search_box -->
+			<div class="search_box">
+				<p class="search">
+					<input class="input">
+					<a href="#" title="검색"><img src="http://gimage.interpark.com/renewPark/us_img/search/btn_search.gif" alt="검색"></a>
+					<a href="#" title="상세검색"><img src="http://gimage.interpark.com/renewPark/us_img/search/btn_detail.gif" alt="상세검색"></a>
+				</p>
+			</div>
+			<!--//search_box -->
+		
+		</div>
+			
+		
+		
+		
+		
+		
+		<!--// 결과없음 -->
+		
+		<!-- content -->		
+	</div>
+</div>
+<div id="BOTTOM">
+	<div class="copyright">
+		<ul>
+			<li class="none"><a href="#" title="Company">Company</a></li>
+			<li><a href="#" title="Privacy policy">Privacy policy</a></li>
+			<li><a href="#" title="Help">Help</a></li>
+		</ul>
+		<p><span>Conditions of use Privacy Notice</span> <b>@2011 InterparkGlobal.com</b>, Inc. or its affilates</p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+ 
+<META http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<TITLE>주문취소 확인팝업</TITLE>
+<script language="javascript" src="/static/js/common.js"></script>
+<script language="JavaScript" src="/static/js/StrutsValidate.js"></script>
+<script language="JavaScript"> 
+<!--
+var	_headJs_alertMessage;
+_headJs_alertMessage	= "";
+ 
+if (_headJs_alertMessage != "") {
+	alert(_headJs_alertMessage);
+}
+//-->
+</script>
+<script language="JavaScript"> 
+<!--
+    function procUserGroupAllowAppInfo() {
+        try {
+            opener.procUserGroupAllowAppInfo();
+        } catch (ignore) {}
+    }
+//-->
+</script>
+ 
+</HEAD>
+ 
+<BODY bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- Meta Tags: page character type setting -->
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<!-- ShortCut Icon -->
+<LINK href="/image/interpark.ico" rel="SHORTCUT ICON">
+<!-- <link rel="stylesheet" href="https://global.interpark.com/renewPark/css/guide_ssl.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://global.interpark.com/renewPark/css/myBook1007_ssl.css" type="text/css" media="all"> -->
+<link rel="stylesheet" href="https://book.interpark.com/renewPark/css/guide_ssl.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://book.interpark.com/renewPark/css/myBook1007_ssl.css" type="text/css" media="all">
+<!-- Default JavaScript -->
+<script language="JavaScript" src="/gate/html/include/select.js"></script>
+ 
+<script> 
+ 
+	function checkOnload() {
+		window.resizeTo(510, 300);
+		//opener.document.OrderCancelForm.checkActionFlag.value = "Y";
+		opener.location.href = "https://global.interpark.com/order/OrderCancel.do?_method=list&ordNo=20110704203204000022&ordPwd=&useSSL=YES";
+	}
+ 
+	function orderCancelStatusList() {
+//		opener.location.href = "/order/OrderCancelStatusList.do?_method=list&ordNo=20110704203204000022&ordPwd=";
+        //opener.location.href = "/order/RefundOrderList.do?_method=listRefundOrder&logintgt=mypage&ordNo=20110704203204000022&ordPwd=&menuIdx=06&useSSL=YES";
+		self.close();
+	}
+ 
+	function orderRefundStatusList() {
+		//opener.location.href = "http://global.interpark.com/order/RefundOrderList.do?_method=listRefundOrder&logintgt=mypage&menuIdx=06&ordNo=20110704203204000022";
+        opener.location.href = "https://global.interpark.com/order/OrderCancel.do?_method=list&ordNo=20110704203204000022&ordPwd=&useSSL=YES";
+		self.close();
+	}
+	
+	var topW = 0;
+    var topH = 0;
+    
+    function buildWH() {    
+       if (document.all&&document.getElementById){
+                 cW=document.body.offsetWidth;
+                 cH=document.body.offsetHeight;
+                 window.resizeTo(500,500)
+                 barsW=500-document.body.offsetWidth;
+                 barsH=500-document.body.offsetHeight;
+                 wW=barsW+cW;
+                 wH=barsH+cH;
+                 window.resizeTo(wW,wH)
+       }
+       else{
+                 wW=window.outerWidth;
+                 wH=window.outerHeight;
+       }
+       topW = wW;
+       topH = wH;
+       topW = topW - document.body.clientWidth;
+       topH = topH - document.body.clientHeight;
+       if (document.getElementById('popup')){
+                 popW = document.getElementById('popup').offsetWidth;
+                 popH = document.getElementById('popup').offsetHeight;
+       }
+       resizeWH(popW,popH);
+    }
+    
+    function resizeWH(width,height) {
+               reW = width + topW;
+               reH = height + topH;
+               window.resizeTo(reW,reH);
+    }
+    
+    window.onload=function (){
+        checkOnload();
+        buildWH();
+    }    	
+ 
+</script>
+<!-- layout -->
+<div id="popup" style="width:390px;">
+	<div class="layoutWrap">
+		<div class="popWrap" style="width:350px;"><!-- #popup넓이 -18px -->
+			<div class="btnclose"><a href="#"><img src="https://sslgimage.interpark.com/renewPark/myBook/pop/btn_x.gif" alt="닫기" style="cursor:pointer" onClick="javascript:top.close();"></a></div>			
+			<h1><img src="https://sslgimage.interpark.com/renewPark/myBook/pop/title_orderEnd.gif" alt=""></h1>		
+ 
+			<p class="pb10">주문 취소가 완료되었습니다. <br>
+			무통장 입금의 환불은 내일(영업일기준) 완료되며 <br>
+			카드 승인취소는 2~3일 소요될 수 있습니다.</p>
+ 
+			<p>취소 신청 내역을 확인하시겠습니까?</p>
+ 
+ 
+			<div class="pt20 tc">
+ 
+ 
+                <a href="#"><img src="https://sslgimage.interpark.com/renewPark/myBook/pop/btn_confirm.gif" alt="확인" style="cursor:pointer" onClick="javascript:orderRefundStatusList();"></a>
+ 
+				<a href="#"><img src="https://sslgimage.interpark.com/renewPark/myBook/pop/btn_cancel.gif" alt="취소" style="cursor:pointer" onClick="javascript:top.close();"></a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- layout //-->
+ 
+<script language="JavaScript"> 
+<!--
+	function showNoticeMsgs(msgs) {
+		var	tDiv;
+		var	showHtml;
+		
+		showHtml				= "";
+		for (var i=0; i<msgs.length; i++) {
+			if (showHtml != "") {
+				showHtml	+= " | ";
+			}
+			showHtml	+= msgs[i];
+		}
+		top.status	= showHtml;
+ 
+	}
+ 
+//-->
+</script>
+ 
+<script language="JavaScript"> 
+<!--
+ 
+try {
+	// 마지막으로 사용된 sc 설정
+	setLastReqScQueryUri("sc.page=1&sc.orderDtf=&sc.totalExpired=0&sc.listCount=0&sc.totalAll=0&sc.row=5&sc.startNum=0&sc.endNum=0&sc.memNo=&sc.totalReady=0&sc.orderDtt=");
+	var	_footerJs_noticeMsgs	= new Array();
+	
+	_footerJs_noticeMsgs.push("조회되었습니다.");
+	
+	top.showNoticeMsgs(_footerJs_noticeMsgs);
+} catch (ignore) {}
+ 
+//-->
+</script>
+ 
+</BODY>
+</HTML>
+
