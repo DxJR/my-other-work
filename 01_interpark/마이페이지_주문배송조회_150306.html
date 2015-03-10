@@ -1,0 +1,1144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<TITLE>주문내역페이징조회</TITLE>
+<!-- http://global.interpark.com/renewPark/css/ -->
+<meta name="google-site-verification" content="0wX37QFjMljcYt54rAPV5LHGfSq6Rzze2QHxdvTRW5Y" />
+<link rel="stylesheet" href="us_mybook_150306.css" type="text/css" media="all">
+<script language="javascript" src="http://global.interpark.com/static/js/common.js"></script>
+<script language="JavaScript" src="http://global.interpark.com/static/js/StrutsValidate.js"></script>
+<script language="javascript" src="http://global.interpark.com/static/js/CookieUtil.js"></script>
+<script language="javascript" src="http://global.interpark.com/static/js/imfs/SessionExpireCheck.js"></script>
+<script language="javascript" src="http://global.interpark.com/gate/js/common.js"></script>
+<script language="javascript" src="http://global.interpark.com/renewPark/js/AC_RunActiveContent.js"></script>
+<script language="javascript" src="http://global.interpark.com/renewPark/js/common.js"></script>
+<script language="javascript" src="http://global.interpark.com/gate/html/include/interpark_pcid.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26265526-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<script language="javascript">
+// ?§?? ??±??­ ¿?º?
+var _isWidgetInit = false;
+</script>
+
+
+<script language="javascript" src="http://global.interpark.com/gate/html/include/topnav_book.js"></script>
+<script language="JavaScript">
+    var MEMBER_CHECK_IND = "";
+
+	if(MEMBER_CHECK_IND == ""){
+		MEMBER_CHECK_IND = GetCookie('noMemIDN');
+		if(MEMBER_CHECK_IND == null) MEMBER_CHECK_IND = "";
+	}
+
+	function GetCookie (name) {
+		var arg = name + "=";
+		var alen = arg.length;
+		var clen = document.cookie.length;
+		var i = 0;
+		while (i < clen) {
+			var j = i + alen;
+			if (document.cookie.substring(i, j) == arg) return getCookieVal (j);
+			i = document.cookie.indexOf(" ", i) + 1;
+			if (i == 0) break;
+		}
+		return null;
+	}
+
+	function getCookieVal (offset) {
+		var endstr = document.cookie.indexOf (";", offset);
+		if (endstr == -1) endstr = document.cookie.length;
+		return unescape(document.cookie.substring(offset, endstr));
+	}
+
+    function checkOrdPwd(foPwd) {
+        if(MEMBER_CHECK_IND=="") return true;
+        if(document.pwdCheckForm.ordPwd.value=="") {
+            alert("해당 주문에 대한 비밀번호를 입력하셔야 조회가 가능합니다.");
+            foPwd.value = "";
+            return false;
+        } else {
+            foPwd.value = document.pwdCheckForm.ordPwd.value;
+            return true;
+        }
+    }
+
+    function getStrCheckPass(ordNo) {
+
+        var memberTmpStr = new String();
+        var pwd = "";
+        try
+        {
+            if(MEMBER_CHECK_IND!="") {
+                memberTmpStr = "&idn="+MEMBER_CHECK_IND;
+            } else {
+                return "";
+            }
+        }
+        catch (e)
+        {
+            memberTmpStr = "";
+        }
+        if(memberTmpStr!="") {
+            var OrderPwd = new String();
+            try
+            {
+                var obj = checkOrderPass(ordNo);
+                OrderPwd = obj.result;
+                document.pwdCheckForm.ordPwd.value = OrderPwd;
+                pwd = OrderPwd;
+            }
+            catch (e)
+            {
+                OrderPwd = "";
+            }
+
+            if(OrderPwd=="") {
+                //alert("해당 주문에 대한 비밀번호를 입력하셔야 조회가 가능합니다.");
+                return "error";
+            }
+            return memberTmpStr+"&PWD="+pwd;;
+        }
+
+    }
+
+    /* 주문번호 찾기 파업
+     * @return false
+     */
+    function orderPopupSearchForm() {
+        /* 비회원 로그인 값 체크*/
+        var memberPopStr = new String();
+        try
+        {
+            if(MEMBER_CHECK_IND!="") {
+                memberPopStr = "&idn="+MEMBER_CHECK_IND;
+            }
+        }
+        catch (e)
+        {
+            memberPopStr = "";
+        }
+        var orderSearchPOP = window.open("/order/MemOrderListPopup.do?_method=initial&formNm=ChangePayMethod&logintgt=mypage&valeNm=ordNo"+memberPopStr, "", "width=530,height=530,scrollbars=yes");
+        orderSearchPOP.focus();
+    }
+
+    function getStrCheckPass2(ordNo) {
+
+        var memberTmpStr = new String();
+        var pwd = "";
+        try
+        {
+            if(MEMBER_CHECK_IND!="") {
+                memberTmpStr = "&idn="+MEMBER_CHECK_IND;
+            } else {
+                return "";
+            }
+        }
+        catch (e)
+        {
+            memberTmpStr = "";
+        }
+        if(memberTmpStr!="") {
+            var OrderPwd = new String();
+            try
+            {
+                var obj = checkOrderPass2(ordNo);
+                OrderPwd = obj.result;
+                document.pwdCheckForm.ordPwd.value = OrderPwd;
+                pwd = OrderPwd;
+            }
+            catch (e)
+            {
+                OrderPwd = "";
+            }
+
+            if(OrderPwd=="") {
+                alert("해당 주문에 대한 비밀번호를 입력하셔야 조회가 가능합니다.");
+                return "error";
+            }
+            return memberTmpStr+"&PWD="+pwd;
+        }
+
+    }
+</script>
+<form name="pwdCheckForm">
+<input type="hidden" name="ordPwd">
+</form>
+
+
+<script type="text/javascript" src="http://global.interpark.com/static/js/imfs/dateButton.js"></script>
+<script type="text/javascript" src="http://global.interpark.com/static/js/imfs/order_dtl.js"></script>
+<script language="JavaScript" src="http://global.interpark.com/static/js/imfs/mypage_order.js"></script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function goSearch() {
+	if(validDate() && checkDate()) {
+
+		document.OrderListForm.elements["sc.orderDtt"].value = document.OrderListForm.startDt.value;
+		document.OrderListForm.elements["sc.orderDtf"].value = document.OrderListForm.endDt.value;
+
+		document.OrderListForm.elements["sc.prdNm"].value = document.OrderListForm.prdNm.value;
+
+		//document.OrderListForm.action = "/order/OrderSearchList.do?_method=list&logintgt=mypage";
+		document.OrderListForm._method.value = "PageList";
+
+		document.OrderListForm.action = "/order/OrderSearchPageList.do";
+		document.OrderListForm.submit();
+	}
+}
+
+function goSearchByPrdNm() {
+	if (event.keyCode == 13) {
+		goSearch();
+	}
+}
+
+function detailInfo(ordNo) {
+	var memNo = document.OrderListForm.elements["sc.memNo"].value;
+
+
+    var memberTmpStr = new String();
+    memberTmpStr = getStrCheckPass2(ordNo);
+	if(!checkOrdPwd(document.OrderListForm.ordPwd)||memberTmpStr=="error") return;
+
+/*
+		var tmpPwd = new Array();
+		tmpPwd = memberTmpStr.split("PWD=");
+		document.OrderListForm.pwd.value = tmpPwd[1];
+*/
+
+	if(validDate()) {
+		var startDt = document.OrderListForm.startDt.value;
+		var endDt = document.OrderListForm.endDt.value;
+
+
+		document.OrderListForm.elements["sc.orderDtt"].value = startDt;
+		document.OrderListForm.elements["sc.orderDtf"].value = endDt;
+        document.OrderListForm.ordNo.value = ordNo;
+        document.OrderListForm._method.value = "orderDetailInfo";
+
+        document.OrderListForm.method = "get";
+
+    	document.OrderListForm.action = "/order/OrderSearchDetail.do";
+    	document.OrderListForm.submit();
+    }
+}
+
+function openNatDelv()
+{
+    window.open("http://global.interpark.com/gate/sitemap/laredoute_1.html", "Laredoute1", "toolbar=no,location=no,status=no,menubar=no,scrollbars=auto,resizable=yes,width=500,height=590");
+}
+
+function showDiv(elementId){
+    var element = document.getElementById(elementId);
+    if(element){
+        element.style.display = 'block';
+    }
+}
+
+function hideDiv(elementId){
+    var element = document.getElementById(elementId);
+    if(element){
+        element.style.display = 'none';
+    }
+}
+
+function preOrderOf(object, term){
+    document.forms[object].selTerm.value = term ;
+    //orderOfText(object, term);
+    orderOfText4Std(object, term);
+}
+
+
+function tabView(num){
+    for(var i = 1; i <= 3; i++){
+        if(i == num){
+            document.getElementById("tab_img"+i).src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_"+i+"on.gif";
+            document.getElementById("tab_view"+i).style.display = "";
+        } else {
+            document.getElementById("tab_img"+i).src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_"+i+"off.gif";
+            document.getElementById("tab_view"+i).style.display = "none";
+        }
+    }
+}
+
+//-->
+</script>
+<script language=javascript src="http://global.interpark.com/static/js/Popup.js"></script>
+<script language=javascript src="http://global.interpark.com/static/js/calendar.js"></script>
+
+<!-- Default JavaScript -->
+<script language="JavaScript" src="http://global.interpark.com/gate/html/include/select.js"></script>
+<script language="JavaScript" src="http://global.interpark.com/static/js/imfs/mypage.js"></script>
+<!-- 달력 보기 S -->
+<script>
+    initCalendar();
+
+function setFromDate(rtn) {
+	formObj = document.OrderListForm;
+    formObj["startDt"].value = rtn;
+}
+
+function setToDate(rtn) {
+    formObj = document.OrderListForm;
+    formObj["endDt"].value = rtn;
+}
+</script>
+<!-- 달력 보기 E -->
+<SCRIPT language=javascript>
+var navigation = "<a href='http://global.interpark.com/bookPark/html/book.html'>인터파크도서</a> > <a href='http://global.interpark.com/member/MyPage.do?logintgt=mypage'>마이북쇼핑</a> > 주문배송내역 > 주문배송조회  " ;
+</SCRIPT>
+<!-- 네비게이션 -->
+<!--script language="javascript" src="http://global.interpark.com/gate/html/include/topnav_newBook.js"></script>
+
+<br-->
+
+<form name="ProductUsedWrittenManageCustomerForm" method="post" action="/ipoint/GetOrderIPoint.do">
+<input type="hidden" name="_method" value="initialInsert">
+<input type="hidden" name="sc.prdNo" value="">
+<input type="hidden" name="sc.ordclmNo" value="">
+<input type="hidden" name="sc.ordSeq" value="">
+<input type="hidden" name="sc.fromUrlType" value="">
+<input type="hidden" name="sc.usedType" value="">
+</form>
+
+<!--마이북페이지-->
+<div id="CENTER">
+	<div id="Container">
+
+    <!--  왼쪽영역부분 (네비게이션, 회원로그인정보, 왼쪽 메뉴)  -->
+
+		<!-- 상단네비 -->
+		<p class="topNavi">
+			<a href="http://global.interpark.com">홈</a> &gt;
+			<a href="http://global.interpark.com/member/MyPage.do?logintgt=mypage">마이페이지</a> &gt; <b>
+
+			<a href="http://global.interpark.com/order/OrderSearchPageList.do?_method=PageList&logintgt=mypage&menuIdx=01">주문배송조회</a>
+			</b>
+		</p>
+		<!--// 상단네비 -->
+
+
+		<!--좌측-->
+		<div class="mybook_left">
+
+			<!--회원정보-->
+			<div class="memberBox">
+				<h2>
+					<img src="http://gimage.interpark.com/renewPark/us_img/mybook/h2.gif" alt="">
+				</h2>
+				<p>
+
+                                        <b>global</b> 님 반갑습니다!
+
+				</p>
+
+				<p class="btn">
+					<a href="Javascript:goTemplate('https://global.interpark.com/member/MyPage.do?_method=initial')">
+						<img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_mem_modify.gif" alt="회원정보수정">
+					</a>
+				</p>
+                <div class="point">
+                    <p><a href="http://global.interpark.com/member/MyPage.do?_method=MyIpointAll&menuIdx=34" style="text-decoration:none;"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_2.gif"> <img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_d.gif" alt=""> <img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_7.gif"> <img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0.gif"> </a></p>
+                </div>
+
+			</div>
+
+			<!-- 좌측메뉴 -->
+			<div class="mybook_leftMemu">
+				<div class="topTle"></div>
+				<div class="conTle">
+
+
+
+
+
+					<p><b>주문조회변경</b></p>
+
+
+
+					<ul>
+
+
+					<li class="on"><a href="http://global.interpark.com/order/OrderSearchPageList.do?_method=PageList&logintgt=mypage&menuIdx=01">주문배송조회</a></li>
+
+					<li><a href="http://global.interpark.com/member/MyPage.do?_method=MyeBookAll&menuIdx=31">eBook관리</a></li>
+
+					<li><a href="https://global.interpark.com/order/OrderCancelList.do?_method=clmList&logintgt=mypage&useSSL=YES&menuIdx=03">취소/반품/교환/환불</a></li>
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+					<p><a href="http://global.interpark.com/order/TransactionSpecificationIssue.do?_method=initial&logintgt=mypage&menuIdx=09"><b>거래명세서</b></a></p>
+
+
+
+
+					<ul>
+
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+					<p><a href="http://global.interpark.com/gate/WishList.do?_method=list&menuIdx=50"><b>위시리스트</b></a></p>
+
+
+
+
+					<ul>
+
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+
+					<p><b>도서혜택</b></p>
+
+
+
+					<ul>
+
+
+					<li><a href="http://global.interpark.com/member/MyPage.do?_method=MyIpointAll&menuIdx=34">Point 적립내역</a></li>
+
+					<li><a href="http://global.interpark.com/event/eventCoupon.do?_method=detail&useSSL=YES&menuIdx=60">나의 쿠폰조회</a></li>
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+
+					<p><b>나의글관리</b></p>
+
+
+
+					<ul>
+
+
+					<li><a href="http://global.interpark.com/communication/SosBoard.do?_method=SosStat&menuIdx=92">한줄평</a></li>
+
+					<li><a href="http://global.interpark.com/communication/SosBoard.do?_method=initial&menuIdx=17">1:1 문의</a></li>
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+					<p><a href="https://global.interpark.com/member/MyPage.do?_method=initial&useSSL=YES&menuIdx=70"><b>회원정보조회/수정</b></a></p>
+
+
+
+
+					<ul>
+
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+					<p><a href=" https://global.interpark.com/member/MyPage.do?_method=FaceBookInterLock&useSSL=YES&menuIdx=80"><b>페이스북 연결관리</b></a></p>
+
+
+
+
+					<ul>
+
+
+				</ul>
+
+					<div class="line"></div>
+
+
+
+					<p><a href="http://global.interpark.com/gate/RctMail.do?_method=initial&menuIdx=90"><b>나의알림서비스</b></a></p>
+
+
+
+
+					<ul>
+
+
+				</ul>
+
+				</div>
+				<div class="bottomTle"></div>
+			</div>
+			<!--// 좌측메뉴 -->
+
+		</div>
+		<!--//좌측-->
+
+
+	<!--우측-->
+	<div class="mybook_content">
+
+		<!-- 상단TAB  -->
+
+		<form name="OrderListForm" method="get" style="margin:0">
+			<!-- // form hidden parameter ///////////////////////////// -->
+			<input type=hidden name="idn">
+			<input type=hidden name="logintgt" value="mypage">
+			<input type=hidden name="ordPwd">
+			<input type=hidden name="sc.memNo" value="" >
+			<input type=hidden name="sc.orderDtt" value="" >
+			<input type=hidden name="sc.orderDtf" value="">
+			<input type=hidden name="sc.prdNm" value="">
+			<input type=hidden name="ordNo" value="" >
+			<input type=hidden name="orderDtt" value="" >
+			<input type=hidden name="orderDtf" value="" >
+			<input type=hidden name="selTerm" value="1mon">
+			<input type="hidden" name="menuIdx" value="01"/>
+			<input type="hidden" name="sc.page" value="1">
+			<input type="hidden" name="sc.row" value="20">
+			<input type="hidden" name="_method" value="PageList">
+            <input type="hidden" name="useSSL" value="">
+
+		<h3><img src="https://sslgimage.interpark.com/renewPark/myBook/title_tac_search.gif" alt="주문배송조회"> l  주문번호를 클릭하여 상세내역 및 배송조회가 가능합니다.</h3>
+
+		<div class="space10"></div>
+
+		<div class="searchBox01">
+			<div class="tle"><span class="tle01"></span><span class="tle02"></span></div>
+			<div class="boxCon">
+				<table class="searchT01">
+					<tr>
+						<th>조회기간</th>
+						<td>
+							<a href="javascript:preOrderOf('OrderListForm','today');"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_day_1_off.gif" alt="오늘" align="absmiddle"></a>
+							<a href="javascript:preOrderOf('OrderListForm','1mon');"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_day_2_on.gif" alt="1개월" align="absmiddle"></a>
+							<a href="javascript:preOrderOf('OrderListForm','2mon');"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_day_3_off.gif" alt="2개월" align="absmiddle"></a>
+							<a href="javascript:preOrderOf('OrderListForm','3mon');"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_day_4_off.gif" alt="3개월" align="absmiddle"></a>
+							<input class="input01" id="startDt" name="startDt" value="20150211" style="width:70px;">
+							<img src="https://sslgimage.interpark.com/renewPark/us_img/mybook/btn_calendar.gif" alt="달력" onClick="showCalendarMyBook('setFromDate', 'date', '20150211', this, 0, 25)" style="cursor:pointer;">
+							~
+							<input class="input01" id="endDt" name="endDt"   value="20150310" style="width:70px;">
+							<img src="https://sslgimage.interpark.com/renewPark/us_img/mybook/btn_calendar.gif" alt="달력" onClick="showCalendarMyBook('setToDate', 'date', '20150310', this, 0, 25)"  style="cursor:pointer;">
+							<img src="https://sslgimage.interpark.com/renewPark/us_img/mybook/btn_search.gif" onclick="goSearch()" style="cursor: pointer" alt="조회">
+						</td>
+					</tr>
+					<tr>
+						<th>주문상품</th>
+						<td><input class="input01" name="prdNm" id="prdNm" style="width:340px;" value="" onkeypress="goSearchByPrdNm();"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="tle"><span class="tle03"></span><span class="tle04"></span></div>
+		</div>
+
+		<div class="space20"></div>
+
+		<table class="mybookT_1">
+			<colgroup>
+				<col width="140">
+				<col width="55">
+				<col width="*">
+                <col width="55">
+				<col width="35">
+				<col width="55">
+				<col width="45">
+				<col width="85">
+			</colgroup>
+            <thead>
+			<tr>
+				<th class="none">주문번호</th>
+				<th>추가송장</th>
+				<th>상품명</th>
+                <th>판매단가</th>
+				<th>수량</th>
+				<th>소계금액</th>
+				<th>포인트</th>
+				<th>주문상태</th>
+				<!--th>배송위치</th-->
+			</tr>
+            </thead>
+            <tbody>
+
+<tr>
+
+				<td rowspan="1" class="bl0 num"><a href="javascript:detailInfo('20150304183038151489' );" >
+                <u>20150304183038151489
+                </u></a><br>
+					<span class="F0">
+
+
+					</span>
+				</td>
+				<td rowspan="1" class="br0">
+
+				</td>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150304183038151489');">임헌석의 톡톡 건강법</a>
+
+				</td>
+                <td class="price">$ 27.5</td>
+				<td>1</td>
+				<td class="price">$ 27.5</td>
+				<td><p class="Fpoint"><span>0.55P</span></p></td>
+				<!-- 주문상태 시작 -->
+				<!-- 특급배송 추가 // td에 ship_td 추가 -->
+                <td class="br0 ship_td">
+					<div class="mybook_td_w">
+						발송완료<br />
+						<a href="#"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_tac_search.gif" alt="배송조회"></a>
+						<img src="us_img/mybook/ico_express.png" width="41" height="41" class="ico_express" alt="특급배송" />
+					</div>
+                </td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+                    <a href="http://global.interpark.com/order/TransactionSpecificationIssue.do?_method=initial&logintgt=mypage&menuIdx=09"><img src="http://gimage.interpark.com/renewPark/myBook/btn_jbsl.gif" alt="증빙서류"></a>
+                </td-->
+
+<tr>
+
+				<td rowspan="2" class="bl0 num"><a href="javascript:detailInfo('20150224172558150406' );" >
+                <u>20150224172558150406
+                </u></a><br>
+					<span class="F0">
+
+
+					</span>
+				</td>
+				<td rowspan="2" class="br0">
+
+				</td>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150224172558150406');">표준 아코디언 교본</a>
+
+				</td>
+                <td class="price">$ 16.5</td>
+				<td>3</td>
+				<td class="price">$ 49.5</td>
+				<td><p class="Fpoint"><span>0.99P</span></p></td>
+				<!-- 주문상태 시작 -->
+				<!-- 특급배송 추가 // td에 ship_td 추가 -->
+                <td class="br0 ship_td">
+					<div class="mybook_td_w">
+						발송완료<br />
+						<a href="#"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_tac_search.gif" alt="배송조회"></a>
+						<img src="us_img/mybook/ico_express.png" width="41" height="41" class="ico_express" alt="특급배송" />
+					</div>
+                </td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+                    <a href="http://global.interpark.com/order/TransactionSpecificationIssue.do?_method=initial&logintgt=mypage&menuIdx=09"><img src="http://gimage.interpark.com/renewPark/myBook/btn_jbsl.gif" alt="증빙서류"></a>
+                </td-->
+
+<tr>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150224172558150406');">김영남 아코디언 명곡집 제1집</a>
+
+				</td>
+                <td class="price">$ 22.0</td>
+				<td>1</td>
+				<td class="price">$ 22.0</td>
+				<td><p class="Fpoint"><span>0.44P</span></p></td>
+				<!-- 주문상태 시작 -->
+				<td class="br0 ship_td">
+					<div class="mybook_td_w">
+						환불완료
+					</div>
+				</td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+                    <a href="http://global.interpark.com/order/TransactionSpecificationIssue.do?_method=initial&logintgt=mypage&menuIdx=09"><img src="http://gimage.interpark.com/renewPark/myBook/btn_jbsl.gif" alt="증빙서류"></a>
+                </td-->
+
+<tr>
+
+				<td rowspan="2" class="bl0 num"><a href="javascript:detailInfo('20150222160839150123' );" >
+                <u>20150222160839150123
+                </u></a><br>
+					<span class="F0">
+
+
+					</span>
+				</td>
+				<td rowspan="2" class="br0">
+
+				</td>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150222160839150123');">표준 아코디언 교본</a>
+
+				</td>
+                <td class="price">$ 16.5</td>
+				<td>0</td>
+				<td class="price">$ 0.0</td>
+				<td><p class="Fpoint"><span>-</span></p></td>
+				<!-- 주문상태 시작 -->
+				<td class="br0 ship_td">
+					<div class="mybook_td_w">
+						발송완료<br />
+						<a href="#"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_tac_search.gif" alt="배송조회"></a>
+					</div>
+				</td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+
+                </td-->
+
+<tr>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150222160839150123');">김영남 아코디언 명곡집 제1집</a>
+
+				</td>
+                <td class="price">$ 22.0</td>
+				<td>0</td>
+				<td class="price">$ 0.0</td>
+				<td><p class="Fpoint"><span>-</span></p></td>
+				<!-- 주문상태 시작 -->
+				<td class="br0 ship_td">
+					<div class="mybook_td_w">
+						발송완료<br />
+						<a href="#"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/btn_tac_search.gif" alt="배송조회"></a>
+					</div>
+				</td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+
+                </td-->
+
+<tr>
+
+				<td rowspan="2" class="bl0 num"><a href="javascript:detailInfo('20150215171943149246' );" >
+                <u>20150215171943149246
+                </u></a><br>
+					<span class="F0">
+
+
+					</span>
+				</td>
+				<td rowspan="2" class="br0">
+
+				</td>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150215171943149246');">나무를 심은 사람</a>
+
+				</td>
+                <td class="price">$ 9.68</td>
+				<td>1</td>
+				<td class="price">$ 9.68</td>
+				<td><p class="Fpoint"><span>0.19P</span></p></td>
+				<!-- 주문상태 시작 -->
+				<td class="br0 ship_td">
+					<div class="mybook_td_w">
+						환불완료
+					</div>
+				</td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+                    <a href="http://global.interpark.com/order/TransactionSpecificationIssue.do?_method=initial&logintgt=mypage&menuIdx=09"><img src="http://gimage.interpark.com/renewPark/myBook/btn_jbsl.gif" alt="증빙서류"></a>
+                </td-->
+
+<tr>
+
+				<td class="tl">
+
+
+<a href="javascript:detailInfo('20150215171943149246');">기도</a>
+
+				</td>
+                <td class="price">$ 10.78</td>
+				<td>1</td>
+				<td class="price">$ 10.78</td>
+				<td><p class="Fpoint"><span>0.22P</span></p></td>
+				<!-- 주문상태 시작 -->
+				<td class="br0 ship_td">
+					<div class="mybook_td_w">
+						환불완료
+					</div>
+				</td>
+				<!-- I-포인트 / 구매확정 버튼 -->
+				<!-- 증빙 / 업체정보  -->
+                <!--td>
+
+                    <a href="http://global.interpark.com/order/TransactionSpecificationIssue.do?_method=initial&logintgt=mypage&menuIdx=09"><img src="http://gimage.interpark.com/renewPark/myBook/btn_jbsl.gif" alt="증빙서류"></a>
+                </td-->
+
+		</table>
+
+<script language="javascript">
+<!--
+function gotoPage(p, f) {
+	document.forms[f].elements["sc.page"].value = p;
+	document.forms[f].submit();
+}
+function setPage(p, f) {
+	f.elements["sc.page"].value = p;
+}
+//-->
+</script>
+<div class="pageNavi">
+
+<span class="arrow"><img src='http://gimage.interpark.com/renewPark/us_img/mybook/btn_prev_1.gif'></span>
+<span class="arrow"><img src='http://gimage.interpark.com/renewPark/us_img/mybook/btn_prev_2.gif'></span>
+<span class="blank"></span>
+<strong>1</strong>
+<span class="blank"></span>
+<span class="totalTxt">[total 1/1]</span>
+<span class="arrow"><img src='http://gimage.interpark.com/renewPark/us_img/mybook/btn_next_1.gif'></span>
+<span class="arrow"><img src='http://gimage.interpark.com/renewPark/us_img/mybook/btn_next_2.gif'></span>
+
+</div>
+
+
+
+		<!--h4>안내 도움말</h4>
+		<script language="javascript" type="text/javascript">
+		function tabView(num){
+			for(var i = 1; i <= 3; i++){
+				if(i == num){
+					document.getElementById("tabBtn"+i).src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_0"+i+"_on.gif";
+					document.getElementById("tabImg").src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_img_"+i+".gif";
+				}
+				else{
+					document.getElementById("tabBtn"+i).src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_0"+i+"_off.gif";
+				}
+			}
+		}
+		</script>
+		<div class="tabType01">
+			<ul>
+				<li><a href="javascript:tabView(1)" onFocus="blur()"><img src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_01_on.gif" alt="물류 배송상품" id="tabBtn1"></a></li>
+				<li><a href="javascript:tabView(2)" onFocus="blur()"><img src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_02_off.gif" alt="업체배송상품" id="tabBtn2"></a></li>
+				<li><a href="javascript:tabView(3)" onFocus="blur()"><img src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_03_off.gif" alt="ebook" id="tabBtn3"></a></li>
+			</ul>
+		</div>
+		<div class="pt10"><img src="https://sslgimage.interpark.com/renewPark/myBook/tab_tc_img_1.gif" alt="" id="tabImg"></div>
+
+		<div class="helpBox">
+			<table class="table01">
+				<tr>
+					<th>무통장입금</th>
+					<td>주문완료 후 영업일기준 5일 이내 입금하지 않으면 자동으로 주문이 취소 됩니다. <br>
+					입금확인은 영업일은 입금 완료 후 1~2시간내 확인되고, 야간이나 비영업일은 돌아오는 영업일에 확인 됩니다.</td>
+				</tr>
+				<tr>
+					<th>출고완료</th>
+					<td>상품을 포장하여 택배사로 전달이 완료 된 상태를 의미하며 출고완료 1~2일내 상품을 받아 보실 수 있습니다.<br>
+					업체가 직접배송을 하는 상품은 배송조회가 되지 않을 수도 있습니다. </td>
+				</tr>
+				<tr>
+					<th>부분배송</th>
+					<td>인터파크도서 파주물류센터에서 배송예정이고,  주문된 상품이 2종이상인 경우는 결제완료일 기준 4일째 재고있는 상품을 <br>
+					먼저 배송해 드립니다. (영업일  기준, 토/일/공휴일제외)<br>
+					<br>
+					일괄 배송을 받고 싶은 경우 마이페이지 &gt; 주문상세조회 화면에서 일괄배송신청 버튼을 클릭하면 일괄배송을 받을 수 있습니다.<br>
+					단, 해외주문원서만 주문시는 부분배송 서비스가 제외됩니다. </td>
+				</tr>
+				<tr>
+					<th>I-Point 적립<br>/구매확정</th-->
+					<!--td>구매확정은 주문한 상품을 문제없이 수령완료 하였다는 이미로 구매확정 후는 반품, 교환 처리가 불가능합니다. <br>
+					출고완료 다음날부터 14일간 I-Point 적립이 가능하며, I-Point 적립시과 동시에 구매확정이 처리됩니다. <br>
+					<br>
+					단, 헌책방 오픈마켓 상품은 출고완료 다음날부터 8일째 자동으로 구매확정(영업일 기준) 처리가 됩니다. <br>
+					자동 구매확정이 되기 전 마이페이지 &gt; I-Point받기, 마이페이지 &gt; 주문상세조회 에서 구매확정을 클릭시 판매자가 더 빨리<br>
+					정산받을 수 있습니다. </td-->
+					<!--td>
+                    <b>I-포인트는 상품 출고완료 다음날 자동 적립되며, 즉시 사용 가능</b>합니다. 단, <b>3,000P이상 보유하셔야만 원하는 금액만큼 사용</b>할 수 있습니다. (2011/03/03 00시 기준) <br>
+                    <b>구매확정은 출고완료 7일(영업일 기준) 후 자동으로 성립</b>되며, 구매확정 후 반품/교환 처리가 불가능합니다. <br>
+                    <br>
+                    단, 헌책방 업체배송상품(오픈마켓)은 구매확정 확인(I-포인트 지급)을 하거나, 미확인 시 출고완료 후 7일(영업일 기준) 후  자동 구매확정 처리됩니다.
+					</td>
+				</tr>
+				<tr>
+					<th>반품/교환</th-->
+					<!--td>출고완료 다음날부터 14일 이내 반품/교환이 가능합니다. 단, I-Point적립(구매확정)이후는 반품/교환이 불가합니다. <br>
+					해외주문양서/일서는 고객님의 요청에 의해 주문하는 '개인오더' 상품으로 고객변심 취소, 반품이 불가합니다. <br>
+					(단, 품절/절판인 경우와 결제완료 당일 24시까지는 취소 가능합니다.)</td-->
+					<!--td>
+					출고완료 다음날부터 <b>7일 이내</b> 반품/교환이 가능합니다. 단, 구매확정이 이루어지는 7일 이후부터는 반품/교환이 불가합니다. <br>
+					해외주문양서/일서는 고객님의 요청에 의해 주문하는 '개인오더' 상품으로 고객변심 취소, 반품이 불가합니다. <br>
+					(단, 품절/절판인 경우와 결제완료 당일 24시까지는 취소 가능합니다.)
+					</td>
+				</tr>
+				<tr>
+					<th>eBook 다운로드</th>
+					<td>eBook은 정해진 다운로드 기간 내 다운로드 받아 즉시 이용 가능합니다. <br>
+						1. 무선 다운로드 받기<br>
+						&nbsp;&nbsp;- biscuit (eBook 전용 단말기) &gt; [biscuit store] 접속 &gt; [주문내역]에서 구매 상품 다운로드시 [내 서재]에서 확인 <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;가능합니다.<br>
+						&nbsp;&nbsp;- biscuit  애플리케이션 &gt; [biscuit store] 접속 &gt; [My eBook]에서 구매 상품 다운로드시 [Library]에서 확인 가능합니다.<br>
+						&nbsp;&nbsp;- 무선다운로드는 1회만 제공하며, 이후에는 USB케이블을 연결한 유선 다운로드만 가능합니다. <br>
+						2. PC와 USB로 다운로드 받기<br>
+						&nbsp;&nbsp;- 무료로 제공하는 biscuit manager를 PC에 설치하여 주시기 바랍니다. <a href="http://book.interpark.com/display/displayBiscuit.do?_method=listGuideBiscuit&acFirstNum=2&subfistNum=1&bid1=bgnb&bid2=layer&bid3=ebkLm&bid4=biscuitnotice" style="color:#d93f44;">[biscuit manager 다운로드]</a><br>
+						&nbsp;&nbsp;- PC에 biscuit eBook 전용 단말기를 USB케이블로 연결한 후, biscuit manager를 실행합니다.<br>
+						&nbsp;&nbsp;- biscuit manager &gt; [나의 eBook]에서 구매 상품 다운로드시 [내 서재]에서 확인 가능합니다.</td>
+				</tr>
+			</table>
+		</div-->
+
+
+		<!--h3><img src="https://sslgimage.interpark.com/renewPark/myBook/title_special_bonus.gif" alt="주문시 특별한 혜택"></h3>
+
+		<p><a href="http://heart.interpark.com/heart/HeartMain.do?mainTab=2&enter=301&bid1=bgnb&bid2=gnbmn&bid3=Btm&bid4=heartbox"><img src="https://sslgimage.interpark.com/renewPark/myBook/banner_heartBox.gif" alt=""></a></p-->
+
+        <div class="space20"></div>
+
+        <div class="mybook_tab">
+            <ul>
+                <li><a href="javascript:tabView(1)" onFocus="blur()"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_1on.gif" id="tab_img1" alt=""></a></li>
+                <li><a href="javascript:tabView(2)" onFocus="blur()"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_2off.gif" id="tab_img2" alt=""></a></li>
+                <li><a href="javascript:tabView(3)" onFocus="blur()"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_3off.gif" id="tab_img3" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="mybook_tabView" id="tab_view1">
+            <div class="list">
+                <div class="on">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_1.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0on.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""-->
+                    <!--/span-->
+                    <p>결제완료</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_2.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0off.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p>상품 준비중</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_3.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0off.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p>배송준비중</p>
+                </div>
+            </div>
+            <div class="list last">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_4.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0off.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p>배송시작</p>
+                </div>
+            </div>
+            <div class="cb"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_b_1.gif" alt=""></div>
+        </div>
+
+        <div class="mybook_tabView" id="tab_view2" style="display:none;">
+            <div class="list">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_1.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0off.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p>결제완료</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_2.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0off.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p class="tc">한국상품요청 &gt; 한국상품 준비중</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_3.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_0off.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p class="tc">한국발송준비 &gt; air배송</p>
+                </div>
+            </div>
+            <div class="list last">
+                <div class="on">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_4.gif" alt="" class="ico">
+                    <!--span class="num"-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_3on.gif" alt=""-->
+
+                    <!--img src="http://gimage.interpark.com/renewPark/us_img/mybook/num_gun.gif" alt=""></span-->
+                    <p class="tc">한국발송완료 &gt; 현지배송시작</p>
+                </div>
+            </div>
+            <div class="cb"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_b_2.gif" alt=""></div>
+        </div>
+
+        <div class="mybook_tabView" id="tab_view3" style="display:none;">
+            <div class="list_ebook">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_ebook_1.gif" alt="" class="ico">
+                    <p class="tc">지원가능한 단말기로 다운로드 가능</p>
+                </div>
+            </div>
+            <div class="list_ebook last_e">
+                <div class="off">
+                    <img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_ico_ebook_2.gif" alt="" class="ico">
+                    <p class="tc">&nbsp;</p>
+                </div>
+            </div>
+            <div class="cb"><img src="http://gimage.interpark.com/renewPark/us_img/mybook/tab_b_ebook.gif" alt=""></div>
+        </div>
+
+	    </form>
+	</div>
+	<!--//우측-->
+
+    </div>
+</div>
+<!--//마이북페이지 fjqmaram-->
+
+
+<script language="javascript" type="text/javascript">
+function disp_div_help(div_name,xmouse,ymouse){
+	help_divwid = parseInt(document.getElementById(div_name).style.width,10);
+	if(document.body.clientWidth > (help_divwid+xmouse+15))
+	{
+		document.getElementById(div_name).style.left = document.body.scrollLeft + xmouse + 10;
+		document.getElementById(div_name).style.top = document.body.scrollTop + ymouse;
+	}else{
+		document.getElementById(div_name).style.left = (document.body.scrollLeft + xmouse) - (help_divwid+10);
+		document.getElementById(div_name).style.top = document.body.scrollTop + ymouse;
+	}
+	document.getElementById(div_name).style.display = "block";
+}
+function hide_div_help(div_name){
+	document.getElementById(div_name).style.display = "none";
+}
+</script>
+
+<!-- 구매확정시 주의사항 -->
+<div class="helpLayer" style="position:absolute;left:0;top:0;width:300px;visibility:hidden;z-index:10" id="buyConfirm">
+	<div class="help_wrap">
+		<p class="help_title">구매확정시 주의사항</p>
+		<div class="help_line"></div>
+		<p>구매확정 이후에는 인터파크도서를 통한  반품/교환<br>
+		요청은 불가능하니  상품상태를 반드시 확인해 주세요.<br>
+		I-포인트 적립 상품인 경우 구매확정시<br>
+		즉시 적립되어 바로 주문에서 사용이 가능합니다.</p>
+	</div>
+</div>
+<!-- 구매확정시 주의사항 -->
+
+<!-- 주의사항 -->
+<div id="LayerGivipoint"
+	 style="position:absolute;left:0;top:0;width:270px;height:170px;visibility:hidden;z-index:10">
+	<table width="270" height="100" border="0" cellpadding="0" cellspacing="3" bgcolor="1EAE10"
+		   style='border-collapse:separate;'>
+		<tr>
+			<td align="left" bgcolor="#FFFFFF" style="padding-left:10px"><span class="font_help_ts">I-포인트 적립 주의사항</span><br><img
+					src="https://sslgimage.interpark.com/bookpark/imgs/common/img_blank.gif" width="1"
+					height="7"><br>
+	<span class="font_g02_11"><span class="font_g02_11">I-포인트 적립 즉시 주문에서 사용이 가능합니다. <br>
+	<b>적립 이후 반품/교환 요청은 불가능</b>하니<br>
+	상품상태를 반	드시 확인해 주세요.<br>
+	반품/교환은 적립 전 요청하시기 바랍니다. <br>
+	</span></span>
+		</td>
+		</tr>
+	</table>
+</div>
+</center>
+</body>
+</html>
+
+
+<br>
+<br>
+<script language="JavaScript" src="http://global.interpark.com/gate/html/include/sub_book_bottom.js"></script>
+<!-- seal -->
+<div style="width:960px; margin:0 auto; text-align:right; margin-top:-88px;">
+	<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?style=normal"></script>
+</div>
+<!--// seal -->
+<script language="JavaScript">
+<!--
+	function showNoticeMsgs(msgs) {
+		/* imfs 는 액션 설정 메세지 처리 하지 않음
+		var	tDiv;
+		var	showHtml;
+
+		showHtml				= "";
+		for (var i=0; i<msgs.length; i++) {
+			if (showHtml != "") {
+				showHtml	+= " | ";
+			}
+			showHtml	+= msgs[i];
+		}
+		top.status	= showHtml;
+		*/
+	}
+//-->
+</script>
+
+</body>
+</html>

@@ -251,3 +251,6 @@
 #popup .layoutWrap  .memberMarge  .idListWrap .idList_scroll ul{margin-left:20px;}
 #popup .layoutWrap  .memberMarge  .idListWrap .idList_scroll ul li{line-height: 160%;}
 #popup .layoutWrap  .memberMarge  .idListWrap .idList_scroll ul li .ra{vertical-align: middle;}
+
+/* 2015-03-06 추가 */
+.ship_type_obj {clear:both; margin-top:-18px; font:0/0 arial; text-align:center;}
